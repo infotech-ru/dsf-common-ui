@@ -1,0 +1,298 @@
+.commonClientReport{
+  &--subtitle{
+    color: _brand-colors(_dark-grey);
+    display: inline-block;
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: 24px;
+    margin-bottom: 10px;
+    margin-top: auto;
+    white-space: nowrap;
+  }
+  &--link{
+    color: _brand-colors(_green);
+    // display: block;
+    white-space: nowrap;
+    .svg--icon{
+      margin-left: 5px;
+      position: relative;
+      top: 1px;
+      svg{
+        fill: _brand-colors(_green);
+        height: 14px;
+        width: 16px;
+      }
+    }
+  }
+  &--filter{
+    align-items: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: start;
+    margin-top: 5px;
+    // margin-top: 2px;
+    .svg--filter-alt{
+      margin-right: 10px;
+      svg{
+        height: 15px;
+        width: 16px;
+        stroke: _brand-colors(_grey2);
+      }
+    }
+    &.active{
+      .svg--filter-alt{
+        svg{
+          stroke: _brand-colors(_dark-grey);
+        }
+      }
+    }
+    &--text{
+      color: _brand-colors(_grey2);
+    }
+    &--item{
+      background-color: _brand-colors(_light-blue2);
+      border: 1px solid _brand-colors(_light-blue);
+      border-radius: 1px;
+      color: _brand-colors(_blue);
+      font-size: rem(11);
+      padding: 0 5px;
+      line-height: 16px;
+      .svg--glyphicons-basic-menu-close{
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        margin-right: 4px;
+      }
+      svg{
+        fill: _brand-colors(_blue);
+        height: 6px;
+        width: 6px;
+      }
+      & + & {
+        margin-left: 10px;
+      }
+      & + .commonClientReport--filter--reset{
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+    &--reset{
+      background-color: _brand-colors(_light-red);
+      border-color: _brand-colors(_red);
+      color: _brand-colors(_dark-red);
+      svg{
+        fill: _brand-colors(_dark-red);
+      }
+    }
+  }
+  &--block{
+    // color: _brand-colors(_white);
+    border-width: 1px;
+    border-style: solid;
+    background-color: _brand-colors(_transparent);
+    font-size: rem(11);
+    text-align: center;
+    &.commonClientReport--block-inner-item{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 96px;
+      line-height: 96px;
+      .commonClientReport--block--subtitle{
+        text-transform: uppercase;
+        margin-top: 10px;
+      }
+    }
+    & + & {
+      margin-left: 10px;
+    }
+    &-outer{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      overflow: hidden;
+    }
+    &--title{
+      // height: 70px;
+      line-height: 38px;
+      img{
+        display: inline-block;
+        margin: 0 auto;
+        max-height:26px;
+        max-width: 59px;
+      }
+    }
+    &--title2{
+      font-size: rem(16);
+      font-weight: 700;
+    }
+    &--subtitle{
+      line-height: 14px;
+    }
+    .commonClientReport--block-inner{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      // flex-direction: column;
+      justify-content: space-between;
+      // float: left;
+      width: 100%;
+      &-item{
+        border-style: solid;
+        border-width: 1px 0px 0px 0px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // height: 54px;
+        padding-top: 8px;
+        width: 50%;
+        + .commonClientReport--block-inner-item{
+          border-left-width: 1px;
+        }
+        // &:last-child{
+        //   border-right-width: 2px;
+        // }
+      }
+    }
+    &-grey{
+      border-color: _brand-colors(_grey2);
+      color: _brand-colors(_dark-grey);
+      &:hover, &:focus{
+        border-color: _brand-colors(_light-blue);
+      }
+      &.commonClientReport--block-inner-item{
+        &:hover, &:focus{
+          background-color: _brand-colors(_light-blue);
+          color: _brand-colors(_white);
+        }
+      }
+    }
+    &-green{
+      background-color: _brand-colors(_green);
+      border-color: _brand-colors(_white);
+      color: _brand-colors(_dark-grey);
+      a{
+        color: _brand-colors(_dark-grey);
+      }
+      &:hover, &:focus{
+        border-color: _brand-colors(_white);
+      }
+      &.commonClientReport--block-inner-item{
+        &:hover, &:focus{
+          background-color: _brand-colors(_dark-green);
+          // color: _brand-colors(_white);
+        }
+      }
+    }
+    &-light-green{
+      background-color:  _brand-colors(_light-green);
+      border-color: _brand-colors(_white);
+      color: _brand-colors(_dark-grey);
+      a{
+        color: _brand-colors(_dark-grey);
+      }
+      &:hover, &:focus{
+        border-color: _brand-colors(_white);
+      }
+      &.commonClientReport--block-inner-item{
+        &:hover, &:focus{
+          background-color: _brand-colors(_green);
+        }
+      }
+    }
+    &-light-green2{
+      background-color:  _brand-colors(_light-green2);
+      border-color: _brand-colors(_white);
+      color: _brand-colors(_dark-grey);
+      a{
+        color: _brand-colors(_dark-grey);
+      }
+      &:hover, &:focus{
+        border-color: _brand-colors(_white);
+      }
+      &.commonClientReport--block-inner-item{
+        &:hover, &:focus{
+          background-color: _brand-colors(_green);
+        }
+      }
+    }
+    &-blue{
+      background-color: _brand-colors(_light-blue2);
+      border-color: _brand-colors(_white);
+      color: _brand-colors(_dark-grey);
+      &:hover, &:focus{
+        border-color: _brand-colors(_white);
+      }
+      &.commonClientReport--block-inner-item{
+        &:hover, &:focus{
+          background-color: _brand-colors(_light-blue3);
+        }
+      }
+    }
+    &-bright-brown{
+      background-color: #FFDF9A;
+      border-color: _brand-colors(_white);
+      color: _brand-colors(_dark-grey);
+      &:hover, &:focus{
+        border-color: _brand-colors(_white);
+      }
+      &.commonClientReport--block-inner-item{
+        &:hover, &:focus{
+          background-color: #D6AB4D;
+        }
+      }
+    }
+    &-bright-red{
+      background-color: #D49F9C;
+      border-color: _brand-colors(_white);
+      color: _brand-colors(_dark-grey);
+      &:hover, &:focus{
+        border-color: _brand-colors(_white);
+      }
+      &.commonClientReport--block-inner-item{
+        &:hover, &:focus{
+          background-color: #AC504B;
+        }
+      }
+    }
+    &-yellow{
+      background-color: _brand-colors(_light-yellow2);
+      border-color: _brand-colors(_white);
+      color: _brand-colors(_dark-grey);
+      &:hover, &:focus{
+        border-color: _brand-colors(_white);
+      }
+      &.commonClientReport--block-inner-item{
+        &:hover, &:focus{
+          background-color: _brand-colors(_yellow2);
+          // color: _brand-colors(_white);
+        }
+      }
+    }
+    &-value{
+      font-size: rem(24);
+      font-weight: 700;
+      line-height: 24px;
+      padding-bottom: 8px;
+      &-pct{
+        font-size: 13px;
+        color: #434343;
+      }
+    }
+  }
+}

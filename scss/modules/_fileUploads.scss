@@ -1,0 +1,17 @@
+.upload-file .js-progress,
+.upload-file .upload-file-status {
+  display: none;
+}
+
+.upload-file[data-status="ready"] .upload-file-status[data-status="ready"] {
+  display: inline-block;
+}
+
+.upload-file[data-status="progress"] .js-progress,
+.upload-file[data-status="progress"] .upload-file-status[data-status="progress"] {
+  display: inline-block;
+}
+
+.upload-file[data-status="done"] .upload-file-status[data-status="done"] {
+  display: inline-block;
+}

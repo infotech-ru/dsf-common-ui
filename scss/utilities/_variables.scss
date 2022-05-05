@@ -1,0 +1,384 @@
+// ---------------------------- //
+// Variables ------------------ //
+// ---------------------------- //
+
+// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "~bootstrap/scss/_functions.scss";
+// @import "../../../node_modules/bootstrap/scss/_variables.scss";
+// @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss"; // старая версия перебивает новые
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "variables/_var-colors";
+@import "variables/_var-zindex";
+// @import "variables-default";
+// @import "bootstrap-select-variables";
+$gray-base:              #000 !default;
+//  -----------------------------------------default color //
+$color-red:                         red !default;
+$gray-lighter:                      gray !default;
+$color-blue:                        blue !default;
+$gray-100:             lighten($gray-base, 10.0%) !default; // #555
+$gray-600:             lighten($gray-base, 60.0%) !default; //
+$gray-600:             lighten($gray-base, 60.0%) !default; //
+$gray-800:             lighten($gray-base, 80.0%) !default; //
+$gray-900:             lighten($gray-base, 90.0%) !default; //
+
+
+$white:   #fff;
+$black:   #000000;
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+$brown:   #646974 !default;
+$gray:    $gray-600;
+$gray-lighter: $gray-100;
+$gray-dark: $gray-800;
+
+
+$colors: (
+  blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray,
+  gray-dark: $gray-dark
+) !default;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+) !default;
+//  -------------------------------------------brand color //
+
+$color-red:             #DE1C24;
+$color-blue:            #5e92ff;
+$color-green:           #99e13d;
+$color-yellow:          #fbca49;
+$color-gray:            #E3E3E3;
+$dark-grey:             #333;
+$dark-grey2:            #262626;
+$dark-grey-brown-tint:  #292827;
+$color-very-light-gray: #e6e6e6;
+
+$blue2:                        #717580;
+$bright-blue-light:            #B5BACC;
+$bright-blue:                  #2E3183;
+$bright-purple:                #662D82;
+$medium-grey:                  #BABABA;
+$medium-grey2:                 #808080;
+
+$crm-dsf-bright-blue:          #006699;
+$crm-dsf-blue:                 #3c82c0;
+$crm-dsf-red:                  #FF0000;
+$crm-dsf-orange:               #FFDB7D;
+$crm-dsf-gray:                 #CCCCCC;
+$crm-dsf-green:                #00B233;
+$color-success2:               #52A447;
+
+// -------------------------------------------------- COLOR SET //
+@function _colors($keys...) {
+  @return val($colors, $keys...);
+}
+$colors: (
+  black:                            #000000,
+  bright-blue:                      #5e92ff,
+  bright-blue2:                     #4A8DC6,
+  bright-blue3:                     #1E6393,
+  dsf-bright-blue:                  #006699,
+  dsf-blue:                         #3c82c0,
+  dark-grey:                        #333333,
+  dark-grey2:                       #262626,
+  dark-grey3:                       #777777,
+  green:                            #467B46,
+  green2:                           #467B46,
+  bright-green:                     #69C26A,
+  light-grey:                       #E3E3E3,
+  light-grey2:                      #e6e6e6,
+  light-grey3:                      #dddddd,
+  light-grey-green:                 #DAF0DA,
+  medium-grey:                      #BABABA,
+  transparent:                      transparent,
+  red:                              #DE1C24,
+  bright-red:                       #D9534F,
+  bright-red2:                      #962D2A,
+  dark-red:                         #762624,
+  white:                            #ffffff,
+  very-bright-orange:               $crm-dsf-orange,
+  bright-orange:                    #D59A00,
+);
+
+// Gets a palette value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function _palette($keys...) {
+  @return val($palette, $keys...);
+}
+$palette: (
+  primary:                                _colors(dsf-blue),
+  checkboxItem--color:                    _colors(dark-grey),
+  checkboxItem--disabled-color:           #cccccc,
+  checkboxItem--bgColor:                  _colors(white),
+  checkboxItem--bgColor_active:           _colors(bright-blue2),
+  checkboxItem--bgColor_hover:            _colors(bright-blue2),
+  checkboxItem--borderColor:              _colors(medium-grey),
+  checkboxItem--borderColor_active:       _colors(bright-blue3),
+  checkboxItem--borderColor_hover:        _colors(bright-blue3),
+  checkboxItemBig--color:                 _colors(dark-grey),
+  checkboxItemBig--bgColor:               _colors(transparent),
+  checkboxItemBig--bgColor_active:        _colors(transparent),
+  checkboxItemBig--bgColor_hover:         _colors(transparent),
+  checkboxItemBig--borderColor:           _colors(medium-grey),
+  checkboxItemBig--borderColor_active:    _colors(medium-grey),
+  checkboxItemBig--borderColor_hover:     _colors(medium-grey),
+  custom-file--borderColor_focus:         _colors(medium-grey),
+  custom-file--btn-bgColor:               _colors(bright-blue),
+  custom-file--boxShadow_focus:           _colors(medium-grey),
+  custom-file--color:                     _colors(dark-grey2),
+  custom-file--bg:                        _colors(transparent),
+  custom-file--borderColor:               _colors(medium-grey),
+  custom-file--buttonColor:               _colors(white),
+  custom-file--buttonBg:                  _colors(transparent),
+  state-danger:                           _colors(bright-red),
+  state-danger-end:                       _colors(bright-red2),
+  state-warning:                          _colors(very-bright-orange),
+  state-warning-end:                      _colors(bright-orange),
+  state-success:                          _colors(bright-green),
+  state-success-end:                      _colors(green),
+  tableSvgIicon-fill:                     _colors(bright-blue3),
+);
+// -------------------------------------------------- END COLOR SET //
+
+
+
+@function _size($keys...) {
+  @return val($size, $keys...);
+}
+$size: (
+  btn-FontSize:                         12,
+  checkboxItem--size:                   12,
+  checkboxItemBig--size:                24,
+  custom-file--height:                  26,
+  custom-file--height-inner:            26,
+  custom-file--padding-y:               0,
+  custom-file--padding-x:               4,
+  custom-file--buttonPadding-x:         10,
+  custom-file--lineHeight:              26,
+  custom-file--borderWidth:             1,
+  custom-file--borderRadius:            2,
+  custom-file--boxShadow:               1,
+  form-control--height:                 26,
+  padding-base--vertical:               0,
+  padding-base--horizontal:             10,
+  modal-padding-x:                      20,
+  label-fz:                             11,
+  label-mb:                             5,
+  lihe-height:                          28,
+);
+// -------------------------------------------------- END SIZE SET //
+
+//  ----------------------------------Bootstrap overwrite //
+$leading-values:                    38 !default;
+
+$brand-color:                       #333 !default;
+//
+$body-color:                        #fff;
+
+$body-bg:                           $body-color;
+$html-bg:                           $body-color;
+
+$base-link:                         $bright-blue;
+
+$base-link-hover:                   $bright-purple;
+
+$grid-columns:                      12;
+$grid-gutter-width:                 10px;
+$enable-shadows:                    false;
+$enable-color-sheme:                false;
+$enable-tetcolor-sheme:             false;
+$enable-flex:                       false !default;
+$enable-grid-classes:               true !default;
+// $enable-pull-push-classes:          false !default;
+$enable-col-pull-classes:           false !default;
+$enable-col-push-classes:           false !default;
+$enable-col-offset-classes:         true !default;
+$enable-transitions:                true !default;
+$enable-rounded:                    false;
+
+//  ----------------------------------Bootstrap-4 overwrite //
+// $grid-columns:               12 !default;
+$grid-gutter-width-base:            10px !default;
+$grid-gutter-width-base-equal:      true !default; // убрать лишние вила при одинковом значении для всех media
+
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base,
+  xxl: $grid-gutter-width-base,
+  xxxl: $grid-gutter-width-base
+) !default;
+
+
+
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+$grid-breakpoints: (
+  xs: 480,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1280px,
+  xxl: 1366px,
+  xxxl: 1440px
+);
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+
+$container-max-widths: (
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1068px,
+  xl: 1134px,
+  xxl: 1234px,
+  xxxl: 1294px
+);
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+$spacer:   1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+
+
+//  ----------------------------------------Fonts-family //
+
+
+$ubuntu:(
+  ff1: 'Ubuntu',
+  ff2: sans-serif,
+  ffstyle: '400,700',
+);
+
+$roboto:(
+  ff1: 'Roboto',
+  ff2: sans-serif,
+  ffstyle: '300,400,700',
+);
+
+$roboto-condensed:(
+  ff1: 'Roboto Condensed',
+  ff2: sans-serif,
+  ffstyle: '300,400,700',
+);
+
+$open-sans:(
+  ff1: 'Open Sans',
+  ff2: sans-serif,
+  ffstyle: '400,700',
+);
+
+
+// $font-family-arial:                 Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+$font-family-arial:             "'Helvetica Neue', Arial, Helvetica, sans-serif";
+//
+
+// подкючения нужной гарнитуры языка в google-fonts
+$google-subset-cyrillic:  true;
+$google-subset-cyrillic-ext:  false;
+$google-subset-latin-ext:  false;
+
+//  ----------------------------------------------Path //
+$asset-base-path:                   "";
+
+$path-img:                          $asset-base-path + "/img/";
+$path-fonts:                        $asset-base-path + "/fonts/";
+$path-svgs:                         $asset-base-path + "/svg/";
+$path-icon-svg:                     $asset-base-path + "/icons/svg/";
+
+//  ----------------------------------------------Base //
+
+// $font-size-base:                    12;
+$font-size-body:                    $font-size-context;
+
+// $font-family:                       $exo-2;
+// $font-family-base:                  google-font-family($font-family);
+// $font-family-base:                  $font-family-arial;
+// $font-family:                       google-font-family($roboto);
+
+$font-family:                      $roboto;
+$font-family-base:                 google-font-family($font-family);
+
+// $font-family2:                      $roboto-condensed;
+// $font-family-base2:                 google-font-family($font-family);
+
+// $font-family3:                      $exo-2;
+// $font-family-base2:                 google-font-family($font-family3);
+
+$text-color:                        $brand-color;
+
+$line-height-base:                  18px;
+$line-height-computed:              $line-height-base;
+
+$link-color:                        $base-link;
+$link-hover-color:                  $base-link-hover;
+$link-hover-decoration:             none !default;
+
+$cursor-disabled:                   disable !default;
+
+$form-group-mb:                     $line-height-base !default;
+
+$control-label-mb:                  $line-height-base;
+
+$hr-border:                         $gray-lighter !default;
+
+$transition-collapse:               height .35s ease !default;
+
+$caret-width-base:                  4px !default;
+
+
+//  ----------------------------------------placeholder //
+$placeholder-color:                 $brand-color !default;
+$placeholder-fw:                    bold !default;
+
+//  -------------------------------------------required //
+$required-border-color:             $color-red !default;
+$required-color:                    $color-red !default;
+
+// $toolbar-color:                     $color-yellow;
+$toolbar-color:                     $color-gray;
+
+$modal-md:                          640px;
+$modal-lg:                          1000px;

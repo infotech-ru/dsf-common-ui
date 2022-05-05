@@ -1,0 +1,96 @@
+/* ============================= */
+/*  Icons                        */
+/* ============================= */
+.svg--icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    // @include svg-icon(16);
+    height: 16px; // !default
+    width: auto;
+    svg{
+        display: block;
+        height: 16px; //!default
+        width: auto;
+        .fill{
+            .crm-btn-row-primary &{
+                fill:#2c81c0;
+            }
+        }
+    }
+    &--off{
+        display: none;
+    }
+    &--on{
+        display: inline-block;
+    }
+}
+.svg--comments{
+    svg{
+        .fill{
+            &.white{
+                fill: $white;
+            }
+            &.comment1{
+                fill: #1E6393;
+                .shown &{
+                    fill: #dddddd;
+                }
+            }
+            &.comment2{
+                fill: #69C26A;
+                .shown &{
+                    fill: #BABABA;
+                }
+            }
+        }
+    }
+}
+.svg--glyphicons-chevron-up{
+    svg{
+        .crm-btn-row &{
+            height: rem(12);
+        }
+        .collapsed &{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.icon-svg{
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    &.icon-warehouse {
+        height: 21px;
+        svg {
+            height: 21px;
+            #main-info & {
+                height: 17px;
+            }
+        }
+        #main-info & {
+          height: 17px;
+          vertical-align: text-bottom;
+          width: auto;
+        }
+    }
+}
+
+.icon-help {
+    background-image: url('data:image/svg+xml;charset%3DUS-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%3E%3Cpath%20d%3D%22M512%200c282.8%200%20512%20229.2%20512%20512s-229.2%20512-512%20512S0%20794.8%200%20512%20229.2%200%20512%200zm0%20961c247%200%20448-202%20448-449S759%2064%20512%2064%2064%20265%2064%20512s201%20449%20448%20449zm-47.1-241.8h80.5v81.2h-80.5v-81.2zm46.2-495.7c51.3%200%2091.2%2013.1%20119.6%2039.2%2028.4%2026.2%2042.6%2062.7%2042.6%20109.6%200%2033.6-9.2%2064.3-27.5%2092.2-18.4%2027.9-42.7%2056.4-72.9%2085.6-14.1%2014.1-22.6%2026.7-25.6%2037.9s-4.5%2028.7-4.5%2052.3h-77c.2-37.7%203.5-63.9%209.7-78.5%206.2-14.6%2022.7-33.8%2049.2-57.8%2025.8-30.5%2044.1-53.9%2055.1-70.3%2010.9-16.4%2016.4-36.2%2016.4-59.4%200-27.6-7.3-48.8-22.1-63.7-14.7-14.8-35.7-22.3-63.1-22.3-23.7%200-43.9%206.4-60.6%2019.3-16.7%2012.9-25%2048.8-25%2073.8H352l-1.2-2.3c-.8-41.9%2014-92.5%2044.3-117.8%2030.5-25.1%2069.1-37.8%20116-37.8z%22%2F%3E%3C%2Fsvg%3E');
+    .control-label &{
+    background-repeat: no-repeat;
+    display: inline-block;
+    // float: right;
+    height: 14px;
+    margin: -4px 4px -2px;
+    width: 14px;
+    }
+}
+
+.table > tbody > tr > td .icon-event, .table > tbody > tr > th .icon-event {
+    font-size: 11px;
+    color: #1E6393;
+    cursor: pointer;
+}

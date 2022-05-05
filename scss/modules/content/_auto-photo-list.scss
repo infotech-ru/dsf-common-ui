@@ -1,0 +1,156 @@
+.auto-photo-list{
+    position: relative;
+    &--inner{
+        position: relative;
+    }
+    .carousel-control{
+        background-color: transparentize(#000, .5);
+        background-image: none;
+        width: rem(32);
+        // background-image: none;
+    }
+    .css-photo-list{
+        &:empty{
+            height: 300px;
+            @include gradient-vertical($white, $color-very-light-gray, 0%, 100%);
+            @media (min-width: 1200px){
+                height: 320px;
+            }
+            @media (min-width: 1280px){
+                height: 350px;
+            }
+            @media (min-width: 1366px){
+                height: 400px;
+            }
+            @media (min-width: 1440){
+                height: 474px;
+            }
+            &:after{
+                background-image: url($path-svgs + 'car_default.svg');
+                background-repeat: no-repeat;
+                background-size: 80% auto;
+                background-position: center;
+                content: '';
+                display: block;
+                height: 100%;
+            }
+        }
+        &--item{
+            height: 474px;
+            overflow: hidden;
+            .css-photo-list-delete{
+                position: absolute;
+                top: rem(10);
+                right: rem(20);
+            }
+            .css-photo-list-download{
+                position: absolute;
+                top: rem(10);
+                right: rem(150) !important;
+            }
+            .checkbox{
+                color: $white;
+                font-size: rem(15);
+                font-weight: 400;
+                margin: 0 0 rem(20);
+                padding-left: rem(25);
+                text-transform: uppercase;
+                input[type="checkbox"]{
+                    margin-left: rem(-24);
+                }
+            }
+            &--angle{
+                background-color: $white;
+            }
+            &--action{
+                display: none;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-top: rem(-59);
+                margin-left: rem(-125);
+                width: rem(250);
+                z-index: 2;
+            }
+            .css-photo-list-download,
+            .css-photo-list-delete{
+                color: $white;
+                font-size: rem(15);
+                line-height: rem(18);
+                right: rem(40);
+                text-transform: uppercase;
+                // text-shadow: 0 0 1px #000;
+                width: auto;
+                z-index: 2;
+                .svg--icon{
+                    display: inline-block;
+                    vertical-align: text-top;
+                }
+            }
+            &:hover{
+                .css-photo-list--item--action,
+                .css-photo-list-download,
+                .css-photo-list-delete{
+                    display: block;
+                }
+                &:after{
+                    background-color: transparentize(#000, .2);
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    z-index: 1;
+                }
+            }
+        }
+        img{
+            @include img-responsive;
+            margin: 0 auto;
+        }
+        &--download-image{
+            float: right;
+            height: rem(70);
+            line-height: rem(55);
+            margin-top: rem(10);
+            padding: rem(6) rem(7);
+            position: relative;
+            z-index: 16;
+            .svg--glyphicons-plus-sign{
+                fill: $medium-grey2;
+                @include svg-icon(16px);
+                vertical-align: middle;
+            }
+
+        }
+    }
+    .carousel-indicators-item{
+        &:hover{
+            .css-photo-list-download,
+            .css-photo-list-delete{
+                display: block;
+            }
+        }
+    }
+    .carousel-indicators-image{
+        margin: rem(10) 0 0;
+    }
+    .btn-delete{
+        display: block;
+        position: absolute;
+        right: 2px;
+        height: rem(16);
+        top: 2px;
+        width: rem(16);
+    }
+    .svg--remove-sign{
+        @include svg-icon(16px);
+        display: block;
+    }
+    .css-photo-list-download,
+    .css-photo-list-delete{
+        display: none;
+    }
+}

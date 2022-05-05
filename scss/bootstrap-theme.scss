@@ -1,0 +1,207 @@
+// .btn-wide {
+//     padding-left: 35px;
+//     padding-right: 35px;
+// }
+
+// .btn-labeled {
+//     padding-top: 0;
+//     padding-bottom: 0;
+//     line-height: 32px;
+//     padding-left: 6px; /*new-btn*/
+// }
+
+// .btn-labeled.btn-flat:not(:hover):not(.active):not(:focus) .btn-label {
+//     background: rgba(0, 0, 0, 0.0);
+// }
+
+// .btn-labeled.btn-sm {
+//     line-height: 28px;
+//     padding-left: 5px; /*new-btn*/
+//     padding-right: 10px; /*new-btn*/
+// }
+
+// .btn-labeled.btn-lg {
+//     line-height: 43px;
+//     padding-left: 8px; /*new-btn*/
+//     padding-right: 16px; /*new-btn*/
+// }
+
+// .btn-labeled .btn-label {
+//     height: 20px;
+//     position: relative;
+//     /*left: -12px;*/
+//     left: -6px; /*new-btn*/
+//     display: inline-block;
+//     /*padding: 6px 12px;*/
+//     padding: 6px 6px 6px 12px; /*new-btn*/
+//     /*background: rgba(0, 0, 0, 0.10);*/
+//     background: rgba(0, 0, 0, 0.0); /*new-btn*/
+//     border-radius: 3px 0 0 3px;
+//     box-sizing: content-box;
+//     -moz-box-sizing: content-box;
+//     font-size: 18px;
+// }
+
+// .btn-labeled.btn-sm .btn-label {
+//     height: 18px;
+//     padding: 5px 5px 5px 10px; /*new-btn*/
+//     left: -5px; /*new-btn*/
+//     font-size: 15px;
+// }
+
+// .btn-labeled.btn-lg .btn-label {
+//     height: 25px;
+//     /*padding: 10px 16px;*/
+//     padding: 9px 8px 9px 16px; /**/
+//     /*left: -16px;*/
+//     left: -8px; /*new-btn*/
+//     font-size: 25px;
+// }
+
+// .btn-labeled.btn-sm .glyphicon {
+//     top: 2px;
+// }
+
+// .btn-labeled.btn-lg .glyphicon {
+//     top: 1px;
+// }
+
+// .btn-labeled .btn-label.fltyp {
+//     background: rgba(255, 252, 252, 0.95);
+// }
+
+// .btn-labeled.btn-sm .btn-label.fltyp {
+//     width: 18px;
+//     border-right: 1px solid #D1D1D1;
+// }
+
+// .btn-labeled.btn-sm .btn-label.fltyp .glyphicon {
+//     top: -1px;
+// }
+
+// .btn-labeled .btn-label.fltyp .glyphicon.text-success {
+//     color: #468847;
+// }
+
+// .btn-labeled:hover .btn-label.fltyp .glyphicon.text-success, .btn-labeled:active .btn-label.fltyp .glyphicon.text-success {
+//     color: #356635;
+// }
+
+/*.btn-labeled.btn-lg {
+	line-height: 43px;
+}
+.btn-labeled.btn-lg .btn-label {
+	height: 23px;
+	padding: 10px 16px;
+	left: -16px;
+	font-size: 23px;
+}*/
+/*.btn-labeled .glyphicon {
+	top: 0;*/
+/*font-size: 16px;*/
+/*}
+.btn-labeled.btn-lg .glyphicon {
+	top: -1px;
+}*/
+// .thumbnail,
+// .img-thumbnail {
+//     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+//     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+// }
+
+
+
+// .navbar-inverse {
+//     background-image: -webkit-gradient(linear, left 0%, left 100%, from(#3c3c3c), to(#222222));
+//     background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+//     background-image: -moz-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+//     background-image: linear-gradient(to bottom, #3c3c3c 0%, #222222 100%);
+//     background-repeat: repeat-x;
+//     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+//     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+// }
+
+// .navbar-inverse .navbar-nav > .active > a {
+//     background-image: -webkit-gradient(linear, left 0%, left 100%, from(#222222), to(#282828));
+//     background-image: -webkit-linear-gradient(top, #222222 0%, #282828 100%);
+//     background-image: -moz-linear-gradient(top, #222222 0%, #282828 100%);
+//     background-image: linear-gradient(to bottom, #222222 0%, #282828 100%);
+//     background-repeat: repeat-x;
+//     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff282828', GradientType=0);
+//     -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
+//     box-shadow: inset 0 3px 9px rgba(0, 0, 0, 0.25);
+// }
+
+// .navbar-inverse .navbar-brand,
+// .navbar-inverse .navbar-nav > li > a {
+//     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+// }
+
+// .navbar-static-top,
+// .navbar-fixed-top,
+// .navbar-fixed-bottom {
+//     border-radius: 0;
+// }
+
+
+
+
+
+
+// .glyphicon, .glyphicon:hover {
+//     text-decoration: none !important;
+//     border-bottom: 0 !important;
+// }
+
+
+ /************WIDGET***************/
+// .module {
+//     border: 1px solid #ccc;
+//     border-radius: 12px;
+//     background-color: #fff;
+//     margin: 0 0 14px;
+//     position: relative;
+//     /*	overflow: hidden; */
+//     /* v ie ne vidna sticky panel pri prokrutke*/
+// }
+
+// .module h2 {
+//     font-size: 20px;
+//     color: #000;
+//     margin: 8px 0 0 0;
+//     padding: 0 0 8px 40px;
+//     background: url(../images/icon-h.png) no-repeat;
+//     height: 23px;
+//     font-weight: normal;
+//     line-height: 23px;
+//     border-bottom: 1px solid #ccc;
+//     box-sizing: content-box;
+//     -moz-box-sizing: content-box;
+// }
+
+// .module span.date {
+//     position: absolute;
+//     top: 8px;
+//     right: 9px;
+//     display: inline-block;
+// }
+
+// .module span.date input {
+//     cursor: pointer;
+//     background: transparent url(../images/date.png) no-repeat top right;
+//     padding: 0 28px 0 7px;
+//     width: 84px;
+//     font-size: 12px;
+//     font-weight: bold;
+//     height: 21px;
+//     border-radius: 3px;
+//     border: 1px solid #CCC;
+//     box-sizing: content-box;
+//     -moz-box-sizing: content-box;
+// }
+
+/************END-WIDGET***************/
+// .label-orange{
+//     background-color: #ff804e;
+// }
+

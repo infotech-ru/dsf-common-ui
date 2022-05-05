@@ -1,0 +1,56 @@
+.contact{
+  &--date{
+    font-size: rem(12);
+    color: _colors(dark-grey);
+    line-height: rem(14);
+    margin-bottom: 4px;
+  }
+  &--status{
+    border-radius: 1px;
+    color: _colors(white);
+    display: inline-block;
+    font-size: rem(10);
+    font-weight: 700;
+    line-height: rem(16);
+    padding: 0 5px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+    &--scheduled{ // scheduled
+      background-color: _colors(dsf-blue);
+    }
+    &--done{ // done
+      background-color: _colors(bright-green);
+    }
+    &--canceled{ // canceled
+      background-color: _colors(bright-red);
+    }
+  }
+  &--title{
+    color: _colors(dark-grey);
+    display: inline-block;
+    font-size: rem(12);
+    font-weight: 400;
+    line-height: rem(14);
+    margin-right: 15px;
+    text-transform: uppercase;
+    vertical-align: text-top;
+  }
+   &--manager{
+    color: _colors(dark-grey3);
+    font-size: rem(12);
+    font-weight: 400;
+    line-height: rem(14);
+  }
+  &--comment{
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEwIDkuMzMiPjxwYXRoIGQ9Ik04LjUzLDBIMS4zOUExLjQsMS40LDAsMCwwLDAsMS4zOVY2LjE1QTEuNDEsMS40MSwwLDAsMCwxLjM5LDcuNTRIMy41N2wuOTEsMS41MUEuNTguNTgsMCwwLDAsNSw5LjMzYS42OC42OCwwLDAsMCwuNTItLjI4bC45MS0xLjUxSDguNjFBMS40MSwxLjQxLDAsMCwwLDEwLDYuMTVWMS4zOUExLjUzLDEuNTMsMCwwLDAsOC41MywwWm0uMiw2LjE1YS4xOS4xOSwwLDAsMS0uMi4ySDZhLjY1LjY1LDAsMCwwLS41MS4yOEw1LDcuNThsLS41Ni0xYS41Ni41NiwwLDAsMC0uNTEtLjI4SDEuMzlhLjE5LjE5LDAsMCwxLS4yLS4yVjEuMzlhLjE5LjE5LDAsMCwxLC4yLS4ySDguNTNhLjE5LjE5LDAsMCwxLC4yLjJaTTUuNTYsNC43NnYuNGEuMzguMzgsMCwwLDEtLjQuNGgtLjRhLjM3LjM3LDAsMCwxLS4zOS0uNHYtLjRhLjM2LjM2LDAsMCwxLC4zOS0uMzloLjRBLjM3LjM3LDAsMCwxLDUuNTYsNC43NlptLTIsMHYuNGEuMzguMzgsMCwwLDEtLjQuNEgyLjc4YS4zOC4zOCwwLDAsMS0uNC0uNHYtLjRhLjM3LjM3LDAsMCwxLC40LS4zOWguMzlBLjM3LjM3LDAsMCwxLDMuNTcsNC43NlptNCwwdi40YS4zOC4zOCwwLDAsMS0uNC40SDYuNzVhLjM4LjM4LDAsMCwxLS40LS40di0uNGEuMzcuMzcsMCwwLDEsLjQtLjM5aC4zOUEuMzcuMzcsMCwwLDEsNy41NCw0Ljc2WiIgZmlsbD0iIzc3NyIvPjwvc3ZnPg==');
+    background-size: auto 10px;
+    background-repeat: no-repeat;
+    background-position: 0 1px;
+    color: _colors(dark-grey3);
+    font-size: rem(12);
+    font-weight: 400;
+    padding-left: 20px;
+    line-height: rem(14);
+    margin-top: 4px;
+  }
+}

@@ -1,0 +1,22 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/labels";
+
+.label{
+  border-radius: 1px;
+  color: _brand-colors(_white);
+  display: inline-block;
+  font-size: rem(10);
+  font-weight: bold;
+  line-height: 16px;
+  min-height: rem(12);
+  // padding: 0 5px 0 5px;
+  padding: 0 4px 0 5px;
+  @each $label in default, primary, success, danger, warning, yellow {
+    &-#{$label}{
+      background-color: _brand-palette(label-bg-#{$label});
+      color: _brand-palette(label-color-#{$label});
+    }
+  }
+  .placeholders-box  &{
+    margin-bottom: 4px;
+  }
+}

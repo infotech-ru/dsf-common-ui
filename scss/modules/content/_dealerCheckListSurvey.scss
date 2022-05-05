@@ -1,0 +1,178 @@
+.dealerCheckListSurvey{
+  &--link{
+    float: right;
+    margin-right: 20px;
+     @media (min-width: 992px) {
+      display: none;
+    }
+    .svg--share{
+      height: 21px;
+      width: 19px;
+      svg{
+        height: 21px;
+        width: 19px;
+        .fill{
+          fill: _colors(blue);
+        }
+        .stroke{
+          stroke:_colors(blue);
+        }
+      }
+    }
+  }
+  &--item{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+    &-1{
+      display: none;
+      @media (min-width: 992px) {
+        display: block;
+        width: 16.6666666667%;
+      }
+    }
+    &-2{
+      @media (min-width: 992px) {
+        border-left: 1px solid #ddd;
+        padding: 0 0 0 20px;
+        width: 25%;
+      }
+    }
+    &-3{
+      @media (min-width: 992px) {
+        border-left: 1px solid #ddd;
+        padding-left:20px;
+        margin-left:20px;
+        min-width:58.3333333333%;
+      }
+    }
+  }
+}
+
+.checkList-questioning{
+  &-h4{
+    align-items: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    @media (min-width: 992px) {
+      margin-bottom: 24px;
+    }
+    &--item{
+      &:last-child{
+        text-align: right;
+        white-space: nowrap;
+      }
+    }
+  }
+  &-headline{
+    align-items: center;
+    border-left: 6px solid _brand-colors(_light-blue);
+    background-color: _brand-colors(_light-blue2);
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    min-height: 36px;
+    margin-bottom: 10px;
+    &--h5{
+      // color: #2c81c0;
+      color: _brand-colors(_blue);
+      padding-left: 10px;
+      // float: left;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 600;
+      // line-height: 36px;
+      margin: 0;
+    }
+    &--value{
+      margin-right: 20px;
+      // font-weight: 700;
+
+      color: _brand-colors(_blue);
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: right;
+      text-transform: uppercase;
+      text-shadow: 0px 1px 0px _brand-colors(_white);
+    }
+  }
+  &--item{
+    margin-bottom: 20px;
+  }
+  .nocomments{
+    color: _brand-colors(_grey3);
+  }
+  .table > tbody > tr > td .nocomments .glyphicon{
+    color: _brand-colors(_grey3);
+  }
+  &--action-block{
+    .btn + .btn{
+      @media (min-width: 992px) {
+        margin-left: 7px;
+        margin-top: 0;
+      }
+    }
+    &--inner{
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.surveyInfo {
+  margin-top: 10px;
+  &__title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #333333;
+  }
+
+  &__list {
+    margin-top: 5px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+
+    .svg--icon {
+      margin-right: 5px;
+      height: auto;
+
+      svg {
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,550 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+$btn-border-radius: 0px;
+
+// Base styles
+// --------------------------------------------------
+[data-toggle="buttons"] {
+  > .btn,
+  > .btn-group > .btn {
+    input[type="radio"],
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      pointer-events: none;
+    }
+  }
+}
+
+.btn {
+  background-image: none; // Reset unusual Firefox-on-Android default style;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  margin-bottom: 0; // For input.btn
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  @include button-size($padding-base-vertical, $padding-base-horizontal, rem(_size(btn-FontSize)), $line-height-base, $btn-border-radius);
+  @include user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+      outline: none;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $btn-default-color;
+    outline: none;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    // background-image: none;
+    // @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+  &:active:focus{
+    outline: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    @include opacity(.5);
+    @include box-shadow(none);
+  }
+  @each $btn in default, primary, success, danger, warning {
+    &-#{$btn}{
+      background-color: _brand-palette(btn-bg-#{$btn});
+      background-image: -webkit-linear-gradient(_brand-palette(btn-bg-#{$btn}) 0%, _brand-palette(btn-bg-#{$btn}-end) 100%);
+      background-image: -o-linear-gradient(_brand-palette(btn-bg-#{$btn}) 0%, _brand-palette(btn-bg-#{$btn}-end) 100%);
+      background-image: linear-gradient(_brand-palette(btn-bg-#{$btn}) 0%, _brand-palette(btn-bg-#{$btn}-end) 100%);
+      border-color: _brand-palette(btn-bg-#{$btn}-end);
+      color: _brand-palette(btn-color-#{$btn});
+      // text-shadow: 0px 0.5px 0px transparentize(map-get($brand-palette, btn-textShadow-#{$btn}), 0.6);
+      &:hover,
+      &:focus,
+      &:active,
+      &.active,
+      &.focus {
+        background-image: -webkit-linear-gradient(_brand-palette(btn-bg-#{$btn}-end) 0%, _brand-palette(btn-bg-#{$btn}) 100%);
+        background-image: -o-linear-gradient(_brand-palette(btn-bg-#{$btn}-end) 0%, _brand-palette(btn-bg-#{$btn}) 100%);
+        background-image: linear-gradient(_brand-palette(btn-bg-#{$btn}-end) 0%, _brand-palette(btn-bg-#{$btn}) 100%);
+        background-position: inherit;
+        color: _brand-palette(btn-color-#{$btn});
+      }
+      .svg--icon{
+        svg{
+          fill: _brand-palette(btn-color-#{$btn});
+        }
+      }
+    }
+  }
+
+  .caret {
+    margin-left: 0;
+  }
+  &-icon{
+    .svg--icon{
+      margin-right: 4px;
+    }
+  }
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-info {
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+
+
+.btn-default {
+  .badge {
+      // color: #333;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    padding: 0px 5px;
+    background-color: rgba(50, 50, 50, 0.4);
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .svg--icon{
+    svg{
+      fill: _brand-colors(_blue);
+    }
+  }
+}
+
+
+
+
+.btn-flat:not(:hover):not(.active):not(:focus) {
+    background: transparent none;
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    text-shadow: 0 1px 0 #FFF;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.0), 0 1px 1px rgba(0, 0, 0, 0.00);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.0), 0 1px 1px rgba(0, 0, 0, 0.0);
+    color: #333;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-sm{
+  border-radius: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 26px;
+  .svg--icon{
+    height: rem(12);
+    position: relative;
+    top: 2px;
+    svg{
+      height: rem(12);
+      max-width:20px;
+      width: auto;
+    }
+    + *{
+      margin-right: 2px;
+    }
+  }
+  .glyphicon-plus{
+      top: 1px;
+  }
+  .glyphicon-download-alt{
+      top: 1px;
+  }
+  .glyphicon-pencil{
+      top: 1px;
+  }
+  .glyphicon-trash{
+    top: 1px;
+  }
+  .glyphicon-resize-full{
+    top: 3px;
+    font-size: 13px;
+  }
+  .svg--glyphicons-basic-filter{
+    height: 12px;
+    svg{
+      height: 12px;
+    }
+  }
+  .svg--glyphicons-basic-filter-plus{
+    height: 14px;
+    svg{
+      height: 14px;
+    }
+  }
+  .svg--glyphicons-basic-tag{
+    height: 12px;
+    width: 12px;
+    svg{
+      height: 12px;
+      width: 12px;
+    }
+  }
+}
+
+.btn-group-sm > .btn {
+    line-height: 26px;
+    border-radius: 1px;
+}
+
+
+.btn-row {
+    background-color: transparent;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+
+.dsf-btn-link{
+    text-decoration: none;
+    border:1px solid #ddd;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+  + .glyphicon { // рабочий лист
+      margin-left: 8px;
+  }
+  &.text-left{
+      text-align: left;
+  }
+}
+
+.dsf-link{
+    text-decoration: none;
+  + .glyphicon { // рабочий лист
+      margin-left: 16px;
+  }
+}
+
+.btn-row.btn-sm,
+.btn-group-sm > .btn-row {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.btn-link {
+    color: #006699;
+    cursor: pointer;
+    // font-family: Tahoma;
+    border-color: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0) none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+  &:hover,
+  &:focus {
+      text-decoration: none;
+      outline: none;
+  }
+}
+
+.btn .glyphicon {
+    margin-right: 4px;
+}
+.btn-glyph .glyphicon { /* кнопка только с иконкой*/
+    margin-right: 0px;
+}
+
+.crm-btn-row{
+  svg{
+    fill: _palette(primary);
+    .menu-nav &{
+      fill: $crm-dsf-bright-blue;
+      height: 18px;
+    }
+  }
+  .svg--icon{
+    vertical-align: middle;
+    + .crm-btn-row-text{
+      height: 16px;
+      margin-left: 5px;
+    }
+  }
+  .svg--glyphicons-newspaper{
+    .menu-nav &{
+      width: 21px;
+    }
+  }
+  .svg--glyphicons-basic-hourglass{
+    top: -1px;
+    position: relative;
+  }
+  &:after{
+    content: '';
+    display: inline-block;
+    height: 1px;
+  }
+  &:hover,
+  &:focus {
+      background-color: transparent;
+      background-image: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #2a6598;
+      outline: 0;
+  }
+}
+
+.crm-btn-row-icon{
+  background: none;
+  border: none;
+  svg{
+    .fill{
+      fill: _brand-colors(_grey);
+    }
+    .stroke{
+      stroke: _brand-colors(_grey);
+    }
+  }
+  &:hover,
+  &:focus{
+    background-color: transparent;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    fill: _brand-colors(_blue);
+    stroke: _brand-colors(_blue);
+    outline: 0;
+    svg{
+      fill: none;
+      stroke: none;
+      .fill{
+        fill: _brand-colors(_blue);
+      }
+      .stroke{
+        stroke: _brand-colors(_blue);
+      }
+    }
+  }
+  .svg--fast-link,
+  .svg--glyphicons-basic-reload,
+  .svg--glyphicons-basic-square-download,
+  .svg--glyphicons-basic-pencil,
+  .svg--glyphicons-basic-block-move {
+    svg{
+      height: 14px;
+      width: 14px;
+    }
+  }
+  .svg--favorite {
+    svg{
+      height: 14px;
+      width: 15px;
+    }
+  }
+  .svg--glyphicons-basic-bin {
+    svg{
+      height: 14px;
+      width: 11px;
+    }
+  }
+}
+
+.crm-btn-row,
+.crm-label-row {
+    background: none;
+    border: none;
+    color: #337ab7;
+    display: inline-block;
+    font-size: rem(13);
+    padding: 0;
+    text-decoration: none;
+}
+
+.crm-btn-icon{
+  display: inline-block;
+  height: rem(14);
+  .svg--icon{
+    height: rem(14);
+    vertical-align: top;
+  }
+  svg{
+    height: rem(14);
+    fill: $crm-dsf-blue;
+    width: auto;
+  }
+}
+
+.crm-label-row-red{
+  color: $crm-dsf-red;
+  svg{
+    fill: $crm-dsf-red;
+  }
+  .svg--glyphicons-basic-hourglass{
+    top: 1px;
+    position: relative;
+  }
+}
+
+.btn-group.open .crm-btn-row.dropdown-toggle{
+    box-shadow: none;
+}
+.btn-opacity {
+  opacity: .2;
+  &:hover,
+  &:focus {
+      opacity: 1;
+  }
+}
+
+.css-btn-dropdown{
+  .glyphicon{
+    margin-right: 0;
+  }
+  .glyphicon-option-vertical{
+    top: 2px;
+    // width: rem(10);
+  }
+}
+
+/* ============================= */
+/*  RadioBtn                     */
+/* ============================= */
+.radiobtn.active[data-title="1"] {
+    background: #51a351 0 -15px;
+    background-image: none;
+    border-color: #398439;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.radiobtn.active[data-title="0"] {
+    background-color: #9f302a;
+    background-image: none;
+    border-color: #b92c28;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+.radiobtn.notActive {
+    text-shadow: 0 1px 0 #fff;
+    background-color: rgb(245, 245, 245);
+    background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffffff), to(#e0e0e0));
+    background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
+    background-image: -moz-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
+    background-image: -ms-linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
+    background-repeat: repeat-x;
+    border-color: #ccc;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+button[data-toggle="dropdown"] {
+  & + .dropdown-menu > li > a {
+      font-size: rem(12);
+      padding: 3px 15px;
+      .glyphicon{
+        top: 1px;
+      }
+  }
+}
+
+.collapse-btn{
+  font-size: rem(12);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-poll-edit {
+  margin-right: 10px;
+  .glyphicon-pencil {
+    position: relative;
+    left: 2px;
+    top: 1px;
+  }
+}
+
+.checkedConcert {
+  display: flex;
+  min-width: 90px;
+}
+.checkedConcertRadio {
+  position: relative;
+  margin-bottom: 0;
+  
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked {
+      & + span {
+        background: #51a351 0 -15px;
+        background-image: none;
+        background-image: none;
+        border-color: #398439;
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  span {
+    text-shadow: 0 1px 0 #fff;
+    background-color: whitesmoke;
+    background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffffff), to(#e0e0e0));
+    background-image: -webkit-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
+    background-image: -moz-linear-gradient(top, #ffffff 0%, #e0e0e0 100%);
+    background-image: -ms-linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 100%);
+    background-repeat: repeat-x;
+    border-color: #ccc;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    color: #006699;
+    cursor: pointer;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}

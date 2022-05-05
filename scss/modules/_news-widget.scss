@@ -1,0 +1,36 @@
+// ---------------------------- //
+// News-widget ---------------- //
+// ---------------------------- //
+
+.css-news-widget {
+  // left: rem(20);
+  // position: absolute;
+  // top: rem(20);
+  // width: 50%;
+  margin: 0 rem(-12) rem(12);
+  // z-index: 1;
+  h5 {
+    margin-top: 0;
+  }
+  .close {
+    margin-top: rem(-4);
+  }
+  .alert {
+    border-radius: rem(3);
+    margin-bottom: 0;
+  }
+  .css-all-news {
+    color: $crm-dsf-red;
+    font-size: rem(10);
+    text-transform: uppercase;
+    // .svg--icon{
+    //   height: rem(14);
+    //   vertical-align: middle;
+    //   width: auto;
+    // }
+    // svg{
+    //   height: rem(14);
+    //   width: auto;
+    // }
+  }
+}

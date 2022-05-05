@@ -1,0 +1,301 @@
+/* ============================= */
+/*  section.item                 */
+/* ============================= */
+
+section.item {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #c1c1c1;
+    // padding: 10px 10px 0 10px;
+    padding: rem(10);
+    margin-bottom: 10px;
+    // margin-top: 10px;
+    .dsf-distributor-dashboard &{
+        min-height:223px;
+        margin-top: 0;
+    }
+    section.item-tab &{
+        margin: 0px -10px 0;
+    }
+    h3{
+        &.title{
+            border-bottom: 2px solid #ccc;
+            font-size: rem(14);
+            font-weight: 700;
+            margin-top: 0;
+            padding-bottom: rem(8);
+          // text-transform: uppercase;
+        }
+        // &.title{
+        //     border-bottom: 1px solid transparentize(_colors(black), .8);
+        //     color: _colors(dark-grey);
+        //     font-size: rem(14);
+        //     font-weight: 400;
+        //     margin-top: 0;
+        //     padding-bottom: rem(8);
+        //   // text-transform: uppercase;
+        // }
+    }
+    &-modify {
+        background-color: #fff;
+        border-bottom: 1px solid #c1c1c1;
+        padding: 10px 10px 0 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    &-inner {
+        padding: 10px 0px 10px 0px;
+        margin: 10px 0;
+        .table{
+            margin-bottom: 0;
+        }
+        .summary{
+            margin-right: 10px;
+        }
+        &-border {
+            border-bottom: 1px solid #c1c1c1;
+        }
+        &-no-gutter .item-body{
+            margin: 0 -10px;
+        }
+    }
+    &.common-client{
+        padding: 10px 10px;
+        min-height:auto;
+    }
+    &.color1 {
+        background-color: #eeecd8;
+        &:empty {
+            display: none;
+        }
+    }
+    .maximizable-module.maximized & {
+        margin-bottom: 0;
+    }
+    .item-header{
+        padding: 6px 10px;
+        line-height: rem(26);
+        margin: 0 -10px 20px;
+        margin-top: rem(-10); // fix ?? ????? ? .simple-item
+        // position: relative; // fix issue 5516 ?????? dropdown
+        z-index: _zindex(sectionItem_ItemHeader);
+        @include clearfix;
+        h4{
+            display: inline-block;
+            font-size: rem(16);
+            font-family: 'Roboto';
+            font-weight: 600;
+            float: left;
+            line-height: rem(26);
+            margin: 0 0 0px;
+            & + .crm-label-row{
+                margin-left: 12px;
+            }
+            & + .item-header-left{
+                margin-left: 12px;
+            }
+        }
+    }
+    &--simple { // section.item
+        // border-bottom: 1px solid #c1c1c1; // отдельным модификатором или .item
+        // background-color: #fff; // отдельным модификатором или .item
+        padding: 0 0 rem(10);
+        position: relative;
+        margin-bottom: 10px;
+        &__bgWhite{
+          background-color: _brand-colors(_white);
+        }
+        &__bgGreyYellow{
+          background-color: _brand-colors(_color-eeecd);
+        }
+        &__borderBottom{
+          border-bottom: 1px solid #c1c1c1;
+        }
+        section.item-tab &{
+            margin: 0px 0px 0;
+        }
+        .item-header{
+            border-bottom: 1px solid transparentize(_colors(black), .8);
+            line-height: rem(22);
+            margin: 0 rem(0) 0;
+            padding: rem(5) rem(10) rem(4);
+            z-index: _zindex(sectionItem_ItemHeader);
+            @include box-shadow(none);
+            h4{
+                color: _colors(dark-grey);
+                display: inline-block;
+                font-size: rem(14);
+                font-weight: 400;
+                float: none;
+                margin: 0;
+                // font-weight: bold;
+                line-height: rem(22);
+                vertical-align: middle;
+            }
+            > h4{
+                float: left;
+            }
+            &.noBorder{
+                border-color: transparent;
+            }
+            &.mt-15{
+                margin-top: rem(15);
+            }
+            .svg--icon{
+                height: rem(12);
+            }
+            .glyphicon{
+                font-size: rem(12);
+            }
+            .svg--glyphicons-plus{
+                svg{
+                    height: rem(13); // смазывается если 12
+                }
+            }
+
+            svg {
+                height: rem(12);
+            }
+
+            .svg--glyphicons-basic-eye-off {
+                svg {
+                    height: rem(14);
+                }
+            }
+
+            .svg--glyphicons-basic-square-upload {
+                svg {
+                    height: rem(13);
+                }
+            }
+
+            .svg--glyphicons-basic-square-download {
+                svg {
+                    height: rem(14);
+                }
+            }
+
+            // .crm-
+            // btn-row{
+            //     font-size: 12px;
+            // }
+            &--clientCode {
+                color: _colors(dark-grey3);
+                display: inline-block;
+                font-size: rem(14);
+                margin-left: 10px;
+                max-width: calc(100% - 75px);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+                white-space: nowrap;
+                @include media-breakpoint-up(lg){
+                    margin-left: 20px;
+                    [lang="en_US"] & {
+                        margin-left: 10px;
+                    }
+                }
+            }
+            &--clientName{
+                display: block;
+                float: none;
+                font-size: rem(14);
+                font-weight: 700;
+                line-height: rem(22);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                .label{
+                    border-radius: 3px;
+                    display: inline-block;
+                    font-size: rem(11);
+                    font-weight: 400;
+                    line-height: 18px;
+                    height: 17px;
+                    margin-right: 8px;
+                    padding: 0 5px;
+                    vertical-align: text-top;
+                }
+            }
+            &--action-btn{
+                @include clearfix;
+                @include media-breakpoint-up(md){
+                    line-height: 22px;
+                    height: 22px;
+                    text-align: right;
+                }
+                .crm-btn-row{
+                    // display: block;
+                    // float: left;
+                    + .crm-btn-row{
+                        margin-left: rem(10);
+                    }
+                }
+            }
+            > .item-header--action-btn{
+                @include media-breakpoint-up(md){
+                    float: right;
+                }
+            }
+        }
+    }
+    .item-body{
+        padding: 10px 10px 0;
+        // section.item-tab &{
+        //     padding:10px 0 0;
+        // }
+        .table {
+            .svg--icon{
+                svg{
+                    height: 12px;
+                }
+            }
+        }
+        &-scroll{
+            // max-height: 580px; определяьт для каждого случая в style
+            overflow-y: auto;
+        }
+    }
+    table{
+        margin-bottom: 0;
+    }
+}
+.item--simple{
+  .item-body{
+    padding: rem(10) rem(10) 0;
+  }
+    &--label{
+        color: _colors(medium-grey);
+        display: block;
+        font-size: rem(11);
+        font-weight: 400;
+        line-height: rem(14);
+        margin-bottom: 4px;
+    }
+
+    .text-danger {
+        svg {
+            path {
+                fill: #D9534F;
+            }
+        }
+    }
+
+    .label-primary {
+        .svg--icon {
+            top: 2px !important;
+        }
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}
+.item--simple, .item-tab{
+    & + .item--simple,
+    & + .item-tab{
+        margin-top: rem(10);
+    }
+}

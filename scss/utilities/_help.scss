@@ -1,0 +1,67 @@
+// НЕ ДЛЯ ПОДКЛЮЧЕНИЯ!
+
+!!обязательные иконки:
+  glyphicons-show-lines
+  glyphicons-tick
+  glyphicons-arrow-left
+  glyphicons-arrow-right
+  glyphicons-chevron-left
+  glyphicons-chevron-right
+
+// приведение начального значения не "в строку" для математических исчислений
+$value: 42;
+$length: $value + 0px;
+// 42px
+// или
+$value: 42;
+$length: $value * 1px;
+// 42px
+
+
+
+// испльзования функция для пути картинок
+background-image: image('kittens.png');
+
+// испльзования функция для пути шрифтов
+@font-face {
+  font-family: 'Unicorn Font';
+  src: font('unicorn.eot?') format('eot'),
+       font('unicorn.otf') format('truetype'),
+       font('unicorn.woff') format('woff'),
+       font('unicorn.svg#unicorn') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Adding a subject
+<a href="mailto:someone@yoursite.com?subject=Mail from Our Site">Email Us</a>
+// Adding CC and BCC
+<a href="mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News">Email Us</a>
+// Adding Body Text
+<a href="mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here">Email Us</a>
+
+//скрыть элемент = seo frendly
+position:absolute;
+clip:rect(0 0 0 0);
+
+// bootstrap-4 Media Breakpoints
+@include media-breakpoint-up(sm) {
+  .class{
+    display: block;
+  }
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+}

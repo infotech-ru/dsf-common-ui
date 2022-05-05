@@ -1,0 +1,46 @@
+.block-hidden{
+  display: none;
+}
+.parent-block-hidden{
+  &:hover{
+    .block-hidden{
+      display: block;
+    }
+  }
+}
+
+.collapse-text{
+  display: none;
+  .collapsed & {
+    display: block;
+  }
+}
+.collapse-text-in{
+  display: block;
+  .collapsed & {
+    display: none;
+  }
+}
+
+.maximizable-module.maximized {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    border: none;
+    border-radius: 0;
+    min-height: 100%;
+    z-index: _zindex(maximizableModuleMaximized);
+    background: #fff;
+}
+
+.maximizable-module.maximized .content-filters {
+    margin: 0;
+}
+
+.css-td-expand-link{
+  display: block;
+  float: left;
+  min-height: 14px;
+  margin-right: 4px;
+}

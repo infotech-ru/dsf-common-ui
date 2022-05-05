@@ -1,0 +1,120 @@
+.client-check{
+  &--item{
+    background-color: _brand-palette(client-check-item_bg);
+    box-shadow: 0px 1px 0px transparentize($black, 0.8);
+    color: _brand-palette(client-check-item_color);
+    margin-bottom: 10px;
+    padding: 0 10px 0;
+    &-data{
+      border-right: 1px dotted _brand-palette(client-check-item-data_border);
+      width: 85%;
+    }
+    &-right{
+      align-items: center;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px 0 30px;
+      width: 15%;
+    }
+    &-source{
+      padding-bottom: 10px;
+      padding-top: 10px;
+      + .client-check--item-diff{
+        border-top: 1px dotted _brand-palette(client-check-item-data_border);
+      }
+    }
+    &-diff{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      + .client-check--item-diff{
+        border-top: 1px dotted _brand-palette(client-check-item-data_border);
+      }
+    }
+    &-email{
+      color: _brand-colors(_red);
+    }
+    &-name{
+      color: _brand-palette(client-check-item-name_color);
+      font-size: rem(12);
+      line-height: rem(14);
+      .svg--icon{
+        height: auto;
+        margin-right: 5px;
+        vertical-align: text-top;
+        width: 12px;
+      }
+      svg{
+        width: 12px;
+        height: auto;
+      }
+      & + &{
+        margin-top: 3px;
+      }
+    }
+    &-date{
+      font-size: rem(12);
+      line-height: rem(14);
+    }
+    .crm-btn-row{
+      .svg--icon{
+        height: 14px;
+        svg{
+          height: 14px;
+        }
+      }
+      + .crm-btn-row{
+        margin-left: 20px;
+      }
+    }
+  }
+  &-diff-field{
+    outline:1px dotted _brand-palette(client-check-diff_bg);
+    // margin: 0 -10px 15px;
+    // padding: 0 10px;
+  }
+  &--card{
+    background-color: _brand-palette(client-check-card-active_bg);
+    border: 1px solid _brand-palette(client-check-card_border);
+    // width:285px;
+    height: 100%;
+    min-width: 250px;
+    width:100%;
+    &.disabled{
+      background-color: _brand-palette(client-check-card_bg);
+    }
+    & + & {
+      margin-left: 10px;
+    }
+    &-header{
+      border-bottom: 1px solid _brand-palette(client-check-card_border);
+      color: _brand-palette(client-check-card_color);
+      font-weight: bold;
+      line-height: 28px;
+      padding: 3px 10px;
+      text-transform: uppercase;
+    }
+    &-body{
+      padding: 10px;
+    }
+    &-total{
+      background-color: _brand-palette(client-check-card-active_bg);
+      border: 2px solid _brand-palette(client-check-card-total_border);
+      .client-check--card-header{
+        border-bottom: 1px solid _brand-palette(client-check-card-total_border);
+      }
+    }
+  }
+  &--phones,
+  &--birthday,
+  &--lastname,
+  &--name,
+  &--middlename,
+  &--sex{
+    margin: 0 -10px 10px;
+    padding: 5px 10px 0;
+  }
+}

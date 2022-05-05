@@ -1,0 +1,65 @@
+.commonClientListDynamic{
+    align-items: center;
+    background-color: _brand-colors(_light-grey2);
+    display: flex;
+    &--item{
+        background-color: _brand-colors(_orange-light);
+        border: 1px solid _brand-colors(_white);
+        max-width: 185px;
+        overflow: hidden;
+        padding: 4px 10px 7px;
+        position: relative;
+        width: 185px;
+        &:hover{
+            background-color: _brand-colors(_orange);
+            .commonClientListDynamic--item--edit{
+                display: block;
+            }
+        }
+        &--title{
+            color: _brand-colors(_dark-grey);
+            font-size: 12px;
+            line-height: 14px;
+            overflow: hidden;
+            text-align: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &--value{
+            color: _brand-colors(_dark-grey);
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 24px;
+            text-align: center;
+        }
+        &--edit{
+            bottom: 5px;
+            display: none;
+            position: absolute;
+            right: 5px;
+        }
+        &--diff{
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 11px;
+            text-align: center;
+            text-transform: uppercase;
+            &--dark-green{
+                color: _brand-colors(_dark-green);
+                fill: _brand-colors(_dark-green);
+            }
+            &--red{
+                color: _brand-colors(_red);
+                fill: _brand-colors(_red);
+            }
+            .svg--stat{
+                height: 8px;
+                width: 9px;
+                svg{
+                    height: 8px;
+                    width: 9px;
+                }
+            }
+        }
+    }
+}

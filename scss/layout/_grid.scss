@@ -1,0 +1,210 @@
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  // @media (min-width: $screen-lg-min) {
+  //   width: $container-lg;
+  // }
+  @media (min-width: 1200px) {
+    width: 1068px;
+  }
+  @media (min-width: 1280px) {
+    width: 1134px;
+  }
+  @media (min-width: 1366px) {
+    width: 1234px;
+  }
+  @media (min-width: 1440px) {
+    width: 1294px;
+  }
+}
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed;
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  @include make-row;
+}
+
+.row-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns;
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}
+
+
+.container {
+    /* width: 994px; */
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    background: #f2f2f2;
+
+    border-top: 0 solid #e2e2e3;
+    border-bottom: 1px solid #e2e2e2;
+    border-right: 1px solid #a7a7ab;
+    // border-radius: 12px;
+    border-radius: 0px;
+
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}
+
+
+.row.css-xs-padding,
+.form-horizontal .form-group.css-xs-padding,
+.css-xs-padding .row {
+  $grid-gutter-width: 10px;
+    // margin-left: -5px;
+    // margin-right: -5px;
+  @include make-row;
+}
+
+.css-xs-padding  {
+  $grid-gutter-width: 10px;
+  @include make-grid-columns;
+}
+
+// ---------------------------- //
+// Other grid ----------------- //
+// ---------------------------- //
+.container-nonstyle {
+  background-color: transparent;
+  border: none;
+}
+
+.row-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -ms-grid-row-align: flex-end;
+  align-items: flex-end;
+
+  @media (max-width: 768px) {
+    [class^="col-sm-"] {
+      width: 100%;
+    }
+  }
+  @media (max-width: 992px) {
+    display: block;
+  }
+}
+.col-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.row-pad8{
+  margin-right: rem(-8);
+  margin-left: rem(-8);
+  @include clearfix;
+}
+.col-pad8{
+  padding-right: rem(8);
+  padding-left: rem(8);
+  @media (min-width: 768px){
+    float: left;
+  }
+}
+.col-md-auto{
+  position: relative;
+  min-height: 1px;
+  padding-right: floor(($grid-gutter-width / 2));
+  padding-left: ceil(($grid-gutter-width / 2));
+  width: 100%;
+  @media (min-width: 992px){
+    width: auto;
+  }
+}
+.row-pad10{
+  margin-right: rem(-10);
+  margin-left: rem(-10);
+  @include clearfix;
+}
+.col-pad10{
+  min-height: 1px;
+  padding-right: rem(10);
+  padding-left: rem(10);
+  position: relative;
+  @media (min-width: 768px){
+    float: left;
+  }
+}
+
+.col-nopad {
+  .control-label, .control-block {
+    padding-left: 0px !important;
+    left: 0px !important;
+  }
+}

@@ -1,0 +1,62 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next{
+  font-size: rem(20);
+  height: rem(20);
+  width: rem(20);
+}
+.carousel-indicators-image.uploaded-photos-preview{
+    margin-left: 0;
+    li{
+        cursor: default;
+        &:after{
+            height: 0;
+            margin-top: 0;
+        }
+    }
+}
+.carousel-indicators-image{
+  bottom: 0;
+  left: 0;
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: _zindex(carouselIndicatorsImage);
+  margin-left: rem(20);
+  li{
+    border: none;
+    cursor: pointer;
+    // border-radius: 10px;
+    display: inline-block;
+    // text-indent: -999px;
+    margin: 0px;
+    position: relative;
+    width: auto;
+    height: auto;
+    .carousel-indicators-image-inner{
+      display: block;
+      height: 70px;
+      width: 95px;
+      overflow: hidden;
+    }
+    &:after{
+      background-color: $medium-grey;
+      content: '';
+      display: block;
+      height: 6px;
+      margin-top: 6px;
+      width: 100%;
+    }
+  }
+  .active {
+    background-color: transparent;
+    margin: 0;
+    height: auto;
+    width: auto;
+    &:after{
+      background-color: $color-success2;
+    }
+  }
+}

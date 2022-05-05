@@ -1,0 +1,212 @@
+// ---------------------------- //
+// Functions ------------------ //
+// ---------------------------- //
+
+//  ----------------------------------------------Functions //
+// функция замены символов
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+
+//  ----------------------------------------------Functions //
+// Helper function для [@mixin aspect-ratio]
+// Return null rather than throwing an error if index is outside list range.
+@function nth-or-null($list, $index) {
+  @return if(length($list) >= $index, nth($list, $index), null);
+}
+
+
+//  ----------------------------------------------Functions //
+// Для Mixin [Материальный дизайн. 5 "глубин" теней]
+// Computes a top-shadow for a card effect.
+// @param {Number} $depth - depth level
+// @return {List}
+@function top-shadow($depth) {
+  $primary-offset: nth(1.5 3 10 14 19, $depth) * 1px;
+  $blur: nth(1.5 3 10 14 19, $depth) * 4px;
+  $color: rgba(black, nth(.12 .16 .19 .25 .30, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+// Computes a bottom-shadow for a card effect.
+// @param {Number} $depth - depth level
+// @return {List}
+@function bottom-shadow($depth) {
+  $primary-offset: nth(1.5 3 6 10 15, $depth) * 1px;
+  $blur: nth(1 3 3 5 6, $depth) * 4px;
+  $color: rgba(black, nth(.24 .23 .23 .22 .22, $depth));
+
+  @return 0 $primary-offset $blur $color;
+}
+
+
+//  ----------------------------------------------Functions //
+//  Добавляем пути
+// Base path for assets (fonts, images...),
+// испльзования функция для пути картинок
+// background-image: image('kittens.png');
+// should not include trailing slash
+// @access public
+// @type String
+$asset-base-path: '../assets' !default;
+// Asset URL builder
+// @access private
+// @param {String} $type - Asset type, matching folder name
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the asset
+@function asset($type, $file) {
+  @return url($asset-base-path + '/' + $type + '/' + $file);
+}
+
+// Image asset helper
+// @access public
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the image
+// @require {function} asset
+@function image($file) {
+  @return asset('img', $file);
+}
+
+// Font asset helper
+// @access public
+// @param {String} $file - Asset file name, including extension
+// @return {URL} - A `url()` function leading to the font
+// @require {function} asset
+@function font($file) {
+  @return asset('fonts', $file);
+}
+
+//  ----------------------------------------------Functions //
+// Поодержака мапов шрифтов гуглфонтс
+// для подклчения шрифта:
+// @include import-google-font-family($open-sans);
+//
+// для испльзования в стилях:
+// $font-family: google-font-family($lora);
+
+@function font-subset(){
+  $subset-cyrillic: '';
+  $subset-cyrillic-ext: '';
+  $subset-latin-ext: '';
+  @if $google-subset-cyrillic {
+    $subset-cyrillic: '&subset=cyrillic';
+  }
+  @if $google-subset-cyrillic-ext {
+    @if $google-subset-cyrillic {
+      $subset-cyrillic-ext: ',cyrillic-ext';
+    }
+    @else{
+      $subset-cyrillic-ext: '&subset=cyrillic-ext';
+    }
+  }
+  @if $google-subset-latin-ext {
+    @if $google-subset-cyrillic {
+      $subset-latin-ext: ',latin-ext';
+    }
+    @else{
+      @if $google-subset-cyrillic-ext {
+        $subset-latin-ext: ',latin-ext';
+      }
+      @else{
+        $subset-latin-ext: '&subset=latin-ext';
+      }
+    }
+  }
+  @return unquote($subset-cyrillic + $subset-cyrillic-ext + $subset-latin-ext);
+}
+
+@function function-import-google-font-family($import-ff) {
+  $google-url: 'https://fonts.googleapis.com/css?family=';
+  $google-font-subset: font-subset();
+  @return unquote(unquote($google-url) + str-replace(map-get($import-ff, ff1), ' ', '+') + ':' + map-get($import-ff, ffstyle) + '' + unquote($google-font-subset));
+}
+
+@function google-font-family($google-ff){
+  @return unquote('"' + map-get($google-ff, ff1) + '"' + ',' + map-get($google-ff, ff2));
+}
+
+@mixin import-google-font-family($import-ff) {
+  @import url('#{function-import-google-font-family($import-ff)}');
+}
+
+
+//  ----------------------------------------------Functions //
+//  Использование em/rem вместо px
+// для подклчения шрифта: font-size: em(14)
+//
+
+$browser-context: 16;
+$font-size-context: $browser-context;
+
+@function rem( $pixels, $context: $font-size-context ) {
+  @return ($pixels/$context)*1rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1em;
+}
+
+// ------------------------------------------------------- FUNCTIONS //
+// Gets a value from a map.
+// @author Hugo Giraudel
+// @param {map} $map Map.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+// --------------------------------------------------------------- //
+@function val($map, $keys...) {
+
+  @if nth($keys, 1) == null {
+    $keys: remove-nth($keys, 1);
+  }
+
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+
+}
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+
+// ------------------------------------------------------- FUNCTIONS //
+// Encodes a SVG data URL so IE doesn't choke
+// (via codepen.io/jakob-e/pen/YXXBrp).
+// @param {string} $svg SVG data URL.
+// @return {string} Encoded SVG data URL.
+// --------------------------------------------------------------- //
+@function svg-url($svg) {
+
+  $svg: str-replace($svg, '"', '\'');
+  $svg: str-replace($svg, '%', '%25');
+  $svg: str-replace($svg, '<', '%3C');
+  $svg: str-replace($svg, '>', '%3E');
+  $svg: str-replace($svg, '&', '%26');
+  $svg: str-replace($svg, '#', '%23');
+  $svg: str-replace($svg, '{', '%7B');
+  $svg: str-replace($svg, '}', '%7D');
+  $svg: str-replace($svg, ';', '%3B');
+
+  @return url("data:image/svg+xml;charset=utf8,#{$svg}");
+
+}

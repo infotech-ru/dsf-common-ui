@@ -1,0 +1,23 @@
+.state{
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 12px;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  @each $state in success, danger, warning {
+    &-#{$state}{
+      background-image: -webkit-linear-gradient(_palette(state-#{$state}) 0%, _palette(state-#{$state}-end) 100%);
+      background-image: -o-linear-gradient(_palette(state-#{$state}) 0%, _palette(state-#{$state}-end) 100%);
+      background-image: linear-gradient(_palette(state-#{$state}) 0%, _palette(state-#{$state}-end) 100%);
+      border-color: _palette(state-#{$state}-end);
+    }
+  }
+  .table &{
+    display: block;
+    float: left;
+    position: relative;
+    margin:0 8px 5px 0;
+    top: 1px;
+  }
+}

@@ -1,0 +1,90 @@
+.iconfile{
+  background-color: transparent;
+  font-weight: 300;
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  border-radius: 2px;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  &::before{
+    background-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI2LjcgMTguNjciPjxwYXRoIGQ9Ik0wLDNBMywzLDAsMCwxLDMsMEgyMC4ybDYuNDcsNi4xMnY5LjU1YTMsMywwLDAsMS0zLDNIM2EzLDMsMCwwLDEtMy0zWiIgZmlsbD0iI2RkZCIvPjxwYXRoIGQ9Ik0yMC40NSwzLjM3Vi4yNUwyNi43LDYuMzdIMjMuNDVBMywzLDAsMCwxLDIwLjQ1LDMuMzdaIiBmaWxsPSIjYmFiYWJhIi8+PC9zdmc+');
+    background-repeat: no-repeat;
+    background-size: 27px 19px;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 27px;
+    height: 19px;
+  }
+  &::after{
+    background: _brand-colors(_grey4);
+    border-radius:2px;
+    bottom: -3px;
+    color: _brand-colors(_white);
+    content: attr(data-type);
+    font-size: 8px;
+    left: auto;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    right: -3px;
+    width: 16px;
+    white-space: nowrap;
+    text-transform: lowercase;
+  }
+  &[data-type=zip],
+  &[data-type=rar] {
+    &::after{
+      background: _brand-colors(_light-blue);
+    }
+  }
+  &[data-type^=txt],
+  &[data-type^=docx],
+  &[data-type^=doc] {
+    &::after{
+      background: _brand-colors(_dark-grey);
+    }
+  }
+  &[data-type^=xls],
+  &[data-type^=xlsx] {
+    &::after{
+      background:  _brand-colors(_dark-green);
+    }
+  }
+  &[data-type^=ppt],
+  &[data-type^=pptx] {
+    &::after{
+      background: _brand-colors(_dark-ornage);
+    }
+  }
+  &[data-type=pdf],
+  &[data-type=djvu] {
+    background: _brand-colors(_red);
+  }
+  &[data-type=mp3],
+  &[data-type=wma],
+  &[data-type=m4a],
+  &[data-type=flac] {
+    background: #8e44ad;
+  }
+  &[data-type=mp4],
+  &[data-type=wmv],
+  &[data-type=mov],
+  &[data-type=avi],
+  &[data-type=mkv] {
+    background: #7a3ce7;
+  }
+  &[data-type=bmp],
+  &[data-type=jpg],
+  &[data-type=jpeg],
+  &[data-type=gif],
+  &[data-type=png] {
+    background: #f4b400;
+  }
+}

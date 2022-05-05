@@ -1,0 +1,208 @@
+/* ============================= */
+/* Автомобили с пробегом         */
+/* /warehouse/used/vehicle/index */
+/* ============================= */
+
+.table-listview-item{
+    border-top: 1px solid #ccc;
+    color: #262626;
+    padding: 21px 0;
+    margin: 0 -10px;
+    &:first-child{
+        border-top: none;
+    }
+    &:last-child{
+        border-bottom: 1px solid #ccc;
+    }
+    &--img{
+        &-inner{
+            line-height: 171px;
+            height: 171px;
+            overflow: hidden;
+        }
+        img{
+            height: auto;
+            max-width:100%;
+        }
+    }
+    .icon-svg.icon-warehouse{
+        display: block;
+        height: 21px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: auto;
+        svg{
+            display: block;
+            height: 21px;
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    &--date{
+        font-size: 9px;
+        margin-bottom: 10px;
+        text-align: center;
+        &-from{
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+    }
+    &-contract{
+        // background-color: #52A447;
+        // color: #fff;
+        display: inline-block;
+        // font-size: 12px;
+        float: right;
+        // padding: 0 10px;
+        // line-height: 30px;
+        margin: -22px -6px 0 -15px;
+        width: 100%;
+        // .icon-svg.icon-info{
+        //     display: inline-block;
+        //     background-image: url($path-svg + 'simple-info.svg');
+        //     background-repeat: no-repeat;
+        //     background-position: center;
+        //     background-size: auto 18px;
+        //     height: 18px;
+        //     width: 18px;
+        //     margin-right: 4px;
+        //     margin-top: 6px;
+        // }
+        .dropdown-menu{
+            padding: 0;
+            width: 100%;
+            li{
+                a{
+                    padding: 0;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    h2.title{
+        font-size: 16px;
+        font-weight: bold;
+        height: 32px;
+        line-height: 16px;
+        margin-top: 0;
+        margin-bottom: 4px;
+        a{
+            color: #262626;
+        }
+    }
+    &-label{
+        color: #BABABA;
+        display: block;
+        font-size: 11px;
+        font-weight: normal;
+        line-height: 11px;
+        margin-bottom: 4px;
+    }
+    &-value{
+        font-size: 12px;
+        // font-weight: bold;
+        line-height: 12px;
+        height: 12px;
+        // margin-bottom: 20px;
+        position: relative;
+        &-inner{
+            height: 12px;
+            padding-right: 20px;
+            position: relative;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            // &:hover{
+            //     background-color: #fff;
+            //     border-bottom: 1px solid #ccc;
+            //     box-shadow: 0 1px 5px #ccc;
+            //     left: -10px;
+            //     height: auto;
+            //     padding: 5px 10px 7px;
+            //     position: absolute;
+            //     top: -5px;
+            //     white-space: normal;
+            //     z-index: 10;
+            // }
+            // &:after{
+            //     content: "";
+            //     display: block;
+            // }
+            // &:empty{
+            //     &:hover{
+            //         display: none;
+            //     }
+            //     & + .glyphicon-chevron-down{
+            //         display: none;
+            //     }
+            // }
+            & + .glyphicon-chevron-down{
+                // position: absolute;
+                // right: 0;
+                // top: 0;
+                display: none;
+            }
+        }
+    }
+    &-mapvalue{
+        display: inline-block;
+        color: #fff;
+        font-size: 12px;
+        padding: 2px;
+        line-height: 12px;
+        &:empty{
+            background-color: transparent;
+        }
+        &.positive{
+            background-color: #52A447;
+        }
+        &.negative{
+            background-color: #b22222;
+        }
+    }
+    &-namevalue{
+        color: #006697;
+        font-size: 12px;
+        // font-weight: bold;
+        line-height: 12px;
+    }
+}
+.data-content-label{
+    border: none;
+    border-radius: 0;
+    color: #262626;
+    display: block;
+    font-size: rem(12);
+    padding: 0 28px 0 16px;
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    text-shadow: none;
+    text-align: left;
+    width: 100%;
+    .caret{ 
+        position: absolute;
+        right: 8px;
+        top: 12px;
+    }
+    &.data-content-label-orange{
+        background-color: #ffbd42;
+    }
+    &.data-content-label-yellow{
+        background-color: #ffdb88;
+    }
+    &.data-content-label-gray{
+        background-color: #cccccc;
+    }
+    &.data-content-label-green-light{
+        background-color: #7cdca8;
+    }
+    &.data-content-label-green{
+        background-color: #00a952;
+    }
+    &.data-content-label-red{
+        background-color: #ff1d37;
+    }
+}
