@@ -1,9 +1,14 @@
 {
   "name": "dsf-common-ui",
   "version": "1.0.0",
-  "description": "Styles and scripts for dsf projects",
+  "description": "Styles, scripts, vectors for dsf projects",
   "dependencies": {
   },
   "author": "Infotech team",
+  "repository": "github:infotech-ru/dsf-common-ui",
+  "bugs": "https://github.com/infotech-ru/dsf-common-ui/issues",
+  "contributors": [
+    "Alexey Gorbachev tov.Bender <bend.r.bender@gmail.com>"
+  ],
   "license": "ISC"
 }

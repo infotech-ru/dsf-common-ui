@@ -1,16 +1,8 @@
-// ---------------------------- //
-// Variables ------------------ //
-// ---------------------------- //
-
-// @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
 @import "~bootstrap/scss/_functions.scss";
-// @import "../../../node_modules/bootstrap/scss/_variables.scss";
-// @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss"; // старая версия перебивает новые
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "variables/_var-colors";
 @import "variables/_var-zindex";
-// @import "variables-default";
-// @import "bootstrap-select-variables";
+
 $gray-base:              #000 !default;
 //  -----------------------------------------default color //
 $color-red:                         red !default;

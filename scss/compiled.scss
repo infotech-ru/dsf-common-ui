@@ -1,21 +1,13 @@
-// ---------------------------- //
-// Final File ----------------- //
-// ---------------------------- //
+/*                        НЕ ИЗМЕНЯТЬ ФАЙЛ!                          */
+/*                                                                  */
+/*                  DEVELOPER, USE DEVELOPER.SCSS                  */
+
 @import "utilities/index";
-@import "base/_index";
 
-@import "_bootstrap";
+@import "base";
 
-// @import "bootstrap-theme";
-@import "style.scss";
+@import "layout";
 
-@import "layout/index";
+@import "modules";
 
-@import "modules/index";
-@import "states/index";
-@import "other/index";
-
-@import "developers-styles";
-@import "styles-only-subaru";
-
-@import "~@fancyapps/fancybox/dist/jquery.fancybox";
+@import "states";
