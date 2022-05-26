@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/_functions.scss";
+// @import "~bootstrap/scss/_functions.scss";
 // @import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "variables/_var-colors";
 @import "variables/_var-zindex";
@@ -274,6 +274,16 @@ $spacer:   1rem !default;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
 
+// --------------------------------------------------------------- //
+// Добавляем пути
+// Base path for assets (fonts, images...),
+// испльзования функция для пути картинок
+// background-image: image('kittens.png');
+// should not include trailing slash
+// @access public
+// @type String
+// --------------------------------------------------------------- //
+$asset-base-path: '../assets' !default;
 
 //  ----------------------------------------Fonts-family //
 
