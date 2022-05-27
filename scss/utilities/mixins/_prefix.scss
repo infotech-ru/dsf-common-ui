@@ -1,0 +1,53 @@
+//  ------------------------------------------------------Mixins //
+// Миксин для создания префиксов для single и multiple
+// Prefixes usage
+// Syntax:
+
+// .selector {
+//   @include prefs((
+//     column-count: 3,
+//     column-gap: 1.5em,
+//     column-rule: 2px solid hotpink
+//   ), $using-vendors);
+// }
+// .class {@include pref(column-count,3,webkit moz ms);}
+
+$all-vendors: (
+  'webkit','apple','khtml',
+  'moz','rim','xv',
+  'ms','o'
+);
+
+$using-vendors: (
+  'webkit', 'moz', 'ms', 'o'
+);
+
+// Mixin for multiple declarations
+// Syntax:
+// .selector {
+//   @include prefix((
+//     column-count: 3,
+//     column-gap: 1.5em,
+//     column-rule: 2px solid hotpink
+//   ), webkit moz);
+// }
+
+@mixin prefix($declarations, $prefixes: ()) {
+ @each $property, $value in $declarations {
+   @each $prefix in $prefixes {
+     #{'-' + $prefix + '-' + $property}: $value;
+   }
+   #{$property}: $value;
+ }
+}
+
+// Mixin for single property to be prefixed
+//  Syntax:
+// .selector {@include pref(transform, rotate(45deg), webkit ms);}
+
+@mixin pref($property, $value, $prefixes){
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}

@@ -1,5 +1,8 @@
 // @import "~bootstrap/scss/_functions.scss";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+$navbar-padding-horizontal: 0;
+$navbar-padding-vertical: 0;
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "variables/_var-colors";
 @import "variables/_var-zindex";
 

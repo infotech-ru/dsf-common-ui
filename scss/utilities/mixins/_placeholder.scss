@@ -1,0 +1,28 @@
+//  ------------------------------------------------------Mixins //
+// Placeholder
+@mixin placeholder2($color: $placeholder-color, $fw: $placeholder-fw, $fz: $placeholder-fz) {
+  &::-moz-placeholder {
+    color: $color;
+    font-weight: $fw;
+    font-size: rem($fz);
+    opacity: 1;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    font-size: rem($fz);
+    font-weight: $fw;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: rem($fz);
+    font-weight: $fw;
+    opacity: 1;
+  } // Internet Explorer 10+
+  &::-webkit-input-placeholder  {
+    color: $color;
+    font-size: rem($fz);
+    font-weight: $fw;
+    opacity: 1;
+  } // Safari and Chrome
+}

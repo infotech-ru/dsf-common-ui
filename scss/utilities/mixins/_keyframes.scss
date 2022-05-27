@@ -1,0 +1,7 @@
+//  ------------------------------------------------------Mixins //
+@mixin keyframes ($name) {
+    @keyframes #{$name} {@content;}
+    @-moz-keyframes #{$name} {@content;}
+    @-webkit-keyframes #{$name} {@content;}
+    @-o-keyframes #{$name} {@content;}
+}

@@ -1,0 +1,17 @@
+//  ------------------------------------------------------Mixins //
+// Transitions
+
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition) == 0 {
+      -webkit-transition: $transition-base;
+       -o-transition: $transition-base;
+          transition: $transition-base;
+    } @else {
+      -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+    }
+  }
+}

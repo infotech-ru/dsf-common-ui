@@ -1,0 +1,30 @@
+//  ------------------------------------------------------Mixins //
+// Миксин для задания размеров svg иконко
+// Prefixes usage
+// Syntax:
+// @include svg-icon(HHpx); или @include svg-icon(HHpx, WWpx);
+// Результат:
+//     {height: HHpx;  width: auto;} или  {height: HHpx;  width: WW;}
+
+@mixin svg-icon($height, $width:auto){
+  height: $height;
+  width: $width;
+  svg{
+    height: $height;
+    width: $width;
+  }
+}
+
+@mixin svg-icon-variant($parent, $color) {
+  #{$parent} {
+    fill: $color;
+    svg {
+      fill: $color;
+    }
+    &.svg--icon {
+      svg{
+        fill: $color;
+      }
+    }
+  }
+}
