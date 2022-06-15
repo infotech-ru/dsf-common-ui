@@ -1,0 +1,13 @@
+@function _fontSizes($keys...) {
+  @return val($fontSizes, $keys...);
+}
+$fontSizes: (
+  body:                           12,
+);
+
+@function _lineHeight($keys...) {
+  @return val($lineHeight, $keys...);
+}
+$lineHeight: (
+  body:                           14,
+);

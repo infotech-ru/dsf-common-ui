@@ -9,20 +9,45 @@ html{
   font-family: sans-serif;
 }
 body {
-  background-color: #a7a7ab;
-  font-family: Roboto, Arial, Helvetica Neue, sans-serif;
-  font-size: rem(12);
-  line-height: rem(14);
+  background-color: _brand-palette(body_bgc);
+  font-family: Roboto, Arial, 'Helvetica Neue', sans-serif;
+  font-size: rem(_fontSizes(body));
+  line-height: rem(_lineHeight(body));
   height: 100vh;
   text-rendering: optimizeLegibility;
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: 'liga', 'kern';
+}
 
-  @media (min-width: 992px) {
-    padding-top: 10px;
+a {
+  color: _brand-palette(link_color);
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: _brand-palette(linkHover_color);
+    outline: none;
+    text-decoration: none;
+  }
+  &.dashed {
+    border-bottom: _brand-palette(link_color) 1px dashed;
+    text-decoration: none;
+    &.empty {
+      border-bottom-color: _brand-palette(linkEmpty_color);
+      color: _brand-palette(linkEmpty_color);
+    }
+    &.incomplete {
+      border-bottom-color: _brand-palette(linkIncomplete_color);
+      color: _brand-palette(linkIncomplete_color);
+    }
   }
 }
 
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/code";
+
+hr {
+  border: 0;
+  border-top: 1px solid _brand-palette(hr_border);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

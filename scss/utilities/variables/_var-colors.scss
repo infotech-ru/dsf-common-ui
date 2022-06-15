@@ -146,11 +146,55 @@ $brand-hover: (
   ),
 );
 
+@function _brand-btn($keys...) {
+  @return val($brand-btn, $keys...);
+}
+$brand-btn:(
+  default_bg:                         map-get($brand-colors, _white),
+  default-end_bg:                     map-get($brand-colors, _grey2),
+  default_color:                      map-get($brand-colors, _dark-grey),
+  default_textShadow:                 map-get($brand-colors, _white),
+  primary_bg:                         map-get($brand-colors, _light-blue),
+  primary-end_bg:                     map-get($brand-colors, _blue),
+  primary_color:                      map-get($brand-colors, _white),
+  primary_textShadow:                 map-get($brand-colors, _black),
+  danger_bg:                          map-get($brand-colors, _red),
+  danger-end_bg:                      map-get($brand-colors, _dark-red),
+  danger_color:                       map-get($brand-colors, _white),
+  danger_textShadow:                  map-get($brand-colors, _black),
+  warning_bg:                         map-get($brand-colors, _orange),
+  warning-end_bg:                     map-get($brand-colors, _dark-orange),
+  warning_color:                      map-get($brand-colors, _white),
+  warning_textShadow:                 map-get($brand-colors, _black),
+  success_bg:                         map-get($brand-colors, _green),
+  success-end_bg:                     map-get($brand-colors, _dark-green),
+  success_color:                      map-get($brand-colors, _white),
+  success_textShadow:                 map-get($brand-colors, _black),
+);
+
+@function _brand-label($keys...) {
+  @return val($brand-label, $keys...);
+}
+$brand-label: (
+  default_bg:                       map-get($brand-colors, _white),
+  default_color:                    map-get($brand-colors, _dark-grey),
+  primary_bg:                       map-get($brand-colors, _light-blue),
+  primary_color:                    map-get($brand-colors, _white),
+  danger_bg:                        map-get($brand-colors, _red),
+  danger_color:                     map-get($brand-colors, _white),
+  success_bg:                       map-get($brand-colors, _green),
+  success_color:                    map-get($brand-colors, _white),
+  warning_bg:                       map-get($brand-colors, _orange),
+  warning_color:                    map-get($brand-colors, _dark-grey),
+  yellow_bg:                        map-get($brand-colors, _yellow2),
+  yellow_color:                     map-get($brand-colors, _dark-grey),
+);
+
 @function _brand-palette($keys...) {
   @return val($brand-palette, $keys...);
 }
 $brand-palette: (
-  lighten: lighten(map-get($brand-colors, _red), 10%),
+  body_bgc:                               map-get($brand-colors, _grey2),
 
   client-check-card_border:               map-get($brand-colors, _grey2),
   client-check-card_color:                map-get($brand-colors, _dark-grey),
@@ -164,39 +208,14 @@ $brand-palette: (
   client-check-item-name_color:           map-get($brand-colors, _red),
   client-check-diff_bg:                   map-get($brand-colors, _red),
 
-  btn-bg-default:                         map-get($brand-colors, _white),
-  btn-bg-default-end:                     map-get($brand-colors, _grey2),
-  btn-color-default:                      map-get($brand-colors, _dark-grey),
-  btn-textShadow-default:                 map-get($brand-colors, _white),
-  btn-bg-primary:                         map-get($brand-colors, _light-blue),
-  btn-bg-primary-end:                     map-get($brand-colors, _blue),
-  btn-color-primary:                      map-get($brand-colors, _white),
-  btn-textShadow-primary:                 map-get($brand-colors, _black),
-  btn-bg-danger:                          map-get($brand-colors, _red),
-  btn-bg-danger-end:                      map-get($brand-colors, _dark-red),
-  btn-color-danger:                       map-get($brand-colors, _white),
-  btn-textShadow-danger:                  map-get($brand-colors, _black),
-  btn-bg-warning:                         map-get($brand-colors, _orange),
-  btn-bg-warning-end:                     map-get($brand-colors, _dark-orange),
-  btn-color-warning:                      map-get($brand-colors, _white),
-  btn-textShadow-warning:                 map-get($brand-colors, _black),
-  btn-bg-success:                         map-get($brand-colors, _green),
-  btn-bg-success-end:                     map-get($brand-colors, _dark-green),
-  btn-color-success:                      map-get($brand-colors, _white),
-  btn-textShadow-success:                 map-get($brand-colors, _black),
+  lighten:                                lighten(map-get($brand-colors, _red), 10%),
 
-  label-bg-default:                       map-get($brand-colors, _white),
-  label-bg-primary:                       map-get($brand-colors, _light-blue),
-  label-bg-danger:                        map-get($brand-colors, _red),
-  label-bg-success:                       map-get($brand-colors, _green),
-  label-bg-warning:                       map-get($brand-colors, _orange),
-  label-bg-yellow:                        map-get($brand-colors, _yellow2),
-  label-color-default:                    map-get($brand-colors, _dark-grey),
-  label-color-primary:                    map-get($brand-colors, _white),
-  label-color-danger:                     map-get($brand-colors, _white),
-  label-color-success:                    map-get($brand-colors, _white),
-  label-color-warning:                    map-get($brand-colors, _dark-grey),
-  label-color-yellow:                     map-get($brand-colors, _dark-grey),
+  hr_border:                              map-get($brand-colors, _dark-grey),
+
+  link_color:                             map-get($brand-colors, _blue),
+  linkEmpty_color:                        map-get($brand-colors, _dark-grey),
+  linkIncomplete_color:                   map-get($brand-colors, _dark-grey),
+  linkHover_color:                        map-get($brand-colors, _blue),
 
   radioItem_color:                        map-get($brand-colors, _dark-grey),
   radioItem_bg:                           map-get($brand-colors, _white),
@@ -207,6 +226,7 @@ $brand-palette: (
   table-color:                            map-get($brand-colors, _dark-grey),
   table-table-striped-bg-odd:             map-get($brand-colors, _white),
   table-table-striped-bg-even:            map-get($brand-colors, _light-grey),
+
 );
 
 $state-primary-bg: map-get($brand-colors, _blue);
