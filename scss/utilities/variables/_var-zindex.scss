@@ -11,7 +11,6 @@ $zindex: (
   crmUsermenuCollapse_mobileView:                     1100,
   custom-file--btn:                                   3,
   dropdown-menu:                                      1003, // table thead th перекрывало
-  header:                                             1,
   maximizableModuleMaximized:                         99,
   menuNav:                                            1041,
   menuNavMulticolumnMenu:                             1010,
@@ -24,6 +23,7 @@ $zindex: (
   tableStickyTheadTh:                                 1001,
   tableStickyTheadThFirstChild:                       1002,
   tableStickyTheadTrFirstChildThFirstChild:           1003,
+  header:                                             1003,
   tooltip:                                            1600, // fix for tooltip in modal, because .modal-dialog z-index 1050
   zindex-navbar-fixed:                                1030,
 );
