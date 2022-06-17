@@ -3,3 +3,45 @@
 /* path: layout/_footer.scss                                       */
 /*                                                                */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~= */
+.footer{
+  align-items: center;
+  margin: 10px auto 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 15px 11px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background: #f5f5f5 url(../images/footer-fon.png) repeat-x;
+  border-bottom: 2px solid #898989;
+  border-radius: 0;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  .mobile-view &{
+      align-items: stretch;
+      background: linear-gradient(180deg, _brand-colors(_light-grey) 0%, #CACACA 100%);
+      box-shadow: 0px 2px 0px transparentize(_brand-colors(_black), 0.8);
+      flex-direction: column;
+  }
+  &__left{
+
+  }
+  &__item{
+    font-size: 11px;
+    margin: 0;
+        // width: 100%;
+        // &:last-child{
+        //     text-align: right;
+        //     .mobile-view &{
+        //         text-align: left;
+        //     }
+        // }
+  }
+}
+.footer___logo {
+    background: transparent url(../images/infotek_logo.svg) no-repeat;
+    background-size: 120px 22px;
+    display: inline-block;
+    height: 22px;
+    margin: -1px 0 0 3px;
+    vertical-align: middle;
+    width: 120px;
+}

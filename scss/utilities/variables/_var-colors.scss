@@ -146,6 +146,35 @@ $brand-hover: (
   ),
 );
 
+// @function _theme-btn($keys...) {
+//   @return val($theme-btn, $keys...);
+// }
+// $theme-btn:(
+//   blue-link:(
+//     background:                           _theme-colors(transparent),
+//     borderTop-color:                      _theme-colors(transparent),
+//     borderRight-color:                    _theme-colors(transparent),
+//     borderLeft-color:                     _theme-colors(transparent),
+//     borderBottom-color:                   _theme-colors(transparent),
+//     color:                                _theme-colors(grey),
+//     svg:                                  _theme-colors(grey),
+//     hover-background:                     _theme-colors(transparent),
+//     hover-borderTop-color:                _theme-colors(transparent),
+//     hover-borderRight-color:              _theme-colors(transparent),
+//     hover-borderLeft-color:               _theme-colors(transparent),
+//     hover-borderBottom-color:             _theme-colors(transparent),
+//     hover-color:                          _theme-colors(light-blue),
+//     hover-svg:                            _theme-colors(light-blue),
+//     active-background:                    _theme-colors(transparent),
+//     active-borderTop-color:               _theme-colors(transparent),
+//     active-borderRight-color:             _theme-colors(transparent),
+//     active-borderLeft-color:              _theme-colors(transparent),
+//     active-borderBottom-color:            _theme-colors(transparent),
+//     active-color:                         _theme-colors(grey),
+//     active-svg:                           _theme-colors(grey),
+//   ),
+// );
+
 @function _brand-btn($keys...) {
   @return val($brand-btn, $keys...);
 }
@@ -153,23 +182,33 @@ $brand-btn:(
   default_bg:                         map-get($brand-colors, _white),
   default-end_bg:                     map-get($brand-colors, _grey2),
   default_color:                      map-get($brand-colors, _dark-grey),
+  default_svg:                        map-get($brand-colors, _blue),
   default_textShadow:                 map-get($brand-colors, _white),
   primary_bg:                         map-get($brand-colors, _light-blue),
   primary-end_bg:                     map-get($brand-colors, _blue),
   primary_color:                      map-get($brand-colors, _white),
+  primary_svg:                        map-get($brand-colors, _white),
   primary_textShadow:                 map-get($brand-colors, _black),
   danger_bg:                          map-get($brand-colors, _red),
   danger-end_bg:                      map-get($brand-colors, _dark-red),
   danger_color:                       map-get($brand-colors, _white),
+  danger_svg:                         map-get($brand-colors, _white),
   danger_textShadow:                  map-get($brand-colors, _black),
   warning_bg:                         map-get($brand-colors, _orange),
   warning-end_bg:                     map-get($brand-colors, _dark-orange),
   warning_color:                      map-get($brand-colors, _white),
+  warning_svg:                        map-get($brand-colors, _white),
   warning_textShadow:                 map-get($brand-colors, _black),
   success_bg:                         map-get($brand-colors, _green),
   success-end_bg:                     map-get($brand-colors, _dark-green),
   success_color:                      map-get($brand-colors, _white),
+  success_svg:                        map-get($brand-colors, _white),
   success_textShadow:                 map-get($brand-colors, _black),
+  info_bg:                            map-get($brand-colors, _light-blue2),
+  info-end_bg:                        map-get($brand-colors, _light-blue3),
+  info_color:                         map-get($brand-colors, _grey4),
+  info_svg:                           map-get($brand-colors, _grey4),
+  info_textShadow:                    map-get($brand-colors, _black),
 );
 
 @function _brand-label($keys...) {
@@ -178,16 +217,22 @@ $brand-btn:(
 $brand-label: (
   default_bg:                       map-get($brand-colors, _white),
   default_color:                    map-get($brand-colors, _dark-grey),
+  default_svg:                      map-get($brand-colors, _blue),
   primary_bg:                       map-get($brand-colors, _light-blue),
   primary_color:                    map-get($brand-colors, _white),
+  primary_svg:                      map-get($brand-colors, _white),
   danger_bg:                        map-get($brand-colors, _red),
   danger_color:                     map-get($brand-colors, _white),
+  danger_svg:                       map-get($brand-colors, _white),
   success_bg:                       map-get($brand-colors, _green),
   success_color:                    map-get($brand-colors, _white),
+  success_svg:                      map-get($brand-colors, _white),
   warning_bg:                       map-get($brand-colors, _orange),
   warning_color:                    map-get($brand-colors, _dark-grey),
+  warning_svg:                      map-get($brand-colors, _dark-grey),
   yellow_bg:                        map-get($brand-colors, _yellow2),
   yellow_color:                     map-get($brand-colors, _dark-grey),
+  yellow_svg:                       map-get($brand-colors, _dark-grey),
 );
 
 @function _brand-palette($keys...) {
@@ -195,6 +240,13 @@ $brand-label: (
 }
 $brand-palette: (
   body_bgc:                               map-get($brand-colors, _grey2),
+  code_bgc:                               map-get($brand-colors, _light-grey2),
+  code_color:                             map-get($brand-colors, _dark-grey),
+  pre_bgc:                                map-get($brand-colors, _light-grey2),
+  pre_color:                              map-get($brand-colors, _dark-grey),
+  headerTop_bgc:                          map-get($brand-colors, _white),
+  headerLang_border:                      map-get($brand-colors, _grey2),
+  headerBottom_bgc:                       map-get($brand-colors, _light-grey),
 
   client-check-card_border:               map-get($brand-colors, _grey2),
   client-check-card_color:                map-get($brand-colors, _dark-grey),
@@ -216,6 +268,7 @@ $brand-palette: (
   linkEmpty_color:                        map-get($brand-colors, _dark-grey),
   linkIncomplete_color:                   map-get($brand-colors, _dark-grey),
   linkHover_color:                        map-get($brand-colors, _blue),
+  linkDisabled_color:                     map-get($brand-colors, _grey4),
 
   radioItem_color:                        map-get($brand-colors, _dark-grey),
   radioItem_bg:                           map-get($brand-colors, _white),

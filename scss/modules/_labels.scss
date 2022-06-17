@@ -1,0 +1,43 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~= */
+/* LABELS                                                          */
+/* path: modules/_labels.scss                                     */
+/*                                                                */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~= */
+.label {
+  border-radius: 1px;
+  color: _brand-colors(_white);
+  display: inline-block;
+  font-size: rem(10);
+  font-weight: 700;
+  line-height: 16px;
+  min-height: rem(12);
+  padding: 0 4px 0 5px;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+  &:empty {
+    display: none;
+  }
+  @each $label in default, primary, success, danger, warning, 'yellow' {
+    &-#{$label}{
+      background-color: _brand-label(#{$label}_bg);
+      color: _brand-label(#{$label}_color);
+    }
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Add hover effects, but only for links
+a.label {
+  &:hover,
+  &:focus {
+    color: $label-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

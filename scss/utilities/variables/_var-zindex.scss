@@ -2,27 +2,28 @@
   @return val($zindex, $keys...);
 }
 $zindex: (
+  bootstrapSelectDropdownMenu:                        1005,
   custom-file--label:                                 1,
-  custom-file--btn:                                   3,
   // zindex-tooltip:                                     1070,
-  sectionItem_ItemHeader:                             10,
   carouselIndicatorsImage:                            15,
+  comboTreeDropDownContainer:                         1005,
+  crmUsermenuCollapse:                                1000,
+  crmUsermenuCollapse_mobileView:                     1100,
+  custom-file--btn:                                   3,
+  dropdown-menu:                                      1003, // table thead th перекрывало
+  header:                                             1,
   maximizableModuleMaximized:                         99,
+  menuNav:                                            1041,
+  menuNavMulticolumnMenu:                             1010,
+  modal:                                              1050,
+  modalBackground:                                    1040,
+  navbarNavDropdownMenu:                              1010,
+  popover:                                            2000,
+  sectionItem_ItemHeader:                             10,
   tableStickyTbodyTd:                                 1000,
   tableStickyTheadTh:                                 1001,
   tableStickyTheadThFirstChild:                       1002,
   tableStickyTheadTrFirstChildThFirstChild:           1003,
-  dropdown-menu:                                      1003, // table thead th перекрывало
-  comboTreeDropDownContainer:                         1005,
-  bootstrapSelectDropdownMenu:                        1005,
-  crmUsermenuCollapse:                                1000,
-  navbarNavDropdownMenu:                              1010,
-  menuNavMulticolumnMenu:                             1010,
-  crmUsermenuCollapse_mobileView:                     1100,
-  zindex-navbar-fixed:                                1030,
-  modalBackground:                                    1040,
-  menuNav:                                            1041,
-  modal:                                              1050,
   tooltip:                                            1600, // fix for tooltip in modal, because .modal-dialog z-index 1050
-  popover:                                            2000,
+  zindex-navbar-fixed:                                1030,
 );

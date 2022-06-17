@@ -7,6 +7,18 @@
 .img-responsive {
   @include img-responsive;
 }
+.img-rounded {
+  border-radius: rem(border-radius-large);
+}
+.img-thumbnail {
+  padding: calc($grid-gutter-width * 0.5);
+  // line-height: $line-height-base;
+  background-color: _brand-colors(_white);
+  border: 1px solid _brand-colors(_grey2);
+  border-radius: rem(_brand-sizes(border-radius-base));
+  @include transition(all .2s ease-in-out);
+  @include img-responsive(inline-block);
+}
 
 .sr-only {
   position: absolute;
@@ -17,4 +29,18 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.lang {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  text-indent: -9999px;
+}
+.lang_usa {
+
+}
+.lang_ru{
+  background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 12"><defs><clipPath id="a" transform="translate(0 0)"><rect width="16" height="12" fill="none"/></clipPath></defs><title>ru</title><g clip-path="url(#a)"><path d="M0,0H16V12H0Z" transform="translate(0 0)" fill="#fff" fill-rule="evenodd"/><path d="M0,4H16v8H0Z" transform="translate(0 0)" fill="#0039a6" fill-rule="evenodd"/><path d="M0,8H16v4H0Z" transform="translate(0 0)" fill="#d52b1e" fill-rule="evenodd"/></g></svg>');
 }
