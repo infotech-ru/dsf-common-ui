@@ -1,17 +1,18 @@
-/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~= */
-/* RESET                                                            */
-/* path: base/_reset.scss                                          */
-/* base: normalize.css v8 | github.com/necolas/normalize.css      */
-/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~= */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* RESET                                                                      */
+/* path: base/_reset.scss                                                     */
+/* base: normalize.css v8 | github.com/necolas/normalize.css                  */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-
-// Document
-//
-// 1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
-// 2. Change the default font family in all browsers.
-// 3. Correct the line height in all browsers.
-// 4. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
-// 5. Change the default tap highlight to be completely transparent in iOS.
+/**
+ * 1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+ * 2. Change the default font family in all browsers.
+ * 3. Correct the line height in all browsers.
+ * 4. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+ * 5. Change the default tap highlight to be completely transparent in iOS.
+*/
 
 *,
 *::before,
@@ -26,12 +27,9 @@ html {
   -webkit-tap-highlight-color: rgba($black, 0); // 5
 }
 
-/* Sections
-   ========================================================================== */
-
 /**
  * Remove the margin in all browsers.
- */
+*/
 
 body,
 figure {
@@ -40,7 +38,7 @@ figure {
 
 /**
  * Render the `main` element consistently in IE.
- */
+*/
 
  article,
  aside,
@@ -58,23 +56,25 @@ figure {
   display: block;
 }
 
-// Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
-// on elements that programmatically receive focus but wouldn't normally show a visible
-// focus outline. In general, this would mean that the outline is only applied if the
-// interaction that led to the element receiving programmatic focus was a keyboard interaction,
-// or the browser has somehow determined that the user is primarily a keyboard user and/or
-// wants focus outlines to always be presented.
-//
-// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
-// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+/**
+ * Future-proof rule: in browsers that support :focus-visible, suppress the
+ * focus outline on elements that programmatically receive focus but wouldn't
+ * normally show a visible focus outline. In general, this would mean that the
+ * outline is only applied if the interaction that led to the element receiving
+ * programmatic focus was a keyboard interaction, or the browser has somehow
+ * determined that the user is primarily a keyboard user and/or wants focus
+ * outlines to always be presented.
+ *
+ * See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+ * and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+*/
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
-//
-// 1. Correct `inline-block` display not defined in IE 8/9.
-// 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
-//
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
 
 audio,
 canvas,
@@ -87,23 +87,18 @@ video {
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
- */
+*/
 
-// h1 {
-//   // font-size: 2em;
-//   margin: 0.67em 0;
-// }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   // margin-bottom: $headings-margin-bottom;
 }
-/* Grouping content
-   ========================================================================== */
 
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
- */
+*/
 
 hr {
   box-sizing: content-box; /* 1 */
@@ -114,28 +109,25 @@ hr {
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
- */
+*/
 
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
-/* Text-level semantics
-   ========================================================================== */
-
 /**
  * Remove the gray background on active links in IE 10.
- */
+*/
 
 a {
   background-color: transparent;
 }
 
-//
-// Improve readability of focused elements when they are also in an
-// active/hover state.
-//
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+*/
 
 a:focus,
 a:active,
@@ -148,7 +140,7 @@ a:hover {
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
+*/
 
 abbr[title] {
   border-bottom: none; /* 1 */
@@ -158,7 +150,7 @@ abbr[title] {
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
- */
+*/
 
 b,
 strong {
@@ -168,7 +160,7 @@ strong {
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
- */
+*/
 
 code,
 kbd,
@@ -206,9 +198,6 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-   ========================================================================== */
-
 /**
  * Remove the border on images inside links in IE 10.
  */
@@ -218,19 +207,20 @@ img {
   vertical-align: middle;
 }
 
-//
-// Correct overflow not hidden in IE 9/10/11.
-//
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+*/
 
 svg:not(:root) {
   overflow: hidden;
 }
-/* Forms
-   ========================================================================== */
- // Explicitly remove focus outline in Chromium when it shouldn't be
- // visible (e.g. as result of mouse click or touch tap). It already
- // should be doing this automatically, but seems to currently be
- // confused and applies its very visible two-tone outline anyway.
+
+/**
+ * Explicitly remove focus outline in Chromium when it shouldn't be
+ * visible (e.g. as result of mouse click or touch tap). It already
+ * should be doing this automatically, but seems to currently be
+ * confused and applies its very visible two-tone outline anyway.
+*/
 
  button:focus:not(:focus-visible) {
    outline: 0;
@@ -239,7 +229,7 @@ svg:not(:root) {
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
- */
+*/
 
 button,
 input,
@@ -255,7 +245,7 @@ textarea {
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
- */
+*/
 
 button,
 input { /* 1 */
@@ -265,23 +255,24 @@ input { /* 1 */
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
- */
+*/
 
 button,
 select { /* 1 */
   text-transform: none;
 }
 
-// Remove the inheritance of word-wrap in Safari.
-//
-// Details at https://github.com/twbs/bootstrap/issues/24990
+/** Remove the inheritance of word-wrap in Safari.
+ * Details at https://github.com/twbs/bootstrap/issues/24990
+*/
+
 select {
   word-wrap: normal;
 }
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.
- */
+*/
 
 button,
 [type="button"],
@@ -289,9 +280,10 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
 }
-//
-// Re-set default cursor for disabled elements.
-//
+
+/**
+ * Re-set default cursor for disabled elements.
+*/
 
 button[disabled],
 html input[disabled] {
@@ -300,7 +292,7 @@ html input[disabled] {
 
 /**
  * Remove the inner border and padding in Firefox.
- */
+*/
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -321,25 +313,28 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-// Set the cursor for non-`<button>` buttons
-//
-// Details at https://github.com/twbs/bootstrap/pull/30562
+/**
+ * Set the cursor for non-`<button>` buttons
+ * Details at https://github.com/twbs/bootstrap/pull/30562
+*/
+
 [role="button"] {
   cursor: pointer;
 }
 
 /**
  * Correct the padding in Firefox.
- */
+*/
 
 fieldset {
-  // Browsers set a default `min-width: min-content;` on fieldsets,
-  // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
-  // So we reset that to ensure fieldsets behave more like a standard block element.
-  // See https://github.com/twbs/bootstrap/issues/12359
-  // and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+// Browsers set a default `min-width: min-content;` on fieldsets,
+// unlike e.g. `<div>`s, which have `min-width: 0;` by default.
+// So we reset that to ensure fieldsets behave more like a standard block element.
+// See https://github.com/twbs/bootstrap/issues/12359
+// and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+
   min-width: 0;
-  // Reset the default outline behavior of fieldsets so they don't affect page layout.
+// Reset the default outline behavior of fieldsets so they don't affect page layout.
   padding: 0;
   margin: 0;
   border: 0;
@@ -432,10 +427,7 @@ textarea {
   font: inherit; /* 2 */
 }
 
-/* Interactive
-   ========================================================================== */
-
-/*
+/**
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 
@@ -443,7 +435,7 @@ details {
   display: block;
 }
 
-/*
+/**
  * Add the correct display in all browsers.
  */
 
@@ -451,8 +443,6 @@ summary {
   display: list-item;
 }
 
-/* Misc
-   ========================================================================== */
 
 /**
  * Add the correct display in IE 10+.
@@ -470,12 +460,10 @@ template {
   display: none;
 }
 
-// Tables
-// ==========================================================================
 
-//
-// Remove most spacing between table cells.
-//
+/**
+ * Remove most spacing between table cells.
+*/
 
 table {
   border-collapse: collapse;

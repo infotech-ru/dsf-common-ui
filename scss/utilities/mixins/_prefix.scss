@@ -1,4 +1,4 @@
-//  ------------------------------------------------------Mixins //
+// ------------------------------------------------------------------- Mixins //
 // Миксин для создания префиксов для single и multiple
 // Prefixes usage
 // Syntax:
@@ -22,6 +22,7 @@ $using-vendors: (
   'webkit', 'moz', 'ms', 'o'
 );
 
+// ------------------------------------------------------------------- Mixins //
 // Mixin for multiple declarations
 // Syntax:
 // .selector {
@@ -41,6 +42,7 @@ $using-vendors: (
  }
 }
 
+// ------------------------------------------------------------------- Mixins //
 // Mixin for single property to be prefixed
 //  Syntax:
 // .selector {@include pref(transform, rotate(45deg), webkit ms);}

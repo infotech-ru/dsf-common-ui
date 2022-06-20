@@ -2,23 +2,23 @@
   @return val($fontSizes, $keys...);
 }
 $fontSizes: (
-  body:                           12,
-  btn:                            12,
-  btnXs:                          10,
+  body:                                                                      12,
+  btn:                                                                       12,
+  btnXs:                                                                     10,
 );
 
 @function _fontWeight($keys...) {
   @return val($fontWeight, $keys...);
 }
 $fontWeight: (
-  btn:                           400,
+  btn:                                                                      400,
 );
 
 @function _lineHeight($keys...) {
   @return val($lineHeight, $keys...);
 }
 $lineHeight: (
-  body:                           14,
-  btn:                            26,
-  btnXs:                          18,
+  body:                                                                      14,
+  btn:                                                                       26,
+  btnXs:                                                                     18,
 );

@@ -1,8 +1,8 @@
-//* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~= *//
-//* MIXINS GRID                                                      *//
-//* path: utilities/mixins/_grid.scss                               *//
-//*                                                                *//
-//* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~= *//
+//* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ *//
+//* MIXINS GRID                                                              *//
+//* path: utilities/mixins/_grid.scss                                        *//
+//*                                                                          *//
+//* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ *//
 
 // Grid system
 // --------------------------------------------------
@@ -36,6 +36,7 @@
   }
 }
 
+// ------------------------------------------------------------------- Mixins //
 @mixin make-grid-columns($i: 1, $j: #{0}-5, $list: ".col-xs-#{$j}, .col-sm-#{$j}, .col-md-#{$j}, .col-lg-#{$j}") {
   @for $i from (0 + 1) through $grid-columns {
     @if $i == $grid-columns{
@@ -54,6 +55,8 @@
     padding-left: ceil(calc($grid-gutter-width / 2));
   }
 }
+
+// ------------------------------------------------------------------- Mixins //
 @mixin float-grid-columns($class, $i: 1, $j: #{0}-5, $list: ".col-#{$class}-#{$j}") {
   @for $i from (0 + 1) through $grid-columns {
     @if $i == $grid-columns{
@@ -67,6 +70,8 @@
     float: left;
   }
 }
+
+// ------------------------------------------------------------------- Mixins //
 @mixin calc-grid-column($index, $class, $type) {
   @if ($type == width) and ($index >= 0) {
     @if $index == $grid-columns{
@@ -114,11 +119,15 @@
     }
   }
 }
+
+// ------------------------------------------------------------------- Mixins //
 @mixin loop-grid-columns($columns, $class, $type) {
   @for $i from 0 through $columns {
     @include calc-grid-column($i, $class, $type);
   }
 }
+
+// ------------------------------------------------------------------- Mixins //
 // Create grid for specific class
 @mixin make-grid($class) {
   @include float-grid-columns($class);

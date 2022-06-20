@@ -1,5 +1,7 @@
-//  ------------------------------------------------------Mixins //
+// ------------------------------------------------------------------- Mixins //
 // Позиционирование
+// @param {Arglist} $args - Offsets
+// @require {mixin} position
 
 /// Shorthand mixin for offset positioning
 /// @param {String} $position - Either `relative`, `absolute` or `fixed`
@@ -15,19 +17,19 @@
   left: $left;
 }
 
-// @param {Arglist} $args - Offsets
-// @require {mixin} position
-
+// ------------------------------------------------------------------- Mixins //
 // Syntax:
 // @include absolute($top: 1em, $left: 50%)
 @mixin absolute($args...) {
   @include position(absolute, $args...);
 }
 
+// ------------------------------------------------------------------- Mixins //
 @mixin relative($args...) {
   @include position(relative, $args...);
 }
 
+// ------------------------------------------------------------------- Mixins //
 @mixin fixed($args...) {
   @include position(fixed, $args...);
 }

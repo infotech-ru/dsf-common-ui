@@ -2,37 +2,38 @@
   @return val($brand-colors, $keys...);
 }
 $brand-colors: (
-  _blue:                              #1E6393,
-  _black:                             #000000,
-  _dark-green:                        #467B46,
-  _dark-grey:                         #333333,
-  _dark-orange:                       #D59A00,
-  _dark-red:                          #762624,
-  _green:                             #69C26A,
-  _grey:                              #BABABA,
-  _grey2:                             #dddddd,
-  _grey3:                             #cccccc,
-  _grey4:                             #777777,
-  _light-blue:                        #4A8DC6,
-  _light-blue2:                       #E4EEF7,
-  _light-blue3:                       #B6D1E8,
-  _light-grey:                        #f9f9f9,
-  _light-grey2:                       #F5F5F5,
-  _light-green:                       #DAF0DA,
-  _light-green2:                      #B4E1B5,
-  _light-yellow:                      #FFF6DF,
-  _light-yellow2:                     #FFFBA0,
-  _light-red:                         #FCEEEE,
-  _orange:                            #FFBD41,
-  _orange-light:                      #FFDF9A,
-  _red:                               #D9534F,
-  _transparent:                       unquote('#00000000'), // в следующих версияъ SASS без unquote
-  _yellow:                            #FFDA7D,
-  _yellow2:                           #FFF741,
-  _white:                             #ffffff,
-  _dark-cyan:                         #008B8B,
-  _color-eeecd:                       #eeecd8,
-  _light-cyan:                         rgba(32, 178, 170, 0.2),
+  _blue:                                                                #1E6393,
+  _black:                                                               #000000,
+  _dark-green:                                                          #467B46,
+  _dark-grey:                                                           #333333,
+  _dark-orange:                                                         #D59A00,
+  _dark-red:                                                            #762624,
+  _green:                                                               #69C26A,
+  _grey:                                                                #BABABA,
+  _grey2:                                                               #dddddd,
+  _grey3:                                                               #cccccc,
+  _grey4:                                                               #777777,
+  _light-blue:                                                          #4A8DC6,
+  _light-blue2:                                                         #E4EEF7,
+  _light-blue3:                                                         #B6D1E8,
+  _light-grey:                                                          #f9f9f9,
+  _light-grey2:                                                         #F5F5F5,
+  _light-green:                                                         #DAF0DA,
+  _light-green2:                                                        #B4E1B5,
+  _light-yellow:                                                        #FFF6DF,
+  _light-yellow2:                                                       #FFFBA0,
+  _light-red:                                                           #FCEEEE,
+  _orange:                                                              #FFBD41,
+  _orange-light:                                                        #FFDF9A,
+  _red:                                                                 #D9534F,
+  _transparent:                                            unquote('#00000000'), 
+  // _transparent: в следующих версияъ SASS без unquote
+  _yellow:                                                              #FFDA7D,
+  _yellow2:                                                             #FFF741,
+  _white:                                                               #ffffff,
+  _dark-cyan:                                                           #008B8B,
+  _color-eeecd:                                                         #eeecd8,
+  _light-cyan:                                          rgba(32, 178, 170, 0.2),
 );
 
 @function _brand-hover($keys...) {
@@ -179,60 +180,60 @@ $brand-hover: (
   @return val($brand-btn, $keys...);
 }
 $brand-btn:(
-  default_bg:                         map-get($brand-colors, _white),
-  default-end_bg:                     map-get($brand-colors, _grey2),
-  default_color:                      map-get($brand-colors, _dark-grey),
-  default_svg:                        map-get($brand-colors, _blue),
-  default_textShadow:                 map-get($brand-colors, _white),
-  primary_bg:                         map-get($brand-colors, _light-blue),
-  primary-end_bg:                     map-get($brand-colors, _blue),
-  primary_color:                      map-get($brand-colors, _white),
-  primary_svg:                        map-get($brand-colors, _white),
-  primary_textShadow:                 map-get($brand-colors, _black),
-  danger_bg:                          map-get($brand-colors, _red),
-  danger-end_bg:                      map-get($brand-colors, _dark-red),
-  danger_color:                       map-get($brand-colors, _white),
-  danger_svg:                         map-get($brand-colors, _white),
-  danger_textShadow:                  map-get($brand-colors, _black),
-  warning_bg:                         map-get($brand-colors, _orange),
-  warning-end_bg:                     map-get($brand-colors, _dark-orange),
-  warning_color:                      map-get($brand-colors, _white),
-  warning_svg:                        map-get($brand-colors, _white),
-  warning_textShadow:                 map-get($brand-colors, _black),
-  success_bg:                         map-get($brand-colors, _green),
-  success-end_bg:                     map-get($brand-colors, _dark-green),
-  success_color:                      map-get($brand-colors, _white),
-  success_svg:                        map-get($brand-colors, _white),
-  success_textShadow:                 map-get($brand-colors, _black),
-  info_bg:                            map-get($brand-colors, _light-blue2),
-  info-end_bg:                        map-get($brand-colors, _light-blue3),
-  info_color:                         map-get($brand-colors, _grey4),
-  info_svg:                           map-get($brand-colors, _grey4),
-  info_textShadow:                    map-get($brand-colors, _black),
+  default_bg:                             map-get($brand-colors, _white),
+  default-end_bg:                         map-get($brand-colors, _grey2),
+  default_color:                          map-get($brand-colors, _dark-grey),
+  default_svg:                            map-get($brand-colors, _blue),
+  default_textShadow:                     map-get($brand-colors, _white),
+  primary_bg:                             map-get($brand-colors, _light-blue),
+  primary-end_bg:                         map-get($brand-colors, _blue),
+  primary_color:                          map-get($brand-colors, _white),
+  primary_svg:                            map-get($brand-colors, _white),
+  primary_textShadow:                     map-get($brand-colors, _black),
+  danger_bg:                              map-get($brand-colors, _red),
+  danger-end_bg:                          map-get($brand-colors, _dark-red),
+  danger_color:                           map-get($brand-colors, _white),
+  danger_svg:                             map-get($brand-colors, _white),
+  danger_textShadow:                      map-get($brand-colors, _black),
+  warning_bg:                             map-get($brand-colors, _orange),
+  warning-end_bg:                         map-get($brand-colors, _dark-orange),
+  warning_color:                          map-get($brand-colors, _white),
+  warning_svg:                            map-get($brand-colors, _white),
+  warning_textShadow:                     map-get($brand-colors, _black),
+  success_bg:                             map-get($brand-colors, _green),
+  success-end_bg:                         map-get($brand-colors, _dark-green),
+  success_color:                          map-get($brand-colors, _white),
+  success_svg:                            map-get($brand-colors, _white),
+  success_textShadow:                     map-get($brand-colors, _black),
+  info_bg:                                map-get($brand-colors, _light-blue2),
+  info-end_bg:                            map-get($brand-colors, _light-blue3),
+  info_color:                             map-get($brand-colors, _grey4),
+  info_svg:                               map-get($brand-colors, _grey4),
+  info_textShadow:                        map-get($brand-colors, _black),
 );
 
 @function _brand-label($keys...) {
   @return val($brand-label, $keys...);
 }
 $brand-label: (
-  default_bg:                       map-get($brand-colors, _white),
-  default_color:                    map-get($brand-colors, _dark-grey),
-  default_svg:                      map-get($brand-colors, _blue),
-  primary_bg:                       map-get($brand-colors, _light-blue),
-  primary_color:                    map-get($brand-colors, _white),
-  primary_svg:                      map-get($brand-colors, _white),
-  danger_bg:                        map-get($brand-colors, _red),
-  danger_color:                     map-get($brand-colors, _white),
-  danger_svg:                       map-get($brand-colors, _white),
-  success_bg:                       map-get($brand-colors, _green),
-  success_color:                    map-get($brand-colors, _white),
-  success_svg:                      map-get($brand-colors, _white),
-  warning_bg:                       map-get($brand-colors, _orange),
-  warning_color:                    map-get($brand-colors, _dark-grey),
-  warning_svg:                      map-get($brand-colors, _dark-grey),
-  yellow_bg:                        map-get($brand-colors, _yellow2),
-  yellow_color:                     map-get($brand-colors, _dark-grey),
-  yellow_svg:                       map-get($brand-colors, _dark-grey),
+  default_bg:                             map-get($brand-colors, _white),
+  default_color:                          map-get($brand-colors, _dark-grey),
+  default_svg:                            map-get($brand-colors, _blue),
+  primary_bg:                             map-get($brand-colors, _light-blue),
+  primary_color:                          map-get($brand-colors, _white),
+  primary_svg:                            map-get($brand-colors, _white),
+  danger_bg:                              map-get($brand-colors, _red),
+  danger_color:                           map-get($brand-colors, _white),
+  danger_svg:                             map-get($brand-colors, _white),
+  success_bg:                             map-get($brand-colors, _green),
+  success_color:                          map-get($brand-colors, _white),
+  success_svg:                            map-get($brand-colors, _white),
+  warning_bg:                             map-get($brand-colors, _orange),
+  warning_color:                          map-get($brand-colors, _dark-grey),
+  warning_svg:                            map-get($brand-colors, _dark-grey),
+  yellow_bg:                              map-get($brand-colors, _yellow2),
+  yellow_color:                           map-get($brand-colors, _dark-grey),
+  yellow_svg:                             map-get($brand-colors, _dark-grey),
 );
 
 @function _brand-palette($keys...) {
@@ -289,32 +290,32 @@ $brand-palette: (
 
 );
 
-$state-primary-bg: map-get($brand-colors, _blue);
-$state-primary-text: map-get($brand-colors, _blue);
-$state-primary-svg: map-get($brand-colors, _blue);
+$state-primary-bg:                        map-get($brand-colors, _blue);
+$state-primary-text:                      map-get($brand-colors, _blue);
+$state-primary-svg:                       map-get($brand-colors, _blue);
 
-$state-success-bg: map-get($brand-colors, _green);
-$state-success-text: map-get($brand-colors, _green);
-$state-success-svg: map-get($brand-colors, _green);
+$state-success-bg:                        map-get($brand-colors, _green);
+$state-success-text:                      map-get($brand-colors, _green);
+$state-success-svg:                       map-get($brand-colors, _green);
 
-$state-info-bg: map-get($brand-colors, _light-blue);
-$state-info-text: map-get($brand-colors, _light-blue);
-$state-info-svg: map-get($brand-colors, _light-blue);
+$state-info-bg:                           map-get($brand-colors, _light-blue);
+$state-info-text:                         map-get($brand-colors, _light-blue);
+$state-info-svg:                          map-get($brand-colors, _light-blue);
 
-$state-warning-bg: map-get($brand-colors, _orange);
-$state-warning-text: map-get($brand-colors, _orange);
-$state-warning-svg: map-get($brand-colors, _orange);
+$state-warning-bg:                        map-get($brand-colors, _orange);
+$state-warning-text:                      map-get($brand-colors, _orange);
+$state-warning-svg:                       map-get($brand-colors, _orange);
 
-$state-danger-bg: map-get($brand-colors, _red);
-$state-danger-text: map-get($brand-colors, _red);
-$state-danger-svg: map-get($brand-colors, _red);
+$state-danger-bg:                         map-get($brand-colors, _red);
+$state-danger-text:                       map-get($brand-colors, _red);
+$state-danger-svg:                        map-get($brand-colors, _red);
 
-$state-dark-bg: map-get($brand-colors, _dark-grey);
-$state-dark-text: map-get($brand-colors, _dark-grey);
-$state-dark-svg: map-get($brand-colors, _dark-grey);
+$state-dark-bg:                           map-get($brand-colors, _dark-grey);
+$state-dark-text:                         map-get($brand-colors, _dark-grey);
+$state-dark-svg:                          map-get($brand-colors, _dark-grey);
 
-$state-light-bg: map-get($brand-colors, _white);
+$state-light-bg:                          map-get($brand-colors, _white);
 
-$state-muted-bg: map-get($brand-colors, _grey);
-$state-muted-text: map-get($brand-colors, _grey);
-$state-muted-svg: map-get($brand-colors, _grey);
+$state-muted-bg:                          map-get($brand-colors, _grey);
+$state-muted-text:                        map-get($brand-colors, _grey);
+$state-muted-svg:                         map-get($brand-colors, _grey);

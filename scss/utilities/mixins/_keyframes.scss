@@ -1,4 +1,4 @@
-//  ------------------------------------------------------Mixins //
+// ------------------------------------------------------------------- Mixins //
 @mixin keyframes ($name) {
     @keyframes #{$name} {@content;}
     @-moz-keyframes #{$name} {@content;}
