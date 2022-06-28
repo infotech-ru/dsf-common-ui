@@ -18,6 +18,7 @@ $brand-colors: (
   _light-blue3:                                                         #B6D1E8,
   _light-grey:                                                          #f9f9f9,
   _light-grey2:                                                         #F5F5F5,
+  _light-grey3:                                                         #EEEEEE,
   _light-green:                                                         #DAF0DA,
   _light-green2:                                                        #B4E1B5,
   _light-yellow:                                                        #FFF6DF,
@@ -26,7 +27,7 @@ $brand-colors: (
   _orange:                                                              #FFBD41,
   _orange-light:                                                        #FFDF9A,
   _red:                                                                 #D9534F,
-  _transparent:                                            unquote('#00000000'), 
+  _transparent:                                            unquote('#00000000'),
   // _transparent: в следующих версияъ SASS без unquote
   _yellow:                                                              #FFDA7D,
   _yellow2:                                                             #FFF741,
@@ -240,7 +241,9 @@ $brand-label: (
   @return val($brand-palette, $keys...);
 }
 $brand-palette: (
-  body_bgc:                               map-get($brand-colors, _grey2),
+  body_bgc:                               map-get($brand-colors, _light-grey3),
+  body_color:                             map-get($brand-colors, _dark-grey),
+
   code_bgc:                               map-get($brand-colors, _light-grey2),
   code_color:                             map-get($brand-colors, _dark-grey),
   pre_bgc:                                map-get($brand-colors, _light-grey2),
@@ -277,6 +280,8 @@ $brand-palette: (
   linkIncomplete_color:                   map-get($brand-colors, _dark-grey),
   linkHover_color:                        map-get($brand-colors, _blue),
   linkDisabled_color:                     map-get($brand-colors, _grey4),
+
+  pageHeader_color:                       map-get($brand-colors, _dark-grey),
 
   radioItem_color:                        map-get($brand-colors, _dark-grey),
   radioItem_bg:                           map-get($brand-colors, _white),

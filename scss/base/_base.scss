@@ -18,6 +18,7 @@ html{
 }
 body {
   background-color: _brand-palette(body_bgc);
+  color: _brand-palette(body_color);
   font-family: Roboto, Arial, 'Helvetica Neue', sans-serif;
   font-size: rem(_fontSizes(body));
   line-height: rem(_lineHeight(body));

@@ -1,0 +1,52 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* HEADING                                                                    */
+/* path: modules/_heading.scss                                                */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.page-title {
+    color: _brand-palette(pageHeader_color);
+    display: flex;
+    justify-content: space-between;
+    font-size: rem(18);
+    font-weight: 500;
+    // font-size: 18px
+    // padding-bottom: 10px;
+    line-height: 21px;
+    margin-top: 0;
+    text-shadow: 0px 1px 0px #FFFFFF;
+    height:auto;
+    // min-height: 40px;
+
+    .pull-right {
+        margin-right: auto;
+        padding-left: 40px;
+        text-align: right;
+    }
+
+    .title-block & {
+        align-items: center;
+        justify-content: flex-start;
+        min-height: auto;
+        text-shadow: none;
+        box-shadow: none;
+        background: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        p {
+            text-shadow: 0 1px 0 #fff;
+            margin: 0 {
+                right: 10px;
+            }
+        }
+    }
+
+    .label {
+        border-radius: 2px;
+        padding: 0 4px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+}

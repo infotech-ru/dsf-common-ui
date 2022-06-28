@@ -65,7 +65,7 @@
       background-position: left center;
       background-repeat: no-repeat;
       background-size: 24px;
-      color: _brand-colors(_dark-grey);
+      // color: _brand-colors(_dark-grey);
       font-size: rem(10);
       line-height: rem(12);
       padding-left: 29px;
@@ -137,4 +137,23 @@
   .close-icon{
       float: right;
   }
+}
+
+.logo {
+    align-items: center;
+    display: flex;
+
+    img {
+        max-height: 34px;
+        .mobile-view &{
+            max-height:30px;
+            max-width: 150px;
+        }
+    }
+
+    &-haval {
+        img {
+            max-height: 26px;
+        }
+    }
 }
