@@ -1,3 +1,19 @@
+// @function _fontsList($keys...) {
+//   @return val($fontsList, $keys...);
+// }
+$fontsList: (
+  "Roboto": (
+    "normal": (
+      400:                                  roboto-v18-cyrillic_latin-regular,
+      600:                                  roboto-v18-cyrillic_latin-700,
+    ),
+    "italic": (
+      400:                                  roboto-v18-cyrillic_latin-italic,
+      600:                                  roboto-v18-cyrillic_latin-700italic,
+    )
+  )
+);
+
 @function _fontSizes($keys...) {
   @return val($fontSizes, $keys...);
 }

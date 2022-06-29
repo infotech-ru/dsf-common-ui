@@ -1,23 +1,29 @@
 @use "sass:map";
-
+@use "sass:meta";
 // @import url(https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic);
 
-// @each $fontFamily, $fontStyle in $fontsList {
-//   $fontWeigh: map.keys($fontsList);
-//   $fontWeight: map.get($fontsList, $fontFamily);
-//   // $fontStyle: map.get($fontsList, $fontFamily,);
-//   @debug "!! Debug fontStyle::" $fontWeight;
-//   @font-face {
-//       // $fontWeight: map-deep-get($fontWeightMap, $fontWeight);
-//       font-family: $fontFamily;
-//       font-style: $fontWeight;
-//       font-weight: 100;
-//       src: url('/fonts/roboto-v18-cyrillic_latin-regular.eot'); /* IE9 Compat Modes */
-//       src: local('Roboto'), local('Roboto-Regular'),
-//       url('/fonts/roboto-v18-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//       url('/fonts/roboto-v18-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-//       url('/fonts/roboto-v18-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
-//       url('/fonts/roboto-v18-cyrillic_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-//       url('/fonts/roboto-v18-cyrillic_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
-//   }
-// }
+@each $fontFamily, $fontStyle in $fontsList {
+  $fontStyles: map.keys(map.get($fontsList, $fontFamily));
+  $fontStylesLength: length($fontStyles);
+  @for $j from 1 through $fontStylesLength {
+    $fontStyleName: nth($fontStyles, $j);
+    $fontWeights: map-keys(map.get($fontsList, $fontFamily, $fontStyleName));
+    $fontNames: map-values(map.get($fontsList, $fontFamily, $fontStyleName));
+    $length: length($fontWeights);
+    @for $i from 1 through $length {
+        $weight: nth($fontWeights, $i);
+        $name: nth($fontNames, $i);
+        @font-face {
+          font-family: $fontFamily;
+          font-style: $fontStyleName;
+          font-weight: $weight;
+          src: url('#{$name}.eot');
+          src: local('#{$fontFamily}'), local('#{$fontFamily}-#{$weight}'),
+          url('#{$path-fonts}#{$name}.woff2') format('woff2'),
+          url('#{$path-fonts}#{$name}.woff') format('woff'),
+          url('#{$path-fonts}#{$name}.ttf') format('truetype'),
+          url('#{$path-fonts}#{$name}.svg##{$fontFamily}') format('svg');
+        }
+    }
+  }
+}
