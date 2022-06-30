@@ -2,9 +2,9 @@
   title: Формы
   layout: default
 ---
-# Basic examples
 
----
+# Custom select by bootstrap-select
+
 ## Standard select boxes
 
 <div class="bs-docs-example">

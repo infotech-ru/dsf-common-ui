@@ -1,18 +1,7 @@
-<header class="navbar navbar-expand-md navbar-light fixed-top bg-light" role="navigation">
-  <!-- Main title -->
-  <a class="navbar-brand" href="{{ nav.homepage.url|url }}">{{ config.site_name }}</a>
-
-    <!-- Expanded navigation -->
-  <div class="navbar-collapse collapse">
-    <!-- Main navigation -->
-    <ul class="navbar-nav mr-auto">
-      {% for item in site.data.navigation %}
-        <li class="nav-item {% if page.url == item.link %} active{% endif %}">
-          <a class="nav-link" href="{{ item.link }}">
-            {{ item.name }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</header>
+{% for item in site.data.navigation %}
+  <li class="headerMenu__item  {% if page.url == item.link %} active{% endif %}">
+    <a class="headerMenu__link" href="{{ item.link }}">
+      {{ item.name }}
+    </a>
+  </li>
+{% endfor %}

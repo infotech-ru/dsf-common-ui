@@ -1,5 +1,5 @@
 - name: Главная
-  link: /
+  link: index
 - name: Кнопки
   link: buttons
 - name: Элементы формы
