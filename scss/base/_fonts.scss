@@ -27,3 +27,13 @@
     }
   }
 }
+
+@font-face {
+  font-family: 'Glyphicons Regular';
+  src: url('#{$path-fonts}glyphicons-regular.eot');
+  src: url('#{$path-fonts}glyphicons-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$path-fonts}glyphicons-regular.woff2') format('woff2'),
+       url('#{$path-fonts}glyphicons-regular.woff') format('woff'),
+       url('#{$path-fonts}glyphicons-regular.ttf') format('truetype'),
+       url('#{$path-fonts}glyphicons-regular.svg#glyphiconsregular') format('svg');
+}
