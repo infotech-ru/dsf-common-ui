@@ -1,9 +1,10 @@
 ---
-  title: Формы
-  layout: default
+Title: Селекты / bootstrap-select
+menutitle: Селекты / selects
+category: forms
+anchor: helpers-margin
+order: 1
 ---
-
-# Custom select by bootstrap-select
 
 ## Standard select boxes
 

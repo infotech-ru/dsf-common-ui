@@ -22,7 +22,8 @@ body {
   font-family: Roboto, Arial, 'Helvetica Neue', sans-serif;
   font-size: rem(_fontSizes(body));
   line-height: rem(_lineHeight(body));
-  height: 100vh;  // спорное правило
+  // height: 100vh;  // спорное правило
+  min-height: 100vh;  // спорное правило
   text-rendering: optimizeLegibility;
   width: 100%;
   -webkit-font-smoothing: antialiased;

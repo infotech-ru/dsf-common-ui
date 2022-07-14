@@ -4,29 +4,7 @@
 /* path: modules/_buttons.scss                                                */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-[data-toggle="buttons"] {
-  > .btn,
-  > .btn-group > .btn {
-    input[type="radio"],
-    input[type="checkbox"] {
-      position: absolute;
-      clip: rect(0,0,0,0);
-      pointer-events: none;
-    }
-  }
-}
-
-button[data-toggle="dropdown"] {
-  & + .dropdown-menu > li > a {
-      font-size: rem(_fontSizes(btn));
-      padding: 3px 15px;
-      .glyphicon{
-        top: 1px;
-      }
-  }
-}
-
-.btn {
+%btn {
   background-image: none;
   border-style: solid;
   border-color: transparent;
@@ -34,13 +12,15 @@ button[data-toggle="dropdown"] {
   border-radius: #{_brand-sizes(btn_borderRadius)}px;
   cursor: pointer;
   display: inline-block;
+  font-size: rem(_fontSizes(btn));
   font-weight: _fontWeight(btn);
+  line-height: rem(_lineHeight(btn));
   margin-bottom: 0; // For input.btn
+  padding: 0 #{_brand-sizes(btn_paddingX)}px;
   text-align: center;
   touch-action: manipulation;
   vertical-align: middle;
   white-space: nowrap;
-  // @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
 
   &:hover,
@@ -58,6 +38,7 @@ button[data-toggle="dropdown"] {
       outline: none;
     }
   }
+
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
@@ -67,42 +48,65 @@ button[data-toggle="dropdown"] {
     @include box-shadow(none);
   }
 
-  @each $btn in default, primary, success, danger, warning, info {
-    &-#{$btn}{
-      background-color: _brand-btn(#{$btn}_bg);
-      background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
-      background-image: -o-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
-      background-image: linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
-      border-color: _brand-btn(#{$btn}-end_bg);
-      color: _brand-btn(#{$btn}_color);
-      // text-shadow: 0px 0.5px 0px transparentize(map-get($brand-palette, btn-textShadow-#{$btn}), 0.6);
-      &:hover,
-      &:focus,
-      &:active,
-      &.active,
-      &.focus {
-        background-image: -webkit-linear-gradient(_brand-btn(#{$btn}-end_bg) 0%, _brand-btn(#{$btn}_bg) 100%);
-        background-image: -o-linear-gradient(_brand-btn(#{$btn}-end_bg) 0%, _brand-btn(#{$btn}_bg) 100%);
-        background-image: linear-gradient(_brand-btn(#{$btn}-end_bg) 0%, _brand-btn(#{$btn}_bg) 100%);
-        background-position: inherit;
-        color: _brand-btn(#{$btn}_color);
-      }
-      .svg--icon{
-        svg{
-          fill: _brand-btn(#{$btn}_svg);
-        }
-      }
-    }
-  }
-
   .badge {
     font-size: 11px;
     line-height: 13px;
     padding: 0px 5px;
+  }
 
+  .svg--icon{
+    height: rem(12);
+    margin-right: 2px;
+    position: relative;
+    top: 2px;
+    svg{
+      height: rem(12);
+      max-width:20px;
+      width: auto;
+    }
+    &:first-child:last-child{
+      margin-right: 0px;
+    }
+  }
+
+  .btn-group > &{
+    border-radius: #{_brand-sizes(btn_borderRadius)}px;
+    line-height: rem(_lineHeight(btn));
   }
 }
 
+@each $btn in default, primary, success, danger, warning, info {
+  .btn-#{$btn}{
+    background-color: _brand-btn(#{$btn}_bg);
+    background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
+    background-image: -o-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
+    background-image: linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
+    border-color: _brand-btn(#{$btn}-end_bg);
+    color: _brand-btn(#{$btn}_color);
+    @extend %btn;
+    // text-shadow: 0px 0.5px 0px transparentize(map-get($brand-palette, btn-textShadow-#{$btn}), 0.6);
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.focus {
+      background-image: -webkit-linear-gradient(_brand-btn(#{$btn}-end_bg) 0%, _brand-btn(#{$btn}_bg) 100%);
+      background-image: -o-linear-gradient(_brand-btn(#{$btn}-end_bg) 0%, _brand-btn(#{$btn}_bg) 100%);
+      background-image: linear-gradient(_brand-btn(#{$btn}-end_bg) 0%, _brand-btn(#{$btn}_bg) 100%);
+      background-position: inherit;
+      color: _brand-btn(#{$btn}_color);
+    }
+    .svg--icon{
+      svg{
+        fill: _brand-btn(#{$btn}_svg);
+      }
+    }
+  }
+}
+
+.btn{
+  @extend .btn-default
+}
 
 .btn-default {
   .badge {
@@ -120,43 +124,57 @@ a.btn {
   }
 }
 
-// Button Sizes
-// --------------------------------------------------
+// .btn,
+// .btn-sm,
+// .btn-md,
+// .btn-lg{
+//   font-size: rem(_fontSizes(btn));
+//   line-height: rem(_lineHeight(btn));
+//   padding: 0 #{_brand-sizes(btn_paddingX)}px;
+// }
 
-.btn-xs {
+.btn-xs,
+.btn-small {
   border-radius: 1px;
   font-size: rem(_fontSizes(btnXs));
   line-height: rem(_lineHeight(btnXs));
-  padding: #{_brand-sizes(btnXs-paddingX)}px #{_brand-sizes(btnXs-paddingY)}px;
+  padding: #{_brand-sizes(btnXs-paddingY)}px #{_brand-sizes(btnXs-paddingX)}px;
 }
 
-.btn,
-.btn-sm,
-.btn-lg{
-  font-size: rem(_fontSizes(btn));
-  line-height: rem(_lineHeight(btn));
-  padding: 0 #{_brand-sizes(btn_paddingX)}px;
+.btn-large {
+  border-radius: 1px;
+  font-size: rem(_fontSizes(btnLg));
+  line-height: rem(_lineHeight(btnLg));
+  padding: #{_brand-sizes(btnLg-paddingY)}px #{_brand-sizes(btnLg-paddingX)}px;
 }
 
 .btn-group{
   display: inline-flex;
 }
 .btn-group > .btn,
-.btn-group-lg > .btn,
-.btn-group-sm > .btn {
+.btn-group-sm > .btn,
+.btn-group-lg > .btn {
   border-radius: #{_brand-sizes(btn_borderRadius)}px;
   line-height: rem(_lineHeight(btn));
 }
 
-// Alternate buttons
-// --------------------------------------------------
+.btn-group_theme{
+  @extend .btn-group;
+  & > [class^="btn-"]{
+    @extend .btn-default;
+  }
+  & > [class^="btn-"].active{
+    @extend .btn-primary
+  }
+}
 
 .btn-link {
   border-radius: 0;
   box-shadow: none;
   color: _brand-palette(link_color);
-  font-weight: _fontWeight(btn);
   cursor: pointer;
+  font-weight: _fontWeight(btn);
+  @extend %btn;
   &,
   &:hover,
   &:focus,
@@ -183,11 +201,6 @@ a.btn {
     }
   }
 }
-
-
-
-// Block button
-// --------------------------------------------------
 
 .btn-block {
   display: block;
