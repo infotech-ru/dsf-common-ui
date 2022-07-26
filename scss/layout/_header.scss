@@ -23,6 +23,9 @@
     .mobile-view &{
       padding-right: 5px;
     }
+    .guest-view &{
+      background-color: transparent;
+    }
   }
   &__bottom{
     background-color: _brand-palette(headerBottom_bgc);
@@ -31,6 +34,9 @@
       background-color: transparent;
       height: auto;
       // display: none;
+    }
+    .guest-view &{
+      display: none;
     }
   }
   &__title {
