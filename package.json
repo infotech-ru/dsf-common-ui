@@ -1,14 +1,21 @@
 {
   "name": "dsf-common-ui",
-  "version": "1.0.0",
+  "version": "1.0.21",
   "description": "Styles, scripts, vectors for dsf projects",
-  "dependencies": {
-  },
   "author": "Infotech teams",
   "repository": "github:infotech-ru/dsf-common-ui",
   "bugs": "https://github.com/infotech-ru/dsf-common-ui/issues",
   "contributors": [
     "Alexey Gorbachev tov.Bender <bend.r.bender@gmail.com>"
   ],
+  "devDependencies": {
+    "grunt": "^1.5.3",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-svg-sprite": "^1.5.0"
+  },
+  "dependencies": {
+    "svg-sprite": "^1.5.4"
+  },
   "license": "ISC"
 }
