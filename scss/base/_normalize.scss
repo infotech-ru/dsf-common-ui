@@ -270,6 +270,12 @@ select {
   word-wrap: normal;
 }
 
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+  height: auto;
+}
+
 /**
  * Correct the inability to style clickable types in iOS and Safari.
 */
@@ -351,7 +357,7 @@ legend {
   display: block;
   width: 100%;
   margin-bottom: .5rem;
-
+  border: 0;
   line-height: inherit;
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
@@ -388,6 +394,8 @@ textarea {
 [type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
+  margin: 4px 0 0;
+  line-height: normal;
 }
 
 /**
@@ -407,6 +415,14 @@ textarea {
 [type="search"] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
+  // Search inputs in iOS
+  //
+  // This overrides the extra rounded corners on search inputs in iOS so that our
+  // `.form-control` class can properly style them. Note that this cannot simply
+  // be added to `.form-control` as it's not specific enough. For details, see
+  // https://github.com/twbs/bootstrap/issues/11586.
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 /**
@@ -415,6 +431,16 @@ textarea {
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+// Make range inputs behave like textual form controls
+input[type="range"] {
+  display: block;
+  width: 100%;
 }
 
 /**

@@ -2,6 +2,7 @@
   @return val($brand-sizes, $keys...);
 }
 $brand-sizes: (
+  borderRadiusFormElem:            1,
   border-radius-base:              4,
   border-radius-large:             6,
   btn_paddingX:                    10,
@@ -11,4 +12,19 @@ $brand-sizes: (
   btnXs-paddingY:                  0,
   btnLg-paddingX:                  15,
   btnLg-paddingY:                  0,
+  controlLabel_mb:                 3,
+  formGroup_mb:                    15,
+  btnIcon_height:                  16,
+);
+
+
+@function _lineHeight($keys...) {
+  @return val($lineHeight, $keys...);
+}
+$lineHeight: (
+  body:                                                                      14,
+  btn:                                                                       26,
+  btnXs:                                                                     18,
+  btnLg:                                                                     30,
+  input:                                                                     26,
 );

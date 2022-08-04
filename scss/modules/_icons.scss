@@ -1,0 +1,11 @@
+.svg--icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px; // !default
+    width: auto;
+    svg{
+        display: block;
+        height: 16px;
+        width: auto;
+    }
+}

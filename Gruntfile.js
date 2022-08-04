@@ -2,22 +2,42 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
         copy: {
-            main: {
+            svg_sprite__template: {
                 files: [
                     {
                         expand: true,
-                        cwd: "./dist/defs/",
-                        src: "sprite.defs.html",
-                        dest: "./docs/_includes/"
+                        cwd: "./dist/symbol/",
+                        src: "sprite.symbol.html",
+                        dest: "./docs/"
                     },
                 ]
-            }
+            },
+            svg_sprite__symbolSprite: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: "./dist/symbol/svg",
+                        src: "*.svg",
+                        dest: "./svg/"
+                    },
+                ]
+            },
+            svg_sprite__symbolSpriteForDocs: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: "./dist/symbol/svg",
+                        src: "*.svg",
+                        dest: "./docs/svg/"
+                    },
+                ]
+            },
         },
         svg_sprite: {
           default: {
             // Target basics
             expand: true,
-            cwd: 'svg',
+            cwd: 'svg-for-sprite',
             src: ['**/*.svg'],
             dest: 'dist',
             // Target options
@@ -32,16 +52,14 @@ module.exports = function (grunt) {
                 },
                 dest: 'dist/intermediate-svg'  // Keep the intermediate files
               },
+              svg: {
+                namespaceClassnames: false,
+              },
               mode: {
-                view: {           // Activate the «view» mode
+                symbol: { // Activate the symbol mode
                   bust: false,
                   render: {
-                    scss: true    // Activate Sass output (with default options)
-                  }
-                },
-                defs: { // Activate the defs» mode
-                  render: {
-                    scss: true
+                    scss: true,
                   },
                   example: true
                 }

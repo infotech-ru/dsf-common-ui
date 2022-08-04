@@ -54,9 +54,13 @@
     padding: 0px 5px;
   }
 
+  .caret {
+    margin-left: 0;
+  }
+
   .svg--icon{
     height: rem(12);
-    margin-right: 2px;
+    // margin-right: 10px;
     position: relative;
     top: 2px;
     svg{
@@ -64,14 +68,17 @@
       max-width:20px;
       width: auto;
     }
-    &:first-child:last-child{
-      margin-right: 0px;
+    + .btn__text{
+      margin-left: 10px;
     }
+    // &:only-child{
+    //   margin-right: 0px;
+    // }
   }
-
-  .btn-group > &{
-    border-radius: #{_brand-sizes(btn_borderRadius)}px;
-    line-height: rem(_lineHeight(btn));
+  .btn__text{
+    + .svg--icon{
+      margin-left: 10px;
+    }
   }
 }
 
@@ -148,27 +155,10 @@ a.btn {
   padding: #{_brand-sizes(btnLg-paddingY)}px #{_brand-sizes(btnLg-paddingX)}px;
 }
 
-.btn-group{
-  display: inline-flex;
-}
-.btn-group > .btn,
-.btn-group-sm > .btn,
-.btn-group-lg > .btn {
-  border-radius: #{_brand-sizes(btn_borderRadius)}px;
-  line-height: rem(_lineHeight(btn));
-}
-
-.btn-group_theme{
-  @extend .btn-group;
-  & > [class^="btn-"]{
-    @extend .btn-default;
-  }
-  & > [class^="btn-"].active{
-    @extend .btn-primary
-  }
-}
 
 .btn-link {
+  background-color: transparent;
+  background-image: none;
   border-radius: 0;
   box-shadow: none;
   color: _brand-palette(link_color);
@@ -183,6 +173,7 @@ a.btn {
   &.active,
   &:active {
     background-color: transparent;
+    background-image: none;
     border-color: transparent;
     box-shadow: none;
     outline: none;
@@ -199,6 +190,53 @@ a.btn {
       color: _brand-palette(linkDisabled_color);
       text-decoration: none;
     }
+  }
+}
+
+.btn-icon{
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  .glyphicon {
+    color: _brand-palette(btnIconSvg_color);
+    font-size: rem(_brand-sizes(btnIcon_height));
+    height: rem(_brand-sizes(btnIcon_height));
+    top: 0;
+    vertical-align: middle;
+  }
+  .svg--icon {
+    height: rem(_brand-sizes(btnIcon_height));
+    vertical-align: middle;
+    svg{
+      height: rem(_brand-sizes(btnIcon_height));
+    }
+  }
+  .nostroke{
+    stroke: none;
+  }
+  .nofill{
+    fill: none;
+  }
+  .fill{
+    fill: _brand-palette(btnIconSvg_color);
+  }
+  .stroke{
+    stroke: _brand-palette(btnIconSvg_color);
+  }
+  &:hover,
+  &:focus {
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      // color: #2a6598;
+      outline: 0;
+  }
+  .control-label + & {
+    margin-left: 4px;
+    position: relative;
+    top: -#{calc(_brand-sizes(controlLabel_mb) * .5)}px;
   }
 }
 

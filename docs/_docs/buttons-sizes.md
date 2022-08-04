@@ -1,5 +1,5 @@
 ---
-Title: Семантическое значение кнопок передаваемое через цвет
+Title: Размеры кнопки
 menutitle: Размеры кнопки
 category: buttons
 anchor: size

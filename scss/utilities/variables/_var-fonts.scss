@@ -22,6 +22,7 @@ $fontSizes: (
   btn:                                                                       12,
   btnXs:                                                                     10,
   btnLg:                                                                     14,
+  formElem:                                                                  12,
 );
 
 @function _fontWeight($keys...) {
@@ -29,14 +30,4 @@ $fontSizes: (
 }
 $fontWeight: (
   btn:                                                                      400,
-);
-
-@function _lineHeight($keys...) {
-  @return val($lineHeight, $keys...);
-}
-$lineHeight: (
-  body:                                                                      14,
-  btn:                                                                       26,
-  btnXs:                                                                     18,
-  btnLg:                                                                     30,
 );
