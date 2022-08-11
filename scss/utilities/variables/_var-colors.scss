@@ -306,6 +306,14 @@ $brand-palette: (
   table-table-striped-bg-odd:             map-get($brand-colors, _white),
   table-table-striped-bg-even:            map-get($brand-colors, _light-grey),
 
+  tooltip_bgc:                            map-get($brand-colors, _black),
+  tooltip_color:                          map-get($brand-colors, _white),
+
+  popover_bgc:                            map-get($brand-colors, _white),
+  popover_borderColor:                    map-get($brand-colors, _white),
+  popover_color:                          map-get($brand-colors, _dark-grey),
+  popoverHeader_bgc:                      map-get($brand-colors, _light-grey3),
+  popoverHeader_color:                    map-get($brand-colors, _dark-grey),
 );
 
 $state-primary-bg:                        map-get($brand-colors, _blue);

@@ -1,0 +1,41 @@
+// Tooltips
+
+// $tooltip-font-size:                 $font-size-sm !default;
+$tooltip-max-width:                 200px !default;
+$tooltip-color:                     _brand-colors(_white) !default;
+$tooltip-bg:                        _brand-colors(_black) !default;
+$tooltip-border-radius:             0;
+$tooltip-opacity:                   .9 !default;
+$tooltip-padding-y:                 .25rem !default;
+$tooltip-padding-x:                 .5rem !default;
+$tooltip-margin:                    0 !default;
+
+$tooltip-arrow-width:               .8rem !default;
+$tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-color:               $tooltip-bg !default;
+
+// Popovers
+
+// $popover-font-size:                 $font-size-sm !default;
+$popover-bg:                        _brand-colors(_white) !default;
+$popover-max-width:                 276px !default;
+$popover-border-width:              1px;
+$popover-border-color:              transparentize(_brand-colors(_black), .8) !default;
+$popover-border-radius:             0;
+$popover-inner-border-radius:       0;
+$popover-box-shadow:                0 .25rem .5rem $popover-border-color !default;
+
+$popover-header-bg:                 darken($popover-bg, 3%) !default;
+$popover-header-color:              $headings-color !default;
+$popover-header-padding-y:          .5rem !default;
+$popover-header-padding-x:          .75rem !default;
+
+$popover-body-color:                _brand-palette(body_color);
+$popover-body-padding-y:            $popover-header-padding-y !default;
+$popover-body-padding-x:            $popover-header-padding-x !default;
+
+$popover-arrow-width:               1rem !default;
+$popover-arrow-height:              .5rem !default;
+$popover-arrow-color:               $popover-bg !default;
+
+$popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;

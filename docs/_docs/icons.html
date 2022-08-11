@@ -8,25 +8,40 @@ order: 1
 
 <p>Наши иконки формируются в спрайт.</p>
 
-<p>Исходники для спрайта иконок грузятся в проект-пакет `dsf-common-ui` в папку `svg-for-sprite`.</p>
+<p>Исходники для спрайта иконок грузятся в проект-пакет `dsf-common-ui` в папку `src/svg-for-sprite`.</p>
 
 <p>Собирается спрайт локально, запуском команды `grunt`.</p>
 
 <p>Обновленная версия попадает в папки проект-пакета и выгружается в github.</p>
 
-<p><b>Важно!</b> Исходники иконок перед загрузкой нужно обработать, чтобы viewBox совпадал с контурами иконки и имел размер 24px по высоте.</p>
+<p><b>Важно!</b> Исходники иконок перед загрузкой нужно подготовить.<br>
+  1. Нужно чтобы viewBox совпадал с контурами иконки и имел размер 24px по высоте. <br>
+  2. Неизменяемые цвета оставляем в иконке, другие зачищаем, чтобы можно было изменять стилями.<br>
+  3. Если иконка использует stroke - прописываем к элементу svg класс stroke, если fill - то класс fill.<br>
+  4. Внутри svg обязательно должно содержаться
+  {% highlight html %}<style>.fill {fill: var(--svg-icon-fill, #000)} .stroke {stroke: var(--svg-icon-stroke, #000)}</style>{% endhighlight %}
+  Например:
+  {% highlight html %}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.8 14"><style>.fill {fill: var(--svg-icon-fill, #000)} .stroke {stroke: var(--svg-icon-stroke, #000)}</style><path d="M0,12.6A1.4,1.4,0,1,1,1.4,14,1.4,1.4,0,0,1,0,12.6ZM0,1.4A1.4,1.4,0,1,1,1.4,2.8,1.4,1.4,0,0,1,0,1.4ZM1.4,5.6A1.4,1.4,0,1,0,2.8,7,1.4,1.4,0,0,0,1.4,5.6Z" class="fill" fill-rule="evenodd"/></svg>
+  {% endhighlight %}
+</p>
 
 <div><i>Использование:</i></div>
 {% highlight html %}
 <svg>
     <use xlink:href="sprite.symbol.svg#ИМЯ_ИКОНКИ"></use>
 </svg>
+
+или с помощью heplers::Icons
+
+<?= \app\helpers\Icons::icon('ИМЯ_ИКОНКИ') ?>
+
 {% endhighlight %}
 <svg width="24" height="24">
-  <use xlink:href="svg/sprite.symbol.svg#calendar"></use>
+  <use xlink:href="dist/sprite.symbol.svg#calendar"></use>
 </svg>
 <br>
 <br>
 <h4>Загруженные в проект-пакет иконки</h4>
-<iframe width="100%" height="800px" frameborder="0" src="sprite.symbol.html">
-</iframe>
+
+{% include sprite.symbol.html %}

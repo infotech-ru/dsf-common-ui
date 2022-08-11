@@ -10,3 +10,5 @@
   link: helpers
 - name: Иконки
   link: icons
+- name: Компоненты системы
+  link: components

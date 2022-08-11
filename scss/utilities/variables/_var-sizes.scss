@@ -12,9 +12,20 @@ $brand-sizes: (
   btnXs-paddingY:                  0,
   btnLg-paddingX:                  15,
   btnLg-paddingY:                  0,
+  btnIcon_height:                  16,
   controlLabel_mb:                 3,
   formGroup_mb:                    15,
-  btnIcon_height:                  16,
+  popoverArrow_width:              6,
+  popoverArrow_height:             6,
+  popover_borderWidth:             1,
+  popover_paddingX:                12,
+  popover_paddingY:                8,
+  popover_maxWidth:                276,
+  tooltipArrow_height:             6,
+  tooltipArrow_width:              6,
+  tooltip_paddingX:                8,
+  tooltip_paddingY:                4,
+  tooltip_maxWidth:                200,
 );
 
 
@@ -27,4 +38,6 @@ $lineHeight: (
   btnXs:                                                                     18,
   btnLg:                                                                     30,
   input:                                                                     26,
+  tooltip:                                                                   18,
+  popover:                                                                   18,
 );

@@ -23,6 +23,9 @@ $fontSizes: (
   btnXs:                                                                     10,
   btnLg:                                                                     14,
   formElem:                                                                  12,
+  popoverHeader:                                                             14,
+  popover:                                                                   12,
+  tooltip:                                                                   12,
 );
 
 @function _fontWeight($keys...) {

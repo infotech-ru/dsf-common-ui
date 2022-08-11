@@ -38,7 +38,8 @@ pre{
   padding-bottom: 48px;
   margin-bottom: 30px;
   margin-top: -10px;
-  background: #337ab7;
+  /* background: #337ab7; */
+  background-color: #1E6393;
   color: #fff;
 }
 
@@ -252,11 +253,18 @@ pre{
   flex-wrap: wrap;
 }
 .set-ico-list-item{
-  border: 1px solid #000;
+  border: .5px solid #ddd;
   flex-basis: 10%;
   padding: 40px 20px;
   position: relative;
   text-align: center;
+  height: 100px;
+}
+.set-ico-list-item .fill{
+  fill: #1E6393;
+}
+.set-ico-list-item .stroke{
+  stroke: #1E6393;
 }
 .set-ico-list-item .tag-list{
   display: none;
@@ -275,6 +283,9 @@ pre{
   padding: 10px;
   position: absolute;
   z-index: 1;
+}
+.set-ico-modal-name{
+  margin-bottom: 5px;
 }
 .ico-info-hr{
   border: 1px solid #ccc;

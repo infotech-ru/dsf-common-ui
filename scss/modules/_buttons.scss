@@ -68,14 +68,18 @@
       max-width:20px;
       width: auto;
     }
-    + .btn__text{
-      margin-left: 10px;
-    }
     // &:only-child{
     //   margin-right: 0px;
     // }
   }
-  .btn__text{
+  .glyphicon,
+  .svg--icon{
+    + .btn-text{
+      margin-left: 10px;
+    }
+  }
+  .btn-text{
+    + .glyphicon,
     + .svg--icon{
       margin-left: 10px;
     }
@@ -198,6 +202,7 @@ a.btn {
   background-image: none;
   box-shadow: none;
   border: none;
+  cursor: pointer;
   padding: 0;
   .glyphicon {
     color: _brand-palette(btnIconSvg_color);
@@ -212,6 +217,8 @@ a.btn {
     svg{
       height: rem(_brand-sizes(btnIcon_height));
     }
+    #{--svg-icon-fill}: _brand-palette(btnIconSvg_color);
+    #{--svg-icon-stroke}: _brand-palette(btnIconSvg_color);
   }
   .nostroke{
     stroke: none;
