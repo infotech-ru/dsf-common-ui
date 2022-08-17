@@ -259,6 +259,8 @@ pre{
   position: relative;
   text-align: center;
   height: 100px;
+  --svg-icon-fill: #1E6393;
+  --svg-icon-stroke: #1E6393;
 }
 .set-ico-list-item .fill{
   fill: #1E6393;

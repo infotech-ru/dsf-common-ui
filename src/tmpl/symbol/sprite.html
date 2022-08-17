@@ -40,17 +40,25 @@ embedded above. They may be styled via CSS.
 	<h3>A) Inline SVG with embedded sprite</h3>
 <div class="set-detail-list">
 {{#shapes}}					<div class="set-ico-list-item" title="{{name}}">
-			<div class="icon-box">
+			<div class="icon-box" data-toggle="popover" data-content='
+				<div class="">
+					<div class="set-ico-modal-name">{{name}}</div>
+					<button class="btn-default js-copyToClipboard" data-clipboard-text="{{name}}">
+						<svg class="svg--icon" width="24" height="24">
+							<use xlink:href="dist/sprite.symbol.svg#glyphicons-squares"></use>
+						</svg>
+						<span class="btn-text">
+							{{name}}
+						</span>
+					</button>
+				</div>
+			'>
 
 				<!-- {{name}} -->
 				<svg class="{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
 					<use xlink:href="#{{name}}"></use>
 				</svg>
 
-			</div>
-			<div class="set-ico-modal">
-				<div class="set-ico-modal-name">{{name}}</div>
-				<button class="btn-default js-copyValue" data-clipboard-text="{{name}}">{{name}}</button>
 			</div>
 		</div>
 {{/shapes}}			</div>
@@ -77,16 +85,24 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 {{#shapes}}				<div class="set-ico-list-item" title="{{name}}">
 					<div class="icon-box">
-
+					<button type="button" name="button" class="btn-link js-icon-box"  data-content='
+						<div class="">
+							<div class="set-ico-modal-name">{{name}}</div>
+							<button class="btn-default js-copyToClipboard" data-clipboard-text="{{name}}">
+								<svg class="svg--icon" width="24" height="24">
+									<use xlink:href="dist/sprite.symbol.svg#glyphicons-squares"></use>
+								</svg>
+								<span class="btn-text">
+									Скопировать
+								</span>
+							</button>
+						</div>
+					'>
 						<!-- {{name}} -->
 						<svg class="{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
 							<use xlink:href="dist/{{{example}}}#{{name}}"></use>
 						</svg>
-
-					</div>
-					<div class="set-ico-modal">
-						<div class="set-ico-modal-name">{{name}}</div>
-						<button class="btn-default js-copyValue" data-clipboard-text="{{name}}">{{name}}</button>
+						</button>
 					</div>
 				</div>
 {{/shapes}}			</div>{{/inline}}

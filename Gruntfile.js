@@ -1,5 +1,12 @@
 const sass = require('sass');
 const tilde_importer = require("grunt-sass-tilde-importer");
+const {babel} = require("@rollup/plugin-babel");
+const resolve = require("@rollup/plugin-node-resolve").default;
+const uglify = require("@lopatnov/rollup-plugin-uglify");
+const nodeGlobals = require("rollup-plugin-node-globals");
+const commonjs = require("@rollup/plugin-commonjs");
+const replace = require("@rollup/plugin-replace");
+const env = process.env.NODE_ENV || "development";
 
 module.exports = function (grunt) {
     grunt.initConfig({
@@ -25,6 +32,16 @@ module.exports = function (grunt) {
                     },
                 ]
             },
+            js: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: "./dist/js",
+                        src: "*.js",
+                        dest: "./docs/dist/"
+                    },
+                ]
+            },
         },
         svg_sprite: {
           default: {
@@ -39,9 +56,20 @@ module.exports = function (grunt) {
                 transform: [
                   {svgo: {
                     plugins: [
-                      {removeStyleElement: false},
-                      // {moveGroupAttrsToElems: false}
+                      {cleanupAttrs: false},
+                      {mergeStyles: false},
                       {inlineStyles: true},
+                      {mergePaths: true},
+                      {convertStyleToAttrs: true},
+                      {convertPathData: false},
+                      {convertTransform: false},
+                      {removeUnusedNS: false},
+                      {removeEditorsNSData: false},
+                      {removeEmptyAttrs: false},
+                      {removeHiddenElems: false},
+                      {minifyStyles: false},
+                      {removeUselessStrokeAndFill: false},
+                      {removeStyleElement: false}
                     ]
                   }}
                 ],
@@ -55,16 +83,7 @@ module.exports = function (grunt) {
                 dest: './intermediate-svg'  // Keep the intermediate files
               },
               svg: {
-                namespaceClassnames: false,
-                transform: [
-                    function(svg) {
-                      // var svgDoc = svg;
-                      // var styleElement = svgDoc.createElementNS("http://www.w3.org/2000/svg", "style");
-                      // styleElement.textContent = ".fill{fill: var(--svg-icon-fill, #000);.stroke{stroke: var(--svg-icon-stroke, #000)}";
-                      // svgDoc.appendChild(symbol);
-                      return svg;
-                    }
-                ]
+                namespaceClassnames: false
               },
               mode: {
                 symbol: { // Activate the symbol mode
@@ -92,14 +111,63 @@ module.exports = function (grunt) {
             },
             default: {
                 files: {
-                  "./docs/dist/style.css": "./scss/index.scss",
+                  "./docs/dist/style.css": "./src/scss/index.scss",
                 }
             }
-        }
+        },
+        rollup: {
+            options: {
+                format: "iife",
+                external: [
+                    "jquery",
+                ],
+                globals: {
+                    jquery: "$",
+                },
+                interop: 'auto',
+                plugins: [
+                    resolve(),
+                    babel({
+                        compact: false,
+                        babelHelpers: "external",
+                        presets: [
+                            [
+                                "@babel/preset-env",
+                                {
+                                    modules: false
+                                }
+                            ]
+                        ],
+                        plugins: [
+                            "@babel/plugin-proposal-object-rest-spread",
+                            "@babel/plugin-external-helpers",
+                            "@babel/plugin-transform-destructuring"
+                        ]
+                    }),
+                    nodeGlobals(),
+                    commonjs(),
+                    replace({
+                        preventAssignment: true,
+                        "process.env.NODE_ENV": JSON.stringify(env)
+                    }),
+                    (env === "production" && uglify()),
+                ],
+            },
+            default: {
+                options: {
+                    name: "DSFUI"
+                },
+                files: {
+                    "dist/js/script.js": "src/js/entry.js"
+                }
+            }
+        },
     });
     grunt.loadNpmTasks("grunt-svg-sprite");
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-sass");
-    grunt.registerTask("default", ["svg_sprite", "copy", "sass"]);
+    grunt.loadNpmTasks("grunt-rollup");
+
+    grunt.registerTask("default", ["rollup", "svg_sprite", "copy", "sass"]);
 
 };
