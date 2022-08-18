@@ -26,16 +26,25 @@ author: "Infotech"
 baseurl: "/dsf-common-ui/" # the subpath of your site, e.g. /blog
 url: "https://infotech-ru.github.io/dsf-common-ui/" # the base hostname & protocol for your site, e.g. http://example.com
 canonical_url: "https://infotech-ru.github.io/dsf-common-ui/"
-twitter_username:
-github_username:
+
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+collections_dir: content
 collections:
-  docs:
-    layout: default
+  buttons:
+    sort_by: order
+  icons:
+    sort_by: order
+  helpers:
+    sort_by: order
+  forms:
+    sort_by: order
+  components:
+    sort_by: order
+  tables:
     sort_by: order
 # Exclude from processing.
 # The following items will not be processed, by default.

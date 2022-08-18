@@ -4567,7 +4567,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   color: #777777;
   text-decoration: none;
 }
-.btn-link .svg-glyphicons-bin {
+.btn-link .glyphicons-bin {
   --svg-icon-fill: #D9534F;
 }
 
@@ -4618,7 +4618,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   position: relative;
   top: -1.5px;
 }
-.btn-icon .svg-glyphicons-bin {
+.btn-icon .glyphicons-bin {
   --svg-icon-fill: #D9534F;
 }
 

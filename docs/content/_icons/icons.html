@@ -1,0 +1,130 @@
+---
+Title: Own Icons
+menutitle: Наши иконки
+category: icons
+anchor: ownicons
+order: 1
+---
+
+<p>Наши иконки формируются в спрайт.</p>
+
+<p>Исходники для спрайта иконок грузятся в проект-пакет `dsf-common-ui` в папку `src/svg-for-sprite`.</p>
+
+<p>Собирается спрайт локально, запуском команды `grunt`.</p>
+
+<p>Обновленная версия попадает в папки проект-пакета и выгружается в github.</p>
+
+<p><b>Важно!</b> Исходники иконок перед загрузкой нужно подготовить.<br>
+  1. Нужно чтобы viewBox совпадал с контурами иконки и имел размер 24px по высоте. <br>
+  2. Неизменяемые цвета оставляем в иконке, другие зачищаем, чтобы можно было изменять стилями.<br>
+  3. Если иконка использует stroke - прописываем к элементу svg атрибут stroke, если fill - то класс fill.<br>
+  {% highlight html %}fill="var(--svg-icon-fill, #000)" stroke="var(--svg-icon-stroke, #000)"}{% endhighlight %}
+  Например:
+  {% highlight html %}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.8 14"><path d="M0,12.6A1.4,1.4,0,1,1,1.4,14,1.4,1.4,0,0,1,0,12.6ZM0,1.4A1.4,1.4,0,1,1,1.4,2.8,1.4,1.4,0,0,1,0,1.4ZM1.4,5.6A1.4,1.4,0,1,0,2.8,7,1.4,1.4,0,0,0,1.4,5.6Z" fill="var(--svg-icon-fill, #000)" fill-rule="evenodd"/></svg>
+  {% endhighlight %}
+</p>
+
+<div><i>Использование:</i></div>
+{% highlight html %}
+html:
+<svg>
+    <use xlink:href="sprite.symbol.svg#ИМЯ_ИКОНКИ"></use>
+</svg>
+
+php:
+с помощью heplers::Icons
+
+\app\helpers\Icons::icon('ИМЯ_ИКОНКИ')
+
+vue:
+<script>
+import Icon from "./Icon.vue";
+components: {Icon}
+</script>
+<Icon name="ИМЯ_ИКОНКИ" />
+
+{% endhighlight %}
+<svg width="24" height="24">
+  <use xlink:href="dist/sprite.symbol.svg#calendar"></use>
+</svg>
+<br>
+<br>
+Иконки, которые необходимо заменить на новые
+<ul>
+<li>add -> glyphicons-plus</li>
+<li>adjust -> glyphicons-adjust</li>
+<li>asc -> glyphicons-sort-numerically</li>
+<li>availability -> glyphicons-warehouse</li>
+<li>backArrow -> glyphicons-arrow-right</li>
+<li>byn -> symbol-byn</li>
+<li>car -> glyphicons-car</li>
+<li>calendar--erp -> glyphicons-calendar</li>
+<li>car_default_contrast -> car_default</li>
+<li>comments -> ownicons-comments</li>
+<li>chat -> glyphicons-chat-message</li>
+<li>favorite -> ownicons-star-empty</li>
+<li>file -> glyphicons-file</li>
+<li>filter-alt -> ownicons-filter-empty</li>
+<li>print -> glyphicons-print</li>
+<li>clock -> glyphicons-history</li>
+<li>contracts -> warehouse-auto</li>
+<li>copy -> glyphicons-squares</li>
+<li>del -> glyphicons-bin</li>
+<li>desc -> glyphicons-sort-numerically-alt</li>
+<li>dottes -> glyphicons-more-vertical</li>
+<li>export -> glyphicons-cloud-download</li>
+<li>excel -> ownicons-excel</li>
+<li>eye -> glyphicons-eye</li>
+<li>fast-link -> ownicons-fast-link</li>
+<li>glyphicons-dotted -> glyphicons-more-vertical</li>
+<li>glyphicons-ok-sign -> glyphicons-circle-check</li>
+<li>glyphicons-ok -> glyphicons-check</li>
+<li>glyphicons-remove -> glyphicons-bin</li>
+<li>import -> glyphicons-open</li>
+<li>lock -> glyphicons-lock</li>
+<li>lightbulb-on -> ownicons-lightbulb-on</li>
+<li>lockOpen -> glyphicons-lock-open</li>
+<li>new-folder -> glyphicons-lock-open</li>
+<li>open -> glyphicons-open</li>
+<li>kgs -> symbol-kgs</li>
+<li>kzt -> symbol-kzt</li>
+<li>pdf -> ownicons-pdf</li>
+<li>pencil -> glyphicons-pencil</li>
+<li>print -> glyphicons-print</li>
+<li>receipt -> glyphicons-receipt</li>
+<li>remove -> glyphicons-bin</li>
+<li>regularize -> glyphicons-sort-numerically</li>
+<li>rub -> symbol-rub</li>
+<li>search-alt -> ownicons-search</li>
+<li>score -> glyphicons-invoice</li>
+<li>share -> ownicons-share</li>
+<li>score-check -> glyphicons-invoice-check</li>
+<li>search -> glyphicons-search</li>
+<li>settings -> glyphicons-settings</li>
+<li>sign-info -> glyphicons-circle-empty-info</li>
+<li>sign-info-red -> glyphicons-circle-empty-info</li>
+<li>simple-info -> glyphicons-circle-empty-info</li>
+<li>spares -> glyphicons-cogwheels</li>
+<li>stat -> ownicons-stat</li>
+<li>sign -> glyphicons-circle-empty-question</li>
+<li>sync -> glyphicons-sync</li>
+<li>send -> ownicons-send</li>
+<li>table -> glyphicons-table</li>
+<li>tag -> glyphicons-tag</li>
+<li>triangle-alert -> glyphicons-triangle-alert</li>
+<li>triangle-empty-alert -> glyphicons-triangle-empty-alert</li>
+<li>VIN -> warehouse-auto</li>
+<li>uah -> symbol-uah</li>
+<li>usd -> symbol-usd</li>
+<li>wrench -> glyphicons-wrench</li>
+<li>warehouse-add -> glyphicons-plus</li>
+<li>warehouse-addTel -> glyphicons-plus</li>
+<li>warehouse-fetch -> glyphicons-open</li>
+<li>glyphicons-basic... -> glyphicons-...</li>
+</ul>
+<br>
+
+<h4>Загруженные в проект-пакет иконки</h4>
+
+{% include sprite.symbol.html %}

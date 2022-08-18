@@ -18,6 +18,9 @@
   &__item{
     display: block;
     position: relative;
+    &.active > a {
+        color: _brand-palette(menuActive_color);
+    }
     &.customization {
         @media (min-width: 992px) and (max-width: 1450px) {
             .multicolumn__container {
@@ -26,13 +29,14 @@
             }
         }
     }
+    .multicolumn__col >  li,
     .dropdown-menu > li {
         text-decoration: none;
         &.active > a {
             // color: #fff;
-            color: _brand-palette(dropdownActive_color);
+            color: _brand-palette(menuDropdownActive_color);
             // background-color: #357ebd;
-            background-color: _brand-palette(dropdownActive_bgc);
+            background-color: _brand-palette(menuDropdownActive_bgc);
             background-image: none;
             text-decoration: none;
             text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
@@ -50,9 +54,9 @@
             // white-space: nowrap; issue # 2411
             &:hover {
                 color: #262626;
-                background-color: _brand-palette(dropdownActive_bgc);
+                background-color: _brand-palette(menuDropdownActive_bgc);
                 background-image: none;
-                color: _brand-palette(dropdownActive_color);
+                color: _brand-palette(menuDropdownActive_color);
                 // text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
                 text-decoration: none;
                 // background-color: #e8e8e8;
@@ -69,10 +73,13 @@
     svg{
       fill: _brand-palette(link_color);
     }
+    &.active {
+      color: _brand-palette(menuActive_color);
+    }
   }
   &__header{
-    background-color: _brand-palette(dropdownHeader_color);
-    color: _brand-palette(dropdown_bgc);
+    background-color: _brand-palette(menuDropdownHeader_color);
+    color: _brand-palette(menuDropdown_bgc);
     font-size: rem(12);
     padding: 6px 0px 6px 10px;
     position: relative;
@@ -82,8 +89,8 @@
     list-style-type: none;
     padding: 0;
     &__container {
-      background-color: _brand-palette(dropdown_bgc);
-      border: 1px solid _brand-palette(dropdown_borderColor);
+      background-color: _brand-palette(menuDropdown_bgc);
+      border: 1px solid _brand-palette(menuDropdown_borderColor);
       padding-top: 5px;
       z-index: _zindex(dropdown-menu);
       &_1{
@@ -123,7 +130,7 @@
       padding: 0;
       @media (min-width: 992px) {
         min-width: 200px;
-        border-right: 1px solid _brand-palette(dropdown_borderColor);
+        border-right: 1px solid _brand-palette(menuDropdown_borderColor);
       }
       &:last-child {
         border-right: none;
@@ -137,7 +144,7 @@
   &__item{
   }
   &__link {
-    color: _brand-palette(dropdown_color);
+    color: _brand-palette(menuDropdown_color);
     display: block;
     font-size: rem(13);
     line-height: rem(13);
@@ -147,8 +154,8 @@
     &.active,
     &:hover,
     &:focus{
-      background-color: _brand-palette(dropdownActive_bgc);
-      color: _brand-palette(dropdownActive_color);
+      background-color: _brand-palette(menuDropdownActive_bgc);
+      color: _brand-palette(menuDropdownActive_color);
       outline: none;
       text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
       text-decoration: none;

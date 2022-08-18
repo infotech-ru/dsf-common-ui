@@ -59,7 +59,7 @@ module.exports = function (grunt) {
                       {cleanupAttrs: false},
                       {mergeStyles: false},
                       {inlineStyles: true},
-                      {mergePaths: true},
+                      {mergePaths: false},
                       {convertStyleToAttrs: true},
                       {convertPathData: false},
                       {convertTransform: false},

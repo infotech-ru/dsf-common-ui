@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 16">
-<path d="M9,0A2,2,0,0,0,7,2v8a2,2,0,0,0,2,2H23L20,9.75V2a2,2,0,0,0-2-2Z" fill="var(--svg-icon-fill, #000)" style="fill-rule:evenodd" stroke="none" />
-<path d="M14,4a2,2,0,0,1,2,2v8a2,2,0,0,1-2,2H0l3-2.25V6A2,2,0,0,1,5,4Z" style="fill-rule:evenodd" stroke="none" fill="var(--svg-icon-fill, #000)" />
-<rect fill="var(--svg-icon-fill, #000)" x="6" y="7" width="7" height="1" stroke="none" />
-<rect x="6" y="9" width="7" height="1" fill="var(--svg-icon-fill, #000)" stroke="none"/><rect fill="var(--svg-icon-fill, #000)" x="6" y="11" width="7" height="1" stroke="none" />
-</svg>
