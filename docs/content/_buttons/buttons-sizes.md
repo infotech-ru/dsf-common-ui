@@ -3,7 +3,7 @@ Title: Размеры кнопки
 menutitle: Размеры кнопки
 category: buttons
 anchor: size
-order: 3
+rank: 3
 ---
 
 #### Уменьшение и увеличение размера задается через классы `btn-small` и `btn-large`

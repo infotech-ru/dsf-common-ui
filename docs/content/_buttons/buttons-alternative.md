@@ -3,7 +3,7 @@ Title: Альтернативные кнопки
 menutitle: Альтернативные кнопки
 category: buttons
 anchor: buttons-alternative
-order: 5
+rank: 5
 ---
 
 #### Кнопка-ссылка

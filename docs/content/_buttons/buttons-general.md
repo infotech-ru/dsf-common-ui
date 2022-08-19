@@ -3,7 +3,7 @@ Title: Основной класс
 menutitle: Основной класс
 category: buttons
 anchor: general
-order: 1
+rank: 1
 ---
 
 `btn` - Соответствует `btn-default`

@@ -35,9 +35,11 @@ plugins:
 collections_dir: content
 collections:
   buttons:
-    sort_by: order
+    sort_by: rank
   icons:
-    sort_by: order
+    order:
+      - icons.html
+      - glyphicons.html
   helpers:
     sort_by: order
   forms:

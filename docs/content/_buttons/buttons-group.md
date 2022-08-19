@@ -3,7 +3,7 @@ Title: Группирование кнопок
 menutitle: Группирование кнопок
 category: buttons
 anchor: buttons-group
-order: 4
+rank: 4
 ---
 
 
