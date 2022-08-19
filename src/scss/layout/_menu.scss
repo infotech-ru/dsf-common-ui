@@ -18,9 +18,10 @@
   &__item{
     display: block;
     position: relative;
-    &.active > a {
-        color: _brand-palette(menuActive_color);
-    }
+    height: 100%;
+    // &.active > a {
+    //     color: _brand-palette(menuActive_color);
+    // }
     &.customization {
         @media (min-width: 992px) and (max-width: 1450px) {
             .multicolumn__container {
@@ -67,13 +68,17 @@
     }
   }
   &__link{
+    align-items: center;
+    display: inline-flex;
     font-size: rem(13);
     font-weight: 700;
+    height: 100%;
     padding: 0 10px;
     svg{
       fill: _brand-palette(link_color);
     }
-    &.active {
+    .active &{
+      background-color: _brand-palette(menuActive_bgc);
       color: _brand-palette(menuActive_color);
     }
   }

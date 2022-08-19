@@ -1,6 +1,6 @@
 ---
-Title: Вспомогательные классы
-menutitle: Вспомогательные классы
+Title: Отступы
+menutitle: Отступы
 category: helpers
 anchor: helpers-margin
 order: 1

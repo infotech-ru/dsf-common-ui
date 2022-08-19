@@ -124,6 +124,9 @@ output {
     box-shadow: none;
     outline: none;
   }
+  &[type=file] {
+    border: none;
+  }
   // [converter] extracted textarea& to textarea.form-control
 }
 
