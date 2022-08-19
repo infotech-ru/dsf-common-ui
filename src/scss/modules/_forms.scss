@@ -89,7 +89,7 @@ output {
   font-size: rem(_fontSizes(formElem));
   // line-height: $line-height-base;
   line-height: rem(_lineHeight(input));
-  padding: $padding-base-vertical $padding-base-horizontal;
+  padding: 0 #{_brand-sizes(formControl_paddingX)}px;
   width: 100%;
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
