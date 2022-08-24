@@ -13,12 +13,16 @@
   padding: 0 5px;
   margin: 0;
   .mobile-view &{
-    display: none;
+    align-items: flex-start;
+    flex-direction: column;
   }
   &__item{
     display: block;
     position: relative;
     height: 100%;
+    .mobile-view &{
+      height: auto;
+    }
     // &.active > a {
     //     color: _brand-palette(menuActive_color);
     // }
@@ -34,35 +38,27 @@
     .dropdown-menu > li {
         text-decoration: none;
         &.active > a {
-            // color: #fff;
             color: _brand-palette(menuDropdownActive_color);
-            // background-color: #357ebd;
             background-color: _brand-palette(menuDropdownActive_bgc);
             background-image: none;
             text-decoration: none;
             text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
             outline: 0;
-            // background-image: linear-gradient(to bottom, #428bca 0%, #357ebd 100%);
-            // background-repeat: repeat-x;
         }
         > a {
+          color: _brand-palette(menuDropdown_color);
             display: block;
             padding: 5px 15px;
             font-weight: normal;
             font-size: rem(13);
             line-height: rem(13);
-            color: #333;
             // white-space: nowrap; issue # 2411
             &:hover {
                 color: #262626;
                 background-color: _brand-palette(menuDropdownActive_bgc);
                 background-image: none;
                 color: _brand-palette(menuDropdownActive_color);
-                // text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
                 text-decoration: none;
-                // background-color: #e8e8e8;
-                // background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
-                // background-repeat: repeat-x;
             }
         }
     }
@@ -74,6 +70,11 @@
     font-weight: 700;
     height: 100%;
     padding: 0 10px;
+    .mobile-view &{
+      height: auto;
+      padding: 10px;
+      width: 100%;
+    }
     svg{
       fill: _brand-palette(link_color);
     }
@@ -89,7 +90,14 @@
     padding: 6px 0px 6px 10px;
     position: relative;
   }
-
+  .dropdown-menu{
+    .mobile-view &{
+      padding: 0;
+      border: none;
+      position: relative;
+      width: 100%;
+    }
+  }
   .multicolumn {
     list-style-type: none;
     padding: 0;
