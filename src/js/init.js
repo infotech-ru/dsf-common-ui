@@ -1,4 +1,6 @@
 export function init(){
+  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="popover"]').popover();
   $('.js-icon-box').popover({
     sanitize: false,
     html: true,

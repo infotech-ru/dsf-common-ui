@@ -655,6 +655,9 @@ pre {
   filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.25));
   z-index: 1004;
 }
+.body_maximized .header {
+  display: none;
+}
 .header__top {
   align-items: center;
   background-color: #ffffff;
@@ -673,9 +676,31 @@ pre {
   background-color: #f9f9f9;
   height: 34px;
 }
-.mobile-view .header__bottom {
-  background-color: transparent;
-  height: auto;
+.header__bottom.collapse {
+  background-color: #ffffff;
+  background-attachment: fixed;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  padding: 0px;
+  height: 0;
+  transition: margin-left 0.5s ease, width 0.5s ease;
+  overflow: auto;
+  width: 0;
+  z-index: 1041;
+}
+.header__bottom.collapse.show, .header__bottom.collapse.in {
+  height: calc(100vh - 50px);
+  margin-left: 0rem;
+  width: 100%;
+  right: 0;
+}
+.header__bottom.collapsing {
+  width: 100%;
 }
 .guest-view .header__bottom {
   display: none;
@@ -935,61 +960,36 @@ pre {
   margin: 0;
 }
 .mobile-view .headerMenu {
-  display: none;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .headerMenu__item {
   display: block;
   position: relative;
+  height: 100%;
 }
-.headerMenu__item.active > a {
-  color: #B6D1E8;
-}
-@media (min-width: 992px) and (max-width: 1450px) {
-  .headerMenu__item.customization .multicolumn__container {
-    right: 0;
-    left: auto;
-  }
-}
-.headerMenu__item .multicolumn__col > li,
-.headerMenu__item .dropdown-menu > li {
-  text-decoration: none;
-}
-.headerMenu__item .multicolumn__col > li.active > a,
-.headerMenu__item .dropdown-menu > li.active > a {
-  color: #ffffff;
-  background-color: #1E6393;
-  background-image: none;
-  text-decoration: none;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  outline: 0;
-}
-.headerMenu__item .multicolumn__col > li > a,
-.headerMenu__item .dropdown-menu > li > a {
-  display: block;
-  padding: 5px 15px;
-  font-weight: normal;
-  font-size: 0.8125rem;
-  line-height: 0.8125rem;
-  color: #333;
-}
-.headerMenu__item .multicolumn__col > li > a:hover,
-.headerMenu__item .dropdown-menu > li > a:hover {
-  color: #262626;
-  background-color: #1E6393;
-  background-image: none;
-  color: #ffffff;
-  text-decoration: none;
+.mobile-view .headerMenu__item {
+  height: auto;
 }
 .headerMenu__link {
+  align-items: center;
+  display: inline-flex;
   font-size: 0.8125rem;
   font-weight: 700;
+  height: 100%;
   padding: 0 10px;
+}
+.mobile-view .headerMenu__link {
+  height: auto;
+  padding: 10px;
+  width: 100%;
 }
 .headerMenu__link svg {
   fill: #1E6393;
 }
-.headerMenu__link.active {
-  color: #B6D1E8;
+.active .headerMenu__link {
+  background-color: #4A8DC6;
+  color: #ffffff;
 }
 .headerMenu__header {
   background-color: #BABABA;
@@ -998,78 +998,77 @@ pre {
   padding: 6px 0px 6px 10px;
   position: relative;
 }
-.headerMenu .multicolumn {
-  list-style-type: none;
+.mobile-view .headerMenu .dropdown-menu {
   padding: 0;
+  border: none;
+  position: relative;
+  width: 100%;
 }
-.headerMenu .multicolumn__container {
-  background-color: #ffffff;
-  border: 1px solid #777777;
-  padding-top: 5px;
-  z-index: 1003;
+.headerMenu .dropdown-submenu .dropdown-menu {
+  overflow: auto;
+  max-height: calc(80vh - 120px);
 }
-.headerMenu .multicolumn__container_1 {
-  min-width: 200px;
-  margin-left: -40px;
-}
-.headerMenu .multicolumn__container_2 {
-  min-width: 400px;
-  margin-left: -140px;
-}
-.headerMenu .multicolumn__container_3 {
-  min-width: 600px;
-  margin-left: -240px;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .headerMenu .multicolumn__container {
-    z-index: 1010;
-  }
-}
-.headerMenu .multicolumn__row {
-  display: flex;
-  margin: 0;
-}
-@media (max-width: 991px) {
-  .headerMenu .multicolumn__row {
-    flex-direction: column;
-  }
-}
-.headerMenu .multicolumn__col {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-@media (min-width: 992px) {
-  .headerMenu .multicolumn__col {
-    min-width: 200px;
-    border-right: 1px solid #777777;
-  }
-}
-.headerMenu .multicolumn__col:last-child {
-  border-right: none;
-  min-width: 199px;
-}
-
-.headerSubMenu__link {
-  color: #333333;
-  display: block;
-  font-size: 0.8125rem;
-  line-height: 0.8125rem;
-  padding: 5px 20px;
-  text-decoration: none;
-}
-.headerSubMenu__item.active .headerSubMenu__link, .headerSubMenu__link.active, .headerSubMenu__link:hover, .headerSubMenu__link:focus {
-  background-color: #1E6393;
-  color: #ffffff;
-  outline: none;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  text-decoration: none;
+.mobile-view .headerMenu .dropdown-submenu .dropdown-menu {
+  max-height: none;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE LAYOUT STYLES                                                      */
+/*                                                                            */
+/*                                                                            */
+/* ========================================================================== */
+/* ========================================================================== */
+/*                                                                            */
+/*                                                                            */
+/* START THE STATES STYLES                                                    */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* STATES                                                                     */
+/* path: states/_states.scss                                                  */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in, .fade.show {
+  opacity: 1;
+}
+
+.collapse {
+  display: none;
+}
+.collapse.in, .collapse.show {
+  display: block;
+}
+
+tr.collapse.show,
+tr.collapse.in {
+  display: table-row;
+}
+
+tbody.collapse.show,
+tbody.collapse.in {
+  display: table-row-group;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* END THE STATES STYLES                                                      */
 /*                                                                            */
 /*                                                                            */
 /* ========================================================================== */
@@ -4314,6 +4313,189 @@ pre {
   width: auto;
 }
 
+.svg-icon-viewbox24 {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+}
+.svg-icon-viewbox24 svg {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9 ;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.dropup,
+.dropdown,
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-toggle:focus {
+  outline: 0;
+}
+
+.dropdown-menu {
+  background-color: #ffffff;
+  background-clip: padding-box;
+  box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.35);
+  border: none;
+  border-radius: 0;
+  display: none;
+  font-size: 0.75rem;
+  position: absolute;
+  left: 0;
+  list-style: none;
+  margin: 0 0 0;
+  min-width: 160px;
+  padding: 10px;
+  text-align: left;
+  top: 100%;
+  z-index: 1003;
+}
+.dropdown-menu .svg-icon-viewbox24 {
+  height: 24px;
+  width: 24px;
+}
+.dropdown-menu .ownicons-chevron-right {
+  height: 20px;
+  width: 8px;
+}
+.dropdown-menu .divider {
+  background-color: #777777;
+  height: 1px;
+  margin: 6px 0;
+  overflow: hidden;
+}
+.dropdown-menu .dropdown__link,
+.dropdown-menu > li > a,
+.dropdown-menu > li > span {
+  align-items: center;
+  color: #333333;
+  clear: both;
+  display: inline-flex;
+  font-weight: 400;
+  padding: 0px 9px;
+  line-height: 1.5rem;
+  min-height: 2.25rem;
+  text-decoration: none;
+  width: 100%;
+  white-space: nowrap;
+}
+.dropdown-menu .dropdown__link:hover, .dropdown-menu .dropdown__link:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > span:hover,
+.dropdown-menu > li > span:focus {
+  background-color: #E4EEF7;
+  color: #333333;
+  text-decoration: none;
+}
+.dropdown-menu .active > .dropdown__link, .dropdown-menu .active > .dropdown__link:hover, .dropdown-menu .active > .dropdown__link:focus, .dropdown-menu > li > a.active, .dropdown-menu > li > a.active:hover, .dropdown-menu > li > a.active:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: #E4EEF7;
+  color: #333333;
+  text-decoration: none;
+  outline: 0;
+}
+.dropdown-menu .disabled > .dropdown__link, .dropdown-menu .disabled > .dropdown__link:hover, .dropdown-menu .disabled > .dropdown__link:focus, .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+  color: #777777;
+}
+.dropdown-menu .disabled > .dropdown__link:hover, .dropdown-menu .disabled > .dropdown__link:focus, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.open > .dropdown-menu {
+  display: block;
+}
+.open > a {
+  outline: 0;
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+.dropdown-menu-left {
+  right: auto;
+  left: 0;
+}
+
+.dropdown-header {
+  display: block;
+  font-size: 0.6875rem;
+  line-height: 0.6875rem;
+  padding: 6px 9px;
+  white-space: nowrap;
+}
+
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 990;
+}
+
+.dropup .caret {
+  content: "";
+  border-top: 0;
+  border-bottom: 4px dashed;
+  border-bottom: 4px solid \9 ;
+}
+.dropup .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu, .dropdown-submenu:focus > .dropdown-menu {
+  display: block;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  right: auto;
+  left: 100%;
+}
+.dropdown-menu-right .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  left: auto;
+}
+.dropdown-submenu-left > .dropdown-menu {
+  left: auto;
+  top: 0;
+  right: 100%;
+}
+.dropdown-submenu > .dropdown__link {
+  justify-content: space-between;
+}
+.dropdown-submenu > .dropdown__link:after {
+  background-repeat: no-repeat;
+  background-size: 8px 16px;
+  background-position: right center;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 17'%3E%3Cpath d='M.5,16.5l8-8' fill='none' stroke='var(--svg-icon-stroke, %23000)' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M.5.5l8,8' fill='none' stroke='var(--svg-icon-stroke, %23000)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  content: "";
+  height: 24px;
+  width: 24px;
+}
+
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* BUTTONS                                                                    */
@@ -4826,7 +5008,7 @@ output {
   height: 1.75rem;
   font-size: 0.75rem;
   line-height: 1.625rem;
-  padding: 6px 12px;
+  padding: 0 10px;
   width: 100%;
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -4871,6 +5053,9 @@ output {
   border-color: inherit;
   box-shadow: none;
   outline: none;
+}
+.form-control[type=file] {
+  border: none;
 }
 
 textarea.form-control {
@@ -5479,7 +5664,7 @@ fieldset[disabled] .checkbox-inline {
   word-wrap: break-word;
   white-space: normal;
   z-index: 2000;
-  max-width: 276;
+  max-width: 17.25rem;
   border: 1px solid #ffffff;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
 }
@@ -5994,34 +6179,21 @@ fieldset[disabled] .checkbox-inline {
   transform: rotate(270deg);
 }
 
-/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-/* END THE CONTENT STYLES                                                     */
-/*                                                                            */
-/*                                                                            */
-/* ========================================================================== */
-/* ========================================================================== */
-/*                                                                            */
-/*                                                                            */
-/* START THE STATES STYLES                                                    */
-/*                                                                            */
-/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-/*                                                                            */
-/* STATES                                                                     */
-/* path: states/_states.scss                                                  */
-/*                                                                            */
-/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.multicolumn__container_dropdown {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
+.border-top {
+  border-top: 1px solid #333333;
 }
-.open .multicolumn__container_dropdown {
-  display: block;
+.border-right {
+  border-right: 1px solid #333333;
+}
+.border-bottom {
+  border-bottom: 1px solid #333333;
+}
+.border-left {
+  border-left: 1px solid #333333;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-/* END THE STATES STYLES                                                      */
+/* END THE CONTENT STYLES                                                     */
 /*                                                                            */
 /*                                                                            */
 /* ========================================================================== */

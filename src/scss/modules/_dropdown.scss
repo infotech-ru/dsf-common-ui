@@ -56,7 +56,14 @@
   //   right: 0;
   //   left: auto;
   // }
-
+  .svg-icon-viewbox24{
+    height: 24px;
+    width: 24px;
+  }
+  .ownicons-chevron-right{
+    height: 20px;
+    width: 8px;
+  }
   // Dividers (basically an hr) within the dropdown
   .divider {
     background-color: _brand-palette(menuDropdown_borderColor);
@@ -66,16 +73,21 @@
   }
 
   // Links within the dropdown menu
-  > li > a {
+  .dropdown__link,
+  > li > a,
+  > li > span {
+    align-items: center;
     color: _brand-palette(dropdown_color);
     clear: both;
-    display: block;
+    // display: block;
+    display: inline-flex;
     font-weight: 400;
-    padding: 6px 9px;
-    line-height: $line-height-base;
+    padding: 0px 9px;
+    line-height: rem(_lineHeight(dropdownLink));
+    min-height: rem(_brand-sizes(dropdownLink_minH));
     text-decoration: none;
+    width: 100%;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
-
     &:hover,
     &:focus {
       background-color: _brand-palette(dropdownActive_bgc);
@@ -83,40 +95,35 @@
       text-decoration: none;
     }
   }
-}
-
-// Active state
-.dropdown-menu > li > a.active,
-.dropdown-menu > .active > a {
-  &,
-  &:hover,
-  &:focus {
-    background-color: _brand-palette(dropdownActive_bgc);
-    color: _brand-palette(dropdownActive_color);
-    text-decoration: none;
-    outline: 0;
+  .active > .dropdown__link,
+  & > li > a.active,
+  & > .active > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: _brand-palette(dropdownActive_bgc);
+      color: _brand-palette(dropdownActive_color);
+      text-decoration: none;
+      outline: 0;
+    }
   }
-}
+  .disabled > .dropdown__link,
+  & > .disabled > a {
+    &,
+    &:hover,
+    &:focus {
+      color: $dropdown-link-disabled-color;
+    }
 
-// Disabled state
-//
-// Gray out text and ensure the hover/focus state remains gray
-
-.dropdown-menu > .disabled > a {
-  &,
-  &:hover,
-  &:focus {
-    color: $dropdown-link-disabled-color;
-  }
-
-  // Nuke hover/focus effects
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    cursor: $cursor-disabled;
-    background-color: transparent;
-    background-image: none; // Remove CSS gradient
-    @include reset-filter;
+    // Nuke hover/focus effects
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      cursor: $cursor-disabled;
+      background-color: transparent;
+      background-image: none; // Remove CSS gradient
+      @include reset-filter;
+    }
   }
 }
 
@@ -133,25 +140,17 @@
   }
 }
 
+
 // Menu positioning
-//
-// Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
-// menu with the parent.
+
 .dropdown-menu-right {
   right: 0;
   left: auto; // Reset the default from `.dropdown-menu`
 }
-// With v3, we enabled auto-flipping if you have a dropdown within a right
-// aligned nav component. To enable the undoing of that, we provide an override
-// to restore the default dropdown menu alignment.
-//
-// This is only for left-aligning a dropdown menu within a `.navbar-right` or
-// `.pull-right` nav component.
 .dropdown-menu-left {
   right: auto;
   left: 0;
 }
-
 // Dropdown section headers
 .dropdown-header {
   display: block;
@@ -162,6 +161,7 @@
   padding: 6px 9px;
   white-space: nowrap; // as with > li > a
 }
+
 
 // Backdrop to catch body clicks on mobile, etc.
 .dropdown-backdrop {
@@ -177,15 +177,7 @@
 // .pull-right > .dropdown-menu {
 //   right: 0;
 //   left: auto;
-// }
 
-// Allow for dropdowns to go bottom up (aka, dropup-menu)
-//
-// Just add .dropup after the standard .dropdown class and you're set, bro.
-// TODO: abstract this so that the navbar fixed styles are not placed here?
-
-// .dropup,
-// .navbar-fixed-bottom .dropdown {
 .dropup{
   // Reverse the caret
   .caret {
@@ -201,25 +193,6 @@
     margin-bottom: 2px;
   }
 }
-
-
-// Component alignment
-//
-// Reiterate per navbar.less and the modified component alignment there.
-//
-// @media (min-width: $grid-float-breakpoint) {
-//   .navbar-right {
-//     .dropdown-menu {
-//       right: 0; left: auto;
-//     }
-//     // Necessary for overrides of the default right aligned menu.
-//     // Will remove come v4 in all likelihood.
-//     .dropdown-menu-left {
-//       left: 0; right: auto;
-//     }
-//   }
-// }
-
 
 .dropdown-submenu {
   &:hover, &:focus{
@@ -243,6 +216,20 @@
       left: auto;
       top: 0;
       right: 100%;
+    }
+  }
+  > .dropdown__link{
+    // align-content: center;
+    // display: inline-flex;
+    justify-content: space-between;
+    &:after{
+      background-repeat: no-repeat;
+      background-size: 8px 16px;
+      background-position: right center;
+      background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17"><path d="M.5,16.5l8-8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/><path d="M.5.5l8,8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      content: '';
+      height: 24px;
+      width: 24px;
     }
   }
 }

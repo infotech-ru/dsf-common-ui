@@ -26,7 +26,7 @@
   white-space: normal;
   z-index: _zindex(popover);
 
-  max-width: _brand-sizes(popover_maxWidth);
+  max-width: rem(_brand-sizes(popover_maxWidth));
   border: 1px solid _brand-palette(popover_borderColor);
   // box-shadow: 0 .25rem .5rem _brand-palette(popover_borderColor);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
