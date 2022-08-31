@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.63 20.51">
+<circle cx="10.76" cy="11.36" r="2.47" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M6.33,17.47a4.52,4.52,0,0,1,4.43-3.64h0a4.53,4.53,0,0,1,4.44,3.64L15.71,20H5.82Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M3.82,3,4.77,4.7l1.9.39L5.36,6.52l.22,1.92-1.76-.8-1.77.8.22-1.92L1,5.09l1.9-.39Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M17.82,3l.95,1.69,1.9.39L19.36,6.52l.22,1.92-1.76-.8-1.77.8.22-1.92L15,5.09l1.9-.39Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M10.82,1l.95,1.69,1.9.39L12.36,4.52l.22,1.92-1.76-.8-1.77.8.22-1.92L8,3.09l1.9-.39Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+</svg>

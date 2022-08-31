@@ -1,0 +1,5 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11.9444" cy="8.47222" r="2.47222" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M7.50885 14.5808C7.93172 12.4664 9.7882 10.9445 11.9444 10.9445V10.9445C14.1007 10.9445 15.9572 12.4664 16.38 14.5808L16.8889 17.125H7L7.50885 14.5808Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<rect x="4" y="3" width="16" height="18" rx="1" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+</svg>

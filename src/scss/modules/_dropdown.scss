@@ -126,7 +126,11 @@
     }
   }
 }
-
+.dropdown__linkIcon{
+  margin-right: 5px;
+  height: 24px;
+  width: 24px;
+}
 // Open state for the dropdown
 .open {
   // Show the menu
@@ -223,9 +227,6 @@
     }
   }
   > .dropdown__link{
-    // align-content: center;
-    // display: inline-flex;
-    justify-content: space-between;
     &:after{
       background-repeat: no-repeat;
       background-size: 8px 16px;
@@ -233,6 +234,7 @@
       background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17"><path d="M.5,16.5l8-8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/><path d="M.5.5l8,8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/></svg>');
       content: '';
       height: 24px;
+      margin-left: auto;
       width: 24px;
       .mobile-view &{
         background-position: center;

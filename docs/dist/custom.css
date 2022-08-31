@@ -277,6 +277,37 @@ pre{
 .set-ico-list-item .glyphicon {
   font-size: 24px;
 }
+.set-ico-list-item:hover svg{
+  outline: 1px solid rgb(255, 165, 0);
+}
+.set-ico-list-item:hover:after{
+  bottom: 2px;
+  content: 'Подсветка viewbox';
+  color: rgb(255, 165, 0);
+  display: block;
+  font-size: 10px;
+  left: 2px;
+  position: absolute;
+  top: auto;
+}
+[title*='2colors']:after{
+  content: 'NEW';
+  color: red;
+  display: block;
+  right: 2px;
+  font-size: 10px;;
+  position: absolute;
+  top: 2px;
+}
+[title*='24vb']:before{
+  content: 'viewbox: 24';
+  display: block;
+  left: 2px;
+  font-size: 10px;
+  color: #000;
+  position: absolute;
+  top: 2px;
+}
 .set-ico-modal{
   background-color: #fff;
   border: 1px solid #000;
