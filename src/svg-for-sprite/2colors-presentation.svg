@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20">
+<rect x="2" y="3" width="17" height="11" rx="0.5" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linejoin="round"/>
+<path d="M7.5,15.5h6" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linecap="round"/>
+<path d="M9.5,16.5l-3,3" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.5,16.5l3,3" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M.5,3h20" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linecap="round"/>
+<path d="M10.5,2.5V.5" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linecap="round"/>
+<path d="M7.5,9v2.65" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.88,7.27v4.42" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.27,5.5v6.19" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

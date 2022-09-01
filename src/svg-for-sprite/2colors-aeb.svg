@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.73 22.45">
+<path d="M5.87,3,6.5,4.14l1.27.26-.87.95L7,6.63,5.87,6.1l-1.18.53.14-1.28L4,4.4l1.27-.26Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M2.87,9l.63,1.13,1.27.26-.87.95L4,12.63,2.87,12.1l-1.18.53.14-1.28L1,10.4l1.27-.26Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M20.87,9l.63,1.13,1.27.26-.87.95L22,12.63l-1.17-.53-1.18.53.14-1.28L19,10.4l1.27-.26Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M5.87,15l.63,1.13,1.27.26-.87,1L7,18.63,5.87,18.1l-1.18.53.14-1.28L4,16.4l1.27-.26Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M17.87,3l.63,1.13,1.27.26-.87.95L19,6.63,17.87,6.1l-1.18.53.14-1.28L16,4.4l1.27-.26Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M17.87,15l.63,1.13,1.27.26-.87,1L19,18.63l-1.17-.53-1.18.53.14-1.28-.87-1,1.27-.26Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M11.87,1l.63,1.13,1.27.26-.87,1L13,4.63,11.87,4.1l-1.18.53.14-1.28L10,2.4l1.27-.26Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M11.87,18l.63,1.13,1.27.26-.87,1L13,21.63l-1.17-.53-1.18.53.14-1.28-.87-1,1.27-.26Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/></svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14">
+<path d="M9,11v3" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M9,0V8" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M15,7v7" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M15,0V4" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="12.5" y="4.5" width="5" height="2" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M3,3V14" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="0.5" y="0.5" width="5" height="2" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<rect x="6.5" y="8.5" width="5" height="2" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+</svg>

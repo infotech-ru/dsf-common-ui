@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.09 21">
+<rect x="15.95" y="1.41" width="3.64" height="3.64" rx="1" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M12.32,6.41V3.23H16" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="15.5" y="16.86" width="3.64" height="3.64" rx="1" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M14.14,13.23h3.18v3.63" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="0.5" y="15.73" width="3.64" height="3.64" rx="1" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M7.77,14.36v3.19H4.14" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="1.64" y="0.5" width="3.64" height="3.64" rx="1" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M6.64,7.77H3.45V4.14" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<circle cx="18.15" cy="9.06" r="0.91" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M14.14,9.14h2.72" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<circle cx="11.79" cy="18.15" r="0.91" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M11.71,14.14v2.72" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<circle cx="2.69" cy="11.79" r="0.91" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M6.71,11.71H4" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<circle cx="9.06" cy="2.69" r="0.91" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M9.14,6.71V4" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="6.86" y="6.86" width="7.27" height="7.27" rx="1" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/></svg>

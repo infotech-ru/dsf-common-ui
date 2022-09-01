@@ -1,0 +1,19 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<rect x="17.4546" y="2.9091" width="3.63636" height="3.63636" rx="1" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M13.8182 7.9091V4.72728H17.4546" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="20.6364" y="18.3636" width="3.63636" height="3.63636" rx="1" transform="rotate(90 20.6364 18.3636)" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M15.6364 14.7273L18.8182 14.7273L18.8182 18.3636" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="5.63635" y="20.8636" width="3.63636" height="3.63636" rx="1" transform="rotate(-180 5.63635 20.8636)" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M9.27271 15.8636L9.27271 19.0455L5.63634 19.0455" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="3.13635" y="5.63635" width="3.63636" height="3.63636" rx="1" transform="rotate(-90 3.13635 5.63635)" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M8.13635 9.27274L4.95453 9.27274L4.95453 5.63637" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<circle cx="19.6492" cy="10.5584" r="0.909091" transform="rotate(45 19.6492 10.5584)" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M15.6364 10.6364H18.3636" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<circle cx="13.2856" cy="19.6492" r="0.909091" transform="rotate(135 13.2856 19.6492)" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M13.2076 15.6364L13.2076 18.3636" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<circle cx="4.1947" cy="13.2856" r="0.909091" transform="rotate(-135 4.1947 13.2856)" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M8.20764 13.2077L5.48037 13.2077" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<circle cx="10.5584" cy="4.19475" r="0.909091" transform="rotate(-45 10.5584 4.19475)" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M10.6364 8.20763L10.6364 5.48035" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="8.36365" y="8.36363" width="7.27273" height="7.27273" rx="1" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+</svg>

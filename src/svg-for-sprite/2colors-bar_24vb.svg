@@ -1,0 +1,6 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 3L4 21" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="9" y="4" width="4" height="3" transform="rotate(90 9 4)" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<rect x="20" y="10" width="4" height="14" transform="rotate(90 20 10)" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<rect x="14" y="16" width="4" height="8" transform="rotate(90 14 16)" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+</svg>
