@@ -33,11 +33,6 @@
   &__bottom{
     background-color: _brand-palette(headerBottom_bgc);
     height: 34px;
-    // .mobile-view &{
-      // background-color: transparent;
-      // height: auto;
-      // display: none;
-    // }
     &.collapse {
       background-color: #ffffff;
       background-attachment: fixed;
