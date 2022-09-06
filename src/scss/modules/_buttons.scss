@@ -1,7 +1,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* BUTTONS                                                                    */
-/* path: modules/_buttons.scss                                                */
+/* path: dsf-common-ui/src/scss/modules/_buttons.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 %btn {
@@ -15,6 +15,7 @@
   font-size: rem(_fontSizes(btn));
   font-weight: _fontWeight(btn);
   line-height: rem(_lineHeight(btn));
+  height: min-content;
   margin-bottom: 0; // For input.btn
   padding: 0 #{_brand-sizes(btn_paddingX)}px;
   text-align: center;
@@ -72,17 +73,17 @@
     //   margin-right: 0px;
     // }
   }
-  .glyphicon,
-  .svg--icon{
-    + .btn-text{
-      margin-left: 10px;
-    }
+}
+.glyphicon,
+.svg--icon{
+  + .btn-text{
+    margin-left: 10px;
   }
-  .btn-text{
-    + .glyphicon,
-    + .svg--icon{
-      margin-left: 10px;
-    }
+}
+.btn-text{
+  + .glyphicon,
+  + .svg--icon{
+    margin-left: 10px;
   }
 }
 
@@ -199,6 +200,10 @@ a.btn {
   }
   .glyphicons-bin{
     #{--svg-icon-fill}: _brand-colors(_red);
+  }
+  .svg--icon {
+    #{--svg-icon-fill}: _brand-palette(btnIconSvg_color);
+    #{--svg-icon-stroke}: _brand-palette(btnIconSvg_color);
   }
 }
 

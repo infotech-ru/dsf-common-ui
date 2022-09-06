@@ -231,8 +231,9 @@ samp {
 /**
  * Add the correct font size in all browsers.
  */
+.small,
 small {
-  font-size: 80%;
+  font-size: 85%;
 }
 
 /**
@@ -628,6 +629,189 @@ pre {
   padding: 2px 4px;
   word-break: break-all;
   word-wrap: break-word;
+}
+
+p {
+  margin: 0 0 0.625rem;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+mark,
+.mark {
+  padding: 0.2em;
+  background-color: #FFBD41;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+dt,
+dd {
+  line-height: 1.428571429;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eeeeee;
+}
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.428571429;
+  color: #777777;
+}
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: "— ";
+}
+
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* TYPOGRAPHY                                                                 */
+/* path: base/_typography.scss                                                */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #333333;
+}
+h1 small,
+h1 .small, h2 small,
+h2 .small, h3 small,
+h3 .small, h4 small,
+h4 .small, h5 small,
+h5 .small, h6 small,
+h6 .small,
+.h1 small,
+.h1 .small, .h2 small,
+.h2 .small, .h3 small,
+.h3 .small, .h4 small,
+.h4 .small, .h5 small,
+.h5 .small, .h6 small,
+.h6 .small {
+  font-weight: 400;
+  line-height: 1;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-bottom: 10px;
+}
+h1 small,
+h1 .small, .h1 small,
+.h1 .small,
+h2 small,
+h2 .small, .h2 small,
+.h2 .small,
+h3 small,
+h3 .small, .h3 small,
+.h3 .small {
+  font-size: 65%;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-bottom: 0;
+}
+h4 small,
+h4 .small, .h4 small,
+.h4 .small,
+h5 small,
+h5 .small, .h5 small,
+.h5 .small,
+h6 small,
+h6 .small, .h6 small,
+.h6 .small {
+  font-size: 75%;
+}
+
+h1, .h1 {
+  font-size: 36px;
+}
+
+h2, .h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.3125rem;
+}
+
+h3, .h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.125rem;
+}
+
+h4, .h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 0.875rem;
+  text-transform: uppercase;
+}
+
+h5, .h5 {
+  font-size: 14px;
+}
+
+h6, .h6 {
+  font-size: 12px;
+}
+
+.dl-horizontal dd:before, .dl-horizontal dd:after {
+  display: table;
+  content: " ";
+}
+.dl-horizontal dd:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .dl-horizontal dt {
+    float: left;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .dl-horizontal dd {
+    margin-left: 180px;
+  }
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -1061,6 +1245,42 @@ pre {
 .mobile-view .headerMenu .dropdown-submenu .dropdown-menu {
   max-height: none;
   padding-left: 10px;
+}
+
+.pageHeader {
+  align-items: center;
+  display: flex;
+  margin-bottom: 10px;
+}
+.pageHeader .page-title {
+  margin-bottom: 0;
+}
+.pageHeader__title {
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.3125rem;
+  margin: 0;
+}
+.mobile-view .pageHeader__title {
+  font-size: 0.875rem;
+  line-height: 1rem;
+}
+.pageHeader__left {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+.pageHeader__right {
+  margin-left: auto;
+}
+.pageHeader_sticky {
+  background-color: #EEEEEE;
+  position: sticky;
+  top: 0;
+  z-index: 1003;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -4577,6 +4797,7 @@ tbody.collapse.in {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.625rem;
+  height: min-content;
   margin-bottom: 0;
   padding: 0 10px;
   text-align: center;
@@ -4825,6 +5046,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 .btn-link .glyphicons-bin {
   --svg-icon-fill: #D9534F;
+}
+.btn-link .svg--icon {
+  --svg-icon-fill: #1E6393;
+  --svg-icon-stroke: #1E6393;
 }
 
 .btn-icon {
@@ -5951,6 +6176,16 @@ fieldset[disabled] .checkbox-inline {
   padding: 0.5rem;
 }
 
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* TABLES                                                                     */
+/* path: modules/_tables.scss                                                 */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.summary:empty {
+  display: none;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE MODULES STYLES                                                     */
 /*                                                                            */
@@ -6111,6 +6346,10 @@ fieldset[disabled] .checkbox-inline {
   margin-bottom: 0rem;
 }
 
+.mb-5 {
+  margin-bottom: 0.3125rem;
+}
+
 .mb-10 {
   margin-bottom: 0.625rem;
 }
@@ -6200,8 +6439,48 @@ fieldset[disabled] .checkbox-inline {
   text-overflow: ellipsis;
 }
 
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 .d-flex {
@@ -6246,14 +6525,26 @@ fieldset[disabled] .checkbox-inline {
 .border-top {
   border-top: 1px solid #333333;
 }
+.border-top_grey {
+  border-top: 1px solid #cccccc;
+}
 .border-right {
   border-right: 1px solid #333333;
+}
+.border-right_grey {
+  border-right: 1px solid #cccccc;
 }
 .border-bottom {
   border-bottom: 1px solid #333333;
 }
+.border-bottom_grey {
+  border-bottom: 1px solid #cccccc;
+}
 .border-left {
   border-left: 1px solid #333333;
+}
+.border-left_grey {
+  border-left: 1px solid #cccccc;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

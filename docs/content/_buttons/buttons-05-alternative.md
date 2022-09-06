@@ -57,17 +57,17 @@ _Использование:_ `btn-link`
 {% highlight html %}
   <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-triangle-alert"></use></svg></span></button>
 
-  <button class="btn-link btn-default"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-filter"></use></svg></span> Фильтр</button>
+  <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-filter"></use></svg></span> Фильтр</button>
 
-  <button class="btn-link btn-primary"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span><span class="btn-text">Скачать</span></button>
+  <button class="btn-success"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span><span class="btn-text">Скачать</span></button>
 
-  <button class="btn-link btn-primary"><span class="btn-text">Скачать</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  <button class="btn-primary"><span class="btn-text">Скачать</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
 
 {% endhighlight %}
 
 <div class="bs-docs-example">
   <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-triangle-alert"></use></svg></span></button>
-  <button class="btn-link btn-default ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-filter"></use></svg></span><span class="btn-text">Фильтр</span></button>
+  <button class="btn-link ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-filter"></use></svg></span><span class="btn-text">Фильтр</span></button>
   <button class="btn-success ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-filter"></use></svg></span></button>
   <button class="btn-primary ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span><span class="btn-text">Скачать</span></button>
   <button class="btn-primary ml-10"><span class="btn-text">Скачать</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>

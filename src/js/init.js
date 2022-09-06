@@ -19,4 +19,7 @@ export function init(){
     });
     return;
   });
+  $('.js-toast-btn').click(function (e) {
+    $('#js-toast').toast('show');
+  })
 }

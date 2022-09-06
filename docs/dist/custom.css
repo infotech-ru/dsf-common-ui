@@ -299,8 +299,35 @@ pre{
   position: absolute;
   top: 2px;
 }
+[title*='ownicons']:after{
+  content: 'USE';
+  color: red;
+  display: block;
+  right: 2px;
+  font-size: 10px;;
+  position: absolute;
+  top: 2px;
+}
 [title*='24vb']:before{
   content: 'viewbox: 24';
+  display: block;
+  left: 2px;
+  font-size: 10px;
+  color: #000;
+  position: absolute;
+  top: 2px;
+}
+[title*='16vb']:before{
+  content: 'viewbox: 16';
+  display: block;
+  left: 2px;
+  font-size: 10px;
+  color: #000;
+  position: absolute;
+  top: 2px;
+}
+[title*='14vb']:before{
+  content: 'viewbox: 14';
   display: block;
   left: 2px;
   font-size: 10px;

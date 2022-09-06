@@ -1,0 +1,41 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* PAGE HEADER                                                                */
+/* path: dsf-common-ui/src/scss/layout/_pageHeader.scss                       */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.pageHeader{
+  align-items: center;
+  display: flex;
+  margin-bottom: 10px;
+  .page-title{
+    margin-bottom: 0;
+  }
+  &__title{
+    color: _brand-palette(pageHeader_color);
+    display: flex;
+    justify-content: space-between;
+    font-size: rem(18);
+    font-weight: 500;
+    line-height: rem(21);
+    margin: 0;
+    .mobile-view &{
+      font-size: rem(14);
+      line-height: rem(16);
+    }
+  }
+  &__left{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__right{
+    margin-left: auto;
+  }
+  &_sticky{
+    background-color: _brand-palette(body_bgc);
+    position: sticky;
+    top: 0;
+    z-index: _zindex(pageHeader);
+  }
+}

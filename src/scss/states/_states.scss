@@ -1,18 +1,10 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* STATES                                                                     */
-/* path: states/_states.scss                                                  */
+/* path: dsf-common-ui/src/scss/states/_states.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-// .multicolumn__container_dropdown{
-//   display: none;
-//   position: absolute;
-//   left: 0;
-//   top: 100%;
-//   .open &{
-//     display: block;
-//   }
-// }
+
 .fade {
   opacity: 0;
   @include transition(opacity .15s linear);

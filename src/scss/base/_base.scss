@@ -1,7 +1,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* BASE                                                                       */
-/* path: base/_base.scss                                                      */
+/* path: dsf-common-ui/src/scss/base/_base.scss                               */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
@@ -93,4 +93,69 @@ pre {
   padding: 2px 4px;
   word-break: break-all;
   word-wrap: break-word;
+}
+
+p {
+  margin: 0 0 rem(10);
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+mark,
+.mark {
+  padding: .2em;
+  background-color: $state-warning-bg;
+}
+
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: $line-height-computed;
+}
+dt,
+dd {
+  line-height: $line-height-base;
+}
+dt {
+  font-weight: 700;
+}
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+blockquote {
+  padding: math.div($line-height-computed, 2) $line-height-computed;
+  margin: 0 0 $line-height-computed;
+  font-size: $blockquote-font-size;
+  border-left: 5px solid $blockquote-border-color;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small {
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: $line-height-base;
+    color: $blockquote-small-color;
+
+    &:before {
+      content: "\2014 \00A0"; // em dash, nbsp
+    }
+  }
 }

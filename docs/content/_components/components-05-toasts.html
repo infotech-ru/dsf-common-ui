@@ -1,0 +1,55 @@
+---
+Title: Push-уведомления
+menutitle: Push-уведомления (toast)
+category: components
+anchor: components-toasts
+order: 5
+---
+
+Для push-уведомлений используется toast:
+
+{% highlight html %}
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">>
+    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+      <span class="svg--icon" aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Уведомления скрываются автоматически
+  </div>
+</div>
+{% endhighlight %}
+
+Уведомления помещаются в контейнеры с позиционрованием:
+
+{% highlight html %}
+<div aria-live="polite" aria-atomic="true" style="position: fixed; bottom: 0; right:0; min-height: 200px;">
+  <div style="position: absolute; top: 0; right: 0;">
+  ...
+  </div>
+</div>
+{% endhighlight %}
+
+Инициализируются так:
+
+{% highlight html %}
+  $('.toast').toast('show');
+{% endhighlight %}
+
+<button class="btn-default js-toast-btn" type="button">Нажми на меня</button>
+
+<div aria-live="polite" aria-atomic="true" style="position: fixed; bottom: 0; right:0; min-height: 200px;">
+  <div style="position: absolute; top: 0; right: 0;">
+    <div id="js-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+          <span class="svg--icon" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+        Уведомления скрываются автоматически
+      </div>
+    </div>
+  </div>
+</div>

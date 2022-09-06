@@ -77,6 +77,9 @@ var DSFUI = (function (exports) {
       });
       return;
     });
+    $('.js-toast-btn').click(function (e) {
+      $('#js-toast').toast('show');
+    });
   }
 
   function OnLoad() {

@@ -248,6 +248,7 @@ $brand-palette: (
   body_color:                             map-get($brand-colors, _dark-grey),
 
   border:                                 map-get($brand-colors, _dark-grey),
+  borderGrey:                             map-get($brand-colors, _grey3),
 
   btnIconSvg_color:                       map-get($brand-colors, _blue),
 
@@ -258,6 +259,7 @@ $brand-palette: (
   headerTop_bgc:                          map-get($brand-colors, _white),
   headerLang_border:                      map-get($brand-colors, _grey2),
   headerBottom_bgc:                       map-get($brand-colors, _light-grey),
+  haeding_color:                          map-get($brand-colors, _dark-grey),
   footer_bgc:                             map-get($brand-colors, _white),
 
   dropdown_bgc:                           map-get($brand-colors, _white),

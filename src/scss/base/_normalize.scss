@@ -1,7 +1,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* RESET                                                                      */
-/* path: base/_reset.scss                                                     */
+/* path: dsf-common-ui/src/scss/base/_reset.scss                              */
 /* base: normalize.css v8 | github.com/necolas/normalize.css                  */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -172,9 +172,9 @@ samp {
 /**
  * Add the correct font size in all browsers.
  */
-
+.small,
 small {
-  font-size: 80%;
+  font-size: 85%;
 }
 
 /**

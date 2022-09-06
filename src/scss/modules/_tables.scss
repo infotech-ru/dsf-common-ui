@@ -1,8 +1,12 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* TABLES                                                                     */
-/* path: modules/_tables.scss                                                 */
+/* path: dsf-common-ui/src/scss/modules/_tables.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap/tables";
+.summary{
+  &:empty{
+    display: none;
+  }
+}
