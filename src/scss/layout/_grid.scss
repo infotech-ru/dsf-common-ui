@@ -4,3 +4,90 @@
 /* path: dsf-common-ui/src/scss/layout/_grid.scss                             */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
+.container{
+  @include makeContainer();
+
+  @include makeContainerGrid();
+  .mobile-view &{
+      max-width: none;
+  }
+}
+
+.container-fluid {
+  @include makeContainer();
+}
+
+.row {
+  @include makeRow;
+}
+
+.row-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+@include makeGridColumns;
+
+// @include make-grid(xs);
+//
+// @media (min-width: $screen-sm-min) {
+//   @include make-grid(sm);
+// }
+//
+// @media (min-width: $screen-md-min) {
+//   @include make-grid(md);
+// }
+//
+// @media (min-width: $screen-lg-min) {
+//   @include make-grid(lg);
+// }
+
+
+// ---------------------------- //
+// Other grid ----------------- //
+// ---------------------------- //
+
+
+.row-pad8{
+  margin-right: rem(-8);
+  margin-left: rem(-8);
+  @include clearfix;
+}
+.col-pad8{
+  padding-right: rem(8);
+  padding-left: rem(8);
+  @media (min-width: 768px){
+    float: left;
+  }
+}
+.col-md-auto{
+  position: relative;
+  min-height: 1px;
+  padding-right: floor(calc($grid-gutter-width / 2));
+  padding-left: ceil(calc($grid-gutter-width / 2));
+  width: 100%;
+  @media (min-width: 992px){
+    width: auto;
+  }
+}
+.row-pad10{
+  margin-right: rem(-10);
+  margin-left: rem(-10);
+  @include clearfix;
+}
+.col-pad10{
+  min-height: 1px;
+  padding-right: rem(10);
+  padding-left: rem(10);
+  position: relative;
+  @media (min-width: 768px){
+    float: left;
+  }
+}

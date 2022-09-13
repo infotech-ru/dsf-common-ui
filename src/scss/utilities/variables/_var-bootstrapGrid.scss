@@ -1,8 +1,16 @@
 //  ----------------------------------Bootstrap-4 overwrite //
-$grid-gutter-width-base:            10px !default;
-$grid-gutter-width-base-equal:      true !default; // убрать лишние вила при одинковом значении для всех media
-$grid-columns:                      12 !default;
-$grid-gutter-width:                 10px !default;
+$grid-gutter-width-base:            10px;
+$grid-gutter-width-base-equal:      true; // убрать лишние вила при одинковом значении для всех media
+$grid-columns:                      12;
+$gutter:                            10px;
+$grid-gutter-width:                 10px;
+
+$enable-grid-flex:                  true;
+$enable-col-offset-classes:         true;
+// $enable-grid-classes:               true;
+// $enable-col-offset:                 false !default;
+// $enable-col-auto:                   true;
+// $enable-col-order:                  false;
 
 $grid-gutter-widths: (
   xs: $grid-gutter-width-base,
@@ -14,20 +22,10 @@ $grid-gutter-widths: (
   xxxl: $grid-gutter-width-base
 ) !default;
 
-@mixin _assert-ascending($map, $map-name) {
-  $prev-key: null;
-  $prev-num: null;
-  @each $key, $num in $map {
-    @if $prev-num == null {
-      // Do nothing
-    } @else if not comparable($prev-num, $num) {
-      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    } @else if $prev-num >= $num {
-      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
-    }
-    $prev-key: $key;
-    $prev-num: $num;
-  }
+$gridGutterWidth: $grid-gutter-width;
+
+@if not $grid-gutter-width-base-equal {
+  $gridGutterWidth: $grid-gutter-widths;
 }
 
 $grid-breakpoints: (
@@ -39,6 +37,7 @@ $grid-breakpoints: (
   xxl: 1366px,
   xxxl: 1440px
 ) !default;
+
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
 $container-max-widths: (

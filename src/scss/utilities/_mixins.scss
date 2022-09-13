@@ -34,9 +34,12 @@
 @import "mixins_bootstrap-v3/center-block";
 @import "mixins_bootstrap-v3/nav-vertical-align";
 // // @import "mixins_bootstrap-v3/grid-framework";
+
 @import "mixins_bootstrap-v4/_breakpoints";
 @import "mixins_bootstrap-v3/grid";
 
+
+@import "mixins/_breakpoints";
 @import "mixins/grid";
 
 @import "mixins_bootstrap-v4/_box-shadow";
