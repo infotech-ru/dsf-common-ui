@@ -75,7 +75,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* RESET                                                                      */
-/* path: base/_reset.scss                                                     */
+/* path: dsf-common-ui/src/scss/base/_reset.scss                              */
 /* base: normalize.css v8 | github.com/necolas/normalize.css                  */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -512,7 +512,7 @@ table {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* BASE                                                                       */
-/* path: base/_base.scss                                                      */
+/* path: dsf-common-ui/src/scss/base/_base.scss                               */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 :root {
@@ -699,7 +699,7 @@ blockquote .small:before {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* TYPOGRAPHY                                                                 */
-/* path: base/_typography.scss                                                */
+/* path: dsf-common-ui/src/scss/base/_typography.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 h1, h2, h3, h4, h5, h6,
@@ -826,8 +826,1386 @@ h6, .h6 {
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
+/* GRID                                                                       */
+/* path: dsf-common-ui/src/scss/layout/_grid.scss                             */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+@media (min-width: 480) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1068px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1134px;
+  }
+}
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1234px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1294px;
+  }
+}
+.mobile-view .container {
+  max-width: none;
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.row-no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row-no-gutters [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.col-xxxl-12, .col-xxxl-11,
+.col-xxxl-11-5, .col-xxxl-10,
+.col-xxxl-10-5, .col-xxxl-9,
+.col-xxxl-9-5, .col-xxxl-8,
+.col-xxxl-8-5, .col-xxxl-7,
+.col-xxxl-7-5, .col-xxxl-6,
+.col-xxxl-6-5, .col-xxxl-5,
+.col-xxxl-5-5, .col-xxxl-4,
+.col-xxxl-4-5, .col-xxxl-3,
+.col-xxxl-3-5, .col-xxxl-2,
+.col-xxxl-2-5, .col-xxxl-1,
+.col-xxxl-1-5, .col-xxxl-0-5, .col-xxxl, .col-xxl-12, .col-xxl-11,
+.col-xxl-11-5, .col-xxl-10,
+.col-xxl-10-5, .col-xxl-9,
+.col-xxl-9-5, .col-xxl-8,
+.col-xxl-8-5, .col-xxl-7,
+.col-xxl-7-5, .col-xxl-6,
+.col-xxl-6-5, .col-xxl-5,
+.col-xxl-5-5, .col-xxl-4,
+.col-xxl-4-5, .col-xxl-3,
+.col-xxl-3-5, .col-xxl-2,
+.col-xxl-2-5, .col-xxl-1,
+.col-xxl-1-5, .col-xxl-0-5, .col-xxl, .col-xl-12, .col-xl-11,
+.col-xl-11-5, .col-xl-10,
+.col-xl-10-5, .col-xl-9,
+.col-xl-9-5, .col-xl-8,
+.col-xl-8-5, .col-xl-7,
+.col-xl-7-5, .col-xl-6,
+.col-xl-6-5, .col-xl-5,
+.col-xl-5-5, .col-xl-4,
+.col-xl-4-5, .col-xl-3,
+.col-xl-3-5, .col-xl-2,
+.col-xl-2-5, .col-xl-1,
+.col-xl-1-5, .col-xl-0-5, .col-xl, .col-lg-12, .col-lg-11,
+.col-lg-11-5, .col-lg-10,
+.col-lg-10-5, .col-lg-9,
+.col-lg-9-5, .col-lg-8,
+.col-lg-8-5, .col-lg-7,
+.col-lg-7-5, .col-lg-6,
+.col-lg-6-5, .col-lg-5,
+.col-lg-5-5, .col-lg-4,
+.col-lg-4-5, .col-lg-3,
+.col-lg-3-5, .col-lg-2,
+.col-lg-2-5, .col-lg-1,
+.col-lg-1-5, .col-lg-0-5, .col-lg, .col-md-12, .col-md-11,
+.col-md-11-5, .col-md-10,
+.col-md-10-5, .col-md-9,
+.col-md-9-5, .col-md-8,
+.col-md-8-5, .col-md-7,
+.col-md-7-5, .col-md-6,
+.col-md-6-5, .col-md-5,
+.col-md-5-5, .col-md-4,
+.col-md-4-5, .col-md-3,
+.col-md-3-5, .col-md-2,
+.col-md-2-5, .col-md-1,
+.col-md-1-5, .col-md-0-5, .col-md, .col-sm-12, .col-sm-11,
+.col-sm-11-5, .col-sm-10,
+.col-sm-10-5, .col-sm-9,
+.col-sm-9-5, .col-sm-8,
+.col-sm-8-5, .col-sm-7,
+.col-sm-7-5, .col-sm-6,
+.col-sm-6-5, .col-sm-5,
+.col-sm-5-5, .col-sm-4,
+.col-sm-4-5, .col-sm-3,
+.col-sm-3-5, .col-sm-2,
+.col-sm-2-5, .col-sm-1,
+.col-sm-1-5, .col-sm-0-5, .col-sm, .col-xs-12, .col-xs-11,
+.col-xs-11-5, .col-xs-10,
+.col-xs-10-5, .col-xs-9,
+.col-xs-9-5, .col-xs-8,
+.col-xs-8-5, .col-xs-7,
+.col-xs-7-5, .col-xs-6,
+.col-xs-6-5, .col-xs-5,
+.col-xs-5-5, .col-xs-4,
+.col-xs-4-5, .col-xs-3,
+.col-xs-3-5, .col-xs-2,
+.col-xs-2-5, .col-xs-1,
+.col-xs-1-5, .col-xs-0-5, .col-xs {
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+@media (min-width: 480) {
+  .col-xs {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-xs-0-5 {
+    flex: 0 0 4.1666666667%;
+    max-width: 4.1666666667%;
+  }
+  .col-xs-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .col-xs-1-5 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  .col-xs-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .col-xs-2-5 {
+    flex: 0 0 20.8333333333%;
+    max-width: 20.8333333333%;
+  }
+  .col-xs-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-xs-3-5 {
+    flex: 0 0 29.1666666667%;
+    max-width: 29.1666666667%;
+  }
+  .col-xs-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .col-xs-4-5 {
+    flex: 0 0 37.5%;
+    max-width: 37.5%;
+  }
+  .col-xs-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .col-xs-5-5 {
+    flex: 0 0 45.8333333333%;
+    max-width: 45.8333333333%;
+  }
+  .col-xs-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-xs-6-5 {
+    flex: 0 0 54.1666666667%;
+    max-width: 54.1666666667%;
+  }
+  .col-xs-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .col-xs-7-5 {
+    flex: 0 0 62.5%;
+    max-width: 62.5%;
+  }
+  .col-xs-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .col-xs-8-5 {
+    flex: 0 0 70.8333333333%;
+    max-width: 70.8333333333%;
+  }
+  .col-xs-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-xs-9-5 {
+    flex: 0 0 79.1666666667%;
+    max-width: 79.1666666667%;
+  }
+  .col-xs-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .col-xs-10-5 {
+    flex: 0 0 87.5%;
+    max-width: 87.5%;
+  }
+  .col-xs-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .col-xs-11-5 {
+    flex: 0 0 95.8333333333%;
+    max-width: 95.8333333333%;
+  }
+  .col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .offset-xs-1 {
+    margin-left: 8.3333333333%;
+  }
+  .offset-xs-1-5 {
+    margin-left: 12.5%;
+  }
+  .offset-xs-2 {
+    margin-left: 16.6666666667%;
+  }
+  .offset-xs-2-5 {
+    margin-left: 20.8333333333%;
+  }
+  .offset-xs-3 {
+    margin-left: 25%;
+  }
+  .offset-xs-3-5 {
+    margin-left: 29.1666666667%;
+  }
+  .offset-xs-4 {
+    margin-left: 33.3333333333%;
+  }
+  .offset-xs-4-5 {
+    margin-left: 37.5%;
+  }
+  .offset-xs-5 {
+    margin-left: 41.6666666667%;
+  }
+  .offset-xs-5-5 {
+    margin-left: 45.8333333333%;
+  }
+  .offset-xs-6 {
+    margin-left: 50%;
+  }
+  .offset-xs-6-5 {
+    margin-left: 54.1666666667%;
+  }
+  .offset-xs-7 {
+    margin-left: 58.3333333333%;
+  }
+  .offset-xs-7-5 {
+    margin-left: 62.5%;
+  }
+  .offset-xs-8 {
+    margin-left: 66.6666666667%;
+  }
+  .offset-xs-8-5 {
+    margin-left: 70.8333333333%;
+  }
+  .offset-xs-9 {
+    margin-left: 75%;
+  }
+  .offset-xs-9-5 {
+    margin-left: 79.1666666667%;
+  }
+  .offset-xs-10 {
+    margin-left: 83.3333333333%;
+  }
+  .offset-xs-10-5 {
+    margin-left: 87.5%;
+  }
+  .offset-xs-11 {
+    margin-left: 91.6666666667%;
+  }
+  .offset-xs-11-5 {
+    margin-left: 95.8333333333%;
+  }
+}
+@media (min-width: 768px) {
+  .col-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-sm-0-5 {
+    flex: 0 0 4.1666666667%;
+    max-width: 4.1666666667%;
+  }
+  .col-sm-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .col-sm-1-5 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  .col-sm-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .col-sm-2-5 {
+    flex: 0 0 20.8333333333%;
+    max-width: 20.8333333333%;
+  }
+  .col-sm-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-sm-3-5 {
+    flex: 0 0 29.1666666667%;
+    max-width: 29.1666666667%;
+  }
+  .col-sm-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .col-sm-4-5 {
+    flex: 0 0 37.5%;
+    max-width: 37.5%;
+  }
+  .col-sm-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .col-sm-5-5 {
+    flex: 0 0 45.8333333333%;
+    max-width: 45.8333333333%;
+  }
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-sm-6-5 {
+    flex: 0 0 54.1666666667%;
+    max-width: 54.1666666667%;
+  }
+  .col-sm-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .col-sm-7-5 {
+    flex: 0 0 62.5%;
+    max-width: 62.5%;
+  }
+  .col-sm-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .col-sm-8-5 {
+    flex: 0 0 70.8333333333%;
+    max-width: 70.8333333333%;
+  }
+  .col-sm-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-sm-9-5 {
+    flex: 0 0 79.1666666667%;
+    max-width: 79.1666666667%;
+  }
+  .col-sm-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .col-sm-10-5 {
+    flex: 0 0 87.5%;
+    max-width: 87.5%;
+  }
+  .col-sm-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .col-sm-11-5 {
+    flex: 0 0 95.8333333333%;
+    max-width: 95.8333333333%;
+  }
+  .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .offset-sm-0 {
+    margin-left: 0%;
+  }
+  .offset-sm-0-5 {
+    margin-left: 4.1666666667%;
+  }
+  .offset-sm-1 {
+    margin-left: 8.3333333333%;
+  }
+  .offset-sm-1-5 {
+    margin-left: 12.5%;
+  }
+  .offset-sm-2 {
+    margin-left: 16.6666666667%;
+  }
+  .offset-sm-2-5 {
+    margin-left: 20.8333333333%;
+  }
+  .offset-sm-3 {
+    margin-left: 25%;
+  }
+  .offset-sm-3-5 {
+    margin-left: 29.1666666667%;
+  }
+  .offset-sm-4 {
+    margin-left: 33.3333333333%;
+  }
+  .offset-sm-4-5 {
+    margin-left: 37.5%;
+  }
+  .offset-sm-5 {
+    margin-left: 41.6666666667%;
+  }
+  .offset-sm-5-5 {
+    margin-left: 45.8333333333%;
+  }
+  .offset-sm-6 {
+    margin-left: 50%;
+  }
+  .offset-sm-6-5 {
+    margin-left: 54.1666666667%;
+  }
+  .offset-sm-7 {
+    margin-left: 58.3333333333%;
+  }
+  .offset-sm-7-5 {
+    margin-left: 62.5%;
+  }
+  .offset-sm-8 {
+    margin-left: 66.6666666667%;
+  }
+  .offset-sm-8-5 {
+    margin-left: 70.8333333333%;
+  }
+  .offset-sm-9 {
+    margin-left: 75%;
+  }
+  .offset-sm-9-5 {
+    margin-left: 79.1666666667%;
+  }
+  .offset-sm-10 {
+    margin-left: 83.3333333333%;
+  }
+  .offset-sm-10-5 {
+    margin-left: 87.5%;
+  }
+  .offset-sm-11 {
+    margin-left: 91.6666666667%;
+  }
+  .offset-sm-11-5 {
+    margin-left: 95.8333333333%;
+  }
+}
+@media (min-width: 992px) {
+  .col-md {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-md-0-5 {
+    flex: 0 0 4.1666666667%;
+    max-width: 4.1666666667%;
+  }
+  .col-md-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .col-md-1-5 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  .col-md-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .col-md-2-5 {
+    flex: 0 0 20.8333333333%;
+    max-width: 20.8333333333%;
+  }
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-md-3-5 {
+    flex: 0 0 29.1666666667%;
+    max-width: 29.1666666667%;
+  }
+  .col-md-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .col-md-4-5 {
+    flex: 0 0 37.5%;
+    max-width: 37.5%;
+  }
+  .col-md-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .col-md-5-5 {
+    flex: 0 0 45.8333333333%;
+    max-width: 45.8333333333%;
+  }
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-md-6-5 {
+    flex: 0 0 54.1666666667%;
+    max-width: 54.1666666667%;
+  }
+  .col-md-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .col-md-7-5 {
+    flex: 0 0 62.5%;
+    max-width: 62.5%;
+  }
+  .col-md-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .col-md-8-5 {
+    flex: 0 0 70.8333333333%;
+    max-width: 70.8333333333%;
+  }
+  .col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-md-9-5 {
+    flex: 0 0 79.1666666667%;
+    max-width: 79.1666666667%;
+  }
+  .col-md-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .col-md-10-5 {
+    flex: 0 0 87.5%;
+    max-width: 87.5%;
+  }
+  .col-md-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .col-md-11-5 {
+    flex: 0 0 95.8333333333%;
+    max-width: 95.8333333333%;
+  }
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .offset-md-0 {
+    margin-left: 0%;
+  }
+  .offset-md-0-5 {
+    margin-left: 4.1666666667%;
+  }
+  .offset-md-1 {
+    margin-left: 8.3333333333%;
+  }
+  .offset-md-1-5 {
+    margin-left: 12.5%;
+  }
+  .offset-md-2 {
+    margin-left: 16.6666666667%;
+  }
+  .offset-md-2-5 {
+    margin-left: 20.8333333333%;
+  }
+  .offset-md-3 {
+    margin-left: 25%;
+  }
+  .offset-md-3-5 {
+    margin-left: 29.1666666667%;
+  }
+  .offset-md-4 {
+    margin-left: 33.3333333333%;
+  }
+  .offset-md-4-5 {
+    margin-left: 37.5%;
+  }
+  .offset-md-5 {
+    margin-left: 41.6666666667%;
+  }
+  .offset-md-5-5 {
+    margin-left: 45.8333333333%;
+  }
+  .offset-md-6 {
+    margin-left: 50%;
+  }
+  .offset-md-6-5 {
+    margin-left: 54.1666666667%;
+  }
+  .offset-md-7 {
+    margin-left: 58.3333333333%;
+  }
+  .offset-md-7-5 {
+    margin-left: 62.5%;
+  }
+  .offset-md-8 {
+    margin-left: 66.6666666667%;
+  }
+  .offset-md-8-5 {
+    margin-left: 70.8333333333%;
+  }
+  .offset-md-9 {
+    margin-left: 75%;
+  }
+  .offset-md-9-5 {
+    margin-left: 79.1666666667%;
+  }
+  .offset-md-10 {
+    margin-left: 83.3333333333%;
+  }
+  .offset-md-10-5 {
+    margin-left: 87.5%;
+  }
+  .offset-md-11 {
+    margin-left: 91.6666666667%;
+  }
+  .offset-md-11-5 {
+    margin-left: 95.8333333333%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-lg-0-5 {
+    flex: 0 0 4.1666666667%;
+    max-width: 4.1666666667%;
+  }
+  .col-lg-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .col-lg-1-5 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  .col-lg-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .col-lg-2-5 {
+    flex: 0 0 20.8333333333%;
+    max-width: 20.8333333333%;
+  }
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-lg-3-5 {
+    flex: 0 0 29.1666666667%;
+    max-width: 29.1666666667%;
+  }
+  .col-lg-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .col-lg-4-5 {
+    flex: 0 0 37.5%;
+    max-width: 37.5%;
+  }
+  .col-lg-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .col-lg-5-5 {
+    flex: 0 0 45.8333333333%;
+    max-width: 45.8333333333%;
+  }
+  .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-lg-6-5 {
+    flex: 0 0 54.1666666667%;
+    max-width: 54.1666666667%;
+  }
+  .col-lg-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .col-lg-7-5 {
+    flex: 0 0 62.5%;
+    max-width: 62.5%;
+  }
+  .col-lg-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .col-lg-8-5 {
+    flex: 0 0 70.8333333333%;
+    max-width: 70.8333333333%;
+  }
+  .col-lg-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-lg-9-5 {
+    flex: 0 0 79.1666666667%;
+    max-width: 79.1666666667%;
+  }
+  .col-lg-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .col-lg-10-5 {
+    flex: 0 0 87.5%;
+    max-width: 87.5%;
+  }
+  .col-lg-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .col-lg-11-5 {
+    flex: 0 0 95.8333333333%;
+    max-width: 95.8333333333%;
+  }
+  .col-lg-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .offset-lg-0 {
+    margin-left: 0%;
+  }
+  .offset-lg-0-5 {
+    margin-left: 4.1666666667%;
+  }
+  .offset-lg-1 {
+    margin-left: 8.3333333333%;
+  }
+  .offset-lg-1-5 {
+    margin-left: 12.5%;
+  }
+  .offset-lg-2 {
+    margin-left: 16.6666666667%;
+  }
+  .offset-lg-2-5 {
+    margin-left: 20.8333333333%;
+  }
+  .offset-lg-3 {
+    margin-left: 25%;
+  }
+  .offset-lg-3-5 {
+    margin-left: 29.1666666667%;
+  }
+  .offset-lg-4 {
+    margin-left: 33.3333333333%;
+  }
+  .offset-lg-4-5 {
+    margin-left: 37.5%;
+  }
+  .offset-lg-5 {
+    margin-left: 41.6666666667%;
+  }
+  .offset-lg-5-5 {
+    margin-left: 45.8333333333%;
+  }
+  .offset-lg-6 {
+    margin-left: 50%;
+  }
+  .offset-lg-6-5 {
+    margin-left: 54.1666666667%;
+  }
+  .offset-lg-7 {
+    margin-left: 58.3333333333%;
+  }
+  .offset-lg-7-5 {
+    margin-left: 62.5%;
+  }
+  .offset-lg-8 {
+    margin-left: 66.6666666667%;
+  }
+  .offset-lg-8-5 {
+    margin-left: 70.8333333333%;
+  }
+  .offset-lg-9 {
+    margin-left: 75%;
+  }
+  .offset-lg-9-5 {
+    margin-left: 79.1666666667%;
+  }
+  .offset-lg-10 {
+    margin-left: 83.3333333333%;
+  }
+  .offset-lg-10-5 {
+    margin-left: 87.5%;
+  }
+  .offset-lg-11 {
+    margin-left: 91.6666666667%;
+  }
+  .offset-lg-11-5 {
+    margin-left: 95.8333333333%;
+  }
+}
+@media (min-width: 1280px) {
+  .col-xl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-xl-0-5 {
+    flex: 0 0 4.1666666667%;
+    max-width: 4.1666666667%;
+  }
+  .col-xl-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .col-xl-1-5 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  .col-xl-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .col-xl-2-5 {
+    flex: 0 0 20.8333333333%;
+    max-width: 20.8333333333%;
+  }
+  .col-xl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-xl-3-5 {
+    flex: 0 0 29.1666666667%;
+    max-width: 29.1666666667%;
+  }
+  .col-xl-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .col-xl-4-5 {
+    flex: 0 0 37.5%;
+    max-width: 37.5%;
+  }
+  .col-xl-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .col-xl-5-5 {
+    flex: 0 0 45.8333333333%;
+    max-width: 45.8333333333%;
+  }
+  .col-xl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-xl-6-5 {
+    flex: 0 0 54.1666666667%;
+    max-width: 54.1666666667%;
+  }
+  .col-xl-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .col-xl-7-5 {
+    flex: 0 0 62.5%;
+    max-width: 62.5%;
+  }
+  .col-xl-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .col-xl-8-5 {
+    flex: 0 0 70.8333333333%;
+    max-width: 70.8333333333%;
+  }
+  .col-xl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-xl-9-5 {
+    flex: 0 0 79.1666666667%;
+    max-width: 79.1666666667%;
+  }
+  .col-xl-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .col-xl-10-5 {
+    flex: 0 0 87.5%;
+    max-width: 87.5%;
+  }
+  .col-xl-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .col-xl-11-5 {
+    flex: 0 0 95.8333333333%;
+    max-width: 95.8333333333%;
+  }
+  .col-xl-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .offset-xl-0 {
+    margin-left: 0%;
+  }
+  .offset-xl-0-5 {
+    margin-left: 4.1666666667%;
+  }
+  .offset-xl-1 {
+    margin-left: 8.3333333333%;
+  }
+  .offset-xl-1-5 {
+    margin-left: 12.5%;
+  }
+  .offset-xl-2 {
+    margin-left: 16.6666666667%;
+  }
+  .offset-xl-2-5 {
+    margin-left: 20.8333333333%;
+  }
+  .offset-xl-3 {
+    margin-left: 25%;
+  }
+  .offset-xl-3-5 {
+    margin-left: 29.1666666667%;
+  }
+  .offset-xl-4 {
+    margin-left: 33.3333333333%;
+  }
+  .offset-xl-4-5 {
+    margin-left: 37.5%;
+  }
+  .offset-xl-5 {
+    margin-left: 41.6666666667%;
+  }
+  .offset-xl-5-5 {
+    margin-left: 45.8333333333%;
+  }
+  .offset-xl-6 {
+    margin-left: 50%;
+  }
+  .offset-xl-6-5 {
+    margin-left: 54.1666666667%;
+  }
+  .offset-xl-7 {
+    margin-left: 58.3333333333%;
+  }
+  .offset-xl-7-5 {
+    margin-left: 62.5%;
+  }
+  .offset-xl-8 {
+    margin-left: 66.6666666667%;
+  }
+  .offset-xl-8-5 {
+    margin-left: 70.8333333333%;
+  }
+  .offset-xl-9 {
+    margin-left: 75%;
+  }
+  .offset-xl-9-5 {
+    margin-left: 79.1666666667%;
+  }
+  .offset-xl-10 {
+    margin-left: 83.3333333333%;
+  }
+  .offset-xl-10-5 {
+    margin-left: 87.5%;
+  }
+  .offset-xl-11 {
+    margin-left: 91.6666666667%;
+  }
+  .offset-xl-11-5 {
+    margin-left: 95.8333333333%;
+  }
+}
+@media (min-width: 1366px) {
+  .col-xxl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-xxl-0-5 {
+    flex: 0 0 4.1666666667%;
+    max-width: 4.1666666667%;
+  }
+  .col-xxl-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .col-xxl-1-5 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  .col-xxl-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .col-xxl-2-5 {
+    flex: 0 0 20.8333333333%;
+    max-width: 20.8333333333%;
+  }
+  .col-xxl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-xxl-3-5 {
+    flex: 0 0 29.1666666667%;
+    max-width: 29.1666666667%;
+  }
+  .col-xxl-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .col-xxl-4-5 {
+    flex: 0 0 37.5%;
+    max-width: 37.5%;
+  }
+  .col-xxl-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .col-xxl-5-5 {
+    flex: 0 0 45.8333333333%;
+    max-width: 45.8333333333%;
+  }
+  .col-xxl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-xxl-6-5 {
+    flex: 0 0 54.1666666667%;
+    max-width: 54.1666666667%;
+  }
+  .col-xxl-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .col-xxl-7-5 {
+    flex: 0 0 62.5%;
+    max-width: 62.5%;
+  }
+  .col-xxl-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .col-xxl-8-5 {
+    flex: 0 0 70.8333333333%;
+    max-width: 70.8333333333%;
+  }
+  .col-xxl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-xxl-9-5 {
+    flex: 0 0 79.1666666667%;
+    max-width: 79.1666666667%;
+  }
+  .col-xxl-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .col-xxl-10-5 {
+    flex: 0 0 87.5%;
+    max-width: 87.5%;
+  }
+  .col-xxl-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .col-xxl-11-5 {
+    flex: 0 0 95.8333333333%;
+    max-width: 95.8333333333%;
+  }
+  .col-xxl-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .offset-xxl-0 {
+    margin-left: 0%;
+  }
+  .offset-xxl-0-5 {
+    margin-left: 4.1666666667%;
+  }
+  .offset-xxl-1 {
+    margin-left: 8.3333333333%;
+  }
+  .offset-xxl-1-5 {
+    margin-left: 12.5%;
+  }
+  .offset-xxl-2 {
+    margin-left: 16.6666666667%;
+  }
+  .offset-xxl-2-5 {
+    margin-left: 20.8333333333%;
+  }
+  .offset-xxl-3 {
+    margin-left: 25%;
+  }
+  .offset-xxl-3-5 {
+    margin-left: 29.1666666667%;
+  }
+  .offset-xxl-4 {
+    margin-left: 33.3333333333%;
+  }
+  .offset-xxl-4-5 {
+    margin-left: 37.5%;
+  }
+  .offset-xxl-5 {
+    margin-left: 41.6666666667%;
+  }
+  .offset-xxl-5-5 {
+    margin-left: 45.8333333333%;
+  }
+  .offset-xxl-6 {
+    margin-left: 50%;
+  }
+  .offset-xxl-6-5 {
+    margin-left: 54.1666666667%;
+  }
+  .offset-xxl-7 {
+    margin-left: 58.3333333333%;
+  }
+  .offset-xxl-7-5 {
+    margin-left: 62.5%;
+  }
+  .offset-xxl-8 {
+    margin-left: 66.6666666667%;
+  }
+  .offset-xxl-8-5 {
+    margin-left: 70.8333333333%;
+  }
+  .offset-xxl-9 {
+    margin-left: 75%;
+  }
+  .offset-xxl-9-5 {
+    margin-left: 79.1666666667%;
+  }
+  .offset-xxl-10 {
+    margin-left: 83.3333333333%;
+  }
+  .offset-xxl-10-5 {
+    margin-left: 87.5%;
+  }
+  .offset-xxl-11 {
+    margin-left: 91.6666666667%;
+  }
+  .offset-xxl-11-5 {
+    margin-left: 95.8333333333%;
+  }
+}
+@media (min-width: 1440px) {
+  .col-xxxl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-xxxl-0-5 {
+    flex: 0 0 4.1666666667%;
+    max-width: 4.1666666667%;
+  }
+  .col-xxxl-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .col-xxxl-1-5 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  .col-xxxl-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .col-xxxl-2-5 {
+    flex: 0 0 20.8333333333%;
+    max-width: 20.8333333333%;
+  }
+  .col-xxxl-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-xxxl-3-5 {
+    flex: 0 0 29.1666666667%;
+    max-width: 29.1666666667%;
+  }
+  .col-xxxl-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  .col-xxxl-4-5 {
+    flex: 0 0 37.5%;
+    max-width: 37.5%;
+  }
+  .col-xxxl-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+  .col-xxxl-5-5 {
+    flex: 0 0 45.8333333333%;
+    max-width: 45.8333333333%;
+  }
+  .col-xxxl-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-xxxl-6-5 {
+    flex: 0 0 54.1666666667%;
+    max-width: 54.1666666667%;
+  }
+  .col-xxxl-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+  .col-xxxl-7-5 {
+    flex: 0 0 62.5%;
+    max-width: 62.5%;
+  }
+  .col-xxxl-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+  .col-xxxl-8-5 {
+    flex: 0 0 70.8333333333%;
+    max-width: 70.8333333333%;
+  }
+  .col-xxxl-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-xxxl-9-5 {
+    flex: 0 0 79.1666666667%;
+    max-width: 79.1666666667%;
+  }
+  .col-xxxl-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+  .col-xxxl-10-5 {
+    flex: 0 0 87.5%;
+    max-width: 87.5%;
+  }
+  .col-xxxl-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+  .col-xxxl-11-5 {
+    flex: 0 0 95.8333333333%;
+    max-width: 95.8333333333%;
+  }
+  .col-xxxl-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .offset-xxxl-0 {
+    margin-left: 0%;
+  }
+  .offset-xxxl-0-5 {
+    margin-left: 4.1666666667%;
+  }
+  .offset-xxxl-1 {
+    margin-left: 8.3333333333%;
+  }
+  .offset-xxxl-1-5 {
+    margin-left: 12.5%;
+  }
+  .offset-xxxl-2 {
+    margin-left: 16.6666666667%;
+  }
+  .offset-xxxl-2-5 {
+    margin-left: 20.8333333333%;
+  }
+  .offset-xxxl-3 {
+    margin-left: 25%;
+  }
+  .offset-xxxl-3-5 {
+    margin-left: 29.1666666667%;
+  }
+  .offset-xxxl-4 {
+    margin-left: 33.3333333333%;
+  }
+  .offset-xxxl-4-5 {
+    margin-left: 37.5%;
+  }
+  .offset-xxxl-5 {
+    margin-left: 41.6666666667%;
+  }
+  .offset-xxxl-5-5 {
+    margin-left: 45.8333333333%;
+  }
+  .offset-xxxl-6 {
+    margin-left: 50%;
+  }
+  .offset-xxxl-6-5 {
+    margin-left: 54.1666666667%;
+  }
+  .offset-xxxl-7 {
+    margin-left: 58.3333333333%;
+  }
+  .offset-xxxl-7-5 {
+    margin-left: 62.5%;
+  }
+  .offset-xxxl-8 {
+    margin-left: 66.6666666667%;
+  }
+  .offset-xxxl-8-5 {
+    margin-left: 70.8333333333%;
+  }
+  .offset-xxxl-9 {
+    margin-left: 75%;
+  }
+  .offset-xxxl-9-5 {
+    margin-left: 79.1666666667%;
+  }
+  .offset-xxxl-10 {
+    margin-left: 83.3333333333%;
+  }
+  .offset-xxxl-10-5 {
+    margin-left: 87.5%;
+  }
+  .offset-xxxl-11 {
+    margin-left: 91.6666666667%;
+  }
+  .offset-xxxl-11-5 {
+    margin-left: 95.8333333333%;
+  }
+}
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
 /* HEADER                                                                     */
-/* path: layout/_headers.scss                                                 */
+/* path: dsf-common-ui/src/scss/layout/_headers.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .header {
@@ -1063,7 +2441,7 @@ h6, .h6 {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* FOOTER                                                                     */
-/* path: layout/_footer.scss                                                  */
+/* path: dsf-common-ui/src/scss/layout/_footer.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .footer {
@@ -1131,7 +2509,7 @@ h6, .h6 {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* MENU                                                                       */
-/* path: layout/_menu.scss                                                    */
+/* path: dsf-common-ui/src/scss/layout/_menu.scss                             */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .headerMenu {
@@ -1247,6 +2625,12 @@ h6, .h6 {
   padding-left: 10px;
 }
 
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* PAGE HEADER                                                                */
+/* path: dsf-common-ui/src/scss/layout/_pageHeader.scss                       */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .pageHeader {
   align-items: center;
   display: flex;
@@ -1296,7 +2680,7 @@ h6, .h6 {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* STATES                                                                     */
-/* path: states/_states.scss                                                  */
+/* path: dsf-common-ui/src/scss/states/_states.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .fade {
@@ -1351,7 +2735,7 @@ tbody.collapse.in {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* GLYPHICON                                                                  */
-/* path: modules/_glyphicon.scss                                              */
+/* path: dsf-common-ui/src/scss/modules/_glyphicon.scss                       */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .glyphicon {
@@ -4572,6 +5956,12 @@ tbody.collapse.in {
   margin-left: 4px;
 }
 
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* ICONS                                                                      */
+/* path: dsf-common-ui/src/scss/modules/_icons .scss                          */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .svg--icon {
   background-repeat: no-repeat;
   display: inline-block;
@@ -4596,6 +5986,12 @@ tbody.collapse.in {
   max-height: 24px;
 }
 
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* DROPDOWN                                                                   */
+/* path: dsf-common-ui/src/scss/modules/_dropdown.scss                        */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .caret {
   display: inline-block;
   width: 0;
@@ -4783,7 +6179,7 @@ tbody.collapse.in {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* BUTTONS                                                                    */
-/* path: modules/_buttons.scss                                                */
+/* path: dsf-common-ui/src/scss/modules/_buttons.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .btn-link, .btn-info, .btn-warning, .btn-danger, .btn-success, .btn-primary, .btn-group_theme > [class^=btn].active, .btn-default, .btn-group_theme > [class^=btn], .btn {
@@ -4843,28 +6239,14 @@ tbody.collapse.in {
   max-width: 20px;
   width: auto;
 }
-.btn-link .glyphicon + .btn-text, .btn-info .glyphicon + .btn-text, .btn-warning .glyphicon + .btn-text, .btn-danger .glyphicon + .btn-text, .btn-success .glyphicon + .btn-text, .btn-primary .glyphicon + .btn-text, .btn-default .glyphicon + .btn-text, .btn-group_theme > [class^=btn] .glyphicon + .btn-text, .btn .glyphicon + .btn-text,
-.btn-link .svg--icon + .btn-text,
-.btn-info .svg--icon + .btn-text,
-.btn-warning .svg--icon + .btn-text,
-.btn-danger .svg--icon + .btn-text,
-.btn-success .svg--icon + .btn-text,
-.btn-primary .svg--icon + .btn-text,
-.btn-default .svg--icon + .btn-text,
-.btn-group_theme > [class^=btn] .svg--icon + .btn-text,
-.btn .svg--icon + .btn-text {
+
+.glyphicon + .btn-text,
+.svg--icon + .btn-text {
   margin-left: 10px;
 }
-.btn-link .btn-text + .glyphicon, .btn-info .btn-text + .glyphicon, .btn-warning .btn-text + .glyphicon, .btn-danger .btn-text + .glyphicon, .btn-success .btn-text + .glyphicon, .btn-primary .btn-text + .glyphicon, .btn-default .btn-text + .glyphicon, .btn-group_theme > [class^=btn] .btn-text + .glyphicon, .btn .btn-text + .glyphicon,
-.btn-link .btn-text + .svg--icon,
-.btn-info .btn-text + .svg--icon,
-.btn-warning .btn-text + .svg--icon,
-.btn-danger .btn-text + .svg--icon,
-.btn-success .btn-text + .svg--icon,
-.btn-primary .btn-text + .svg--icon,
-.btn-default .btn-text + .svg--icon,
-.btn-group_theme > [class^=btn] .btn-text + .svg--icon,
-.btn .btn-text + .svg--icon {
+
+.btn-text + .glyphicon,
+.btn-text + .svg--icon {
   margin-left: 10px;
 }
 
@@ -5121,7 +6503,7 @@ input[type=button].btn-block {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* LABELS                                                                     */
-/* path: modules/_labels.scss                                                 */
+/* path: dsf-common-ui/src/scss/modules/_labels.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .label {
@@ -5182,7 +6564,7 @@ a.label:hover, a.label:focus {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* HEADING                                                                    */
-/* path: modules/_heading.scss                                                */
+/* path: dsf-common-ui/src/scss/modules/_heading.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .page-title {
@@ -5227,7 +6609,7 @@ a.label:hover, a.label:focus {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* FORMS ELEMENT                                                              */
-/* path: modules/_forms.scss                                                  */
+/* path: dsf-common-ui/src/scss/modules/_forms.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 fieldset {
@@ -5587,8 +6969,8 @@ fieldset[disabled] .checkbox-inline {
   min-height: 27px;
 }
 .form-horizontal .form-group {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 .form-horizontal .form-group:before, .form-horizontal .form-group:after {
   display: table;
@@ -5605,13 +6987,13 @@ fieldset[disabled] .checkbox-inline {
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
-  right: 15px;
+  right: 5px;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* GROUP ELEMENTS                                                             */
-/* path: modules/_elem-group.scss                                             */
+/* path: dsf-common-ui/src/scss/modules/_elem-group.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .btn-group, .btn-group_theme {
@@ -5817,6 +7199,12 @@ fieldset[disabled] .checkbox-inline {
   margin-left: -1px;
 }
 
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* TOOLTIP                                                                    */
+/* path: dsf-common-ui/src/scss/modules/_tooltip.scss                         */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .tooltip {
   display: block;
   font-size: 0.75rem;
@@ -5927,6 +7315,12 @@ fieldset[disabled] .checkbox-inline {
   min-width: 1294px;
 }
 
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* POPOVER                                                                    */
+/* path: dsf-common-ui/src/scss/modules/_popover.scss                         */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .popover {
   background-color: #ffffff;
   background-clip: padding-box;
@@ -6110,8 +7504,8 @@ fieldset[disabled] .checkbox-inline {
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
-/* TOAST                                                                     */
-/* path: modules/_toast.scss                                                 */
+/* TOAST                                                                      */
+/* path: dsf-common-ui/src/scss/modules/_toast.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .toast {
@@ -6179,11 +7573,272 @@ fieldset[disabled] .checkbox-inline {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* TABLES                                                                     */
-/* path: modules/_tables.scss                                                 */
+/* path: dsf-common-ui/src/scss/modules/_tables.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .summary:empty {
   display: none;
+}
+
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* COMMENT BLOCK                                                              */
+/* path: dsf-common-ui/src/scss/modules/_commentBlock.scss                    */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.comment-block--field {
+  margin-top: 10px;
+  padding: 0px 10px 0 0;
+  overflow: auto;
+}
+.comment-block--field.maxheight-410 {
+  max-height: calc(100vh - 410px);
+}
+.comment-block--field--field-blue {
+  background-color: rgba(74, 141, 198, 0.05);
+  padding: 15px 15px 10px;
+}
+.comment-block--scroll {
+  height: 330px;
+  margin-right: -15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.comment-block--event {
+  margin-bottom: 18px;
+}
+.comment-block--event:last-child {
+  margin-bottom: 0;
+}
+.comment-block--event:before, .comment-block--event:after {
+  display: table;
+  content: " ";
+}
+.comment-block--event:after {
+  clear: both;
+}
+.user-event .comment-block--info {
+  text-align: left;
+}
+.comment-block--info .label-arrow {
+  height: 8px;
+  fill: #333333;
+  margin: 0 5px;
+  width: 9px;
+}
+.comment-block--info .label-arrow + .label {
+  margin-left: 0;
+}
+.comment-block--info-user, .comment-block--info-date {
+  color: #777777;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-right: 5px;
+}
+.comment-block--info-arrow {
+  margin: 0 10px;
+}
+.comment-block--info-arrow svg {
+  height: 11px;
+  width: 6px;
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
+}
+.comment-block--comment {
+  color: #333333;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding: 10px;
+  position: relative;
+  min-width: calc(55% - 11px);
+  max-width: 100%;
+  margin-top: 5px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.user-event .comment-block--comment {
+  background-color: #E4EEF7;
+  border-radius: 0 10px 10px 10px;
+}
+.current-user-comment .comment-block--comment {
+  background-color: #E4EEF7;
+  border-radius: 0 10px 10px 10px;
+}
+.comment-block--comment .svg--icon {
+  height: 14px;
+  vertical-align: bottom;
+}
+.comment-block--comment .svg--icon svg {
+  height: 14px;
+  fill: #4A8DC6;
+}
+.comment-block .input-group {
+  background-color: #00000000;
+  border-color: #dddddd;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.25rem;
+}
+.comment-block .input-group textarea.form-control {
+  background-color: transparent;
+  border: none;
+  border-color: transparent;
+  box-shadow: none;
+  height: 36px;
+  line-height: 16px;
+  padding: 11px 0;
+  resize: none;
+  overflow: hidden;
+}
+.comment-block .input-group textarea.form-control:first-child {
+  padding-left: 10px;
+}
+.comment-block .input-group textarea.form-control::-moz-placeholder {
+  color: #333333;
+  font-weight: 400;
+  font-size: 0.75rem;
+  opacity: 1;
+}
+.comment-block .input-group textarea.form-control:-moz-placeholder {
+  color: #333333;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.comment-block .input-group textarea.form-control:-ms-input-placeholder {
+  color: #333333;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.comment-block .input-group textarea.form-control::-webkit-input-placeholder {
+  color: #333333;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.comment-block .input-group textarea.form-control + .input-group-btn .btn {
+  height: 28px;
+  line-height: 28px;
+  padding: 0;
+  margin-right: 10px;
+}
+.comment-block .input-group textarea.form-control + .input-group-btn .btn:focus, .comment-block .input-group textarea.form-control + .input-group-btn .btn:hover {
+  box-shadow: none;
+  outline: none;
+}
+.comment-block .input-group textarea.form-control:focus, .comment-block .input-group textarea.form-control:hover {
+  border-color: rgba(221, 221, 221, 0.2);
+  border-right: none;
+  outline: none;
+  box-shadow: none;
+}
+.comment-block .input-group textarea.form-control:focus + .input-group-btn .btnsend svg, .comment-block .input-group textarea.form-control:hover + .input-group-btn .btnsend svg {
+  fill: #4A8DC6;
+}
+.comment-block .input-group .input-group-addon {
+  background-color: transparent;
+  border: none;
+}
+.comment-block .input-group .input-group-addon .svg--icon {
+  position: relative;
+  top: 3px;
+}
+.comment-block .input-group .input-group-addon .svg--icon.loaded svg {
+  fill: #69C26A;
+}
+.comment-block .input-group .input-group-addon svg {
+  fill: #333333;
+}
+.comment-block .input-group .input-group-addon:hover svg {
+  fill: #4A8DC6;
+}
+.comment-block .btnsend {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: none;
+  background-size: 1.375rem;
+  border: none;
+  border-left: none;
+}
+.comment-block .btnsend .svg--icon {
+  transform: rotate(45deg);
+}
+.comment-block .btnsend svg {
+  fill: #dddddd;
+  height: 23px;
+  width: 23px;
+}
+
+.commentBlock__inputGroup {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #BABABA;
+  border-radius: 1px;
+  display: flex;
+  justify-content: space-between;
+  height: 1.75rem;
+  padding-right: 7px;
+}
+.commentBlock__formControl {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  color: #333333;
+  flex-basis: 100%;
+  font-size: 0.75rem;
+  line-height: 1.625rem;
+  height: 1.75rem;
+  padding: 0 7px;
+  resize: none;
+  overflow: hidden;
+}
+.commentBlock__formControl::-moz-placeholder {
+  color: #333333;
+  font-weight: 400;
+  font-size: 0.75rem;
+  opacity: 1;
+}
+.commentBlock__formControl:-moz-placeholder {
+  color: #333333;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.commentBlock__formControl:-ms-input-placeholder {
+  color: #333333;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.commentBlock__formControl::-webkit-input-placeholder {
+  color: #333333;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.commentBlock__formControl:hover, .commentBlock__formControl:focus, .commentBlock__formControl:active, .commentBlock__formControl:focus-visible {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+.commentBlock__btnSend {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  flex-basis: 24px;
+  outline: none;
+  width: 24px;
+}
+.commentBlock__btnSend:hover, .commentBlock__btnSend:focus, .commentBlock__btnSend:active {
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -6196,6 +7851,12 @@ fieldset[disabled] .checkbox-inline {
 /*                                                                            */
 /* START THE CONTENT STYLES                                                   */
 /*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* SINGLE                                                                     */
+/* path: dsf-common-ui/src/scss/content/_authorization.scss                   */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .authorization {
   background-color: #ffffff;
   box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.3);
@@ -6214,7 +7875,7 @@ fieldset[disabled] .checkbox-inline {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* SINGLE                                                                     */
-/* path: content/_single.scss                                                 */
+/* path: dsf-common-ui/src/scss/content/_single.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .mainContainer {
@@ -6230,7 +7891,7 @@ fieldset[disabled] .checkbox-inline {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* HELPER TOOLS                                                               */
-/* path: content/_helperTools.scss                                            */
+/* path: dsf-common-ui/src/scss/content/_helperTools.scss                     */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .img-responsive {
@@ -6244,7 +7905,7 @@ fieldset[disabled] .checkbox-inline {
 }
 
 .img-thumbnail {
-  padding: 15px;
+  padding: 5px;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 0.25rem;
@@ -6390,6 +8051,10 @@ fieldset[disabled] .checkbox-inline {
   padding-top: 0rem;
 }
 
+.pt-5 {
+  padding-top: 0.3125rem;
+}
+
 .pt-10 {
   padding-top: 0.625rem;
 }
@@ -6408,6 +8073,10 @@ fieldset[disabled] .checkbox-inline {
 
 .pb-0 {
   padding-bottom: 0rem;
+}
+
+.pb-5 {
+  padding-bottom: 0.3125rem;
 }
 
 .pb-10 {
