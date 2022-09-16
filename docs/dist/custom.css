@@ -54,6 +54,9 @@ pre{
   font-size: 28px;
   line-height: 28px;
 }
+.bs-docs-header h3 {
+  color: #fff;
+}
 
 .bs-docs-header .lead {
   margin: 0 auto 30px;
@@ -117,13 +120,15 @@ pre{
 }
 
 .bs-docs-example + .highlight,
+.bs-docs-example + .highlighter-rouge,
 .highlight-before .highlight {
-  margin: -15px -15px 15px;
+  margin: -15px 0px 15px;
   border-width: 0;
 }
 
+.highlighter-rouge + .bs-docs-example,
 .highlight + .bs-docs-example {
-  margin: -15px -15px 15px;
+  margin: -15px 0px 15px;
   border-width: 0 0 4px;
   border-radius: 0;
 }

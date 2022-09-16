@@ -22,7 +22,13 @@ order: 4
 </div>
 {% endhighlight %}
 
+Для прилипания шапки страницы при пркручивания используется класс `pageHeader_sticky`
 
+{% highlight html %}
+<div class="pageHeader pageHeader_sticky">
+{% endhighlight %}
+
+<div class="bs-docs-example">
 <div class="pageHeader pageHeader_sticky">
   <div class="pageHeader__left">
     <h2 class="pageHeader__title">
@@ -34,9 +40,4 @@ order: 4
     <button class="btn-default">Кнопка действия</button>
   </div>
 </div>
-
-Для прилипания шапки страницы при пркручивания используется класс `pageHeader_sticky`
-
-{% highlight html %}
-  <div class="pageHeader pageHeader_sticky">
-{% endhighlight %}
+</div>

@@ -40,8 +40,9 @@ order: 1
   </button>
 {% endhighlight %}
 
+<div class="bs-docs-example">
 <button class="btn-icon js-actionMenu" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='glyphicons-basic-pencil' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg></span></button>
-
+</div>
 
 Для использования в фильтрах .btn-deafult .btn-deafult
 
@@ -64,7 +65,9 @@ order: 1
   </button>
 {% endhighlight %}
 
+<div class="bs-docs-example">
 <button class="btn-default js-actionMenu ml-10" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='glyphicons-basic-pencil' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg></span></button>
+</div>
 
 Для использования рядом с кноками .btn-link
 
@@ -85,7 +88,8 @@ order: 1
             <svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg>
           </span>
   </button>
+  {% endhighlight %}
 
-{% endhighlight %}
-
+<div class="bs-docs-example">
 <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='glyphicons-basic-pencil' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg></span></button>
+</div>

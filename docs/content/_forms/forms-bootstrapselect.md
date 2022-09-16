@@ -30,15 +30,16 @@ order: 1
 
   <p>Become this:</p>
 
-  <select class="selectpicker dropdown-menu-left">
-    <option>Mustard</option>
-    <option>KetchupKetchupKetchupKetchupKetchupKetchup</option>
-    <option>Relish</option>
-  </select>
+  <div class="d-flex flex-end">
+    <select class="selectpicker dropdown-menu-left" data-dropdown-align-right="auto">
+      <option>Mustard</option>
+      <option>KetchupKetchupKetchupKetchupKetchupKetchup</option>
+      <option>Relish</option>
+    </select>
+  </div>
 </div>
 
 ```html
-
 <select class="selectpicker dropdown-menu-left">
   <option>Mustard</option>
   <option>Ketchup</option>
@@ -46,8 +47,9 @@ order: 1
 </select>
 ```
 
+---
 
-## Dropup menu - Открытие выпадающего списка вверх
+### Dropup menu - Открытие выпадающего списка вверх
 
 `dropupAuto` is set to true by default, which automatically determines whether or not the menu should display above or below the select box. If `dropupAuto` is set to false, manually make the select a dropup menu by adding the `.dropup` class to the select.
 
@@ -65,28 +67,9 @@ order: 1
 </select>
 ```
 
+---
 
-## Key words
-
-Add key words to options to improve their searchability using `data-tokens`.
-
-<div class="bs-docs-example">
-  <select class="selectpicker" data-live-search="true" data-width="fit">
-    <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
-    <option data-tokens="mustard">Burger, Shake and a Smile</option>
-    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
-  </select>
-</div>
-
-```html
-<select class="selectpicker" data-live-search="true">
-  <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
-  <option data-tokens="mustard">Burger, Shake and a Smile</option>
-  <option data-tokens="frosting">Sugar, Spice and all things nice</option>
-</select>
-```
-
-# Limit the number of selections
+### Максимальное количество выбираемых пунктов при мультивыборе `multiple`
 
 Limit the number of options that can be selected via the `data-max-options` attribute. It also works for option groups. Customize the message displayed when the limit is reached with `maxOptionsText`.
 
@@ -132,11 +115,10 @@ Limit the number of options that can be selected via the `data-max-options` attr
 </select>
 ```
 
-# Custom button text
-
 ---
 
-## Placeholder
+### Кастомизация текста по умолчанию - Placeholder
+
 <p id="titleMultiples"></p>
 Using the `title` attribute will set the default placeholder text when nothing is selected. This works for both multiple and standard select boxes:
 
@@ -168,7 +150,9 @@ Using the `title` attribute will set the default placeholder text when nothing i
 </select>
 ```
 
-## Selected text format
+---
+
+### Форматирование текста выбранного пункта
 
 The supported values are:
 
@@ -211,52 +195,9 @@ The supported values are:
 </select>
 ```
 
+---
 
-## Checkmark on selected option
-
-You can also show the checkmark icon on standard select boxes with the `show-tick` class:
-
-<div class="bs-docs-example">
-  <select class="selectpicker show-tick">
-    <option>Mustard</option>
-    <option>Ketchup</option>
-    <option>Relish</option>
-  </select>
-</div>
-
-```html
-<select class="selectpicker show-tick">
-  <option>Mustard</option>
-  <option>Ketchup</option>
-  <option>Relish</option>
-</select>
-```
-
-## Menu arrow <span class="text-muted small">(deprecated)</span>
-
-The Bootstrap menu arrow can be added with the `show-menu-arrow` class:
-
-<span class="alert alert-danger d-block" role="alert">
-  <strong>Note:</strong> This feature has been deprecated and will be removed in v2.0.0.
-</span>
-
-<div class="bs-docs-example">
-  <select class="selectpicker show-menu-arrow">
-    <option>Mustard</option>
-    <option>Ketchup</option>
-    <option>Relish</option>
-  </select>
-</div>
-
-```html
-<select class="selectpicker show-menu-arrow">
-  <option>Mustard</option>
-  <option>Ketchup</option>
-  <option>Relish</option>
-</select>
-```
-
-## Style individual options
+### Стилизация отдельных пунктов в выпадающем меню
 
 <p id="classes"></p>
 Classes and styles added to options are transferred to the select box:
@@ -272,24 +213,16 @@ Classes and styles added to options are transferred to the select box:
 ```html
 <select class="selectpicker">
   <option>Mustard</option>
-  <option class="special">Ketchup</option>
+  <option class="text-danger">Ketchup</option>
   <option style="background: #5cb85c; color: #fff;">Relish</option>
 </select>
 ```
 
-```css
-.special {
-  font-weight: bold !important;
-  color: #fff !important;
-  background: #bc0000 !important;
-  text-transform: uppercase;
-}
-```
+---
 
-## Width
+### Ширина селекта
 
-<p id="grid"></p>
-Wrap selects in grid columns, or any custom parent element, to easily enforce desired widths.
+1. Используя элементы сетки
 
 <div class="bs-docs-example">
   <div class="row">
@@ -355,6 +288,7 @@ Wrap selects in grid columns, or any custom parent element, to easily enforce de
 </div>
 
 ```html
+
 <div class="row">
   <div class="col-sm-3">
     <div class="form-group">
@@ -370,7 +304,10 @@ Wrap selects in grid columns, or any custom parent element, to easily enforce de
 
 <div id="data-width"></div>
 
-Alternatively, use the `data-width` attribute to set the width of the select. Set `data-width` to `'auto'` to automatically adjust the width of the select to its widest option. `'fit'` automatically adjusts the width of the select to the width of its currently selected option. An exact value can also be specified, e.g., `300px` or `50%`.
+2. Используя атрибут  `data-width`
+- `data-width` => `'auto'` to automatically adjust the width of the select to its widest option.
+- `'fit'` automatically adjusts the width of the select to the width of its currently selected option.
+- Значение в процентах или px `300px` or `50%`.
 
 <div class="bs-docs-example">
   <div class="row">
@@ -442,7 +379,9 @@ Alternatively, use the `data-width` attribute to set the width of the select. Se
 </select>
 ```
 
-## Custom content
+---
+
+### Дополнительные контент в пунктах выпадающего меню
 
 Insert custom HTML into the option with the `data-content` attribute:
 
@@ -466,11 +405,12 @@ Insert custom HTML into the option with the `data-content` attribute:
 ```
 
 <select class="selectpicker" data-size="5">
-  <option data-subtext="Heinz">Ketchup</option>
+  <option data-subtext="Relish">Relish</option>
 </select>
-```
 
-### Menu size
+---
+
+### Размер по высоте выпадющего меню.
 
 The `size` option is set to `'auto'` by default. When `size` is set to `'auto'`, the menu always opens up to show as many items as the window will allow without being cut off. Set `size` to `false` to always show all items. The size of the menu can also be specifed using the `data-size` attribute.
 
@@ -523,8 +463,9 @@ Specify a number for `data-size` to choose the maximum number of items to show i
   ...
 </select>
 ```
+---
 
-## Select/deselect all options
+### Кнопки выбрать и отменить выбор
 
 Adds two buttons to the top of the menu - **Select All** & **Deselect All** with `data-actions-box="true"`.
 
@@ -544,7 +485,9 @@ Adds two buttons to the top of the menu - **Select All** & **Deselect All** with
 </select>
 ```
 
-## Разделитель
+---
+
+### Разделитель между пунктами выпадающего меню
 
 Add `data-divider="true"` to an option to turn it into a divider.
 
@@ -568,8 +511,9 @@ Add `data-divider="true"` to an option to turn it into a divider.
 </select>
 ```
 
+---
 
-## Container
+### Вывод выпадающего меню вне контейнера
 
 Append the select menu to a specific element, e.g. `container: 'body'` or `data-container=".main-content"`. This is useful if the select element is inside an element with `overflow: hidden`.
 

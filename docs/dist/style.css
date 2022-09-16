@@ -6148,8 +6148,10 @@ tbody.collapse.in {
 }
 .dropup .dropdown-menu {
   top: auto;
-  bottom: 100%;
   margin-bottom: 2px;
+}
+.dropup.open > .dropdown-menu {
+  bottom: 100%;
 }
 
 .dropdown-submenu > .dropdown-menu {
