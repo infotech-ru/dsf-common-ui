@@ -33,7 +33,10 @@
   &.show {
     opacity: 1;
   }
-
+  &.fade{
+    display: none;
+    z-index: 0;
+  }
   .arrow {
     border-style: solid;
     border-color: transparent;

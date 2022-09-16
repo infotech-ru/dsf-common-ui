@@ -68,6 +68,11 @@
     .mobile-view &{
       margin-left: 0;
     }
+    &.active{
+      .headerMenu__link{
+        background-color: transparentize(_brand-palette(menuLinkActive_bgc), .8);
+      }
+    }
     .headerMenu__link{
       padding: 0;
       .mobile-view &{

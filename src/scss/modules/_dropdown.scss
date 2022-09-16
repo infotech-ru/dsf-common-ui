@@ -134,6 +134,7 @@
   width: 24px;
 }
 // Open state for the dropdown
+.show,
 .open {
   // Show the menu
   > .dropdown-menu {
@@ -152,10 +153,18 @@
 .dropdown-menu-right {
   right: 0;
   left: auto; // Reset the default from `.dropdown-menu`
+  > .dropdown-menu{
+    right: 0;
+    left: auto;
+  }
 }
 .dropdown-menu-left {
   right: auto;
   left: 0;
+  > .dropdown-menu{
+    left: 0;
+    right: auto;
+  }
 }
 // Dropdown section headers
 .dropdown-header {

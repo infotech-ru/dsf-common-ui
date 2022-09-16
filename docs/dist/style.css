@@ -2571,6 +2571,9 @@ h6, .h6 {
 .mobile-view .headerMenu_linkIcon {
   margin-left: 0;
 }
+.headerMenu_linkIcon.active .headerMenu__link {
+  background-color: rgba(74, 141, 198, 0.2);
+}
 .headerMenu_linkIcon .headerMenu__link {
   padding: 0;
 }
@@ -6093,9 +6096,11 @@ tbody.collapse.in {
   width: 24px;
 }
 
+.show > .dropdown-menu,
 .open > .dropdown-menu {
   display: block;
 }
+.show > a,
 .open > a {
   outline: 0;
 }
@@ -6104,10 +6109,18 @@ tbody.collapse.in {
   right: 0;
   left: auto;
 }
+.dropdown-menu-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
 
 .dropdown-menu-left {
   right: auto;
   left: 0;
+}
+.dropdown-menu-left > .dropdown-menu {
+  left: 0;
+  right: auto;
 }
 
 .dropdown-header {
@@ -7229,6 +7242,10 @@ fieldset[disabled] .checkbox-inline {
 }
 .tooltip.in, .tooltip.show {
   opacity: 1;
+}
+.tooltip.fade {
+  display: none;
+  z-index: 0;
 }
 .tooltip .arrow {
   border-style: solid;

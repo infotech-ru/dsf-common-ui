@@ -80,6 +80,7 @@ var DSFUI = (function (exports) {
     $('.js-toast-btn').click(function (e) {
       $('#js-toast').toast('show');
     });
+    $('.selectpicker').selectpicker();
   }
 
   function OnLoad() {

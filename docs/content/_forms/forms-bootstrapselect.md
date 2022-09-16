@@ -6,7 +6,18 @@ anchor: helpers-margin
 order: 1
 ---
 
-## Standard select boxes
+### Смещение выпадающего списка влево.
+
+1. Используется класс `dropdown-menu-left`
+2. 'data-dropdown-align-right' => 'auto', - автоматическое смещение
+
+{% highlight html %}
+  widget(Select::class,[
+    'options' => [
+      'class' => 'dropdown-menu-left',
+или
+      'data-dropdown-align-right' => 'auto',
+{% endhighlight %}
 
 <div class="bs-docs-example">
   <p>Make this:</p>
@@ -19,58 +30,29 @@ order: 1
 
   <p>Become this:</p>
 
-  <select class="selectpicker">
+  <select class="selectpicker dropdown-menu-left">
     <option>Mustard</option>
-    <option>Ketchup</option>
+    <option>KetchupKetchupKetchupKetchupKetchupKetchup</option>
     <option>Relish</option>
   </select>
 </div>
 
 ```html
-<select class="selectpicker">
+
+<select class="selectpicker dropdown-menu-left">
   <option>Mustard</option>
   <option>Ketchup</option>
   <option>Relish</option>
 </select>
 ```
 
-<div id="optgroup"></div>
-## Select boxes with optgroups
+
+## Dropup menu - Открытие выпадающего списка вверх
+
+`dropupAuto` is set to true by default, which automatically determines whether or not the menu should display above or below the select box. If `dropupAuto` is set to false, manually make the select a dropup menu by adding the `.dropup` class to the select.
 
 <div class="bs-docs-example">
-  <select class="selectpicker">
-    <optgroup label="Picnic">
-      <option>Mustard</option>
-      <option>Ketchup</option>
-      <option>Relish</option>
-    </optgroup>
-    <optgroup label="Camping">
-      <option>Tent</option>
-      <option>Flashlight</option>
-      <option>Toilet Paper</option>
-    </optgroup>
-  </select>
-</div>
-
-```html
-<select class="selectpicker">
-  <optgroup label="Picnic">
-    <option>Mustard</option>
-    <option>Ketchup</option>
-    <option>Relish</option>
-  </optgroup>
-  <optgroup label="Camping">
-    <option>Tent</option>
-    <option>Flashlight</option>
-    <option>Toilet Paper</option>
-  </optgroup>
-</select>
-```
-
-## Multiple select boxes
-
-<div class="bs-docs-example">
-  <select class="selectpicker" multiple>
+  <select class="selectpicker dropup" data-dropup-auto="false">
     <option>Mustard</option>
     <option>Ketchup</option>
     <option>Relish</option>
@@ -78,28 +60,11 @@ order: 1
 </div>
 
 ```html
-<select class="selectpicker" multiple>
-  <option>Mustard</option>
-  <option>Ketchup</option>
-  <option>Relish</option>
+<select class="selectpicker dropup" data-dropup-auto="false">
+  ...
 </select>
 ```
 
-# Live search
-
----
-
-## Live search
-
-You can add a search input by passing `data-live-search="true"` attribute:
-
-<div class="bs-docs-example no-code">
-  <select class="selectpicker" data-live-search="true" data-width="fit">
-    <option>Hot Dog, Fries and a Soda</option>
-    <option>Burger, Shake and a Smile</option>
-    <option>Sugar, Spice and all things nice</option>
-  </select>
-</div>
 
 ## Key words
 
@@ -203,30 +168,7 @@ Using the `title` attribute will set the default placeholder text when nothing i
 </select>
 ```
 
-## Selected text
-
-<p id="title"></p>
-Set the `title` attribute on individual options to display alternative text when the option is selected:
-
-<div class="bs-docs-example no-code">
-  <select class="selectpicker">
-    <option title="Combo 1">Hot Dog, Fries and a Soda</option>
-    <option title="Combo 2">Burger, Shake and a Smile</option>
-    <option title="Combo 3">Sugar, Spice and all things nice</option>
-  </select>
-</div>
-
-```html
-<select class="selectpicker">
-  <option title="Combo 1">Hot Dog, Fries and a Soda</option>
-  <option title="Combo 2">Burger, Shake and a Smile</option>
-  <option title="Combo 3">Sugar, Spice and all things nice</option>
-</select>
-```
 ## Selected text format
-
-<p id="titleMultiplesFormat"></p>
-Specify how the selection is displayed with the `data-selected-text-format` attribute on a multiple select.
 
 The supported values are:
 
@@ -269,73 +211,6 @@ The supported values are:
 </select>
 ```
 
-# Styling
-
----
-
-## Button classes
-
-You can set the button classes via the `data-style` attribute:
-
-<div class="bs-docs-example">
-  <div class="form-group">
-    <select class="selectpicker" data-style="btn-primary">
-      <option>Mustard</option>
-      <option>Ketchup</option>
-      <option>Relish</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <select class="selectpicker" data-style="btn-info">
-      <option>Mustard</option>
-      <option>Ketchup</option>
-      <option>Relish</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <select class="selectpicker" data-style="btn-success">
-      <option>Mustard</option>
-      <option>Ketchup</option>
-      <option>Relish</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <select class="selectpicker" data-style="btn-warning">
-      <option>Mustard</option>
-      <option>Ketchup</option>
-      <option>Relish</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <select class="selectpicker" data-style="btn-danger">
-      <option>Mustard</option>
-      <option>Ketchup</option>
-      <option>Relish</option>
-    </select>
-  </div>
-</div>
-
-```html
-<select class="selectpicker" data-style="btn-primary">
-  ...
-</select>
-
-<select class="selectpicker" data-style="btn-info">
-  ...
-</select>
-
-<select class="selectpicker" data-style="btn-success">
-  ...
-</select>
-
-<select class="selectpicker" data-style="btn-warning">
-  ...
-</select>
-
-<select class="selectpicker" data-style="btn-danger">
-  ...
-</select>
-```
 
 ## Checkmark on selected option
 
@@ -567,34 +442,6 @@ Alternatively, use the `data-width` attribute to set the width of the select. Se
 </select>
 ```
 
-# Customize options
-
----
-
-## Icons
-
-Add an icon to an option or optgroup with the `data-icon` attribute:
-
-<span class="alert alert-info d-block" role="alert">
-  <strong>Note:</strong> Glyphicons are not included in Bootstrap 4. To use FontAwesome, or another icon library, you'll need to set `iconBase` to something other than `'glyphicon'`.
-</span>
-
-<div class="bs-docs-example">
-  <select class="selectpicker">
-    <option data-icon="fa-glass">Mustard</option>
-    <option data-icon="fa-heart">Ketchup</option>
-    <option data-icon="fa-film">Relish</option>
-    <option data-icon="fa-home">Mayonnaise</option>
-    <option data-icon="fa-print">Barbecue Sauce</option>
-  </select>
-</div>
-
-```html
-<select class="selectpicker">
-  <option data-icon="fa-heart">Ketchup</option>
-</select>
-```
-
 ## Custom content
 
 Insert custom HTML into the option with the `data-content` attribute:
@@ -618,51 +465,12 @@ Insert custom HTML into the option with the `data-content` attribute:
 </select>
 ```
 
-## Subtext
-Add subtext to an option or optgroup with the `data-subtext` attribute:
-
-<div class="bs-docs-example">
-  <div class="form-group">
-    <select class="selectpicker">
-      <option data-subtext="French's">Mustard</option>
-      <option data-subtext="Heinz">Ketchup</option>
-      <option data-subtext="Sweet">Relish</option>
-      <option data-subtext="Miracle Whip">Mayonnaise</option>
-      <option data-divider="true"></option>
-      <option data-subtext="Honey">Barbecue Sauce</option>
-      <option data-subtext="Ranch">Salad Dressing</option>
-      <option data-subtext="Sweet & Spicy">Tabasco</option>
-      <option data-subtext="Chunky">Salsa</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <select class="selectpicker" data-show-subtext="true">
-      <option data-subtext="French's">Mustard</option>
-      <option data-subtext="Heinz">Ketchup</option>
-      <option data-subtext="Sweet">Relish</option>
-      <option data-subtext="Miracle Whip">Mayonnaise</option>
-      <option data-divider="true"></option>
-      <option data-subtext="Honey">Barbecue Sauce</option>
-      <option data-subtext="Ranch">Salad Dressing</option>
-      <option data-subtext="Sweet & Spicy">Tabasco</option>
-      <option data-subtext="Chunky">Salsa</option>
-    </select>
-    <span class="help-block">With <code>showSubtext</code> set to true.</span>
-  </div>
-</div>
-
-```html
 <select class="selectpicker" data-size="5">
   <option data-subtext="Heinz">Ketchup</option>
 </select>
 ```
 
-# Customize menu
-
----
-
-## Menu size
+### Menu size
 
 The `size` option is set to `'auto'` by default. When `size` is set to `'auto'`, the menu always opens up to show as many items as the window will allow without being cut off. Set `size` to `false` to always show all items. The size of the menu can also be specifed using the `data-size` attribute.
 
@@ -695,7 +503,6 @@ The `size` option is set to `'auto'` by default. When `size` is set to `'auto'`,
   </select>
 </div>
 
-<p id="data-size"></p>
 Specify a number for `data-size` to choose the maximum number of items to show in the menu.
 
 <div class="bs-docs-example">
@@ -737,7 +544,7 @@ Adds two buttons to the top of the menu - **Select All** & **Deselect All** with
 </select>
 ```
 
-## Divider
+## Разделитель
 
 Add `data-divider="true"` to an option to turn it into a divider.
 
@@ -761,33 +568,6 @@ Add `data-divider="true"` to an option to turn it into a divider.
 </select>
 ```
 
-## Menu header
-
-Add a header to the dropdown menu, e.g. `header: 'Select a condiment'` or `data-header="Select a condiment"`
-
-<div class="bs-docs-example">
-  <div class="row">
-    <div class="col-md-3">
-      <select class="selectpicker form-control" data-header="Select a condiment">
-        <option data-subtext="French's">Mustard</option>
-        <option data-subtext="Heinz">Ketchup</option>
-        <option data-subtext="Sweet">Relish</option>
-        <option data-subtext="Miracle Whip">Mayonnaise</option>
-        <option data-divider="true"></option>
-        <option data-subtext="Honey">Barbecue Sauce</option>
-        <option data-subtext="Ranch">Salad Dressing</option>
-        <option data-subtext="Sweet & Spicy">Tabasco</option>
-        <option data-subtext="Chunky">Salsa</option>
-      </select>
-    </div>
-  </div>
-</div>
-
-```html
-<select class="selectpicker" data-header="Select a condiment">
-  ...
-</select>
-```
 
 ## Container
 
@@ -835,94 +615,4 @@ Append the select menu to a specific element, e.g. `container: 'body'` or `data-
     ...
   </select>
 </div>
-```
-
-## Dropup menu
-
-`dropupAuto` is set to true by default, which automatically determines whether or not the menu should display above or below the select box. If `dropupAuto` is set to false, manually make the select a dropup menu by adding the `.dropup` class to the select.
-
-<div class="bs-docs-example">
-  <select class="selectpicker dropup" data-dropup-auto="false">
-    <option>Mustard</option>
-    <option>Ketchup</option>
-    <option>Relish</option>
-  </select>
-</div>
-
-```html
-<select class="selectpicker dropup" data-dropup-auto="false">
-  ...
-</select>
-```
-
-# Disabled
-
----
-
-## Disabled select box
-
-<div class="bs-docs-example">
-  <select class="selectpicker" disabled>
-    <option>Mustard</option>
-    <option>Ketchup</option>
-    <option>Relish</option>
-  </select>
-</div>
-
-```html
-<select class="selectpicker" disabled>
-  <option>Mustard</option>
-  <option>Ketchup</option>
-  <option>Relish</option>
-</select>
-```
-
-## Disabled options
-
-<div class="bs-docs-example">
-  <select class="selectpicker">
-    <option>Mustard</option>
-    <option disabled>Ketchup</option>
-    <option>Relish</option>
-  </select>
-</div>
-
-```html
-<select class="selectpicker">
-  <option>Mustard</option>
-  <option disabled>Ketchup</option>
-  <option>Relish</option>
-</select>
-```
-
-## Disabled option groups
-
-<div class="bs-docs-example">
-  <select class="selectpicker test">
-    <optgroup label="Picnic" disabled>
-      <option>Mustard</option>
-      <option>Ketchup</option>
-      <option>Relish</option>
-    </optgroup>
-    <optgroup label="Camping">
-      <option>Tent</option>
-      <option>Flashlight</option>
-      <option>Toilet Paper</option>
-    </optgroup>
-  </select>
-</div>
-
-```html
-<select class="selectpicker test">
-  <optgroup label="Picnic" disabled>
-    <option>Mustard</option>
-    <option>Ketchup</option>
-    <option>Relish</option>
-  </optgroup>
-  <optgroup label="Camping">
-    <option>Tent</option>
-    <option>Flashlight</option>
-    <option>Toilet Paper</option>
-  </optgroup>
-</select>
 ```

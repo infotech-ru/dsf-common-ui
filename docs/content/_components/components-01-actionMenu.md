@@ -16,6 +16,11 @@ order: 1
 
 Для использования в таблицах .btn-icon
 
+Так как popover изначально не попадает в DOM, то скрипт по типу
+`$(".js-action").click` внутри него не будет работать.
+Использовать надо:
+`$("body").on("click", ".js-action", function () {}`
+
 {% highlight html %}
   <button class="btn-icon js-actionMenu"
           type="button"

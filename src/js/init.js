@@ -22,4 +22,5 @@ export function init(){
   $('.js-toast-btn').click(function (e) {
     $('#js-toast').toast('show');
   })
+  $('.selectpicker').selectpicker();
 }
