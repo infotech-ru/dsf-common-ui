@@ -568,7 +568,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga", "kern";
 }
-body.guest-view {
+body.guest-view, body.reset-view {
   background-image: linear-gradient(90deg, #002D4E 0%, #005492 100%);
 }
 
@@ -2458,12 +2458,12 @@ h6, .h6 {
   align-items: stretch;
   flex-direction: column;
 }
-.guest-view .footer {
+.reset-view .footer, .guest-view .footer {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 15px;
 }
-.guest-view .footer__left, .guest-view .footer__right {
+.reset-view .footer__left, .guest-view .footer__left, .reset-view .footer__right, .guest-view .footer__right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2473,7 +2473,7 @@ h6, .h6 {
   display: flex;
   flex-direction: row;
 }
-.guest-view .footer__right {
+.reset-view .footer__right, .guest-view .footer__right {
   align-items: end;
   justify-content: center;
 }
@@ -2481,11 +2481,11 @@ h6, .h6 {
   font-size: 11px;
   margin: 0;
 }
-.guest-view .footer__item {
+.reset-view .footer__item, .guest-view .footer__item {
   color: #ffffff;
   font-size: 12px;
 }
-.guest-view .footer__item_right {
+.reset-view .footer__item_right, .guest-view .footer__item_right {
   line-height: 18px;
 }
 
@@ -2500,7 +2500,7 @@ h6, .h6 {
   vertical-align: middle;
   width: 120px;
 }
-.guest-view .footer___logo {
+.reset-view .footer___logo, .guest-view .footer___logo {
   background-image: url(../images/infotek_logo_white.svg);
   background-position-y: center;
   margin: 0;
@@ -7242,12 +7242,15 @@ fieldset[disabled] .checkbox-inline {
   white-space: normal;
   z-index: 1600;
 }
-.tooltip.in, .tooltip.show {
-  opacity: 1;
-}
 .tooltip.fade {
   display: none;
   z-index: 0;
+}
+.tooltip.fade.show {
+  z-index: 1600;
+}
+.tooltip.in, .tooltip.show {
+  opacity: 1;
 }
 .tooltip .arrow {
   border-style: solid;
@@ -7597,6 +7600,15 @@ fieldset[disabled] .checkbox-inline {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .summary:empty {
   display: none;
+}
+
+.table__helpIcon {
+  height: 12px;
+}
+.table__helpIcon svg {
+  height: 12px;
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */

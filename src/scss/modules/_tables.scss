@@ -10,3 +10,12 @@
     display: none;
   }
 }
+
+.table__helpIcon{
+  height: 12px;
+  svg{
+    height: 12px;
+    #{--svg-icon-fill}: _brand-palette(tableHelpIcon_bgc);
+    #{--svg-icon-stroke}: _brand-palette(tableHelpIcon_bgc);
+  }
+}

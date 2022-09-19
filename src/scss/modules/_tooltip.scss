@@ -29,13 +29,16 @@
   z-index: _zindex(tooltip);
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
-  &.in,
-  &.show {
-    opacity: 1;
-  }
   &.fade{
     display: none;
     z-index: 0;
+    &.show {
+      z-index: _zindex(tooltip);
+    }
+  }
+  &.in,
+  &.show {
+    opacity: 1;
   }
   .arrow {
     border-style: solid;
