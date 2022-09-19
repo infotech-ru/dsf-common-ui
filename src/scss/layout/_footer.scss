@@ -23,6 +23,7 @@
       // box-shadow: 0px 2px 0px transparentize(_brand-colors(_black), 0.8);
       flex-direction: column;
   }
+  .reset-view &,
   .guest-view &{
     margin-top: 0;
     padding-top: 0;
@@ -30,6 +31,7 @@
   }
   &__left,
   &__right{
+    .reset-view &,
     .guest-view &{
       display: flex;
       flex-direction: column;
@@ -40,6 +42,7 @@
   &__right{
     display: flex;
     flex-direction: row;
+    .reset-view &,
     .guest-view &{
       align-items: end;
       justify-content: center;
@@ -49,11 +52,13 @@
   &__item{
     font-size: 11px;
     margin: 0;
+    .reset-view &,
     .guest-view &{
       color: _brand-colors(_white);
       font-size: 12px;
     }
     &_right{
+      .reset-view &,
       .guest-view &{
         line-height: 18px;
       }
@@ -77,6 +82,7 @@
   margin: -1px 0 0 3px;
   vertical-align: middle;
   width: 120px;
+  .reset-view &,
   .guest-view &{
     background-image: url(../images/infotek_logo_white.svg);
     background-position-y: center;
