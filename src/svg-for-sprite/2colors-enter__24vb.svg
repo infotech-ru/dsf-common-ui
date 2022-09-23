@@ -1,0 +1,5 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 10.1937V5.00012C6 4.44784 6.44772 4.00012 7 4.00012H17C17.5523 4.00012 18 4.44784 18 5.00012V19.0001C18 19.5524 17.5523 20.0001 17 20.0001H7C6.44772 20.0001 6 19.5524 6 19.0001V14.0001" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M2 12.0001H14" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M12 10.0001L14 12.0001L12 14.0001" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+</svg>

@@ -40,12 +40,15 @@
 .toast-header {
   display: flex;
   align-items: center;
-  padding: rem(_brand-sizes(toast_paddingY)) rem(_brand-sizes(toast_paddingX));
-  color: _brand-palette(toastHeader_color);
   background-color: _brand-palette(toastHeader_bgc);
   background-clip: padding-box;
   border-bottom: 1px solid _brand-palette(toastHeader_borderColor);
+  color: _brand-palette(toastHeader_color);
+  padding: rem(_brand-sizes(toast_paddingY)) rem(calc(_brand-sizes(toast_paddingX)) + 20) rem(_brand-sizes(toast_paddingY)) rem(_brand-sizes(toast_paddingX));
   position: relative;
+  min-height: 30px;
+  h4{
+  }
   .close{
     --close-stroke: #ffffff;
     @include close;

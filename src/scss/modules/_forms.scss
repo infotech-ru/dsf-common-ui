@@ -276,13 +276,13 @@ textarea.form-control {
 
 // Feedback states
 .has-success {
-  @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
+  @include form-control-validation(_brand-palette(hasSuccess_color), _brand-palette(hasSuccess_border), _brand-palette(hasSuccess_bgc));
 }
 .has-warning {
-  @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
+  @include form-control-validation(_brand-palette(hasWarning_color), _brand-palette(hasWarning_border), _brand-palette(hasWarning_bgc));
 }
 .has-error {
-  @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
+  @include form-control-validation(_brand-palette(hasDanger_color), _brand-palette(hasDanger_border), _brand-palette(hasDanger_bgc));
 }
 
 // Reposition feedback icon if input has visible label above

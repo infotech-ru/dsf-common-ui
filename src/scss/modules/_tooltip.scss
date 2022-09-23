@@ -6,7 +6,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 // Base class
 .tooltip {
-  display: block;
+  display: none;
   font-size: rem(_fontSizes(tooltip));
   margin: 0;
   letter-spacing: normal;
@@ -30,7 +30,7 @@
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   &.fade{
-    display: none;
+    // display: none;
     z-index: 0;
     &.show {
       z-index: _zindex(tooltip);
@@ -38,6 +38,7 @@
   }
   &.in,
   &.show {
+    // display: block;
     opacity: 1;
   }
   .arrow {

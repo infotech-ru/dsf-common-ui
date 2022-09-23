@@ -30,7 +30,7 @@ order: 1
 
   <p>Become this:</p>
 
-  <div class="d-flex flex-end">
+  <div class="d-flex justify-flex-end">
     <select class="selectpicker dropdown-menu-left" data-dropdown-align-right="auto">
       <option>Mustard</option>
       <option>KetchupKetchupKetchupKetchupKetchupKetchup</option>

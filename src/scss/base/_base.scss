@@ -113,7 +113,7 @@ ol {
 mark,
 .mark {
   padding: .2em;
-  background-color: $state-warning-bg;
+  background-color: _brand-palette(mark_bgc);
 }
 
 dl {

@@ -20,12 +20,13 @@ order: 1
   3. Если иконка использует stroke - прописываем к элементу svg атрибут stroke, если fill - то класс fill.<br>
   {% highlight html %}fill="var(--svg-icon-fill, #000)" stroke="var(--svg-icon-stroke, #000)"}{% endhighlight %}
   Например:
-  {% highlight html %}
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.8 14"><path d="M0,12.6A1.4,1.4,0,1,1,1.4,14,1.4,1.4,0,0,1,0,12.6ZM0,1.4A1.4,1.4,0,1,1,1.4,2.8,1.4,1.4,0,0,1,0,1.4ZM1.4,5.6A1.4,1.4,0,1,0,2.8,7,1.4,1.4,0,0,0,1.4,5.6Z" fill="var(--svg-icon-fill, #000)" fill-rule="evenodd"/></svg>
-  {% endhighlight %}
 </p>
-
-<div><i>Использование:</i></div>
+{% highlight html %}
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.8 14"><path d="M0,12.6A1.4,1.4,0,1,1,1.4,14,1.4,1.4,0,0,1,0,12.6ZM0,1.4A1.4,1.4,0,1,1,1.4,2.8,1.4,1.4,0,0,1,0,1.4ZM1.4,5.6A1.4,1.4,0,1,0,2.8,7,1.4,1.4,0,0,0,1.4,5.6Z" fill="var(--svg-icon-fill, #000)" fill-rule="evenodd"/></svg>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <i>Использование:</i>
+</div>
 {% highlight html %}
 html:
 <svg>
@@ -43,18 +44,29 @@ import Icon from "./Icon.vue";
 components: {Icon}
 </script>
 <Icon name="ИМЯ_ИКОНКИ" />
-
 {% endhighlight %}
-<svg width="24" height="24">
-  <use xlink:href="dist/sprite.symbol.svg#calendar"></use>
-</svg>
-<br>
+<div class="bs-docs-example">
+  <svg width="24" height="24">
+    <use xlink:href="dist/sprite.symbol.svg#2colors-calendar"></use>
+  </svg>
+</div>
+{% highlight html %}
+  Для задания цвета иконок используются `svg-default`, `svg-primary`, `svg-success`, `svg-danger`, `svg-warning`, `svg-info`, `svg-muted`
+{% endhighlight %}
+<div class="bs-docs-example">
+  <span class="svg--icon svg-danger">
+    <svg width="24" height="24">
+      <use xlink:href="dist/sprite.symbol.svg#2colors-calendar"></use>
+    </svg>
+  </span>
+</div>
 <br>
 <a class="btn-danger btn-small mb-20" role="button" data-toggle="collapse" href="#collapseDeprecated" aria-expanded="false" aria-controls="collapseDeprecated">
   Список иконок, которые необходимо заменить на новые
 </a>
 <div class="collapse" id="collapseDeprecated">
   <ul>
+  <li>applications-site -> 2colors-web__24vb</li>
   <li>accommodation -> 2colors-megaphone__24vb</li>
   <li>add -> glyphicons-plus</li>
   <li>adjust -> glyphicons-adjust</li>
@@ -74,6 +86,7 @@ components: {Icon}
   <li>clock -> glyphicons-history</li>
   <li>conversion -> 2colors-conversion__24vb</li>
   <li>contracts -> warehouse-auto</li>
+  <li>contracts2 -> 2colors-customer_care__24vb</li>
   <li>copy -> glyphicons-squares</li>
   <li>del -> glyphicons-bin</li>
   <li>desc -> glyphicons-sort-numerically-alt</li>
@@ -82,6 +95,7 @@ components: {Icon}
   <li>excel -> ownicons-excel</li>
   <li>eye -> glyphicons-eye</li>
   <li>fast-link -> ownicons-fast-link</li>
+  <li>funnel  -> 2colors-target__24vb</li>
   <li>glyphicons-dotted -> glyphicons-more-vertical</li>
   <li>glyphicons-ok-sign -> glyphicons-circle-check</li>
   <li>glyphicons-ok -> glyphicons-check</li>
@@ -105,6 +119,7 @@ components: {Icon}
   <li>remove -> glyphicons-bin</li>
   <li>regularize -> glyphicons-sort-numerically</li>
   <li>rub -> symbol-rub</li>
+  <li>sales2 -> 2colors-car_sale__24vb</li>
   <li>search-alt -> ownicons-search</li>
   <li>score -> glyphicons-invoice</li>
   <li>share -> ownicons-share</li>

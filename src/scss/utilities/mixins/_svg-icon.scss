@@ -17,15 +17,11 @@
 
 // ------------------------------------------------------------------- Mixins //
 @mixin svg-icon-variant($parent, $color) {
-  #{$parent} {
-    fill: $color;
+  #{$parent},
+  #{$parent}.svg--icon {
     svg {
-      fill: $color;
-    }
-    &.svg--icon {
-      svg{
-        fill: $color;
-      }
+      #{--svg-icon-fill}: $color;
+      #{--svg-icon-stroke}: $color;
     }
   }
 }

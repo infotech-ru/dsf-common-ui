@@ -1,0 +1,99 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* ALERTS                                                                     */
+/* path: dsf-common-ui/src/scss/modules/_alerts.scss                          */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
+.alert {
+  border: 1px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 10px;
+  padding: 10px 20px 10px 10px;
+  position: relative;
+  text-shadow: none;
+  h4 {
+    margin-top: 0;
+    color: inherit; // Specified for the h4 to prevent conflicts of changing $headings-color
+  }
+
+  // Provide class for links that match alerts
+  .alert-link {
+    font-weight: $alert-link-font-weight;
+  }
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  > p + p {
+    margin-top: 5px;
+  }
+  @each $alert in default, primary, success, danger, warning, info {
+    &-#{$alert}{
+      background-color: _brand-alert(#{$alert}_bg);
+      border-color: _brand-alert(#{$alert}_border);
+      color: _brand-alert(#{$alert}_color);
+      .ownicons-close{
+        height: 11px;
+        width: 11px;
+        #{--svg-icon-fill}: _brand-alert(#{$alert}_close);
+        #{--svg-icon-stroke}: _brand-alert(#{$alert}_close);
+      }
+      .close{
+        color: _brand-alert(#{$alert}_close);
+      }
+      h4{
+        color: _brand-alert(#{$alert}_title);
+      }
+    }
+  }
+  .close{
+    border: none;
+    background-color: transparent;
+    background-image: none;
+    cursor: pointer;
+    float: none;
+    opacity: 1;
+    height: 11px;
+    position: absolute;
+    right: 10px;
+    text-shadow: none;
+    top: 10px;
+    width: 11px;
+    svg{
+      height: 11px;
+      width: 11px;
+    }
+  }
+  &__attention{
+    // background-image: url($path-icon-svg + "sign-info-red.svg");
+    background-image: sprite("ownicons-circle-empty-info");
+    background-image: svg-url("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12.05.94A11.06,11.06,0,1,0,23.11,12,11.07,11.07,0,0,0,12.05.94m0,23.06a12,12,0,1,1,12-12,12,12,0,0,1-12,12' fill='var(--svg-icon-fill, #D9534F)' stroke='none'/><path d='M10.18,7.65A1.65,1.65,0,1,0,11.83,6a1.64,1.64,0,0,0-1.65,1.65M13,10.92l-2.7.85-.19.62,1.53.07-.66,6,2.77-.73,0-.52-1.2-.06Z' fill='var(--svg-icon-fill, #D9534F)' stroke='none'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    padding-left: 40px;
+  }
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+// The misspelled .alert-dismissable was deprecated in 3.2.0.
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: ($alert-padding + 20);
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+  }
+}

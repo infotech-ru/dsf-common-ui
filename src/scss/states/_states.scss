@@ -6,10 +6,12 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
 .fade {
+  display: none;
   opacity: 0;
   @include transition(opacity .15s linear);
   &.in,
   &.show {
+    display: block;
     opacity: 1;
   }
 }
