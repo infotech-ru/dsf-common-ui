@@ -8,6 +8,18 @@ export function itemActionMenu(){
     });
 }
 
+export function multilevelMenu() {
+  $('.multilevelMenu .dropdown-toggle').on('click', function (e) {
+    var $el = $(this);
+    var $parent = $(this).offsetParent(".dropdown-menu");
+    $(this).parent("li").toggleClass('open');
+
+    $('.multilevelMenu li.open').not($(this).parents("li")).removeClass("open");
+
+    return false;
+  });
+}
+
 export function CopyToClipboard() {
   function fallbackCopyTextToClipboard(text) {
     var textArea = document.createElement("textarea");

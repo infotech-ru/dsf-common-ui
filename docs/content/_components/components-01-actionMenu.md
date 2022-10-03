@@ -1,8 +1,8 @@
 ---
-Title: Меню для кнопок действий
-menutitle: Меню для кнопок действий
+Title: Меню и подменю (dropdown)
+menutitle: Меню actionMenu и dropdown
 category: components
-anchor: components-actionMenu
+anchor: components-menu
 order: 1
 ---
 
@@ -92,4 +92,112 @@ order: 1
 
 <div class="bs-docs-example">
 <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='glyphicons-basic-pencil' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg></span></button>
+</div>
+
+### Многоуровневое меню dropdown. 
+Для многоуровневого меню используется класс `multilevelMenu`. 
+Раскрытие меню может отрабатывать по клику через `data-toggle="dropdown"`
+Или при наведении, для чего используется класс модифиатор
+{% highlight html %}
+ <ul class="multilevelMenu">
+    <li class="dropdown">
+      <a class="dropdown dropdown-toggle" href="#" data-toggle="dropdown">
+        Первый уровень
+      </a>
+      <ul class="dropdown-menu">
+        <li class="dropdown__items dropdown dropdown-submenu">
+          <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+            Второй уровень пункт 1
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown__items dropdown dropdown-submenu">
+              <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+                Третий уровень
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown__items">
+                  <a class="dropdown__link" href="#">Вложенный пункт 1</a>
+                </li>
+                <li class="dropdown__items">
+                  <a class="dropdown__link" href="#">Вложенный пункт 2</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown__items dropdown dropdown-submenu dropdown-submenu_actionHover">
+          <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+            Второй уровень пункт 2 - (наведеине)
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown__items dropdown dropdown-submenu dropdown-submenu_actionHover">
+              <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+                Третий уровень  - (наведеине)
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown__items">
+                  <a class="dropdown__link" href="#">Вложенный пункт 1</a>
+                </li>
+                <li class="dropdown__items">
+                  <a class="dropdown__link" href="#">Вложенный пункт 2</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+{% endhighlight %}
+
+<div class="bs-docs-example">
+  <ul class="multilevelMenu">
+    <li class="dropdown">
+      <a class="dropdown dropdown-toggle" href="#" data-toggle="dropdown">
+        Первый уровень
+      </a>
+      <ul class="dropdown-menu">
+        <li class="dropdown__items dropdown dropdown-submenu">
+          <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+            Второй уровень пункт 1
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown__items dropdown dropdown-submenu">
+              <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+                Третий уровень
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown__items">
+                  <a class="dropdown__link" href="#">Вложенный пункт 1</a>
+                </li>
+                <li class="dropdown__items">
+                  <a class="dropdown__link" href="#">Вложенный пункт 2</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown__items dropdown dropdown-submenu dropdown-submenu_actionHover">
+          <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+            Второй уровень пункт 2 - (наведеине)
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown__items dropdown dropdown-submenu dropdown-submenu_actionHover">
+              <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+                Третий уровень - (наведеине)
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown__items">
+                  <a class="dropdown__link" href="#">Вложенный пункт 1</a>
+                </li>
+                <li class="dropdown__items">
+                  <a class="dropdown__link" href="#">Вложенный пункт 2</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </div>

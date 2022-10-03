@@ -207,6 +207,7 @@
     // bottom: 100%; // вывод с пустотой в 4 версии.
     margin-bottom: 2px;
   }
+  &.show, // Используется только для 3 версии. в 4 версии .show
   &.open{ // Используется только для 3 версии. в 4 версии .show
     > .dropdown-menu {
       bottom: 100%; // в 4 версии dropdown использовать нельзя
@@ -215,11 +216,13 @@
 }
 
 .dropdown-submenu {
-  // &:hover, &:focus{
-  //   > .dropdown-menu {
-  //     display: block;
-  //   }
-  // }
+  &_actionHover{ 
+    &:hover, &:focus{
+      > .dropdown-menu {
+        display: block;
+      }
+    }
+  }
   > .dropdown-menu{
     top: 0;
     right: auto;
@@ -257,6 +260,7 @@
       }
     }
   }
+  &.show,
   &.open{
     > .dropdown__link{
       &:after{

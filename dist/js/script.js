@@ -10,6 +10,15 @@ var DSFUI = (function (exports) {
       sanitize: false
     });
   }
+  function multilevelMenu() {
+    $('.multilevelMenu .dropdown-toggle').on('click', function (e) {
+      $(this);
+      $(this).offsetParent(".dropdown-menu");
+      $(this).parent("li").toggleClass('open');
+      $('.multilevelMenu li.open').not($(this).parents("li")).removeClass("open");
+      return false;
+    });
+  }
   function CopyToClipboard() {
     function fallbackCopyTextToClipboard(text) {
       var textArea = document.createElement("textarea");
@@ -85,6 +94,7 @@ var DSFUI = (function (exports) {
 
   function OnLoad() {
     itemActionMenu();
+    multilevelMenu();
     CopyToClipboard();
     init();
   }

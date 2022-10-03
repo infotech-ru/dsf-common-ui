@@ -6150,10 +6150,13 @@ tbody.collapse.in {
   top: auto;
   margin-bottom: 2px;
 }
-.dropup.open > .dropdown-menu {
+.dropup.show > .dropdown-menu, .dropup.open > .dropdown-menu {
   bottom: 100%;
 }
 
+.dropdown-submenu_actionHover:hover > .dropdown-menu, .dropdown-submenu_actionHover:focus > .dropdown-menu {
+  display: block;
+}
 .dropdown-submenu > .dropdown-menu {
   top: 0;
   right: auto;
@@ -6187,7 +6190,7 @@ tbody.collapse.in {
 .mobile-view .dropdown-submenu > .dropdown__link:after {
   background-position: center;
 }
-.mobile-view .dropdown-submenu.open > .dropdown__link:after {
+.mobile-view .dropdown-submenu.show > .dropdown__link:after, .mobile-view .dropdown-submenu.open > .dropdown__link:after {
   transform: rotate(90deg);
 }
 
