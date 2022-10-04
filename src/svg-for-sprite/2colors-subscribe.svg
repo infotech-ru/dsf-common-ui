@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.5 16.41">
+<circle cx="4.74" cy="14.29" r="1.62" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<circle cx="14.26" cy="14.29" r="1.62" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M6.32,14.29h6.36m3.17,0L18.5,14V12.9a1,1,0,0,0-.68-1l-2.43-.81-.13-.05-4-2A1,1,0,0,0,10.85,9H5.09a1,1,0,0,0-.63.22L2.23,11a.92.92,0,0,1-.31.16l-.74.25a1,1,0,0,0-.68.95v1.92H3.15" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<rect x="12" y="1.5" width="7" height="6" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M13.5,0V2" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M17.5,0V2" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M14.71,6h-.55V3.73l-.66.21V3.47L14.66,3h.05Z" fill="var(--svg-icon-fill_blue, #0094ff)" stroke="none"/>
+<path d="M17.5,4.75a1.52,1.52,0,0,1-.24.93.94.94,0,0,1-1.4,0,1.56,1.56,0,0,1-.25-.91V4.25a1.52,1.52,0,0,1,.25-.93.83.83,0,0,1,.7-.32.81.81,0,0,1,.69.31,1.47,1.47,0,0,1,.25.91ZM17,4.16a1.11,1.11,0,0,0-.1-.52.3.3,0,0,0-.29-.17.31.31,0,0,0-.29.16.9.9,0,0,0-.1.49v.71a1.2,1.2,0,0,0,.09.53.35.35,0,0,0,.59,0,1.23,1.23,0,0,0,.1-.51Z" fill="var(--svg-icon-fill_blue, #0094ff)" stroke="none"/>
+</svg>

@@ -259,6 +259,9 @@ pre{
   flex-wrap: wrap;
 }
 .set-ico-list-item{
+  align-items: center;
+  display: flex;
+  justify-content: center;
   border: .5px solid #ddd;
   flex-basis: 10%;
   padding: 40px 20px;
@@ -267,6 +270,16 @@ pre{
   height: 100px;
   --svg-icon-fill: #1E6393;
   --svg-icon-stroke: #1E6393;
+}
+.set-ico-list-item .btn-icon{
+  height: 24px;
+}
+.set-ico-list-item .icon-box{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 .set-ico-list-item .fill{
   fill: #1E6393;
@@ -307,6 +320,15 @@ pre{
 }
 [title*='ownicons']:after{
   content: 'USE';
+  color: red;
+  display: block;
+  right: 2px;
+  font-size: 10px;;
+  position: absolute;
+  top: 2px;
+}
+[title*='symbol']:after{
+  content: 'Валюта';
   color: red;
   display: block;
   right: 2px;
