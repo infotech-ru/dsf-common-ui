@@ -5,6 +5,10 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
+.error-summary { 
+  color: _brand-alert(#{$alert}_bg);
+}
+
 .alert {
   border: 1px solid transparent;
   border-radius: 0;
