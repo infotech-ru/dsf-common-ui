@@ -7865,6 +7865,10 @@ fieldset[disabled] .checkbox-inline {
 /* path: dsf-common-ui/src/scss/modules/_alerts.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.error-summary {
+  color: #D9534F;
+}
+
 .alert {
   border: 1px solid transparent;
   border-radius: 0;
