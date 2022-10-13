@@ -8139,6 +8139,10 @@ fieldset[disabled] .checkbox-inline {
   margin-top: 0rem;
 }
 
+.mt-5 {
+  margin-top: 0.3125rem;
+}
+
 .mt-10 {
   margin-top: 0.625rem;
 }
@@ -8169,6 +8173,10 @@ fieldset[disabled] .checkbox-inline {
 
 .mr-0 {
   margin-right: 0rem;
+}
+
+.mr-5 {
+  margin-right: 0.3125rem;
 }
 
 .mr-8 {
@@ -8235,6 +8243,10 @@ fieldset[disabled] .checkbox-inline {
   margin-left: 0rem;
 }
 
+.ml-5 {
+  margin-left: 0.3125rem;
+}
+
 .ml-10 {
   margin-left: 0.625rem;
 }
@@ -8259,6 +8271,10 @@ fieldset[disabled] .checkbox-inline {
   padding-right: 0rem;
 }
 
+.pr-5 {
+  padding-right: 0.3125rem;
+}
+
 .pr-10 {
   padding-right: 0.625rem;
 }
@@ -8281,6 +8297,10 @@ fieldset[disabled] .checkbox-inline {
 
 .pl-0 {
   padding-left: 0rem;
+}
+
+.pl-5 {
+  padding-left: 0.3125rem;
 }
 
 .pl-10 {

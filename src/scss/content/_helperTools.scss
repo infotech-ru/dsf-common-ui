@@ -47,14 +47,14 @@
   }
 }
 
-$marginTopSizes: 0, 10, 15, 20, 25, 30, 40, 50;
+$marginTopSizes: 0, 5, 10, 15, 20, 25, 30, 40, 50;
 @each $marginTop in $marginTopSizes {
   .mt-#{$marginTop} {
       margin-top: rem($marginTop);
   }
 }
 
-$marginRightSizes: 0, 8, 10, 15, 20, 25, 30;
+$marginRightSizes: 0, 5, 8, 10, 15, 20, 25, 30;
 @each $marginRight in $marginRightSizes {
   .mr-#{$marginRight} {
     margin-right: rem($marginRight);
@@ -68,7 +68,7 @@ $marginBottomSizes: 0, 5, 10, 15, 20, 25, 30, 40, 50;
   }
 }
 
-$marginLeftSizes: 0, 10;
+$marginLeftSizes: 0, 5, 10;
 @each $marginLeft in $marginLeftSizes {
   .ml-#{$marginLeft} {
       margin-left: rem($marginLeft);
@@ -82,7 +82,7 @@ $paddingTopSizes: 0, 5, 10, 20;
   }
 }
 
-$paddingRightSizes: 0, 10;
+$paddingRightSizes: 0, 5, 10;
 @each $paddingRight in $paddingRightSizes {
   .pr-#{$paddingRight} {
       padding-right: rem($paddingRight);
@@ -96,7 +96,7 @@ $paddingBottomSizes: 0, 5, 10, 20;
   }
 }
 
-$paddingLeftSizes: 0, 10;
+$paddingLeftSizes: 0, 5, 10;
 @each $paddingLeft in $paddingLeftSizes {
   .pl-#{$paddingLeft} {
     padding-left: rem($paddingLeft);
