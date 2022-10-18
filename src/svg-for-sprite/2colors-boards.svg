@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-<rect x="0.5" y="0.5" width="3" height="15" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<rect x="6.5" y="0.5" width="3" height="15" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<rect x="12.5" y="0.5" width="3" height="15" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><rect x="0.5" y="0.5" width="15" height="3" stroke="var(--svg-icon-stroke, #333)" fill="none"/><rect x="0.5" y="6.5" width="15" height="3" stroke="var(--svg-icon-stroke, #333)" fill="none"/><rect x="0.5" y="12.5" width="15" height="3" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/></svg>
