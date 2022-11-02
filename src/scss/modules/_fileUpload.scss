@@ -1,0 +1,13 @@
+.fileUpload{
+  &_label{
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &_input {
+    clip: rect(0, 0, 0, 0);
+    padding: 0;
+    position: absolute;
+    margin: 0;
+  }
+}

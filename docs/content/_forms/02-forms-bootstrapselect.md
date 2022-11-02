@@ -2,8 +2,8 @@
 Title: Селекты / bootstrap-select
 menutitle: Селекты / selects
 category: forms
-anchor: helpers-margin
-order: 1
+anchor: select
+order: 2
 ---
 
 ### Смещение выпадающего списка влево.
