@@ -23,6 +23,9 @@ $brand-sizes: (
   popover_paddingX:                12,
   popover_paddingY:                8,
   popover_maxWidth:                276,
+  table_paddingX:                  6,
+  table_paddingY:                  5,
+  tableCell_height:                40,
   toast_paddingX:                  8,
   toast_paddingY:                  4,
   toast_maxWidth:                  350,
@@ -31,19 +34,4 @@ $brand-sizes: (
   tooltip_paddingX:                8,
   tooltip_paddingY:                4,
   tooltip_maxWidth:                200,
-);
-
-
-@function _lineHeight($keys...) {
-  @return val($lineHeight, $keys...);
-}
-$lineHeight: (
-  body:                                                                      14,
-  btn:                                                                       26,
-  btnXs:                                                                     18,
-  btnLg:                                                                     30,
-  dropdownLink:                                                              24,
-  input:                                                                     26,
-  tooltip:                                                                   18,
-  popover:                                                                   18,
 );

@@ -1,0 +1,15 @@
+@function _lineHeight($keys...) {
+  @return val($lineHeight, $keys...);
+}
+
+$lineHeight: (
+  body: 14,
+  btn: 26,
+  btnXs: 18,
+  btnLg: 30,
+  dropdownLink: 24,
+  input: 26,
+  table: 14,
+  tooltip: 18,
+  popover: 18,
+);
