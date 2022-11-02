@@ -184,6 +184,14 @@ $colorTools: (
   orange_border:                          map-get($brand-colors, _orange),
   orange_color:                           map-get($brand-colors, _orange),
   orange_svg:                             map-get($brand-colors, _orange),
+  grey_bg:                                map-get($brand-colors, _grey3),
+  grey_border:                            map-get($brand-colors, _grey3),
+  grey_color:                             map-get($brand-colors, _grey3),
+  grey_svg:                               map-get($brand-colors, _grey3),
+  clear_bg:                               map-get($brand-colors, _transparent),
+  clear_border:                           map-get($brand-colors, _transparent),
+  clear_color:                            map-get($brand-colors, _transparent),
+  clear_svg:                              map-get($brand-colors, _transparent),
 );
 
 // @function _theme-btn($keys...) {
@@ -314,6 +322,25 @@ $brand-alert:(
   info_title:                             map-get($brand-colors, _dark-grey),
 );
 
+@function _brand-table($keys...) {
+  @return val($brand-table, $keys...);
+}
+$brand-table: ( 
+  caption_color:                          map-get($brand-colors, _dark-grey),
+  table_border:                           map-get($brand-colors, _grey2),
+  tbody_bgc:                              map-get($brand-colors, _transparent),
+  tbody_color:                            map-get($brand-colors, _dark-grey),
+  thead_border:                           map-get($brand-colors, _grey2),
+  thead_bgc:                              map-get($brand-colors, _white),
+  thead_color:                            map-get($brand-colors, _dark-grey),
+  tfoot_bgc:                              map-get($brand-colors, _light-grey3),
+  tfoot_color:                            map-get($brand-colors, _dark-grey),
+  tdStrip_bgc:                            map-get($brand-colors, _light-grey2),
+  subTrTd_bgc:                            map-get($brand-colors, _light-grey2),
+  subsubTrTd_bgc:                         map-get($brand-colors, _light-grey3),
+  tdHover_bgc:                            map-get($brand-colors, _light-grey2),
+);
+
 @function _brand-palette($keys...) {
   @return val($brand-palette, $keys...);
 }
@@ -322,7 +349,6 @@ $brand-palette: (
   body_color:                             map-get($brand-colors, _dark-grey),
 
   border:                                 map-get($brand-colors, _dark-grey),
-  borderGrey:                             map-get($brand-colors, _grey3),
 
   btnIconSvg_color:                       map-get($brand-colors, _blue),
 

@@ -5,8 +5,10 @@ category: helpers
 anchor: helpers-container
 order: 4
 ---
+
 #### Классы для работы с контейнерами
 
+`d-none` - устанавливает display: none
 `d-flex` - устанавливает display: flex
 `d-block` - устанавливает display: block
 `d-inline-block` - устанавливает display: inline-block
@@ -21,8 +23,14 @@ order: 4
 
 `flex-wrap` устанавливает flex-wrap: wrap;
 
+#### Высота контейнера
+`h-auto` - устанавливает автоматическую высоту
+
+#### Поворот контейнера
+`rotate90`,`rotate180`, `rotate270` - устанавливает поворот
+
 #### Классы для установленния фона контейнера
-`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`
+`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `bg-grey`, `bg-clear`
 
 {% highlight html %}
   <div class="bg-default">bg-default</div>
@@ -32,6 +40,8 @@ order: 4
   <div class="bg-warning">bg-warning</div>
   <div class="bg-info">bg-info</div>
   <div class="bg-muted">bg-muted</div>
+  <div class="bg-grey">bg-grey</div>
+  <div class="bg-clear">bg-clear</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -42,4 +52,6 @@ order: 4
   <div class="bg-warning mb-10">bg-warning</div>
   <div class="bg-info mb-10">bg-info</div>
   <div class="bg-muted mb-10">bg-muted</div>
+  <div class="bg-grey mb-10">bg-grey</div>
+  <div class="bg-clear mb-10">bg-clear</div>
 </div>

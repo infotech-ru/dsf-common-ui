@@ -8,6 +8,7 @@ order: 1
 
 ### Кастомизированное поле загрузки.
 Требуется подключение скрипта `CustomFileUpload` для вывода имени выбранного файла в кнопку
+
 {% highlight html %}
 use app\helpers\Icons;
 use \yii\bootstrap\ActiveForm;
@@ -27,7 +28,7 @@ $this->registerJs('DSF.CustomFileUpload();');
     <span class="btn-text">
       <span class="js-fileUploadLabelText fileUpload_labelText">Выбрать файл</span>
     </span>
-    </label>
+  </label>
     <p class="help-block help-block-error"></p>
 </div>
 {% endhighlight %}
@@ -43,7 +44,7 @@ $this->registerJs('DSF.CustomFileUpload();');
       <span class="btn-text">
         <span class="js-fileUploadLabelText fileUpload_labelText">Выбрать файл</span>
       </span>
-      </label>
-      <p class="help-block help-block-error"></p>
+    </label>
+    <p class="help-block help-block-error"></p>
   </div>
 </div>
