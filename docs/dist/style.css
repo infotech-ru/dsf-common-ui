@@ -7604,14 +7604,6 @@ caption {
   text-align: left;
 }
 
-.table-striped tr:nth-of-type(odd) {
-  background-color: #F5F5F5;
-}
-
-.table-hover tr:hover {
-  background-color: #F5F5F5;
-}
-
 .table-responsive {
   min-height: 0.01%;
   overflow-x: auto;
