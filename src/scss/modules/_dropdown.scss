@@ -84,7 +84,7 @@
     // display: block;
     display: inline-flex;
     font-weight: 400;
-    padding: 0px 9px;
+    padding: 0px rem(_brand-sizes(dropdownLink_paddingX));
     line-height: rem(_lineHeight(dropdownLink));
     min-height: rem(_brand-sizes(dropdownLink_minH));
     text-decoration: none;
@@ -236,6 +236,13 @@
       .mobile-view &{
         right: auto;
       }
+    }
+  }
+  .dropdown-menu{
+    padding-right: rem(calc(_brand-sizes(dropdownLink_paddingX) * 2));
+    > li > a,
+    .dropdown__link{
+      box-sizing: content-box;
     }
   }
   &-left{

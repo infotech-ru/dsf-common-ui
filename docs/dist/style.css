@@ -2621,7 +2621,6 @@ h6, .h6 {
 }
 .headerMenu .dropdown-submenu .dropdown-menu {
   overflow: auto;
-  padding-right: 10px;
   max-height: calc(80vh - 120px);
 }
 .mobile-view .headerMenu .dropdown-submenu .dropdown-menu {
@@ -6058,7 +6057,7 @@ tbody.collapse.in {
   clear: both;
   display: inline-flex;
   font-weight: 400;
-  padding: 0px 9px;
+  padding: 0px 0.625rem;
   line-height: 1.5rem;
   min-height: 2.25rem;
   text-decoration: none;
@@ -6172,6 +6171,13 @@ tbody.collapse.in {
 }
 .mobile-view .dropdown-menu-right .dropdown-submenu > .dropdown-menu {
   right: auto;
+}
+.dropdown-submenu .dropdown-menu {
+  padding-right: 1.25rem;
+}
+.dropdown-submenu .dropdown-menu > li > a,
+.dropdown-submenu .dropdown-menu .dropdown__link {
+  box-sizing: content-box;
 }
 .dropdown-submenu-left > .dropdown-menu {
   left: auto;
