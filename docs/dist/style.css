@@ -6030,7 +6030,7 @@ tbody.collapse.in {
   list-style: none;
   margin: 0 0 0;
   min-width: 160px;
-  padding: 10px;
+  padding: 0px;
   text-align: left;
   top: 100%;
   z-index: 1003;
@@ -6179,7 +6179,7 @@ tbody.collapse.in {
 }
 .dropdown-submenu > .dropdown__link:after {
   background-repeat: no-repeat;
-  background-size: 8px 16px;
+  background-size: 6px 14px;
   background-position: right center;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 17'%3E%3Cpath d='M.5,16.5l8-8' fill='none' stroke='var(--svg-icon-stroke, %23000)' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M.5.5l8,8' fill='none' stroke='var(--svg-icon-stroke, %23000)' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   content: "";
