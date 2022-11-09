@@ -2621,6 +2621,7 @@ h6, .h6 {
 }
 .headerMenu .dropdown-submenu .dropdown-menu {
   overflow: auto;
+  padding-right: 10px;
   max-height: calc(80vh - 120px);
 }
 .mobile-view .headerMenu .dropdown-submenu .dropdown-menu {
