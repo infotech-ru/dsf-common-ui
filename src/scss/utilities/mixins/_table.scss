@@ -1,0 +1,10 @@
+@mixin table-row-variant($state, $background, $border: null) {
+  .table-#{$state} {
+    th,
+    th:first-child,
+    td,
+    td:first-child{
+      background-color: $background;
+    }
+  }
+}

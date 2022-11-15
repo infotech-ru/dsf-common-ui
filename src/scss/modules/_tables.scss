@@ -223,7 +223,7 @@ tfoot td{
 // }
 
 
-.table-striped {
+.table-striped > tbody >{
   tr:nth-of-type(2n+1) {
     td{ 
       background-color: _brand-table(tdStrip_bgc);
@@ -237,8 +237,8 @@ tfoot td{
   }
 }
 
+@include table-row-variant('light-yellow', _brand-colors(_light-yellow));
 
-// @include table-row-variant('active', $table-bg-active);
 // @include table-row-variant('success', $state-success-bg);
 // @include table-row-variant('info', $state-info-bg);
 // @include table-row-variant('warning', $state-warning-bg);

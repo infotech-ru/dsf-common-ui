@@ -240,7 +240,9 @@
 .logo {
     align-items: center;
     display: flex;
-
+    .header &{
+      min-width: 150px;
+    }
     img {
         max-height: 34px;
         .mobile-view &{
