@@ -331,7 +331,7 @@ $brand-table: (
   tbodyFirstTd_bgc:                       map-get($brand-colors, _white),
   tbodySlaveTd_bgc:                       map-get($brand-colors, _light-grey2),
   tbodySubSlaveTd_bgc:                    map-get($brand-colors, _light-grey3),
-  tbody_bgc:                              map-get($brand-colors, _transparent),
+  tbody_bgc:                              map-get($brand-colors, _white),
   tbody_color:                            map-get($brand-colors, _dark-grey),
   thead_border:                           map-get($brand-colors, _grey2),
   thead_bgc:                              map-get($brand-colors, _white),

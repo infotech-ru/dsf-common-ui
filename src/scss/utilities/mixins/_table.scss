@@ -1,5 +1,5 @@
 @mixin table-row-variant($state, $background, $border: null) {
-  .table-#{$state} {
+  .table__#{$state} {
     th,
     th:first-child,
     td,

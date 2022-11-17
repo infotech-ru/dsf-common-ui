@@ -22,23 +22,6 @@
     display: table-column;
     float: none;
   }
-  
-  td,
-  th {
-    &[class*="col-"] {
-      position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
-      display: table-cell;
-      float: none;
-    }
-    .empty {
-      text-align: center;
-    }
-  }
-  // &__border{
-    // border: none;
-    // border-left: 1px solid _brand-table(table_border);
-    // border-top: 1px solid _brand-table(table_border);
-  // }
 }
 
 caption {
@@ -53,24 +36,32 @@ th,
 td {
   line-height: rem(_lineHeight(table));
   padding: rem(_brand-sizes(table_paddingY)) rem(_brand-sizes(table_paddingX));
+  &[class*="col-"] {
+    position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
+    display: table-cell;
+    float: none;
+  }
+  .empty {
+    text-align: center;
+  }
   text-align: left;
   .table__border &{ 
     border-bottom: 1px solid _brand-table(table_border);
     border-right: 1px solid _brand-table(table_border);
   }
-  .tr__master &{
-    padding-left: 10px;
-  }
   .tr__slave &{
+    --tdnesting-bgc: 96%;
     background-color: _brand-table(tbodySlaveTd_bgc);
-    padding-left: 34px;
+    background-color: hsl(0deg 0% var(--tdnesting-bgc));
   }
   .tr__subSlave &{
     background-color: _brand-table(tbodySubSlaveTd_bgc);
-    padding-left: 34px;
   }
-  // vertical-align: top;
   &:first-child{
+    padding-left: #{_brand-sizes(table_paddingXFirst)}px;
+    // .tr__master &{
+    //   padding-left: 0;
+    // }
     .table__border &{ 
       border-left: 1px solid _brand-table(table_border);
     }
@@ -174,10 +165,7 @@ tbody th {
   height: rem(_brand-sizes(tableCell_height));
   vertical-align: middle;
   &:first-child {
-    background-color: _brand-table(tbodyFirstTd_bgc);
-    left: 0;
     text-align: left;
-    z-index: _zindex(tableStickyTbodyTd);
     .table__firstChildMinWidth &{
       min-width: 160px;
     }
@@ -198,51 +186,32 @@ tfoot td{
     z-index: 1;
   }
 }
-// .table-bordered {
-//   border: 1px solid $table-border-color;
 
-//   >thead,
-//   >tbody,
-//   >tfoot {
-//     >tr {
-
-//       >th,
-//       >td {
-//         border: 1px solid $table-border-color;
-//       }
-//     }
-//   }
-
-//   >thead>tr {
-
-//     >th,
-//     >td {
-//       border-bottom-width: 2px;
-//     }
-//   }
-// }
-
-
-.table-striped > tbody >{
-  tr:nth-of-type(2n+1) {
-    td{ 
-      background-color: _brand-table(tdStrip_bgc);
+.table-striped, // old name
+.table__striped{
+  & > tbody >{
+    tr:nth-of-type(2n+1) {
+      td{ 
+        background-color: _brand-table(tdStrip_bgc);
+      }
     }
   }
 }
 
-.table-hover {
-  tr:hover {
-    background-color: _brand-table(tdHover_bgc);
-  }
-}
-
 @include table-row-variant('light-yellow', _brand-colors(_light-yellow));
-
 // @include table-row-variant('success', $state-success-bg);
 // @include table-row-variant('info', $state-info-bg);
 // @include table-row-variant('warning', $state-warning-bg);
 // @include table-row-variant('danger', $state-danger-bg);
+
+.table-hover, // old name
+.table__hover {
+  tr:hover td{
+    background-color: _brand-table(tdHover_bgc);
+  }
+}
+
+
 
 
 .table-responsive {
@@ -306,20 +275,22 @@ tfoot td{
   }
 }
 
-.table-sticky-head-left_col {
+.table-sticky-head-left_col, // old name
+.wrapper__tableSticky {
   max-height: 50vh;
   margin-bottom: 20px;
   overflow: auto;
+  th,
+  td {
+    &:first-child{ 
+      left: 0;
+      position: sticky;
+      z-index: _zindex(tableStickyTbodyTd);
+    }
+  }
   thead{
     th{
       position: sticky;
-    }
-  }
-  tbody { 
-    td {
-      &:first-child {
-        position: sticky;
-      }
     }
   }
 }
@@ -338,5 +309,57 @@ tfoot td{
   svg{
     height: 12px;
     #{--svg-icon-fill}: _brand-palette(tableHelpIcon_bgc);
+  }
+}
+
+.collapseTrIcon{
+  $value: 10;
+  display: inline-flex;
+  height: #{_brand-sizes(collapseTrIcon_size)}px;
+  position: relative;
+  top: 2px;
+  width: #{_brand-sizes(collapseTrIcon_size)}px;
+  svg{
+    height: #{_brand-sizes(collapseTrIcon_size)}px;
+    width: #{_brand-sizes(collapseTrIcon_size)}px;
+  }
+  &_link{
+    display: inline-flex;
+    margin-right: #{$value}px;
+  }
+  &[title="Expand"] {
+    #{--svg-icon-stroke_blue}: _brand-colors(_light-blue);
+    #{--svg-icon-stroke}: _brand-colors(_light-blue);
+  }
+
+  &[title="Collapse"] {
+    #{--svg-icon-stroke_blue}: _brand-colors(_transparent);
+    #{--svg-icon-stroke}: _brand-colors(_light-blue);
+  }
+  .tr__master & {
+    margin-left: $value;
+  }
+}
+.collapseTdIcon{
+  display: inline-flex;
+  height: #{_brand-sizes(collapseTdIcon_size)}px;
+  top: 2px;
+  width: #{_brand-sizes(collapseTdIcon_size)}px;
+  svg{
+    height: #{_brand-sizes(collapseTdIcon_size)}px;
+    width: #{_brand-sizes(collapseTdIcon_size)}px;
+  }
+  &_link{
+    bottom: #{_brand-sizes(table_paddingY)}px;
+    display: block;
+    height: #{_brand-sizes(collapseTdIcon_size)}px;
+    position: absolute;
+    // top: 50%;
+    // margin-top: #{calc(_brand-sizes(collapseTdIcon_size) * .5 * -1)}px;
+    right: #{_brand-sizes(table_paddingY)}px;
+    width: #{_brand-sizes(collapseTdIcon_size)}px;
+  }
+  &_td{
+    padding-right: #{calc(_brand-sizes(collapseTdIcon_size) + _brand-sizes(table_paddingY) * 1.5)}px;
   }
 }
