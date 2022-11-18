@@ -32,6 +32,8 @@ order: 3
 
 `fz10` - устанавливает размер шрифта в 10px
 
+`fz11` - устанавливает размер шрифта в 11px
+
 `fz12` - устанавливает размер шрифта в 12px
 
 #### Классы для изменения междустрочного интервала.
@@ -53,6 +55,7 @@ order: 3
   <div class="text-info text-center">text-info text-center</div>
   <div class="text-muted text-right">text-muted text-right</div>
   <div class="text-grey text-right">text-grey text-right</div>
+  <div class="text-dark-red text-left">text-dark-red text-left</div>
   <div class="text-uppercase">text-<span class="text-clear">clear text</span>-uppercase</div>
 {% endhighlight %}
 

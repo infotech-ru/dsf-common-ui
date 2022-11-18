@@ -136,6 +136,7 @@ $paddingLeftSizes: 0, 5, 10;
 .text-bold             { font-weight: 700; }
 
 .fz10 { font-size: rem(10); }
+.fz11 { font-size: rem(11); }
 .fz12 { font-size: rem(12); }
 .lh12 { line-height: 12px; }
 .lh14 { line-height: 14px; }
@@ -162,34 +163,36 @@ $paddingLeftSizes: 0, 5, 10;
   &-top{
     border-top: 1px solid _brand-palette(border);
     &__none{
-      border-top: none;
+      border-top: none !important;
     }
   }
   &-right{
     border-right: 1px solid _brand-palette(border);
     &__none {
-      border-right: none;
+      border-right: none !important;
     }
   }
   &-bottom{
     border-bottom: 1px solid _brand-palette(border);
     &__none {
-      border-bottom: none;
+      border-bottom: none !important;
     }
   }
   &-left{
     border-left: 1px solid _brand-palette(border);
     &__none {
-      border-left: none;
+      border-left: none !important;
     }
   }
   &__none{
-    border: none;
+    border: none !important;
   }
 }
 
-@each $colorTools in default, primary, success, danger, warning, info, 'muted', 'orange', 'grey', 'clear' {
+@each $colorTools in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'muted', 'orange', 'grey', 'dark-red', 'clear' {
+
   @include svg-icon-variant('.svg-#{$colorTools}', _colorTools(#{$colorTools}_svg));
+  
   .text-#{$colorTools}{
     color: _colorTools(#{$colorTools}_color);
   }

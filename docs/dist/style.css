@@ -7827,12 +7827,21 @@ tfoot td:first-child {
   display: none;
 }
 
-.table__helpIcon {
-  height: 12px;
+.tableHelpIcon {
+  bottom: 7px;
+  display: inline-flex;
+  height: 8px;
+  right: 5px;
+  position: absolute;
+  width: 8px;
 }
-.table__helpIcon svg {
-  height: 12px;
+.tableHelpIcon svg {
+  height: 8px;
+  width: 8px;
   --svg-icon-fill: #333333;
+}
+.tableHelpIcon_td {
+  padding-right: 15.5px;
 }
 
 .collapseTrIcon {
@@ -7865,7 +7874,6 @@ tfoot td:first-child {
 .collapseTdIcon {
   display: inline-flex;
   height: 14px;
-  top: 2px;
   width: 14px;
 }
 .collapseTdIcon svg {
@@ -7873,15 +7881,18 @@ tfoot td:first-child {
   width: 14px;
 }
 .collapseTdIcon_link {
-  bottom: 14px;
+  bottom: 5px;
   display: block;
   height: 14px;
   position: absolute;
-  right: 5px;
+  right: 6px;
   width: 14px;
 }
 .collapseTdIcon_td {
   padding-right: 21.5px;
+}
+.collapseTdIcon_td.tableHelpIcon_td {
+  padding-right: 31px;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -8658,6 +8669,10 @@ tfoot td:first-child {
   font-size: 0.625rem;
 }
 
+.fz11 {
+  font-size: 0.6875rem;
+}
+
 .fz12 {
   font-size: 0.75rem;
 }
@@ -8733,28 +8748,28 @@ tfoot td:first-child {
   border-top: 1px solid #333333;
 }
 .border-top__none {
-  border-top: none;
+  border-top: none !important;
 }
 .border-right {
   border-right: 1px solid #333333;
 }
 .border-right__none {
-  border-right: none;
+  border-right: none !important;
 }
 .border-bottom {
   border-bottom: 1px solid #333333;
 }
 .border-bottom__none {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 .border-left {
   border-left: 1px solid #333333;
 }
 .border-left__none {
-  border-left: none;
+  border-left: none !important;
 }
 .border__none {
-  border: none;
+  border: none !important;
 }
 
 .svg-default svg,
@@ -8917,6 +8932,24 @@ tfoot td:first-child {
 
 .border-grey {
   border-color: #cccccc;
+}
+
+.svg-dark-red svg,
+.svg-dark-red.svg--icon svg {
+  --svg-icon-fill: #762624;
+  --svg-icon-stroke: #762624;
+}
+
+.text-dark-red {
+  color: #762624;
+}
+
+.bg-dark-red {
+  background-color: #762624;
+}
+
+.border-dark-red {
+  border-color: #762624;
 }
 
 .svg-clear svg,

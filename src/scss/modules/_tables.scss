@@ -304,11 +304,20 @@ tfoot td{
   }
 }
 
-.table__helpIcon{
-  height: 12px;
+.tableHelpIcon{
+  bottom: #{calc(_brand-sizes(table_paddingY) + 2)}px;
+  display: inline-flex;
+  height: #{_brand-sizes(tableHelpIcon_size)}px;
+  right: #{_brand-sizes(table_paddingY)}px;
+  position: absolute;
+  width: #{_brand-sizes(tableHelpIcon_size)}px;
   svg{
-    height: 12px;
+    height: #{_brand-sizes(tableHelpIcon_size)}px;
+    width: #{_brand-sizes(tableHelpIcon_size)}px;
     #{--svg-icon-fill}: _brand-palette(tableHelpIcon_bgc);
+  }
+  &_td {
+    padding-right: #{calc(_brand-sizes(tableHelpIcon_size) + _brand-sizes(table_paddingY) * 1.5)}px;
   }
 }
 
@@ -343,7 +352,6 @@ tfoot td{
 .collapseTdIcon{
   display: inline-flex;
   height: #{_brand-sizes(collapseTdIcon_size)}px;
-  top: 2px;
   width: #{_brand-sizes(collapseTdIcon_size)}px;
   svg{
     height: #{_brand-sizes(collapseTdIcon_size)}px;
@@ -356,10 +364,13 @@ tfoot td{
     position: absolute;
     // top: 50%;
     // margin-top: #{calc(_brand-sizes(collapseTdIcon_size) * .5 * -1)}px;
-    right: #{_brand-sizes(table_paddingY)}px;
+    right: #{_brand-sizes(table_paddingX)}px;
     width: #{_brand-sizes(collapseTdIcon_size)}px;
   }
   &_td{
     padding-right: #{calc(_brand-sizes(collapseTdIcon_size) + _brand-sizes(table_paddingY) * 1.5)}px;
+    &.tableHelpIcon_td{ 
+      padding-right: #{calc(_brand-sizes(collapseTdIcon_size) + _brand-sizes(tableHelpIcon_size) + _brand-sizes(table_paddingX) * 1.5)}px;
+    }
   }
 }
