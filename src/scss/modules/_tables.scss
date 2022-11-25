@@ -9,7 +9,6 @@
 // Tables
 // --------------------------------------------------
 
-
 .table {
   background-color: transparent;
   border-collapse: separate; // fix border for position:sticky
@@ -30,7 +29,6 @@ caption {
   padding-bottom: 5px;
   text-align: left;
 }
-
 
 th,
 td {
@@ -172,18 +170,36 @@ tbody th {
   }
 }
 
-tfoot th,
-tfoot td{
-  background-color: _brand-table(tfoot_bgc);
-  color: _brand-table(tfoot_color);
-  font-size: rem(_fontSizes(tfoot));
-  font-weight: 700;
-  height: rem(_brand-sizes(tableCell_height));
-  vertical-align: middle;
-  &:first-child {
-    left: 0;
-    text-align: left;
-    z-index: 1;
+tfoot { 
+  th,
+  td{
+    background-color: _brand-table(tfoot_bgc);
+    bottom: 0;
+    color: _brand-table(tfoot_color);
+    font-size: rem(_fontSizes(tfoot));
+    font-weight: 700;
+    height: rem(_brand-sizes(tableCell_height));
+    vertical-align: middle;
+    &:first-child {
+      left: 0;
+      text-align: left;
+      z-index: 1;
+    }
+    tr{ 
+      &:nth-child(1) {
+        th {
+          &:first-child {
+            z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+            &[rowspan="2"] {
+              z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+            }
+            &[rowspan="3"] {
+              z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -289,6 +305,13 @@ tfoot td{
     }
   }
   thead{
+    th{
+      position: sticky;
+    }
+  }
+}
+.table__tfootSticky{
+  > tfoot{ 
     th{
       position: sticky;
     }

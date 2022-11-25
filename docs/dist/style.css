@@ -7755,6 +7755,7 @@ tbody th:first-child {
 tfoot th,
 tfoot td {
   background-color: #EEEEEE;
+  bottom: 0;
   color: #333333;
   font-size: 0.8125rem;
   font-weight: 700;
@@ -7766,6 +7767,18 @@ tfoot td:first-child {
   left: 0;
   text-align: left;
   z-index: 1;
+}
+tfoot th tr:nth-child(1) th:first-child,
+tfoot td tr:nth-child(1) th:first-child {
+  z-index: 1003;
+}
+tfoot th tr:nth-child(1) th:first-child[rowspan="2"],
+tfoot td tr:nth-child(1) th:first-child[rowspan="2"] {
+  z-index: 1003;
+}
+tfoot th tr:nth-child(1) th:first-child[rowspan="3"],
+tfoot td tr:nth-child(1) th:first-child[rowspan="3"] {
+  z-index: 1003;
 }
 
 .table-striped > tbody > tr:nth-of-type(2n+1) td,
@@ -7815,6 +7828,10 @@ tfoot td:first-child {
 }
 .table-sticky-head-left_col thead th,
 .wrapper__tableSticky thead th {
+  position: sticky;
+}
+
+.table__tfootSticky > tfoot th {
   position: sticky;
 }
 
