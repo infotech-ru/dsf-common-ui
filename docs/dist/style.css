@@ -7673,6 +7673,7 @@ thead th {
   font-size: 0.6875rem;
   font-weight: 700;
   height: 2.5rem;
+  position: sticky;
   vertical-align: bottom;
 }
 thead th:first-child {
@@ -7704,7 +7705,6 @@ thead th .asc:after {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168' stroke='%23333' fill='none' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M5.03333 16.6668V3.33346' stroke='%23333' fill='none' /%3E%3Cpath d='M9.16669 5.00012H12.5' stroke='%230094ff' fill='none' /%3E%3Cpath d='M9.16669 10.0001H14.1667' stroke='%230094ff' fill='none' /%3E%3Cpath d='M9.16669 15.0001H17.5' stroke='%230094ff' fill='none' /%3E%3C/svg%3E");
 }
 thead tr th {
-  top: 0;
   z-index: 1001;
 }
 thead tr th:first-child {
@@ -7719,14 +7719,8 @@ thead tr:nth-child(1) th:first-child[rowspan="2"] {
 thead tr:nth-child(1) th:first-child[rowspan="3"] {
   z-index: 1003;
 }
-thead tr:nth-child(2) th {
-  top: 40px;
-}
 thead tr:nth-child(2) th:first-child {
   z-index: 1002;
-}
-thead tr:nth-child(3) th {
-  top: 60px;
 }
 .table__border thead tr:first-child th {
   border-top: 1px solid #dddddd;
@@ -7826,9 +7820,17 @@ tfoot td tr:nth-child(1) th:first-child[rowspan="3"] {
   position: sticky;
   z-index: 1000;
 }
-.table-sticky-head-left_col thead th,
-.wrapper__tableSticky thead th {
-  position: sticky;
+.table-sticky-head-left_col thead tr:nth-child(1) th,
+.wrapper__tableSticky thead tr:nth-child(1) th {
+  top: 0;
+}
+.table-sticky-head-left_col thead tr:nth-child(2) th,
+.wrapper__tableSticky thead tr:nth-child(2) th {
+  top: 40px;
+}
+.table-sticky-head-left_col thead tr:nth-child(3) th,
+.wrapper__tableSticky thead tr:nth-child(3) th {
+  top: 60px;
 }
 
 .table__tfootSticky > tfoot th {

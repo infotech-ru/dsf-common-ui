@@ -73,6 +73,7 @@ thead {
     font-size: rem(_fontSizes(thead));
     font-weight: 700;
     height: rem(_brand-sizes(tableCell_height));
+    position: sticky;
     vertical-align: bottom;
     &:first-child {
       left: 0;
@@ -108,7 +109,7 @@ thead {
   }
   tr{
     th{
-      top: 0;
+      // top: 0;
       z-index: _zindex(tableStickyTheadTh);
       &:first-child {
         left: 0;
@@ -129,15 +130,10 @@ thead {
     }
     &:nth-child(2){
       th{
-        top: 40px;
+        // top: 40px;
         &:first-child {
           z-index: _zindex(tableStickyTheadThFirstChild);
         }
-      }
-    }
-    &:nth-child(3){
-      th{
-        top: 60px;
       }
     }
     &:first-child{
@@ -305,8 +301,25 @@ tfoot {
     }
   }
   thead{
-    th{
-      position: sticky;
+    // th{
+    //   position: sticky;
+    // }
+    tr{ 
+      &:nth-child(1) { 
+        th {
+          top: 0;
+        }
+      }
+      &:nth-child(2) {
+        th {
+          top: 40px;
+        }
+      }
+      &:nth-child(3) {
+        th {
+          top: 60px;
+        }
+      }
     }
   }
 }
