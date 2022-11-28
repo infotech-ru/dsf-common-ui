@@ -5,7 +5,13 @@ category: tables
 anchor: table-bgc
 order: 5
 ---
-<p>Для изменения фона таблиц используется классы модификаторы: `table__light-yellow`</p>
+<p>Для изменения фона таблиц используется классы модификаторы: 
+  `table__light-yellow`
+  `table__light-red`
+  `table__red`
+  `table__rose`
+</p>
+<p>Класс модификатор могут использоваться для изменения фона конкретней ячеейки таблицы</p>
 <div class="bs-docs-example">
   <table class="table table__light-yellow">
     <thead>
@@ -33,6 +39,44 @@ order: 5
         <td>lorem</td>
         <td>lorem</td>
         <td>lorem</td>
+        <td>lorem</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+      </tr>
+    </tfoot>
+  </table>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+      </tr>
+      <tr>
+        <td>lorem</td>
+        <td class="table__red">lorem</td>
+        <td>lorem</td>
+        <td class="table__light-yellow">lorem</td>
+      </tr>
+      <tr>
+        <td class="table__rose">lorem</td>
+        <td>lorem</td>
+        <td class="table__light-red">lorem</td>
         <td>lorem</td>
       </tr>
     </tbody>

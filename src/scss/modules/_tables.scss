@@ -211,6 +211,9 @@ tfoot {
 }
 
 @include table-row-variant('light-yellow', _brand-colors(_light-yellow));
+@include table-row-variant('light-red', _brand-colors(_light-red));
+@include table-row-variant('red', _brand-colors(_red));
+@include table-row-variant('rose', _brand-colors(_rose));
 // @include table-row-variant('success', $state-success-bg);
 // @include table-row-variant('info', $state-info-bg);
 // @include table-row-variant('warning', $state-warning-bg);

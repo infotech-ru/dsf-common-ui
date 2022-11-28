@@ -7,4 +7,10 @@
       background-color: $background;
     }
   }
+  th.table__#{$state},
+  th.table__#{$state}:first-child,
+  td.table__#{$state}:first-child,
+  td.table__#{$state} { 
+    background-color: $background;
+  }
 }
