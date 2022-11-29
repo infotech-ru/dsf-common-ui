@@ -160,6 +160,9 @@ tbody th {
   vertical-align: middle;
   &:first-child {
     text-align: left;
+    &.text-center{
+      text-align: center;
+    }
     .table__firstChildMinWidth &{
       min-width: 160px;
     }

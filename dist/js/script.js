@@ -1,6 +1,10 @@
 var DSFUI = (function (exports) {
   'use strict';
 
+  function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+  function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { babelHelpers.defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
   function itemActionMenu() {
     $('.js-actionMenu').popover({
       container: 'body',
@@ -64,6 +68,14 @@ var DSFUI = (function (exports) {
       _loop(i);
     }
   }
+  function initTreeTable(options) {
+    $("table.js-tree-table").treetable(_objectSpread({
+      expandable: true,
+      indent: 34,
+      expanderTemplate: "<span class='collapseTrIcon'><svg width='14px' height='14px'><use xlink:href='dist/sprite.symbol.svg#2colors-plus__24vb'></use></svg ></span>",
+      indenterTemplate: "<a class='collapseTrIcon_link' href=\"#\"></a>"
+    }, options));
+  }
 
   function init() {
     $('[data-toggle="tooltip"]').tooltip();
@@ -98,8 +110,12 @@ var DSFUI = (function (exports) {
     CopyToClipboard();
     init();
   }
+  function tablesInit() {
+    initTreeTable();
+  }
 
   exports.OnLoad = OnLoad;
+  exports.tablesInit = tablesInit;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 

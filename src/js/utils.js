@@ -62,3 +62,13 @@ export function CopyToClipboard() {
     });
   }
 }
+
+export function initTreeTable(options) {
+  $("table.js-tree-table").treetable({
+    expandable: true,
+    indent: 34,
+    expanderTemplate: "<span class='collapseTrIcon'><svg width='14px' height='14px'><use xlink:href='dist/sprite.symbol.svg#2colors-plus__24vb'></use></svg ></span>",
+    indenterTemplate: "<a class='collapseTrIcon_link' href=\"#\"></a>",
+    ...options,
+  });
+}

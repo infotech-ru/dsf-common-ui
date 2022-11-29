@@ -6,6 +6,518 @@ anchor: table-treeTable
 order: 7
 ---
 
-<p>Для вывода строк таблицы в виде дерева - со скрытием подстрок исопльзуем скрипт jQuery treetable. Для этого таблице дописываем класс `js-tree-table` и инициализируем скрипт с помощью initTreeTable();
+<p>Для вывода строк таблицы в виде дерева - со скрытием подстрок используем скрипт `jQuery treetable`. Для этого таблице дописываем класс `js-tree-table` и инициализируем скрипт с помощью initTreeTable();
 При необходимости делаем import {initTreeTable} from "../utils";
 </p>
+<p>После этого строкам родителям задаем data-tt-id="уникальное_id_родителя", a для подстрок задаем data-tt-parent-id="уникальное_id_родителя"</p>
+
+<div class="bs-docs-example">
+  <div class="wrapper__tableSticky" style="max-height: 40vh;">
+    <table class="table table__border js-tree-table treetable">
+      <thead>
+          <tr>
+              <th style="width:20%;" rowspan="2">Заголовок01</th>
+              <th class="text-center" colspan="9">Заголовок02</th>
+              <th class="text-center" colspan="4">Заголовок03</th>
+              <th class="text-center" colspan="2">Заголовок04</th>
+          </tr>
+          <tr>
+              <th class="border-left__none">&nbsp;</th>
+              <th class="text-center">
+                      Подзаголовок01
+              </th>
+              <th class="text-center">
+                      Подзаголовок02
+              </th>
+              <th>
+                      %
+              </th>
+              <th class="text-center">    Подзаголовок03 
+              </th>
+              <th>    %
+              </th>
+              <th class="text-center">    Подзаголовок04
+              </th>
+              <th>    %
+              </th>
+              <th class="text-center">    Подзаголовок05 
+              </th>
+
+              <th class="text-center">    Подзаголовок06
+              </th>
+              <th>    Подзаголовок07
+              </th>
+              <th class="text-center">    Подзаголовок08
+              </th>
+
+              <th class="tableHelpIcon_td">    %
+              </th>
+              <th class="text-center">    Подзаголовок09
+              </th>
+              <th class="text-center">    Подзаголовок10
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="tr__master collapsed" data-tt-id="distributor-1">
+              <td class="nowrap">ООО "Человек и Ко" </td>
+              <td class="text-center">
+              </td>
+              <td class="text-center">    639
+              </td>
+              <td class="text-center">
+                  221
+              </td>
+              <td>
+                  <span>35%</span>
+              </td>
+              <td class="text-center">
+                  50 </td>
+              <td>
+                  <span>8%</span>
+              </td>
+              <td class="text-center">
+                  28 </td>
+              <td>
+                  <span>4%</span>
+              </td>
+              <td class="text-center nowrap">
+                  2
+              </td>
+
+              <td class="text-center">
+                  57
+              </td>
+              <td>
+                  +29 </td>
+              <td class="text-center">
+                  58 </td>
+              <td>
+                  98%
+              </td>
+              <td class="text-center nowrap">
+                  57 </td>
+              <td class="text-center">
+                  54 </td>
+          </tr>
+          <tr class="tr__slave" data-tt-id="bdm-1-42" data-tt-parent-id="distributor-1">
+              <td class="nowrap">
+                  Иванова Мария </td>
+              <td class="text-center">
+              </td>
+              <td class="text-center">
+                  125
+              </td>
+              <td class="text-center">
+                  84
+              </td>
+              <td>
+                  <span>67%</span>
+              </td>
+              <td class="text-center">
+                  2 </td>
+              <td>
+                  <span>2%</span>
+              </td>
+              <td class="text-center">
+                  4 </td>
+              <td>
+                  <span>3%</span>
+              </td>
+              <td class="text-center nowrap">
+                  0
+              </td>
+
+              <td class="text-center">
+                  12
+              </td>
+              <td>
+                  +8 </td>
+              <td class="text-center">
+                  12 </td>
+              <td>
+                  100%
+              </td>
+
+              <td class="text-center nowrap">
+                  12 </td>
+              <td class="text-center" data-name-td="bdm">
+                  12 </td>
+          </tr>
+          <tr class="tr__subSlave leaf" data-tt-id="dealer-11" data-tt-parent-id="bdm-1-42">
+              <td class="nowrap">
+                  <span>Дилер 11</span>
+              </td>
+              <td class="text-center">&nbsp;
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center nowrap">0
+              </td>
+              <td class="text-center">0
+              </td>
+              <td>
+              </td>
+              <td class="text-center">
+                  0 </td>
+              <td>
+                  0%
+              </td>
+              <td class="text-center nowrap">
+                  0 </td>
+              <td class="text-center" data-name-td="bdm">0
+              </td>
+          </tr>
+          <tr class="tr__subSlave leaf" data-tt-id="dealer-143" data-tt-parent-id="bdm-1-42">
+              <td class="nowrap">
+                  <span>Дилер 143</span>
+              </td>
+              <td class="text-center">&nbsp;
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center nowrap">
+                  0
+              </td>
+
+              <td class="text-center">0
+              </td>
+              <td>
+              </td>
+              <td class="text-center">
+                  1 </td>
+              <td>
+                  0%
+              </td>
+
+              <td class="text-center nowrap">
+                  — </td>
+              <td class="text-center" data-name-td="bdm">
+                  — </td>
+          </tr>
+          <tr class="tr__slave" data-tt-id="bdm-1-1967" data-tt-parent-id="distributor-1">
+              <td class="nowrap">
+                  Иванов Иван </td>
+              <td class="text-center">
+              </td>
+              <td class="text-center">
+                  69
+              </td>
+              <td class="text-center">
+                  45
+              </td>
+              <td>
+                  <span>27%</span>
+              </td>
+              <td class="text-center">
+                  5 </td>
+              <td>
+                  <span>3%</span>
+              </td>
+              <td class="text-center">
+                  8 </td>
+              <td>
+                  <span>5%</span>
+              </td>
+              <td class="text-center nowrap">
+                  1
+              </td>
+
+              <td class="text-center">
+                  22
+              </td>
+              <td>
+                  +14 </td>
+              <td class="text-center">
+                  24 </td>
+              <td>
+                  92%
+              </td>
+
+              <td class="text-center nowrap">
+                  22 </td>
+              <td class="text-center" data-name-td="bdm">
+                  22 </td>
+          </tr>
+          <tr class="tr__subSlave leaf" data-tt-id="dealer-136" data-tt-parent-id="bdm-1-1967">
+              <td class="nowrap">
+                  <span>Дилер 136</span>
+              </td>
+              <td class="text-center">
+                  <span class="state state-success">&nbsp;</span>
+              </td>
+              <td class="text-center">
+                  3
+              </td>
+              <td class="text-center">
+                  2
+              </td>
+              <td>
+                  <span>67%</span>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+                  <span>0%</span>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+                  <span>0%</span>
+              </td>
+              <td class="text-center nowrap">
+                  1
+              </td>
+
+              <td class="text-center">1
+              </td>
+              <td>
+                  +1 </td>
+              <td class="text-center">
+                  1 </td>
+              <td>
+                  100%
+              </td>
+
+              <td class="text-center nowrap">
+                  1 </td>
+              <td class="text-center" data-name-td="bdm">1
+              </td>
+          </tr>
+          <tr class="tr__subSlave leaf" data-tt-id="dealer-140" data-tt-parent-id="bdm-1-1967">
+              <td class="nowrap">
+                  <span>Дилер 140</span>
+              </td>
+              <td class="text-center">
+                  &nbsp;
+              </td>
+              <td class="text-center">
+                  2
+              </td>
+              <td class="text-center">1
+              </td>
+              <td>
+                  <span>50%</span>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+                  <span>0%</span>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+                  <span>0%</span>
+              </td>
+              <td class="text-center nowrap">0
+              </td>
+
+              <td class="text-center">1
+              </td>
+              <td>
+                  +1 </td>
+              <td class="text-center">
+                  1 </td>
+              <td>
+                  100%
+              </td>
+
+              <td class="text-center nowrap">
+                  1 </td>
+              <td class="text-center" data-name-td="bdm">1
+              </td>
+          </tr>
+          <tr class="tr__subSlave leaf" data-tt-id="dealer-152" data-tt-parent-id="bdm-1-1967">
+              <td class="nowrap">
+                  
+                  <span>Дилер 152</span>
+              </td>
+              <td class="text-center">
+                  &nbsp;
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center nowrap">
+                  0
+              </td>
+
+              <td class="text-center">
+                  0
+              </td>
+              <td>
+              </td>
+              <td class="text-center">
+                  0 </td>
+              <td>
+                  0%
+              </td>
+
+              <td class="text-center nowrap">
+                  — </td>
+              <td class="text-center">
+                  <span class="label label-success">0</span>
+              </td>
+          </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+              <th>Итого</th>
+              <th>&nbsp;</th>
+              <th class="text-center">
+                  <div class="pt-5 pb-5 nowrap">644
+                  </div>
+                  <div>
+                      -247 </div>
+              </th>
+              <th class="text-center">
+                  <div class="pt-5 pb-5 nowrap">
+                      <span>222</span>
+                  </div>
+                  <div class="fz11">
+                      <span class="text-danger">-123</span>
+                  </div>
+              </th>
+              <th>
+                  <div class="pt-5 pb-5 nowrap">
+                      <span>34%</span>
+                  </div>
+                  <div class="fz11">
+                      <span class="text-danger">-36%</span>
+                  </div>
+              </th>
+              <th class="text-center">
+                  <div class="pt-5 pb-5 nowrap">
+                      50 </div>
+                  <div class="fz11">
+                      <span class="text-danger">-3</span>
+                  </div>
+              </th>
+              <th>
+                  <div class="pt-5 pb-5 nowrap">
+                      <span>8%</span>
+                  </div>
+                  <div class="fz11">
+                      <span class="text-danger">-6%</span>
+                  </div>
+              </th>
+              <th class="text-center">
+                  <div class="pt-5 pb-5 nowrap">
+                      28 </div>
+                  <div class="fz11">
+                      <span class="text-success">+10</span>
+                  </div>
+              </th>
+              <th>
+                  <div class="pt-5 pb-5 nowrap">
+                      <span>4%</span>
+                  </div>
+                  <div class="fz11">
+                      <span class="dark-red">0%</span>
+                  </div>
+              </th>
+              <th class="text-center">
+                  <div class="pt-5 pb-5 nowrap">
+                      2
+                  </div>
+                  <div class="fz11">
+                      <span class="text-success">+1</span>
+                  </div>
+              </th>
+
+              <th class="text-center">
+                  <div class="pt-5 pb-5 nowrap">
+                      57
+                  </div>
+              </th>
+
+              <th>
+                  <div class="pt-5 pb-5 nowrap">
+                      +29 </div>
+              </th>
+
+              <th class="text-center">
+                  <div class="pt-5 pb-5 nowrap">
+                      58 </div>
+                  <div class="fz11">
+                      <span class="text-success">+10</span>
+                  </div>
+              </th>
+
+              <th>
+                  <div class="pt-5 pb-5 nowrap">
+                      48%
+                  </div>
+              </th>
+
+
+              <th class="text-center">
+                  <div class="pt-5 pb-5 nowrap">
+                      57 </div>
+                  <div class="fz11">
+                      <span class="text-success">+6</span>
+                  </div>
+              </th>
+              <th class="text-center">
+                  <div class="pt-5 pb-5 nowrap">
+                      54 </div>
+                  <div class="fz11">
+                      <span class="text-success">+3</span>
+                  </div>
+              </th>
+          </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

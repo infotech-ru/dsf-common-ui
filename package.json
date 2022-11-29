@@ -1,6 +1,6 @@
 {
   "name": "dsf-common-ui",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Styles, scripts, vectors for dsf projects",
   "author": "Infotech teams",
   "repository": "github:infotech-ru/dsf-common-ui",
@@ -36,6 +36,7 @@
     "terser": "^5.14.1"
   },
   "dependencies": {
+    "jquery-treetable": "^3.2.0-1",
     "rollup": "^2.75.7",
     "svg-sprite": "^1.5.4"
   },
