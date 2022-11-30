@@ -76,7 +76,7 @@ thead {
     position: sticky;
     vertical-align: bottom;
     &:first-child {
-      left: 0;
+      // left: 0;
       text-align: left;
     }
     .desc,
@@ -108,34 +108,6 @@ thead {
     }
   }
   tr{
-    th{
-      // top: 0;
-      z-index: _zindex(tableStickyTheadTh);
-      &:first-child {
-        left: 0;
-      }
-    }
-    &:nth-child(1) {
-      th {
-        &:first-child {
-          z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
-          &[rowspan="2"] {
-            z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
-          }
-          &[rowspan="3"] {
-            z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
-          }
-        }
-      }
-    }
-    &:nth-child(2){
-      th{
-        // top: 40px;
-        &:first-child {
-          z-index: _zindex(tableStickyTheadThFirstChild);
-        }
-      }
-    }
     &:first-child{
       th{ 
         .table__border & {
@@ -230,8 +202,6 @@ tfoot {
 }
 
 
-
-
 .table-responsive {
   min-height: .01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
   overflow-x: auto;
@@ -307,18 +277,34 @@ tfoot {
     }
   }
   thead{
-    // th{
+    th{
     //   position: sticky;
-    // }
+      z-index: _zindex(tableStickyTheadTh);
+      &:first-child {
+        left: 0;
+      }
+    }
     tr{ 
       &:nth-child(1) { 
         th {
           top: 0;
+          &:first-child {
+              z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+              &[rowspan="2"] {
+                z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+              }
+              &[rowspan="3"] {
+                z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+              }
+            }
         }
       }
       &:nth-child(2) {
         th {
           top: 40px;
+          &:first-child {
+            z-index: _zindex(tableStickyTheadThFirstChild);
+          }
         }
       }
       &:nth-child(3) {
