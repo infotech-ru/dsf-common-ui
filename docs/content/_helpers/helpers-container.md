@@ -12,6 +12,8 @@ order: 4
 `d-flex` - устанавливает display: flex
 `d-block` - устанавливает display: block
 `d-inline-block` - устанавливает display: inline-block
+`d-inline-flex` - устанавливает display: inline-flex
+`d-grid` - устанавливает display: grid
 
 `justify-flex-start` устанавливает justify-content: flex-end;
 `justify-space-between` устанавливает justify-content: space-between;

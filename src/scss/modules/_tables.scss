@@ -185,6 +185,20 @@ tfoot {
     }
   }
 }
+.table__stripedReverse{
+  & > tbody >{
+    tr:nth-of-type(2n+1) {
+      td{ 
+        background-color: _brand-table(tbody_bgc);
+      }
+    }
+    tr:nth-of-type(2n) {
+      td{ 
+        background-color: _brand-table(tdStrip_bgc);
+      }
+    }
+  }
+}
 
 @include table-row-variant('light-yellow', _brand-colors(_light-yellow));
 @include table-row-variant('light-red', _brand-colors(_light-red));

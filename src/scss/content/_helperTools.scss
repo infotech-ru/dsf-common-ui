@@ -142,8 +142,12 @@ $paddingLeftSizes: 0, 5, 10;
 .lh14 { line-height: 14px; }
 .lh18 { line-height: 18px; }
 
-.d-none                { display: none !important;}
+.d-none                { display: none !important; }
 .d-flex                { display: flex; }
+.d-inlineflex          { display: inline-flex; }
+.d-inline-block        { display: inline-block;}
+.d-block               { display: block;}
+.d-grid                { display: grid;}
 .justify-flex-start    { justify-content: flex-end; }
 .justify-space-between { justify-content: space-between; }
 .justify-flex-end      { justify-content: flex-end; }
