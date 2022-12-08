@@ -343,7 +343,7 @@ $brand-table: (
   thead_color:                            map-get($brand-colors, _dark-grey),
   tfoot_bgc:                              map-get($brand-colors, _light-grey3),
   tfoot_color:                            map-get($brand-colors, _dark-grey),
-  tdStrip_bgc:                            map-get($brand-colors, _light-grey2),
+  tdStrip_bgc:                            map-get($brand-colors, _light-grey),
   tdHover_bgc:                            map-get($brand-colors, _light-grey2),
 );
 

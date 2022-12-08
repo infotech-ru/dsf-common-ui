@@ -7675,7 +7675,7 @@ thead th {
   font-weight: 700;
   height: 2.5rem;
   position: sticky;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 thead th:first-child {
   text-align: left;
@@ -7683,25 +7683,25 @@ thead th:first-child {
 thead th .desc,
 thead th .asc {
   position: relative;
-  padding-right: 25px;
+  padding-left: 25px;
 }
-thead th .desc:after,
-thead th .asc:after {
+thead th .desc:before,
+thead th .asc:before {
   background-size: contain;
   background-repeat: no-repeat;
   content: "";
   display: block;
   position: absolute;
-  right: 0;
+  left: 0;
   margin-top: -10px;
   top: 50%;
   height: 20px;
   width: 20px;
 }
-thead th .desc:after {
+thead th .desc:before {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 6L6 4L4 6' stroke='%23333' fill='none' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M6.04 4.5V20.5' stroke='%23333' fill='none' /%3E%3Cpath d='M11 18H21' stroke='%230094ff' fill='none' /%3E%3Cpath d='M11 12H17' stroke='%230094ff' fill='none' /%3E%3Cpath d='M11 6H15' stroke='%230094ff' fill='none' /%3E%3C/svg%3E");
 }
-thead th .asc:after {
+thead th .asc:before {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168' stroke='%23333' fill='none' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M5.03333 16.6668V3.33346' stroke='%23333' fill='none' /%3E%3Cpath d='M9.16669 5.00012H12.5' stroke='%230094ff' fill='none' /%3E%3Cpath d='M9.16669 10.0001H14.1667' stroke='%230094ff' fill='none' /%3E%3Cpath d='M9.16669 15.0001H17.5' stroke='%230094ff' fill='none' /%3E%3C/svg%3E");
 }
 .table__border thead tr:first-child th {
@@ -7769,7 +7769,14 @@ tfoot td tr:nth-child(1) th:first-child[rowspan="3"] {
 
 .table-striped > tbody > tr:nth-of-type(2n+1) td,
 .table__striped > tbody > tr:nth-of-type(2n+1) td {
-  background-color: #F5F5F5;
+  background-color: #f9f9f9;
+}
+
+.table__stripedReverse > tbody > tr:nth-of-type(2n+1) td {
+  background-color: #ffffff;
+}
+.table__stripedReverse > tbody > tr:nth-of-type(2n) td {
+  background-color: #f9f9f9;
 }
 
 .table__light-yellow th,
@@ -7913,9 +7920,10 @@ td.table__rose {
 }
 
 .tableHelpIcon {
-  bottom: 7px;
+  bottom: 50%;
   display: inline-flex;
   height: 8px;
+  margin-bottom: -4px;
   right: 5px;
   position: absolute;
   width: 8px;
@@ -7966,9 +7974,10 @@ td.table__rose {
   width: 14px;
 }
 .collapseTdIcon_link {
-  bottom: 5px;
+  bottom: 50%;
   display: block;
   height: 14px;
+  margin-bottom: -7px;
   position: absolute;
   right: 6px;
   width: 14px;
@@ -8780,6 +8789,22 @@ td.table__rose {
 
 .d-flex {
   display: flex;
+}
+
+.d-inlineflex {
+  display: inline-flex;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-grid {
+  display: grid;
 }
 
 .justify-flex-start {

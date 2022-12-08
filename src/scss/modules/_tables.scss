@@ -74,7 +74,7 @@ thead {
     font-weight: 700;
     height: rem(_brand-sizes(tableCell_height));
     position: sticky;
-    vertical-align: bottom;
+    vertical-align: middle;
     &:first-child {
       // left: 0;
       text-align: left;
@@ -82,14 +82,14 @@ thead {
     .desc,
     .asc{
       position: relative;
-      padding-right: #{calc(_brand-sizes(tableSortIcon_size) + 5)}px;
-      &:after{
+      padding-left: #{calc(_brand-sizes(tableSortIcon_size) + 5)}px;
+      &:before{
         background-size: contain;
         background-repeat: no-repeat;
         content: '';
         display: block;
         position: absolute;
-        right: 0;
+        left: 0;
         margin-top: #{calc(_brand-sizes(tableSortIcon_size) * .5 * -1)}px;
         top: 50%;
         height: #{_brand-sizes(tableSortIcon_size)}px;
@@ -97,12 +97,12 @@ thead {
       }
     }
     .desc{
-      &:after{
+      &:before{
         background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6L6 4L4 6" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.04 4.5V20.5" stroke="#333" fill="none" /><path d="M11 18H21" stroke="#0094ff" fill="none" /><path d="M11 12H17" stroke="#0094ff" fill="none" /><path d="M11 6H15" stroke="#0094ff" fill="none" /></svg>');
       }
     }
     .asc{
-      &:after{
+      &:before{
         background-image: svg-url('<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M5.03333 16.6668V3.33346" stroke="#333" fill="none" /><path d="M9.16669 5.00012H12.5" stroke="#0094ff" fill="none" /><path d="M9.16669 10.0001H14.1667" stroke="#0094ff" fill="none" /><path d="M9.16669 15.0001H17.5" stroke="#0094ff" fill="none" /></svg>');
       }
     }
@@ -346,9 +346,10 @@ tfoot {
 }
 
 .tableHelpIcon{
-  bottom: #{calc(_brand-sizes(table_paddingY) + 2)}px;
+  bottom: 50%;
   display: inline-flex;
   height: #{_brand-sizes(tableHelpIcon_size)}px;
+  margin-bottom: #{calc(_brand-sizes(tableHelpIcon_size) * .5 * -1)}px;
   right: #{_brand-sizes(table_paddingY)}px;
   position: absolute;
   width: #{_brand-sizes(tableHelpIcon_size)}px;
@@ -399,9 +400,10 @@ tfoot {
     width: #{_brand-sizes(collapseTdIcon_size)}px;
   }
   &_link{
-    bottom: #{_brand-sizes(table_paddingY)}px;
+    bottom: 50%;
     display: block;
     height: #{_brand-sizes(collapseTdIcon_size)}px;
+    margin-bottom: #{_brand-sizes(collapseTdIcon_size) * 0.5 * -1}px;
     position: absolute;
     // top: 50%;
     // margin-top: #{calc(_brand-sizes(collapseTdIcon_size) * .5 * -1)}px;
