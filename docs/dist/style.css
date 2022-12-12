@@ -6211,7 +6211,7 @@ tbody.collapse.in {
 /* path: dsf-common-ui/src/scss/modules/_buttons.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.btn-link, .btn-info, .btn-warning, .btn-danger, .btn-success, .btn-primary, .btn-group_theme > [class^=btn].active, .btn-default, .btn-group_theme > [class^=btn], .btn {
+.btn-link, .btn-warning__outline, .btn-danger__outline, .btn-success__outline, .btn-primary__outline, .btn-default__outline, .btn-info, .btn-warning, .btn-danger, .btn-success, .btn-primary, .btn-group_theme > [class^=btn].active, .btn-default, .btn-group_theme > [class^=btn], .btn {
   background-image: none;
   border-style: solid;
   border-color: transparent;
@@ -6234,36 +6234,36 @@ tbody.collapse.in {
   -ms-user-select: none;
   user-select: none;
 }
-.btn-link:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover, .btn-success:hover, .btn-primary:hover, .btn-default:hover, .btn-group_theme > [class^=btn]:hover, .btn:hover, .btn-link:focus, .btn-info:focus, .btn-warning:focus, .btn-danger:focus, .btn-success:focus, .btn-primary:focus, .btn-default:focus, .btn-group_theme > [class^=btn]:focus, .btn:focus, .focus.btn-link, .focus.btn-info, .focus.btn-warning, .focus.btn-danger, .focus.btn-success, .focus.btn-primary, .focus.btn-default, .btn-group_theme > .focus[class^=btn], .focus.btn {
+.btn-link:hover, .btn-warning__outline:hover, .btn-danger__outline:hover, .btn-success__outline:hover, .btn-primary__outline:hover, .btn-default__outline:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover, .btn-success:hover, .btn-primary:hover, .btn-default:hover, .btn-group_theme > [class^=btn]:hover, .btn:hover, .btn-link:focus, .btn-warning__outline:focus, .btn-danger__outline:focus, .btn-success__outline:focus, .btn-primary__outline:focus, .btn-default__outline:focus, .btn-info:focus, .btn-warning:focus, .btn-danger:focus, .btn-success:focus, .btn-primary:focus, .btn-default:focus, .btn-group_theme > [class^=btn]:focus, .btn:focus, .focus.btn-link, .focus.btn-warning__outline, .focus.btn-danger__outline, .focus.btn-success__outline, .focus.btn-primary__outline, .focus.btn-default__outline, .focus.btn-info, .focus.btn-warning, .focus.btn-danger, .focus.btn-success, .focus.btn-primary, .focus.btn-default, .btn-group_theme > .focus[class^=btn], .focus.btn {
   outline: none;
   text-decoration: none;
 }
-.btn-link:active, .btn-info:active, .btn-warning:active, .btn-danger:active, .btn-success:active, .btn-primary:active, .btn-default:active, .btn-group_theme > [class^=btn]:active, .btn:active, .active.btn-link, .active.btn-info, .active.btn-warning, .active.btn-danger, .active.btn-success, .active.btn-primary, .btn-group_theme > .active[class^=btn], .active.btn-default, .active.btn {
+.btn-link:active, .btn-warning__outline:active, .btn-danger__outline:active, .btn-success__outline:active, .btn-primary__outline:active, .btn-default__outline:active, .btn-info:active, .btn-warning:active, .btn-danger:active, .btn-success:active, .btn-primary:active, .btn-default:active, .btn-group_theme > [class^=btn]:active, .btn:active, .active.btn-link, .active.btn-warning__outline, .active.btn-danger__outline, .active.btn-success__outline, .active.btn-primary__outline, .active.btn-default__outline, .active.btn-info, .active.btn-warning, .active.btn-danger, .active.btn-success, .active.btn-primary, .btn-group_theme > .active[class^=btn], .active.btn-default, .active.btn {
   outline: 0;
 }
-.btn-link:active:focus, .btn-info:active:focus, .btn-warning:active:focus, .btn-danger:active:focus, .btn-success:active:focus, .btn-primary:active:focus, .btn-default:active:focus, .btn-group_theme > [class^=btn]:active:focus, .btn:active:focus, .active.btn-link:focus, .active.btn-info:focus, .active.btn-warning:focus, .active.btn-danger:focus, .active.btn-success:focus, .active.btn-primary:focus, .btn-group_theme > .active[class^=btn]:focus, .active.btn-default:focus, .active.btn:focus {
+.btn-link:active:focus, .btn-warning__outline:active:focus, .btn-danger__outline:active:focus, .btn-success__outline:active:focus, .btn-primary__outline:active:focus, .btn-default__outline:active:focus, .btn-info:active:focus, .btn-warning:active:focus, .btn-danger:active:focus, .btn-success:active:focus, .btn-primary:active:focus, .btn-default:active:focus, .btn-group_theme > [class^=btn]:active:focus, .btn:active:focus, .active.btn-link:focus, .active.btn-warning__outline:focus, .active.btn-danger__outline:focus, .active.btn-success__outline:focus, .active.btn-primary__outline:focus, .active.btn-default__outline:focus, .active.btn-info:focus, .active.btn-warning:focus, .active.btn-danger:focus, .active.btn-success:focus, .active.btn-primary:focus, .btn-group_theme > .active[class^=btn]:focus, .active.btn-default:focus, .active.btn:focus {
   outline: none;
 }
-.disabled.btn-link, .disabled.btn-info, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group_theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, [disabled].btn-info, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group_theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .btn-info, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group_theme > [class^=btn], fieldset[disabled] .btn {
+.disabled.btn-link, .disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-info, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group_theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-info, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group_theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-info, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group_theme > [class^=btn], fieldset[disabled] .btn {
   cursor: none;
   cursor: not-allowed;
   filter: alpha(opacity=65);
   opacity: 0.65;
 }
-.btn-link .badge, .btn-info .badge, .btn-warning .badge, .btn-danger .badge, .btn-success .badge, .btn-primary .badge, .btn-default .badge, .btn-group_theme > [class^=btn] .badge, .btn .badge {
+.btn-link .badge, .btn-warning__outline .badge, .btn-danger__outline .badge, .btn-success__outline .badge, .btn-primary__outline .badge, .btn-default__outline .badge, .btn-info .badge, .btn-warning .badge, .btn-danger .badge, .btn-success .badge, .btn-primary .badge, .btn-default .badge, .btn-group_theme > [class^=btn] .badge, .btn .badge {
   font-size: 11px;
   line-height: 13px;
   padding: 0px 5px;
 }
-.btn-link .caret, .btn-info .caret, .btn-warning .caret, .btn-danger .caret, .btn-success .caret, .btn-primary .caret, .btn-default .caret, .btn-group_theme > [class^=btn] .caret, .btn .caret {
+.btn-link .caret, .btn-warning__outline .caret, .btn-danger__outline .caret, .btn-success__outline .caret, .btn-primary__outline .caret, .btn-default__outline .caret, .btn-info .caret, .btn-warning .caret, .btn-danger .caret, .btn-success .caret, .btn-primary .caret, .btn-default .caret, .btn-group_theme > [class^=btn] .caret, .btn .caret {
   margin-left: 0;
 }
-.btn-link .svg--icon, .btn-info .svg--icon, .btn-warning .svg--icon, .btn-danger .svg--icon, .btn-success .svg--icon, .btn-primary .svg--icon, .btn-default .svg--icon, .btn-group_theme > [class^=btn] .svg--icon, .btn .svg--icon {
+.btn-link .svg--icon, .btn-warning__outline .svg--icon, .btn-danger__outline .svg--icon, .btn-success__outline .svg--icon, .btn-primary__outline .svg--icon, .btn-default__outline .svg--icon, .btn-info .svg--icon, .btn-warning .svg--icon, .btn-danger .svg--icon, .btn-success .svg--icon, .btn-primary .svg--icon, .btn-default .svg--icon, .btn-group_theme > [class^=btn] .svg--icon, .btn .svg--icon {
   height: 0.75rem;
   position: relative;
   top: 2px;
 }
-.btn-link .svg--icon svg, .btn-info .svg--icon svg, .btn-warning .svg--icon svg, .btn-danger .svg--icon svg, .btn-success .svg--icon svg, .btn-primary .svg--icon svg, .btn-default .svg--icon svg, .btn-group_theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
+.btn-link .svg--icon svg, .btn-warning__outline .svg--icon svg, .btn-danger__outline .svg--icon svg, .btn-success__outline .svg--icon svg, .btn-primary__outline .svg--icon svg, .btn-default__outline .svg--icon svg, .btn-info .svg--icon svg, .btn-warning .svg--icon svg, .btn-danger .svg--icon svg, .btn-success .svg--icon svg, .btn-primary .svg--icon svg, .btn-default .svg--icon svg, .btn-group_theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
   height: 0.75rem;
   max-width: 20px;
   width: auto;
@@ -6282,14 +6282,12 @@ tbody.collapse.in {
 .btn-default, .btn-group_theme > [class^=btn], .btn {
   background-color: #ffffff;
   background-image: -webkit-linear-gradient(#ffffff 0%, #dddddd 100%);
-  background-image: -o-linear-gradient(#ffffff 0%, #dddddd 100%);
   background-image: linear-gradient(#ffffff 0%, #dddddd 100%);
   border-color: #dddddd;
   color: #333333;
 }
 .btn-default:hover, .btn-group_theme > [class^=btn]:hover, .btn:hover, .btn-default:focus, .btn-group_theme > [class^=btn]:focus, .btn:focus, .btn-default:active, .btn-group_theme > [class^=btn]:active, .btn:active, .btn-default.active, .btn-group_theme > .active[class^=btn], .active.btn, .btn-default.focus, .btn-group_theme > .focus[class^=btn], .focus.btn {
   background-image: -webkit-linear-gradient(#dddddd 0%, #ffffff 100%);
-  background-image: -o-linear-gradient(#dddddd 0%, #ffffff 100%);
   background-image: linear-gradient(#dddddd 0%, #ffffff 100%);
   background-position: inherit;
   color: #333333;
@@ -6303,14 +6301,12 @@ tbody.collapse.in {
 .btn-primary, .btn-group_theme > [class^=btn].active {
   background-color: #4A8DC6;
   background-image: -webkit-linear-gradient(#4A8DC6 0%, #1E6393 100%);
-  background-image: -o-linear-gradient(#4A8DC6 0%, #1E6393 100%);
   background-image: linear-gradient(#4A8DC6 0%, #1E6393 100%);
   border-color: #1E6393;
   color: #ffffff;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-group_theme > .active[class^=btn], .btn-primary.focus {
   background-image: -webkit-linear-gradient(#1E6393 0%, #4A8DC6 100%);
-  background-image: -o-linear-gradient(#1E6393 0%, #4A8DC6 100%);
   background-image: linear-gradient(#1E6393 0%, #4A8DC6 100%);
   background-position: inherit;
   color: #ffffff;
@@ -6324,14 +6320,12 @@ tbody.collapse.in {
 .btn-success {
   background-color: #69C26A;
   background-image: -webkit-linear-gradient(#69C26A 0%, #467B46 100%);
-  background-image: -o-linear-gradient(#69C26A 0%, #467B46 100%);
   background-image: linear-gradient(#69C26A 0%, #467B46 100%);
   border-color: #467B46;
   color: #ffffff;
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.focus {
   background-image: -webkit-linear-gradient(#467B46 0%, #69C26A 100%);
-  background-image: -o-linear-gradient(#467B46 0%, #69C26A 100%);
   background-image: linear-gradient(#467B46 0%, #69C26A 100%);
   background-position: inherit;
   color: #ffffff;
@@ -6345,14 +6339,12 @@ tbody.collapse.in {
 .btn-danger {
   background-color: #D9534F;
   background-image: -webkit-linear-gradient(#D9534F 0%, #762624 100%);
-  background-image: -o-linear-gradient(#D9534F 0%, #762624 100%);
   background-image: linear-gradient(#D9534F 0%, #762624 100%);
   border-color: #762624;
   color: #ffffff;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.focus {
   background-image: -webkit-linear-gradient(#762624 0%, #D9534F 100%);
-  background-image: -o-linear-gradient(#762624 0%, #D9534F 100%);
   background-image: linear-gradient(#762624 0%, #D9534F 100%);
   background-position: inherit;
   color: #ffffff;
@@ -6366,14 +6358,12 @@ tbody.collapse.in {
 .btn-warning {
   background-color: #FFBD41;
   background-image: -webkit-linear-gradient(#FFBD41 0%, #D59A00 100%);
-  background-image: -o-linear-gradient(#FFBD41 0%, #D59A00 100%);
   background-image: linear-gradient(#FFBD41 0%, #D59A00 100%);
   border-color: #D59A00;
   color: #333333;
 }
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.focus {
   background-image: -webkit-linear-gradient(#D59A00 0%, #FFBD41 100%);
-  background-image: -o-linear-gradient(#D59A00 0%, #FFBD41 100%);
   background-image: linear-gradient(#D59A00 0%, #FFBD41 100%);
   background-position: inherit;
   color: #333333;
@@ -6387,14 +6377,12 @@ tbody.collapse.in {
 .btn-info {
   background-color: #E4EEF7;
   background-image: -webkit-linear-gradient(#E4EEF7 0%, #B6D1E8 100%);
-  background-image: -o-linear-gradient(#E4EEF7 0%, #B6D1E8 100%);
   background-image: linear-gradient(#E4EEF7 0%, #B6D1E8 100%);
   border-color: #B6D1E8;
   color: #777777;
 }
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.focus {
   background-image: -webkit-linear-gradient(#B6D1E8 0%, #E4EEF7 100%);
-  background-image: -o-linear-gradient(#B6D1E8 0%, #E4EEF7 100%);
   background-image: linear-gradient(#B6D1E8 0%, #E4EEF7 100%);
   background-position: inherit;
   color: #777777;
@@ -6410,6 +6398,121 @@ tbody.collapse.in {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
   color: #FFF;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.btn-default__outline {
+  background-color: transparent;
+  background-image: none;
+  border-color: #333333;
+  color: #333333;
+}
+.btn-default__outline:hover, .btn-default__outline:focus, .btn-default__outline:active, .btn-default__outline.active, .btn-default__outline.focus {
+  background-color: #333333;
+  background-image: none;
+  background-position: inherit;
+  color: #fff;
+}
+.btn-default__outline:hover .svg--icon svg, .btn-default__outline:focus .svg--icon svg, .btn-default__outline:active .svg--icon svg, .btn-default__outline.active .svg--icon svg, .btn-default__outline.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  fill: #ffffff;
+}
+.btn-default__outline .svg--icon svg {
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
+  fill: #333333;
+}
+
+.btn-primary__outline {
+  background-color: transparent;
+  background-image: none;
+  border-color: #4A8DC6;
+  color: #4A8DC6;
+}
+.btn-primary__outline:hover, .btn-primary__outline:focus, .btn-primary__outline:active, .btn-primary__outline.active, .btn-primary__outline.focus {
+  background-color: #1E6393;
+  background-image: none;
+  background-position: inherit;
+  color: #fff;
+}
+.btn-primary__outline:hover .svg--icon svg, .btn-primary__outline:focus .svg--icon svg, .btn-primary__outline:active .svg--icon svg, .btn-primary__outline.active .svg--icon svg, .btn-primary__outline.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  fill: #ffffff;
+}
+.btn-primary__outline .svg--icon svg {
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  fill: #4A8DC6;
+}
+
+.btn-success__outline {
+  background-color: transparent;
+  background-image: none;
+  border-color: #69C26A;
+  color: #69C26A;
+}
+.btn-success__outline:hover, .btn-success__outline:focus, .btn-success__outline:active, .btn-success__outline.active, .btn-success__outline.focus {
+  background-color: #467B46;
+  background-image: none;
+  background-position: inherit;
+  color: #fff;
+}
+.btn-success__outline:hover .svg--icon svg, .btn-success__outline:focus .svg--icon svg, .btn-success__outline:active .svg--icon svg, .btn-success__outline.active .svg--icon svg, .btn-success__outline.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  fill: #ffffff;
+}
+.btn-success__outline .svg--icon svg {
+  --svg-icon-fill: #69C26A;
+  --svg-icon-stroke: #69C26A;
+  fill: #69C26A;
+}
+
+.btn-danger__outline {
+  background-color: transparent;
+  background-image: none;
+  border-color: #D9534F;
+  color: #D9534F;
+}
+.btn-danger__outline:hover, .btn-danger__outline:focus, .btn-danger__outline:active, .btn-danger__outline.active, .btn-danger__outline.focus {
+  background-color: #762624;
+  background-image: none;
+  background-position: inherit;
+  color: #fff;
+}
+.btn-danger__outline:hover .svg--icon svg, .btn-danger__outline:focus .svg--icon svg, .btn-danger__outline:active .svg--icon svg, .btn-danger__outline.active .svg--icon svg, .btn-danger__outline.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  fill: #ffffff;
+}
+.btn-danger__outline .svg--icon svg {
+  --svg-icon-fill: #D9534F;
+  --svg-icon-stroke: #D9534F;
+  fill: #D9534F;
+}
+
+.btn-warning__outline {
+  background-color: transparent;
+  background-image: none;
+  border-color: #FFBD41;
+  color: #FFBD41;
+}
+.btn-warning__outline:hover, .btn-warning__outline:focus, .btn-warning__outline:active, .btn-warning__outline.active, .btn-warning__outline.focus {
+  background-color: #D59A00;
+  background-image: none;
+  background-position: inherit;
+  color: #fff;
+}
+.btn-warning__outline:hover .svg--icon svg, .btn-warning__outline:focus .svg--icon svg, .btn-warning__outline:active .svg--icon svg, .btn-warning__outline.active .svg--icon svg, .btn-warning__outline.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  fill: #ffffff;
+}
+.btn-warning__outline .svg--icon svg {
+  --svg-icon-fill: #FFBD41;
+  --svg-icon-stroke: #FFBD41;
+  fill: #FFBD41;
 }
 
 a.btn.disabled, fieldset[disabled] a.btn {
