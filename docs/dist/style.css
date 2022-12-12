@@ -8846,6 +8846,10 @@ td.table__rose {
   text-align: justify;
 }
 
+.va-middle {
+  vertical-align: middle;
+}
+
 .text-lowercase {
   text-transform: lowercase;
 }
