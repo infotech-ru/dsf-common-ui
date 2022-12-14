@@ -522,12 +522,13 @@ table {
   --color_light-blue: #4A8DC6;
   --color_light-blue2: #E4EEF7;
   --color_light-blue3: #B6D1E8;
+  --color_vibrant-blue: #0094FF;
   --color_green: #69C26A;
   --color_light-green: #DAF0DA;
   --color_light-green2: #B4E1B5;
   --color_dark-green: #467B46;
   --color_orange: #FFBD41;
-  --color_orange-light: #FFDF9A;
+  --color_light-orange: #FFDF9A;
   --color_dark-orange: #D59A00;
   --color_grey: #BABABA;
   --color_grey2: #dddddd;
@@ -536,9 +537,9 @@ table {
   --color_light-grey: #f9f9f9;
   --color_light-grey2: #F5F5F5;
   --color_light-grey3: #EEEEEE;
+  --color_dark-grey: #333333;
   --color_yellow: #FFDA7D;
   --color_yellow2: #FFF741;
-  --color_dark-grey: #333333;
   --color_light-yellow: #FFF6DF;
   --color_light-yellow2: #FFFBA0;
   --color_red: #D9534F;
@@ -2676,61 +2677,6 @@ h6, .h6 {
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE LAYOUT STYLES                                                      */
-/*                                                                            */
-/*                                                                            */
-/* ========================================================================== */
-/* ========================================================================== */
-/*                                                                            */
-/*                                                                            */
-/* START THE STATES STYLES                                                    */
-/*                                                                            */
-/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-/*                                                                            */
-/* STATES                                                                     */
-/* path: dsf-common-ui/src/scss/states/_states.scss                           */
-/*                                                                            */
-/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.fade {
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-}
-.fade.in, .fade.show {
-  opacity: 1;
-}
-
-.collapse {
-  display: none;
-}
-.collapse.in, .collapse.show {
-  display: block;
-}
-
-tr.collapse.show,
-tr.collapse.in {
-  display: table-row;
-}
-
-tbody.collapse.show,
-tbody.collapse.in {
-  display: table-row-group;
-}
-
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition-property: height, visibility;
-  transition-property: height, visibility;
-  -webkit-transition-duration: 0.35s;
-  transition-duration: 0.35s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-}
-
-/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-/* END THE STATES STYLES                                                      */
 /*                                                                            */
 /*                                                                            */
 /* ========================================================================== */
@@ -8527,6 +8473,46 @@ td.table__rose {
   color: inherit;
 }
 
+.chartsBlock {
+  --chart-orange: #FFBD41;
+  --chart-dark-orange: #D59A00;
+  --chart-dark-red: #762624;
+  --chart-red: #D9534F;
+  --chart-rose: #FF9996;
+  --chart-dark-green: #467B46;
+  --chart-green: #69C26A;
+  --chart-light-green: #DAF0DA;
+  --chart-light-blue: #4A8DC6;
+  --chart-blue: #0094FF;
+  --chart-light-yellow2: #FFFBA0;
+  --chart-yellow2: #FFF741;
+  --chart-black: #000000;
+  --chart-grey: #BABABA;
+  --chart-dark-grey: #333333;
+  --chart-label-color: #333333;
+  border: 1px solid #dddddd;
+  padding: 10px;
+}
+.chartsBlock_header {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.chartsBlock_headerItem .svg--icon {
+  height: 24px;
+  width: 24px;
+}
+.chartsBlock_headerItem .svg--icon svg {
+  height: 24px;
+  width: 24px;
+}
+.chartsBlock_headerSubtitles {
+  color: #BABABA;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE MODULES STYLES                                                     */
 /*                                                                            */
@@ -8572,6 +8558,61 @@ td.table__rose {
   display: flex;
   justify-content: center;
   min-height: calc(100vh - 121px);
+}
+
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* END THE CONTENT STYLES                                                     */
+/*                                                                            */
+/*                                                                            */
+/* ========================================================================== */
+/* ========================================================================== */
+/*                                                                            */
+/*                                                                            */
+/* START THE HELPERS STYLES                                                    */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* STATES                                                                     */
+/* path: dsf-common-ui/src/scss/states/_states.scss                           */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in, .fade.show {
+  opacity: 1;
+}
+
+.collapse {
+  display: none;
+}
+.collapse.in, .collapse.show {
+  display: block;
+}
+
+tr.collapse.show,
+tr.collapse.in {
+  display: table-row;
+}
+
+tbody.collapse.show,
+tbody.collapse.in {
+  display: table-row-group;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -9188,7 +9229,7 @@ td.table__rose {
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-/* END THE CONTENT STYLES                                                     */
+/* END THE HELPERS STYLES                                                      */
 /*                                                                            */
 /*                                                                            */
 /* ========================================================================== */

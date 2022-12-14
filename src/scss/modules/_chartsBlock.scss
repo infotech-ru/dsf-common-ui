@@ -1,0 +1,43 @@
+.chartsBlock{
+  #{--chart-orange}: _brand-colors(_orange);
+  #{--chart-dark-orange}: _brand-colors(_dark-orange);
+  #{--chart-dark-red}: _brand-colors(_dark-red);
+  #{--chart-red}: _brand-colors(_red);
+  #{--chart-rose}: _brand-colors(_rose);
+  #{--chart-dark-green}: _brand-colors(_dark-green);
+  #{--chart-green}: _brand-colors(_green);
+  #{--chart-light-green}: _brand-colors(_light-green);
+  #{--chart-light-blue}: _brand-colors(_light-blue);
+  #{--chart-blue}: _brand-colors(_vibrant-blue);
+  #{--chart-light-yellow2}: _brand-colors(_light-yellow2);
+  #{--chart-yellow2}: _brand-colors(_yellow2);
+  #{--chart-black}: _brand-colors(_black);
+  #{--chart-grey}: _brand-colors(_grey);
+  #{--chart-dark-grey}: _brand-colors(_dark-grey);
+  
+  #{--chart-label-color}: _brand-colors(_dark-grey);
+  
+  border: 1px solid _brand-palette(chartBlock_border);
+  padding: 10px;
+  &_header{
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &Item{
+      .svg--icon{
+        height: 24px;
+        width: 24px;
+        svg{
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+    &Subtitles{ 
+      color: _brand-colors(_grey);
+      font-size: rem(12);
+      line-height: rem(14);
+    }
+  }
+}

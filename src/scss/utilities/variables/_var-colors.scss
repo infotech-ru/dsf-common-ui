@@ -8,12 +8,13 @@ $brand-colors: (
   _light-blue:                                                          #4A8DC6,
   _light-blue2:                                                         #E4EEF7,
   _light-blue3:                                                         #B6D1E8,
+  _vibrant-blue:                                                        #0094FF,
   _green:                                                               #69C26A,
   _light-green:                                                         #DAF0DA,
   _light-green2:                                                        #B4E1B5,
   _dark-green:                                                          #467B46,
   _orange:                                                              #FFBD41,
-  _orange-light:                                                        #FFDF9A,
+  _light-orange:                                                        #FFDF9A,
   _dark-orange:                                                         #D59A00,
   _grey:                                                                #BABABA,
   _grey2:                                                               #dddddd,
@@ -22,9 +23,9 @@ $brand-colors: (
   _light-grey:                                                          #f9f9f9,
   _light-grey2:                                                         #F5F5F5,
   _light-grey3:                                                         #EEEEEE,
+  _dark-grey:                                                           #333333,
   _yellow:                                                              #FFDA7D,
   _yellow2:                                                             #FFF741,
-  _dark-grey:                                                           #333333,
   _light-yellow:                                                        #FFF6DF,
   _light-yellow2:                                                       #FFFBA0,
   _red:                                                                 #D9534F,
@@ -199,39 +200,10 @@ $colorTools: (
   clear_svg:                              map-get($brand-colors, _transparent),
 );
 
-// @function _theme-btn($keys...) {
-//   @return val($theme-btn, $keys...);
-// }
-// $theme-btn:(
-//   blue-link:(
-//     background:                           _theme-colors(transparent),
-//     borderTop-color:                      _theme-colors(transparent),
-//     borderRight-color:                    _theme-colors(transparent),
-//     borderLeft-color:                     _theme-colors(transparent),
-//     borderBottom-color:                   _theme-colors(transparent),
-//     color:                                _theme-colors(grey),
-//     svg:                                  _theme-colors(grey),
-//     hover-background:                     _theme-colors(transparent),
-//     hover-borderTop-color:                _theme-colors(transparent),
-//     hover-borderRight-color:              _theme-colors(transparent),
-//     hover-borderLeft-color:               _theme-colors(transparent),
-//     hover-borderBottom-color:             _theme-colors(transparent),
-//     hover-color:                          _theme-colors(light-blue),
-//     hover-svg:                            _theme-colors(light-blue),
-//     active-background:                    _theme-colors(transparent),
-//     active-borderTop-color:               _theme-colors(transparent),
-//     active-borderRight-color:             _theme-colors(transparent),
-//     active-borderLeft-color:              _theme-colors(transparent),
-//     active-borderBottom-color:            _theme-colors(transparent),
-//     active-color:                         _theme-colors(grey),
-//     active-svg:                           _theme-colors(grey),
-//   ),
-// );
-
 @function _brand-btn($keys...) {
   @return val($brand-btn, $keys...);
 }
-$brand-btn:(
+$brand-btn: (
   default_bg:                             map-get($brand-colors, _white),
   default-end_bg:                         map-get($brand-colors, _grey2),
   default_outline:                        map-get($brand-colors, _dark-grey),
@@ -327,7 +299,7 @@ $brand-alert:(
   danger_close:                           map-get($brand-colors, _dark-red),
   danger_color:                           map-get($brand-colors, _white),
   danger_title:                           map-get($brand-colors, _white),
-  warning_bg:                             map-get($brand-colors, _orange-light),
+  warning_bg:                             map-get($brand-colors, _light-orange),
   warning_border:                         map-get($brand-colors, _red),
   warning_close:                          map-get($brand-colors, _dark-orange),
   warning_color:                          map-get($brand-colors, _dark-grey),
@@ -381,6 +353,7 @@ $brand-palette: (
   haeding_color:                          map-get($brand-colors, _dark-grey),
   footer_bgc:                             map-get($brand-colors, _white),
 
+  chartBlock_border:                      map-get($brand-colors, _grey2),
   dropdown_bgc:                           map-get($brand-colors, _white),
   dropdown_color:                         map-get($brand-colors, _dark-grey),
   dropdownHeader_color:                   map-get($brand-colors, _light-grey),
@@ -453,7 +426,7 @@ $brand-palette: (
   toastBody_bgc:                          map-get($brand-colors, _white),
   toastBody_borderColor:                  map-get($brand-colors, _white),
   toastBody_color:                        map-get($brand-colors, _dark-grey),
-  toastHeader_bgc:                        map-get($brand-colors, _orange-light),
+  toastHeader_bgc:                        map-get($brand-colors, _light-orange),
   toastHeader_borderColor:                map-get($brand-colors, _white),
   toastHeader_color:                      map-get($brand-colors, _dark-grey),
 

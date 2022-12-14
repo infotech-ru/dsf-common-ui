@@ -1,0 +1,80 @@
+---
+Title: Контейнер для графика
+menutitle: Контейнер для графика
+category: components
+anchor: components-charts
+order: 1
+---
+
+При настройке графиков использовать пустые значения для класса и для заголовка. 
+В качестве цвета использовать переменные из списка
+<div class="row">
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-orange)"></span></div> - `var(--chart-orange)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-dark-orange)"></span></div> - `var(--chart-dark-orange)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-dark-red)"></span></div> - `var(--chart-dark-red)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-red)"></span></div> - `var(--chart-red)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-rose)"></span></div> - `var(--chart-rose)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-dark-green)"></span></div> - `var(--chart-dark-green)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-green)"></span></div> - `var(--chart-green)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-light-green)"></span></div> - `var(--chart-light-green)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-light-blue)"></span></div> - `var(--chart-light-blue)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-blue)"></span></div> - `var(--chart-blue)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-light-yellow2)"></span></div> - `var(--chart-light-yellow2)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-yellow2)"></span></div> - `var(--chart-yellow2)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-black)"></span></div> - `var(--chart-black)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-grey)"></span></div> - `var(--chart-grey)`</div></div>
+<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-dark-grey)"></span></div> - `var(--chart-dark-grey)`</div></div>
+</div>
+{% highlight html %}
+<div class="chartsBlock mb-10">
+  <div class="chartsBlock_header">
+      <div class="chartsBlock_headerItem">
+          <h3>Название графика</h3>
+          <div class="chartsBlock_headerSubtitles">Подзаголовок</div>
+      </div>
+      <div class="chartsBlock_headerItem">
+          <?= Html::tag('span', Icons::icon("2colors-car_model__24vb"), ['class' => 'svg--icon']) ?>
+      </div>
+  </div>
+  <div class="chartsBlock_body">
+    <?= Highcharts::widget([
+        'htmlOptions' => [
+            'class' => '',
+        ],
+        'options' => array_merge(
+            [
+                'title' => [
+                    'text' => '',
+                ],
+                'colors' => ['var(--chart-blue)', 'var(--chart-orange)', 'var(--chart-green)', 'var(--chart-red)', 'var(--chart-light-blue)', 'var(--chart-dark-green)'],
+                'plotOptions' => [
+                    'series' => [
+                        'dataLabels' => [
+                            'enabled' => true,
+                            'style' => [
+                                'color' => 'var(--chart-label-color)',
+                                'fontSize' => '11px',
+                                'fontWeight' => 'normal',
+                                'textOutline' => false,
+                            ],
+                        ],..
+  </div>
+</div>
+{% endhighlight %}
+
+<div class="bs-docs-example">
+  <div class="chartsBlock">
+    <div class="chartsBlock_header">
+        <div class="chartsBlock_headerItem">
+            <h3>Название графика</h3>
+            <div class="chartsBlock_headerSubtitles">Подзаголовок</div>
+        </div>
+        <div class="chartsBlock_headerItem">
+            <span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#2colors-car_model__24vb"></use></svg></span>
+        </div>
+    </div>
+    <div class="chartsBlock_body">
+        <img src="https://195004.selcdn.ru/ref/cad34c4ed697465ddeb196d06416fcc8864ea2be.jpg"> 
+    </div>
+  </div>
+</div>
