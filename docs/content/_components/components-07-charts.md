@@ -6,8 +6,9 @@ anchor: components-charts
 order: 1
 ---
 
-При настройке графиков использовать пустые значения для класса и для заголовка. 
-В качестве цвета использовать переменные из списка
+Оформления график: в шапку помещается название и по необходимости подзаголовок. В тело `chartsBlock_body` помещаем сам график с рекомнедуемыми предустановками:
+использовать пустые значения для класса и для заголовка `title`, а также обязательные стили для графика - см. пример. 
+В качестве цвета `color` использовать переменные из списка:
 <div class="row">
 <div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-orange)"></span></div> - `var(--chart-orange)`</div></div>
 <div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-dark-orange)"></span></div> - `var(--chart-dark-orange)`</div></div>
@@ -43,10 +44,39 @@ order: 1
         ],
         'options' => array_merge(
             [
+                'chart' => [
+                    'height': 220,
+                    'width': null,
+                    'style' => [
+                        'fontFamily' => 'inherit',
+                    ],
+                ],
                 'title' => [
                     'text' => '',
                 ],
-                'colors' => ['var(--chart-blue)', 'var(--chart-orange)', 'var(--chart-green)', 'var(--chart-red)', 'var(--chart-light-blue)', 'var(--chart-dark-green)'],
+                'exporting' => [
+                    'enabled': false
+                ],
+                'credits': [
+                    'enabled': false
+                ],
+                'colors': [
+                        'var(--chart-blue)',
+                        'var(--chart-orange)',
+                        'var(--chart-green)',
+                        'var(--chart-red)',
+                        'var(--chart-rose)',
+                        'var(--chart-light-blue)',
+                        'var(--chart-light-yellow2)',
+                        'var(--chart-dark-green)',
+                        'var(--chart-grey)',
+                        'var(--chart-light-green)',
+                        'var(--chart-dark-grey)',
+                        'var(--chart-black)',
+                        'var(--chart-dark-red)',
+                        'var(--chart-dark-orange)',
+                        'var(--chart-yellow2)',
+                    ],
                 'plotOptions' => [
                     'series' => [
                         'dataLabels' => [
@@ -57,7 +87,20 @@ order: 1
                                 'fontWeight' => 'normal',
                                 'textOutline' => false,
                             ],
-                        ],..
+                        ],
+                    ],
+                ],
+                'legend': [
+                    'align': 'right',
+                    'verticalAlign': 'middle',
+                    'layout': 'vertical',
+                    'itemStyle': [
+                        'fontWeight': 'normal',
+                    ],
+                    'padding': 0,
+                    'itemWidth': null,
+                    'width': "60%",
+                ]
   </div>
 </div>
 {% endhighlight %}
