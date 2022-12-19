@@ -46,6 +46,7 @@ order: 1
             [
                 'chart' => [
                     'height' => 220,
+                    'spacingTop' => 20,
                     'width' => null,
                     'style' => [
                         'fontFamily' => 'inherit',
@@ -55,7 +56,22 @@ order: 1
                     'text' => '',
                 ],
                 'exporting' => [
-                    'enabled' => false
+                    'enabled' => true
+                    'buttons' => [ // если нужно вывести меню экспорта
+                        'contextButton' => [
+                            'buttonSpacing' => 0,
+                            'height' => 20,
+                            'menuItems' => ['viewFullscreen', 'printChart', 'separator', 'downloadPNG', 'downloadJPG','downloadPDF'],
+                            'symbolStrokeWidth' =>  1,
+                            'symbolFill' =>  'var(--chart-label-color)',
+                            'symbolStroke' =>  'var(--chart-label-color)',
+                            'symbolSize' => 16,
+                            'symbolX' => 11,
+                            'x' => 6,
+                            'y' => -24,
+                            'width' => 20,
+                        ],
+                    ],
                 ],
                 'credits'=> [
                     'enabled' => false
