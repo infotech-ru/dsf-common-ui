@@ -1,0 +1,41 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* TABS                                                                       */
+/* path: dsf-common-ui/src/scss/modules/_tabs.scss                            */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
+.tabs__link {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  li{ 
+    align-items: center;
+    display: inline-flex;
+    & + li{
+      margin-left: 10px;
+    }
+  }
+  a{
+    border-width: #{_brand-sizes(tabsButton-borderWidth)}px;
+    border-style: solid;
+    border-color: _brand-palette(tabsButton_border);
+    background-color: _brand-palette(tabsButton_bg);
+    color: _brand-palette(tabsButton_color);
+    cursor: pointer;
+    display: inline-block;
+    font-size: rem(_fontSizes(tabsButton));
+    font-weight: _fontWeight(tabsButton);
+    line-height: rem(_lineHeight(tabsButton));
+    height: min-content;
+    padding: 0 #{_brand-sizes(tabsButton-paddingX)}px;
+  }
+  a.active,
+  .active > a{
+    border-color: _brand-palette(tabsButton-active_border);
+    background-color: _brand-palette(tabsButton-active_bg);
+    color: _brand-palette(tabsButton-active_color);
+  }
+}

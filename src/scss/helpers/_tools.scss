@@ -163,6 +163,10 @@ $paddingLeftSizes: 0, 5, 10;
 .rotate270             { transform: rotate(270deg); }
 
 .h-auto                { height: auto; }
+.h-100p                { height: 100%; }
+
+.w-auto                { width: auto; }
+.w-100p                { width: 100%; }
 
 .border{
   border: 1px solid _brand-palette(border);

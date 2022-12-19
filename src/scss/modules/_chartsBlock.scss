@@ -23,8 +23,13 @@
     align-items: flex-start;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    // & + .chartsBlock_headerSubtitles{ 
+      // margin-top: 20px;
+    // }
     &Item{
+      align-items: center;
+      display: flex;
       .svg--icon{
         height: 24px;
         width: 24px;
@@ -33,11 +38,31 @@
           width: 24px;
         }
       }
+      .svg--iconAction{
+        height: 16px;
+        width: 16px;
+        svg{
+          height: 16px;
+          width: 16px;
+        }
+      }
     }
     &Subtitles{ 
       color: _brand-colors(_grey);
       font-size: rem(12);
       line-height: rem(14);
     }
+    h3{
+      margin-bottom: 0;
+    }
+  }
+  &_status{
+    border-radius: 12px;
+    display: inline-flex;
+    height: 12px;
+    width: 12px;
+  }
+  &_body{
+    margin-top: 20px;
   }
 }

@@ -45,8 +45,8 @@ order: 1
         'options' => array_merge(
             [
                 'chart' => [
-                    'height': 220,
-                    'width': null,
+                    'height' => 220,
+                    'width' => null,
                     'style' => [
                         'fontFamily' => 'inherit',
                     ],
@@ -55,12 +55,12 @@ order: 1
                     'text' => '',
                 ],
                 'exporting' => [
-                    'enabled': false
+                    'enabled' => false
                 ],
-                'credits': [
-                    'enabled': false
+                'credits'=> [
+                    'enabled' => false
                 ],
-                'colors': [
+                'colors' => [
                         'var(--chart-blue)',
                         'var(--chart-orange)',
                         'var(--chart-green)',
@@ -76,7 +76,7 @@ order: 1
                         'var(--chart-dark-red)',
                         'var(--chart-dark-orange)',
                         'var(--chart-yellow2)',
-                    ],
+                ],
                 'plotOptions' => [
                     'series' => [
                         'dataLabels' => [
@@ -88,18 +88,22 @@ order: 1
                                 'textOutline' => false,
                             ],
                         ],
+                        'lineWidth' => 4, // для 'chart' => ['type' => 'spline']
                     ],
                 ],
-                'legend': [
-                    'align': 'right',
-                    'verticalAlign': 'middle',
-                    'layout': 'vertical',
-                    'itemStyle': [
-                        'fontWeight': 'normal',
+                'legend' => [
+                    'align' => 'right', // для ['chart' => 'type' => 'pie']
+                    'verticalAlign' => 'middle', // для ['chart' => 'type' => 'pie']
+                    'layout' => 'vertical', // для ['chart' => 'type' => 'pie']
+                    'itemStyle' => [
+                        'fontWeight' => 'normal',
                     ],
-                    'padding': 0,
-                    'itemWidth': null,
-                    'width': "60%",
+                    'padding' => 0, // для ['chart' => 'type' => 'pie']
+                    'itemWidth' => null, // для ['chart' => 'type' => 'pie']
+                    'width' => "60%", // для ['chart' => 'type' => 'pie']
+                ],
+                'tooltip' => [
+                    'backgroundColor' => "#ffffff",
                 ]
   </div>
 </div>

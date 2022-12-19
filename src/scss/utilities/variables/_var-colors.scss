@@ -422,6 +422,13 @@ $brand-palette: (
   tableHelpIcon_bgc:                      map-get($brand-colors, _dark-grey),
   table-table-striped-bg-odd:             map-get($brand-colors, _white),
   table-table-striped-bg-even:            map-get($brand-colors, _light-grey),
+  
+  tabsButton_border:                      map-get($brand-colors, _light-blue),
+  tabsButton-active_border:               map-get($brand-colors, _light-blue),
+  tabsButton_bg:                          map-get($brand-colors, _light-blue2),
+  tabsButton-active_bg:                   map-get($brand-colors, _light-blue),
+  tabsButton_color:                       map-get($brand-colors, _light-blue),
+  tabsButton-active_color:                map-get($brand-colors, _white),
 
   toastBody_bgc:                          map-get($brand-colors, _white),
   toastBody_borderColor:                  map-get($brand-colors, _white),
