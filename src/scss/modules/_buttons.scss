@@ -245,6 +245,7 @@ a.btn {
   box-shadow: none;
   border: none;
   cursor: pointer;
+  display: inline-block;
   padding: 0;
   .glyphicon {
     color: _brand-palette(btnIconSvg_color);
