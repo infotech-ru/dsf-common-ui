@@ -47,6 +47,9 @@ order: 3
 
 `lh18` - устанавливает размер шрифта в 18px
 
+#### Поворот текста
+`transformText__left`, `transformText__right` - устанавливает поворот текста
+
 #### Классы для изменения  цвета текста.
 
 {% highlight html %}
@@ -59,6 +62,8 @@ order: 3
   <div class="text-muted text-right">text-muted text-right</div>
   <div class="text-grey text-right">text-grey text-right</div>
   <div class="text-dark-red text-left">text-dark-red text-left</div>
+  <div class="text-dark-red transformText__left">text-dark-red transformText__left</div>
+  <div class="text-orange transformText__right">text-dark-red transformText__right</div>
   <div class="text-uppercase">text-<span class="text-clear">clear text</span>-uppercase</div>
 {% endhighlight %}
 
@@ -71,5 +76,7 @@ order: 3
   <div class="mb-10 text-info text-center">text-info text-center</div>
   <div class="mb-10 text-muted text-right">text-muted text-right</div>
   <div class="mb-10 text-grey text-right">text-grey text-right</div>
+  <div class="text-dark-red transformText__left">text-dark-red transformText__left</div>
+  <div class="text-orange transformText__right">text-dark-red transformText__right</div>
   <div class="text-uppercase">text-<span class="text-clear">clear text</span>-uppercase</div>
 </div>

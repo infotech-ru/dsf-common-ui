@@ -6,10 +6,12 @@ anchor: table-treeTable
 order: 7
 ---
 
-<p>Для вывода строк таблицы в виде дерева - со скрытием подстрок используем скрипт `jQuery treetable`. Для этого таблице дописываем класс `js-tree-table` и инициализируем скрипт с помощью initTreeTable();
-При необходимости делаем import {initTreeTable} from "../utils";
+<p>Для вывода строк таблицы в виде дерева - со скрытием подстрок используем скрипт `jQuery treetable`:<br>
+- таблице дописываем класс `js-tree-table` и инициализируем скрипт с помощью initTreeTable() (При необходимости делаем import {initTreeTable} from "../utils") <br>
+- строкам родителям задаем data-tt-id="уникальное_id_родителя", a для подстрок задаем data-tt-parent-id="уникальное_id_родителя" и своё `data-tt-id`. <br>
+- для расскраски в цветовую схему строке - верхнему родителю  задаем класс - `tr__master` <br>
+- для потомков используем `tr__slave` и `tr__subSlave`
 </p>
-<p>После этого строкам родителям задаем data-tt-id="уникальное_id_родителя", a для подстрок задаем data-tt-parent-id="уникальное_id_родителя"</p>
 
 <div class="bs-docs-example">
   <div class="wrapper__tableSticky" style="max-height: 40vh;">

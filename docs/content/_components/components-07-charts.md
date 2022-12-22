@@ -31,12 +31,12 @@ order: 1
   <div class="chartsBlock_header">
       <div class="chartsBlock_headerItem">
           <h3>Название графика</h3>
-          <div class="chartsBlock_headerSubtitles">Подзаголовок</div>
       </div>
       <div class="chartsBlock_headerItem">
           <?= Html::tag('span', Icons::icon("2colors-car_model__24vb"), ['class' => 'svg--icon']) ?>
       </div>
   </div>
+  <div class="chartsBlock_headerSubtitles">Подзаголовок</div>
   <div class="chartsBlock_body">
     <?= Highcharts::widget([
         'htmlOptions' => [
@@ -56,7 +56,7 @@ order: 1
                     'text' => '',
                 ],
                 'exporting' => [
-                    'enabled' => true
+                    'enabled' => true,
                     'buttons' => [ // если нужно вывести меню экспорта
                         'contextButton' => [
                             'buttonSpacing' => 0,
@@ -78,11 +78,11 @@ order: 1
                 ],
                 'colors' => [
                         'var(--chart-blue)',
-                        'var(--chart-orange)',
                         'var(--chart-green)',
                         'var(--chart-red)',
-                        'var(--chart-rose)',
                         'var(--chart-light-blue)',
+                        'var(--chart-orange)',
+                        'var(--chart-rose)',
                         'var(--chart-light-yellow2)',
                         'var(--chart-dark-green)',
                         'var(--chart-grey)',
@@ -95,6 +95,7 @@ order: 1
                 ],
                 'plotOptions' => [
                     'series' => [
+                        'lineWidth' => 2, // для 'chart' => ['type' => 'spline']
                         'dataLabels' => [
                             'enabled' => true,
                             'style' => [
@@ -104,7 +105,6 @@ order: 1
                                 'textOutline' => false,
                             ],
                         ],
-                        'lineWidth' => 4, // для 'chart' => ['type' => 'spline']
                     ],
                 ],
                 'legend' => [
@@ -120,7 +120,7 @@ order: 1
                 ],
                 'tooltip' => [
                     'backgroundColor' => "#ffffff",
-                ]
+                ],
   </div>
 </div>
 {% endhighlight %}
@@ -130,12 +130,12 @@ order: 1
     <div class="chartsBlock_header">
         <div class="chartsBlock_headerItem">
             <h3>Название графика</h3>
-            <div class="chartsBlock_headerSubtitles">Подзаголовок</div>
         </div>
         <div class="chartsBlock_headerItem">
             <span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#2colors-car_model__24vb"></use></svg></span>
         </div>
     </div>
+    <div class="chartsBlock_headerSubtitles">Подзаголовок</div>
     <div class="chartsBlock_body">
         <img src="https://195004.selcdn.ru/ref/cad34c4ed697465ddeb196d06416fcc8864ea2be.jpg"> 
     </div>

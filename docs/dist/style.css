@@ -6191,7 +6191,6 @@ h6, .h6 {
   outline: none;
 }
 .disabled.btn-link, .disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-info, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group_theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-info, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group_theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-info, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group_theme > [class^=btn], fieldset[disabled] .btn {
-  cursor: none;
   cursor: not-allowed;
   filter: alpha(opacity=65);
   opacity: 0.65;
@@ -9056,6 +9055,16 @@ tbody.collapse.in {
 
 .rotate270 {
   transform: rotate(270deg);
+}
+
+.transformText__left {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+}
+
+.transformText__right {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
 }
 
 .h-auto {
