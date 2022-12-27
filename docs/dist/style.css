@@ -9084,28 +9084,28 @@ tbody.collapse.in {
 }
 
 .border {
-  border: 1px solid #333333;
+  border: 1px solid #BABABA;
 }
 .border-top {
-  border-top: 1px solid #333333;
+  border-top: 1px solid #BABABA;
 }
 .border-top__none {
   border-top: none !important;
 }
 .border-right {
-  border-right: 1px solid #333333;
+  border-right: 1px solid #BABABA;
 }
 .border-right__none {
   border-right: none !important;
 }
 .border-bottom {
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #BABABA;
 }
 .border-bottom__none {
   border-bottom: none !important;
 }
 .border-left {
-  border-left: 1px solid #333333;
+  border-left: 1px solid #BABABA;
 }
 .border-left__none {
   border-left: none !important;
