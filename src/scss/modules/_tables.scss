@@ -313,7 +313,7 @@ tfoot {
       }
       &:nth-child(2) {
         th {
-          top: 40px;
+          top: rem(_brand-sizes(tableCell_height));
           &:first-child {
             z-index: _zindex(tableStickyTheadThFirstChild);
           }
@@ -321,7 +321,7 @@ tfoot {
       }
       &:nth-child(3) {
         th {
-          top: 60px;
+          top: rem(calc(_brand-sizes(tableCell_height) * 2));
         }
       }
     }

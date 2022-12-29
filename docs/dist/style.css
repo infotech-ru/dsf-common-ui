@@ -7943,7 +7943,7 @@ td.table__rose {
 }
 .table-sticky-head-left_col thead tr:nth-child(2) th,
 .wrapper__tableSticky thead tr:nth-child(2) th {
-  top: 40px;
+  top: 2.5rem;
 }
 .table-sticky-head-left_col thead tr:nth-child(2) th:first-child,
 .wrapper__tableSticky thead tr:nth-child(2) th:first-child {
@@ -7951,7 +7951,7 @@ td.table__rose {
 }
 .table-sticky-head-left_col thead tr:nth-child(3) th,
 .wrapper__tableSticky thead tr:nth-child(3) th {
-  top: 60px;
+  top: 5rem;
 }
 
 .table__tfootSticky > tfoot td,
