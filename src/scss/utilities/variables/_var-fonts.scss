@@ -26,13 +26,14 @@ $fontSizes: (
   dropdown:                                                                  12,
   dropdownHeader:                                                            11,
   popoverHeader:                                                             14,
-  tabsButton:                                                                12,
   toast:                                                                     12,
   thead:                                                                     11,
   tbody:                                                                     13,
   tfoot:                                                                     13,
   popover:                                                                   12,
   tooltip:                                                                   12,
+  navPills:                                                                  12,
+  navTabs:                                                                   13,
 );
 
 @function _fontWeight($keys...) {
@@ -40,5 +41,5 @@ $fontSizes: (
 }
 $fontWeight: (
   btn:                                                                      400,
-  tabsButton:                                                               400,
+  navPills:                                                                 400,
 );

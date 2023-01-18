@@ -409,6 +409,20 @@ $brand-palette: (
   linkIncomplete_color:                   map-get($brand-colors, _dark-grey),
   linkHover_color:                        map-get($brand-colors, _blue),
   linkDisabled_color:                     map-get($brand-colors, _grey4),
+  
+  navPills_border:                        map-get($brand-colors, _light-blue),
+  navPills-active_border:                 map-get($brand-colors, _light-blue),
+  navPills_bg:                            map-get($brand-colors, _light-blue2),
+  navPills-active_bg:                     map-get($brand-colors, _light-blue),
+  navPills_color:                         map-get($brand-colors, _light-blue),
+  navPills-active_color:                  map-get($brand-colors, _white),
+  
+  navTabs_borderColor:                    map-get($brand-colors, _grey),
+  navTabs_bgc:                            map-get($brand-colors, _light-grey),
+  navTabs_color:                          map-get($brand-colors, _grey),
+  navTabs-active_borderColor:             map-get($brand-colors, _green),
+  navTabs-active_bgc:                     map-get($brand-colors, _white),
+  navTabs-active_color:                   map-get($brand-colors, _grey),
 
   pageHeader_color:                       map-get($brand-colors, _dark-grey),
 
@@ -423,12 +437,8 @@ $brand-palette: (
   table-table-striped-bg-odd:             map-get($brand-colors, _white),
   table-table-striped-bg-even:            map-get($brand-colors, _light-grey),
   
-  tabsButton_border:                      map-get($brand-colors, _light-blue),
-  tabsButton-active_border:               map-get($brand-colors, _light-blue),
-  tabsButton_bg:                          map-get($brand-colors, _light-blue2),
-  tabsButton-active_bg:                   map-get($brand-colors, _light-blue),
-  tabsButton_color:                       map-get($brand-colors, _light-blue),
-  tabsButton-active_color:                map-get($brand-colors, _white),
+
+  tabsPane-active_bgc:                    map-get($brand-colors, _white),
 
   toastBody_bgc:                          map-get($brand-colors, _white),
   toastBody_borderColor:                  map-get($brand-colors, _white),

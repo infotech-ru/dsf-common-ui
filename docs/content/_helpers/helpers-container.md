@@ -18,6 +18,7 @@ order: 4
 `justify-flex-start` устанавливает justify-content: flex-end;
 `justify-space-between` устанавливает justify-content: space-between;
 `justify-flex-end` устанавливает justify-content: flex-end;
+`justify-center` устанавливает justify-content: center;
 
 `align-start` устанавливает align-items: flex-start;
 `align-center` устанавливает align-items: center;

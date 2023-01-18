@@ -1,0 +1,200 @@
+---
+Title: Переключатели вкладок / страниц (tabs)
+menutitle: Переключатели вкладок / страниц (tabs)
+category: components
+anchor: components-tabs
+order: 4
+---
+
+### Табы
+По умолчанию использует скрипт от Bootstrap 3 - tabs.js.
+
+Переключатели вкладок имеют несколько вариантов дизайна.
+
+Для вывода вкладок по вертикали использовать класс `nav-tabs-vertical`
+
+Вариант 1:
+{% highlight html %}
+<ul class="nav-pills" role="tablist">
+  <li class="active">
+    <a href="#tab-1" role="tab" data-toggle="tab">Таб 1</a>
+  </li>
+  <li class="">
+    <a href="#tab-2" role="tab" data-toggle="tab">Таб 2</a>
+  </li>
+  <li class="">
+    <a href="#tab-3" role="tab" data-toggle="tab">Таб 3</a>
+  </li>
+  <li class="">
+    <a href="#tab-4" role="tab" data-toggle="tab">Таб 4</a>
+  </li>
+</ul>
+{% endhighlight %}
+
+<div class="bs-docs-example">
+  <ul class="nav-tabs nav-pills pt-10 pb-10" role="tablist">
+    <li class="">
+      <a href="#tabLink-1" role="tab" data-toggle="tab">Таб 1</a>
+    </li>
+    <li class="">
+      <a href="#tabLink-2" role="tab" data-toggle="tab">Таб 2</a>
+    </li>
+    <li class="">
+      <a href="#tabLink-3" role="tab" data-toggle="tab">Таб 3</a>
+    </li>
+    <li class="">
+      <a href="#tabLink-4" role="tab" data-toggle="tab">Таб 4</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" role="tabpanel" id="#tabLink-1">
+      Вкладка 1
+    </div>
+    <div class="tab-pane" role="tabpanel" id="#tabLink-2">
+      Вкладка 2
+    </div>
+    <div class="tab-pane" role="tabpanel" id="#tabLink-3">
+      Вкладка 3
+    </div>
+    <div class="tab-pane" role="tabpanel" id="#tabLink-4">
+      Вкладка 4
+    </div>
+  </div>
+</div>
+
+Вариант 2:
+{% highlight html %}
+<ul class="nav-tabs pt-10 pb-10" role="tablist">
+  <li class="nav-item active">
+    <a class="nav-link" href="#tab-1" role="tab" data-toggle="tab">Таб 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#tab-2" role="tab" data-toggle="tab">Таб 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#tab-3" role="tab" data-toggle="tab">Таб 3</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#tab-4" role="tab" data-toggle="tab">Таб 4</a>
+  </li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane active" role="tabpanel" id="tab-1">
+    Вкладка 1
+  </div>
+  <div class="tab-pane" role="tabpanel" id="tab-2">
+    Вкладка 2
+  </div>
+  <div class="tab-pane" role="tabpanel" id="tab-3">
+    Вкладка 3
+  </div>
+  <div class="tab-pane" role="tabpanel" id="tab-4">
+    Вкладка 4
+  </div>
+</div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <ul class="nav-tabs pt-10 pb-10" role="tablist">
+    <li class="nav-item active">
+      <a class="nav-link" href="#tab-1" role="tab" data-toggle="tab">Таб 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#tab-2" role="tab" data-toggle="tab">Таб 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#tab-3" role="tab" data-toggle="tab">Таб 3</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#tab-4" role="tab" data-toggle="tab">Таб 4</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" role="tabpanel" id="tab-1">
+      Вкладка 1
+    </div>
+    <div class="tab-pane" role="tabpanel" id="tab-2">
+      Вкладка 2
+    </div>
+    <div class="tab-pane" role="tabpanel" id="tab-3">
+      Вкладка 3
+    </div>
+    <div class="tab-pane" role="tabpanel" id="tab-4">
+      Вкладка 4
+    </div>
+  </div>
+</div>
+
+Вертикальный вариант:
+{% highlight html %}
+<div class="row">
+  <div class="col-sm-4">
+    <ul class="nav-tabs-vertical pt-10 pb-10" role="tablist">
+      <li class="nav-item active">
+        <a class="nav-link" href="#tab-1" role="tab" data-toggle="tab">Таб 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#tab-2" role="tab" data-toggle="tab">Таб 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#tab-3" role="tab" data-toggle="tab">Таб 3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#tab-4" role="tab" data-toggle="tab">Таб 4</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-8">  
+    <div class="tab-content">
+      <div class="tab-pane active" role="tabpanel" id="tab-1">
+        Вкладка 1
+      </div>
+      <div class="tab-pane" role="tabpanel" id="tab-2">
+        Вкладка 2
+      </div>
+      <div class="tab-pane" role="tabpanel" id="tab-3">
+        Вкладка 3
+      </div>
+      <div class="tab-pane" role="tabpanel" id="tab-4">
+        Вкладка 4
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+<div class="bs-docs-example">
+  <div class="row">
+    <div class="col-sm-4">
+      <ul class="nav-tabs-vertical pt-10 pb-10" role="tablist">
+        <li class="nav-item active">
+          <a class="nav-link" href="#tab-1" role="tab" data-toggle="tab">Таб 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tab-2" role="tab" data-toggle="tab">Таб 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tab-3" role="tab" data-toggle="tab">Таб 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tab-4" role="tab" data-toggle="tab">Таб 4</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-8">  
+      <div class="tab-content">
+        <div class="tab-pane active" role="tabpanel" id="tab-1">
+          Вкладка 1
+        </div>
+        <div class="tab-pane" role="tabpanel" id="tab-2">
+          Вкладка 2
+        </div>
+        <div class="tab-pane" role="tabpanel" id="tab-3">
+          Вкладка 3
+        </div>
+        <div class="tab-pane" role="tabpanel" id="tab-4">
+          Вкладка 4
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

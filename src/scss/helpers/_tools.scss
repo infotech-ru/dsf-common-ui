@@ -130,6 +130,8 @@ $paddingLeftSizes: 0, 5, 10;
 .text-justify          { text-align: justify; }
 
 .va-middle             { vertical-align: middle;}
+.va-top                { vertical-align: top;}
+.va-bottom             { vertical-align: bottom;}
 
 .text-lowercase        { text-transform: lowercase; }
 .text-uppercase        { text-transform: uppercase; }
@@ -153,6 +155,7 @@ $paddingLeftSizes: 0, 5, 10;
 .justify-flex-start    { justify-content: flex-end; }
 .justify-space-between { justify-content: space-between; }
 .justify-flex-end      { justify-content: flex-end; }
+.justify-center        { justify-content: center; }
 .align-start           { align-items: flex-start; }
 .align-center          { align-items: center; }
 .align-end             { align-items: flex-end; }

@@ -5,37 +5,141 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-.tabs__link {
-  align-items: center;
+.nav-tabs,
+.nav-pills {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  li{ 
-    align-items: center;
-    display: inline-flex;
-    & + li{
-      margin-left: 10px;
-    }
+}
+.nav-tabs-vertical{ 
+  @extend .nav-tabs;
+  flex-direction: column;
+}
+.nav-pills {
+  align-items: center;
+}
+.nav-tabs>li,
+.nav-pills>li,
+.nav-item{
+  padding-right: 5px;
+  .nav-tabs-vertical &{ 
+    padding-right: 0;
+    padding-bottom: 5px;
   }
-  a{
-    border-width: #{_brand-sizes(tabsButton-borderWidth)}px;
-    border-style: solid;
-    border-color: _brand-palette(tabsButton_border);
-    background-color: _brand-palette(tabsButton_bg);
-    color: _brand-palette(tabsButton_color);
-    cursor: pointer;
-    display: inline-block;
-    font-size: rem(_fontSizes(tabsButton));
-    font-weight: _fontWeight(tabsButton);
-    line-height: rem(_lineHeight(tabsButton));
-    height: min-content;
-    padding: 0 #{_brand-sizes(tabsButton-paddingX)}px;
+  &:last-child{
+    padding-right: 0;
+    .nav-tabs-vertical &{ 
+      padding-bottom: 0;
+    } 
   }
-  a.active,
-  .active > a{
-    border-color: _brand-palette(tabsButton-active_border);
-    background-color: _brand-palette(tabsButton-active_bg);
-    color: _brand-palette(tabsButton-active_color);
+}
+
+
+.nav-tabs > li > a,
+.nav-link{ 
+  align-items: center;
+  border-radius: 0;
+  background-color: _brand-palette(navTabs_bgc);
+  border-color: _brand-palette(navTabs_borderColor);
+  border-width: 1px;
+  border-style: solid;
+  color: _brand-palette(navTabs_color);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  font-size: rem(_fontSizes(navTabs));
+  font-weight: 400;
+  height: rem(_lineHeight(navTabs));
+  margin: 0;
+  padding: 0px 15px;
+  text-decoration: none;
+  white-space: nowrap;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: _brand-palette(navTabs_bgc);
+    border-color: _brand-palette(navTabs_borderColor);
+    color: _brand-palette(navTabs_color);
+  }
+}
+
+.nav-pills > li > a,
+.nav-pills .nav-link {
+  border-width: #{_brand-sizes(navPills-borderWidth)}px;
+  border-color: _brand-palette(navPills_border);
+  border-style: solid;
+  cursor: pointer;
+  background-color: _brand-palette(navPills_bg);
+  color: _brand-palette(navPills_color);
+  display: inline-block;
+  font-size: rem(_fontSizes(navPills));
+  font-weight: _fontWeight(navPills);
+  line-height: rem(_lineHeight(navPills));
+  height: min-content;
+  padding: 0 #{_brand-sizes(navPills-paddingX)}px;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: _brand-palette(navPills_bg);
+    border-color: _brand-palette(navPills_border);
+    color: _brand-palette(navPills_color);
+  }
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li > a.active,
+.nav-link.active,
+.active .nav-link{ 
+  background-color: _brand-palette(navTabs-active_bgc);
+  border-top-color: _brand-palette(navTabs-active_borderColor);
+  border-bottom-color: transparent;
+  color: _brand-palette(navTabs-active_color);
+  &:hover,
+  &:focus,
+  &:active { 
+    background-color: _brand-palette(navTabs-active_bgc);
+    border-top-color: _brand-palette(navTabs-active_borderColor);
+    border-bottom-color: transparent;
+    color: _brand-palette(navTabs-active_color);
+  }
+}
+ 
+.nav-pills>li.active>a,
+.nav-pills>li>a.active,
+.nav-pills .nav-link.active,
+.nav-pills .active .nav-link {
+  border-color: _brand-palette(navPills-active_border);
+  background-color: _brand-palette(navPills-active_bg);
+  color: _brand-palette(navPills-active_color);
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: _brand-palette(navPills-active_border);
+    background-color: _brand-palette(navPills-active_bg);
+    color: _brand-palette(navPills-active_color);
+  }
+}
+
+.tab-content {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0px;
+  >.tab-pane {
+    display: none;
+  }
+  >.active {
+    display: block;
+  }
+}
+
+.tab-pane{ 
+  background-color: _brand-palette(tabsPane-active_bgc);
+  border-radius: 0;
+  border: none;
+  padding: rem(10) rem(10) 0;
+  .modal & {
+    padding: rem(10) 0 0;
   }
 }

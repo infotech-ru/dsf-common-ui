@@ -1,9 +1,9 @@
 ---
-Title: Меню и подменю (dropdown)
-menutitle: Меню actionMenu и dropdown
+Title: Меню для кнопок (actionMenu с dropdown)
+menutitle: Меню для кнопок (actionMenu с dropdown)
 category: components
 anchor: components-menu
-order: 1
+order: 6
 ---
 
 ### Меню для кнопок действий.

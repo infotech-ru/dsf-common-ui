@@ -6,6 +6,7 @@ anchor: table-general
 order: 1
 ---
 <p>Для выравнивания данных в ячейках используем классы `text-center`, `text-right` на нужные ячейки.</p>
+<p>Для подсказок в шапке нужно использовать класс `tableHelpIcon_td` на ячейке и вставить контейнер `<span class="tableHelpIcon" data-toggle="tooltip" title="Текст подсказки"><?= Icons::icon('2colors-questions-full')?></span>` с иконкой и текстом подсказки.</p>
 {% highlight html %}
 <table class="table">
   <thead>
@@ -13,7 +14,15 @@ order: 1
       <th>lorem</th>
       <th>lorem</th>
       <th>lorem</th>
-      <th>lorem</th>
+      <th class="tableHelpIcon_td">
+        lorem
+        <span class="tableHelpIcon" data-toggle="tooltip"
+          title="Текст подсказки">
+          <svg class="2colors-questions-full" width="24" height="24">
+            <use xlink:href="dist/sprite.symbol.svg#2colors-questions-full"></use>
+          </svg>
+        </span>
+      </th>
     </tr>
   </thead>
   <tbody>

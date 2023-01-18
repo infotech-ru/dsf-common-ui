@@ -3,7 +3,7 @@ Title: Шапка страницы
 menutitle: Шапка страницы
 category: components
 anchor: components-pageHeader
-order: 4
+order: 1
 ---
 
 Шапка страницы имеет следующую структуру:
