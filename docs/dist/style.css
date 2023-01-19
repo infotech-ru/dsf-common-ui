@@ -2217,7 +2217,7 @@ h6, .h6 {
   padding: 0;
   position: relative;
   filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.25));
-  z-index: 1004;
+  z-index: 1005;
 }
 .body_maximized .header {
   display: none;
@@ -2672,7 +2672,7 @@ h6, .h6 {
   background-color: #EEEEEE;
   position: sticky;
   top: 0;
-  z-index: 1003;
+  z-index: 1004;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -5983,7 +5983,7 @@ h6, .h6 {
   padding: 0px;
   text-align: left;
   top: 100%;
-  z-index: 1003;
+  z-index: 1004;
 }
 .dropdown-menu .svg-icon-viewbox24 {
   height: 24px;

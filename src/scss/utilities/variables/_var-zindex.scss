@@ -12,12 +12,11 @@ $zindex: (
   tableStickyTheadTh:                                                      1001,
   tableStickyTheadThFirstChild:                                            1002,
   tableStickyTheadTrFirstChildThFirstChild:                                1003,
-  pageHeader:                                                              1003,
-  dropdown-menu:                                                           1003,
-  // dropdown-menu: table thead th перекрывало
-  header:                                                                  1004,
-  bootstrapSelectDropdownMenu:                                             1005,
-  comboTreeDropDownContainer:                                              1005,
+  pageHeader:                                                              1004,
+  dropdown-menu:                                                           1004, // dropdown-menu: table thead th перекрывало
+  header:                                                                  1005,
+  bootstrapSelectDropdownMenu:                                             1006,
+  comboTreeDropDownContainer:                                              1006,
   menuNavMulticolumnMenu:                                                  1010,
   navbarNavDropdownMenu:                                                   1010,
   zindex-navbar-fixed:                                                     1030,
