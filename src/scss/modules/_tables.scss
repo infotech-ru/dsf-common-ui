@@ -360,6 +360,10 @@ tfoot {
     width: #{_brand-sizes(tableHelpIcon_size)}px;
     #{--svg-icon-fill}: _brand-palette(tableHelpIcon_bgc);
   }
+  .asc &, .desc &{
+    // display: inline-flex;
+    right: #{calc(_brand-sizes(tableHelpIcon_size) + _brand-sizes(table_paddingY) * 1.5 * -1)}px;
+  }
   &_td {
     padding-right: #{calc(_brand-sizes(tableHelpIcon_size) + _brand-sizes(table_paddingY) * 1.5)}px;
   }

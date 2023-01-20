@@ -7984,6 +7984,9 @@ td.table__rose {
   width: 8px;
   --svg-icon-fill: #333333;
 }
+.asc .tableHelpIcon, .desc .tableHelpIcon {
+  right: 0.5px;
+}
 .tableHelpIcon_td {
   padding-right: 15.5px;
 }
