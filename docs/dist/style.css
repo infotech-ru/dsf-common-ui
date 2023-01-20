@@ -7973,9 +7973,11 @@ td.table__rose {
   display: inline-flex;
   height: 8px;
   margin-bottom: -4px;
-  right: 5px;
-  position: absolute;
   width: 8px;
+}
+.tableHelpIcon_td .tableHelpIcon {
+  position: absolute;
+  right: 5px;
 }
 .tableHelpIcon svg {
   height: 8px;

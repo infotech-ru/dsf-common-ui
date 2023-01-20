@@ -350,9 +350,11 @@ tfoot {
   display: inline-flex;
   height: #{_brand-sizes(tableHelpIcon_size)}px;
   margin-bottom: #{calc(_brand-sizes(tableHelpIcon_size) * .5 * -1)}px;
-  right: #{_brand-sizes(table_paddingY)}px;
-  position: absolute;
   width: #{_brand-sizes(tableHelpIcon_size)}px;
+  .tableHelpIcon_td &{ 
+    position: absolute;
+    right: #{_brand-sizes(table_paddingY)}px;
+  }
   svg{
     height: #{_brand-sizes(tableHelpIcon_size)}px;
     width: #{_brand-sizes(tableHelpIcon_size)}px;
