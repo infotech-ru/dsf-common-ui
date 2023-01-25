@@ -432,6 +432,7 @@ $brand-palette: (
   pagination_color:                       map-get($brand-colors, _light-blue),
   pagination-disable_color:               map-get($brand-colors, _light-blue3),
   pagination-active_color:                map-get($brand-colors, _light-blue3),
+  pagination-svg-disable_color:           map-get($brand-colors, _grey3),
 
   radioItem_color:                        map-get($brand-colors, _dark-grey),
   radioItem_bg:                           map-get($brand-colors, _white),

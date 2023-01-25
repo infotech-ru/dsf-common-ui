@@ -80,6 +80,16 @@
       color: _brand-palette(pagination-disable_color);
       cursor: not-allowed;
     }
+    .bicolors-arrow_left__24vb,
+    .bicolors-arrow_left_double__24vb,
+    .bicolors-arrow_right_double__24vb,
+    .bicolors-arrow_right__24vb {
+      // opacity: 0.2;
+      #{--svg-icon-fill}: _brand-palette(pagination-svg-disable_color);
+      #{--svg-icon-fill_blue}: _brand-palette(pagination-svg-disable_color);
+      #{--svg-icon-stroke}: _brand-palette(pagination-svg-disable_color);
+      #{--svg-icon-stroke_blue}: _brand-palette(pagination-svg-disable_color);
+    }
   }
   .bicolors-arrow_left__24vb,
   .bicolors-arrow_left_double__24vb,

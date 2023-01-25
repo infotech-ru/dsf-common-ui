@@ -8781,6 +8781,15 @@ td.table__rose {
   color: #B6D1E8;
   cursor: not-allowed;
 }
+.pagination > .disabled .bicolors-arrow_left__24vb,
+.pagination > .disabled .bicolors-arrow_left_double__24vb,
+.pagination > .disabled .bicolors-arrow_right_double__24vb,
+.pagination > .disabled .bicolors-arrow_right__24vb {
+  --svg-icon-fill: #cccccc;
+  --svg-icon-fill_blue: #cccccc;
+  --svg-icon-stroke: #cccccc;
+  --svg-icon-stroke_blue: #cccccc;
+}
 .pagination .bicolors-arrow_left__24vb,
 .pagination .bicolors-arrow_left_double__24vb,
 .pagination .bicolors-arrow_right_double__24vb,
