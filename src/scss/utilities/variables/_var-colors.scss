@@ -425,6 +425,13 @@ $brand-palette: (
   navTabs-active_color:                   map-get($brand-colors, _grey),
 
   pageHeader_color:                       map-get($brand-colors, _dark-grey),
+  
+  pagination_bgc:                         map-get($brand-colors, _transparent),
+  pagination-active_bgc:                  map-get($brand-colors, _light-blue),
+  pagination-disable_bgc:                 map-get($brand-colors, _transparent),
+  pagination_color:                       map-get($brand-colors, _light-blue),
+  pagination-disable_color:               map-get($brand-colors, _light-blue3),
+  pagination-active_color:                map-get($brand-colors, _light-blue3),
 
   radioItem_color:                        map-get($brand-colors, _dark-grey),
   radioItem_bg:                           map-get($brand-colors, _white),

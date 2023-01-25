@@ -309,7 +309,7 @@ pre{
   position: absolute;
   top: auto;
 }
-[title*='2colors']:after{
+[title*='bicolors']:after{
   content: 'NEW';
   color: red;
   display: block;

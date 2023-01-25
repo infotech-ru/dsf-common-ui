@@ -1,0 +1,91 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* PAGINATIONS                                                                */
+/* path: dsf-common-ui/src/scss/modules/_paginations.scss                     */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
+.pagination {
+  border-radius: 0;
+  display: inline-flex;
+  padding-left: 0;
+  list-style-type: none;
+  margin: rem(10) 0;
+  >li {
+    margin: 0 rem(calc(_brand-sizes(paginationItem_margin) * 0.5));
+    // display: inline; // Remove list-style and block-level defaults
+    >a,
+    >span {
+      align-items: center;
+      border: none;
+      border-radius: _brand-sizes(paginationItem_borderRadius);
+      background-color: _brand-palette(pagination_bgc);
+      color: _brand-palette(pagination_color);
+      cursor: pointer;
+      display: inline-flex;
+      font-size: fontSizes(pagination);
+      justify-content: center;
+      height: rem(_brand-sizes(paginationItem_height));
+      line-height: rem(_brand-sizes(paginationItem_height));
+      margin: 0;
+      padding: 0 rem(_brand-sizes(paginationItem_paddingX));
+      position: relative;
+      // float: left; // Collapse white-space
+      // margin-left: -1px;
+      text-decoration: none;
+      width: rem(_brand-sizes(paginationItem_width));
+
+      &:hover,
+      &:focus {
+        background-color: _brand-palette(pagination_bgc);
+        color: _brand-palette(pagination_color);
+        outline: none;
+        z-index: 2;
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+  >.active>a,
+  >.active>span {
+
+    &,
+    &:hover,
+    &:focus {
+      background-color: _brand-palette(pagination-active_bgc);
+      border-color: transparent;
+      color: _brand-palette(pagination-active_color);
+      cursor: default;
+      outline: none;
+      z-index: 3;
+    }
+  }
+
+  >.disabled {
+    >span,
+    >span:hover,
+    >span:focus,
+    >a,
+    >a:hover,
+    >a:focus {
+      background-color: _brand-palette(pagination-disable_bgc);
+      color: _brand-palette(pagination-disable_color);
+      cursor: not-allowed;
+    }
+  }
+  .bicolors-arrow_left__24vb,
+  .bicolors-arrow_left_double__24vb,
+  .bicolors-arrow_right_double__24vb,
+  .bicolors-arrow_right__24vb {
+    width: 16px;
+    height: 16px;
+  }
+}

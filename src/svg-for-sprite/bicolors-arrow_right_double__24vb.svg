@@ -1,0 +1,6 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 20L13 12" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 4L13 12" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 20L19 12" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11 4L19 12" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
