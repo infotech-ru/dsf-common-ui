@@ -125,6 +125,7 @@
     .dropdown-menu{
       overflow: auto;
       max-height: calc(80vh - 120px);
+      @extend %scrollVar;
       .mobile-view &{
         max-height:none;
         padding-left: 10px;
