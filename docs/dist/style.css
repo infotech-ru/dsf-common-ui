@@ -8760,10 +8760,10 @@ td.table__rose {
   height: 1.25rem;
   line-height: 1.25rem;
   margin: 0;
-  padding: 0 0rem;
+  min-width: 1.25rem;
+  padding: 0 0.3125rem;
   position: relative;
   text-decoration: none;
-  width: 1.25rem;
 }
 .pagination > li > a:hover, .pagination > li > a:focus,
 .pagination > li > span:hover,
@@ -8779,13 +8779,22 @@ td.table__rose {
 .pagination > li:last-child {
   margin-right: 0;
 }
+.pagination .bicolors-arrow_left__24vb,
+.pagination .bicolors-arrow_left_double__24vb,
+.pagination .bicolors-arrow_right_double__24vb,
+.pagination .bicolors-arrow_right__24vb {
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+}
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
 .pagination > .active > span,
 .pagination > .active > span:hover,
 .pagination > .active > span:focus {
-  background-color: #4A8DC6;
+  background-color: #B6D1E8;
   border-color: transparent;
-  color: #B6D1E8;
+  color: #4A8DC6;
   cursor: default;
   outline: none;
   z-index: 3;
@@ -8804,10 +8813,10 @@ td.table__rose {
 .pagination > .disabled .bicolors-arrow_left_double__24vb,
 .pagination > .disabled .bicolors-arrow_right_double__24vb,
 .pagination > .disabled .bicolors-arrow_right__24vb {
-  --svg-icon-fill: #cccccc;
-  --svg-icon-fill_blue: #cccccc;
-  --svg-icon-stroke: #cccccc;
-  --svg-icon-stroke_blue: #cccccc;
+  --svg-icon-fill: #B6D1E8;
+  --svg-icon-fill_blue: #B6D1E8;
+  --svg-icon-stroke: #B6D1E8;
+  --svg-icon-stroke_blue: #B6D1E8;
 }
 .pagination .bicolors-arrow_left__24vb,
 .pagination .bicolors-arrow_left_double__24vb,
