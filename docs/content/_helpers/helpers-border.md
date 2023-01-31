@@ -10,7 +10,7 @@ order: 2
 Классы `border-top`, `border-bottom`, `border-left`, `border-right` добавляют черту  толщиной в 1px сверху, снизу, слева или справа блока. `border` - добавляет обрамление чертой в 1px всего блока.
 
 #### Цвет бордера
-Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-grey` добавляют соответсвующего цвета. 
+Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-grey`, `border-white` добавляют соответсвующего цвета. 
 `border-clear` - класс делает прозрачным цвет бордера
 Классы `border__none`, `border-top__none`, `border-bottom__none`, `border-left__none`, `border-right__none` - классы отключают бордер
 
@@ -23,6 +23,7 @@ order: 2
   <div class="border border-info mb-10">border border-info</div>
   <div class="border border-muted mb-10">border border-muted</div>
   <div class="border-bottom border-grey mb-10">border-bottom border-grey</div>
+  <div class="border-bottom border-white mb-10">border-bottom border-white</div>
   <div class="border border-bottom__none border-grey mb-10">border border-bottom__none border-grey</div>
 {% endhighlight %}
 <div class="bs-docs-example">
@@ -34,5 +35,6 @@ order: 2
   <div class="border border-info mb-10">border border-info</div>
   <div class="border border-muted mb-10">border border-muted</div>
   <div class="border-bottom border-grey mb-10">border-bottom border-grey</div>
+  <div class="border-bottom border-white mb-10">border-bottom border-white</div>
   <div class="border border-bottom__none border-grey mb-10">border border-bottom__none border-grey</div>
 </div>

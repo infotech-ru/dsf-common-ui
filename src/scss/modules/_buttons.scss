@@ -109,6 +109,8 @@
       svg{
         #{--svg-icon-fill}: _brand-btn(#{$btn}_svg);
         #{--svg-icon-stroke}: _brand-btn(#{$btn}_svg);
+        #{--svg-icon-fill_blue}: _brand-btn(#{$btn}_svg_blue);
+        #{--svg-icon-stroke_blue}: _brand-btn(#{$btn}_svg_blue);
         fill: _brand-btn(#{$btn}_svg);
       }
     }

@@ -204,7 +204,7 @@ $paddingLeftSizes: 0, 5, 10;
   }
 }
 
-@each $colorTools in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'muted', 'orange', 'grey', 'dark-red', 'clear' {
+@each $colorTools in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'muted', 'orange', 'grey', 'dark-red', 'clear', 'white' {
 
   @include svg-icon-variant('.svg-#{$colorTools}', _colorTools(#{$colorTools}_svg));
   

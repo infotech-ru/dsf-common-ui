@@ -6259,6 +6259,8 @@ h6, .h6 {
 .btn-default .svg--icon svg, .btn-group_theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
   --svg-icon-fill: #1E6393;
   --svg-icon-stroke: #1E6393;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
   fill: #1E6393;
 }
 
@@ -6278,6 +6280,8 @@ h6, .h6 {
 .btn-primary .svg--icon svg, .btn-group_theme > [class^=btn].active .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 
@@ -6297,6 +6301,8 @@ h6, .h6 {
 .btn-success .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 
@@ -6316,6 +6322,8 @@ h6, .h6 {
 .btn-danger .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 
@@ -6335,6 +6343,8 @@ h6, .h6 {
 .btn-warning .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 
@@ -6354,6 +6364,8 @@ h6, .h6 {
 .btn-info .svg--icon svg {
   --svg-icon-fill: #777777;
   --svg-icon-stroke: #777777;
+  --svg-icon-fill_blue: #777777;
+  --svg-icon-stroke_blue: #777777;
   fill: #777777;
 }
 
@@ -9573,6 +9585,24 @@ tbody.collapse.in {
 
 .border-clear {
   border-color: #00000000;
+}
+
+.svg-white svg,
+.svg-white.svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.border-white {
+  border-color: #ffffff;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

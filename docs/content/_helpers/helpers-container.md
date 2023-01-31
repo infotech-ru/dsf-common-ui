@@ -37,7 +37,7 @@ order: 4
 `rotate90`,`rotate180`, `rotate270` - устанавливает поворот
 
 #### Классы для установленния фона контейнера
-`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `bg-grey`, `bg-clear`
+`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `bg-grey`, `bg-clear`, `bg-white`
 
 {% highlight html %}
   <div class="bg-default">bg-default</div>
@@ -49,6 +49,7 @@ order: 4
   <div class="bg-muted">bg-muted</div>
   <div class="bg-grey">bg-grey</div>
   <div class="bg-clear">bg-clear</div>
+  <div class="bg-white">bg-white</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -61,4 +62,5 @@ order: 4
   <div class="bg-muted mb-10">bg-muted</div>
   <div class="bg-grey mb-10">bg-grey</div>
   <div class="bg-clear mb-10">bg-clear</div>
+  <div class="bg-white mb-10">bg-white</div>
 </div>
