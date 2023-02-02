@@ -17,17 +17,18 @@
   border-radius: 0;
   box-sizing: content-box;
   -moz-box-sizing: content-box;
-  .mobile-view &{
-      align-items: stretch;
-      // background: linear-gradient(180deg, _brand-colors(_light-grey) 0%, #CACACA 100%);
-      // box-shadow: 0px 2px 0px transparentize(_brand-colors(_black), 0.8);
-      flex-direction: column;
-  }
   .reset-view &,
   .guest-view &{
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 15px;
+  }
+  .mobile-view &{
+      align-items: stretch;
+      // background: linear-gradient(180deg, _brand-colors(_light-grey) 0%, #CACACA 100%);
+      // box-shadow: 0px 2px 0px transparentize(_brand-colors(_black), 0.8);
+      flex-direction: column;
+      padding: 0;
   }
   &__left,
   &__right{
@@ -37,6 +38,12 @@
       flex-direction: column;
       justify-content: space-between;
       height: 52px;
+    }
+    .mobile-view &{
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: auto;
     }
   }
   &__right{
@@ -48,6 +55,11 @@
       justify-content: center;
       // flex-direction: column;
     }
+    .mobile-view &{
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
   }
   &__item{
     font-size: 11px;
@@ -56,6 +68,17 @@
     .guest-view &{
       color: _brand-colors(_white);
       font-size: 12px;
+    }
+    .mobile-view & {
+      line-height: 20px;
+    }
+    a{ 
+      .reset-view &,
+      .guest-view & {
+        .mobile-view & {
+          color: _brand-colors(_vibrant-blue);
+        }
+      }
     }
     &_right{
       .reset-view &,
@@ -87,5 +110,12 @@
     background-image: url(../images/infotek_logo_white.svg);
     background-position-y: center;
     margin: 0;
+  }
+  .mobile-view &{
+    background-image: url(../images/infotek_logo_mobile.svg);
+    background-size: contain;
+    height: 16px;
+    margin: 0;
+    width: 71px;
   }
 }
