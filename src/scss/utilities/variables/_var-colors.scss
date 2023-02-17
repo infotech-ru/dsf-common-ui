@@ -354,6 +354,7 @@ $brand-palette: (
   body_color:                             map-get($brand-colors, _dark-grey),
 
   border:                                 map-get($brand-colors, _grey),
+  bootstrapSelect_caret_color:            map-get($brand-colors, _dark-grey),
 
   btnIconSvg_color:                       map-get($brand-colors, _blue),
 
@@ -397,8 +398,10 @@ $brand-palette: (
   client-check-item-name_color:           map-get($brand-colors, _red),
   client-check-diff_bg:                   map-get($brand-colors, _red),
 
-  controlLabelActive_color:               map-get($brand-colors, _dark-grey),
   controlLabel_color:                     map-get($brand-colors, _grey),
+  controlLabelActive_color:               map-get($brand-colors, _dark-grey),
+  controlLabelActive_bgc:                 map-get($brand-colors, _white),
+  controlLabelError_color:                map-get($brand-colors, _red),
 
   formControl-borderColor:                map-get($brand-colors, _grey),
   formControl-bgc:                        map-get($brand-colors, _white),

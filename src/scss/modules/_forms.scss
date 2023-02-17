@@ -55,17 +55,53 @@ output {
 }
 
 .control-label{
+  $paddinFromLeft: 3;
     // letter-spacing: .5px;
     display: block;
     color: _brand-palette(controlLabel_color);
-    font-size: 11px;
+    font-size: rem(_fontSizes(controlLabel));
     font-weight: 400;
     line-height: 14px; // возможность добавлять иконку
     margin-bottom: #{_brand-sizes(controlLabel_mb)}px;
-    .required & {
-      &:after { // style.css
-        color: $red;
+    &:after {
+      .required & {
+        color: _brand-palette(controlLabelError_color);
         content: '*';
+        .css-formFree & {
+          display: inline-block;
+          position: relative;
+          top: 0;
+        }
+      }
+    }
+    .css-formFree & {
+      font-size: rem(_fontSizes(controlLabel__formFree));
+      left: 0;
+      // left: rem($paddinFromLeft * -1);
+      // padding-left: rem(_brand-sizes(formControl_paddingX));
+      padding-left: rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft));
+      padding-right: 3px;
+      position: absolute;
+      line-height: rem(calc(_lineHeight(input) + 2));
+      margin-bottom: 0;
+      // transition: color .2s ease-out;
+      transition: top .2s ease-out, font-size .2s ease-out;
+      transform: translateX(0) translateY(0);
+      transform-origin: 0% 100%;
+      top: rem(_fontSizes(controlLabel_active__formFree));
+      z-index: 0; // Если больше 0 - появляется некликабельный участок
+    }
+    &.active {
+      .css-formFree & {
+        background-color: _brand-palette(controlLabelActive_bgc);
+        font-size: rem(_fontSizes(controlLabel_active__formFree));
+        left: rem($paddinFromLeft * -1);
+        line-height: rem(_fontSizes(controlLabel_active__formFree));
+        padding-left: rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft));
+        padding-right: rem(_brand-sizes(formControl_paddingX));
+        transform: translateX(rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
+        top: 2px; // корректировка из-за line-height
+        z-index: 1;
       }
     }
 }
@@ -89,7 +125,7 @@ output {
   font-size: rem(_fontSizes(formElem));
   // line-height: $line-height-base;
   line-height: rem(_lineHeight(input));
-  padding: 0 #{_brand-sizes(formControl_paddingX)}px;
+  padding: 0 rem(_brand-sizes(formControl_paddingX));
   width: 100%;
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
@@ -127,6 +163,22 @@ output {
   &[type=file] {
     border: none;
   }
+  
+  .css-formFree & {
+    &::-moz-placeholder {
+      font-size: 0;
+    }
+    &:-moz-placeholder {
+      font-size: 0;
+    }
+    &:-ms-input-placeholder {
+      font-size: 0;
+    }
+    &::-webkit-input-placeholder {
+      font-size: 0;
+    }
+  }
+
   // [converter] extracted textarea& to textarea.form-control
 }
 
@@ -179,6 +231,11 @@ textarea.form-control {
 .form-group {
   // margin-bottom: $form-group-margin-bottom;
   margin-bottom: rem(_brand-sizes(formGroup_mb));
+  .css-formFree &{ 
+    margin-bottom: rem(calc(_brand-sizes(formGroup__formFree_mb) - _fontSizes(controlLabel_active__formFree)));
+    padding-top: rem(_fontSizes(controlLabel_active__formFree));
+    position: relative;
+  }
 }
 
 
@@ -273,7 +330,6 @@ textarea.form-control {
 }
 
 
-
 // Feedback states
 .has-success {
   @include form-control-validation(_brand-palette(hasSuccess_color), _brand-palette(hasSuccess_border), _brand-palette(hasSuccess_bgc));
@@ -314,17 +370,7 @@ textarea.form-control {
 
 
 // Inline forms
-//
-// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
-// forms begin stacked on extra small (mobile) devices and then go inline when
-// viewports reach <768px.
-//
-// Requires wrapping inputs and labels with `.form-group` for proper display of
-// default HTML form controls and our custom form controls (e.g., input groups).
-//
-// Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
 
-// [converter] extracted from `.form-inline` for libsass compatibility
 @mixin form-inline {
 
   // Kick in the inline
@@ -402,9 +448,6 @@ textarea.form-control {
 
 
 // Horizontal forms
-//
-// Horizontal forms are built on grid classes and allow you to create forms with
-// labels on the left and inputs on the right.
 
 .form-horizontal {
 
@@ -448,25 +491,114 @@ textarea.form-control {
   .has-feedback .form-control-feedback {
     right: floor(math.div($grid-gutter-width, 2));
   }
+}
 
-  // Form group sizes
-  //
-  // Quick utility class for applying `.input-lg` and `.input-sm` styles to the
-  // inputs and labels within a `.form-group`.
-  // .form-group-lg {
-  //   @media (min-width: $screen-sm-min) {
-  //     .control-label {
-  //       padding-top: ($padding-large-vertical + 1);
-  //       font-size: $font-size-large;
-  //     }
-  //   }
-  // }
-  // .form-group-sm {
-  //   @media (min-width: $screen-sm-min) {
-  //     .control-label {
-  //       padding-top: ($padding-small-vertical + 1);
-  //       font-size: $font-size-small;
-  //     }
-  //   }
-  // }
+.bootstrap-select {
+  &.form-control {
+    .css-formFree & {
+      background-color: transparent;
+    }
+  }
+
+  >.dropdown-toggle {
+    .filter-option-inner-inner {
+      .css-formFree & {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 90%, rgba(255, 255, 255, 1) 100%);
+        background-color: _brand-palette(formControl-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .bs-placeholder {
+    .filter-option-inner-inner {
+      .css-formFree & {
+        opacity: 0;
+      }
+    }
+  }
+
+  .btn-default,
+  .btn {
+    .css-formFree & {
+      background-color: transparent;
+      background-image: none;
+      border-color: _brand-palette(formControl-borderColor);
+    }
+
+    &:active,
+    &.active {
+      .css-formFree & {
+        background-color: transparent;
+        background-image: none;
+      }
+    }
+  }
+
+  &.bs3,
+  & {
+    .dropdown-toggle .filter-option {
+      .css-formFree & {
+        padding-right: rem(calc(_brand-sizes(formControl_paddingX) + 5));
+      }
+    }
+  }
+
+  .caret {
+    .css-formFree & {
+      border: none;
+      right: 0;
+    }
+
+    &:before,
+    &:after {
+      .css-formFree & {
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+        content: '';
+        display: block;
+        position: absolute;
+        height: 0;
+        top: 0px;
+        width: 0;
+      }
+    }
+
+    &:after {
+      .css-formFree & {
+        border-width: rem(calc(_brand-sizes(caret_size) - 1));
+        border-bottom-width: 0;
+        right: rem(_brand-sizes(formControl_paddingX));
+      }
+    }
+
+    &:before {
+      .css-formFree & {
+        border-width: rem(_brand-sizes(caret_size));
+        border-bottom-width: 0;
+        border-top-color: _brand-palette(bootstrapSelect_caret_color);
+        right: rem(calc(_brand-sizes(formControl_paddingX) - 1));
+      }
+    }
+  }
+
+  &.open,
+  &.show {
+    .caret {
+
+      &:before,
+      &:after {
+        .css-formFree & {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:before {
+        .css-formFree & {
+          top: -1px;
+        }
+      }
+    }
+  }
 }
