@@ -394,7 +394,7 @@ tfoot {
     #{--svg-icon-stroke}: _brand-colors(_light-blue);
   }
   .tr__master & {
-    margin-left: $value;
+    margin-left: #{$value}px;
   }
 }
 .collapseTdIcon{

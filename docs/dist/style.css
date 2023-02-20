@@ -6811,14 +6811,47 @@ output {
 .control-label {
   display: block;
   color: #BABABA;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 400;
   line-height: 14px;
   margin-bottom: 3px;
 }
 .required .control-label:after {
-  color: #dc3545;
+  color: #D9534F;
   content: "*";
+}
+.css-formFree .required .control-label:after {
+  display: inline-block;
+  position: relative;
+  top: 0;
+}
+.css-formFree .control-label {
+  font-size: 0.8125rem;
+  left: 0;
+  padding-left: 0.4375rem;
+  padding-right: 0.9375rem;
+  position: absolute;
+  line-height: 1.75rem;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: top 0.2s ease-out, font-size 0.2s ease-out;
+  transform: translateX(0) translateY(0);
+  transform-origin: 0% 100%;
+  top: 0.6875rem;
+  z-index: 0;
+  white-space: nowrap;
+}
+.css-formFree .control-label.active {
+  background-color: #ffffff;
+  font-size: 0.6875rem;
+  left: -0.1875rem;
+  line-height: 0.6875rem;
+  padding-left: 0.4375rem;
+  padding-right: 0.625rem;
+  transform: translateX(0.4375rem) translateY(0);
+  top: 2px;
+  z-index: 1;
 }
 
 .form-control {
@@ -6832,7 +6865,7 @@ output {
   height: 1.75rem;
   font-size: 0.75rem;
   line-height: 1.625rem;
-  padding: 0 10px;
+  padding: 0 0.625rem;
   width: 100%;
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -6881,6 +6914,18 @@ output {
 .form-control[type=file] {
   border: none;
 }
+.css-formFree .form-control::-moz-placeholder {
+  font-size: 0;
+}
+.css-formFree .form-control:-moz-placeholder {
+  font-size: 0;
+}
+.css-formFree .form-control:-ms-input-placeholder {
+  font-size: 0;
+}
+.css-formFree .form-control::-webkit-input-placeholder {
+  font-size: 0;
+}
 
 textarea.form-control {
   border-radius: 1;
@@ -6900,6 +6945,11 @@ input[type=month].form-control {
 }
 .form-group {
   margin-bottom: 0.9375rem;
+}
+.css-formFree .form-group {
+  margin-bottom: 0.875rem;
+  padding-top: 0.6875rem;
+  position: relative;
 }
 
 .radio,
@@ -7123,6 +7173,65 @@ fieldset[disabled] .checkbox-inline {
 }
 .form-horizontal .has-feedback .form-control-feedback {
   right: 5px;
+}
+
+.css-formFree .bootstrap-select.form-control {
+  background-color: transparent;
+}
+.css-formFree .bootstrap-select > .dropdown-toggle .filter-option-inner-inner {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 90%, rgb(255, 255, 255) 100%);
+  background-color: #333333;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.css-formFree .bootstrap-select .bs-placeholder .filter-option-inner-inner {
+  opacity: 0;
+}
+.css-formFree .bootstrap-select .btn-default, .css-formFree .bootstrap-select .btn-group_theme > [class^=btn],
+.css-formFree .bootstrap-select .btn {
+  background-color: transparent;
+  background-image: none;
+  border-color: #BABABA;
+}
+.css-formFree .bootstrap-select .btn-default:active, .css-formFree .bootstrap-select .btn-group_theme > [class^=btn]:active, .css-formFree .bootstrap-select .btn-default.active, .css-formFree .bootstrap-select .btn-group_theme > .active[class^=btn],
+.css-formFree .bootstrap-select .btn:active,
+.css-formFree .bootstrap-select .btn.active {
+  background-color: transparent;
+  background-image: none;
+}
+.css-formFree .bootstrap-select.bs3 .dropdown-toggle .filter-option, .css-formFree .bootstrap-select .dropdown-toggle .filter-option {
+  padding-right: 0.9375rem;
+}
+.css-formFree .bootstrap-select .dropdown-toggle .caret {
+  border: none;
+  right: 0;
+}
+.css-formFree .bootstrap-select .caret:before, .css-formFree .bootstrap-select .caret:after {
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  top: 0px;
+  width: 0;
+}
+.css-formFree .bootstrap-select .caret:after {
+  border-width: 0.3125rem;
+  border-bottom-width: 0;
+  right: 0.625rem;
+}
+.css-formFree .bootstrap-select .caret:before {
+  border-width: 0.375rem;
+  border-bottom-width: 0;
+  border-top-color: #333333;
+  right: 0.5625rem;
+}
+.css-formFree .bootstrap-select.open .caret:before, .css-formFree .bootstrap-select.open .caret:after, .css-formFree .bootstrap-select.show .caret:before, .css-formFree .bootstrap-select.show .caret:after {
+  transform: rotate(180deg);
+}
+.css-formFree .bootstrap-select.open .caret:before, .css-formFree .bootstrap-select.show .caret:before {
+  top: -1px;
 }
 
 .fileUpload_label {
@@ -8090,7 +8199,7 @@ td.table__rose {
   --svg-icon-stroke: #4A8DC6;
 }
 .tr__master .collapseTrIcon {
-  margin-left: 10;
+  margin-left: 10px;
 }
 
 .collapseTdIcon {

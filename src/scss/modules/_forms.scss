@@ -80,16 +80,20 @@ output {
       // left: rem($paddinFromLeft * -1);
       // padding-left: rem(_brand-sizes(formControl_paddingX));
       padding-left: rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft));
-      padding-right: 3px;
+      // padding-right: 3px;
+      padding-right: rem(calc(_brand-sizes(formControl_paddingX) + 5));
       position: absolute;
       line-height: rem(calc(_lineHeight(input) + 2));
       margin-bottom: 0;
       // transition: color .2s ease-out;
+      overflow: hidden;
+      text-overflow: ellipsis;
       transition: top .2s ease-out, font-size .2s ease-out;
       transform: translateX(0) translateY(0);
       transform-origin: 0% 100%;
       top: rem(_fontSizes(controlLabel_active__formFree));
       z-index: 0; // Если больше 0 - появляется некликабельный участок
+      white-space: nowrap;
     }
     &.active {
       .css-formFree & {
@@ -544,13 +548,13 @@ textarea.form-control {
       }
     }
   }
-
-  .caret {
+  .dropdown-toggle .caret{ 
     .css-formFree & {
       border: none;
       right: 0;
     }
-
+  }
+  .caret {
     &:before,
     &:after {
       .css-formFree & {
