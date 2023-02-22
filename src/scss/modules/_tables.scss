@@ -81,6 +81,7 @@ thead {
     }
     .desc,
     .asc{
+      display: inline-flex;
       position: relative;
       padding-left: #{calc(_brand-sizes(tableSortIcon_size) + 5)}px;
       &:before{

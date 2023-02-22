@@ -7915,6 +7915,7 @@ thead th:first-child {
 }
 thead th .desc,
 thead th .asc {
+  display: inline-flex;
   position: relative;
   padding-left: 25px;
 }
