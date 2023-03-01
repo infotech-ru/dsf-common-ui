@@ -9765,6 +9765,24 @@ tbody.collapse.in {
   border-color: #ffffff;
 }
 
+.svg-light-blue3 svg,
+.svg-light-blue3.svg--icon svg {
+  --svg-icon-fill: #B6D1E8;
+  --svg-icon-stroke: #B6D1E8;
+}
+
+.text-light-blue3 {
+  color: #B6D1E8;
+}
+
+.bg-light-blue3 {
+  background-color: #B6D1E8;
+}
+
+.border-light-blue3 {
+  border-color: #B6D1E8;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE HELPERS STYLES                                                      */
 /*                                                                            */

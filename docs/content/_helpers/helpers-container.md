@@ -50,6 +50,7 @@ order: 4
   <div class="bg-grey">bg-grey</div>
   <div class="bg-clear">bg-clear</div>
   <div class="bg-white">bg-white</div>
+  <div class="bg-light-blue3">bg-light-blue3</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -63,4 +64,5 @@ order: 4
   <div class="bg-grey mb-10">bg-grey</div>
   <div class="bg-clear mb-10">bg-clear</div>
   <div class="bg-white mb-10">bg-white</div>
+  <div class="bg-light-blue3 mb-10">bg-light-blue3</div>
 </div>
