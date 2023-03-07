@@ -390,18 +390,6 @@ $brand-palette: (
   menuDropdownActive_bgc:                 map-get($brand-colors, _light-blue2),
   menuDropdownHeader_color:               map-get($brand-colors, _grey),
 
-  client-check-card_border:               map-get($brand-colors, _grey2),
-  client-check-card_color:                map-get($brand-colors, _dark-grey),
-  client-check-card-total_border:         map-get($brand-colors, _green),
-  client-check-card_bg:                   map-get($brand-colors, _light-grey),
-  client-check-card-active_bg:            map-get($brand-colors, _white),
-  client-check-card-total_color:          map-get($brand-colors, _green),
-  client-check-item_bg:                   map-get($brand-colors, _white),
-  client-check-item_color:                map-get($brand-colors, _dark-grey),
-  client-check-item-data_border:          map-get($brand-colors, _grey3),
-  client-check-item-name_color:           map-get($brand-colors, _red),
-  client-check-diff_bg:                   map-get($brand-colors, _red),
-
   controlLabel_color:                     map-get($brand-colors, _grey),
   controlLabelActive_color:               map-get($brand-colors, _dark-grey),
   controlLabelActive_bgc:                 map-get($brand-colors, _white),

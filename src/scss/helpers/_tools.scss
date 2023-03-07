@@ -180,11 +180,17 @@ $paddingLeftSizes: 0, 5, 10;
     &__none{
       border-top: none !important;
     }
+    &__dotted{
+      border-top-style: dotted;
+    }
   }
   &-right{
     border-right: 1px solid _brand-palette(border);
     &__none {
       border-right: none !important;
+    }
+    &__dotted {
+      border-right-style: dotted;
     }
   }
   &-bottom{
@@ -192,15 +198,24 @@ $paddingLeftSizes: 0, 5, 10;
     &__none {
       border-bottom: none !important;
     }
+    &__dotted {
+      border-bottom-style: dotted;
+    }
   }
   &-left{
     border-left: 1px solid _brand-palette(border);
     &__none {
       border-left: none !important;
     }
+    &__dotted {
+      border-left-style: dotted;
+    }
   }
   &__none{
     border: none !important;
+  }
+  &__dotted {
+    border-style: dotted;
   }
 }
 

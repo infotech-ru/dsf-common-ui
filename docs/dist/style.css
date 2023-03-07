@@ -9527,11 +9527,17 @@ tbody.collapse.in {
 .border-top__none {
   border-top: none !important;
 }
+.border-top__dotted {
+  border-top-style: dotted;
+}
 .border-right {
   border-right: 1px solid #BABABA;
 }
 .border-right__none {
   border-right: none !important;
+}
+.border-right__dotted {
+  border-right-style: dotted;
 }
 .border-bottom {
   border-bottom: 1px solid #BABABA;
@@ -9539,14 +9545,23 @@ tbody.collapse.in {
 .border-bottom__none {
   border-bottom: none !important;
 }
+.border-bottom__dotted {
+  border-bottom-style: dotted;
+}
 .border-left {
   border-left: 1px solid #BABABA;
 }
 .border-left__none {
   border-left: none !important;
 }
+.border-left__dotted {
+  border-left-style: dotted;
+}
 .border__none {
   border: none !important;
+}
+.border__dotted {
+  border-style: dotted;
 }
 
 .svg-default svg,
