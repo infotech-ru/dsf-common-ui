@@ -86,6 +86,8 @@ _Использование:_ `btn-link`
   <button class="btn-danger__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
   
   <button class="btn-warning__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  
+  <button class="btn-grey__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
 
 {% endhighlight %}
 
@@ -99,5 +101,7 @@ _Использование:_ `btn-link`
   <button class="btn-danger__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
   
   <button class="btn-warning__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  
+  <button class="btn-grey__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
 
 </div>

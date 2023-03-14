@@ -214,15 +214,6 @@ textarea.form-control {
       line-height: $input-height-base;
     }
 
-    // &.input-sm,
-    // .input-group-sm & {
-    //   line-height: $input-height-small;
-    // }
-
-    // &.input-lg,
-    // .input-group-lg & {
-    //   line-height: $input-height-large;
-    // }
   }
 }
 
@@ -611,4 +602,142 @@ textarea.form-control {
       }
     }
   }
+}
+
+
+.inputGroup {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  .form-group{
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+  >.form-control,
+  >.form-control-container,
+  >.form-control-plaintext{
+    position: relative; // For focus state's z-index
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0; // https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+    margin-bottom: 0;
+
+    +.form-control{
+      margin-left: #{calc(_brand-sizes(btn_borderWidth) * -1)}px;
+    }
+  }
+  >.form-control:focus{
+    z-index: 3;
+  }
+  >.form-control{
+    &:not(:first-child) {
+      border-top-left-radius:0;
+      border-bottom-left-radius:0;
+      border-left-width: 0;
+    }
+    &:not(:last-child) {
+      border-right-width: 0;
+    }
+  }
+  >.form-control-container{
+    .css-formFree & {
+      padding-top: rem(_fontSizes(controlLabel_active__formFree));
+    }
+    &:not(:first-child) {
+      .form-control{  
+        border-top-left-radius:0;
+        border-bottom-left-radius:0;
+        border-left-width: 0;
+      }
+    }
+    &:not(:last-child) {
+      .form-control{  
+        border-right-width: 0;
+      }
+    }
+  }
+  // &:not(.has-validation) {
+  //   >.form-control:not(:last-child){
+  //     border-top-right-radius: 0;
+  //     border-bottom-right-radius: 0;
+  //   }
+  // }
+  // &.has-validation {
+  //   >.form-control:nth-last-child(n + 3){
+  //     border-top-right-radius: 0;
+  //     border-bottom-right-radius: 0;
+  //   }
+  // }
+}
+
+.inputGroup_prepend,
+.inputGroup_append {
+  display: flex;
+  .css-formFree & {
+    padding-top: rem(_fontSizes(controlLabel_active__formFree));
+  }
+  .btn {
+    position: relative;
+    z-index: 2;
+    &:focus {
+      z-index: 3;
+    }
+  }
+  .btn+.btn,
+  .btn+.inputGroup_text,
+  .inputGroup_text+.inputGroup_text,
+  .inputGroup_text+.btn {
+    margin-left: #{calc(_brand-sizes(btn_borderWidth) * -1)}px;
+  }
+}
+.inputGroup_prepend {
+  margin-right: #{calc(_brand-sizes(btn_borderWidth) * -1)}px;
+}
+.inputGroup_append {
+  margin-left: #{calc(_brand-sizes(btn_borderWidth) * -1)}px;
+}
+.inputGroup_text {
+  align-items: center;
+  background-color: _brand-palette(inputGroupEl-bgc);
+  color: _brand-palette(inputGroupEl-color);
+  display: flex;
+  font-size: _fontSize(inputGroupElem);
+  font-weight: _fontWeight(inputGroupElem);
+  line-height: rem(_lineHeight(input));
+  padding: 0 rem(_brand-sizes(formControl_paddingX));
+  margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
+  // line-height: $input-line-height;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid _brand-palette(inputGroupEl-borderColor);
+  // @include border-radius($input-border-radius);
+
+  // Nuke default margins from checkboxes and radios to vertically center within.
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-top: 0;
+  }
+}
+.inputGroup>.inputGroup_prepend>.btn,
+.inputGroup>.inputGroup_prepend>.inputGroup_text,
+.inputGroup:not(.has-validation)>.inputGroup_append:not(:last-child)>.btn,
+.inputGroup:not(.has-validation)>.inputGroup_append:not(:last-child)>.inputGroup_text,
+.inputGroup.has-validation>.inputGroup_append:nth-last-child(n + 3)>.btn,
+.inputGroup.has-validation>.inputGroup_append:nth-last-child(n + 3)>.inputGroup_text,
+.inputGroup>.inputGroup_append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
+.inputGroup>.inputGroup_append:last-child>.inputGroup_text:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.inputGroup>.inputGroup_append>.btn,
+.inputGroup>.inputGroup_append>.inputGroup_text,
+.inputGroup>.inputGroup_prepend:not(:first-child)>.btn,
+.inputGroup>.inputGroup_prepend:not(:first-child)>.inputGroup_text,
+.inputGroup>.inputGroup_prepend:first-child>.btn:not(:first-child),
+.inputGroup>.inputGroup_prepend:first-child>.inputGroup_text:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }

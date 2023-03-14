@@ -26,6 +26,7 @@ $fontSizes: (
   controlLabel__formFree:                                                    13,
   controlLabel_active__formFree:                                             11,
   formElem:                                                                  12,
+  inputGroupElem:                                                            12,
   dropdown:                                                                  12,
   dropdownHeader:                                                            11,
   pagination:                                                                12,
@@ -45,5 +46,6 @@ $fontSizes: (
 }
 $fontWeight: (
   btn:                                                                      400,
+  inputGroupElem:                                                           400,
   navPills:                                                                 400,
 );

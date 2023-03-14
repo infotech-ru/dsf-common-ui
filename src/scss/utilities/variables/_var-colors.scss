@@ -265,6 +265,15 @@ $brand-btn: (
   info_svg:                               map-get($brand-colors, _grey4),
   info_svg_blue:                          map-get($brand-colors, _grey4),
   info_textShadow:                        map-get($brand-colors, _black),
+  
+  grey_bg:                                map-get($brand-colors, _grey),
+  grey-end_bg:                            map-get($brand-colors, _light-grey2),
+  grey_outline:                           map-get($brand-colors, _grey),
+  grey_outline__hover:                    map-get($brand-colors, _light-grey2),
+  grey_color:                             map-get($brand-colors, _grey4),
+  grey_svg:                               map-get($brand-colors, _grey4),
+  grey_svg_blue:                          map-get($brand-colors, _blue),
+  grey_textShadow:                        map-get($brand-colors, _black),
 );
 
 @function _brand-label($keys...) {
@@ -394,6 +403,10 @@ $brand-palette: (
   controlLabelActive_color:               map-get($brand-colors, _dark-grey),
   controlLabelActive_bgc:                 map-get($brand-colors, _white),
   controlLabelError_color:                map-get($brand-colors, _red),
+
+  inputGroupEl-bgc:                       map-get($brand-colors, _white),
+  inputGroupEl-borderColor:               map-get($brand-colors, _grey),
+  inputGroupEl-color:                     map-get($brand-colors, _dark-grey),
 
   formControl-borderColor:                map-get($brand-colors, _grey),
   formControl-bgc:                        map-get($brand-colors, _white),

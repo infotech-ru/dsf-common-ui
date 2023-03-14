@@ -6220,7 +6220,7 @@ h6, .h6 {
 /* path: dsf-common-ui/src/scss/modules/_buttons.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.btn-link, .btn-warning__outline, .btn-danger__outline, .btn-success__outline, .btn-primary__outline, .btn-default__outline, .btn-info, .btn-warning, .btn-danger, .btn-success, .btn-primary, .btn-group_theme > [class^=btn].active, .btn-default, .btn-group_theme > [class^=btn], .btn {
+.btn-link, .btn-grey__outline, .btn-warning__outline, .btn-danger__outline, .btn-success__outline, .btn-primary__outline, .btn-default__outline, .btn-info, .btn-warning, .btn-danger, .btn-success, .btn-primary, .btn-group_theme > [class^=btn].active, .btn-default, .btn-group_theme > [class^=btn], .btn {
   background-image: none;
   border-style: solid;
   border-color: transparent;
@@ -6243,35 +6243,35 @@ h6, .h6 {
   -ms-user-select: none;
   user-select: none;
 }
-.btn-link:hover, .btn-warning__outline:hover, .btn-danger__outline:hover, .btn-success__outline:hover, .btn-primary__outline:hover, .btn-default__outline:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover, .btn-success:hover, .btn-primary:hover, .btn-default:hover, .btn-group_theme > [class^=btn]:hover, .btn:hover, .btn-link:focus, .btn-warning__outline:focus, .btn-danger__outline:focus, .btn-success__outline:focus, .btn-primary__outline:focus, .btn-default__outline:focus, .btn-info:focus, .btn-warning:focus, .btn-danger:focus, .btn-success:focus, .btn-primary:focus, .btn-default:focus, .btn-group_theme > [class^=btn]:focus, .btn:focus, .focus.btn-link, .focus.btn-warning__outline, .focus.btn-danger__outline, .focus.btn-success__outline, .focus.btn-primary__outline, .focus.btn-default__outline, .focus.btn-info, .focus.btn-warning, .focus.btn-danger, .focus.btn-success, .focus.btn-primary, .focus.btn-default, .btn-group_theme > .focus[class^=btn], .focus.btn {
+.btn-link:hover, .btn-grey__outline:hover, .btn-warning__outline:hover, .btn-danger__outline:hover, .btn-success__outline:hover, .btn-primary__outline:hover, .btn-default__outline:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover, .btn-success:hover, .btn-primary:hover, .btn-default:hover, .btn-group_theme > [class^=btn]:hover, .btn:hover, .btn-link:focus, .btn-grey__outline:focus, .btn-warning__outline:focus, .btn-danger__outline:focus, .btn-success__outline:focus, .btn-primary__outline:focus, .btn-default__outline:focus, .btn-info:focus, .btn-warning:focus, .btn-danger:focus, .btn-success:focus, .btn-primary:focus, .btn-default:focus, .btn-group_theme > [class^=btn]:focus, .btn:focus, .focus.btn-link, .focus.btn-grey__outline, .focus.btn-warning__outline, .focus.btn-danger__outline, .focus.btn-success__outline, .focus.btn-primary__outline, .focus.btn-default__outline, .focus.btn-info, .focus.btn-warning, .focus.btn-danger, .focus.btn-success, .focus.btn-primary, .focus.btn-default, .btn-group_theme > .focus[class^=btn], .focus.btn {
   outline: none;
   text-decoration: none;
 }
-.btn-link:active, .btn-warning__outline:active, .btn-danger__outline:active, .btn-success__outline:active, .btn-primary__outline:active, .btn-default__outline:active, .btn-info:active, .btn-warning:active, .btn-danger:active, .btn-success:active, .btn-primary:active, .btn-default:active, .btn-group_theme > [class^=btn]:active, .btn:active, .active.btn-link, .active.btn-warning__outline, .active.btn-danger__outline, .active.btn-success__outline, .active.btn-primary__outline, .active.btn-default__outline, .active.btn-info, .active.btn-warning, .active.btn-danger, .active.btn-success, .active.btn-primary, .btn-group_theme > .active[class^=btn], .active.btn-default, .active.btn {
+.btn-link:active, .btn-grey__outline:active, .btn-warning__outline:active, .btn-danger__outline:active, .btn-success__outline:active, .btn-primary__outline:active, .btn-default__outline:active, .btn-info:active, .btn-warning:active, .btn-danger:active, .btn-success:active, .btn-primary:active, .btn-default:active, .btn-group_theme > [class^=btn]:active, .btn:active, .active.btn-link, .active.btn-grey__outline, .active.btn-warning__outline, .active.btn-danger__outline, .active.btn-success__outline, .active.btn-primary__outline, .active.btn-default__outline, .active.btn-info, .active.btn-warning, .active.btn-danger, .active.btn-success, .active.btn-primary, .btn-group_theme > .active[class^=btn], .active.btn-default, .active.btn {
   outline: 0;
 }
-.btn-link:active:focus, .btn-warning__outline:active:focus, .btn-danger__outline:active:focus, .btn-success__outline:active:focus, .btn-primary__outline:active:focus, .btn-default__outline:active:focus, .btn-info:active:focus, .btn-warning:active:focus, .btn-danger:active:focus, .btn-success:active:focus, .btn-primary:active:focus, .btn-default:active:focus, .btn-group_theme > [class^=btn]:active:focus, .btn:active:focus, .active.btn-link:focus, .active.btn-warning__outline:focus, .active.btn-danger__outline:focus, .active.btn-success__outline:focus, .active.btn-primary__outline:focus, .active.btn-default__outline:focus, .active.btn-info:focus, .active.btn-warning:focus, .active.btn-danger:focus, .active.btn-success:focus, .active.btn-primary:focus, .btn-group_theme > .active[class^=btn]:focus, .active.btn-default:focus, .active.btn:focus {
+.btn-link:active:focus, .btn-grey__outline:active:focus, .btn-warning__outline:active:focus, .btn-danger__outline:active:focus, .btn-success__outline:active:focus, .btn-primary__outline:active:focus, .btn-default__outline:active:focus, .btn-info:active:focus, .btn-warning:active:focus, .btn-danger:active:focus, .btn-success:active:focus, .btn-primary:active:focus, .btn-default:active:focus, .btn-group_theme > [class^=btn]:active:focus, .btn:active:focus, .active.btn-link:focus, .active.btn-grey__outline:focus, .active.btn-warning__outline:focus, .active.btn-danger__outline:focus, .active.btn-success__outline:focus, .active.btn-primary__outline:focus, .active.btn-default__outline:focus, .active.btn-info:focus, .active.btn-warning:focus, .active.btn-danger:focus, .active.btn-success:focus, .active.btn-primary:focus, .btn-group_theme > .active[class^=btn]:focus, .active.btn-default:focus, .active.btn:focus {
   outline: none;
 }
-.disabled.btn-link, .disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-info, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group_theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-info, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group_theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-info, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group_theme > [class^=btn], fieldset[disabled] .btn {
+.disabled.btn-link, .disabled.btn-grey__outline, .disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-info, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group_theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, [disabled].btn-grey__outline, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-info, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group_theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .btn-grey__outline, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-info, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group_theme > [class^=btn], fieldset[disabled] .btn {
   cursor: not-allowed;
   filter: alpha(opacity=65);
   opacity: 0.65;
 }
-.btn-link .badge, .btn-warning__outline .badge, .btn-danger__outline .badge, .btn-success__outline .badge, .btn-primary__outline .badge, .btn-default__outline .badge, .btn-info .badge, .btn-warning .badge, .btn-danger .badge, .btn-success .badge, .btn-primary .badge, .btn-default .badge, .btn-group_theme > [class^=btn] .badge, .btn .badge {
+.btn-link .badge, .btn-grey__outline .badge, .btn-warning__outline .badge, .btn-danger__outline .badge, .btn-success__outline .badge, .btn-primary__outline .badge, .btn-default__outline .badge, .btn-info .badge, .btn-warning .badge, .btn-danger .badge, .btn-success .badge, .btn-primary .badge, .btn-default .badge, .btn-group_theme > [class^=btn] .badge, .btn .badge {
   font-size: 11px;
   line-height: 13px;
   padding: 0px 5px;
 }
-.btn-link .caret, .btn-warning__outline .caret, .btn-danger__outline .caret, .btn-success__outline .caret, .btn-primary__outline .caret, .btn-default__outline .caret, .btn-info .caret, .btn-warning .caret, .btn-danger .caret, .btn-success .caret, .btn-primary .caret, .btn-default .caret, .btn-group_theme > [class^=btn] .caret, .btn .caret {
+.btn-link .caret, .btn-grey__outline .caret, .btn-warning__outline .caret, .btn-danger__outline .caret, .btn-success__outline .caret, .btn-primary__outline .caret, .btn-default__outline .caret, .btn-info .caret, .btn-warning .caret, .btn-danger .caret, .btn-success .caret, .btn-primary .caret, .btn-default .caret, .btn-group_theme > [class^=btn] .caret, .btn .caret {
   margin-left: 0;
 }
-.btn-link .svg--icon, .btn-warning__outline .svg--icon, .btn-danger__outline .svg--icon, .btn-success__outline .svg--icon, .btn-primary__outline .svg--icon, .btn-default__outline .svg--icon, .btn-info .svg--icon, .btn-warning .svg--icon, .btn-danger .svg--icon, .btn-success .svg--icon, .btn-primary .svg--icon, .btn-default .svg--icon, .btn-group_theme > [class^=btn] .svg--icon, .btn .svg--icon {
+.btn-link .svg--icon, .btn-grey__outline .svg--icon, .btn-warning__outline .svg--icon, .btn-danger__outline .svg--icon, .btn-success__outline .svg--icon, .btn-primary__outline .svg--icon, .btn-default__outline .svg--icon, .btn-info .svg--icon, .btn-warning .svg--icon, .btn-danger .svg--icon, .btn-success .svg--icon, .btn-primary .svg--icon, .btn-default .svg--icon, .btn-group_theme > [class^=btn] .svg--icon, .btn .svg--icon {
   height: 0.75rem;
   position: relative;
   top: 2px;
 }
-.btn-link .svg--icon svg, .btn-warning__outline .svg--icon svg, .btn-danger__outline .svg--icon svg, .btn-success__outline .svg--icon svg, .btn-primary__outline .svg--icon svg, .btn-default__outline .svg--icon svg, .btn-info .svg--icon svg, .btn-warning .svg--icon svg, .btn-danger .svg--icon svg, .btn-success .svg--icon svg, .btn-primary .svg--icon svg, .btn-default .svg--icon svg, .btn-group_theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
+.btn-link .svg--icon svg, .btn-grey__outline .svg--icon svg, .btn-warning__outline .svg--icon svg, .btn-danger__outline .svg--icon svg, .btn-success__outline .svg--icon svg, .btn-primary__outline .svg--icon svg, .btn-default__outline .svg--icon svg, .btn-info .svg--icon svg, .btn-warning .svg--icon svg, .btn-danger .svg--icon svg, .btn-success .svg--icon svg, .btn-primary .svg--icon svg, .btn-default .svg--icon svg, .btn-group_theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
   height: 0.75rem;
   max-width: 20px;
   width: auto;
@@ -6533,6 +6533,29 @@ h6, .h6 {
   --svg-icon-fill: #FFBD41;
   --svg-icon-stroke: #FFBD41;
   fill: #FFBD41;
+}
+
+.btn-grey__outline {
+  background-color: transparent;
+  background-image: none;
+  border-color: #BABABA;
+  color: #BABABA;
+}
+.btn-grey__outline:hover, .btn-grey__outline:focus, .btn-grey__outline:active, .btn-grey__outline.active, .btn-grey__outline.focus {
+  background-color: #F5F5F5;
+  background-image: none;
+  background-position: inherit;
+  color: #fff;
+}
+.btn-grey__outline:hover .svg--icon svg, .btn-grey__outline:focus .svg--icon svg, .btn-grey__outline:active .svg--icon svg, .btn-grey__outline.active .svg--icon svg, .btn-grey__outline.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  fill: #ffffff;
+}
+.btn-grey__outline .svg--icon svg {
+  --svg-icon-fill: #BABABA;
+  --svg-icon-stroke: #BABABA;
+  fill: #BABABA;
 }
 
 a.btn.disabled, fieldset[disabled] a.btn {
@@ -7235,6 +7258,131 @@ fieldset[disabled] .checkbox-inline {
 }
 .css-formFree .bootstrap-select.open .caret:before, .css-formFree .bootstrap-select.show .caret:before {
   top: -1px;
+}
+
+.inputGroup {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+.inputGroup .form-group {
+  margin-bottom: 0;
+  padding-top: 0;
+}
+.inputGroup > .form-control,
+.inputGroup > .form-control-container,
+.inputGroup > .form-control-plaintext {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.inputGroup > .form-control + .form-control,
+.inputGroup > .form-control-container + .form-control,
+.inputGroup > .form-control-plaintext + .form-control {
+  margin-left: -1px;
+}
+.inputGroup > .form-control:focus {
+  z-index: 3;
+}
+.inputGroup > .form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
+}
+.inputGroup > .form-control:not(:last-child) {
+  border-right-width: 0;
+}
+.css-formFree .inputGroup > .form-control-container {
+  padding-top: 0.6875rem;
+}
+.inputGroup > .form-control-container:not(:first-child) .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
+}
+.inputGroup > .form-control-container:not(:last-child) .form-control {
+  border-right-width: 0;
+}
+
+.inputGroup_prepend,
+.inputGroup_append {
+  display: flex;
+}
+.css-formFree .inputGroup_prepend,
+.css-formFree .inputGroup_append {
+  padding-top: 0.6875rem;
+}
+.inputGroup_prepend .btn,
+.inputGroup_append .btn {
+  position: relative;
+  z-index: 2;
+}
+.inputGroup_prepend .btn:focus,
+.inputGroup_append .btn:focus {
+  z-index: 3;
+}
+.inputGroup_prepend .btn + .btn,
+.inputGroup_prepend .btn + .inputGroup_text,
+.inputGroup_prepend .inputGroup_text + .inputGroup_text,
+.inputGroup_prepend .inputGroup_text + .btn,
+.inputGroup_append .btn + .btn,
+.inputGroup_append .btn + .inputGroup_text,
+.inputGroup_append .inputGroup_text + .inputGroup_text,
+.inputGroup_append .inputGroup_text + .btn {
+  margin-left: -1px;
+}
+
+.inputGroup_prepend {
+  margin-right: -1px;
+}
+
+.inputGroup_append {
+  margin-left: -1px;
+}
+
+.inputGroup_text {
+  align-items: center;
+  background-color: #ffffff;
+  color: #333333;
+  display: flex;
+  font-size: _fontSize(inputGroupElem);
+  font-weight: 400;
+  line-height: 1.625rem;
+  padding: 0 0.625rem;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid #BABABA;
+}
+.inputGroup_text input[type=radio],
+.inputGroup_text input[type=checkbox] {
+  margin-top: 0;
+}
+
+.inputGroup > .inputGroup_prepend > .btn,
+.inputGroup > .inputGroup_prepend > .inputGroup_text,
+.inputGroup:not(.has-validation) > .inputGroup_append:not(:last-child) > .btn,
+.inputGroup:not(.has-validation) > .inputGroup_append:not(:last-child) > .inputGroup_text,
+.inputGroup.has-validation > .inputGroup_append:nth-last-child(n+3) > .btn,
+.inputGroup.has-validation > .inputGroup_append:nth-last-child(n+3) > .inputGroup_text,
+.inputGroup > .inputGroup_append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.inputGroup > .inputGroup_append:last-child > .inputGroup_text:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.inputGroup > .inputGroup_append > .btn,
+.inputGroup > .inputGroup_append > .inputGroup_text,
+.inputGroup > .inputGroup_prepend:not(:first-child) > .btn,
+.inputGroup > .inputGroup_prepend:not(:first-child) > .inputGroup_text,
+.inputGroup > .inputGroup_prepend:first-child > .btn:not(:first-child),
+.inputGroup > .inputGroup_prepend:first-child > .inputGroup_text:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .fileUpload_label {

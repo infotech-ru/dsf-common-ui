@@ -104,11 +104,96 @@ var DSFUI = (function (exports) {
     $('.selectpicker').selectpicker();
   }
 
+  var isListeningDocument = false;
+  function FormsFree() {
+    if (!isListeningDocument) {
+      isListeningDocument = true;
+      $(document).on('focus blur change', inputSelector, function (e) {
+        return updateInputLabel(e.target);
+      }).on('blur change', inputSelector, function (e) {
+        return validateInput(e.target);
+      }).on('reset', 'form', function (e) {
+        var $form = $(e.target),
+            $formInputs = $form.find(inputSelector);
+        $formInputs.removeClass('valid').removeClass('invalid').each(function (index, input) {
+          return updateInputLabel(input);
+        });
+        $form.find('select.initialized').each(function (index, select) {
+          var $select = $(select),
+              $visibleInput = $select.siblings('input.select-dropdown'),
+              defaultValue = $select.children('[selected]').val();
+          $select.val(defaultValue);
+          $visibleInput.val(defaultValue);
+        });
+      }).on('focus', dateSelector, function (e) {
+        e.target.type = 'date';
+      }).on('blur', dateSelector, function (e) {
+        e.target.type = 'text';
+        $("label[for=\"".concat(e.target.id, "\"]")).removeClass('active');
+      }).on('changed.bs.select', dropdownSelector, function (e) {
+        updateDropdownLabel(e.target);
+      }).on('changed.bs.select', allDropdownSelector, function (e) {
+        updateDropdownLabel(e.target);
+      });
+    }
+
+    $(inputSelector).each(function (index, input) {
+      return updateInputLabel(input);
+    });
+    $(dateSelector).each(function (index, input) {
+      return input.type = 'text';
+    });
+    $(dropdownSelector).each(function (index, select) {
+      return updateDropdownLabel(select);
+    });
+    $(allDropdownSelector).each(function (index, select) {
+      return updateDropdownLabel(select);
+    });
+  }
+  var inputTypes = ['text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'],
+      inputSelector = inputTypes.map(function (selector) {
+    return "input[type=".concat(selector, "]");
+  }).concat(['textarea']).join(','),
+      dateSelector = 'input[type="date"]',
+      dropdownSelector = 'select.js-select-formFree',
+      allDropdownSelector = '.js-allSelect-formFree select',
+      labelSelector = 'label, i';
+
+  function getIsValid($input) {
+    var maxLength = Number($input.attr('length')) || 0;
+    return $input.is(':valid') && (!maxLength || maxLength > value.length);
+  }
+
+  function updateInputLabel(input) {
+    var $this = $(input),
+        $labelAndIcon = $this.siblings(labelSelector),
+        isActive = $this.val().length > 0 || $this.is(':focus') || $this.attr('placeholder') != null;
+    $labelAndIcon.toggleClass('active', isActive);
+  }
+
+  function validateInput(input) {
+    var $this = $(input);
+
+    if ($this.hasClass('validate')) {
+      var hasValue = $this.val().length > 0,
+          isValid = getIsValid($this);
+      $this.toggleClass('valid', hasValue && isValid).toggleClass('invalid', !isValid);
+    }
+  }
+
+  function updateDropdownLabel(select) {
+    var $select = $(select),
+        isActive = select.value.length > 0 || $select.find('option:selected:not(.bs-title-option)').length > 0;
+    $select.closest('div').siblings(labelSelector).toggleClass('active', isActive);
+  } // TODO: сбрасывать значение при нажатие удаления значения.
+  // $(el).val('default').selectpicker("refresh");
+
   function OnLoad() {
     itemActionMenu();
     multilevelMenu();
     CopyToClipboard();
     init();
+    FormsFree();
   }
   function tablesInit() {
     initTreeTable();
