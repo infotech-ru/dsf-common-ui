@@ -79,3 +79,23 @@ _Использование:_ класс `btn-info`
 <div class="bs-docs-example">
   <button class="btn-info">Кнопка btn-info</button>
 </div>
+
+#### Кнопки без ссемантической привязки
+
+_Использование:_ класс `btn-grey`
+
+{% highlight html %}
+  <button class="btn-grey">Кнопка btn-grey</button>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <button class="btn-grey">Кнопка btn-grey</button>
+</div>
+
+_Использование:_ класс `btn-lightGrey`
+
+{% highlight html %}
+  <button class="btn-lightGrey">Кнопка btn-lightGrey</button>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <button class="btn-lightGrey">Кнопка btn-lightGrey</button>
+</div>

@@ -87,12 +87,12 @@
   }
 }
 
-@each $btn in default, primary, success, danger, warning, info {
+@each $btn in default, primary, success, danger, warning, info, 'grey', 'lightGrey' {
   .btn-#{$btn}{
     background-color: _brand-btn(#{$btn}_bg);
     background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
     background-image: linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
-    border-color: _brand-btn(#{$btn}-end_bg);
+    border-color: _brand-btn(#{$btn}_border);
     color: _brand-btn(#{$btn}_color);
     @extend %btn;
     &:hover,
@@ -100,10 +100,21 @@
     &:active,
     &.active,
     &.focus {
-      background-image: -webkit-linear-gradient(_brand-btn(#{$btn}-end_bg) 0%, _brand-btn(#{$btn}_bg) 100%);
-      background-image: linear-gradient(_brand-btn(#{$btn}-end_bg) 0%, _brand-btn(#{$btn}_bg) 100%);
+      background-color: _brand-btn(#{$btn}_bgc__hover);
+      background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bgc__hover) 0%, _brand-btn(#{$btn}-end_bg_hover) 100%);
+      background-image: linear-gradient(_brand-btn(#{$btn}_bgc__hover) 0%, _brand-btn(#{$btn}-end_bg_hover) 100%);
       background-position: inherit;
+      border-color: _brand-btn(#{$btn}_border__hover);
       color: _brand-btn(#{$btn}_color);
+      .svg--icon {
+        svg {
+          #{--svg-icon-fill}: _brand-btn(#{$btn}_svg__hover);
+          #{--svg-icon-stroke}: _brand-btn(#{$btn}_svg__hover);
+          #{--svg-icon-fill_blue}: _brand-btn(#{$btn}_svg_blue__hover);
+          #{--svg-icon-stroke_blue}: _brand-btn(#{$btn}_svg_blue__hover);
+          fill: _brand-btn(#{$btn}_svg);
+        }
+      }
     }
     .svg--icon{
       svg{
@@ -114,6 +125,15 @@
         fill: _brand-btn(#{$btn}_svg);
       }
     }
+    #{--btn_bg}: _brand-btn(#{$btn}_bg);
+    #{--btn_bgEnd}: _brand-btn(#{$btn}-end_bg);
+    #{--btn_bgEnd__hover}: _brand-btn(#{$btn}-end_bg__hover);
+    #{--btn_bgc__hover}: _brand-btn(#{$btn}_bgc__hover);
+    #{--borderColor__hover}: _brand-btn(#{$btn}_border__hover);
+    #{--btn_svg}: _brand-btn(#{$btn}_svg);
+    #{--btn_svg_blue}: _brand-btn(#{$btn}_svg_blue);
+    #{--btn_svg__hover}: _brand-btn(#{$btn}_svg__hover);
+    #{--btn_svg_blue__hover}: _brand-btn(#{$btn}_svg_blue__hover);
   }
 }
 
@@ -130,7 +150,7 @@
   }
 }
 
-@each $btn in default, primary, success, danger, warning, "grey" {
+@each $btn in default, primary, success, danger, warning, 'grey' {
   .btn-#{$btn}__outline {
     background-color: transparent;
     background-image: none;

@@ -6220,7 +6220,7 @@ h6, .h6 {
 /* path: dsf-common-ui/src/scss/modules/_buttons.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.btn-link, .btn-grey__outline, .btn-warning__outline, .btn-danger__outline, .btn-success__outline, .btn-primary__outline, .btn-default__outline, .btn-info, .btn-warning, .btn-danger, .btn-success, .btn-primary, .btn-group_theme > [class^=btn].active, .btn-default, .btn-group_theme > [class^=btn], .btn {
+.btn-link, .btn-grey__outline, .btn-warning__outline, .btn-danger__outline, .btn-success__outline, .btn-primary__outline, .btn-default__outline, .btn-lightGrey, .btn-grey, .btn-info, .btn-warning, .btn-danger, .btn-success, .btn-primary, .btn-group_theme > [class^=btn].active, .btn-default, .btn-group_theme > [class^=btn], .btn {
   background-image: none;
   border-style: solid;
   border-color: transparent;
@@ -6243,35 +6243,35 @@ h6, .h6 {
   -ms-user-select: none;
   user-select: none;
 }
-.btn-link:hover, .btn-grey__outline:hover, .btn-warning__outline:hover, .btn-danger__outline:hover, .btn-success__outline:hover, .btn-primary__outline:hover, .btn-default__outline:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover, .btn-success:hover, .btn-primary:hover, .btn-default:hover, .btn-group_theme > [class^=btn]:hover, .btn:hover, .btn-link:focus, .btn-grey__outline:focus, .btn-warning__outline:focus, .btn-danger__outline:focus, .btn-success__outline:focus, .btn-primary__outline:focus, .btn-default__outline:focus, .btn-info:focus, .btn-warning:focus, .btn-danger:focus, .btn-success:focus, .btn-primary:focus, .btn-default:focus, .btn-group_theme > [class^=btn]:focus, .btn:focus, .focus.btn-link, .focus.btn-grey__outline, .focus.btn-warning__outline, .focus.btn-danger__outline, .focus.btn-success__outline, .focus.btn-primary__outline, .focus.btn-default__outline, .focus.btn-info, .focus.btn-warning, .focus.btn-danger, .focus.btn-success, .focus.btn-primary, .focus.btn-default, .btn-group_theme > .focus[class^=btn], .focus.btn {
+.btn-link:hover, .btn-grey__outline:hover, .btn-warning__outline:hover, .btn-danger__outline:hover, .btn-success__outline:hover, .btn-primary__outline:hover, .btn-default__outline:hover, .btn-lightGrey:hover, .btn-grey:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover, .btn-success:hover, .btn-primary:hover, .btn-default:hover, .btn-group_theme > [class^=btn]:hover, .btn:hover, .btn-link:focus, .btn-grey__outline:focus, .btn-warning__outline:focus, .btn-danger__outline:focus, .btn-success__outline:focus, .btn-primary__outline:focus, .btn-default__outline:focus, .btn-lightGrey:focus, .btn-grey:focus, .btn-info:focus, .btn-warning:focus, .btn-danger:focus, .btn-success:focus, .btn-primary:focus, .btn-default:focus, .btn-group_theme > [class^=btn]:focus, .btn:focus, .focus.btn-link, .focus.btn-grey__outline, .focus.btn-warning__outline, .focus.btn-danger__outline, .focus.btn-success__outline, .focus.btn-primary__outline, .focus.btn-default__outline, .focus.btn-lightGrey, .focus.btn-grey, .focus.btn-info, .focus.btn-warning, .focus.btn-danger, .focus.btn-success, .focus.btn-primary, .focus.btn-default, .btn-group_theme > .focus[class^=btn], .focus.btn {
   outline: none;
   text-decoration: none;
 }
-.btn-link:active, .btn-grey__outline:active, .btn-warning__outline:active, .btn-danger__outline:active, .btn-success__outline:active, .btn-primary__outline:active, .btn-default__outline:active, .btn-info:active, .btn-warning:active, .btn-danger:active, .btn-success:active, .btn-primary:active, .btn-default:active, .btn-group_theme > [class^=btn]:active, .btn:active, .active.btn-link, .active.btn-grey__outline, .active.btn-warning__outline, .active.btn-danger__outline, .active.btn-success__outline, .active.btn-primary__outline, .active.btn-default__outline, .active.btn-info, .active.btn-warning, .active.btn-danger, .active.btn-success, .active.btn-primary, .btn-group_theme > .active[class^=btn], .active.btn-default, .active.btn {
+.btn-link:active, .btn-grey__outline:active, .btn-warning__outline:active, .btn-danger__outline:active, .btn-success__outline:active, .btn-primary__outline:active, .btn-default__outline:active, .btn-lightGrey:active, .btn-grey:active, .btn-info:active, .btn-warning:active, .btn-danger:active, .btn-success:active, .btn-primary:active, .btn-default:active, .btn-group_theme > [class^=btn]:active, .btn:active, .active.btn-link, .active.btn-grey__outline, .active.btn-warning__outline, .active.btn-danger__outline, .active.btn-success__outline, .active.btn-primary__outline, .active.btn-default__outline, .active.btn-lightGrey, .active.btn-grey, .active.btn-info, .active.btn-warning, .active.btn-danger, .active.btn-success, .active.btn-primary, .btn-group_theme > .active[class^=btn], .active.btn-default, .active.btn {
   outline: 0;
 }
-.btn-link:active:focus, .btn-grey__outline:active:focus, .btn-warning__outline:active:focus, .btn-danger__outline:active:focus, .btn-success__outline:active:focus, .btn-primary__outline:active:focus, .btn-default__outline:active:focus, .btn-info:active:focus, .btn-warning:active:focus, .btn-danger:active:focus, .btn-success:active:focus, .btn-primary:active:focus, .btn-default:active:focus, .btn-group_theme > [class^=btn]:active:focus, .btn:active:focus, .active.btn-link:focus, .active.btn-grey__outline:focus, .active.btn-warning__outline:focus, .active.btn-danger__outline:focus, .active.btn-success__outline:focus, .active.btn-primary__outline:focus, .active.btn-default__outline:focus, .active.btn-info:focus, .active.btn-warning:focus, .active.btn-danger:focus, .active.btn-success:focus, .active.btn-primary:focus, .btn-group_theme > .active[class^=btn]:focus, .active.btn-default:focus, .active.btn:focus {
+.btn-link:active:focus, .btn-grey__outline:active:focus, .btn-warning__outline:active:focus, .btn-danger__outline:active:focus, .btn-success__outline:active:focus, .btn-primary__outline:active:focus, .btn-default__outline:active:focus, .btn-lightGrey:active:focus, .btn-grey:active:focus, .btn-info:active:focus, .btn-warning:active:focus, .btn-danger:active:focus, .btn-success:active:focus, .btn-primary:active:focus, .btn-default:active:focus, .btn-group_theme > [class^=btn]:active:focus, .btn:active:focus, .active.btn-link:focus, .active.btn-grey__outline:focus, .active.btn-warning__outline:focus, .active.btn-danger__outline:focus, .active.btn-success__outline:focus, .active.btn-primary__outline:focus, .active.btn-default__outline:focus, .active.btn-lightGrey:focus, .active.btn-grey:focus, .active.btn-info:focus, .active.btn-warning:focus, .active.btn-danger:focus, .active.btn-success:focus, .active.btn-primary:focus, .btn-group_theme > .active[class^=btn]:focus, .active.btn-default:focus, .active.btn:focus {
   outline: none;
 }
-.disabled.btn-link, .disabled.btn-grey__outline, .disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-info, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group_theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, [disabled].btn-grey__outline, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-info, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group_theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .btn-grey__outline, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-info, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group_theme > [class^=btn], fieldset[disabled] .btn {
+.disabled.btn-link, .disabled.btn-grey__outline, .disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-lightGrey, .disabled.btn-grey, .disabled.btn-info, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group_theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, [disabled].btn-grey__outline, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-lightGrey, [disabled].btn-grey, [disabled].btn-info, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group_theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .btn-grey__outline, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-lightGrey, fieldset[disabled] .btn-grey, fieldset[disabled] .btn-info, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group_theme > [class^=btn], fieldset[disabled] .btn {
   cursor: not-allowed;
   filter: alpha(opacity=65);
   opacity: 0.65;
 }
-.btn-link .badge, .btn-grey__outline .badge, .btn-warning__outline .badge, .btn-danger__outline .badge, .btn-success__outline .badge, .btn-primary__outline .badge, .btn-default__outline .badge, .btn-info .badge, .btn-warning .badge, .btn-danger .badge, .btn-success .badge, .btn-primary .badge, .btn-default .badge, .btn-group_theme > [class^=btn] .badge, .btn .badge {
+.btn-link .badge, .btn-grey__outline .badge, .btn-warning__outline .badge, .btn-danger__outline .badge, .btn-success__outline .badge, .btn-primary__outline .badge, .btn-default__outline .badge, .btn-lightGrey .badge, .btn-grey .badge, .btn-info .badge, .btn-warning .badge, .btn-danger .badge, .btn-success .badge, .btn-primary .badge, .btn-default .badge, .btn-group_theme > [class^=btn] .badge, .btn .badge {
   font-size: 11px;
   line-height: 13px;
   padding: 0px 5px;
 }
-.btn-link .caret, .btn-grey__outline .caret, .btn-warning__outline .caret, .btn-danger__outline .caret, .btn-success__outline .caret, .btn-primary__outline .caret, .btn-default__outline .caret, .btn-info .caret, .btn-warning .caret, .btn-danger .caret, .btn-success .caret, .btn-primary .caret, .btn-default .caret, .btn-group_theme > [class^=btn] .caret, .btn .caret {
+.btn-link .caret, .btn-grey__outline .caret, .btn-warning__outline .caret, .btn-danger__outline .caret, .btn-success__outline .caret, .btn-primary__outline .caret, .btn-default__outline .caret, .btn-lightGrey .caret, .btn-grey .caret, .btn-info .caret, .btn-warning .caret, .btn-danger .caret, .btn-success .caret, .btn-primary .caret, .btn-default .caret, .btn-group_theme > [class^=btn] .caret, .btn .caret {
   margin-left: 0;
 }
-.btn-link .svg--icon, .btn-grey__outline .svg--icon, .btn-warning__outline .svg--icon, .btn-danger__outline .svg--icon, .btn-success__outline .svg--icon, .btn-primary__outline .svg--icon, .btn-default__outline .svg--icon, .btn-info .svg--icon, .btn-warning .svg--icon, .btn-danger .svg--icon, .btn-success .svg--icon, .btn-primary .svg--icon, .btn-default .svg--icon, .btn-group_theme > [class^=btn] .svg--icon, .btn .svg--icon {
+.btn-link .svg--icon, .btn-grey__outline .svg--icon, .btn-warning__outline .svg--icon, .btn-danger__outline .svg--icon, .btn-success__outline .svg--icon, .btn-primary__outline .svg--icon, .btn-default__outline .svg--icon, .btn-lightGrey .svg--icon, .btn-grey .svg--icon, .btn-info .svg--icon, .btn-warning .svg--icon, .btn-danger .svg--icon, .btn-success .svg--icon, .btn-primary .svg--icon, .btn-default .svg--icon, .btn-group_theme > [class^=btn] .svg--icon, .btn .svg--icon {
   height: 0.75rem;
   position: relative;
   top: 2px;
 }
-.btn-link .svg--icon svg, .btn-grey__outline .svg--icon svg, .btn-warning__outline .svg--icon svg, .btn-danger__outline .svg--icon svg, .btn-success__outline .svg--icon svg, .btn-primary__outline .svg--icon svg, .btn-default__outline .svg--icon svg, .btn-info .svg--icon svg, .btn-warning .svg--icon svg, .btn-danger .svg--icon svg, .btn-success .svg--icon svg, .btn-primary .svg--icon svg, .btn-default .svg--icon svg, .btn-group_theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
+.btn-link .svg--icon svg, .btn-grey__outline .svg--icon svg, .btn-warning__outline .svg--icon svg, .btn-danger__outline .svg--icon svg, .btn-success__outline .svg--icon svg, .btn-primary__outline .svg--icon svg, .btn-default__outline .svg--icon svg, .btn-lightGrey .svg--icon svg, .btn-grey .svg--icon svg, .btn-info .svg--icon svg, .btn-warning .svg--icon svg, .btn-danger .svg--icon svg, .btn-success .svg--icon svg, .btn-primary .svg--icon svg, .btn-default .svg--icon svg, .btn-group_theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
   height: 0.75rem;
   max-width: 20px;
   width: auto;
@@ -6293,12 +6293,30 @@ h6, .h6 {
   background-image: linear-gradient(#ffffff 0%, #dddddd 100%);
   border-color: #dddddd;
   color: #333333;
+  --btn_bg: #ffffff;
+  --btn_bgEnd: #dddddd;
+  --btn_bgEnd__hover: #ffffff;
+  --btn_bgc__hover: #dddddd;
+  --borderColor__hover: #dddddd;
+  --btn_svg: #1E6393;
+  --btn_svg_blue: #1E6393;
+  --btn_svg__hover: #1E6393;
+  --btn_svg_blue__hover: #1E6393;
 }
 .btn-default:hover, .btn-group_theme > [class^=btn]:hover, .btn:hover, .btn-default:focus, .btn-group_theme > [class^=btn]:focus, .btn:focus, .btn-default:active, .btn-group_theme > [class^=btn]:active, .btn:active, .btn-default.active, .btn-group_theme > .active[class^=btn], .active.btn, .btn-default.focus, .btn-group_theme > .focus[class^=btn], .focus.btn {
-  background-image: -webkit-linear-gradient(#dddddd 0%, #ffffff 100%);
-  background-image: linear-gradient(#dddddd 0%, #ffffff 100%);
+  background-color: #dddddd;
+  background-image: -webkit-linear-gradient(#dddddd 0%, 100%);
+  background-image: linear-gradient(#dddddd 0%, 100%);
   background-position: inherit;
+  border-color: #dddddd;
   color: #333333;
+}
+.btn-default:hover .svg--icon svg, .btn-group_theme > [class^=btn]:hover .svg--icon svg, .btn:hover .svg--icon svg, .btn-default:focus .svg--icon svg, .btn-group_theme > [class^=btn]:focus .svg--icon svg, .btn:focus .svg--icon svg, .btn-default:active .svg--icon svg, .btn-group_theme > [class^=btn]:active .svg--icon svg, .btn:active .svg--icon svg, .btn-default.active .svg--icon svg, .btn-group_theme > .active[class^=btn] .svg--icon svg, .active.btn .svg--icon svg, .btn-default.focus .svg--icon svg, .btn-group_theme > .focus[class^=btn] .svg--icon svg, .focus.btn .svg--icon svg {
+  --svg-icon-fill: #1E6393;
+  --svg-icon-stroke: #1E6393;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
+  fill: #1E6393;
 }
 .btn-default .svg--icon svg, .btn-group_theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
   --svg-icon-fill: #1E6393;
@@ -6314,12 +6332,30 @@ h6, .h6 {
   background-image: linear-gradient(#4A8DC6 0%, #1E6393 100%);
   border-color: #1E6393;
   color: #ffffff;
+  --btn_bg: #4A8DC6;
+  --btn_bgEnd: #1E6393;
+  --btn_bgEnd__hover: #4A8DC6;
+  --btn_bgc__hover: #1E6393;
+  --borderColor__hover: #1E6393;
+  --btn_svg: #ffffff;
+  --btn_svg_blue: #ffffff;
+  --btn_svg__hover: #ffffff;
+  --btn_svg_blue__hover: #ffffff;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-group_theme > .active[class^=btn], .btn-primary.focus {
-  background-image: -webkit-linear-gradient(#1E6393 0%, #4A8DC6 100%);
-  background-image: linear-gradient(#1E6393 0%, #4A8DC6 100%);
+  background-color: #1E6393;
+  background-image: -webkit-linear-gradient(#1E6393 0%, 100%);
+  background-image: linear-gradient(#1E6393 0%, 100%);
   background-position: inherit;
+  border-color: #1E6393;
   color: #ffffff;
+}
+.btn-primary:hover .svg--icon svg, .btn-primary:focus .svg--icon svg, .btn-primary:active .svg--icon svg, .btn-primary.active .svg--icon svg, .btn-group_theme > .active[class^=btn] .svg--icon svg, .btn-primary.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+  fill: #ffffff;
 }
 .btn-primary .svg--icon svg, .btn-group_theme > [class^=btn].active .svg--icon svg {
   --svg-icon-fill: #ffffff;
@@ -6335,12 +6371,30 @@ h6, .h6 {
   background-image: linear-gradient(#69C26A 0%, #467B46 100%);
   border-color: #467B46;
   color: #ffffff;
+  --btn_bg: #69C26A;
+  --btn_bgEnd: #467B46;
+  --btn_bgEnd__hover: #69C26A;
+  --btn_bgc__hover: #467B46;
+  --borderColor__hover: #467B46;
+  --btn_svg: #ffffff;
+  --btn_svg_blue: #ffffff;
+  --btn_svg__hover: #ffffff;
+  --btn_svg_blue__hover: #ffffff;
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.focus {
-  background-image: -webkit-linear-gradient(#467B46 0%, #69C26A 100%);
-  background-image: linear-gradient(#467B46 0%, #69C26A 100%);
+  background-color: #467B46;
+  background-image: -webkit-linear-gradient(#467B46 0%, 100%);
+  background-image: linear-gradient(#467B46 0%, 100%);
   background-position: inherit;
+  border-color: #467B46;
   color: #ffffff;
+}
+.btn-success:hover .svg--icon svg, .btn-success:focus .svg--icon svg, .btn-success:active .svg--icon svg, .btn-success.active .svg--icon svg, .btn-success.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+  fill: #ffffff;
 }
 .btn-success .svg--icon svg {
   --svg-icon-fill: #ffffff;
@@ -6356,12 +6410,30 @@ h6, .h6 {
   background-image: linear-gradient(#D9534F 0%, #762624 100%);
   border-color: #762624;
   color: #ffffff;
+  --btn_bg: #D9534F;
+  --btn_bgEnd: #762624;
+  --btn_bgEnd__hover: #D9534F;
+  --btn_bgc__hover: #762624;
+  --borderColor__hover: #762624;
+  --btn_svg: #ffffff;
+  --btn_svg_blue: #ffffff;
+  --btn_svg__hover: #ffffff;
+  --btn_svg_blue__hover: #ffffff;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.focus {
-  background-image: -webkit-linear-gradient(#762624 0%, #D9534F 100%);
-  background-image: linear-gradient(#762624 0%, #D9534F 100%);
+  background-color: #762624;
+  background-image: -webkit-linear-gradient(#762624 0%, 100%);
+  background-image: linear-gradient(#762624 0%, 100%);
   background-position: inherit;
+  border-color: #762624;
   color: #ffffff;
+}
+.btn-danger:hover .svg--icon svg, .btn-danger:focus .svg--icon svg, .btn-danger:active .svg--icon svg, .btn-danger.active .svg--icon svg, .btn-danger.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+  fill: #ffffff;
 }
 .btn-danger .svg--icon svg {
   --svg-icon-fill: #ffffff;
@@ -6377,12 +6449,30 @@ h6, .h6 {
   background-image: linear-gradient(#FFBD41 0%, #D59A00 100%);
   border-color: #D59A00;
   color: #333333;
+  --btn_bg: #FFBD41;
+  --btn_bgEnd: #D59A00;
+  --btn_bgEnd__hover: #FFBD41;
+  --btn_bgc__hover: #D59A00;
+  --borderColor__hover: #D59A00;
+  --btn_svg: #ffffff;
+  --btn_svg_blue: #ffffff;
+  --btn_svg__hover: #ffffff;
+  --btn_svg_blue__hover: #ffffff;
 }
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.focus {
-  background-image: -webkit-linear-gradient(#D59A00 0%, #FFBD41 100%);
-  background-image: linear-gradient(#D59A00 0%, #FFBD41 100%);
+  background-color: #D59A00;
+  background-image: -webkit-linear-gradient(#D59A00 0%, 100%);
+  background-image: linear-gradient(#D59A00 0%, 100%);
   background-position: inherit;
+  border-color: #D59A00;
   color: #333333;
+}
+.btn-warning:hover .svg--icon svg, .btn-warning:focus .svg--icon svg, .btn-warning:active .svg--icon svg, .btn-warning.active .svg--icon svg, .btn-warning.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+  fill: #ffffff;
 }
 .btn-warning .svg--icon svg {
   --svg-icon-fill: #ffffff;
@@ -6398,12 +6488,30 @@ h6, .h6 {
   background-image: linear-gradient(#E4EEF7 0%, #B6D1E8 100%);
   border-color: #B6D1E8;
   color: #777777;
+  --btn_bg: #E4EEF7;
+  --btn_bgEnd: #B6D1E8;
+  --btn_bgEnd__hover: #E4EEF7;
+  --btn_bgc__hover: #B6D1E8;
+  --borderColor__hover: #B6D1E8;
+  --btn_svg: #777777;
+  --btn_svg_blue: #777777;
+  --btn_svg__hover: #777777;
+  --btn_svg_blue__hover: #777777;
 }
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.focus {
-  background-image: -webkit-linear-gradient(#B6D1E8 0%, #E4EEF7 100%);
-  background-image: linear-gradient(#B6D1E8 0%, #E4EEF7 100%);
+  background-color: #B6D1E8;
+  background-image: -webkit-linear-gradient(#B6D1E8 0%, 100%);
+  background-image: linear-gradient(#B6D1E8 0%, 100%);
   background-position: inherit;
+  border-color: #B6D1E8;
   color: #777777;
+}
+.btn-info:hover .svg--icon svg, .btn-info:focus .svg--icon svg, .btn-info:active .svg--icon svg, .btn-info.active .svg--icon svg, .btn-info.focus .svg--icon svg {
+  --svg-icon-fill: #777777;
+  --svg-icon-stroke: #777777;
+  --svg-icon-fill_blue: #777777;
+  --svg-icon-stroke_blue: #777777;
+  fill: #777777;
 }
 .btn-info .svg--icon svg {
   --svg-icon-fill: #777777;
@@ -6411,6 +6519,84 @@ h6, .h6 {
   --svg-icon-fill_blue: #777777;
   --svg-icon-stroke_blue: #777777;
   fill: #777777;
+}
+
+.btn-grey {
+  background-color: #BABABA;
+  background-image: -webkit-linear-gradient(#BABABA 0%, #777777 100%);
+  background-image: linear-gradient(#BABABA 0%, #777777 100%);
+  border-color: #F5F5F5;
+  color: #ffffff;
+  --btn_bg: #BABABA;
+  --btn_bgEnd: #777777;
+  --btn_bgEnd__hover: #BABABA;
+  --btn_bgc__hover: #777777;
+  --borderColor__hover: #F5F5F5;
+  --btn_svg: #ffffff;
+  --btn_svg_blue: #1E6393;
+  --btn_svg__hover: #ffffff;
+  --btn_svg_blue__hover: #1E6393;
+}
+.btn-grey:hover, .btn-grey:focus, .btn-grey:active, .btn-grey.active, .btn-grey.focus {
+  background-color: #777777;
+  background-image: -webkit-linear-gradient(#777777 0%, 100%);
+  background-image: linear-gradient(#777777 0%, 100%);
+  background-position: inherit;
+  border-color: #F5F5F5;
+  color: #ffffff;
+}
+.btn-grey:hover .svg--icon svg, .btn-grey:focus .svg--icon svg, .btn-grey:active .svg--icon svg, .btn-grey.active .svg--icon svg, .btn-grey.focus .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
+  fill: #ffffff;
+}
+.btn-grey .svg--icon svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
+  fill: #ffffff;
+}
+
+.btn-lightGrey {
+  background-color: #F5F5F5;
+  background-image: -webkit-linear-gradient(#F5F5F5 0%, #F5F5F5 100%);
+  background-image: linear-gradient(#F5F5F5 0%, #F5F5F5 100%);
+  border-color: #BABABA;
+  color: #BABABA;
+  --btn_bg: #F5F5F5;
+  --btn_bgEnd: #F5F5F5;
+  --btn_bgEnd__hover: #dddddd;
+  --btn_bgc__hover: #dddddd;
+  --borderColor__hover: #333333;
+  --btn_svg: #BABABA;
+  --btn_svg_blue: #1E6393;
+  --btn_svg__hover: #333333;
+  --btn_svg_blue__hover: #1E6393;
+}
+.btn-lightGrey:hover, .btn-lightGrey:focus, .btn-lightGrey:active, .btn-lightGrey.active, .btn-lightGrey.focus {
+  background-color: #dddddd;
+  background-image: -webkit-linear-gradient(#dddddd 0%, 100%);
+  background-image: linear-gradient(#dddddd 0%, 100%);
+  background-position: inherit;
+  border-color: #333333;
+  color: #BABABA;
+}
+.btn-lightGrey:hover .svg--icon svg, .btn-lightGrey:focus .svg--icon svg, .btn-lightGrey:active .svg--icon svg, .btn-lightGrey.active .svg--icon svg, .btn-lightGrey.focus .svg--icon svg {
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
+  fill: #BABABA;
+}
+.btn-lightGrey .svg--icon svg {
+  --svg-icon-fill: #BABABA;
+  --svg-icon-stroke: #BABABA;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
+  fill: #BABABA;
 }
 
 .btn-default .badge, .btn-group_theme > [class^=btn] .badge, .btn .badge {
@@ -6542,7 +6728,7 @@ h6, .h6 {
   color: #BABABA;
 }
 .btn-grey__outline:hover, .btn-grey__outline:focus, .btn-grey__outline:active, .btn-grey__outline.active, .btn-grey__outline.focus {
-  background-color: #F5F5F5;
+  background-color: #777777;
   background-image: none;
   background-position: inherit;
   color: #fff;
@@ -7260,131 +7446,6 @@ fieldset[disabled] .checkbox-inline {
   top: -1px;
 }
 
-.inputGroup {
-  align-items: stretch;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  width: 100%;
-}
-.inputGroup .form-group {
-  margin-bottom: 0;
-  padding-top: 0;
-}
-.inputGroup > .form-control,
-.inputGroup > .form-control-container,
-.inputGroup > .form-control-plaintext {
-  position: relative;
-  flex: 1 1 auto;
-  width: 1%;
-  min-width: 0;
-  margin-bottom: 0;
-}
-.inputGroup > .form-control + .form-control,
-.inputGroup > .form-control-container + .form-control,
-.inputGroup > .form-control-plaintext + .form-control {
-  margin-left: -1px;
-}
-.inputGroup > .form-control:focus {
-  z-index: 3;
-}
-.inputGroup > .form-control:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left-width: 0;
-}
-.inputGroup > .form-control:not(:last-child) {
-  border-right-width: 0;
-}
-.css-formFree .inputGroup > .form-control-container {
-  padding-top: 0.6875rem;
-}
-.inputGroup > .form-control-container:not(:first-child) .form-control {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left-width: 0;
-}
-.inputGroup > .form-control-container:not(:last-child) .form-control {
-  border-right-width: 0;
-}
-
-.inputGroup_prepend,
-.inputGroup_append {
-  display: flex;
-}
-.css-formFree .inputGroup_prepend,
-.css-formFree .inputGroup_append {
-  padding-top: 0.6875rem;
-}
-.inputGroup_prepend .btn,
-.inputGroup_append .btn {
-  position: relative;
-  z-index: 2;
-}
-.inputGroup_prepend .btn:focus,
-.inputGroup_append .btn:focus {
-  z-index: 3;
-}
-.inputGroup_prepend .btn + .btn,
-.inputGroup_prepend .btn + .inputGroup_text,
-.inputGroup_prepend .inputGroup_text + .inputGroup_text,
-.inputGroup_prepend .inputGroup_text + .btn,
-.inputGroup_append .btn + .btn,
-.inputGroup_append .btn + .inputGroup_text,
-.inputGroup_append .inputGroup_text + .inputGroup_text,
-.inputGroup_append .inputGroup_text + .btn {
-  margin-left: -1px;
-}
-
-.inputGroup_prepend {
-  margin-right: -1px;
-}
-
-.inputGroup_append {
-  margin-left: -1px;
-}
-
-.inputGroup_text {
-  align-items: center;
-  background-color: #ffffff;
-  color: #333333;
-  display: flex;
-  font-size: _fontSize(inputGroupElem);
-  font-weight: 400;
-  line-height: 1.625rem;
-  padding: 0 0.625rem;
-  margin-bottom: 0;
-  text-align: center;
-  white-space: nowrap;
-  border: 1px solid #BABABA;
-}
-.inputGroup_text input[type=radio],
-.inputGroup_text input[type=checkbox] {
-  margin-top: 0;
-}
-
-.inputGroup > .inputGroup_prepend > .btn,
-.inputGroup > .inputGroup_prepend > .inputGroup_text,
-.inputGroup:not(.has-validation) > .inputGroup_append:not(:last-child) > .btn,
-.inputGroup:not(.has-validation) > .inputGroup_append:not(:last-child) > .inputGroup_text,
-.inputGroup.has-validation > .inputGroup_append:nth-last-child(n+3) > .btn,
-.inputGroup.has-validation > .inputGroup_append:nth-last-child(n+3) > .inputGroup_text,
-.inputGroup > .inputGroup_append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.inputGroup > .inputGroup_append:last-child > .inputGroup_text:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.inputGroup > .inputGroup_append > .btn,
-.inputGroup > .inputGroup_append > .inputGroup_text,
-.inputGroup > .inputGroup_prepend:not(:first-child) > .btn,
-.inputGroup > .inputGroup_prepend:not(:first-child) > .inputGroup_text,
-.inputGroup > .inputGroup_prepend:first-child > .btn:not(:first-child),
-.inputGroup > .inputGroup_prepend:first-child > .inputGroup_text:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 .fileUpload_label {
   max-width: 200px;
   overflow: hidden;
@@ -7604,6 +7665,161 @@ fieldset[disabled] .checkbox-inline {
 .input-group-btn:last-child > .btn-group_theme {
   z-index: 2;
   margin-left: -1px;
+}
+
+.inputGroup {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+.inputGroup .form-group {
+  margin-bottom: 0;
+  padding-top: 0;
+}
+.inputGroup > .form-control,
+.inputGroup > .form-control-container,
+.inputGroup > .form-control-plaintext {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.inputGroup > .form-control + .form-control,
+.inputGroup > .form-control-container + .form-control,
+.inputGroup > .form-control-plaintext + .form-control {
+  margin-left: -1px;
+}
+.inputGroup > .form-control:focus {
+  z-index: 3;
+}
+.inputGroup > .form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
+}
+.inputGroup > .form-control:not(:last-child) {
+  border-right-width: 0;
+}
+.css-formFree .inputGroup > .form-control-container {
+  padding-top: 0.6875rem;
+}
+.inputGroup > .form-control-container:not(:first-child) .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
+}
+.inputGroup > .form-control-container:not(:last-child) .form-control {
+  border-right-width: 0;
+}
+.inputGroup:focus-within .inputGroup_text {
+  border-color: #333333;
+  -webkit-transition: border-color ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s;
+}
+.inputGroup:focus-within .inputGroup_text svg {
+  --svg-icon-fill: var(--btn_svg__hover);
+  --svg-icon-stroke: var(--btn_svg__hover);
+}
+.inputGroup:focus-within [class^=btn-] {
+  border-color: #333333;
+  background-color: var(--btn_bgc__hover);
+  background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
+  background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
+  -webkit-transition: border-color ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s;
+}
+.inputGroup:focus-within [class^=btn-] svg {
+  --svg-icon-fill: var(--btn_svg__hover);
+  --svg-icon-stroke: var(--btn_svg__hover);
+}
+
+.inputGroup_prepend,
+.inputGroup_append {
+  display: flex;
+}
+.css-formFree .inputGroup_prepend,
+.css-formFree .inputGroup_append {
+  padding-top: 0.6875rem;
+}
+.inputGroup_prepend .btn,
+.inputGroup_append .btn {
+  position: relative;
+  z-index: 2;
+}
+.inputGroup_prepend .btn:focus,
+.inputGroup_append .btn:focus {
+  z-index: 3;
+}
+.inputGroup_prepend .btn + .btn,
+.inputGroup_prepend .btn + .inputGroup_text,
+.inputGroup_prepend .inputGroup_text + .inputGroup_text,
+.inputGroup_prepend .inputGroup_text + .btn,
+.inputGroup_append .btn + .btn,
+.inputGroup_append .btn + .inputGroup_text,
+.inputGroup_append .inputGroup_text + .inputGroup_text,
+.inputGroup_append .inputGroup_text + .btn {
+  margin-left: -1px;
+}
+
+.inputGroup_prepend {
+  margin-right: 0;
+}
+.inputGroup_prepend .inputGroup_text {
+  border-left: 1px solid #BABABA;
+}
+
+.inputGroup_append {
+  margin-left: 0;
+}
+.inputGroup_append .inputGroup_text {
+  border-right: 1px solid #BABABA;
+}
+
+.inputGroup_text {
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #BABABA;
+  border-top: 1px solid #BABABA;
+  color: #333333;
+  display: flex;
+  font-size: _fontSize(inputGroupElem);
+  font-weight: 400;
+  line-height: 1.625rem;
+  padding: 0 0.625rem;
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+.inputGroup_text input[type=radio],
+.inputGroup_text input[type=checkbox] {
+  margin-top: 0;
+}
+.inputGroup_text .svg--icon svg {
+  height: 16px;
+  width: 16px;
+}
+
+.inputGroup > .inputGroup_prepend > .btn,
+.inputGroup > .inputGroup_prepend > .inputGroup_text,
+.inputGroup > .inputGroup_append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.inputGroup > .inputGroup_append:last-child > .inputGroup_text:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.inputGroup > .inputGroup_append > .btn,
+.inputGroup > .inputGroup_append > .inputGroup_text,
+.inputGroup > .inputGroup_prepend:not(:first-child) > .btn,
+.inputGroup > .inputGroup_prepend:not(:first-child) > .inputGroup_text,
+.inputGroup > .inputGroup_prepend:first-child > .btn:not(:first-child),
+.inputGroup > .inputGroup_prepend:first-child > .inputGroup_text:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
