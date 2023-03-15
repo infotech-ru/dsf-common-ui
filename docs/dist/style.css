@@ -9946,6 +9946,24 @@ tbody.collapse.in {
   border-color: #B6D1E8;
 }
 
+.svg-rose svg,
+.svg-rose.svg--icon svg {
+  --svg-icon-fill: #FF9996;
+  --svg-icon-stroke: #FF9996;
+}
+
+.text-rose {
+  color: #FF9996;
+}
+
+.bg-rose {
+  background-color: #FF9996;
+}
+
+.border-rose {
+  border-color: #FF9996;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE HELPERS STYLES                                                      */
 /*                                                                            */

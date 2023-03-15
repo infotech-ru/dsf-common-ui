@@ -206,6 +206,10 @@ $colorTools: (
   light-blue3_border:                     map-get($brand-colors, _light-blue3),
   light-blue3_color:                      map-get($brand-colors, _light-blue3),
   light-blue3_svg:                        map-get($brand-colors, _light-blue3),
+  rose_bg:                                map-get($brand-colors, _rose),
+  rose_border:                            map-get($brand-colors, _rose),
+  rose_color:                             map-get($brand-colors, _rose),
+  rose_svg:                               map-get($brand-colors, _rose),
 );
 
 @function _brand-btn($keys...) {
