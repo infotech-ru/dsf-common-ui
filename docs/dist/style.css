@@ -8220,6 +8220,14 @@ td.table__rose {
   background-color: #FF9996;
 }
 
+tbody tr[class^=bg-] td, tbody tr[class^=bg-]:nth-of-type(2n+1) td {
+  background-color: var(--bg_color);
+}
+tbody tr:nth-of-type(2n+1) td[class^=bg-],
+tbody tr:nth-of-type(2n+1) th[class^=bg-] {
+  background-color: var(--bg_color);
+}
+
 .table-hover tr:hover td,
 .table__hover tr:hover td {
   background-color: #F5F5F5;
@@ -9720,14 +9728,17 @@ tbody.collapse.in {
 
 .text-default {
   color: #777777;
+  --text_color: #777777;
 }
 
 .bg-default {
   background-color: #777777;
+  --bg_color: #777777;
 }
 
 .border-default {
   border-color: #777777;
+  --border_color: #777777;
 }
 
 .svg-primary svg,
@@ -9738,14 +9749,17 @@ tbody.collapse.in {
 
 .text-primary {
   color: #1E6393;
+  --text_color: #1E6393;
 }
 
 .bg-primary {
   background-color: #1E6393;
+  --bg_color: #1E6393;
 }
 
 .border-primary {
   border-color: #1E6393;
+  --border_color: #1E6393;
 }
 
 .svg-success svg,
@@ -9756,14 +9770,17 @@ tbody.collapse.in {
 
 .text-success {
   color: #69C26A;
+  --text_color: #69C26A;
 }
 
 .bg-success {
   background-color: #69C26A;
+  --bg_color: #69C26A;
 }
 
 .border-success {
   border-color: #69C26A;
+  --border_color: #69C26A;
 }
 
 .svg-danger svg,
@@ -9774,14 +9791,17 @@ tbody.collapse.in {
 
 .text-danger {
   color: #D9534F;
+  --text_color: #D9534F;
 }
 
 .bg-danger {
   background-color: #D9534F;
+  --bg_color: #D9534F;
 }
 
 .border-danger {
   border-color: #D9534F;
+  --border_color: #D9534F;
 }
 
 .svg-warning svg,
@@ -9792,14 +9812,17 @@ tbody.collapse.in {
 
 .text-warning {
   color: #FFBD41;
+  --text_color: #FFBD41;
 }
 
 .bg-warning {
   background-color: #FFBD41;
+  --bg_color: #FFBD41;
 }
 
 .border-warning {
   border-color: #FFBD41;
+  --border_color: #FFBD41;
 }
 
 .svg-info svg,
@@ -9810,14 +9833,17 @@ tbody.collapse.in {
 
 .text-info {
   color: #E4EEF7;
+  --text_color: #E4EEF7;
 }
 
 .bg-info {
   background-color: #E4EEF7;
+  --bg_color: #E4EEF7;
 }
 
 .border-info {
   border-color: #E4EEF7;
+  --border_color: #E4EEF7;
 }
 
 .svg-muted svg,
@@ -9828,14 +9854,17 @@ tbody.collapse.in {
 
 .text-muted {
   color: #BABABA;
+  --text_color: #BABABA;
 }
 
 .bg-muted {
   background-color: #BABABA;
+  --bg_color: #BABABA;
 }
 
 .border-muted {
   border-color: #BABABA;
+  --border_color: #BABABA;
 }
 
 .svg-orange svg,
@@ -9846,14 +9875,17 @@ tbody.collapse.in {
 
 .text-orange {
   color: #FFBD41;
+  --text_color: #FFBD41;
 }
 
 .bg-orange {
   background-color: #FFBD41;
+  --bg_color: #FFBD41;
 }
 
 .border-orange {
   border-color: #FFBD41;
+  --border_color: #FFBD41;
 }
 
 .svg-grey svg,
@@ -9864,14 +9896,17 @@ tbody.collapse.in {
 
 .text-grey {
   color: #cccccc;
+  --text_color: #cccccc;
 }
 
 .bg-grey {
   background-color: #cccccc;
+  --bg_color: #cccccc;
 }
 
 .border-grey {
   border-color: #cccccc;
+  --border_color: #cccccc;
 }
 
 .svg-dark-red svg,
@@ -9882,14 +9917,17 @@ tbody.collapse.in {
 
 .text-dark-red {
   color: #762624;
+  --text_color: #762624;
 }
 
 .bg-dark-red {
   background-color: #762624;
+  --bg_color: #762624;
 }
 
 .border-dark-red {
   border-color: #762624;
+  --border_color: #762624;
 }
 
 .svg-clear svg,
@@ -9900,14 +9938,17 @@ tbody.collapse.in {
 
 .text-clear {
   color: #00000000;
+  --text_color: #00000000;
 }
 
 .bg-clear {
   background-color: #00000000;
+  --bg_color: #00000000;
 }
 
 .border-clear {
   border-color: #00000000;
+  --border_color: #00000000;
 }
 
 .svg-white svg,
@@ -9918,14 +9959,17 @@ tbody.collapse.in {
 
 .text-white {
   color: #ffffff;
+  --text_color: #ffffff;
 }
 
 .bg-white {
   background-color: #ffffff;
+  --bg_color: #ffffff;
 }
 
 .border-white {
   border-color: #ffffff;
+  --border_color: #ffffff;
 }
 
 .svg-light-blue3 svg,
@@ -9936,14 +9980,17 @@ tbody.collapse.in {
 
 .text-light-blue3 {
   color: #B6D1E8;
+  --text_color: #B6D1E8;
 }
 
 .bg-light-blue3 {
   background-color: #B6D1E8;
+  --bg_color: #B6D1E8;
 }
 
 .border-light-blue3 {
   border-color: #B6D1E8;
+  --border_color: #B6D1E8;
 }
 
 .svg-rose svg,
@@ -9954,14 +10001,17 @@ tbody.collapse.in {
 
 .text-rose {
   color: #FF9996;
+  --text_color: #FF9996;
 }
 
 .bg-rose {
   background-color: #FF9996;
+  --bg_color: #FF9996;
 }
 
 .border-rose {
   border-color: #FF9996;
+  --border_color: #FF9996;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

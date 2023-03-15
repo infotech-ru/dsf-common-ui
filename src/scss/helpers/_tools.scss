@@ -225,11 +225,14 @@ $paddingLeftSizes: 0, 5, 10;
   
   .text-#{$colorTools}{
     color: _colorTools(#{$colorTools}_color);
+    #{--text_color}: _colorTools(#{$colorTools}_color);
   }
   .bg-#{$colorTools}{
     background-color: _colorTools(#{$colorTools}_bg);
+    #{--bg_color}: _colorTools(#{$colorTools}_bg);
   }
   .border-#{$colorTools}{
     border-color: _colorTools(#{$colorTools}_border);
+    #{--border_color}: _colorTools(#{$colorTools}_border);
   }
 }

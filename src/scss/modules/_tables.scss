@@ -206,6 +206,22 @@ tfoot {
 @include table-row-variant('red', _brand-colors(_red));
 @include table-row-variant('rose', _brand-colors(_rose));
 
+tbody tr {
+  &[class^="bg-"] { 
+    &,
+    &:nth-of-type(2n+1){ 
+      td {
+        background-color: var(--bg_color);
+      }
+    }
+  }
+  &:nth-of-type(2n+1) {
+    td[class^="bg-"],
+    th[class^="bg-"] {
+      background-color: var(--bg_color);
+    }
+  }
+}
 
 .table-hover, // old name
 .table__hover {

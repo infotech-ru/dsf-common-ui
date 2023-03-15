@@ -13,7 +13,7 @@ order: 5
 </p>
 <p>Класс модификатор могут использоваться для изменения фона конкретней ячеейки таблицы</p>
 <div class="bs-docs-example">
-  <table class="table table__light-yellow">
+  <table class="table table__light-yellow mb-10">
     <thead>
       <tr>
         <th>lorem</th>
@@ -39,44 +39,6 @@ order: 5
         <td>lorem</td>
         <td>lorem</td>
         <td>lorem</td>
-        <td>lorem</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <th>lorem</th>
-        <th>lorem</th>
-        <th>lorem</th>
-        <th>lorem</th>
-      </tr>
-    </tfoot>
-  </table>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>lorem</th>
-        <th>lorem</th>
-        <th>lorem</th>
-        <th>lorem</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>lorem</td>
-        <td>lorem</td>
-        <td>lorem</td>
-        <td>lorem</td>
-      </tr>
-      <tr>
-        <td>lorem</td>
-        <td class="table__red">lorem</td>
-        <td>lorem</td>
-        <td class="table__light-yellow">lorem</td>
-      </tr>
-      <tr>
-        <td class="table__rose">lorem</td>
-        <td>lorem</td>
-        <td class="table__light-red">lorem</td>
         <td>lorem</td>
       </tr>
     </tbody>
@@ -90,3 +52,96 @@ order: 5
     </tfoot>
   </table>
 </div>
+<p></p>
+<div class="bs-docs-example">
+  <table class="table table__border table__striped mb-10">
+    <thead>
+      <tr>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="bg-rose">lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td class="bg-white">lorem</td>
+      </tr>
+      <tr>
+        <td>lorem</td>
+        <td class="bg-warning">lorem</td>
+        <td>lorem</td>
+        <td class="bg-orange">lorem</td>
+      </tr>
+      <tr>
+        <td class="bg-rose">lorem</td>
+        <td>lorem</td>
+        <td class="bg-light-blue3">lorem</td>
+        <td>lorem</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+<div class="bs-docs-example">
+  <table class="table table__striped">
+    <thead>
+      <tr>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+      </tr>
+      <tr class="bg-rose">
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+      </tr>
+      <tr class="bg-dark-red">
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<p>
+  Для изменения градиента цвета фона подстрок в раскрывающихся строках вставить в раскрывающиеся строки код стилей:
+</p>
+{% highlight html %}
+  <style>
+    .tr__slave-<?=$level ?> td {
+      --tdnesting-bgc: <?=96 - $level * 2 ?>%;
+      background-color: hsl(0deg 0% var(--tdnesting-bgc));
+    }
+  </style>
+{% endhighlight %}
