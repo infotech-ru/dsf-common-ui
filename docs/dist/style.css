@@ -9098,6 +9098,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   height: 12px;
   width: 12px;
 }
+.chartsBlock_body {
+  position: relative;
+  z-index: 1;
+}
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
