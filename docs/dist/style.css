@@ -7387,10 +7387,6 @@ fieldset[disabled] .checkbox-inline {
 .css-formFree .bootstrap-select.form-control {
   background-color: transparent;
 }
-.css-formFree .bootstrap-select > .dropdown-toggle .filter-option-inner-inner {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 90%, rgb(255, 255, 255) 100%);
-  background-color: #333333;
-}
 .css-formFree .bootstrap-select .bs-placeholder .filter-option-inner-inner {
   opacity: 0;
 }

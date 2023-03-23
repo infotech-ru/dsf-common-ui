@@ -495,16 +495,16 @@ textarea.form-control {
     }
   }
 
-  >.dropdown-toggle {
-    .filter-option-inner-inner {
-      .css-formFree & {
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 90%, rgba(255, 255, 255, 1) 100%);
-        background-color: _brand-palette(formControl-color);
+  // >.dropdown-toggle {
+    // .filter-option-inner-inner {
+      // .css-formFree & {
+        // background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 90%, rgba(255, 255, 255, 1) 100%);
+        // background-color: _brand-palette(formControl-color);
         // -webkit-background-clip: text; // не совместимо с style="background"
         // -webkit-text-fill-color: transparent;
-      }
-    }
-  }
+      // }
+    // }
+  // }
 
   .bs-placeholder {
     .filter-option-inner-inner {
