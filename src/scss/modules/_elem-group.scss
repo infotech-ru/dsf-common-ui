@@ -548,7 +548,7 @@
   border-top: 1px solid _brand-palette(inputGroupEl-borderColor);
   color: _brand-palette(inputGroupEl-color);
   display: flex;
-  font-size: _fontSizes(inputGroupElem);
+  font-size: rem(_fontSizes(inputGroupElem));
   font-weight: _fontWeight(inputGroupElem);
   line-height: rem(_lineHeight(input));
   min-height: rem(calc(_lineHeight(input) + 2));
