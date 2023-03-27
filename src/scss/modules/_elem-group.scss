@@ -424,11 +424,14 @@
 
 
 .inputGroup {
-  align-items: stretch;
+  align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   width: 100%;
+  .css-formFree & {
+    align-items: stretch;
+  }
   .form-group {
     margin-bottom: 0;
     padding-top: 0;
@@ -545,9 +548,10 @@
   border-top: 1px solid _brand-palette(inputGroupEl-borderColor);
   color: _brand-palette(inputGroupEl-color);
   display: flex;
-  font-size: _fontSize(inputGroupElem);
+  font-size: _fontSizes(inputGroupElem);
   font-weight: _fontWeight(inputGroupElem);
   line-height: rem(_lineHeight(input));
+  min-height: rem(calc(_lineHeight(input) + 2));
   padding: 0 rem(_brand-sizes(formControl_paddingX));
   margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
   // line-height: $input-line-height;

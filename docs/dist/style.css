@@ -7662,11 +7662,14 @@ fieldset[disabled] .checkbox-inline {
 }
 
 .inputGroup {
-  align-items: stretch;
+  align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   width: 100%;
+}
+.css-formFree .inputGroup {
+  align-items: stretch;
 }
 .inputGroup .form-group {
   margin-bottom: 0;
@@ -7781,9 +7784,10 @@ fieldset[disabled] .checkbox-inline {
   border-top: 1px solid #BABABA;
   color: #333333;
   display: flex;
-  font-size: _fontSize(inputGroupElem);
+  font-size: 12;
   font-weight: 400;
   line-height: 1.625rem;
+  min-height: 1.75rem;
   padding: 0 0.625rem;
   margin-bottom: 0;
   text-align: center;
