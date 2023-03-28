@@ -9592,6 +9592,10 @@ tbody.collapse.in {
   margin-right: 1.875rem;
 }
 
+.mr-auto {
+  margin-right: auto;
+}
+
 .mb-0 {
   margin-bottom: 0rem;
 }
@@ -9638,6 +9642,10 @@ tbody.collapse.in {
 
 .ml-10 {
   margin-left: 0.625rem;
+}
+
+.mL-auto {
+  margin-left: auto;
 }
 
 .pt-0 {

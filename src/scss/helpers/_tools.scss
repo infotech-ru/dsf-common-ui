@@ -60,6 +60,9 @@ $marginRightSizes: 0, 5, 8, 10, 15, 20, 25, 30;
     margin-right: rem($marginRight);
   }
 }
+.mr-auto{
+  margin-right: auto;
+}
 
 $marginBottomSizes: 0, 5, 10, 15, 20, 25, 30, 40, 50;
 @each $marginBottom in $marginBottomSizes {
@@ -73,6 +76,10 @@ $marginLeftSizes: 0, 5, 10;
   .ml-#{$marginLeft} {
       margin-left: rem($marginLeft);
   }
+}
+
+.mL-auto {
+  margin-left: auto;
 }
 
 $paddingTopSizes: 0, 5, 10, 20;
