@@ -171,7 +171,7 @@ $paddingLeftSizes: 0, 5, 10;
 .rotate90              { transform: rotate(90deg); }
 .rotate180             { transform: rotate(180deg); }
 .rotate270             { transform: rotate(270deg); }
-.transformText__left   { writing-mode: vertical-lr; transform: rotate(-180deg); }
+.transformText__left   { writing-mode: vertical-lr; transform: rotate(0deg); }
 .transformText__right  { writing-mode: vertical-lr; transform: rotate(180deg); }
 
 .h-auto                { height: auto; }

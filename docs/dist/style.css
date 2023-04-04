@@ -9872,7 +9872,7 @@ tbody.collapse.in {
 
 .transformText__left {
   writing-mode: vertical-lr;
-  transform: rotate(-180deg);
+  transform: rotate(0deg);
 }
 
 .transformText__right {
