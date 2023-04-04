@@ -12,7 +12,11 @@ order: 6
 
 Кнопки вносятся в data-content. Инициализация js по классу `js-actionMenu`
 
-`В системе реализовано через widgets::DropDownActionColumn`
+`В системе реализовано через widgets DropDownActionColumn
+{% highlight html %}
+  use app\widgets\DropDownActionColumn;
+  'class' => DropDownActionColumn::class,
+{% endhighlight %}
 
 Для использования в таблицах .btn-icon
 
