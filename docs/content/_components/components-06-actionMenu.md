@@ -6,96 +6,98 @@ anchor: components-menu
 order: 6
 ---
 
-### Меню для кнопок действий.
+### Инициализация
 
-Используется для объединения кнопок действия под одной кнопкой. В качестве js используется popover.js
+Используется для объединения кнопок действия под одной кнопкой. В качестве скрипта используется popover.js
 
 Кнопки вносятся в data-content. Инициализация js по классу `js-actionMenu`
 
-`В системе реализовано через widgets DropDownActionColumn
+В системе реализовано через widgets DropDownActionColumn
 {% highlight html %}
   use app\widgets\DropDownActionColumn;
-  'class' => DropDownActionColumn::class,
+ 
+    'class' => DropDownActionColumn::class,
 {% endhighlight %}
 
-Для использования в таблицах .btn-icon
 
-Так как popover изначально не попадает в DOM, то скрипт по типу
-`$(".js-action").click` внутри него не будет работать.
+Popover изначально не попадает в DOM, скрипт по типу `$(".js-action").click` внутри него не будет работать.
+
 Использовать надо:
 `$("body").on("click", ".js-action", function () {}`
+
+### Визуализация кнопки вызова
+
+В таблицах кнопку вызова визуализируем с помощью `.btn-icon`
+
+В фильтрах кнопку вызова визуализируем по типу `.btn-deafult`
+
+Для использования рядом с другими кнопками возможно использовать `.btn-link`
+
+### Отображения пунктов меню
+Пункты меню находятся в структуре
+`<div class="popover-body"><ul class="popoverActionMenu__ul"><li> Пункт меню </li>`
+
+Способы отображения пунктов:
+- Придания пунктам вида кнопок. Например, `btn-default`.
+- Использования класса `btn-icon`
 
 {% highlight html %}
   <button class="btn-icon js-actionMenu"
           type="button"
           data-content="
-            <button class='btn-default btn-block'>
+            <button class='btn-icon btn-block'>
               <span class='svg--icon'>
-                <svg class='glyphicons-basic-pencil' width='24' height='24'>
-                  <use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use>
+                <svg class='bicolors-edit' width='16' height='16'>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-edit'></use>
                 </svg>
               </span>
               <span class='btn-text'>Редактировать</span>
             </button>
           ">
           <span class="svg--icon">
-            <svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg>
+            <svg class="bicolors-menu" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-menu"></use></svg>
           </span>
   </button>
-{% endhighlight %}
-
-<div class="bs-docs-example">
-<button class="btn-icon js-actionMenu" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='glyphicons-basic-pencil' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg></span></button>
-</div>
-
-Для использования в фильтрах .btn-deafult .btn-deafult
-
-{% highlight html %}
   <button class="btn-default js-actionMenu"
           type="button"
           data-content="
             <button class='btn-default btn-block'>
               <span class='svg--icon'>
-                <svg class='glyphicons-basic-pencil' width='24' height='24'>
-                  <use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use>
+                <svg class='bicolors-doc_add' width='24' height='24'>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-doc_add'></use>
                 </svg>
               </span>
               <span class='btn-text'>Редактировать</span>
             </button>
           ">
           <span class="svg--icon">
-            <svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg>
+            <svg class="bicolors-filter" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-filter"></use></svg>
+          </span>
+  </button>
+  <button class="btn-link js-actionMenu"
+          type="button"
+          data-content="
+            <button class='btn-icon btn-block'>
+              <span class='svg--icon'>
+                <svg class='bicolors-plus' width='24' height='24'>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-plus'></use>
+                </svg>
+              </span>
+              <span class='btn-text'>Добавить</span>
+            </button>
+          ">
+          <span class="svg--icon">
+            <svg class="bicolors-menu" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-menu"></use></svg>
           </span>
   </button>
 {% endhighlight %}
 
 <div class="bs-docs-example">
-<button class="btn-default js-actionMenu ml-10" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='glyphicons-basic-pencil' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg></span></button>
-</div>
+  <button class="btn-icon mr-10 js-actionMenu" type="button" data-content="<button class='btn-icon btn-block'><span class='svg--icon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#bicolors-edit'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
 
-Для использования рядом с кноками .btn-link
+  <button class="btn-default js-actionMenu ml-10" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='bicolors-doc_add' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#bicolors-doc_add'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="bicolors-filter" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-filter"></use></svg></span></button>
 
-{% highlight html %}
-  <button class="btn-link js-actionMenu"
-          type="button"
-          data-content="
-            <button class='btn-default btn-block'>
-              <span class='svg--icon'>
-                <svg class='glyphicons-basic-pencil' width='24' height='24'>
-                  <use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use>
-                </svg>
-              </span>
-              <span class='btn-text'>Редактировать</span>
-            </button>
-          ">
-          <span class="svg--icon">
-            <svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg>
-          </span>
-  </button>
-  {% endhighlight %}
-
-<div class="bs-docs-example">
-<button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='glyphicons-basic-pencil' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#glyphicons-pencil'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="glyphicons-more-vertical" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#glyphicons-more-vertical"></use></svg></span></button>
+  <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='btn-icon btn-block'><span class='svg--icon'><svg class='bicolors-plus' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#bicolors-plus'></use></svg></span><span class='btn-text'>Добавить</span></button> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
 </div>
 
 ### Многоуровневое меню dropdown. 
