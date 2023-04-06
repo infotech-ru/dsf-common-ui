@@ -75,59 +75,78 @@
   }
 
   // Links within the dropdown menu
-  .dropdown__link,
   > li > a,
   > li > span {
-    align-items: center;
-    color: _brand-palette(dropdown_color);
-    clear: both;
-    // display: block;
-    display: inline-flex;
-    font-weight: 400;
-    padding: 0px rem(_brand-sizes(dropdownLink_paddingX));
-    line-height: rem(_lineHeight(dropdownLink));
-    min-height: rem(_brand-sizes(dropdownLink_minH));
-    text-decoration: none;
-    width: 100%;
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
-    &:hover,
-    &:focus {
-      background-color: _brand-palette(dropdownActive_bgc);
-      color: _brand-palette(dropdownActive_color);
-      text-decoration: none;
-    }
+    @extend .dropdown__link;
   }
   .active > .dropdown__link,
+  .dropdown__link.active,
   & > li > a.active,
   & > .active > a {
-    &,
-    &:hover,
-    &:focus {
-      background-color: _brand-palette(dropdownActive_bgc);
-      color: _brand-palette(dropdownActive_color);
-      text-decoration: none;
-      outline: 0;
-    }
+    @extend %dropdown__link__active;
   }
   .disabled > .dropdown__link,
+  .dropdown__link.disabled,
+  & > .disabled > span,
   & > .disabled > a {
-    &,
-    &:hover,
-    &:focus {
-      color: $dropdown-link-disabled-color;
-    }
-
-    // Nuke hover/focus effects
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      cursor: $cursor-disabled;
-      background-color: transparent;
-      background-image: none; // Remove CSS gradient
-      @include reset-filter;
-    }
+    @extend %dropdown__link__disable;
   }
 }
+
+.dropdown__link {
+  align-items: center;
+  color: _brand-palette(dropdown_color);
+  clear: both;
+  // display: block;
+  display: inline-flex;
+  font-weight: 400;
+  padding: 0px rem(_brand-sizes(dropdownLink_paddingX));
+  line-height: rem(_lineHeight(dropdownLink));
+  min-height: rem(_brand-sizes(dropdownLink_minH));
+  text-decoration: none;
+  width: 100%;
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+
+  &:hover,
+  &:focus {
+    background-color: _brand-palette(dropdownActive_bgc);
+    color: _brand-palette(dropdownActive_color);
+    text-decoration: none;
+  }
+  svg{
+    height: 24px;
+    width: auto;
+  }
+}
+
+%dropdown__link__active {
+  &, 
+  &:hover,
+  &:focus{
+    background-color: _brand-palette(dropdownActive_bgc);
+    color: _brand-palette(dropdownActive_color);
+    text-decoration: none;
+    outline: 0;
+  }
+}
+%dropdown__link__disable {
+  &,
+  &:hover,
+  &:focus {
+    color: $dropdown-link-disabled-color;
+  }
+
+  // Nuke hover/focus effects
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    cursor: $cursor-disabled;
+    background-color: transparent;
+    background-image: none; // Remove CSS gradient
+    @include reset-filter;
+  }
+}
+
 .dropdown__linkIcon{
   margin-right: 5px;
   height: 24px;

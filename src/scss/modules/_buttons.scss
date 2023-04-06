@@ -266,9 +266,11 @@ a.btn {
   background-image: none;
   box-shadow: none;
   border: none;
+  color: _colorTools(default_color);
   cursor: pointer;
   display: inline-block;
   padding: 0;
+  text-align: left;
   .glyphicon {
     color: _brand-palette(btnIconSvg_color);
     font-size: rem(_brand-sizes(btnIcon_height));

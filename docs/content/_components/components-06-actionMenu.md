@@ -34,24 +34,32 @@ Popover изначально не попадает в DOM, скрипт по т�
 Для использования рядом с другими кнопками возможно использовать `.btn-link`
 
 ### Отображения пунктов меню
-Пункты меню находятся в структуре
+Пункты меню в виде кнопок должны находятся в структуре
 `<div class="popover-body"><ul class="popoverActionMenu__ul"><li> Пункт меню </li>`
 
 Способы отображения пунктов:
 - Придания пунктам вида кнопок. Например, `btn-default`.
-- Использования класса `btn-icon`
+- Исопользование класса `dropdown__link`
 
 {% highlight html %}
   <button class="btn-icon js-actionMenu"
           type="button"
           data-content="
-            <button class='btn-icon btn-block'>
+            <button class='dropdown__link'>
               <span class='svg--icon'>
-                <svg class='bicolors-edit' width='16' height='16'>
-                  <use xlink:href='dist/sprite.symbol.svg#bicolors-edit'></use>
+                <svg class='bicolors-edit' width='24' height='24'>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-edit__vb24'></use>
                 </svg>
               </span>
               <span class='btn-text'>Редактировать</span>
+            </button>
+            <button class='dropdown__link'>
+              <span class='svg--icon'>
+                <svg class='bicolors-edit' width='24' height='24'>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-delete__vb24'></use>
+                </svg>
+              </span>
+              <span class='btn-text'>Удалить</span>
             </button>
           ">
           <span class="svg--icon">
@@ -77,10 +85,17 @@ Popover изначально не попадает в DOM, скрипт по т�
   <button class="btn-link js-actionMenu"
           type="button"
           data-content="
-            <button class='btn-icon btn-block'>
+            <button class='dropdown__link'>
+              <span class='svg--icon'>
+                <svg class='bicolors-edit' width='16' height='16'>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-edit'></use>
+                </svg>
+              </span>
+              <span class='btn-text'>Редактировать</span>
+            </button>
               <span class='svg--icon'>
                 <svg class='bicolors-plus' width='24' height='24'>
-                  <use xlink:href='dist/sprite.symbol.svg#bicolors-plus'></use>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-plus__vb24'></use>
                 </svg>
               </span>
               <span class='btn-text'>Добавить</span>
