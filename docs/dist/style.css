@@ -6085,14 +6085,6 @@ h6, .h6 {
   color: #333333;
   text-decoration: none;
 }
-.dropdown__link .svg--icon, .dropdown-menu > li > a .svg--icon,
-.dropdown-menu > li > span .svg--icon,
-.dropdown__link svg,
-.dropdown-menu > li > a svg,
-.dropdown-menu > li > span svg {
-  height: 24px;
-  width: auto;
-}
 
 .dropdown-menu .active > .dropdown__link,
 .dropdown-menu > li.active > span,
