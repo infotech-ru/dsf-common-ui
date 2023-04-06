@@ -48,7 +48,7 @@ Popover изначально не попадает в DOM, скрипт по т�
             <button class='dropdown__link'>
               <span class='svg--icon'>
                 <svg class='bicolors-edit' width='24' height='24'>
-                  <use xlink:href='dist/sprite.symbol.svg#bicolors-edit__vb24'></use>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
                 </svg>
               </span>
               <span class='btn-text'>Редактировать</span>
@@ -56,7 +56,7 @@ Popover изначально не попадает в DOM, скрипт по т�
             <button class='dropdown__link'>
               <span class='svg--icon'>
                 <svg class='bicolors-edit' width='24' height='24'>
-                  <use xlink:href='dist/sprite.symbol.svg#bicolors-delete__vb24'></use>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-delete__24vb'></use>
                 </svg>
               </span>
               <span class='btn-text'>Удалить</span>
@@ -95,7 +95,7 @@ Popover изначально не попадает в DOM, скрипт по т�
             </button>
               <span class='svg--icon'>
                 <svg class='bicolors-plus' width='24' height='24'>
-                  <use xlink:href='dist/sprite.symbol.svg#bicolors-plus__vb24'></use>
+                  <use xlink:href='dist/sprite.symbol.svg#bicolors-plus__24vb'></use>
                 </svg>
               </span>
               <span class='btn-text'>Добавить</span>
@@ -108,11 +108,11 @@ Popover изначально не попадает в DOM, скрипт по т�
 {% endhighlight %}
 
 <div class="bs-docs-example">
-  <button class="btn-icon mr-10 js-actionMenu" type="button" data-content="<button class='btn-icon btn-block'><span class='svg--icon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#bicolors-edit'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
+  <button class="btn-icon mr-10 js-actionMenu" type="button" data-content="<button class='dropdown__link'><span class='svg--icon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='btn-text'>Редактировать</span></button><button class='dropdown__link'><span class='svg--icon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#bicolors-delete__24vb'></use></svg></span><span class='btn-text'>Удалить</span></button> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
 
   <button class="btn-default js-actionMenu ml-10" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='bicolors-doc_add' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#bicolors-doc_add'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="bicolors-filter" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-filter"></use></svg></span></button>
 
-  <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='btn-icon btn-block'><span class='svg--icon'><svg class='bicolors-plus' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#bicolors-plus'></use></svg></span><span class='btn-text'>Добавить</span></button> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
+  <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='dropdown__link'><span class='svg--icon'><svg class='bicolors-plus' width='24' height='24'><use xlink:href='dist/sprite.symbol.svg#bicolors-plus__24vb'></use></svg></span><span class='btn-text'>Добавить</span></button> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
 </div>
 
 ### Многоуровневое меню dropdown. 
