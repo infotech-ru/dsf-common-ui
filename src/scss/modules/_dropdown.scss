@@ -95,6 +95,8 @@
 
 .dropdown__link {
   align-items: center;
+  background-color: transparent;
+  border: none;
   color: _brand-palette(dropdown_color);
   clear: both;
   // display: block;
@@ -113,6 +115,7 @@
     color: _brand-palette(dropdownActive_color);
     text-decoration: none;
   }
+  .svg--icon,
   svg{
     height: 24px;
     width: auto;

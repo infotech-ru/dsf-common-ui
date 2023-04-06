@@ -6065,6 +6065,8 @@ h6, .h6 {
 .dropdown__link, .dropdown-menu > li > a,
 .dropdown-menu > li > span {
   align-items: center;
+  background-color: transparent;
+  border: none;
   color: #333333;
   clear: both;
   display: inline-flex;
@@ -6083,7 +6085,10 @@ h6, .h6 {
   color: #333333;
   text-decoration: none;
 }
-.dropdown__link svg, .dropdown-menu > li > a svg,
+.dropdown__link .svg--icon, .dropdown-menu > li > a .svg--icon,
+.dropdown-menu > li > span .svg--icon,
+.dropdown__link svg,
+.dropdown-menu > li > a svg,
 .dropdown-menu > li > span svg {
   height: 24px;
   width: auto;
