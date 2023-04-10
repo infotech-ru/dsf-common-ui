@@ -370,6 +370,13 @@ $brand-label: (
   yellow_bg:                              map-get($brand-colors, _yellow2),
   yellow_color:                           map-get($brand-colors, _dark-grey),
   yellow_svg:                             map-get($brand-colors, _dark-grey),
+  black_bg:                               map-get($brand-colors, _black),
+  black_color:                            map-get($brand-colors, _white),
+  black_svg:                              map-get($brand-colors, _white),
+  dark-grey_bg:                           map-get($brand-colors, _dark-grey),
+  dark-grey_color:                        map-get($brand-colors, _white),
+  dark-grey_svg:                          map-get($brand-colors, _white),
+
 );
 
 @function _brand-alert($keys...) {

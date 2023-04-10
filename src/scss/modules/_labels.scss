@@ -19,7 +19,7 @@
   &:empty {
     display: none;
   }
-  @each $label in default, primary, success, danger, warning, info, 'yellow' {
+  @each $label in default, primary, success, danger, warning, info, 'yellow', 'black', 'dark-grey' {
     &-#{$label}{
       background-color: _brand-label(#{$label}_bg);
       color: _brand-label(#{$label}_color);

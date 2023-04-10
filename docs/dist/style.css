@@ -6940,6 +6940,14 @@ input[type=button].btn-block {
   background-color: #FFF741;
   color: #333333;
 }
+.label-black {
+  background-color: #000000;
+  color: #ffffff;
+}
+.label-dark-grey {
+  background-color: #333333;
+  color: #ffffff;
+}
 .btn .label {
   position: relative;
   top: -1px;
