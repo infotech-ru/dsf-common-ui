@@ -53,6 +53,9 @@ $marginTopSizes: 0, 5, 10, 15, 20, 25, 30, 40, 50;
       margin-top: rem($marginTop);
   }
 }
+.mt-auto{
+  margin-top: auto;
+}
 
 $marginRightSizes: 0, 5, 8, 10, 15, 20, 25, 30;
 @each $marginRight in $marginRightSizes {
@@ -70,6 +73,9 @@ $marginBottomSizes: 0, 5, 10, 15, 20, 25, 30, 40, 50;
       margin-bottom: rem($marginBottom);
   }
 }
+.mb-auto{
+  margin-bottom: auto;
+}
 
 $marginLeftSizes: 0, 5, 10;
 @each $marginLeft in $marginLeftSizes {
@@ -78,7 +84,7 @@ $marginLeftSizes: 0, 5, 10;
   }
 }
 
-.mL-auto {
+.ml-auto {
   margin-left: auto;
 }
 

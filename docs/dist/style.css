@@ -9601,6 +9601,10 @@ tbody.collapse.in {
   margin-top: 3.125rem;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
 .mr-0 {
   margin-right: 0rem;
 }
@@ -9673,6 +9677,10 @@ tbody.collapse.in {
   margin-bottom: 3.125rem;
 }
 
+.mb-auto {
+  margin-bottom: auto;
+}
+
 .ml-0 {
   margin-left: 0rem;
 }
@@ -9685,7 +9693,7 @@ tbody.collapse.in {
   margin-left: 0.625rem;
 }
 
-.mL-auto {
+.ml-auto {
   margin-left: auto;
 }
 
