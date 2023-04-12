@@ -38,3 +38,16 @@ tbody.collapse.in { display: table-row-group; }
   @include transition-duration(.35s);
   @include transition-timing-function(ease);
 }
+
+.limited{
+  .svg--icon{ 
+  --limited-stroke-on: transparent;
+  --svg-icon-fill: transparent;
+  }
+  &.collapsed{
+  .svg--icon{ 
+      --limited-stroke-on: inherit;
+      --svg-icon-fill: inherit;
+    }
+  }
+}

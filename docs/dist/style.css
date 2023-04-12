@@ -9510,6 +9510,15 @@ tbody.collapse.in {
   transition-timing-function: ease;
 }
 
+.limited .svg--icon {
+  --limited-stroke-on: transparent;
+  --svg-icon-fill: transparent;
+}
+.limited.collapsed .svg--icon {
+  --limited-stroke-on: inherit;
+  --svg-icon-fill: inherit;
+}
+
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* HELPER TOOLS                                                               */
