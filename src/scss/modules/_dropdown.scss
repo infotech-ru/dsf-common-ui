@@ -275,6 +275,9 @@
     }
   }
   > .dropdown__link{
+    .caret{
+      display: block;
+    }
     &:after{
       background-repeat: no-repeat;
       background-size: 6px 14px; // #12782

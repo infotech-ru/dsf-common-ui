@@ -14,7 +14,7 @@ order: 2
 `border` - добавляет обрамление чертой в 1px всего блока. `border__dotted` - модифициурет линию в точки
 
 #### Цвет бордера
-Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-grey`, `border-white`, `border-light-blue3` добавляют соответсвующего цвета. 
+Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-grey`, `border-white`, `border-light-blue3`, `border-vibrant-blue` добавляют соответсвующего цвета. 
 `border-clear` - класс делает прозрачным цвет бордера
 Классы `border__none`, `border-top__none`, `border-bottom__none`, `border-left__none`, `border-right__none` - классы отключают бордер
 
@@ -33,6 +33,7 @@ order: 2
   <div class="border-bottom border-dark-red">border-bottom border-dark-red</div>
   <div class="border border-bottom__none border-grey">border border-bottom__none border-grey</div>
   <div class="border border-top__none border-rose">border border-top__none border-rose</div>
+  <div class="border border-top__none border-vibrant-blue">border border-right__none border-vibrant-blue</div>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="border-top border-default mb-10">border-top border-default</div>
@@ -49,4 +50,5 @@ order: 2
   <div class="border-bottom border-dark-red mb-10">border-bottom border-dark-red</div>
   <div class="border border-bottom__none border-grey mb-10">border border-bottom__none border-grey</div>
   <div class="border border-top__none border-rose mb-10">border border-top__none border-rose</div>
+  <div class="border border-top__none border-vibrant-blue mb-10">border border-right__none border-vibrant-blue</div>
 </div>

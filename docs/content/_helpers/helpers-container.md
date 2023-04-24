@@ -8,6 +8,13 @@ order: 4
 
 #### Классы для работы с контейнерами
 
+`d-mobile-none` - устанавливает display: none для мобильных устройств
+`d-mobile-flex` - устанавливает display: flex для мобильных устройств
+`d-mobile-block` - устанавливает display: block для мобильных устройств
+`d-mobile-inline-block` - устанавливает display: inline-block для мобильных устройств
+`d-mobile-inline-flex` - устанавливает display: inline-flex для мобильных устройств
+`d-mobile-grid` - устанавливает display: grid для мобильных устройств
+
 `d-none` - устанавливает display: none
 `d-flex` - устанавливает display: flex
 `d-block` - устанавливает display: block
@@ -37,7 +44,7 @@ order: 4
 `rotate90`,`rotate180`, `rotate270` - устанавливает поворот
 
 #### Классы для установленния фона контейнера
-`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `bg-grey`, `bg-clear`, `bg-white`
+`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `bg-grey`, `bg-clear`, `bg-white`, `bg-vibrant-blue`
 
 {% highlight html %}
   <div class="bg-default">bg-default</div>
@@ -54,6 +61,7 @@ order: 4
   <div class="bg-white">bg-white</div>
   <div class="bg-light-blue3">bg-light-blue3</div>
   <div class="bg-rose">bg-rose</div>
+  <div class="bg-vibrant-blue">bg-vibrant-blue</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -71,4 +79,5 @@ order: 4
   <div class="bg-white mb-10">bg-white</div>
   <div class="bg-light-blue3 mb-10">bg-light-blue3</div>
   <div class="bg-rose mb-10">bg-rose</div>
+  <div class="bg-vibrant-blue mb-10">bg-vibrant-blue</div>
 </div>

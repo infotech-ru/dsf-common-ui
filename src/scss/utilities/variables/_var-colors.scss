@@ -210,6 +210,10 @@ $colorTools: (
   rose_border:                            map-get($brand-colors, _rose),
   rose_color:                             map-get($brand-colors, _rose),
   rose_svg:                               map-get($brand-colors, _rose),
+  vibrant-blue_bg:                        map-get($brand-colors, _vibrant-blue),
+  vibrant-blue_border:                    map-get($brand-colors, _vibrant-blue),
+  vibrant-blue_color:                     map-get($brand-colors, _vibrant-blue),
+  vibrant-blue_svg:                       map-get($brand-colors, _vibrant-blue),
 );
 
 @function _brand-btn($keys...) {

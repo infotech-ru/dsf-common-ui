@@ -69,6 +69,7 @@ order: 3
   <div class="bg-muted text-center">text-clear with bg-<span class="text-clear">muted</span> and text-center</div>
   <div class="text-light-blue3">text-light-blue3</div>
   <div class="text-rose transformText__left">text-rose transformText__left</div>
+  <div class="text-vibrant-blue">text-vibrant-blue</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -86,4 +87,5 @@ order: 3
   <div class="text-dark-red transformText__right mb-10">text-dark-red transformText__right</div>
   <div class="text-light-blue3 mb-10">text-light-blue3</div>
   <div class="text-rose transformText__left mb-10">text-rose transformText__left</div>
+  <div class="text-vibrant-blue mb-10">text-vibrant-blue</div>
 </div>

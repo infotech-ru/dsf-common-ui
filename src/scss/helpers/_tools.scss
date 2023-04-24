@@ -159,9 +159,16 @@ $paddingLeftSizes: 0, 5, 10;
 .lh14 { line-height: 14px; }
 .lh18 { line-height: 18px; }
 
+.mobile-view .d-mobile-none { display: none; }
+.mobile-view .d-mobile-block { display: block; }
+.mobile-view .d-mobile-inline-block { display: inline-block; }
+.mobile-view .d-mobile-flex { display: flex; }
+.mobile-view .d-mobile-inlineflex { display: inline-flex; }
+.mobile-view .d-mobile-grid { display: grid; }
+
 .d-none                { display: none !important; }
 .d-flex                { display: flex; }
-.d-inlineflex          { display: inline-flex; }
+.d-inline-flex          { display: inline-flex; }
 .d-inline-block        { display: inline-block;}
 .d-block               { display: block;}
 .d-grid                { display: grid;}
@@ -232,7 +239,7 @@ $paddingLeftSizes: 0, 5, 10;
   }
 }
 
-@each $colorTools in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'muted', 'orange', 'grey', 'dark-red', 'clear', 'white', 'light-blue3', 'rose' {
+@each $colorTools in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'muted', 'orange', 'grey', 'dark-red', 'clear', 'white', 'light-blue3', 'rose', 'vibrant-blue' {
 
   @include svg-icon-variant('.svg-#{$colorTools}', _colorTools(#{$colorTools}_svg));
   
