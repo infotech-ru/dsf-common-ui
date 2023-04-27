@@ -9766,6 +9766,30 @@ tbody.collapse.in {
   padding-left: 0.625rem;
 }
 
+.maring-0 {
+  margin: 0;
+}
+
+.maring-5 {
+  margin: 5px;
+}
+
+.maring-10 {
+  margin: 10px;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.padding-5 {
+  padding: 5px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -10214,6 +10238,48 @@ tbody.collapse.in {
 .border-grey {
   border-color: #cccccc;
   --border_color: #cccccc;
+}
+
+.svg-grey2 svg,
+.svg-grey2.svg--icon svg {
+  --svg-icon-fill: #dddddd;
+  --svg-icon-stroke: #dddddd;
+}
+
+.text-grey2 {
+  color: #dddddd;
+  --text_color: #dddddd;
+}
+
+.bg-grey2 {
+  background-color: #dddddd;
+  --bg_color: #dddddd;
+}
+
+.border-grey2 {
+  border-color: #dddddd;
+  --border_color: #dddddd;
+}
+
+.svg-light-grey2 svg,
+.svg-light-grey2.svg--icon svg {
+  --svg-icon-fill: #F5F5F5;
+  --svg-icon-stroke: #F5F5F5;
+}
+
+.text-light-grey2 {
+  color: #F5F5F5;
+  --text_color: #F5F5F5;
+}
+
+.bg-light-grey2 {
+  background-color: #F5F5F5;
+  --bg_color: #F5F5F5;
+}
+
+.border-light-grey2 {
+  border-color: #F5F5F5;
+  --border_color: #F5F5F5;
 }
 
 .svg-dark-red svg,

@@ -65,6 +65,8 @@ order: 3
   <div class="text-white text-center bg-default">text-white text-center bg-default</div>
   <div class="text-orange text-right">text-orange text-right</div>
   <div class="text-grey">text-grey</div>
+  <div class="text-grey2">text-grey2</div>
+  <div class="text-light-grey2">text-light-grey2</div>
   <div class="text-dark-red transformText__right">text-dark-red transformText__right</div>
   <div class="bg-muted text-center">text-clear with bg-<span class="text-clear">muted</span> and text-center</div>
   <div class="text-light-blue3">text-light-blue3</div>
@@ -83,6 +85,8 @@ order: 3
   <div class="text-white text-center bg-default mb-10">text-white text-center bg-default</div>
   <div class="text-orange text-right mb-10">text-orange text-right</div>
   <div class="text-grey mb-10">text-grey</div>
+  <div class="text-grey2 mb-10">2text-grey</div>
+  <div class="text-light-grey2 mb-10">light-2text-grey</div>
   <div class="bg-muted text-center mb-10">text-clear with bg-<span class="text-clear">muted</span> and text-center</div>
   <div class="text-dark-red transformText__right mb-10">text-dark-red transformText__right</div>
   <div class="text-light-blue3 mb-10">text-light-blue3</div>
