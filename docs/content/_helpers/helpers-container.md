@@ -55,7 +55,7 @@ order: 4
   <div class="bg-info">bg-info</div>
   <div class="bg-muted">bg-muted</div>
   <div class="bg-grey">bg-grey</div>
-  <div class="bg-grey-2">bg-grey-2</div>
+  <div class="bg-grey2">bg-grey2</div>
   <div class="bg-light-grey2">bg-light-grey2</div>
   <div class="bg-orange">bg-orange</div>
   <div class="bg-dark-red">bg-dark-red</div>
@@ -75,7 +75,7 @@ order: 4
   <div class="bg-info mb-10">bg-info</div>
   <div class="bg-muted mb-10">bg-muted</div>
   <div class="bg-grey mb-10">bg-grey</div>
-  <div class="bg-grey-2 mb-10">bg-grey-2</div>
+  <div class="bg-grey2 mb-10">bg-grey2</div>
   <div class="bg-light-grey2 mb-10">bg-light-grey2</div>
   <div class="bg-orange mb-10">bg-orange</div>
   <div class="bg-dark-red mb-10">bg-dark-red</div>
