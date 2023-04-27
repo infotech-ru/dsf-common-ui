@@ -201,6 +201,7 @@ tfoot {
   }
 }
 
+@include table-row-variant('clear', _brand-colors(_transparent));
 @include table-row-variant('light-yellow', _brand-colors(_light-yellow));
 @include table-row-variant('light-red', _brand-colors(_light-red));
 @include table-row-variant('red', _brand-colors(_red));

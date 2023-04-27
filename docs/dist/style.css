@@ -8417,6 +8417,20 @@ tfoot td tr:nth-child(1) th:first-child[rowspan="3"] {
   background-color: #f9f9f9;
 }
 
+.table__clear th,
+.table__clear th:first-child,
+.table__clear td,
+.table__clear td:first-child {
+  background-color: #00000000;
+}
+
+th.table__clear,
+th.table__clear:first-child,
+td.table__clear:first-child,
+td.table__clear {
+  background-color: #00000000;
+}
+
 .table__light-yellow th,
 .table__light-yellow th:first-child,
 .table__light-yellow td,
