@@ -51,3 +51,11 @@ tbody.collapse.in { display: table-row-group; }
     }
   }
 }
+
+.favorite__active{
+  .svg--icon{
+    #{--favorite-stroke-active}: _colorTools(vibrant-blue_svg);
+    #{--favorite-fill-active}: _colorTools(vibrant-blue_svg);
+    #{--favorite-stroke_blue-active}: _colorTools(white_svg);
+  }
+}

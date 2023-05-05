@@ -9537,6 +9537,12 @@ tbody.collapse.in {
   --svg-icon-fill: inherit;
 }
 
+.favorite__active .svg--icon {
+  --favorite-stroke-active: #0094FF;
+  --favorite-fill-active: #0094FF;
+  --favorite-stroke_blue-active: #ffffff;
+}
+
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* HELPER TOOLS                                                               */
