@@ -24,26 +24,28 @@ order: 1
 {% highlight html %}
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.8 14"><path d="M0,12.6A1.4,1.4,0,1,1,1.4,14,1.4,1.4,0,0,1,0,12.6ZM0,1.4A1.4,1.4,0,1,1,1.4,2.8,1.4,1.4,0,0,1,0,1.4ZM1.4,5.6A1.4,1.4,0,1,0,2.8,7,1.4,1.4,0,0,0,1.4,5.6Z" fill="var(--svg-icon-fill, #000)" fill-rule="evenodd"/></svg>
 {% endhighlight %}
-<div class="bs-docs-example">
-  <i>Использование:</i>
-</div>
+<h4>Использование.</h4>
+
 {% highlight html %}
-html:
-<svg>
-    <use xlink:href="sprite.symbol.svg#ИМЯ_ИКОНКИ"></use>
-</svg>
+  html:
+  <svg>
+      <use xlink:href="sprite.symbol.svg#ИМЯ_ИКОНКИ"></use>
+  </svg>
 
-php:
-с помощью heplers::Icons
+  php:
+  с помощью heplers::Icons
 
-\app\helpers\Icons::icon('ИМЯ_ИКОНКИ')
+      use app\helpers\Icons;
+      
+      Icons::icon('ИМЯ_ИКОНКИ')
 
-vue:
-<script>
-import Icon from "./Icon.vue";
-components: {Icon}
-</script>
-<Icon name="ИМЯ_ИКОНКИ" />
+  vue:
+  <script>
+    import Icon from "./Icon.vue";
+    components: {Icon}
+  </script>
+
+  <Icon name="ИМЯ_ИКОНКИ" />
 {% endhighlight %}
 <div class="bs-docs-example">
   <svg width="24" height="24">

@@ -1,0 +1,61 @@
+---
+Title: Icons States
+menutitle: Состояние иконок
+category: icons
+anchor: iconы-states
+order: 2
+---
+
+<h4>Модификаци иконки bicolors-plus</h4>
+<p>Использование одной иконки bicolors-plus для cкрипта collapse. И создание эффекта замены на `minus` при расскрытии списка.
+  <br>Для этого используется класс `.limited`.</p>
+{% highlight html %}
+  <a class="limited collapsed" role="button" data-toggle="collapse" href="#collapseLimited" aria-expanded="false" aria-controls="collapseLimited">
+    <span class="svg--icon">
+      <?= Icons::icon('bicolors-plus') ?>
+    </span>
+  </a>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <a class="limited collapsed btn-icon mb-20 " role="button" data-toggle="collapse" href="#collapseLimited" aria-expanded="false" aria-controls="collapseLimited">
+    <span class="svg--icon"> 
+      <svg width="24" height="24">
+        <use xlink:href="dist/sprite.symbol.svg#bicolors-plus"></use>
+      </svg>
+    </span>
+  </a>
+  <div class="collapse" id="collapseLimited">
+    Рыба  
+  </div>
+</div>
+
+<h4>Модификаци иконки bicolors-favorite</h4>
+<p>Использование одной иконки bicolors-favorite для применения с классом родителя `favorite__active`. И создание эффекта замены на `favorite-full`.
+  {% highlight html %}
+  <div class="">
+    <span class="svg--icon">
+      <?= Icons::icon('bicolors-favorite') ?>
+    </span>
+  </div>
+  <div class="favorite__active">
+    <span class="svg--icon">
+      <?= Icons::icon('bicolors-favorite') ?>
+    </span>
+  </div>
+{% endhighlight %}
+<div class="bs-docs-example">
+    <div class="">
+      <span class="svg--icon"> 
+        <svg width="24" height="24">
+          <use xlink:href="dist/sprite.symbol.svg#bicolors-favorite"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="favorite__active">
+      <span class="svg--icon"> 
+        <svg width="24" height="24">
+          <use xlink:href="dist/sprite.symbol.svg#bicolors-favorite"></use>
+        </svg>
+      </span>
+    </div>
+</div>
