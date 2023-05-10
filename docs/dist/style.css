@@ -10075,6 +10075,8 @@ tbody.collapse.in {
 .svg-default.svg--icon svg {
   --svg-icon-fill: #777777;
   --svg-icon-stroke: #777777;
+  --svg-icon-fill_blue: #777777;
+  --svg-icon-stroke_blue: #777777;
 }
 
 .text-default {
@@ -10096,6 +10098,8 @@ tbody.collapse.in {
 .svg-primary.svg--icon svg {
   --svg-icon-fill: #1E6393;
   --svg-icon-stroke: #1E6393;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
 }
 
 .text-primary {
@@ -10117,6 +10121,8 @@ tbody.collapse.in {
 .svg-success.svg--icon svg {
   --svg-icon-fill: #69C26A;
   --svg-icon-stroke: #69C26A;
+  --svg-icon-fill_blue: #69C26A;
+  --svg-icon-stroke_blue: #69C26A;
 }
 
 .text-success {
@@ -10138,6 +10144,8 @@ tbody.collapse.in {
 .svg-danger.svg--icon svg {
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
+  --svg-icon-fill_blue: #D9534F;
+  --svg-icon-stroke_blue: #D9534F;
 }
 
 .text-danger {
@@ -10159,6 +10167,8 @@ tbody.collapse.in {
 .svg-warning.svg--icon svg {
   --svg-icon-fill: #FFBD41;
   --svg-icon-stroke: #FFBD41;
+  --svg-icon-fill_blue: #FFBD41;
+  --svg-icon-stroke_blue: #FFBD41;
 }
 
 .text-warning {
@@ -10180,6 +10190,8 @@ tbody.collapse.in {
 .svg-info.svg--icon svg {
   --svg-icon-fill: #E4EEF7;
   --svg-icon-stroke: #E4EEF7;
+  --svg-icon-fill_blue: #E4EEF7;
+  --svg-icon-stroke_blue: #E4EEF7;
 }
 
 .text-info {
@@ -10201,6 +10213,8 @@ tbody.collapse.in {
 .svg-muted.svg--icon svg {
   --svg-icon-fill: #BABABA;
   --svg-icon-stroke: #BABABA;
+  --svg-icon-fill_blue: #BABABA;
+  --svg-icon-stroke_blue: #BABABA;
 }
 
 .text-muted {
@@ -10222,6 +10236,8 @@ tbody.collapse.in {
 .svg-orange.svg--icon svg {
   --svg-icon-fill: #FFBD41;
   --svg-icon-stroke: #FFBD41;
+  --svg-icon-fill_blue: #FFBD41;
+  --svg-icon-stroke_blue: #FFBD41;
 }
 
 .text-orange {
@@ -10243,6 +10259,8 @@ tbody.collapse.in {
 .svg-grey.svg--icon svg {
   --svg-icon-fill: #cccccc;
   --svg-icon-stroke: #cccccc;
+  --svg-icon-fill_blue: #cccccc;
+  --svg-icon-stroke_blue: #cccccc;
 }
 
 .text-grey {
@@ -10264,6 +10282,8 @@ tbody.collapse.in {
 .svg-grey2.svg--icon svg {
   --svg-icon-fill: #dddddd;
   --svg-icon-stroke: #dddddd;
+  --svg-icon-fill_blue: #dddddd;
+  --svg-icon-stroke_blue: #dddddd;
 }
 
 .text-grey2 {
@@ -10285,6 +10305,8 @@ tbody.collapse.in {
 .svg-light-grey2.svg--icon svg {
   --svg-icon-fill: #F5F5F5;
   --svg-icon-stroke: #F5F5F5;
+  --svg-icon-fill_blue: #F5F5F5;
+  --svg-icon-stroke_blue: #F5F5F5;
 }
 
 .text-light-grey2 {
@@ -10306,6 +10328,8 @@ tbody.collapse.in {
 .svg-dark-red.svg--icon svg {
   --svg-icon-fill: #762624;
   --svg-icon-stroke: #762624;
+  --svg-icon-fill_blue: #762624;
+  --svg-icon-stroke_blue: #762624;
 }
 
 .text-dark-red {
@@ -10327,6 +10351,8 @@ tbody.collapse.in {
 .svg-clear.svg--icon svg {
   --svg-icon-fill: #00000000;
   --svg-icon-stroke: #00000000;
+  --svg-icon-fill_blue: #00000000;
+  --svg-icon-stroke_blue: #00000000;
 }
 
 .text-clear {
@@ -10348,6 +10374,8 @@ tbody.collapse.in {
 .svg-white.svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
 }
 
 .text-white {
@@ -10369,6 +10397,8 @@ tbody.collapse.in {
 .svg-light-blue3.svg--icon svg {
   --svg-icon-fill: #B6D1E8;
   --svg-icon-stroke: #B6D1E8;
+  --svg-icon-fill_blue: #B6D1E8;
+  --svg-icon-stroke_blue: #B6D1E8;
 }
 
 .text-light-blue3 {
@@ -10390,6 +10420,8 @@ tbody.collapse.in {
 .svg-rose.svg--icon svg {
   --svg-icon-fill: #FF9996;
   --svg-icon-stroke: #FF9996;
+  --svg-icon-fill_blue: #FF9996;
+  --svg-icon-stroke_blue: #FF9996;
 }
 
 .text-rose {
@@ -10411,6 +10443,8 @@ tbody.collapse.in {
 .svg-vibrant-blue.svg--icon svg {
   --svg-icon-fill: #0094FF;
   --svg-icon-stroke: #0094FF;
+  --svg-icon-fill_blue: #0094FF;
+  --svg-icon-stroke_blue: #0094FF;
 }
 
 .text-vibrant-blue {

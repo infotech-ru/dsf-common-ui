@@ -22,6 +22,8 @@
     svg {
       #{--svg-icon-fill}: $color;
       #{--svg-icon-stroke}: $color;
+      #{--svg-icon-fill_blue}: $color;
+      #{--svg-icon-stroke_blue}: $color;
     }
   }
 }
