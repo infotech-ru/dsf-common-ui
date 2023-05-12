@@ -476,6 +476,9 @@ $brand-palette: (
   dropdownHeader_color:                   map-get($brand-colors, _light-grey),
   dropdownActive_color:                   map-get($brand-colors, _dark-grey),
   dropdownActive_bgc:                     map-get($brand-colors, _light-blue2),
+
+  joinBlockTitle_color:                   map-get($brand-colors, _dark-grey),
+  
   menuLink_color:                         map-get($brand-colors, _light-blue),
   menuLinkActive_bgc:                     map-get($brand-colors, _light-blue),
   menuLinkActive_color:                   map-get($brand-colors, _white),

@@ -153,6 +153,11 @@ $paddingLeftSizes: 0, 5, 10;
 .break-word            { word-break: break-word; }
 .overflow-ellipsis     { overflow: hidden; text-overflow: ellipsis; }
 
+.p-relative            { position: relative; }
+.p-absolute            { position: absolute; }
+.p-sticky              { position: sticky; }
+
+
 .text-left             { text-align: left; }
 .text-right            { text-align: right; }
 .text-center           { text-align: center; }
@@ -184,7 +189,7 @@ $paddingLeftSizes: 0, 5, 10;
 
 .d-none                { display: none !important; }
 .d-flex                { display: flex; }
-.d-inline-flex          { display: inline-flex; }
+.d-inline-flex         { display: inline-flex; }
 .d-inline-block        { display: inline-block;}
 .d-block               { display: block;}
 .d-grid                { display: grid;}

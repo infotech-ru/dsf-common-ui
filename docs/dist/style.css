@@ -6888,6 +6888,12 @@ a.btn.disabled, fieldset[disabled] a.btn {
   margin-top: 5px;
 }
 
+.btn__abs {
+  margin-top: 27px;
+  position: absolute;
+  top: -50%;
+}
+
 input[type=submit].btn-block,
 input[type=reset].btn-block,
 input[type=button].btn-block {
@@ -8656,6 +8662,39 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
+/* joinBlock                                                                  */
+/* path: dsf-common-ui/src/scss/modules/_joinBlock.scss                       */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.unityBlock__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.unityBlock__headerItem {
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+.unityBlock__headerItem:last-child {
+  justify-content: flex-end;
+}
+.unityBlock__headerTitle {
+  color: #333333;
+}
+.unityBlock__header .svg--icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 5px;
+}
+.unityBlock__header svg {
+  height: 24px;
+  width: 24px;
+}
+
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
 /* COMMENT BLOCK                                                              */
 /* path: dsf-common-ui/src/scss/modules/_commentBlock.scss                    */
 /*                                                                            */
@@ -9837,6 +9876,18 @@ tbody.collapse.in {
 .overflow-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.p-sticky {
+  position: sticky;
 }
 
 .text-left {

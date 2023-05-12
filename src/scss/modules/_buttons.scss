@@ -327,6 +327,11 @@ a.btn {
   margin-top: 5px;
 }
 
+.btn__abs{
+  margin-top: #{calc(_brand-sizes(btn_borderWidth) + _lineHeight(btn))}px;
+  position: absolute;
+  top: -50%;
+}
 // Specificity overrides
 input[type="submit"],
 input[type="reset"],
