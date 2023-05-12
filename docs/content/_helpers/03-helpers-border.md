@@ -1,22 +1,22 @@
 ---
-Title: Бордеры (border)
-menutitle: Бордеры (border)
+Title: Граница контейнера (border)
+menutitle: Граница (border)
 category: helpers
 anchor: helpers-border
-order: 2
+order: 4
 ---
 
-#### Расположение бордера
-Классы `border-top`, `border-bottom`, `border-left`, `border-right` добавляют черту  толщиной в 1px сверху, снизу, слева или справа блока. 
+#### Расположение границы
+Классы `border-top`, `border-bottom`, `border-left`, `border-right` добавляют границу-черту толщиной в 1px сверху, снизу, слева или справа блока. 
 
-Классы `border-top__dotted`, `border-bottom__dotted`, `border-left__dotted`, `border-right__dotted` модифициурет линию в точки. 
+Классы `border-top__dotted`, `border-bottom__dotted`, `border-left__dotted`, `border-right__dotted` модифициурет границу-линию в границу-точку. 
 
-`border` - добавляет обрамление чертой в 1px всего блока. `border__dotted` - модифициурет линию в точки
+`border` - добавляет границу-черту в 1px вокруг контейнера(блока). `border__dotted` - модифициурет границу-линию в границу-точку.
 
-#### Цвет бордера
-Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-grey`, `border-grey2`,`border-light-grey2`, `border-white`, `border-light-blue3`, `border-vibrant-blue` добавляют соответсвующего цвета. 
-`border-clear` - класс делает прозрачным цвет бордера
-Классы `border__none`, `border-top__none`, `border-bottom__none`, `border-left__none`, `border-right__none` - классы отключают бордер
+#### Цвет границы
+Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-grey`, `border-grey2`,`border-light-grey2`, `border-white`, `border-light-blue3`, `border-vibrant-blue` добавляют соответсвующего цвета для границ. 
+`border-clear` - класс делает прозрачным цвет границы
+Классы `border__none`, `border-top__none`, `border-bottom__none`, `border-left__none`, `border-right__none` - классы отключают границу в с соответствующей стороны контейнера или со всех сторон.
 
 {% highlight html %}
   <div class="border-top border-default">border-top border-default</div>

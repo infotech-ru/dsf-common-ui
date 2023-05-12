@@ -3,7 +3,7 @@ Title: Меню для кнопок (actionMenu с dropdown)
 menutitle: Меню для кнопок (actionMenu с dropdown)
 category: components
 anchor: components-menu
-order: 6
+order: 7
 ---
 
 ### Инициализация

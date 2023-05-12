@@ -8666,29 +8666,29 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 /* path: dsf-common-ui/src/scss/modules/_joinBlock.scss                       */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.unityBlock__header {
+.unityBlock_header {
   align-items: center;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.unityBlock__headerItem {
+.unityBlock_headerItem {
   align-items: center;
   justify-content: flex-start;
   display: flex;
 }
-.unityBlock__headerItem:last-child {
+.unityBlock_headerItem:last-child {
   justify-content: flex-end;
 }
-.unityBlock__headerTitle {
+.unityBlock_headerTitle {
   color: #333333;
 }
-.unityBlock__header .svg--icon {
+.unityBlock_header .svg--icon {
   height: 24px;
   width: 24px;
   margin-right: 5px;
 }
-.unityBlock__header svg {
+.unityBlock_header svg {
   height: 24px;
   width: 24px;
 }
@@ -9582,6 +9582,29 @@ tbody.collapse.in {
   --favorite-stroke_blue-active: #ffffff;
 }
 
+.hoverTarget_parent .hoverTarget_item__block,
+.hoverTarget_parent .hoverTarget_item__inline-block,
+.hoverTarget_parent .hoverTarget_item__flex,
+.hoverTarget_parent .hoverTarget_item__grid,
+.hoverTarget_parent .hoverTarget_item__inline-flex {
+  display: none;
+}
+.hoverTarget_parent:hover .hoverTarget_item__block {
+  display: block;
+}
+.hoverTarget_parent:hover .hoverTarget_item__inline-block {
+  display: inline-block;
+}
+.hoverTarget_parent:hover .hoverTarget_item__flex {
+  display: flex;
+}
+.hoverTarget_parent:hover .hoverTarget_item__inline-flex {
+  display: inline-flex;
+}
+.hoverTarget_parent:hover .hoverTarget_item__grid {
+  display: grid;
+}
+
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* HELPER TOOLS                                                               */
@@ -9769,6 +9792,18 @@ tbody.collapse.in {
   margin-left: auto;
 }
 
+.margin-0 {
+  margin: 0rem;
+}
+
+.margin-5 {
+  margin: 0.3125rem;
+}
+
+.margin-10 {
+  margin: 0.625rem;
+}
+
 .pt-0 {
   padding-top: 0rem;
 }
@@ -9825,28 +9860,16 @@ tbody.collapse.in {
   padding-left: 0.625rem;
 }
 
-.maring-0 {
-  margin: 0;
-}
-
-.maring-5 {
-  margin: 5px;
-}
-
-.maring-10 {
-  margin: 10px;
-}
-
 .padding-0 {
-  padding: 0;
+  padding: 0rem;
 }
 
 .padding-5 {
-  padding: 5px;
+  padding: 0.3125rem;
 }
 
 .padding-10 {
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .list-unstyled {
@@ -10078,6 +10101,10 @@ tbody.collapse.in {
 
 .minw-100p {
   min-width: 100%;
+}
+
+.maxw-100p {
+  max-width: 100%;
 }
 
 .border {

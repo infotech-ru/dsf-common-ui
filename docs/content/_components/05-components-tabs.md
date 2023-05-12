@@ -3,7 +3,7 @@ Title: Переключатели вкладок / страниц (tabs)
 menutitle: Переключатели вкладок / страниц (tabs)
 category: components
 anchor: components-tabs
-order: 4
+order: 5
 ---
 
 ### Табы

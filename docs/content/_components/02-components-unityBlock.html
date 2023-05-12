@@ -1,0 +1,62 @@
+---
+Title: Основной блок
+menutitle: Основной блок
+category: components
+anchor: components-unityBlock
+order: 2
+---
+
+Основная единица объединения информации - контейнер `unityBlock`
+Имеет шапку `unityBlock_header` и unityBlock_body
+Шапка состоит из контейненров `unityBlock_headerItem`, которые позиционируются в разные строны.
+В шапке может быть иконка, заголовок с классами `h4 unityBlock_headerTitle`, кнопки действия и статусы.
+Все остальная информация находится в unityBlock_body
+
+{% highlight html %}
+<div class="unityBlock">
+  <div class="unityBlock_header">
+      <div class="unityBlock_headerItem">
+          <span class="svg--icon"> 
+            <?= Icons::icon('bicolors-car_model__24vb') ?>
+          </span>
+          <h4 class="h4 unityBlock_headerTitle">Название блока</h4>
+      </div>
+      <div class="unityBlock_headerItem">
+        <button class="btn-icon">
+          <span class="svg--icon"> 
+            <?= Icons::icon('bicolors-edit') ?>
+          </span>
+        </button>
+      </div>
+  </div>
+  <div class="unityBlock_body">
+    ...
+  </div>
+</div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="unityBlock">
+    <div class="unityBlock_header">
+        <div class="unityBlock_headerItem">
+            <span class="svg--icon"> 
+              <svg width="24" height="24">
+                <use xlink:href="dist/sprite.symbol.svg#bicolors-car_model__24vb"></use>
+              </svg>
+            </span>
+            <h4 class="h4 unityBlock_headerTitle">Название блока</h4>
+        </div>
+        <div class="unityBlock_headerItem">
+          <button class="btn-icon">
+            <span class="svg--icon"> 
+              <svg width="24" height="24">
+                <use xlink:href="dist/sprite.symbol.svg#bicolors-edit"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+    </div>
+    <div class="unityBlock_body">
+      ...
+    </div>
+  </div>
+</div>

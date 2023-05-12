@@ -1,12 +1,12 @@
 ---
-Title: Текстовые
+Title: Для изменения стилей текста
 menutitle: Текст
 category: helpers
 anchor: helpers-text
-order: 3
+order: 4
 ---
 
-#### Классы для работы с текстом
+#### Классы для работы с переносом или длиной текста
 
 `nowrap`
 `break-word`
@@ -24,6 +24,7 @@ order: 3
 `va-middle`
 `va-top`
 `va-bottom`
+
 #### Классы для изменения регистра текста.
 
 `text-lowercase`
@@ -31,6 +32,7 @@ order: 3
 `text-capitalize`
 
 #### Классы для изменения толщины текста.
+
 `text-bold`
 
 #### Классы для изменения размера текста.

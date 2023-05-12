@@ -59,3 +59,30 @@ tbody.collapse.in { display: table-row-group; }
     #{--favorite-stroke_blue-active}: _colorTools(white_svg);
   }
 }
+
+.hoverTarget_parent{
+  .hoverTarget_item__block,
+  .hoverTarget_item__inline-block,
+  .hoverTarget_item__flex,
+  .hoverTarget_item__grid,
+  .hoverTarget_item__inline-flex{
+    display: none;
+   }
+  &:hover{
+    .hoverTarget_item__block{
+      display: block;
+    }
+    .hoverTarget_item__inline-block{
+      display: inline-block;
+    }
+    .hoverTarget_item__flex{
+      display: flex;
+    }
+    .hoverTarget_item__inline-flex{
+      display: inline-flex;
+    }
+    .hoverTarget_item__grid{
+      display: grid;
+    }
+  }
+}

@@ -88,6 +88,13 @@ $marginLeftSizes: 0, 5, 10;
   margin-left: auto;
 }
 
+$marginSizes: 0, 5, 10;
+@each $margin in $marginSizes {
+  .margin-#{$margin} {
+      margin: rem($margin);
+  }
+}
+
 $paddingTopSizes: 0, 5, 10, 20;
 @each $paddingTop in $paddingTopSizes {
   .pt-#{$paddingTop} {
@@ -115,24 +122,14 @@ $paddingLeftSizes: 0, 5, 10;
     padding-left: rem($paddingLeft);
   }
 }
-.maring-0{
-  margin: 0;
+
+$paddingSizes: 0, 5, 10;
+@each $padding in $paddingSizes {
+  .padding-#{$padding} {
+    padding: rem($padding);
+  }
 }
-.maring-5{
-  margin: 5px;
-}
-.maring-10{
-  margin: 10px;
-}
-.padding-0{
-  padding: 0;
-}
-.padding-5{
-  padding: 5px;
-}
-.padding-10{
-  padding: 10px;
-}
+
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -214,6 +211,7 @@ $paddingLeftSizes: 0, 5, 10;
 .w-auto                { width: auto; }
 .w-100p                { width: 100%; }
 .minw-100p             { min-width: 100%; }
+.maxw-100p             { max-width: 100%; }
 
 .border{
   border: 1px solid _brand-palette(border);
