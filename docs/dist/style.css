@@ -6889,9 +6889,9 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn__abs {
-  margin-top: 27px;
+  margin-top: -13.5px;
   position: absolute;
-  top: -50%;
+  top: 50%;
 }
 
 input[type=submit].btn-block,
@@ -10074,6 +10074,10 @@ tbody.collapse.in {
 
 .w-100p {
   width: 100%;
+}
+
+.minw-100p {
+  min-width: 100%;
 }
 
 .border {

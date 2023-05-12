@@ -213,6 +213,7 @@ $paddingLeftSizes: 0, 5, 10;
 
 .w-auto                { width: auto; }
 .w-100p                { width: 100%; }
+.minw-100p             { min-width: 100%; }
 
 .border{
   border: 1px solid _brand-palette(border);
