@@ -1,0 +1,327 @@
+@use "sass:math";
+.carousel {
+  position: relative;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  > .item {
+    position: relative;
+    display: none;
+    @include transition(.6s ease-in-out left);
+
+    // Account for jankitude on images
+    > img,
+    > a > img {
+      @include img-responsive;
+      line-height: 1;
+    }
+
+    // WebKit CSS3 transforms for supported devices
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      @include transition-transform(0.6s ease-in-out);
+      @include backface-visibility(hidden);
+      @include perspective(1000px);
+
+      &.next,
+      &.active.right {
+        @include translate3d(100%, 0, 0);
+        left: 0;
+      }
+      &.prev,
+      &.active.left {
+        @include translate3d(-100%, 0, 0);
+        left: 0;
+      }
+      &.next.left,
+      &.prev.right,
+      &.active {
+        @include translate3d(0, 0, 0);
+        left: 0;
+      }
+    }
+  }
+
+  > .active,
+  > .next,
+  > .prev {
+    display: block;
+  }
+
+  > .active {
+    left: 0;
+  }
+
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .next {
+    left: 100%;
+  }
+  > .prev {
+    left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    left: 0;
+  }
+
+  > .active.left {
+    left: -100%;
+  }
+  > .active.right {
+    left: 100%;
+  }
+
+}
+
+// Left/right controls for nav
+// ---------------------------
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $carousel-control-width;
+  font-size: $carousel-control-font-size;
+  color: $carousel-control-color;
+  text-align: center;
+  text-shadow: $carousel-text-shadow;
+  background-color: rgba(0, 0, 0, 0); // Fix IE9 click-thru bug
+  @include opacity($carousel-control-opacity);
+  // We can't have this transition here because WebKit cancels the carousel
+  // animation if you trip this while in the middle of another animation.
+
+  &.left {
+    @include gradient-horizontal($start-color: rgba(0, 0, 0, .5), $end-color: rgba(0, 0, 0, .0001));
+    .carousel__theme &{
+      padding-left: 10px;
+      justify-content: flex-start;
+    }
+  }
+  &.right {
+    right: 0;
+    left: auto;
+    @include gradient-horizontal($start-color: rgba(0, 0, 0, .0001), $end-color: rgba(0, 0, 0, .5));
+    .carousel__theme &{
+      padding-right: 10px;
+      justify-content: flex-end;
+    }
+  }
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    color: $carousel-control-color;
+    text-decoration: none;
+    outline: 0;
+    @include opacity(.9);
+  }
+
+  // Toggles
+  .icon-prev,
+  .icon-next,
+  .glyphicon-chevron-left,
+  .glyphicon-chevron-right {
+    display: inline-block;
+    position: absolute;
+    margin-top: -10px;
+    top: 50%;
+    z-index: 5;
+
+    font-size: rem(20);
+    height: rem(20);
+    width: rem(20);
+  }
+  .icon-prev,
+  .glyphicon-chevron-left {
+    left: 50%;
+    margin-left: -10px;
+  }
+  .icon-next,
+  .glyphicon-chevron-right {
+    right: 50%;
+    margin-right: -10px;
+  }
+  .icon-prev,
+  .icon-next {
+    width: 20px;
+    height: 20px;
+    font-family: serif;
+    line-height: 1;
+  }
+
+  .icon-prev {
+    &:before {
+      content: "\2039";// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+    }
+  }
+  .icon-next {
+    &:before {
+      content: "\203a";// SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
+    }
+  }
+  .carousel__theme &{
+    align-items: center;
+    background-image: none;
+    background-color: _brand-colors(_grey4);
+    display: flex;
+    text-align: left;
+    width: 66px;
+  }
+  .svg--icon{
+    background-color: transparentize(#fff, 0.3);
+    height: 36px;
+    width: 36px;
+    svg{ 
+      height: 36px;
+      width: 36px;
+    }
+  }
+}
+
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: -30%;
+  text-align: center;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0); // IE9
+
+    border: 1px solid $carousel-indicator-border-color;
+    border-radius: 10px;
+  }
+
+  .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: $carousel-indicator-active-bg;
+  }
+  &-image{
+    bottom: 0;
+    left: 0;
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: _zindex(carouselIndicatorsImage);
+    margin-left: rem(20);
+    li{
+      border: none;
+      cursor: pointer;
+      // border-radius: 10px;
+      display: inline-block;
+      // text-indent: -999px;
+      margin: 0px;
+      position: relative;
+      width: auto;
+      height: auto;
+      .carousel-indicators-image-inner{
+        display: block;
+        height: 70px;
+        width: 95px;
+        overflow: hidden;
+      }
+      &:after{
+        background-color: $medium-grey;
+        content: '';
+        display: block;
+        height: 6px;
+        margin-top: 6px;
+        width: 100%;
+      }
+    }
+    .active {
+      background-color: transparent;
+      margin: 0;
+      height: auto;
+      width: auto;
+      &:after{
+        background-color: $color-success2;
+      }
+    }
+  }
+}
+
+// Optional captions
+// -----------------------------
+// Hidden by default for smaller viewports
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $carousel-caption-color;
+  text-align: center;
+  text-shadow: $carousel-text-shadow;
+
+  & .btn {
+    text-shadow: none; // No shadow for button elements in carousel-caption
+  }
+}
+
+
+// Scale up controls for tablets and up
+@media screen and (min-width: $screen-sm-min) {
+
+  // Scale up the controls a smidge
+  .carousel-control {
+    .glyphicon-chevron-left,
+    .glyphicon-chevron-right,
+    .icon-prev,
+    .icon-next {
+      width: ($carousel-control-font-size * 1.5);
+      height: ($carousel-control-font-size * 1.5);
+      margin-top: math.div($carousel-control-font-size, -2);
+      font-size: ($carousel-control-font-size * 1.5);
+    }
+    .glyphicon-chevron-left,
+    .icon-prev {
+      margin-left: math.div($carousel-control-font-size, -2);
+    }
+    .glyphicon-chevron-right,
+    .icon-next {
+      margin-right: math.div($carousel-control-font-size, -2);
+    }
+  }
+
+  // Show and left align the captions
+  .carousel-caption {
+    right: 20%;
+    left: 20%;
+    padding-bottom: 30px;
+  }
+
+  // Move up the indicators
+  .carousel-indicators {
+    bottom: 20px;
+  }
+}
+
+
