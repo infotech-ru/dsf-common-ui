@@ -1,3 +1,10 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* CAROUSEL                                                                   */
+/* path: dsf-common-ui/src/scss/modules/_carousel.scss                        */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
 @use "sass:math";
 .carousel {
   position: relative;
@@ -246,7 +253,8 @@
         overflow: hidden;
       }
       &:after{
-        background-color: $medium-grey;
+        // background-color: $medium-grey;
+        background-color: _brand-colors(_grey);
         content: '';
         display: block;
         height: 6px;
@@ -260,7 +268,7 @@
       height: auto;
       width: auto;
       &:after{
-        background-color: $color-success2;
+        background-color: _brand-colors(_green);
       }
     }
   }
