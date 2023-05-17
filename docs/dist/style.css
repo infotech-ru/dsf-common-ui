@@ -9138,6 +9138,8 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --chart-green: #69C26A;
   --chart-light-green: #DAF0DA;
   --chart-light-blue: #4A8DC6;
+  --chart-light-blue3: #B6D1E8;
+  --chart-vibrant-blue: #0094FF;
   --chart-blue: #0094FF;
   --chart-light-yellow2: #FFFBA0;
   --chart-yellow2: #FFF741;
@@ -10270,6 +10272,10 @@ tbody.collapse.in {
 
 .fz12 {
   font-size: 0.75rem;
+}
+
+.fz20 {
+  font-size: 1.25rem;
 }
 
 .lh12 {
