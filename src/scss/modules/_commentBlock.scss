@@ -20,9 +20,11 @@
     }
     &--scroll {
         height: 330px;
-        margin-right: -15px;
+        margin-right: -10px; // появлялся скрол, когда ничего нет
         overflow-y: auto;
         overflow-x: hidden;
+        scrollbar-width: thin;
+        @extend %scrollVar;
     }
     &--event {
         margin-bottom: 18px;

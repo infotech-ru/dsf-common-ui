@@ -34,22 +34,22 @@
 *────▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀────
 */
 /* ========================================================================== */
-.headerMenu .dropdown-submenu .dropdown-menu {
+.comment-block--scroll, .headerMenu .dropdown-submenu .dropdown-menu {
   scrollbar-width: thin;
 }
-.headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar {
+.comment-block--scroll::-webkit-scrollbar, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar {
   height: 6px;
   width: 6px;
   background-color: #777777;
 }
-.headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-button {
+.comment-block--scroll::-webkit-scrollbar-button, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-button {
   width: 6px;
   height: 6px;
 }
-.headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-track {
+.comment-block--scroll::-webkit-scrollbar-track, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-track {
   background-color: #F5F5F5;
 }
-.headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-thumb {
+.comment-block--scroll::-webkit-scrollbar-thumb, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-thumb {
   background-color: #777777;
 }
 
@@ -5975,7 +5975,7 @@ h6, .h6 {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* ICONS                                                                      */
-/* path: dsf-common-ui/src/scss/modules/_icons .scss                          */
+/* path: dsf-common-ui/src/scss/modules/_icons.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .svg--icon {
@@ -5988,6 +5988,12 @@ h6, .h6 {
   display: block;
   height: 16px;
   width: auto;
+}
+.svg--icon__21 {
+  height: 21px;
+}
+.svg--icon__21 svg {
+  height: 21px;
 }
 
 .svg-icon-viewbox24 {
@@ -8713,9 +8719,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .comment-block--scroll {
   height: 330px;
-  margin-right: -15px;
+  margin-right: -10px;
   overflow-y: auto;
   overflow-x: hidden;
+  scrollbar-width: thin;
 }
 .comment-block--event {
   margin-bottom: 18px;
@@ -9139,7 +9146,6 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --chart-light-green: #DAF0DA;
   --chart-light-blue: #4A8DC6;
   --chart-light-blue3: #B6D1E8;
-  --chart-vibrant-blue: #0094FF;
   --chart-blue: #0094FF;
   --chart-light-yellow2: #FFFBA0;
   --chart-yellow2: #FFF741;
@@ -9767,6 +9773,98 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
     bottom: 20px;
   }
 }
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* MODAL-SIDEBAR                                                              */
+/* path: dsf-common-ui/src/scss/modules/_sidebarModal.scss                    */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.modal-sidebar {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: -17px;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal-open .modal-sidebar {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-sidebar-content {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: none;
+  border-radius: 0px;
+  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.06);
+  outline: 0;
+  position: relative;
+  width: 100%;
+}
+.modal-sidebar-dialog {
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  position: relative;
+  height: 100vh;
+  margin: 0px;
+  margin-right: -100%;
+  width: auto;
+}
+.modal-open .modal-sidebar-dialog {
+  margin-right: 0;
+  transition: margin-right 1.15s linear;
+}
+@media (min-width: 768px) {
+  .modal-sidebar-dialog {
+    width: 500px;
+  }
+}
+.modal-sidebar-body {
+  position: relative;
+  padding: 0 16px;
+}
+.modal-sidebar-header {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding: 16px;
+  position: relative;
+}
+.modal-sidebar-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 16px;
+  text-align: right;
+}
+.modal-sidebar-close {
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+  height: 15px;
+  padding: 0;
+  margin-top: -7.5px;
+  opacity: 1;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 15px;
+  --svg-close-fill: #333;
+  --svg-close-stroke: #333;
+}
+.modal-sidebar-close svg {
+  height: 15px;
+  width: 15px;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE MODULES STYLES                                                     */
 /*                                                                            */
