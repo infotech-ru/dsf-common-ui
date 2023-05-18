@@ -6657,6 +6657,8 @@ h6, .h6 {
 .btn-default__outline:hover .svg--icon svg, .btn-default__outline:focus .svg--icon svg, .btn-default__outline:active .svg--icon svg, .btn-default__outline.active .svg--icon svg, .btn-default__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 .btn-default__outline .svg--icon svg {
@@ -6680,6 +6682,8 @@ h6, .h6 {
 .btn-primary__outline:hover .svg--icon svg, .btn-primary__outline:focus .svg--icon svg, .btn-primary__outline:active .svg--icon svg, .btn-primary__outline.active .svg--icon svg, .btn-primary__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 .btn-primary__outline .svg--icon svg {
@@ -6703,6 +6707,8 @@ h6, .h6 {
 .btn-success__outline:hover .svg--icon svg, .btn-success__outline:focus .svg--icon svg, .btn-success__outline:active .svg--icon svg, .btn-success__outline.active .svg--icon svg, .btn-success__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 .btn-success__outline .svg--icon svg {
@@ -6726,6 +6732,8 @@ h6, .h6 {
 .btn-danger__outline:hover .svg--icon svg, .btn-danger__outline:focus .svg--icon svg, .btn-danger__outline:active .svg--icon svg, .btn-danger__outline.active .svg--icon svg, .btn-danger__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 .btn-danger__outline .svg--icon svg {
@@ -6749,6 +6757,8 @@ h6, .h6 {
 .btn-warning__outline:hover .svg--icon svg, .btn-warning__outline:focus .svg--icon svg, .btn-warning__outline:active .svg--icon svg, .btn-warning__outline.active .svg--icon svg, .btn-warning__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 .btn-warning__outline .svg--icon svg {
@@ -6772,6 +6782,8 @@ h6, .h6 {
 .btn-grey__outline:hover .svg--icon svg, .btn-grey__outline:focus .svg--icon svg, .btn-grey__outline:active .svg--icon svg, .btn-grey__outline.active .svg--icon svg, .btn-grey__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
 .btn-grey__outline .svg--icon svg {
@@ -8799,16 +8811,16 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   border-color: #dddddd;
   border-style: solid;
   border-width: 1px;
-  border-radius: 0.25rem;
+  border-radius: 0rem;
 }
 .comment-block .input-group textarea.form-control {
   background-color: transparent;
   border: none;
   border-color: transparent;
   box-shadow: none;
-  height: 36px;
+  height: 30px;
   line-height: 16px;
-  padding: 11px 0;
+  padding: 8px 0;
   resize: none;
   overflow: hidden;
 }
@@ -8840,10 +8852,19 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   opacity: 1;
 }
 .comment-block .input-group textarea.form-control + .input-group-btn .btn {
-  height: 28px;
-  line-height: 28px;
+  display: flex;
+  height: 30px;
+  line-height: 30px;
   padding: 0;
   margin-right: 10px;
+}
+.comment-block .input-group textarea.form-control + .input-group-btn .btn .svg-icon {
+  align-items: center;
+  display: flex;
+}
+.comment-block .input-group textarea.form-control + .input-group-btn .btn .bicolors-telegram {
+  height: 17px;
+  width: 17px;
 }
 .comment-block .input-group textarea.form-control + .input-group-btn .btn:focus, .comment-block .input-group textarea.form-control + .input-group-btn .btn:hover {
   box-shadow: none;
@@ -9834,6 +9855,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   justify-content: flex-start;
   padding: 16px;
   position: relative;
+}
+.modal-sidebar-headerTitle {
+  margin: 0;
 }
 .modal-sidebar-footer {
   display: flex;

@@ -103,15 +103,15 @@
         border-color: _brand-colors(_grey2);
         border-style: solid;
         border-width: 1px;
-        border-radius: rem(4);
+        border-radius: rem(0);
         textarea.form-control {
             background-color: transparent;
             border: none;
             border-color: transparent;
             box-shadow: none;
-            height: 36px;
+            height: 30px;
             line-height: 16px;
-            padding: 11px 0;
+            padding: 8px 0;
             resize: none;
             overflow: hidden;
             &:first-child {
@@ -119,10 +119,19 @@
             }
             @include placeholder2(_brand-colors(_dark-grey), 400, 12);
             + .input-group-btn .btn {
-                height: 28px;
-                line-height: 28px;
+                display: flex;
+                height: 30px;
+                line-height: 30px;
                 padding: 0;
                 margin-right: 10px;
+                .svg-icon{
+                    align-items: center;
+                    display: flex;
+                }
+                .bicolors-telegram{
+                    height: 17px;
+                    width: 17px;
+                }
                 &:focus, &:hover {
                     box-shadow: none;
                     outline: none;

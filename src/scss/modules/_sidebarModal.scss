@@ -58,6 +58,9 @@
     padding: 16px;
     // background-color: rgba(0, 0, 0, 0.03);
     position: relative;
+    &Title{
+      margin: 0;
+    }
   }
   &-footer {
     display: flex;
