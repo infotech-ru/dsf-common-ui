@@ -48,11 +48,11 @@ export function CopyToClipboard() {
   for (let i = 0; i < allCopyToClipboard.length; i++){
     let itemCopyToClipboard = allCopyToClipboard[i];
     itemCopyToClipboard.addEventListener('click', function(e) {
+      let clipText = itemCopyToClipboard.getAttribute('data-clipboard-text');
       if (!navigator.clipboard) {
-        fallbackCopyTextToClipboard(text);
+        fallbackCopyTextToClipboard(clipText);
         return;
       }
-      let clipText = itemCopyToClipboard.getAttribute('data-clipboard-text');
       navigator.clipboard.writeText(clipText).then(
         function(){
           console.log('Async: Copying to clipboard was successful!');

@@ -51,12 +51,13 @@ var DSFUI = (function (exports) {
     var _loop = function _loop(i) {
       var itemCopyToClipboard = allCopyToClipboard[i];
       itemCopyToClipboard.addEventListener('click', function (e) {
+        var clipText = itemCopyToClipboard.getAttribute('data-clipboard-text');
+
         if (!navigator.clipboard) {
-          fallbackCopyTextToClipboard(text);
+          fallbackCopyTextToClipboard(clipText);
           return;
         }
 
-        var clipText = itemCopyToClipboard.getAttribute('data-clipboard-text');
         navigator.clipboard.writeText(clipText).then(function () {
           console.log('Async: Copying to clipboard was successful!');
           console.log(clipText);

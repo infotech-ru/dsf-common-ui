@@ -9812,7 +9812,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
-.modal-open .modal-sidebar {
+.modal-sidebar-open .modal-sidebar, .modal-open .modal-sidebar {
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -9836,7 +9836,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   margin-right: -100%;
   width: auto;
 }
-.modal-open .modal-sidebar-dialog {
+.modal-sidebar-open .modal-sidebar-dialog, .modal-open .modal-sidebar-dialog {
   margin-right: 0;
   transition: margin-right 1.15s linear;
 }
@@ -9887,6 +9887,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .modal-sidebar-close svg {
   height: 15px;
   width: 15px;
+}
+
+.modal-sidebar-open {
+  overflow: hidden;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

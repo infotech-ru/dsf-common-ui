@@ -16,6 +16,7 @@
   z-index: 1050;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+  .modal-sidebar-open &,
   .modal-open & {
     overflow-x: hidden;
     overflow-y: auto;
@@ -39,6 +40,7 @@
     margin: 0px;
     margin-right: -100%;
     width: auto;
+    .modal-sidebar-open &,
     .modal-open & {
       margin-right: 0;
       transition: margin-right 1.15s linear;
@@ -94,4 +96,8 @@
       width: 15px;
     }
   }
+}
+
+.modal-sidebar-open {
+  overflow: hidden;
 }
