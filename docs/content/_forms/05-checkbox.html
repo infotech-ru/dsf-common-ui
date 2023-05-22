@@ -1,0 +1,28 @@
+---
+Title: Чекбокс
+menutitle: Чекбокс
+category: forms
+anchor: checkbox-item
+order: 5
+---
+
+Для стилизации checkbox используется следующая структура.
+
+{% highlight html %}
+  <div class="checkbox-item">
+    <input type="checkbox" class="input-sm" id="testId">
+    <label for="testId" class="checkbox">Заголовок чекбокса</label>
+  </div>
+  
+  или
+  
+  use \yii\bootstrap\ActiveForm;
+  <?= $form->field($model, 'onlyVehicles', ['options' => ['class' => 'checkbox-item'], 'template' => "{input}{beginLabel}<span>{labelTitle}</span>{endLabel}{error}"])->checkbox(['class' => 'input-sm'], false)->label(null, ['class' => 'checkbox']); ?>
+  
+{% endhighlight %}
+<div class="bs-docs-example mb-10">
+    <div class="checkbox-item">
+      <input type="checkbox" class="input-sm" id="testId">
+      <label for="testId" class="checkbox">Заголовок чекбокса</label>
+    </div>
+</div>

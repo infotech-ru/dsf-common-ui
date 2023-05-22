@@ -471,6 +471,24 @@ $brand-palette: (
   footer_bgc:                             map-get($brand-colors, _white),
 
   chartBlock_border:                      map-get($brand-colors, _grey2),
+
+  checkboxItem_color:                     map-get($brand-colors, _dark-grey),
+  checkboxItemDisabled_color:             map-get($brand-colors, _grey3),
+  checkboxItem_bgc:                       map-get($brand-colors, _white),
+  checkboxItemActive_bgc:                 map-get($brand-colors, _light-blue),
+  checkboxItemHover_bgc:                  map-get($brand-colors, _light-blue),
+  checkboxItem_border:                    map-get($brand-colors, _grey),
+  checkboxItemActive_border:              map-get($brand-colors, _blue),
+  checkboxItemHover_border:               map-get($brand-colors, _blue),
+
+  // checkboxItemBig--color:                 map-get($brand-colors, _dark-grey),
+  // checkboxItemBig--bgColor:               map-get($brand-colors, _transparent),
+  // checkboxItemBig--bgColor_active:        map-get($brand-colors, _transparent),
+  // checkboxItemBig--bgColor_hover:         map-get($brand-colors, _transparent),
+  // checkboxItemBig--borderColor:           map-get($brand-colors, _grey),
+  // checkboxItemBig--borderColor_active:    map-get($brand-colors, _grey),
+  // checkboxItemBig--borderColor_hover:     map-get($brand-colors, _grey),
+
   dropdown_bgc:                           map-get($brand-colors, _white),
   dropdown_color:                         map-get($brand-colors, _dark-grey),
   dropdownHeader_color:                   map-get($brand-colors, _light-grey),
