@@ -6252,6 +6252,82 @@ h6, .h6 {
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
+/* CHECKBOX & RADIO                                                           */
+/* path: dsf-common-ui/src/scss/modules/_checkbox.scss                        */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.checkbox-item {
+  line-height: 1.5rem;
+  position: relative;
+}
+.checkbox-item input[type=checkbox] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.checkbox-item input[type=checkbox]:checked + label.checkbox:before {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIzLjMzIDE4LjY5Ij48cGF0aCBkPSJNMjMuMTgsMy4zN2EuNS41LDAsMCwxLDAsLjdMOC43MSwxOC41NWEuNS41LDAsMCwxLS43MSwwTDQuNzYsMTUuM2wtLjcxLS43MUwuMTUsMTAuNjlhLjUuNSwwLDAsMSwwLS43MUwzLjM5LDYuNzNhLjUuNSwwLDAsMSwuNzEsMEw4LDEwLjY0YS41LjUsMCwwLDAsLjcxLDBMMTkuMjEuMTVhLjUxLjUxLDAsMCwxLC43MSwwWiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
+  background-color: #4A8DC6;
+  border-color: #1E6393;
+}
+.checkbox-item input[type=checkbox] + label.checkbox:before {
+  background-image: none;
+  border-color: #BABABA;
+}
+.checkbox-item input[type=checkbox]:checked + label.checkbox:hover:before {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIzLjMzIDE4LjY5Ij48cGF0aCBkPSJNMjMuMTgsMy4zN2EuNS41LDAsMCwxLDAsLjdMOC43MSwxOC41NWEuNS41LDAsMCwxLS43MSwwTDQuNzYsMTUuM2wtLjcxLS43MUwuMTUsMTAuNjlhLjUuNSwwLDAsMSwwLS43MUwzLjM5LDYuNzNhLjUuNSwwLDAsMSwuNzEsMEw4LDEwLjY0YS41LjUsMCwwLDAsLjcxLDBMMTkuMjEuMTVhLjUxLjUxLDAsMCwxLC43MSwwWiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
+  background-color: #4A8DC6;
+  border-color: #1E6393;
+}
+.checkbox-item input[type=checkbox][disabled] + label.checkbox:before {
+  cursor: disable;
+}
+.checkbox-item input[type=checkbox][disabled] + label.checkbox {
+  color: #cccccc;
+  cursor: disable;
+}
+.checkbox-item label.checkbox {
+  cursor: pointer;
+  color: #333333;
+  display: inline-block;
+  font-size: 0.75rem;
+  margin: 0;
+  padding-left: 1rem;
+  position: relative;
+  text-align: left;
+  line-height: 28px;
+  vertical-align: top;
+}
+.checkbox-item label.checkbox:hover:before {
+  border-color: #BABABA;
+}
+.checkbox-item label.checkbox:before {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 74% auto;
+  background-position: center center;
+  border: 1px solid #BABABA;
+  border-radius: 0px;
+  content: " ";
+  display: inline-block;
+  height: 0.75rem;
+  left: 0px;
+  margin-top: -0.375rem;
+  position: absolute;
+  top: 50%;
+  width: 0.75rem;
+}
+.checkbox-item label.checkbox span {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 0.75rem;
+  vertical-align: middle;
+}
+.checkbox-item label.checkbox fieldset[disabled] {
+  cursor: disable;
+}
+
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
 /* BUTTONS                                                                    */
 /* path: dsf-common-ui/src/scss/modules/_buttons.scss                         */
 /*                                                                            */
@@ -9136,7 +9212,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 11px;
 }
 .alert__attention {
-  background-image: url("/dist/sprite.symbol.svg#ownicons-circle-empty-info");
+  background-image: url("/dist/sprite.symbol.svg#bicolors-information");
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12.05.94A11.06,11.06,0,1,0,23.11,12,11.07,11.07,0,0,0,12.05.94m0,23.06a12,12,0,1,1,12-12,12,12,0,0,1-12,12' fill='var(--svg-icon-fill, %23D9534F)' stroke='none'/%3E%3Cpath d='M10.18,7.65A1.65,1.65,0,1,0,11.83,6a1.64,1.64,0,0,0-1.65,1.65M13,10.92l-2.7.85-.19.62,1.53.07-.66,6,2.77-.73,0-.52-1.2-.06Z' fill='var(--svg-icon-fill, %23D9534F)' stroke='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 20px;
@@ -9845,15 +9921,31 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
     width: 500px;
   }
 }
+@media (min-width: 768px) {
+  .modal-sidebar-dialog.modal-sidebar-sm {
+    width: 360px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-sidebar-dialog.modal-sidebar-lg {
+    width: 1100px;
+  }
+}
+.modal-sidebar-dialog.modal-sidebar-left {
+  float: left;
+}
 .modal-sidebar-body {
   position: relative;
-  padding: 0 16px;
+  padding: 0 1rem;
+}
+.modal-sidebar-body_inner {
+  margin: 0 -1rem;
 }
 .modal-sidebar-header {
   align-items: center;
   display: flex;
   justify-content: flex-start;
-  padding: 16px;
+  padding: 1rem;
   position: relative;
 }
 .modal-sidebar-headerTitle {
@@ -9862,7 +9954,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .modal-sidebar-footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 16px 16px;
+  padding: 0 1rem 1rem;
   text-align: right;
 }
 .modal-sidebar-close {
@@ -10682,25 +10774,25 @@ tbody.collapse.in {
 
 .svg-warning svg,
 .svg-warning.svg--icon svg {
-  --svg-icon-fill: #FFBD41;
-  --svg-icon-stroke: #FFBD41;
-  --svg-icon-fill_blue: #FFBD41;
-  --svg-icon-stroke_blue: #FFBD41;
+  --svg-icon-fill: #D59A00;
+  --svg-icon-stroke: #D59A00;
+  --svg-icon-fill_blue: #D59A00;
+  --svg-icon-stroke_blue: #D59A00;
 }
 
 .text-warning {
-  color: #FFBD41;
-  --text_color: #FFBD41;
+  color: #D59A00;
+  --text_color: #D59A00;
 }
 
 .bg-warning {
-  background-color: #FFBD41;
-  --bg_color: #FFBD41;
+  background-color: #D59A00;
+  --bg_color: #D59A00;
 }
 
 .border-warning {
-  border-color: #FFBD41;
-  --border_color: #FFBD41;
+  border-color: #D59A00;
+  --border_color: #D59A00;
 }
 
 .svg-info svg,
