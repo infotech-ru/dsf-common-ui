@@ -166,10 +166,10 @@ $colorTools: (
   danger_border:                          map-get($brand-colors, _red),
   danger_color:                           map-get($brand-colors, _red),
   danger_svg:                             map-get($brand-colors, _red),
-  warning_bg:                             map-get($brand-colors, _orange),
-  warning_border:                         map-get($brand-colors, _orange),
-  warning_color:                          map-get($brand-colors, _orange),
-  warning_svg:                            map-get($brand-colors, _orange),
+  warning_bg:                             map-get($brand-colors, _dark-orange),
+  warning_border:                         map-get($brand-colors, _dark-orange),
+  warning_color:                          map-get($brand-colors, _dark-orange),
+  warning_svg:                            map-get($brand-colors, _dark-orange),
   success_bg:                             map-get($brand-colors, _green),
   success_border:                         map-get($brand-colors, _green),
   success_color:                          map-get($brand-colors, _green),
@@ -222,6 +222,10 @@ $colorTools: (
   vibrant-blue_border:                    map-get($brand-colors, _vibrant-blue),
   vibrant-blue_color:                     map-get($brand-colors, _vibrant-blue),
   vibrant-blue_svg:                       map-get($brand-colors, _vibrant-blue),
+  light-yellow_bg:                        map-get($brand-colors, _light-yellow),
+  light-yellow_border:                    map-get($brand-colors, _light-yellow),
+  light-yellow_color:                     map-get($brand-colors, _light-yellow),
+  light-yellow_svg:                       map-get($brand-colors, _light-yellow),
 );
 
 @function _brand-btn($keys...) {

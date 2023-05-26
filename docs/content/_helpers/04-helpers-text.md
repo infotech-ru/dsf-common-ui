@@ -74,6 +74,7 @@ order: 4
   <div class="text-light-blue3">text-light-blue3</div>
   <div class="text-rose transformText__left">text-rose transformText__left</div>
   <div class="text-vibrant-blue">text-vibrant-blue</div>
+  <div class="text-light-yellow">text-light-yellow</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -94,4 +95,5 @@ order: 4
   <div class="text-light-blue3 mb-10">text-light-blue3</div>
   <div class="text-rose transformText__left mb-10">text-rose transformText__left</div>
   <div class="text-vibrant-blue mb-10">text-vibrant-blue</div>
+  <div class="text-light-yellow mb-10">text-light-yellow</div>
 </div>

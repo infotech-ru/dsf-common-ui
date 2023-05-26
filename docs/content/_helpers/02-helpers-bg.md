@@ -22,11 +22,12 @@ order: 2
   <div class="bg-light-grey2">bg-light-grey2</div>
   <div class="bg-orange">bg-orange</div>
   <div class="bg-dark-red">bg-dark-red</div>
-  <div class="bg-clear">bg-clear</div>
-  <div class="bg-white">bg-white</div>
+  <div class="bg-grey padding-5"><div class="bg-clear">bg-clear</div></div>
+  <div class="bg-grey padding-5"><div class="bg-white">bg-white</div></div>
   <div class="bg-light-blue3">bg-light-blue3</div>
   <div class="bg-rose">bg-rose</div>
   <div class="bg-vibrant-blue">bg-vibrant-blue</div>
+  <div class="bg-light-yellow">bg-light-yellow</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -42,9 +43,10 @@ order: 2
   <div class="bg-light-grey2 mb-10">bg-light-grey2</div>
   <div class="bg-orange mb-10">bg-orange</div>
   <div class="bg-dark-red mb-10">bg-dark-red</div>
-  <div class="bg-clear mb-10">bg-clear</div>
-  <div class="bg-white mb-10">bg-white</div>
+  <div class="bg-grey padding-5 mb-10"><div class="bg-clear">bg-clear</div></div>
+  <div class="bg-grey padding-5 mb-10"><div class="bg-white">bg-white</div></div>
   <div class="bg-light-blue3 mb-10">bg-light-blue3</div>
   <div class="bg-rose mb-10">bg-rose</div>
   <div class="bg-vibrant-blue mb-10">bg-vibrant-blue</div>
+  <div class="bg-light-yellow mb-10">bg-light-yellow</div>
 </div>

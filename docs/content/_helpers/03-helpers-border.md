@@ -36,6 +36,7 @@ order: 4
   <div class="border border-right__none border-grey">border border-right__none border-grey</div>
   <div class="border border-bottom__none border-rose">border border-bottom__none border-rose</div>
   <div class="border border-left__none border-vibrant-blue">border border-left__none border-vibrant-blue</div>
+  <div class="border border-light-yellow mb-10">border border-light-yellow</div>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="border-top border-default mb-10">border-top border-default</div>
@@ -55,4 +56,5 @@ order: 4
   <div class="border border-right__none border-grey mb-10">border border-right__none border-grey</div>
   <div class="border border-bottom__none border-rose mb-10">border border-bottom__none border-rose</div>
   <div class="border border-left__none border-vibrant-blue mb-10">border border-left__none border-vibrant-blue</div>
+  <div class="border border-light-yellow mb-10">border border-light-yellow</div>
 </div>
