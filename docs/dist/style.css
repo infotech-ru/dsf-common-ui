@@ -8805,6 +8805,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   background-color: rgba(74, 141, 198, 0.05);
   padding: 15px 15px 10px;
 }
+.comment-block--field--field-yellow {
+  background-color: #FFF6DF;
+  padding: 10px;
+}
 .comment-block--scroll {
   height: 330px;
   margin-right: -10px;
@@ -8990,7 +8994,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 23px;
 }
 
-.commentBlock__inputGroup {
+.commentBlock_inputGroup {
   align-items: center;
   background-color: #ffffff;
   border: 1px solid #BABABA;
@@ -9000,7 +9004,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   height: 1.75rem;
   padding-right: 7px;
 }
-.commentBlock__formControl {
+.commentBlock_formControl {
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -9008,42 +9012,62 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   color: #333333;
   flex-basis: 100%;
   font-size: 0.75rem;
-  line-height: 1.625rem;
+  line-height: 1.75rem;
   height: 1.75rem;
   padding: 0 7px;
   resize: none;
   overflow: hidden;
 }
-.commentBlock__formControl::-moz-placeholder {
+.commentBlock_formControl::-moz-placeholder {
   color: #333333;
   font-weight: 400;
   font-size: 0.75rem;
   opacity: 1;
 }
-.commentBlock__formControl:-moz-placeholder {
+.commentBlock_formControl:-moz-placeholder {
   color: #333333;
   font-size: 0.75rem;
   font-weight: 400;
   opacity: 1;
 }
-.commentBlock__formControl:-ms-input-placeholder {
+.commentBlock_formControl:-ms-input-placeholder {
   color: #333333;
   font-size: 0.75rem;
   font-weight: 400;
   opacity: 1;
 }
-.commentBlock__formControl::-webkit-input-placeholder {
+.commentBlock_formControl::-webkit-input-placeholder {
   color: #333333;
   font-size: 0.75rem;
   font-weight: 400;
   opacity: 1;
 }
-.commentBlock__formControl:hover, .commentBlock__formControl:focus, .commentBlock__formControl:active, .commentBlock__formControl:focus-visible {
+.commentBlock_inputGroup__whatsup .commentBlock_formControl::-moz-placeholder {
+  font-weight: 400;
+  font-size: 0.75rem;
+  opacity: 1;
+}
+.commentBlock_inputGroup__whatsup .commentBlock_formControl:-moz-placeholder {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.commentBlock_inputGroup__whatsup .commentBlock_formControl:-ms-input-placeholder {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.commentBlock_inputGroup__whatsup .commentBlock_formControl::-webkit-input-placeholder {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 1;
+}
+.commentBlock_formControl:hover, .commentBlock_formControl:focus, .commentBlock_formControl:active, .commentBlock_formControl:focus-visible {
   border: none;
   box-shadow: none;
   outline: none;
 }
-.commentBlock__btnSend {
+.commentBlock_btnSend {
   background-color: transparent;
   background-image: none;
   border: none;
@@ -9052,10 +9076,53 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   outline: none;
   width: 24px;
 }
-.commentBlock__btnSend:hover, .commentBlock__btnSend:focus, .commentBlock__btnSend:active {
+.commentBlock_btnSend:hover, .commentBlock_btnSend:focus, .commentBlock_btnSend:active {
   border: none;
   box-shadow: none;
   outline: none;
+}
+.commentBlock .user-event {
+  text-align: left;
+}
+.commentBlock .current-user-comment {
+  text-align: right;
+}
+.commentBlock_infoUser, .commentBlock_infoDate {
+  color: #333333;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  margin-right: 5px;
+}
+.commentBlock_comments {
+  color: #333333;
+  display: inline-flex;
+  font-size: 0.75rem;
+  flex-direction: column;
+  line-height: 0.875rem;
+  padding: 10px;
+  position: relative;
+  min-width: calc(55% - 11px);
+  max-width: 100%;
+  margin-top: 5px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.commentBlock_comments__lightGreen {
+  background-color: #DAF0DA;
+}
+.commentBlock_comments__lightBlue {
+  background-color: #E4EEF7;
+}
+.commentBlock_comments__shadow {
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+.user-event .commentBlock_comments {
+  border-radius: 0 10px 10px 10px;
+}
+.current-user-comment .commentBlock_comments {
+  border-radius: 0 10px 10px 10px;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */

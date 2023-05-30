@@ -512,6 +512,8 @@ $brand-palette: (
   menuDropdownActive_bgc:                 map-get($brand-colors, _light-blue2),
   menuDropdownHeader_color:               map-get($brand-colors, _grey),
 
+  commentBlockInfo_color:                 map-get($brand-colors, _dark-grey),
+  commentBlockComments_color:             map-get($brand-colors, _dark-grey),
   controlLabel_color:                     map-get($brand-colors, _grey),
   controlLabelActive_color:               map-get($brand-colors, _dark-grey),
   controlLabelActive_bgc:                 map-get($brand-colors, _white),
