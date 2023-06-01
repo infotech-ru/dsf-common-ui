@@ -10052,6 +10052,35 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   overflow: hidden;
 }
 
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* UI-DIALOG                                                                  */
+/* path: dsf-common-ui/src/scss/modules/_dialog.scss                          */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.ui-dialog {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: none;
+  border-radius: 0px;
+  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.06);
+  outline: 0;
+  z-index: 1500;
+}
+
+.ui-widget-header {
+  align-items: center;
+  display: flex;
+  line-height: normal;
+  justify-content: flex-start;
+  padding: 1rem;
+  position: relative;
+}
+
+.ui-draggable-handle {
+  cursor: move;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE MODULES STYLES                                                     */
 /*                                                                            */
