@@ -147,8 +147,11 @@ $paddingSizes: 0, 5, 10;
 }
 
 .nowrap                { white-space: nowrap; }
+.whitespace-normal     { white-space: normal; }
 .break-word            { word-break: break-word; }
 .overflow-ellipsis     { overflow: hidden; text-overflow: ellipsis; }
+.overflowX-auto        { overflow-x: auto;}
+.overflowY-auto        { overflow-y: auto;}
 
 .p-relative            { position: relative; }
 .p-absolute            { position: absolute; }
