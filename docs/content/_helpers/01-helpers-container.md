@@ -40,5 +40,17 @@ order: 1
 #### Ширина контейнера
 `w-auto` - устанавливает автоматическую ширину
 `w-100p` - устанавливает значение в 100% для ширины контейнера
+
 #### Поворот контейнера
 `rotate90`,`rotate180`, `rotate270` - устанавливает поворот
+
+#### оформление данных
+Установлено оформление для отдельных полей телефона, комментария
+{% highlight html %}
+  <div class="phoneField">+7(910)000-00-00</div>
+  <div class="commentField">комментарий</div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="phoneField mb-10">+7(910)000-00-00</div>
+  <div class="commentField">комментарий</div>
+</div>

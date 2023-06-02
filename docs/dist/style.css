@@ -10018,6 +10018,13 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .modal-sidebar-headerTitle {
   margin: 0;
 }
+.modal-sidebar-headerIcon {
+  height: 20px;
+  margin-right: 5px;
+}
+.modal-sidebar-headerIcon svg {
+  height: 20px;
+}
 .modal-sidebar-footer {
   display: flex;
   justify-content: space-between;
@@ -10598,6 +10605,10 @@ tbody.collapse.in {
 
 .fz12 {
   font-size: 0.75rem;
+}
+
+.fz13 {
+  font-size: 0.8125rem;
 }
 
 .fz20 {
@@ -11200,6 +11211,23 @@ tbody.collapse.in {
 .border-light-yellow {
   border-color: #FFF6DF;
   --border_color: #FFF6DF;
+}
+
+.phoneField {
+  background-color: #FFDF9A;
+  display: inline-flex;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 5px 7px;
+}
+
+.commentField {
+  border-radius: 0 10px 10px 10px;
+  background-color: #E4EEF7;
+  display: inline-flex;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 10px;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

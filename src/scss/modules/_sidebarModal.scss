@@ -79,6 +79,13 @@
     &Title{
       margin: 0;
     }
+    &Icon{
+      height: 20px;
+      margin-right: 5px;
+      svg{
+        height: 20px;
+      }
+    }
   }
   &-footer {
     display: flex;
