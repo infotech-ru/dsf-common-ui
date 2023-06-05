@@ -5989,11 +5989,23 @@ h6, .h6 {
   height: 16px;
   width: auto;
 }
+.svg--icon__18 {
+  height: 18px;
+}
+.svg--icon__18 svg {
+  height: 18px;
+}
 .svg--icon__21 {
   height: 21px;
 }
 .svg--icon__21 svg {
   height: 21px;
+}
+.svg--icon__24 {
+  height: 24px;
+}
+.svg--icon__24 svg {
+  height: 24px;
 }
 
 .svg-icon-viewbox24 {
@@ -7061,6 +7073,77 @@ a.label:hover, a.label:focus {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* STAGES                                                                     */
+/* path: dsf-common-ui/src/scss/modules/_stages.scss                          */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.stages {
+  align-items: center;
+  border-radius: 34px;
+  justify-content: center;
+  display: inline-flex;
+  height: 34px;
+  position: relative;
+  width: 34px;
+}
+.stages_listItem {
+  margin-bottom: 20px;
+}
+.stages_listItem:last-child {
+  margin-bottom: 0;
+}
+.stages_listItem .stages:after {
+  content: "";
+  border-left: 1px dashed #777777;
+  display: block;
+  height: 20px;
+  top: 34px;
+  position: absolute;
+  margin-right: -1px;
+  right: 50%;
+  width: 0;
+}
+.stages_listItem:last-child .stages:after {
+  display: none;
+}
+.stages .svg--icon {
+  height: 24px;
+  width: 24px;
+}
+.stages svg {
+  height: 24px;
+}
+.stages__close {
+  background-color: #DAF0DA;
+  border-color: #DAF0DA;
+  --svg-icon-fill: _brand-palette(stagesClose_svg);
+  --svg-icon-fill_blue: _brand-palette(stagesClose_svg);
+  --svg-icon-stroke: _brand-palette(stagesClose_svg);
+  --svg-icon-stroke_blue: _brand-palette(stagesClose_svg);
+}
+.stages__open {
+  background-color: #E4EEF7;
+  border-color: #E4EEF7;
+  --svg-icon-fill: _brand-palette(stagesOpen_svg);
+  --svg-icon-fill_blue: _brand-palette(stagesOpen_svg);
+  --svg-icon-stroke: _brand-palette(stagesOpen_svg);
+  --svg-icon-stroke_blue: _brand-palette(stagesOpen_svg);
+}
+.stages__default {
+  background-color: #F5F5F5;
+  border-color: #F5F5F5;
+  --svg-icon-fill: _brand-palette(stagesDefault_svg);
+  --svg-icon-fill_blue: _brand-palette(stagesDefault_svg);
+  --svg-icon-stroke: _brand-palette(stagesDefault_svg);
+  --svg-icon-stroke_blue: _brand-palette(stagesDefault_svg);
+}
+.stages_text {
+  align-items: center;
+  display: inline-flex;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -8760,6 +8843,17 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 /* path: dsf-common-ui/src/scss/modules/_joinBlock.scss                       */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.unityBlock {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.unityBlock__nobg {
+  background-color: transparent;
+}
+.unityBlock__noshadow {
+  box-shadow: none;
+}
 .unityBlock_header {
   align-items: center;
   display: flex;
@@ -11027,6 +11121,29 @@ tbody.collapse.in {
 .border-grey2 {
   border-color: #dddddd;
   --border_color: #dddddd;
+}
+
+.svg-light-grey svg,
+.svg-light-grey.svg--icon svg {
+  --svg-icon-fill: #f9f9f9;
+  --svg-icon-stroke: #f9f9f9;
+  --svg-icon-fill_blue: #f9f9f9;
+  --svg-icon-stroke_blue: #f9f9f9;
+}
+
+.text-light-grey {
+  color: #f9f9f9;
+  --text_color: #f9f9f9;
+}
+
+.bg-light-grey {
+  background-color: #f9f9f9;
+  --bg_color: #f9f9f9;
+}
+
+.border-light-grey {
+  border-color: #f9f9f9;
+  --border_color: #f9f9f9;
 }
 
 .svg-light-grey2 svg,

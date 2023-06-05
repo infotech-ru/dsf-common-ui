@@ -6,6 +6,15 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
 .unityBlock{
+  background-color: _brand-colors(_white);
+  box-shadow: 0px 1px 0px transparentize(_brand-colors(_black), 0.8);
+  padding: 10px;
+  &__nobg{
+    background-color: transparent;
+  }
+  &__noshadow{
+    box-shadow: none;
+  }
   &_header{
     align-items: center;
     display: flex;

@@ -1,0 +1,73 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* STAGES                                                                     */
+/* path: dsf-common-ui/src/scss/modules/_stages.scss                          */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
+.stages{
+  align-items: center;
+  border-radius: #{_brand-sizes(stages_size)}px;
+  justify-content: center;
+  display: inline-flex;
+  height: #{_brand-sizes(stages_size)}px;
+  position: relative;
+  width: #{_brand-sizes(stages_size)}px;
+  &_listItem {
+    margin-bottom: #{_brand-sizes(stagesLine_size)}px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &:after{ 
+    .stages_listItem &{
+      content: '';
+      border-left: 1px dashed _brand-palette(stagesList_borderColor);
+      display: block;
+      height: #{_brand-sizes(stagesLine_size)}px;
+      top: #{_brand-sizes(stages_size)}px;
+      position: absolute;
+      margin-right: -1px;
+      right: 50%;
+      width: 0;
+    }
+    .stages_listItem:last-child &{
+      display: none;
+    }
+  }
+  .svg--icon{
+    height: 24px;
+    width: 24px;
+  }
+  svg{
+    height: 24px;
+  }
+  &__close{
+    background-color: _brand-palette(stagesClose_bgc);
+    border-color: _brand-palette(stagesClose_bgc);
+    --svg-icon-fill: _brand-palette(stagesClose_svg);
+    --svg-icon-fill_blue: _brand-palette(stagesClose_svg);
+    --svg-icon-stroke: _brand-palette(stagesClose_svg);
+    --svg-icon-stroke_blue: _brand-palette(stagesClose_svg);
+  }
+  &__open{
+    background-color: _brand-palette(stagesOpen_bgc);
+    border-color: _brand-palette(stagesOpen_bgc);
+    --svg-icon-fill: _brand-palette(stagesOpen_svg);
+    --svg-icon-fill_blue: _brand-palette(stagesOpen_svg);
+    --svg-icon-stroke: _brand-palette(stagesOpen_svg);
+    --svg-icon-stroke_blue: _brand-palette(stagesOpen_svg);
+  }
+  &__default{
+    background-color: _brand-palette(stagesDefault_bgc);
+    border-color: _brand-palette(stagesDefault_bgc);
+    --svg-icon-fill: _brand-palette(stagesDefault_svg);
+    --svg-icon-fill_blue: _brand-palette(stagesDefault_svg);
+    --svg-icon-stroke: _brand-palette(stagesDefault_svg);
+    --svg-icon-stroke_blue: _brand-palette(stagesDefault_svg);
+  }
+  &_text{
+    align-items: center;
+    display: inline-flex;
+  }
+}

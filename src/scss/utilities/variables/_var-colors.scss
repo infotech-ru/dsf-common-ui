@@ -194,6 +194,10 @@ $colorTools: (
   grey2_border:                           map-get($brand-colors, _grey2),
   grey2_color:                            map-get($brand-colors, _grey2),
   grey2_svg:                              map-get($brand-colors, _grey2),
+  light-grey_bg:                          map-get($brand-colors, _light-grey),
+  light-grey_border:                      map-get($brand-colors, _light-grey),
+  light-grey_color:                       map-get($brand-colors, _light-grey),
+  light-grey_svg:                         map-get($brand-colors, _light-grey),
   light-grey2_bg:                         map-get($brand-colors, _light-grey2),
   light-grey2_border:                     map-get($brand-colors, _light-grey2),
   light-grey2_color:                      map-get($brand-colors, _light-grey2),
@@ -596,6 +600,14 @@ $brand-palette: (
 
   tooltip_bgc:                            map-get($brand-colors, _black),
   tooltip_color:                          map-get($brand-colors, _white),
+
+  stagesList_borderColor:                 map-get($brand-colors, _grey4),
+  stagesClose_bgc:                        map-get($brand-colors, _light-green),
+  stagesClose_svg:                        map-get($brand-colors, _dark-green),
+  stagesDefault_bgc:                      map-get($brand-colors, _light-grey2),
+  stagesDefault_svg:                      map-get($brand-colors, _grey4),
+  stagesOpen_bgc:                         map-get($brand-colors, _light-blue2),
+  stagesOpen_svg:                         map-get($brand-colors, _light-blue),
 
   popover_bgc:                            map-get($brand-colors, _white),
   popover_borderColor:                    map-get($brand-colors, _white),

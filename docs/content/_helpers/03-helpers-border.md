@@ -28,6 +28,7 @@ order: 4
   <div class="border-bottom border-muted border-bottom__dotted">border-bottom border-muted border-bottom__dotted</div>
   <div class="border border-grey border__dotted">border border-grey border__dotted</div>
   <div class="border border-grey2">border border-grey2</div>
+  <div class="border border-light-grey">border border-light-grey</div>
   <div class="border border-light-grey2">border border-light-grey2</div>
   <div class="border border-light-blue3">border border-light-blue3</div>
   <div class="border border-white">border border-white</div>
@@ -48,6 +49,7 @@ order: 4
   <div class="border-bottom border-muted border-bottom__dotted mb-10">border-bottom border-muted border-bottom__dotted</div>
   <div class="border border-grey border__dotted mb-10">border border-grey border__dotted</div>
   <div class="border border-grey2 mb-10">border border-grey2</div>
+  <div class="border border-light-grey mb-10">border border-light-grey</div>
   <div class="border border-light-grey2 mb-10">border border-light-grey2</div>
   <div class="border border-light-blue3 mb-10">border border-light-blue3</div>
   <div class="border border-white mb-10">border border-white</div>

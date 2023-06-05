@@ -19,11 +19,12 @@ order: 2
   <div class="bg-muted">bg-muted</div>
   <div class="bg-grey">bg-grey</div>
   <div class="bg-grey2">bg-grey2</div>
+  <div class="bg-light-grey">bg-light-grey</div>
   <div class="bg-light-grey2">bg-light-grey2</div>
   <div class="bg-orange">bg-orange</div>
   <div class="bg-dark-red">bg-dark-red</div>
-  <div class="bg-grey padding-5"><div class="bg-clear">bg-clear</div></div>
-  <div class="bg-grey padding-5"><div class="bg-white">bg-white</div></div>
+  <div class="bg-grey padding-5"><div class="border border-white bg-clear">bg-grey.padding-5 > bg-clear.border.border-white</div></div>
+  <div class="bg-grey padding-5"><div class="bg-white">bg-grey.padding-5 > bg-white</div></div>
   <div class="bg-light-blue3">bg-light-blue3</div>
   <div class="bg-rose">bg-rose</div>
   <div class="bg-vibrant-blue">bg-vibrant-blue</div>
@@ -43,8 +44,8 @@ order: 2
   <div class="bg-light-grey2 mb-10">bg-light-grey2</div>
   <div class="bg-orange mb-10">bg-orange</div>
   <div class="bg-dark-red mb-10">bg-dark-red</div>
-  <div class="bg-grey padding-5 mb-10"><div class="bg-clear">bg-clear</div></div>
-  <div class="bg-grey padding-5 mb-10"><div class="bg-white">bg-white</div></div>
+  <div class="bg-grey padding-5 mb-10"><div class="bg-clear border border-white">bg-grey.padding-5 > bg-clear.border.border-white</div></div>
+  <div class="bg-grey padding-5 mb-10"><div class="bg-white">bg-grey.padding-5 > bg-white.border.border-white</div></div>
   <div class="bg-light-blue3 mb-10">bg-light-blue3</div>
   <div class="bg-rose mb-10">bg-rose</div>
   <div class="bg-vibrant-blue mb-10">bg-vibrant-blue</div>
