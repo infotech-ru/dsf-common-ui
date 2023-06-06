@@ -7120,26 +7120,26 @@ a.label:hover, a.label:focus {
 .stages__close {
   background-color: #DAF0DA;
   border-color: #DAF0DA;
-  --svg-icon-fill: _brand-palette(stagesClose_svg);
-  --svg-icon-fill_blue: _brand-palette(stagesClose_svg);
-  --svg-icon-stroke: _brand-palette(stagesClose_svg);
-  --svg-icon-stroke_blue: _brand-palette(stagesClose_svg);
+  --svg-icon-fill: #467B46;
+  --svg-icon-fill_blue: #467B46;
+  --svg-icon-stroke: #467B46;
+  --svg-icon-stroke_blue: #467B46;
 }
 .stages__open {
   background-color: #E4EEF7;
   border-color: #E4EEF7;
-  --svg-icon-fill: _brand-palette(stagesOpen_svg);
-  --svg-icon-fill_blue: _brand-palette(stagesOpen_svg);
-  --svg-icon-stroke: _brand-palette(stagesOpen_svg);
-  --svg-icon-stroke_blue: _brand-palette(stagesOpen_svg);
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
 }
 .stages__default {
   background-color: #F5F5F5;
   border-color: #F5F5F5;
-  --svg-icon-fill: _brand-palette(stagesDefault_svg);
-  --svg-icon-fill_blue: _brand-palette(stagesDefault_svg);
-  --svg-icon-stroke: _brand-palette(stagesDefault_svg);
-  --svg-icon-stroke_blue: _brand-palette(stagesDefault_svg);
+  --svg-icon-fill: #777777;
+  --svg-icon-fill_blue: #777777;
+  --svg-icon-stroke: #777777;
+  --svg-icon-stroke_blue: #777777;
 }
 .stages_text {
   align-items: center;
@@ -10508,6 +10508,10 @@ tbody.collapse.in {
   margin-left: 0.625rem;
 }
 
+.ml-15 {
+  margin-left: 0.9375rem;
+}
+
 .ml-auto {
   margin-left: auto;
 }
@@ -10536,6 +10540,18 @@ tbody.collapse.in {
   padding-top: 0.625rem;
 }
 
+.pt-12 {
+  padding-top: 0.75rem;
+}
+
+.pt-15 {
+  padding-top: 0.9375rem;
+}
+
+.pt-16 {
+  padding-top: 1rem;
+}
+
 .pt-20 {
   padding-top: 1.25rem;
 }
@@ -10552,6 +10568,22 @@ tbody.collapse.in {
   padding-right: 0.625rem;
 }
 
+.pr-12 {
+  padding-right: 0.75rem;
+}
+
+.pr-15 {
+  padding-right: 0.9375rem;
+}
+
+.pr-16 {
+  padding-right: 1rem;
+}
+
+.pr-20 {
+  padding-right: 1.25rem;
+}
+
 .pb-0 {
   padding-bottom: 0rem;
 }
@@ -10562,6 +10594,18 @@ tbody.collapse.in {
 
 .pb-10 {
   padding-bottom: 0.625rem;
+}
+
+.pb-12 {
+  padding-bottom: 0.75rem;
+}
+
+.pb-15 {
+  padding-bottom: 0.9375rem;
+}
+
+.pb-16 {
+  padding-bottom: 1rem;
 }
 
 .pb-20 {
@@ -10580,6 +10624,22 @@ tbody.collapse.in {
   padding-left: 0.625rem;
 }
 
+.pl-12 {
+  padding-left: 0.75rem;
+}
+
+.pl-15 {
+  padding-left: 0.9375rem;
+}
+
+.pl-16 {
+  padding-left: 1rem;
+}
+
+.pl-20 {
+  padding-left: 1.25rem;
+}
+
 .padding-0 {
   padding: 0rem;
 }
@@ -10590,6 +10650,14 @@ tbody.collapse.in {
 
 .padding-10 {
   padding: 0.625rem;
+}
+
+.padding-15 {
+  padding: 0.9375rem;
+}
+
+.padding-20 {
+  padding: 1.25rem;
 }
 
 .list-unstyled {

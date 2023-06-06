@@ -45,26 +45,26 @@
   &__close{
     background-color: _brand-palette(stagesClose_bgc);
     border-color: _brand-palette(stagesClose_bgc);
-    --svg-icon-fill: _brand-palette(stagesClose_svg);
-    --svg-icon-fill_blue: _brand-palette(stagesClose_svg);
-    --svg-icon-stroke: _brand-palette(stagesClose_svg);
-    --svg-icon-stroke_blue: _brand-palette(stagesClose_svg);
+    #{--svg-icon-fill}: _brand-palette(stagesClose_svg);
+    #{--svg-icon-fill_blue}: _brand-palette(stagesClose_svg);
+    #{--svg-icon-stroke}: _brand-palette(stagesClose_svg);
+    #{--svg-icon-stroke_blue}: _brand-palette(stagesClose_svg);
   }
   &__open{
     background-color: _brand-palette(stagesOpen_bgc);
     border-color: _brand-palette(stagesOpen_bgc);
-    --svg-icon-fill: _brand-palette(stagesOpen_svg);
-    --svg-icon-fill_blue: _brand-palette(stagesOpen_svg);
-    --svg-icon-stroke: _brand-palette(stagesOpen_svg);
-    --svg-icon-stroke_blue: _brand-palette(stagesOpen_svg);
+    #{--svg-icon-fill}: _brand-palette(stagesOpen_svg);
+    #{--svg-icon-fill_blue}: _brand-palette(stagesOpen_svg);
+    #{--svg-icon-stroke}: _brand-palette(stagesOpen_svg);
+    #{--svg-icon-stroke_blue}: _brand-palette(stagesOpen_svg);
   }
   &__default{
     background-color: _brand-palette(stagesDefault_bgc);
     border-color: _brand-palette(stagesDefault_bgc);
-    --svg-icon-fill: _brand-palette(stagesDefault_svg);
-    --svg-icon-fill_blue: _brand-palette(stagesDefault_svg);
-    --svg-icon-stroke: _brand-palette(stagesDefault_svg);
-    --svg-icon-stroke_blue: _brand-palette(stagesDefault_svg);
+    #{--svg-icon-fill}: _brand-palette(stagesDefault_svg);
+    #{--svg-icon-fill_blue}: _brand-palette(stagesDefault_svg);
+    #{--svg-icon-stroke}: _brand-palette(stagesDefault_svg);
+    #{--svg-icon-stroke_blue}: _brand-palette(stagesDefault_svg);
   }
   &_text{
     align-items: center;

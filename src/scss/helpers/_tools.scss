@@ -77,7 +77,7 @@ $marginBottomSizes: 0, 5, 10, 15, 20, 25, 30, 40, 50;
   margin-bottom: auto;
 }
 
-$marginLeftSizes: 0, 5, 10;
+$marginLeftSizes: 0, 5, 10, 15;
 @each $marginLeft in $marginLeftSizes {
   .ml-#{$marginLeft} {
       margin-left: rem($marginLeft);
@@ -95,35 +95,37 @@ $marginSizes: 0, 5, 10;
   }
 }
 
-$paddingTopSizes: 0, 5, 10, 20;
-@each $paddingTop in $paddingTopSizes {
+$paddingSideSizes: 0, 5, 10, 12, 15, 16, 20;
+
+// $paddingTopSizes: 0, 5, 10, 15, 20;
+@each $paddingTop in $paddingSideSizes {
   .pt-#{$paddingTop} {
     padding-top: rem($paddingTop);
   }
 }
 
-$paddingRightSizes: 0, 5, 10;
-@each $paddingRight in $paddingRightSizes {
+// $paddingRightSizes: 0, 5, 10, 15, 20;
+@each $paddingRight in $paddingSideSizes {
   .pr-#{$paddingRight} {
       padding-right: rem($paddingRight);
   }
 }
 
-$paddingBottomSizes: 0, 5, 10, 20;
-@each $paddingBottom in $paddingBottomSizes {
+// $paddingBottomSizes: 0, 5, 10, 15, 20;
+@each $paddingBottom in $paddingSideSizes {
   .pb-#{$paddingBottom} {
       padding-bottom: rem($paddingBottom);
   }
 }
 
-$paddingLeftSizes: 0, 5, 10;
-@each $paddingLeft in $paddingLeftSizes {
+// $paddingLeftSizes: 0, 5, 10, 15, 20;
+@each $paddingLeft in $paddingSideSizes {
   .pl-#{$paddingLeft} {
     padding-left: rem($paddingLeft);
   }
 }
 
-$paddingSizes: 0, 5, 10;
+$paddingSizes: 0, 5, 10, 15, 20;
 @each $padding in $paddingSizes {
   .padding-#{$padding} {
     padding: rem($padding);
