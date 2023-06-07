@@ -5989,6 +5989,18 @@ h6, .h6 {
   height: 16px;
   width: auto;
 }
+.svg--icon__12 {
+  height: 12px;
+}
+.svg--icon__12 svg {
+  height: 12px;
+}
+.svg--icon__16 {
+  height: 16px;
+}
+.svg--icon__16 svg {
+  height: 16px;
+}
 .svg--icon__18 {
   height: 18px;
 }
@@ -8871,14 +8883,23 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .unityBlock_headerTitle {
   color: #333333;
 }
-.unityBlock_header .svg--icon {
+.unityBlock_headerSvgTitle {
   height: 24px;
   width: 24px;
   margin-right: 5px;
 }
-.unityBlock_header svg {
+.unityBlock_headerSvgTitle svg {
   height: 24px;
   width: 24px;
+}
+.unityBlock_headerSvgAction {
+  height: 16px;
+  width: 16px;
+  margin-left: 5px;
+}
+.unityBlock_headerSvgAction svg {
+  height: 16px;
+  width: 16px;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */

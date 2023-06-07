@@ -113,10 +113,11 @@ order: 4
   <div class="text-orange">text-orange</div>
   <div class="text-light-yellow">text-light-yellow</div>
   <div class="text-muted">text-muted</div>
-  <div class="text-light-grey">text-light-grey</div>
-  <div class="text-light-grey2">text-light-grey2</div>
   <div class="text-grey">text-grey</div>
   <div class="text-grey2">text-grey2</div>
+  <div class="text-grey4">text-grey4</div>
+  <div class="text-light-grey2">text-light-grey2</div>
+  <div class="text-light-grey">text-light-grey</div>
   <div class="text-white bg-default">text-white bg-default</div>
   <div class="bg-muted text-center">text-clear with bg-mu<span class="text-clear">te</span>d and text-center</div>
 {% endhighlight %}
@@ -135,10 +136,11 @@ order: 4
   <div class="text-orange mb-10">text-orange</div>
   <div class="text-light-yellow mb-10">text-light-yellow</div>
   <div class="text-muted mb-10">text-muted</div>
-  <div class="text-light-grey mb-10">text-grey-light</div>
-  <div class="text-light-grey2 mb-10">text-grey-light2</div>
   <div class="text-grey mb-10">text-grey</div>
   <div class="text-grey2 mb-10">text-grey2</div>
+  <div class="text-grey4 mb-10">text-grey4</div>
+  <div class="text-light-grey2 mb-10">text-grey-light2</div>
+  <div class="text-light-grey mb-10">text-grey-light</div>
   <div class="text-white bg-default mb-10">text-white bg-default</div>
   <div class="bg-muted text-center mb-10">text-clear with bg-mu<span class="text-clear">te</span>d and text-center</div>
 </div>
