@@ -194,6 +194,10 @@ $colorTools: (
   grey2_border:                           map-get($brand-colors, _grey2),
   grey2_color:                            map-get($brand-colors, _grey2),
   grey2_svg:                              map-get($brand-colors, _grey2),
+  grey4_bg:                               map-get($brand-colors, _grey4),
+  grey4_border:                           map-get($brand-colors, _grey4),
+  grey4_color:                            map-get($brand-colors, _grey4),
+  grey4_svg:                              map-get($brand-colors, _grey4),
   light-grey_bg:                          map-get($brand-colors, _light-grey),
   light-grey_border:                      map-get($brand-colors, _light-grey),
   light-grey_color:                       map-get($brand-colors, _light-grey),
@@ -496,6 +500,14 @@ $brand-palette: (
   // checkboxItemBig--borderColor:           map-get($brand-colors, _grey),
   // checkboxItemBig--borderColor_active:    map-get($brand-colors, _grey),
   // checkboxItemBig--borderColor_hover:     map-get($brand-colors, _grey),
+  
+  commentBlockInfo_color:                 map-get($brand-colors, _dark-grey),
+  commentBlockComments_color:             map-get($brand-colors, _dark-grey),
+  
+  controlLabel_color:                     map-get($brand-colors, _grey4),
+  controlLabelActive_color:               map-get($brand-colors, _grey4),
+  controlLabelActive_bgc:                 map-get($brand-colors, _white),
+  controlLabelError_color:                map-get($brand-colors, _red),
 
   dropdown_bgc:                           map-get($brand-colors, _white),
   dropdown_color:                         map-get($brand-colors, _dark-grey),
@@ -504,24 +516,6 @@ $brand-palette: (
   dropdownActive_bgc:                     map-get($brand-colors, _light-blue2),
 
   joinBlockTitle_color:                   map-get($brand-colors, _dark-grey),
-  
-  menuLink_color:                         map-get($brand-colors, _light-blue),
-  menuLinkActive_bgc:                     map-get($brand-colors, _light-blue),
-  menuLinkActive_color:                   map-get($brand-colors, _white),
-  menuDropdown_bgc:                       map-get($brand-colors, _white),
-  menuDropdownSvg_color:                  map-get($brand-colors, _light-blue),
-  menuDropdown_borderColor:               map-get($brand-colors, _grey4),
-  menuDropdown_color:                     map-get($brand-colors, _dark-grey),
-  menuDropdownActive_color:               map-get($brand-colors, _dark-grey),
-  menuDropdownActive_bgc:                 map-get($brand-colors, _light-blue2),
-  menuDropdownHeader_color:               map-get($brand-colors, _grey),
-
-  commentBlockInfo_color:                 map-get($brand-colors, _dark-grey),
-  commentBlockComments_color:             map-get($brand-colors, _dark-grey),
-  controlLabel_color:                     map-get($brand-colors, _grey),
-  controlLabelActive_color:               map-get($brand-colors, _dark-grey),
-  controlLabelActive_bgc:                 map-get($brand-colors, _white),
-  controlLabelError_color:                map-get($brand-colors, _red),
 
   inputGroupEl-bgc:                       map-get($brand-colors, _white),
   inputGroupEl-borderColor:               map-get($brand-colors, _grey),
@@ -552,6 +546,17 @@ $brand-palette: (
   linkHover_color:                        map-get($brand-colors, _blue),
   linkDisabled_color:                     map-get($brand-colors, _grey4),
   
+  menuLink_color:                         map-get($brand-colors, _light-blue),
+  menuLinkActive_bgc:                     map-get($brand-colors, _light-blue),
+  menuLinkActive_color:                   map-get($brand-colors, _white),
+  menuDropdown_bgc:                       map-get($brand-colors, _white),
+  menuDropdownSvg_color:                  map-get($brand-colors, _light-blue),
+  menuDropdown_borderColor:               map-get($brand-colors, _grey4),
+  menuDropdown_color:                     map-get($brand-colors, _dark-grey),
+  menuDropdownActive_color:               map-get($brand-colors, _dark-grey),
+  menuDropdownActive_bgc:                 map-get($brand-colors, _light-blue2),
+  menuDropdownHeader_color:               map-get($brand-colors, _grey),
+  
   navPills_border:                        map-get($brand-colors, _light-blue),
   navPills-active_border:                 map-get($brand-colors, _light-blue),
   navPills_bg:                            map-get($brand-colors, _light-blue2),
@@ -577,17 +582,30 @@ $brand-palette: (
   pagination-active_color:                map-get($brand-colors, _light-blue),
   pagination-svg-disable_color:           map-get($brand-colors, _light-blue3),
 
+  popover_bgc:                            map-get($brand-colors, _white),
+  popover_borderColor:                    map-get($brand-colors, _white),
+  popover_color:                          map-get($brand-colors, _dark-grey),
+  popoverHeader_bgc:                      map-get($brand-colors, _light-grey3),
+  popoverHeader_color:                    map-get($brand-colors, _dark-grey),
+
   radioItem_color:                        map-get($brand-colors, _dark-grey),
   radioItem_bg:                           map-get($brand-colors, _white),
   radioItem_border:                       map-get($brand-colors, _grey3),
   radioItem-active_bg:                    map-get($brand-colors, _white),
   radioItem-active_border:                map-get($brand-colors, _blue),
 
+  stagesList_borderColor:                 map-get($brand-colors, _grey4),
+  stagesClose_bgc:                        map-get($brand-colors, _light-green),
+  stagesClose_svg:                        map-get($brand-colors, _dark-green),
+  stagesDefault_bgc:                      map-get($brand-colors, _light-grey2),
+  stagesDefault_svg:                      map-get($brand-colors, _grey4),
+  stagesOpen_bgc:                         map-get($brand-colors, _light-blue2),
+  stagesOpen_svg:                         map-get($brand-colors, _light-blue),
+
   table-color:                            map-get($brand-colors, _dark-grey),
   tableHelpIcon_bgc:                      map-get($brand-colors, _dark-grey),
   table-table-striped-bg-odd:             map-get($brand-colors, _white),
   table-table-striped-bg-even:            map-get($brand-colors, _light-grey),
-  
 
   tabsPane-active_bgc:                    map-get($brand-colors, _white),
 
@@ -600,20 +618,6 @@ $brand-palette: (
 
   tooltip_bgc:                            map-get($brand-colors, _black),
   tooltip_color:                          map-get($brand-colors, _white),
-
-  stagesList_borderColor:                 map-get($brand-colors, _grey4),
-  stagesClose_bgc:                        map-get($brand-colors, _light-green),
-  stagesClose_svg:                        map-get($brand-colors, _dark-green),
-  stagesDefault_bgc:                      map-get($brand-colors, _light-grey2),
-  stagesDefault_svg:                      map-get($brand-colors, _grey4),
-  stagesOpen_bgc:                         map-get($brand-colors, _light-blue2),
-  stagesOpen_svg:                         map-get($brand-colors, _light-blue),
-
-  popover_bgc:                            map-get($brand-colors, _white),
-  popover_borderColor:                    map-get($brand-colors, _white),
-  popover_color:                          map-get($brand-colors, _dark-grey),
-  popoverHeader_bgc:                      map-get($brand-colors, _light-grey3),
-  popoverHeader_color:                    map-get($brand-colors, _dark-grey),
 );
 
 $state-primary-bg:                        map-get($brand-colors, _blue);
