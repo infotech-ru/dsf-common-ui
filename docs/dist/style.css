@@ -5995,6 +5995,12 @@ h6, .h6 {
 .svg--icon__12 svg {
   height: 12px;
 }
+.svg--icon__14 {
+  height: 14px;
+}
+.svg--icon__14 svg {
+  height: 14px;
+}
 .svg--icon__16 {
   height: 16px;
 }
@@ -6970,6 +6976,16 @@ a.btn.disabled, fieldset[disabled] a.btn {
 .btn-icon .svg--icon svg {
   height: 1rem;
 }
+.btn-icon__h20 .glyphicon {
+  font-size: 1.25rem;
+  height: 1.25rem;
+}
+.btn-icon__h20 .svg--icon {
+  height: 1.25rem;
+}
+.btn-icon__h20 .svg--icon svg {
+  height: 1.25rem;
+}
 .btn-icon .nostroke {
   stroke: none;
 }
@@ -7270,7 +7286,7 @@ output {
   top: 0;
 }
 .css-formFree .control-label {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   left: 0;
   padding-left: 0.4375rem;
   padding-right: 0.9375rem;
@@ -8882,6 +8898,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .unityBlock_headerTitle {
   color: #333333;
+  white-space: nowrap;
 }
 .unityBlock_headerSvgTitle {
   height: 24px;
@@ -8891,15 +8908,6 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .unityBlock_headerSvgTitle svg {
   height: 24px;
   width: 24px;
-}
-.unityBlock_headerSvgAction {
-  height: 16px;
-  width: 16px;
-  margin-left: 5px;
-}
-.unityBlock_headerSvgAction svg {
-  height: 16px;
-  width: 16px;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -10162,6 +10170,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   right: 15px;
   top: 50%;
   width: 15px;
+  z-index: 1;
   --svg-close-fill: #333;
   --svg-close-stroke: #333;
 }
@@ -10182,19 +10191,29 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .ui-dialog {
   background-clip: padding-box;
-  background-color: #fff;
+  background-color: #ffffff;
   border: none;
   border-radius: 0px;
-  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
   outline: 0;
   z-index: 1500;
+}
+.ui-dialog-content {
+  background-color: #ffffff;
+}
+.css-whatsapp-wrapper .ui-dialog {
+  display: flex;
+  flex-direction: column;
+  max-height: 364px;
 }
 
 .ui-widget-header {
   align-items: center;
+  background-color: #ffffff;
   display: flex;
-  line-height: normal;
   justify-content: flex-start;
+  height: 52px;
+  line-height: normal;
   padding: 1rem;
   position: relative;
 }
@@ -10531,6 +10550,10 @@ tbody.collapse.in {
 
 .ml-15 {
   margin-left: 0.9375rem;
+}
+
+.ml-20 {
+  margin-left: 1.25rem;
 }
 
 .ml-auto {

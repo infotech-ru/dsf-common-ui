@@ -289,6 +289,18 @@ a.btn {
     #{--svg-icon-fill}: _brand-palette(btnIconSvg_color);
     #{--svg-icon-stroke}: _brand-palette(btnIconSvg_color);
   }
+  &__h20{
+    .glyphicon {
+      font-size: rem(20);
+      height: rem(20);
+    }
+    .svg--icon {
+      height: rem(20);
+      svg{ 
+        height: rem(20);
+      }
+    }
+  }
   .nostroke{
     stroke: none;
   }

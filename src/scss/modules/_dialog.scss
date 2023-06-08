@@ -5,21 +5,31 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-
 .ui-dialog {
   background-clip: padding-box;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: _brand-colors(_white);
   border: none;
   border-radius: 0px;
-  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
   outline: 0;
   z-index: 1500;
+  &-content{
+    background-color: _brand-colors(_white);
+  }
+  .css-whatsapp-wrapper &{
+    display: flex;
+    flex-direction: column;
+    max-height: 364px;
+  }
 }
 .ui-widget-header{ 
   align-items: center;
+  background-color: _brand-colors(_white);
   display: flex;
-  line-height: normal;
   justify-content: flex-start;
+  height: 52px;
+  line-height: normal;
   padding: rem(_brand-sizes(modalSidebar_padding));
   position: relative;
 }

@@ -77,7 +77,7 @@ $marginBottomSizes: 0, 5, 10, 15, 20, 25, 30, 40, 50;
   margin-bottom: auto;
 }
 
-$marginLeftSizes: 0, 5, 10, 15;
+$marginLeftSizes: 0, 5, 10, 15, 20;
 @each $marginLeft in $marginLeftSizes {
   .ml-#{$marginLeft} {
       margin-left: rem($marginLeft);
