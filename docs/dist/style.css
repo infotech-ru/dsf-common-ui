@@ -11494,7 +11494,7 @@ tbody.collapse.in {
 }
 .phoneFieldBlue {
   align-items: center;
-  background-color: _brand-color(_light-blue2);
+  background-color: #E4EEF7;
   display: flex;
   font-size: 14px;
   justify-content: space-between;

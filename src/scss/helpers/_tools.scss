@@ -305,7 +305,7 @@ $paddingSizes: 0, 5, 10, 15, 20;
   }
   &Blue{
     align-items: center;
-    background-color: _brand-color(_light-blue2);
+    background-color: _brand-colors(_light-blue2);
     display: flex;
     font-size: 14px;
     justify-content: space-between;
