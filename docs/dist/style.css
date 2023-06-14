@@ -10737,6 +10737,10 @@ tbody.collapse.in {
   text-overflow: ellipsis;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflowX-auto {
   overflow-x: auto;
 }
@@ -10817,6 +10821,18 @@ tbody.collapse.in {
   font-size: 0.8125rem;
 }
 
+.fz14 {
+  font-size: 0.875rem;
+}
+
+.fz16 {
+  font-size: 1rem;
+}
+
+.fz18 {
+  font-size: 1.125rem;
+}
+
 .fz20 {
   font-size: 1.25rem;
 }
@@ -10827,6 +10843,10 @@ tbody.collapse.in {
 
 .lh14 {
   line-height: 14px;
+}
+
+.lh16 {
+  line-height: 16px;
 }
 
 .lh18 {
@@ -11465,12 +11485,23 @@ tbody.collapse.in {
   --border_color: #FFF6DF;
 }
 
-.phoneField {
+.phoneFieldOrange {
   background-color: #FFDF9A;
   display: inline-flex;
   font-size: 13px;
   line-height: 16px;
   padding: 5px 7px;
+}
+.phoneFieldBlue {
+  align-items: center;
+  background-color: _brand-color(_light-blue2);
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  line-height: 18px;
+  min-height: 36px;
+  padding: 7px 10px;
+  width: 100%;
 }
 
 .commentField {

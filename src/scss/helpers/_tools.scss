@@ -152,6 +152,7 @@ $paddingSizes: 0, 5, 10, 15, 20;
 .whitespace-normal     { white-space: normal; }
 .break-word            { word-break: break-word; }
 .overflow-ellipsis     { overflow: hidden; text-overflow: ellipsis; }
+.overflow-hidden       { overflow: hidden;}
 .overflowX-auto        { overflow-x: auto;}
 .overflowY-auto        { overflow-y: auto;}
 
@@ -179,9 +180,14 @@ $paddingSizes: 0, 5, 10, 15, 20;
 .fz11 { font-size: rem(11); }
 .fz12 { font-size: rem(12); }
 .fz13 { font-size: rem(13); }
+.fz14 { font-size: rem(14); }
+.fz16 { font-size: rem(16); }
+.fz18 { font-size: rem(18); }
 .fz20 { font-size: rem(20); }
+
 .lh12 { line-height: 12px; }
 .lh14 { line-height: 14px; }
+.lh16 { line-height: 16px; }
 .lh18 { line-height: 18px; }
 
 .mobile-view .d-mobile-none { display: none; }
@@ -290,11 +296,24 @@ $paddingSizes: 0, 5, 10, 15, 20;
 
 
 .phoneField{
-  background-color: _brand-colors(_light-orange);
-  display: inline-flex;
-  font-size: 13px;
-  line-height: 16px;
-  padding: 5px 7px;
+  &Orange{ 
+    background-color: _brand-colors(_light-orange);
+    display: inline-flex;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 5px 7px;
+  }
+  &Blue{
+    align-items: center;
+    background-color: _brand-color(_light-blue2);
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    line-height: 18px;
+    min-height: 36px;
+    padding: 7px 10px;
+    width: 100%;
+  }
 }
 
 .commentField{

@@ -48,10 +48,12 @@ order: 1
 
 Установлено оформление для отдельных полей телефона, комментария
 {% highlight html %}
-  <div class="phoneField">+7(910)000-00-00</div>
+  <div class="phoneFieldOrange">+7(910)000-00-00</div>
+  <div class="phoneFieldBlue">+7(910)000-00-00</div>
   <div class="commentField">комментарий</div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="phoneField mb-10">+7(910)000-00-00</div>
-  <div class="commentField">комментарий</div>
+  <div class="phoneFieldOrnage mb-10">+7(910)000-00-00</div>
+  <div class="phoneFieldBlue mb-10 ml-10">+7(910)000-00-00</div>
+  <div class="commentField ml-10">комментарий</div>
 </div>

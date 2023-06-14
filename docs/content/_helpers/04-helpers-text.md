@@ -64,12 +64,21 @@ order: 4
 
 `fz13` - устанавливает размер шрифта в 13px
 
+`fz14` - устанавливает размер шрифта в 14px
+
+`fz16` - устанавливает размер шрифта в 16px
+
+`fz18` - устанавливает размер шрифта в 18px
+
 `fz20` - устанавливает размер шрифта в 20px
 {% highlight html %}
 <div class="fz10">fz10</div>
 <div class="fz11">fz11</div>
 <div class="fz12">fz12</div>
 <div class="fz13">fz13</div>
+<div class="fz14">fz14</div>
+<div class="fz16">fz16</div>
+<div class="fz18">fz18</div>
 <div class="fz20">fz20</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
@@ -77,6 +86,9 @@ order: 4
   <div class="fz11 mb-10">fz11</div>
   <div class="fz12 mb-10">fz12</div>
   <div class="fz13 mb-10">fz13</div>
+  <div class="fz14 mb-10">fz14</div>
+  <div class="fz16 mb-10">fz16</div>
+  <div class="fz18 mb-10">fz18</div>
   <div class="fz20 mb-10">fz20</div>
 </div>
 #### Классы для изменения междустрочного интервала.
@@ -84,6 +96,8 @@ order: 4
 `lh12` - устанавливает размер шрифта в 12px
 
 `lh14` - устанавливает размер шрифта в 14px
+
+`lh16` - устанавливает размер шрифта в 16px
 
 `lh18` - устанавливает размер шрифта в 18px
 
