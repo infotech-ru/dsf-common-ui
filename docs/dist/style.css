@@ -5989,6 +5989,18 @@ h6, .h6 {
   height: 16px;
   width: auto;
 }
+.svg--icon__9 {
+  height: 9px;
+}
+.svg--icon__9 svg {
+  height: 9px;
+}
+.svg--icon__10 {
+  height: 10px;
+}
+.svg--icon__10 svg {
+  height: 10px;
+}
 .svg--icon__12 {
   height: 12px;
 }
