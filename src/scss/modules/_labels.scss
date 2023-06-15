@@ -5,14 +5,14 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .label {
-  border-radius: 1px;
+  border-radius: 2px;
   color: _brand-colors(_white);
   display: inline-block;
   font-size: rem(10);
   font-weight: 700;
   line-height: 16px;
   min-height: rem(12);
-  padding: 0 4px 0 5px;
+  padding: 0 4px 0 4px;
   text-align: center;
   vertical-align: baseline;
   white-space: nowrap;

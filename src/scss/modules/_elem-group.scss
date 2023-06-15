@@ -168,7 +168,68 @@
     @extend .btn-primary;
   }
 }
-
+.btn-group__radioCheck{
+  align-items: center;
+  background-color: _brand-colors(_grey2);
+  border-radius: 1px;
+  display: inline-flex;
+  justify-content: space-between;
+  height: 18px;
+  padding: 0;
+  position: relative;
+  width: 40px;
+  &Item{
+    align-items: center;
+    background-color: _brand-colors(_light-blue);
+    background-image: none;
+    border: none;
+    border-radius: 1px;
+    display: inline-flex;
+    flex: 0 0 20px;
+    height: 18px;
+    outline: none;
+    padding: 2px;
+    text-indent: -9999px;
+    width: 20px;
+    &:after{
+      background-color: _brand-colors(_light-grey);
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+      display: none;
+      content: '';
+      height: 14px;
+      width: 16px;
+    }
+    &:focus, &:hover{ 
+      background-image: none;
+      background-color: _brand-colors(_light-blue);
+      border: none;
+      outline: none;
+    }
+    &.active{
+      background-color: _brand-colors(_grey2);
+      &:after{
+        display: block;
+      }
+      &:focus, &:hover{ 
+        background-color: _brand-colors(_grey2);
+        background-image: none;
+      }
+      & + .btn-group__radioCheckItem{
+        background-color: _brand-colors(_grey2);
+        &:focus, &:hover{ 
+          background-color: _brand-colors(_grey2);
+        }
+      }
+    }
+    & + .active{
+      background-color: _brand-colors(_light-blue);
+      width: 100%;
+      &:focus, &:hover{ 
+        background-color: _brand-colors(_light-blue);
+      }
+    }
+  }
+}
 
 // .btn-group-vertical {
 //   > [class^="btn"]
