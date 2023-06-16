@@ -7,12 +7,13 @@ order: 2
 ---
 
 #### Классы для установленния цвет фона контейнера
-`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `bg-grey`, `bg-grey2`, `bg-grey4`, `bg-clear`, `bg-white`, `bg-vibrant-blue`, `bg-light-blue3`, `dark-red`, `bg-rose`, `bg-orange`, `bg-light-yellow`, `bg-muted`, `bg-light-grey`, `bg-light-grey2`,
+`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `bg-grey`, `bg-grey2`, `bg-grey4`, `bg-clear`, `bg-white`, `bg-vibrant-blue`, `bg-light-blue`,`bg-light-blue3`, `dark-red`, `bg-rose`, `bg-orange`, `bg-light-yellow`, `bg-muted`, `bg-light-grey`, `bg-light-grey2`,
 
 {% highlight html %}
   <div class="bg-default">bg-default</div>
   <div class="bg-primary">bg-primary</div>
   <div class="bg-vibrant-blue">bg-vibrant-blue</div>
+  <div class="bg-light-blue">bg-light-blue</div>
   <div class="bg-light-blue3">bg-light-blue3</div>
   <div class="bg-info">bg-info</div>
   <div class="bg-success">bg-success</div>
@@ -36,6 +37,7 @@ order: 2
   <div class="bg-default mb-10">bg-default</div>
   <div class="bg-primary mb-10">bg-primary</div>
   <div class="bg-vibrant-blue mb-10">bg-vibrant-blue</div>
+  <div class="bg-light-blue mb-10">bg-light-blue</div>
   <div class="bg-light-blue3 mb-10">bg-light-blue3</div>
   <div class="bg-info mb-10">bg-info</div>
   <div class="bg-success mb-10">bg-success</div>

@@ -277,7 +277,7 @@ $paddingSizes: 0, 5, 10, 15, 20;
   }
 }
 
-@each $colorTools in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'muted', 'orange', 'grey', 'grey2', 'grey4', 'light-grey', 'light-grey2', 'dark-red', 'clear', 'white', 'light-blue3', 'rose', 'vibrant-blue', 'light-yellow' {
+@each $colorTools in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'muted', 'orange', 'grey', 'grey2', 'grey4', 'light-grey', 'light-grey2', 'dark-red', 'clear', 'white', 'light-blue', 'light-blue3', 'rose', 'vibrant-blue', 'light-yellow' {
 
   @include svg-icon-variant('.svg-#{$colorTools}', _colorTools(#{$colorTools}_svg));
   

@@ -7127,7 +7127,6 @@ a.label:hover, a.label:focus {
   justify-content: center;
   display: inline-flex;
   height: 34px;
-  position: relative;
   width: 34px;
 }
 .stages_listItem {
@@ -7136,18 +7135,21 @@ a.label:hover, a.label:focus {
 .stages_listItem:last-child {
   margin-bottom: 0;
 }
-.stages_listItem .stages:after {
+.stages_wrapper {
+  position: relative;
+}
+.stages_listItem .stages_wrapper:after {
   content: "";
   border-left: 1px dashed #777777;
   display: block;
-  height: 20px;
+  height: 100%;
   top: 34px;
   position: absolute;
   margin-right: -1px;
   right: 50%;
   width: 0;
 }
-.stages_listItem:last-child .stages:after {
+.stages_listItem:last-child .stages_wrapper:after {
   display: none;
 }
 .stages .svg--icon {
@@ -11466,6 +11468,29 @@ tbody.collapse.in {
 .border-white {
   border-color: #ffffff;
   --border_color: #ffffff;
+}
+
+.svg-light-blue svg,
+.svg-light-blue.svg--icon svg {
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+}
+
+.text-light-blue {
+  color: #4A8DC6;
+  --text_color: #4A8DC6;
+}
+
+.bg-light-blue {
+  background-color: #4A8DC6;
+  --bg_color: #4A8DC6;
+}
+
+.border-light-blue {
+  border-color: #4A8DC6;
+  --border_color: #4A8DC6;
 }
 
 .svg-light-blue3 svg,

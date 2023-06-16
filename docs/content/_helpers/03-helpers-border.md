@@ -60,7 +60,7 @@ order: 4
 </div>
 
 #### Цвет границы
-Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-grey`, `border-grey2`, `border-grey4`, `border-light-grey`, `border-light-grey2`, `border-white`, `border-light-blue3`, `border-vibrant-blue`, `border-dark-red`, `border-rose`, `border-light-yellow`,   добавляют соответсвующего цвета для границ. 
+Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-grey`, `border-grey2`, `border-grey4`, `border-light-grey`, `border-light-grey2`, `border-white`, `border-light-blue`, `border-light-blue3`, `border-vibrant-blue`, `border-dark-red`, `border-rose`, `border-light-yellow`,   добавляют соответсвующего цвета для границ. 
 
 `border-clear` - класс делает прозрачным цвет границы
 
@@ -70,6 +70,7 @@ order: 4
   <div class="border border-vibrant-blue">border border-vibrant-blue</div>
   <div class="border border-success">border border-success</div>
   <div class="border border-info">border border-info</div>
+  <div class="border border-light-blue">border border-light-blue</div>
   <div class="border border-light-blue3">border border-light-blue3</div>
   <div class="border border-dark-red">border border-dark-red</div>
   <div class="border border-danger">border border-danger</div>
@@ -92,6 +93,7 @@ order: 4
   <div class="mb-10 border border-vibrant-blue">border border-vibrant-blue</div>
   <div class="mb-10 border border-success">border border-success</div>
   <div class="mb-10 border border-info">border border-info</div>
+  <div class="mb-10 border border-light-blue">border border-light-blue</div>
   <div class="mb-10 border border-light-blue3">border border-light-blue3</div>
   <div class="mb-10 border border-dark-red">border border-dark-red</div>
   <div class="mb-10 border border-danger">border border-danger</div>

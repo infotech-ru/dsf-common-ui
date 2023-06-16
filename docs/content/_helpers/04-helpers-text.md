@@ -119,6 +119,7 @@ order: 4
   <div class="text-vibrant-blue">text-vibrant-blue</div>
   <div class="text-success">text-success</div>
   <div class="text-info">text-info</div>
+  <div class="text-light-blue">text-light-blue</div>
   <div class="text-light-blue3">text-light-blue3</div>
   <div class="text-dark-red">text-dark-red</div>
   <div class="text-danger">text-danger</div>
@@ -142,6 +143,7 @@ order: 4
   <div class="text-vibrant-blue mb-10">text-vibrant-blue</div>
   <div class="text-success mb-10">text-success</div>
   <div class="text-info mb-10">text-info</div>
+  <div class="text-light-blue mb-10">text-light-blue</div>
   <div class="text-light-blue3 mb-10">text-light-blue3</div>
   <div class="text-dark-red mb-10">text-dark-red</div>
   <div class="text-danger mb-10">text-danger</div>

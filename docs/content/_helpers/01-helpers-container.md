@@ -53,7 +53,7 @@ order: 1
   <div class="commentField">комментарий</div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="phoneFieldOrnage mb-10">+7(910)000-00-00</div>
+  <div class="phoneFieldOrange mb-10">+7(910)000-00-00</div>
   <div class="phoneFieldBlue mb-10 ml-10">+7(910)000-00-00</div>
   <div class="commentField ml-10">комментарий</div>
 </div>
