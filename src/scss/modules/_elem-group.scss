@@ -553,7 +553,7 @@
     }
     [class^="btn-"]{ 
       border-color: _brand-palette(formControl-color);
-      background-color: var(--btn_bgc__hover);
+      background-color: var(--btn_bg__hover);
       background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
       background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
       @include transition(border-color ease-in-out .15s);

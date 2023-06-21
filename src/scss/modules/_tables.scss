@@ -142,6 +142,15 @@ tbody th {
   }
 }
 
+tbody {
+  .svg--icon{
+      svg{
+        fill: _brand-palette(table-color);
+        height: rem(14);
+        width: auto;
+      }
+  }
+}
 tfoot { 
   th,
   td{

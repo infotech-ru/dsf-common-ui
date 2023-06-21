@@ -6450,7 +6450,7 @@ h6, .h6 {
   --btn_bg: #ffffff;
   --btn_bgEnd: #dddddd;
   --btn_bgEnd__hover: #ffffff;
-  --btn_bgc__hover: #dddddd;
+  --btn_bg__hover: #dddddd;
   --borderColor__hover: #dddddd;
   --btn_svg: #1E6393;
   --btn_svg_blue: #1E6393;
@@ -6459,8 +6459,8 @@ h6, .h6 {
 }
 .btn-default:hover, .btn-group_theme > [class^=btn]:hover, .btn:hover, .btn-default:focus, .btn-group_theme > [class^=btn]:focus, .btn:focus, .btn-default:active, .btn-group_theme > [class^=btn]:active, .btn:active, .btn-default.active, .btn-group_theme > .active[class^=btn], .active.btn, .btn-default.focus, .btn-group_theme > .focus[class^=btn], .focus.btn {
   background-color: #dddddd;
-  background-image: -webkit-linear-gradient(#dddddd 0%, 100%);
-  background-image: linear-gradient(#dddddd 0%, 100%);
+  background-image: -webkit-linear-gradient(#dddddd 0%, #ffffff 100%);
+  background-image: linear-gradient(#dddddd 0%, #ffffff 100%);
   background-position: inherit;
   border-color: #dddddd;
   color: #333333;
@@ -6489,7 +6489,7 @@ h6, .h6 {
   --btn_bg: #4A8DC6;
   --btn_bgEnd: #1E6393;
   --btn_bgEnd__hover: #4A8DC6;
-  --btn_bgc__hover: #1E6393;
+  --btn_bg__hover: #1E6393;
   --borderColor__hover: #1E6393;
   --btn_svg: #ffffff;
   --btn_svg_blue: #ffffff;
@@ -6498,8 +6498,8 @@ h6, .h6 {
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-group_theme > .active[class^=btn], .btn-primary.focus {
   background-color: #1E6393;
-  background-image: -webkit-linear-gradient(#1E6393 0%, 100%);
-  background-image: linear-gradient(#1E6393 0%, 100%);
+  background-image: -webkit-linear-gradient(#1E6393 0%, #4A8DC6 100%);
+  background-image: linear-gradient(#1E6393 0%, #4A8DC6 100%);
   background-position: inherit;
   border-color: #1E6393;
   color: #ffffff;
@@ -6528,7 +6528,7 @@ h6, .h6 {
   --btn_bg: #69C26A;
   --btn_bgEnd: #467B46;
   --btn_bgEnd__hover: #69C26A;
-  --btn_bgc__hover: #467B46;
+  --btn_bg__hover: #467B46;
   --borderColor__hover: #467B46;
   --btn_svg: #ffffff;
   --btn_svg_blue: #ffffff;
@@ -6537,8 +6537,8 @@ h6, .h6 {
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.focus {
   background-color: #467B46;
-  background-image: -webkit-linear-gradient(#467B46 0%, 100%);
-  background-image: linear-gradient(#467B46 0%, 100%);
+  background-image: -webkit-linear-gradient(#467B46 0%, #69C26A 100%);
+  background-image: linear-gradient(#467B46 0%, #69C26A 100%);
   background-position: inherit;
   border-color: #467B46;
   color: #ffffff;
@@ -6567,7 +6567,7 @@ h6, .h6 {
   --btn_bg: #D9534F;
   --btn_bgEnd: #762624;
   --btn_bgEnd__hover: #D9534F;
-  --btn_bgc__hover: #762624;
+  --btn_bg__hover: #762624;
   --borderColor__hover: #762624;
   --btn_svg: #ffffff;
   --btn_svg_blue: #ffffff;
@@ -6576,8 +6576,8 @@ h6, .h6 {
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.focus {
   background-color: #762624;
-  background-image: -webkit-linear-gradient(#762624 0%, 100%);
-  background-image: linear-gradient(#762624 0%, 100%);
+  background-image: -webkit-linear-gradient(#762624 0%, #D9534F 100%);
+  background-image: linear-gradient(#762624 0%, #D9534F 100%);
   background-position: inherit;
   border-color: #762624;
   color: #ffffff;
@@ -6606,7 +6606,7 @@ h6, .h6 {
   --btn_bg: #FFBD41;
   --btn_bgEnd: #D59A00;
   --btn_bgEnd__hover: #FFBD41;
-  --btn_bgc__hover: #D59A00;
+  --btn_bg__hover: #D59A00;
   --borderColor__hover: #D59A00;
   --btn_svg: #ffffff;
   --btn_svg_blue: #ffffff;
@@ -6615,8 +6615,8 @@ h6, .h6 {
 }
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.focus {
   background-color: #D59A00;
-  background-image: -webkit-linear-gradient(#D59A00 0%, 100%);
-  background-image: linear-gradient(#D59A00 0%, 100%);
+  background-image: -webkit-linear-gradient(#D59A00 0%, #FFBD41 100%);
+  background-image: linear-gradient(#D59A00 0%, #FFBD41 100%);
   background-position: inherit;
   border-color: #D59A00;
   color: #333333;
@@ -6638,40 +6638,40 @@ h6, .h6 {
 
 .btn-info {
   background-color: #E4EEF7;
-  background-image: -webkit-linear-gradient(#E4EEF7 0%, #B6D1E8 100%);
-  background-image: linear-gradient(#E4EEF7 0%, #B6D1E8 100%);
-  border-color: #B6D1E8;
-  color: #777777;
+  background-image: -webkit-linear-gradient(#E4EEF7 0%, #E4EEF7 100%);
+  background-image: linear-gradient(#E4EEF7 0%, #E4EEF7 100%);
+  border-color: #4A8DC6;
+  color: #4A8DC6;
   --btn_bg: #E4EEF7;
-  --btn_bgEnd: #B6D1E8;
-  --btn_bgEnd__hover: #E4EEF7;
-  --btn_bgc__hover: #B6D1E8;
+  --btn_bgEnd: #E4EEF7;
+  --btn_bgEnd__hover: #B6D1E8;
+  --btn_bg__hover: #B6D1E8;
   --borderColor__hover: #B6D1E8;
   --btn_svg: #777777;
-  --btn_svg_blue: #777777;
+  --btn_svg_blue: #4A8DC6;
   --btn_svg__hover: #777777;
-  --btn_svg_blue__hover: #777777;
+  --btn_svg_blue__hover: #B6D1E8;
 }
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.focus {
   background-color: #B6D1E8;
-  background-image: -webkit-linear-gradient(#B6D1E8 0%, 100%);
-  background-image: linear-gradient(#B6D1E8 0%, 100%);
+  background-image: -webkit-linear-gradient(#B6D1E8 0%, #B6D1E8 100%);
+  background-image: linear-gradient(#B6D1E8 0%, #B6D1E8 100%);
   background-position: inherit;
   border-color: #B6D1E8;
-  color: #777777;
+  color: #4A8DC6;
 }
 .btn-info:hover .svg--icon svg, .btn-info:focus .svg--icon svg, .btn-info:active .svg--icon svg, .btn-info.active .svg--icon svg, .btn-info.focus .svg--icon svg {
   --svg-icon-fill: #777777;
   --svg-icon-stroke: #777777;
-  --svg-icon-fill_blue: #777777;
-  --svg-icon-stroke_blue: #777777;
+  --svg-icon-fill_blue: #B6D1E8;
+  --svg-icon-stroke_blue: #B6D1E8;
   fill: #777777;
 }
 .btn-info .svg--icon svg {
   --svg-icon-fill: #777777;
   --svg-icon-stroke: #777777;
-  --svg-icon-fill_blue: #777777;
-  --svg-icon-stroke_blue: #777777;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
   fill: #777777;
 }
 
@@ -6684,7 +6684,7 @@ h6, .h6 {
   --btn_bg: #BABABA;
   --btn_bgEnd: #777777;
   --btn_bgEnd__hover: #BABABA;
-  --btn_bgc__hover: #777777;
+  --btn_bg__hover: #777777;
   --borderColor__hover: #F5F5F5;
   --btn_svg: #ffffff;
   --btn_svg_blue: #1E6393;
@@ -6693,8 +6693,8 @@ h6, .h6 {
 }
 .btn-grey:hover, .btn-grey:focus, .btn-grey:active, .btn-grey.active, .btn-grey.focus {
   background-color: #777777;
-  background-image: -webkit-linear-gradient(#777777 0%, 100%);
-  background-image: linear-gradient(#777777 0%, 100%);
+  background-image: -webkit-linear-gradient(#777777 0%, #BABABA 100%);
+  background-image: linear-gradient(#777777 0%, #BABABA 100%);
   background-position: inherit;
   border-color: #F5F5F5;
   color: #ffffff;
@@ -6723,7 +6723,7 @@ h6, .h6 {
   --btn_bg: #F5F5F5;
   --btn_bgEnd: #F5F5F5;
   --btn_bgEnd__hover: #dddddd;
-  --btn_bgc__hover: #dddddd;
+  --btn_bg__hover: #dddddd;
   --borderColor__hover: #333333;
   --btn_svg: #BABABA;
   --btn_svg_blue: #1E6393;
@@ -6732,8 +6732,8 @@ h6, .h6 {
 }
 .btn-lightGrey:hover, .btn-lightGrey:focus, .btn-lightGrey:active, .btn-lightGrey.active, .btn-lightGrey.focus {
   background-color: #dddddd;
-  background-image: -webkit-linear-gradient(#dddddd 0%, 100%);
-  background-image: linear-gradient(#dddddd 0%, 100%);
+  background-image: -webkit-linear-gradient(#dddddd 0%, #dddddd 100%);
+  background-image: linear-gradient(#dddddd 0%, #dddddd 100%);
   background-position: inherit;
   border-color: #333333;
   color: #BABABA;
@@ -8052,7 +8052,7 @@ fieldset[disabled] .checkbox-inline {
 }
 .inputGroup:focus-within [class^=btn-] {
   border-color: #333333;
-  background-color: var(--btn_bgc__hover);
+  background-color: var(--btn_bg__hover);
   background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
   background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
   -webkit-transition: border-color ease-in-out 0.15s;
@@ -8657,6 +8657,12 @@ tbody th:first-child.text-center {
 .table__firstChildMinWidth tbody td:first-child,
 .table__firstChildMinWidth tbody th:first-child {
   min-width: 160px;
+}
+
+tbody .svg--icon svg {
+  fill: #333333;
+  height: 0.875rem;
+  width: auto;
 }
 
 tfoot th,
