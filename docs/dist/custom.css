@@ -268,6 +268,16 @@ pre{
   position: relative;
   text-align: center;
   height: 100px;
+}
+[title*='glyphicons']{
+  --svg-icon-fill: #1E6393;
+  --svg-icon-stroke: #1E6393;
+}
+[title*='ownicons']{
+  --svg-icon-fill: #1E6393;
+  --svg-icon-stroke: #1E6393;
+}
+[title*='symbol']{
   --svg-icon-fill: #1E6393;
   --svg-icon-stroke: #1E6393;
 }
