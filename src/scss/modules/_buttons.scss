@@ -105,7 +105,7 @@
       background-image: linear-gradient(_brand-btn(#{$btn}_bg__hover) 0%, _brand-btn(#{$btn}-end_bg__hover) 100%);
       background-position: inherit;
       border-color: _brand-btn(#{$btn}_border__hover);
-      color: _brand-btn(#{$btn}_color);
+      color: _brand-btn(#{$btn}_color__hover);
       .svg--icon {
         svg {
           #{--svg-icon-fill}: _brand-btn(#{$btn}_svg__hover);
@@ -179,6 +179,8 @@
 
     .svg--icon {
       svg {
+        #{--svg-icon-fill_blue}: _brand-btn(#{$btn}_outline);
+        #{--svg-icon-stroke_blue}: _brand-btn(#{$btn}_outline);
         #{--svg-icon-fill}: _brand-btn(#{$btn}_outline);
         #{--svg-icon-stroke}: _brand-btn(#{$btn}_outline);
         fill: _brand-btn(#{$btn}_outline);

@@ -5,17 +5,19 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .label {
+  align-items: center;
   border-radius: 2px;
   color: _brand-colors(_white);
-  display: inline-block;
+  // display: inline-block;
+  display: inline-flex;
   font-size: rem(10);
   font-weight: 700;
   line-height: 16px;
-  min-height: rem(12);
-  padding: 0 5px 0 4px;
+  min-height: rem(16);
+  padding: 0 5px 0.05em 4px;
   text-align: center;
   text-transform: uppercase;
-  vertical-align: baseline;
+  // vertical-align: baseline;
   white-space: nowrap;
   &:empty {
     display: none;
