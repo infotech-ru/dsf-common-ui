@@ -6969,8 +6969,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --svg-icon-fill: #D9534F;
 }
 .btn-link .svg--icon {
-  --svg-icon-fill: #1E6393;
-  --svg-icon-stroke: #1E6393;
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
 }
 
 .btn-icon {
@@ -6981,11 +6981,12 @@ a.btn.disabled, fieldset[disabled] a.btn {
   color: #777777;
   cursor: pointer;
   display: inline-block;
+  outline: none;
   padding: 0;
   text-align: left;
 }
 .btn-icon .glyphicon {
-  color: #1E6393;
+  color: #4A8DC6;
   font-size: 1rem;
   height: 1rem;
   top: 0;
@@ -6994,8 +6995,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
 .btn-icon .svg--icon {
   height: 1rem;
   vertical-align: middle;
-  --svg-icon-fill: #1E6393;
-  --svg-icon-stroke: #1E6393;
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
 }
 .btn-icon .svg--icon svg {
   height: 1rem;
@@ -7017,10 +7020,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
   fill: none;
 }
 .btn-icon .fill {
-  fill: #1E6393;
+  fill: #4A8DC6;
 }
 .btn-icon .stroke {
-  stroke: #1E6393;
+  stroke: #4A8DC6;
 }
 .btn-icon:hover, .btn-icon:focus {
   background-color: transparent;
@@ -7716,6 +7719,85 @@ fieldset[disabled] .checkbox-inline {
 }
 .css-formFree .bootstrap-select.open .caret:before, .css-formFree .bootstrap-select.show .caret:before {
   top: -1px;
+}
+
+.css-formFree .comboTreeInputBox, .css-formFree .comboTreeInputBox.btn-default, .css-formFree .comboTreeInputBox.btn {
+  background-color: transparent;
+  background-image: none;
+  border-color: #BABABA;
+}
+
+.redactorBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.redactorBlockContainer {
+  border-radius: 1px;
+  border: 1px solid #BABABA;
+  display: flex;
+  min-height: 36px;
+  outline: none;
+  padding: 0px;
+  position: relative;
+  resize: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.redactorBlockContainer:focus-within {
+  border-color: inherit;
+}
+.redactorBlockActionBlock {
+  align-items: center;
+  display: inline-flex;
+  height: 21px;
+  position: absolute;
+  top: 31px;
+  right: 0.625rem;
+  white-space: nowrap;
+}
+.redactorBlockActionBlock input[type=file] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 100%;
+}
+.redactorBlockFileListBlock {
+  width: 100%;
+  padding-left: 0.625rem;
+}
+.redactorBlockBoxWrapper {
+  padding: 5px 77px 0 0;
+  padding-left: 0.625rem;
+  min-height: 14px;
+  width: 100%;
+  word-break: break-word;
+}
+.redactorBlockBoxWrapper .redactor-toolbar {
+  box-shadow: none;
+}
+.redactorBlockBoxWrapper .redactor-toolbar li a {
+  color: #333333;
+  font-size: 16px;
+  margin-right: 5px;
+  padding: 0 3px;
+}
+.redactorBlockBoxWrapper .redactor-toolbar li a:hover {
+  background-color: transparent;
+  color: inherit;
+}
+.redactorBlockBoxWrapper .redactor-editor {
+  border: none;
+  padding: 10px 0;
+}
+.redactorBlockBoxWrapper .redactor-editor p {
+  line-height: 1.625rem;
+  margin-bottom: 0px;
+}
+.redactorBlockBoxWrapper .redactor-box {
+  margin-bottom: 0;
 }
 
 .fileUpload_label {
@@ -8907,6 +8989,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .tableHelpIcon_td {
   padding-right: 15.5px;
+  position: sticky;
 }
 
 .collapseTrIcon {
@@ -11027,6 +11110,22 @@ tbody.collapse.in {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .rotate90 {

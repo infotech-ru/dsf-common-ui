@@ -393,6 +393,7 @@ tbody tr {
   }
   &_td {
     padding-right: #{calc(_brand-sizes(tableHelpIcon_size) + _brand-sizes(table_paddingY) * 1.5)}px;
+    position: sticky; // улетает иконка в ячейка не шапки
   }
 }
 

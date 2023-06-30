@@ -212,6 +212,10 @@ $paddingSizes: 0, 5, 10, 15, 20;
 .align-center          { align-items: center; }
 .align-end             { align-items: flex-end; }
 .flex-wrap             { flex-wrap: wrap; }
+.flex-column           { flex-direction: column; }
+.flex-column-reverse   { flex-direction: column-reverse; }
+.flex-row              { flex-direction: row; }
+.flex-row-reverse      { flex-direction: row-reverse; }
 
 .rotate90              { transform: rotate(90deg); }
 .rotate180             { transform: rotate(180deg); }

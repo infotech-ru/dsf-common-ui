@@ -273,6 +273,7 @@ a.btn {
   color: _colorTools(default_color);
   cursor: pointer;
   display: inline-block;
+  outline: none;
   padding: 0;
   text-align: left;
   .glyphicon {
@@ -289,6 +290,8 @@ a.btn {
       height: rem(_brand-sizes(btnIcon_height));
     }
     #{--svg-icon-fill}: _brand-palette(btnIconSvg_color);
+    #{--svg-icon-fill_blue}: _brand-palette(btnIconSvg_color);
+    #{--svg-icon-stroke_blue}: _brand-palette(btnIconSvg_color);
     #{--svg-icon-stroke}: _brand-palette(btnIconSvg_color);
   }
   &__h20{

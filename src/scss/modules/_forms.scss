@@ -112,22 +112,15 @@ output {
 
 .form-control {
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  // background-color: $input-bg;
   background-color: _brand-palette(formControl-bgc);
-  // border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
   border-radius: #{_brand-sizes(borderRadiusFormElem)}px;
-  // border: 1px solid $input-border;
   border: 1px solid _brand-palette(formControl-borderColor);
   // @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
   box-shadow: none;
   color: _brand-palette(formControl-color);
-  // color: $input-color;
   display: block;
-  // height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   height: rem(calc(_lineHeight(input) + 2)); //  + border-top and border-bottom
-  // font-size: $font-size-base;
   font-size: rem(_fontSizes(formElem));
-  // line-height: $line-height-base;
   line-height: rem(_lineHeight(input));
   padding: 0 rem(_brand-sizes(formControl_paddingX));
   width: 100%;
@@ -195,7 +188,6 @@ textarea.form-control {
   resize: vertical;
 }
 
-
 // Special styles for iOS temporal inputs
 //
 // In Mobile Safari, setting `display: block` on temporal inputs causes the
@@ -217,7 +209,6 @@ textarea.form-control {
   }
 }
 
-
 // Form groups
 //
 // Designed to help with the organization and spacing of vertical forms. For
@@ -232,7 +223,6 @@ textarea.form-control {
     position: relative;
   }
 }
-
 
 // Checkboxes and radios
 //
@@ -303,7 +293,6 @@ textarea.form-control {
   margin-left: 10px; // space out consecutive inline controls
 }
 
-
 // Static form control text
 //
 // Apply class to a `p` element to make any string of text align with labels in
@@ -323,7 +312,6 @@ textarea.form-control {
   // &.input-sm {
   // }
 }
-
 
 // Feedback states
 .has-success {
@@ -346,7 +334,6 @@ textarea.form-control {
     top: 0;
   }
 }
-
 
 // Help text
 //
@@ -600,6 +587,93 @@ textarea.form-control {
           top: -1px;
         }
       }
+    }
+  }
+}
+
+.comboTreeInputBox{
+  &,
+  &.btn-default,
+  &.btn {
+    .css-formFree & {
+      background-color: transparent;
+      background-image: none;
+      border-color: _brand-palette(formControl-borderColor);
+    }
+  }
+}
+
+
+.redactorBlock{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &Container{
+    border-radius: #{_brand-sizes(borderRadiusFormElem)}px;
+    border: 1px solid _brand-palette(formControl-borderColor);
+    display: flex;
+    min-height: 36px;
+    outline: none;
+    padding: 0px;
+    position: relative;
+    resize: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    &:focus-within{
+      border-color: inherit;
+    }
+  }
+  &ActionBlock{
+    align-items: center;
+    display: inline-flex;
+    height: 21px; // равен высоте .redactor-toolbar + отсуп
+    position: absolute;
+    top: 31px;
+    right: rem(_brand-sizes(formControl_paddingX));
+    // width: 56px;
+    white-space: nowrap;
+    input[type="file"]{
+      cursor: pointer;
+      opacity: 0;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      width: 100%;
+    }
+  }
+  &FileListBlock{
+    width: 100%;
+    padding-left: rem(_brand-sizes(formControl_paddingX));
+  }
+  &BoxWrapper{
+    padding: 5px 77px 0 0;
+    padding-left: rem(_brand-sizes(formControl_paddingX));
+    min-height: 14px;
+    width: 100%;
+    word-break: break-word;
+    .redactor-toolbar {
+      box-shadow: none;
+      li a{
+        color: _brand-palette(formControl-color);
+        font-size: 16px;
+        margin-right: 5px;
+        padding: 0 3px;
+        &:hover{
+          background-color: transparent;
+          color: inherit;
+        }
+      }
+    }
+    .redactor-editor {
+      border: none;
+      padding: 10px 0;
+      p{
+        line-height: rem(_lineHeight(input));
+        margin-bottom: 0px;
+      }
+    }
+    .redactor-box {
+      margin-bottom: 0;
     }
   }
 }
