@@ -667,13 +667,19 @@ textarea.form-control {
     .redactor-editor {
       border: none;
       padding: 10px 0;
-      p{
-        line-height: rem(_lineHeight(input));
+      div,  p, figure, blockquote, pre{
+        line-height: 20px;
         margin-bottom: 0px;
       }
     }
     .redactor-box {
       margin-bottom: 0;
+    }
+    .redactor-placeholder::after{
+      color: _brand-palette(controlLabel_color) !important;
+      font-size: rem(_fontSizes(controlLabel__formFree));
+      left: 0px;
+      top: 10px;
     }
   }
 }

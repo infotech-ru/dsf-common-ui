@@ -7792,12 +7792,18 @@ fieldset[disabled] .checkbox-inline {
   border: none;
   padding: 10px 0;
 }
-.redactorBlockBoxWrapper .redactor-editor p {
-  line-height: 1.625rem;
+.redactorBlockBoxWrapper .redactor-editor div, .redactorBlockBoxWrapper .redactor-editor p, .redactorBlockBoxWrapper .redactor-editor figure, .redactorBlockBoxWrapper .redactor-editor blockquote, .redactorBlockBoxWrapper .redactor-editor pre {
+  line-height: 20px;
   margin-bottom: 0px;
 }
 .redactorBlockBoxWrapper .redactor-box {
   margin-bottom: 0;
+}
+.redactorBlockBoxWrapper .redactor-placeholder::after {
+  color: #777777 !important;
+  font-size: 0.75rem;
+  left: 0px;
+  top: 10px;
 }
 
 .fileUpload_label {
