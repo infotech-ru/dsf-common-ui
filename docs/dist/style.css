@@ -8706,6 +8706,9 @@ thead th {
 thead th:first-child {
   text-align: left;
 }
+thead th:first-child.text-center {
+  text-align: center;
+}
 thead th .desc,
 thead th .asc {
   display: inline-flex;

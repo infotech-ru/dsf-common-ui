@@ -13,7 +13,62 @@ order: 1
     <tr>
       <th>lorem</th>
       <th>lorem</th>
+      <th class="collapseTdIcon_td">lorem <a class="css-td-expand collapsible-col collapseTdIcon_link"><span class="collapseTdIcon"><?= Icons::icon('bicolors-width__24vb') ?></span></a></th>
+      <th class="tableHelpIcon_td">
+        lorem
+        <span class="tableHelpIcon" data-toggle="tooltip"
+          title="Текст подсказки">
+          <?= Icons::icon('bicolors-questions_full') ?>
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+    </tr>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+    </tr>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
       <th>lorem</th>
+      <th>lorem</th>
+      <th>lorem</th>
+      <th>lorem</th>
+    </tr>
+  </tfoot>
+</table>
+{% endhighlight %}
+
+<div class="bs-docs-example">
+ <table class="table">
+  <thead>
+    <tr>
+      <th>lorem</th>
+      <th>lorem</th>
+      <th class="collapseTdIcon_td">
+        lorem 
+        <a class="css-td-expand collapsible-col collapseTdIcon_link">
+          <span class="collapseTdIcon">
+            <svg class="bicolors-questions_full" width="24" height="24">
+            <use xlink:href="dist/sprite.symbol.svg#bicolors-width"></use>
+          </svg></span>
+        </a>
+      </th>
       <th class="tableHelpIcon_td">
         lorem
         <span class="tableHelpIcon" data-toggle="tooltip"
@@ -54,45 +109,4 @@ order: 1
     </tr>
   </tfoot>
 </table>
-{% endhighlight %}
-
-<div class="bs-docs-example">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>lorem</th>
-        <th>lorem</th>
-        <th>lorem</th>
-        <th>lorem</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>lorem</td>
-        <td>lorem</td>
-        <td>lorem</td>
-        <td>lorem</td>
-      </tr>
-      <tr>
-        <td>lorem</td>
-        <td>lorem</td>
-        <td>lorem</td>
-        <td>lorem</td>
-      </tr>
-      <tr>
-        <td>lorem</td>
-        <td>lorem</td>
-        <td>lorem</td>
-        <td>lorem</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <th>lorem</th>
-        <th>lorem</th>
-        <th>lorem</th>
-        <th>lorem</th>
-      </tr>
-    </tfoot>
-  </table>
 </div>

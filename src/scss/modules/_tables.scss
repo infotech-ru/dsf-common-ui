@@ -78,6 +78,9 @@ thead {
     &:first-child {
       // left: 0;
       text-align: left;
+    &.text-center{
+      text-align: center;
+    }
     }
     .desc,
     .asc{
