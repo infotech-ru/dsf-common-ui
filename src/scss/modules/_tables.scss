@@ -78,9 +78,12 @@ thead {
     &:first-child {
       // left: 0;
       text-align: left;
-    &.text-center{
-      text-align: center;
-    }
+      &.text-center{
+        text-align: center;
+      }
+      &.text-right{
+        text-align: right;
+      }
     }
     .desc,
     .asc{
@@ -136,6 +139,9 @@ tbody th {
   vertical-align: middle;
   &:first-child {
     text-align: left;
+    &.text-right{
+      text-align: right;
+    }
     &.text-center{
       text-align: center;
     }

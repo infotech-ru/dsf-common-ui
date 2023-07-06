@@ -8709,6 +8709,9 @@ thead th:first-child {
 thead th:first-child.text-center {
   text-align: center;
 }
+thead th:first-child.text-right {
+  text-align: right;
+}
 thead th .desc,
 thead th .asc {
   display: inline-flex;
@@ -8752,6 +8755,10 @@ tbody th {
 tbody td:first-child,
 tbody th:first-child {
   text-align: left;
+}
+tbody td:first-child.text-right,
+tbody th:first-child.text-right {
+  text-align: right;
 }
 tbody td:first-child.text-center,
 tbody th:first-child.text-center {
