@@ -8926,6 +8926,14 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   position: sticky;
   z-index: 1000;
 }
+.table-sticky-head-left_col th.stickyCell,
+.table-sticky-head-left_col td.stickyCell,
+.wrapper__tableSticky th.stickyCell,
+.wrapper__tableSticky td.stickyCell {
+  left: 0;
+  position: sticky;
+  z-index: 1000;
+}
 .table-sticky-head-left_col thead th,
 .wrapper__tableSticky thead th {
   z-index: 1001;

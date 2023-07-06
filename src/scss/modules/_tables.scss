@@ -317,6 +317,11 @@ tbody tr {
       position: sticky;
       z-index: _zindex(tableStickyTbodyTd);
     }
+    &.stickyCell{
+      left: 0;
+      position: sticky;
+      z-index: _zindex(tableStickyTbodyTd);
+    }
   }
   thead{
     th{
