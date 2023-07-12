@@ -72,20 +72,20 @@
       .headerMenu__link{
         background-color: transparent;
         svg{ 
-          --svg-icon-fill: _brand-palette(menuLinkActive_svg); 
-          --svg-icon-fill_blue: _brand-palette(menuLinkActive_svg); 
-          --svg-icon-stroke: _brand-palette(menuLinkActive_svg); 
-          --svg-icon-stroke_blue: _brand-palette(menuLinkActive_svg);
+          #{--svg-icon-fill}: _brand-palette(menuLinkActive_svg); 
+          #{--svg-icon-fill_blue}: _brand-palette(menuLinkActive_svg); 
+          #{--svg-icon-stroke}: _brand-palette(menuLinkActive_svg); 
+          #{--svg-icon-stroke_blue}: _brand-palette(menuLinkActive_svg);
         }
       }
     }
     .headerMenu__link{
       padding: 0 5px;
       svg{ 
-        --svg-icon-fill: _brand-palette(menuLink_svg); 
-        --svg-icon-fill_blue: _brand-palette(menuLink_svg); 
-        --svg-icon-stroke: _brand-palette(menuLink_svg); 
-        --svg-icon-stroke_blue: _brand-palette(menuLink_svg);
+        #{--svg-icon-fill}: _brand-palette(menuLink_svg); 
+        #{--svg-icon-fill_blue}: _brand-palette(menuLink_svg); 
+        #{--svg-icon-stroke}: _brand-palette(menuLink_svg); 
+        #{--svg-icon-stroke_blue}: _brand-palette(menuLink_svg);
       }
       .mobile-view &{
         justify-content: flex-start;

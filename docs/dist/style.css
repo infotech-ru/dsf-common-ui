@@ -2643,19 +2643,19 @@ h6, .h6 {
   background-color: transparent;
 }
 .headerMenu_linkIcon.active .headerMenu__link svg {
-  --svg-icon-fill: _brand-palette(menuLinkActive_svg);
-  --svg-icon-fill_blue: _brand-palette(menuLinkActive_svg);
-  --svg-icon-stroke: _brand-palette(menuLinkActive_svg);
-  --svg-icon-stroke_blue: _brand-palette(menuLinkActive_svg);
+  --svg-icon-fill: #1E6393;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
 }
 .headerMenu_linkIcon .headerMenu__link {
   padding: 0 5px;
 }
 .headerMenu_linkIcon .headerMenu__link svg {
-  --svg-icon-fill: _brand-palette(menuLink_svg);
-  --svg-icon-fill_blue: _brand-palette(menuLink_svg);
-  --svg-icon-stroke: _brand-palette(menuLink_svg);
-  --svg-icon-stroke_blue: _brand-palette(menuLink_svg);
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
 }
 .mobile-view .headerMenu_linkIcon .headerMenu__link {
   justify-content: flex-start;
