@@ -29,17 +29,29 @@ order: 2
   </div>
 </div>
 
-<h4>Модификация иконки bicolors-favorite</h4>
-<p>Использование одной иконки bicolors-favorite для применения с классом родителя `favorite__active`. И создание эффекта замены на `favorite-full`.
+<h4>Модификация иконки bicolors-favorite, bicolors-star</h4>
+<p>Использование иконки `bicolors-favorite` для применения с классом родителя `favorite__active` и создание эффекта замены на `bicolors-favorite-full`.</p>
+<p>Использование иконки `bicolors-star` для применения с классом родителя `star__active` и создание эффекта замены на `bicolors-star-full`.</p>
+
   {% highlight html %}
   <div class="">
     <span class="svg--icon">
       <?= Icons::icon('bicolors-favorite') ?>
     </span>
+    <span class="favorite__active">
+      <span class="svg--icon">
+        <?= Icons::icon('bicolors-favorite') ?>
+      </span>
+    </span>
   </div>
-  <div class="favorite__active">
+  <div> 
     <span class="svg--icon">
-      <?= Icons::icon('bicolors-favorite') ?>
+      <?= Icons::icon('bicolors-star') ?>
+    </span>
+    <span class="favorite__active">
+      <span class="svg--icon">
+        <?= Icons::icon('bicolors-favorite') ?>
+      </span>
     </span>
   </div>
 {% endhighlight %}
@@ -50,12 +62,26 @@ order: 2
           <use xlink:href="dist/sprite.symbol.svg#bicolors-favorite"></use>
         </svg>
       </span>
+      <span class="favorite__active">
+        <span class="svg--icon"> 
+          <svg width="24" height="24">
+            <use xlink:href="dist/sprite.symbol.svg#bicolors-favorite"></use>
+          </svg>
+        </span>
+      </span>
     </div>
-    <div class="favorite__active">
+    <div class="">
       <span class="svg--icon"> 
         <svg width="24" height="24">
-          <use xlink:href="dist/sprite.symbol.svg#bicolors-favorite"></use>
+          <use xlink:href="dist/sprite.symbol.svg#bicolors-star"></use>
         </svg>
+      </span>
+      <span class="favorite__active">
+        <span class="svg--icon"> 
+          <svg width="24" height="24">
+            <use xlink:href="dist/sprite.symbol.svg#bicolors-star"></use>
+          </svg>
+        </span>
       </span>
     </div>
 </div>

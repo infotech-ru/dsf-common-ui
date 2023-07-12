@@ -551,7 +551,9 @@ $brand-palette: (
   linkDisabled_color:                     map-get($brand-colors, _grey4),
   
   menuLink_color:                         map-get($brand-colors, _light-blue),
+  menuLink_svg:                           map-get($brand-colors, _light-blue),
   menuLinkActive_bgc:                     map-get($brand-colors, _light-blue),
+  menuLinkActive_svg:                     map-get($brand-colors, _blue),
   menuLinkActive_color:                   map-get($brand-colors, _white),
   menuDropdown_bgc:                       map-get($brand-colors, _white),
   menuDropdownSvg_color:                  map-get($brand-colors, _light-blue),

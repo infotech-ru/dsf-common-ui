@@ -60,6 +60,14 @@ tbody.collapse.in { display: table-row-group; }
   }
 }
 
+.star__active{
+  .svg--icon{
+    #{--star-stroke-active}: _colorTools(vibrant-blue_svg);
+    #{--star-fill-active}: _colorTools(vibrant-blue_svg);
+    #{--star-stroke_blue-active}: _colorTools(vibrant-blue_svg);
+  }
+}
+
 .hoverTarget_parent{
   .hoverTarget_item__block,
   .hoverTarget_item__inline-block,

@@ -73,11 +73,9 @@
       line-height: 20px;
     }
     a{ 
-      .reset-view &,
-      .guest-view & {
-        .mobile-view & {
-          color: _brand-colors(_vibrant-blue);
-        }
+      .reset-view.mobile-view &,
+      .guest-view.mobile-view &{
+        color: _brand-colors(_vibrant-blue);
       }
     }
     &_right{
