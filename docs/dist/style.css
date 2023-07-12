@@ -2647,6 +2647,7 @@ h6, .h6 {
   --svg-icon-fill_blue: #1E6393;
   --svg-icon-stroke: #1E6393;
   --svg-icon-stroke_blue: #1E6393;
+  --svg-icon-stroke_green: #1E6393;
 }
 .headerMenu_linkIcon .headerMenu__link {
   padding: 0 5px;
@@ -2656,6 +2657,7 @@ h6, .h6 {
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
+  --svg-icon-stroke_green: #4A8DC6;
 }
 .mobile-view .headerMenu_linkIcon .headerMenu__link {
   justify-content: flex-start;
