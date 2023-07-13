@@ -7,7 +7,7 @@ order: 2
 ---
 
 #### Классы для установленния цвет фона контейнера
-`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `bg-grey`, `bg-grey2`, `bg-grey4`, `bg-clear`, `bg-white`, `bg-vibrant-blue`, `bg-light-blue`,`bg-light-blue3`, `dark-red`, `bg-rose`, `bg-orange`, `bg-light-yellow`, `bg-muted`, `bg-light-grey`, `bg-light-grey2`,
+`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `dark-grey`, `bg-grey`, `bg-grey2`, `bg-grey4`, `bg-clear`, `bg-white`, `bg-vibrant-blue`, `bg-light-blue`,`bg-light-blue3`, `dark-red`, `bg-rose`, `bg-orange`, `bg-light-yellow`, `bg-muted`, `bg-light-grey`, `bg-light-grey2`,
 
 {% highlight html %}
   <div class="bg-default">bg-default</div>
@@ -29,6 +29,7 @@ order: 2
   <div class="bg-grey">bg-grey</div>
   <div class="bg-grey2">bg-grey2</div>
   <div class="bg-grey4">bg-grey4</div>
+  <div class="bg-dark-grey">bg-dark-grey</div>
   <div class="bg-grey padding-5"><div class="border border-white bg-clear">bg-grey.padding-5 > bg-clear.border.border-white</div></div>
   <div class="bg-grey padding-5"><div class="bg-white">bg-grey.padding-5 > bg-white</div></div>
 {% endhighlight %}
@@ -53,6 +54,7 @@ order: 2
   <div class="bg-grey mb-10">bg-grey</div>
   <div class="bg-grey2 mb-10">bg-grey2</div>
   <div class="bg-grey4 mb-10">bg-grey4</div>
+  <div class="bg-dark-grey mb-10">bg-dark-grey</div>
   <div class="bg-grey padding-5 mb-10"><div class="bg-clear border border-white">bg-grey.padding-5 > bg-clear.border.border-white</div></div>
   <div class="bg-grey padding-5 mb-10"><div class="bg-white">bg-grey.padding-5 > bg-white.border.border-white</div></div>
 </div>

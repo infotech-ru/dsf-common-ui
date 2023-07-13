@@ -127,6 +127,7 @@ order: 4
   <div class="text-warning">text-warning</div>
   <div class="text-orange">text-orange</div>
   <div class="text-light-yellow">text-light-yellow</div>
+  <div class="text-dark-grey">text-dark-grey</div>
   <div class="text-muted">text-muted</div>
   <div class="text-grey">text-grey</div>
   <div class="text-grey2">text-grey2</div>
@@ -152,6 +153,7 @@ order: 4
   <div class="text-orange mb-10">text-orange</div>
   <div class="text-light-yellow mb-10">text-light-yellow</div>
   <div class="text-muted mb-10">text-muted</div>
+  <div class="text-dark-grey mb-10">text-dark-grey</div>
   <div class="text-grey mb-10">text-grey</div>
   <div class="text-grey2 mb-10">text-grey2</div>
   <div class="text-grey4 mb-10">text-grey4</div>

@@ -6003,52 +6003,60 @@ h6, .h6 {
   height: 16px;
   width: auto;
 }
-.svg--icon__9 {
+
+.svg--icon__9, .svg--icon__9.svg--icon {
   height: 9px;
 }
-.svg--icon__9 svg {
+.svg--icon__9 svg, .svg--icon__9.svg--icon svg {
   height: 9px;
 }
-.svg--icon__10 {
+
+.svg--icon__10, .svg--icon__10.svg--icon {
   height: 10px;
 }
-.svg--icon__10 svg {
+.svg--icon__10 svg, .svg--icon__10.svg--icon svg {
   height: 10px;
 }
-.svg--icon__12 {
+
+.svg--icon__12, .svg--icon__12.svg--icon {
   height: 12px;
 }
-.svg--icon__12 svg {
+.svg--icon__12 svg, .svg--icon__12.svg--icon svg {
   height: 12px;
 }
-.svg--icon__14 {
+
+.svg--icon__14, .svg--icon__14.svg--icon {
   height: 14px;
 }
-.svg--icon__14 svg {
+.svg--icon__14 svg, .svg--icon__14.svg--icon svg {
   height: 14px;
 }
-.svg--icon__16 {
+
+.svg--icon__16, .svg--icon__16.svg--icon {
   height: 16px;
 }
-.svg--icon__16 svg {
+.svg--icon__16 svg, .svg--icon__16.svg--icon svg {
   height: 16px;
 }
-.svg--icon__18 {
+
+.svg--icon__18, .svg--icon__18.svg--icon {
   height: 18px;
 }
-.svg--icon__18 svg {
+.svg--icon__18 svg, .svg--icon__18.svg--icon svg {
   height: 18px;
 }
-.svg--icon__21 {
+
+.svg--icon__21, .svg--icon__21.svg--icon {
   height: 21px;
 }
-.svg--icon__21 svg {
+.svg--icon__21 svg, .svg--icon__21.svg--icon svg {
   height: 21px;
 }
-.svg--icon__24 {
+
+.svg--icon__24, .svg--icon__24.svg--icon {
   height: 24px;
 }
-.svg--icon__24 svg {
+.svg--icon__24 svg, .svg--icon__24.svg--icon svg {
   height: 24px;
 }
 
@@ -11446,6 +11454,29 @@ tbody.collapse.in {
 .border-orange {
   border-color: #FFBD41;
   --border_color: #FFBD41;
+}
+
+.svg-dark-grey svg,
+.svg-dark-grey.svg--icon svg {
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
+  --svg-icon-fill_blue: #333333;
+  --svg-icon-stroke_blue: #333333;
+}
+
+.text-dark-grey {
+  color: #333333;
+  --text_color: #333333;
+}
+
+.bg-dark-grey {
+  background-color: #333333;
+  --bg_color: #333333;
+}
+
+.border-dark-grey {
+  border-color: #333333;
+  --border_color: #333333;
 }
 
 .svg-grey svg,
