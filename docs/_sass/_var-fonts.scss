@@ -1,0 +1,52 @@
+// @function _fontsList($keys...) {
+//   @return val($fontsList, $keys...);
+// }
+$fontsList: (
+  "Roboto": (
+    "normal": (
+      400:                                  roboto-v18-cyrillic_latin-regular,
+      600:                                  roboto-v18-cyrillic_latin-700,
+    ),
+    "italic": (
+      400:                                  roboto-v18-cyrillic_latin-italic,
+      600:                                  roboto-v18-cyrillic_latin-700italic,
+    )
+  )
+);
+
+@function _fontSizes($keys...) {
+  @return val($fontSizes, $keys...);
+}
+$fontSizes: (
+  body:                                                                      12,
+  btn:                                                                       12,
+  btnXs:                                                                     10,
+  btnLg:                                                                     14,
+  controlLabel:                                                              11,
+  controlLabel__formFree:                                                    12,
+  controlLabel_active__formFree:                                             11,
+  formElem:                                                                  12,
+  checkbox:                                                                  12,
+  inputGroupElem:                                                            12,
+  dropdown:                                                                  12,
+  dropdownHeader:                                                            11,
+  pagination:                                                                12,
+  popoverHeader:                                                             14,
+  toast:                                                                     12,
+  thead:                                                                     11,
+  tbody:                                                                     13,
+  tfoot:                                                                     13,
+  popover:                                                                   12,
+  tooltip:                                                                   12,
+  navPills:                                                                  12,
+  navTabs:                                                                   13,
+);
+
+@function _fontWeight($keys...) {
+  @return val($fontWeight, $keys...);
+}
+$fontWeight: (
+  btn:                                                                      400,
+  inputGroupElem:                                                           400,
+  navPills:                                                                 400,
+);

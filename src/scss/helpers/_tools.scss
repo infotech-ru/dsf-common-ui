@@ -47,88 +47,51 @@
   }
 }
 
-$marginTopSizes: 0, 5, 10, 15, 20, 25, 30, 40, 50;
-@each $marginTop in $marginTopSizes {
-  .mt-#{$marginTop} {
-      margin-top: rem($marginTop);
+@each $marginSize in $marginSizes {
+  .mt-#{$marginSize} {
+      margin-top: rem($marginSize);
+  }
+  .mr-#{$marginSize} {
+      margin-right: rem($marginSize);
+  }
+  .mb-#{$marginSize} {
+      margin-bottom: rem($marginSize);
+  }
+  .ml-#{$marginSize} {
+      margin-left: rem($marginSize);
+  }
+  .margin-#{$marginSize} {
+      margin: rem($marginSize);
   }
 }
 .mt-auto{
   margin-top: auto;
 }
-
-$marginRightSizes: 0, 5, 8, 10, 15, 20, 25, 30;
-@each $marginRight in $marginRightSizes {
-  .mr-#{$marginRight} {
-    margin-right: rem($marginRight);
-  }
-}
 .mr-auto{
   margin-right: auto;
-}
-
-$marginBottomSizes: 0, 5, 10, 15, 20, 25, 30, 40, 50;
-@each $marginBottom in $marginBottomSizes {
-  .mb-#{$marginBottom} {
-      margin-bottom: rem($marginBottom);
-  }
 }
 .mb-auto{
   margin-bottom: auto;
 }
-
-$marginLeftSizes: 0, 5, 10, 15, 20;
-@each $marginLeft in $marginLeftSizes {
-  .ml-#{$marginLeft} {
-      margin-left: rem($marginLeft);
-  }
-}
-
 .ml-auto {
   margin-left: auto;
 }
 
-$marginSizes: 0, 5, 10;
-@each $margin in $marginSizes {
-  .margin-#{$margin} {
-      margin: rem($margin);
+@each $paddingSize in $paddingSizes {
+  .pt-#{$paddingSize} {
+      padding-top: rem($paddingSize);
   }
-}
-
-$paddingSideSizes: 0, 5, 10, 12, 15, 16, 20;
-
-// $paddingTopSizes: 0, 5, 10, 15, 20;
-@each $paddingTop in $paddingSideSizes {
-  .pt-#{$paddingTop} {
-    padding-top: rem($paddingTop);
+  .pr-#{$paddingSize} {
+      padding-right: rem($paddingSize);
   }
-}
-
-// $paddingRightSizes: 0, 5, 10, 15, 20;
-@each $paddingRight in $paddingSideSizes {
-  .pr-#{$paddingRight} {
-      padding-right: rem($paddingRight);
+  .pb-#{$paddingSize} {
+      padding-bottom: rem($paddingSize);
   }
-}
-
-// $paddingBottomSizes: 0, 5, 10, 15, 20;
-@each $paddingBottom in $paddingSideSizes {
-  .pb-#{$paddingBottom} {
-      padding-bottom: rem($paddingBottom);
+  .pl-#{$paddingSize} {
+      padding-left: rem($paddingSize);
   }
-}
-
-// $paddingLeftSizes: 0, 5, 10, 15, 20;
-@each $paddingLeft in $paddingSideSizes {
-  .pl-#{$paddingLeft} {
-    padding-left: rem($paddingLeft);
-  }
-}
-
-$paddingSizes: 0, 5, 10, 15, 20;
-@each $padding in $paddingSizes {
-  .padding-#{$padding} {
-    padding: rem($padding);
+  .padding-#{$paddingSize} {
+    padding: rem($paddingSize);
   }
 }
 
@@ -281,21 +244,29 @@ $paddingSizes: 0, 5, 10, 15, 20;
   }
 }
 
-@each $colorTools in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'muted', 'orange', 'dark-grey', 'grey', 'grey2', 'grey4', 'light-grey', 'light-grey2', 'dark-red', 'clear', 'white', 'light-blue', 'light-blue3', 'rose', 'vibrant-blue', 'light-yellow' {
+@each $name, $value in $brand-namecolors {
 
-  @include svg-icon-variant('.svg-#{$colorTools}', _colorTools(#{$colorTools}_svg));
-  
-  .text-#{$colorTools}{
-    color: _colorTools(#{$colorTools}_color);
-    #{--text_color}: _colorTools(#{$colorTools}_color);
+  .svg-#{$name},
+  .svg-#{$name}.svg--icon {
+    svg {
+      #{--svg-icon-fill}: $value;
+      #{--svg-icon-stroke}: $value;
+      #{--svg-icon-fill_blue}: $value;
+      #{--svg-icon-stroke_blue}: $value;
+    }
   }
-  .bg-#{$colorTools}{
-    background-color: _colorTools(#{$colorTools}_bg);
-    #{--bg_color}: _colorTools(#{$colorTools}_bg);
+
+  .text-#{$name}{
+    color: #{$value};
+    #{--text_color}: #{$value};
   }
-  .border-#{$colorTools}{
-    border-color: _colorTools(#{$colorTools}_border);
-    #{--border_color}: _colorTools(#{$colorTools}_border);
+  .bg-#{$name}{
+    background-color: #{$value};
+    #{--bg_color}: #{$value};
+  }
+  .border-#{$name}{
+    border-color: #{$value};
+    #{--border_color}: #{$value};
   }
 }
 

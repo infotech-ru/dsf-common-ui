@@ -42,6 +42,16 @@ module.exports = function (grunt) {
                     },
                 ]
             },
+            sass:{
+              files: [
+                    {
+                        expand: true,
+                        cwd: "./src/scss/utilities/variables",
+                        src: "*.scss",
+                        dest: "./docs/_sass/"
+                    },
+                ]
+            }
         },
         svg_sprite: {
           default: {
