@@ -114,20 +114,31 @@ order: 8
   </div>
 </div>
 
-<h4> Особый вид уведомлений с иконкой устанавливается доп. классом `alert__attention`</h4>
+<h4> Особый вид уведомлений с иконкой устанавливается доп. классом `alert__attention`, `alert__caution`</h4>
 
 <div class="bs-docs-example">
   <div class="alert alert-warning alert__attention">
-      <h4>Внимание!</h4>
+      <div class="h4">Внимание!</div>
       <div>Тут текст уведлмления alert__attention</div>
-      <a href="">Внесите данные</a></div>
+      <a href="">Внесите данные</a>
+  </div>
+
+    <div class="alert alert-warning alert__caution">
+      <div class="h4">Внимание!</div>
+      <div class="">Тут текст уведлмления alert__caution</div>
+      <a href="">Внесите данные</a>
+    </div>
 </div>
 
 {% highlight html %}
-<div class="bs-docs-example">
-  <div class="alert alert-warning alert__attention">
-      <h4>Внимание!</h4>
-      <div>Тут текст уведлмления alert__attention</div>
-      <a href="">Внесите данные</a></div>
-</div>
+  <div class="alert alert-warning alert__attention mb-20">
+    <div class="h4">Внимание!</div>
+    <div>Тут текст уведлмления alert__attention</div>
+    <a href="">Внесите данные</a>
+  </div>
+  <div class="alert alert-warning alert__caution">
+      <div class="h4">Внимание!</div>
+      <div class="">Тут текст уведлмления alert__caution</div>
+      <a href="">Внесите данные</a>
+  </div>
 {% endhighlight %}
