@@ -9513,10 +9513,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-default .close {
   color: #333333;
-  height: 11px;
-  width: 11px;
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
+  --svg-icon-stroke_blue: #333333;
 }
 .alert-default h4 {
   color: #333333;
@@ -9528,10 +9527,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-primary .close {
   color: #ffffff;
-  height: 11px;
-  width: 11px;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
 }
 .alert-primary h4 {
   color: #ffffff;
@@ -9543,10 +9541,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-success .close {
   color: #467B46;
-  height: 11px;
-  width: 11px;
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
+  --svg-icon-stroke_blue: #467B46;
 }
 .alert-success h4 {
   color: #333333;
@@ -9558,10 +9555,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-danger .close {
   color: #D9534F;
-  height: 11px;
-  width: 11px;
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
+  --svg-icon-stroke_blue: #D9534F;
 }
 .alert-danger h4 {
   color: #D9534F;
@@ -9573,10 +9569,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-warning .close {
   color: #D59A00;
-  height: 11px;
-  width: 11px;
   --svg-icon-fill: #D59A00;
   --svg-icon-stroke: #D59A00;
+  --svg-icon-stroke_blue: #D59A00;
 }
 .alert-warning h4 {
   color: #D9534F;
@@ -9588,10 +9583,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-info .close {
   color: #4A8DC6;
-  height: 11px;
-  width: 11px;
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
 }
 .alert-info h4 {
   color: #333333;
@@ -9603,16 +9597,16 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   cursor: pointer;
   float: none;
   opacity: 1;
-  height: 11px;
+  height: 14px;
+  width: 14px;
   position: absolute;
   right: 10px;
   text-shadow: none;
   top: 10px;
-  width: 11px;
 }
 .alert .close svg {
-  height: 11px;
-  width: 11px;
+  height: 14px;
+  width: 14px;
 }
 .alert__attention {
   background-image: url("/dist/sprite.symbol.svg#bicolors-information");
@@ -9627,7 +9621,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: 10px center;
-  padding-left: 34px;
+  padding-left: 44px;
 }
 
 .alert-dismissable,
