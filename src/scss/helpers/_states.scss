@@ -54,17 +54,17 @@ tbody.collapse.in { display: table-row-group; }
 
 .favorite__active{
   .svg--icon{
-    #{--favorite-stroke-active}: _colorTools(vibrant-blue_svg);
-    #{--favorite-fill-active}: _colorTools(vibrant-blue_svg);
-    #{--favorite-stroke_blue-active}: _colorTools(white_svg);
+    #{--favorite-stroke-active}: map-get($brand-namecolors, 'vibrant-blue'); 
+    #{--favorite-fill-active}: map-get($brand-namecolors, 'vibrant-blue'); 
+    #{--favorite-stroke_blue-active}: map-get($brand-namecolors, 'white');
   }
 }
 
 .star__active{
   .svg--icon{
-    #{--star-stroke-active}: _colorTools(vibrant-blue_svg);
-    #{--star-fill-active}: _colorTools(vibrant-blue_svg);
-    #{--star-stroke_blue-active}: _colorTools(vibrant-blue_svg);
+    #{--star-stroke-active}: map-get($brand-namecolors, 'vibrant-blue');
+    #{--star-fill-active}: map-get($brand-namecolors, 'vibrant-blue');
+    #{--star-stroke_blue-active}: map-get($brand-namecolors, 'vibrant-blue');
   }
 }
 

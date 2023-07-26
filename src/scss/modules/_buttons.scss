@@ -270,7 +270,7 @@ a.btn {
   background-image: none;
   box-shadow: none;
   border: none;
-  color: _colorTools(default_color);
+  color: map-get($brand-namecolors, 'default');
   cursor: pointer;
   display: inline-block;
   outline: none;

@@ -7000,7 +7000,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-image: none;
   box-shadow: none;
   border: none;
-  color: _colorTools(default_color);
+  color: #777777;
   cursor: pointer;
   display: inline-block;
   outline: none;
@@ -10551,15 +10551,15 @@ tbody.collapse.in {
 }
 
 .favorite__active .svg--icon {
-  --favorite-stroke-active: _colorTools(vibrant-blue_svg);
-  --favorite-fill-active: _colorTools(vibrant-blue_svg);
-  --favorite-stroke_blue-active: _colorTools(white_svg);
+  --favorite-stroke-active: #0094FF;
+  --favorite-fill-active: #0094FF;
+  --favorite-stroke_blue-active: #ffffff;
 }
 
 .star__active .svg--icon {
-  --star-stroke-active: _colorTools(vibrant-blue_svg);
-  --star-fill-active: _colorTools(vibrant-blue_svg);
-  --star-stroke_blue-active: _colorTools(vibrant-blue_svg);
+  --star-stroke-active: #0094FF;
+  --star-fill-active: #0094FF;
+  --star-stroke_blue-active: #0094FF;
 }
 
 .hoverTarget_parent .hoverTarget_item__block,
