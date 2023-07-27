@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H20" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M4 20H20" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M6 4C6 4 7.5 11 12 12C16.5 13 18 20 18 20" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M18 4C18 4 16.5 11 12 12C7.5 13 6 20 6 20" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M12 10C10.9005 10 10.3333 9.2 10 8H14C13.6667 9.2 13.0995 10 12 10Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M12 16C14.199 16 15.3333 16.8 16 18L8 18C8.66667 16.8 9.80101 16 12 16Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+</svg>
