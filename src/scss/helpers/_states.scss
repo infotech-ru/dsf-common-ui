@@ -52,6 +52,13 @@ tbody.collapse.in { display: table-row-group; }
   }
 }
 
+.svg--collapseIcon{
+  transform: rotate(180deg);
+  .collapsed &{ 
+    transform: rotate(0deg);
+  }
+}
+
 .favorite__active{
   .svg--icon{
     #{--favorite-stroke-active}: map-get($brand-namecolors, 'vibrant-blue'); 

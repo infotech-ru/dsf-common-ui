@@ -451,6 +451,13 @@ $brand-palette: (
   commentBlockInfo_color:                 map-get($brand-colors, _dark-grey),
   commentBlockComments_color:             map-get($brand-colors, _dark-grey),
   
+  collapseHeader_bgc:                     map-get($brand-colors, _light-grey2),
+  collapseHeader_border:                  map-get($brand-colors, _grey),
+  collapseHeader_color:                   map-get($brand-colors, _dark-grey),
+  collapseHeaderActive_bgc:               map-get($brand-colors, _grey2),
+  collapseHeaderActive_border:            map-get($brand-colors, _grey),
+  collapseHeaderActive_color:             map-get($brand-colors, _dark-grey),
+  
   controlLabel_color:                     map-get($brand-colors, _grey4),
   controlLabelActive_color:               map-get($brand-colors, _grey4),
   controlLabelActive_bgc:                 map-get($brand-colors, _white),

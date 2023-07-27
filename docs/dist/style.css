@@ -6392,6 +6392,43 @@ h6, .h6 {
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
+/* COLLAPSE                                                                   */
+/* path: dsf-common-ui/src/scss/modules/_collapse.scss                        */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.collapse_header__theme {
+  align-items: center;
+  background-color: #dddddd;
+  border-color: #BABABA;
+  border-style: solid;
+  border-width: 1px;
+  color: #333333;
+  display: flex;
+  height: 30px;
+  padding: 3px 9px;
+  width: 100%;
+}
+.collapse_header__theme .svg--collapseIcon {
+  margin-left: auto;
+  --svg-icon-stroke: #333333;
+  --svg-icon-stroke_blue: #333333;
+  --svg-icon-fill: #333333;
+  --svg-icon-fill_blue: #333333;
+}
+.collapse_header__theme.collapsed {
+  background-color: #F5F5F5;
+  border-color: #BABABA;
+  color: #333333;
+}
+.collapse_header__theme.collapsed .svg--collapseIcon {
+  --svg-icon-stroke: #333333;
+  --svg-icon-stroke_blue: #333333;
+  --svg-icon-fill: #333333;
+  --svg-icon-fill_blue: #333333;
+}
+
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
 /* BUTTONS                                                                    */
 /* path: dsf-common-ui/src/scss/modules/_buttons.scss                         */
 /*                                                                            */
@@ -10548,6 +10585,13 @@ tbody.collapse.in {
 .limited.collapsed .svg--icon {
   --limited-stroke-on: inherit;
   --svg-icon-fill: inherit;
+}
+
+.svg--collapseIcon {
+  transform: rotate(180deg);
+}
+.collapsed .svg--collapseIcon {
+  transform: rotate(0deg);
 }
 
 .favorite__active .svg--icon {
