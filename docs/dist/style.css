@@ -9040,6 +9040,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .table__tfootSticky > tfoot td,
 .table__tfootSticky > tfoot th {
   position: sticky;
+  z-index: 1001;
 }
 
 .summary {
