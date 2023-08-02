@@ -186,6 +186,7 @@
     border-radius: 1px;
     display: inline-flex;
     flex: 0 0 20px;
+    font-size: 0; // safari fix
     height: 18px;
     outline: none;
     padding: 2px;
@@ -207,6 +208,7 @@
     }
     &.active{
       background-color: _brand-colors(_grey2);
+      background-image: none;
       &:after{
         display: block;
       }

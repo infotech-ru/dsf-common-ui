@@ -7980,6 +7980,7 @@ fieldset[disabled] .checkbox-inline {
   border-radius: 1px;
   display: inline-flex;
   flex: 0 0 20px;
+  font-size: 0;
   height: 18px;
   outline: none;
   padding: 2px;
@@ -8002,6 +8003,7 @@ fieldset[disabled] .checkbox-inline {
 }
 .btn-group__radioCheckItem.active {
   background-color: #dddddd;
+  background-image: none;
 }
 .btn-group__radioCheckItem.active:after {
   display: block;
