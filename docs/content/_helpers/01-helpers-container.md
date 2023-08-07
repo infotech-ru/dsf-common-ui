@@ -32,10 +32,14 @@ order: 1
 `align-end` устанавливает align-items: flex-end;
 
 `flex-wrap` устанавливает flex-wrap: wrap;
+`flex-nowrap` устанавливает flex-wrap: nowrap;
 `flex-column` устанавливает flex-direction: column
 `flex-column-reverse` устанавливает flex-direction: column-reverse
 `flex-row` устанавливает flex-direction: row
 `flex-row-reverse` устанавливает flex-direction: row-reverse
+`flex-grow-null` устанавливает flex-grow: 0
+`flex-shrink-1` устанавливает flex-shrink: 1
+`flex-basis-100p` устанавливает flex-basis: 100%
 
 #### Высота контейнера
 `h-auto` - устанавливает автоматическую высоту

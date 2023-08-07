@@ -7392,7 +7392,7 @@ output {
   white-space: nowrap;
 }
 .css-formFree .control-label.active {
-  background-color: #ffffff;
+  background-color: var(--bg_color, #ffffff);
   font-size: 0.6875rem;
   left: -0.1875rem;
   line-height: 0.6875rem;
@@ -7405,7 +7405,7 @@ output {
 
 .form-control {
   background-image: none;
-  background-color: #ffffff;
+  background-color: var(--bg_color, #ffffff);
   border-radius: 1px;
   border: 1px solid #BABABA;
   box-shadow: none;
@@ -7754,7 +7754,7 @@ fieldset[disabled] .checkbox-inline {
 }
 .css-formFree .bootstrap-select .caret:before, .css-formFree .bootstrap-select .caret:after {
   border-style: solid;
-  border-color: #fff transparent transparent transparent;
+  border-color: var(--bg_color, #ffffff) transparent transparent transparent;
   content: "";
   display: block;
   position: absolute;

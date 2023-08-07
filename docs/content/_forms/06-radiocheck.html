@@ -1,0 +1,69 @@
+---
+Title: Чекбокс
+menutitle: Чекбокс
+category: forms
+anchor: checkbox-item
+order: 5
+---
+
+Для стилизации radiobtn используется следующая структура.
+
+{% highlight html %}
+
+<div id="requestform-showbuyblock" class="btn-group btn-group__radioCheck" data-toggle="buttons" role="radiogroup"><label class="btn btn-group__radioCheckItem "><input type="radio" class="js-toggle" name="RequestForm[showBuyBlock]" value="0"> Нет</label>
+<label class="btn btn-group__radioCheckItem  active"><input type="radio" class="js-toggle" name="RequestForm[showBuyBlock]" value="1" checked=""> Да</label></div>
+
+  
+  или
+  
+
+<?= $form->field($client, 'sex', [
+      'options' => [
+          'class' => 'ml-10',
+      ],
+  ])
+  ->label(false)
+  ->radioList(
+      [true => 'Муж.', false => 'Жен.'],
+      [
+          'class' => 'btn-group btn-group__radioCheck',
+          'data-toggle' => 'buttons',
+          'item' => function ($index, $label, $name, $checked, $value) {
+              unset($index);
+              $itemOptions = [
+                  'value' => $value,
+                  'label' => $label,
+                  'class' => 'js-toggle',
+                  'labelOptions' => ['class' => 'btn btn-group__radioCheckItem ' . ($checked ? ' active' : '')],
+              ];
+
+              return Html::radio($name, $checked, $itemOptions);
+          },
+      ]
+  ) ?>
+{% endhighlight %}
+  <div class="bs-docs-example mb-10">
+<div id="clientform-sex" class="btn-group btn-group__radioCheck" data-toggle="buttons" role="radiogroup"><label class="btn btn-group__radioCheckItem"><input type="radio" class="js-toggle" name="ClientForm[sex]" value="1"> Муж.</label>
+<label class="btn btn-group__radioCheckItem active"><input type="radio" class="js-toggle" name="ClientForm[sex]" value="0"> Жен.</label></div>
+</div>
+{% highlight html %}
+        <?= $form->field($model, 'creditType')->radioList(RequestCredit::getCreditTypeList(), [
+            'class' => 'd-flex',
+            'item' => function ($index, $label, $name, $checked, $value) use ($model) {
+                $options = [
+                    'label' => null,
+                    'value' => $value,
+                    'id' => $id = Html::getInputId($model, 'creditType') . "-$value",
+                ];
+
+                return '<div class="radio-item mr-10">'
+                    . Html::radio($name, $checked, $options)
+                    . Html::label($label, $id, ['class' => 'radio'])
+                    . '</div>';
+            }
+        ])->label(false) ?>
+{% endhighlight %}
+  <div class="bs-docs-example mb-10">
+    <div id="clientform-sex" class="d-flex" role="radiogroup"><div class="radio-item mr-10"><input type="radio" id="clientform-sex-1" name="ClientForm[sex]" value="1"><label class="radio" for="clientform-sex-1">Муж.</label></div>
+<div class="radio-item mr-10"><input type="radio" id="clientform-sex-0" name="ClientForm[sex]" value="0"><label class="radio" for="clientform-sex-0">Жен.</label></div></div>
+</div>

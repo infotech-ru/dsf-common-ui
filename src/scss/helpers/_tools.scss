@@ -175,10 +175,14 @@
 .align-center          { align-items: center; }
 .align-end             { align-items: flex-end; }
 .flex-wrap             { flex-wrap: wrap; }
+.flex-nowrap           { flex-wrap: nowrap; }
 .flex-column           { flex-direction: column; }
 .flex-column-reverse   { flex-direction: column-reverse; }
 .flex-row              { flex-direction: row; }
 .flex-row-reverse      { flex-direction: row-reverse; }
+.flex-grow-null        { flex-grow: 0 }
+.flex-shrink-1         { flex-shrink: 1; }
+.flex-basis-100p       { flex-basis: 100%; }
 
 .rotate90              { transform: rotate(90deg); }
 .rotate180             { transform: rotate(180deg); }
