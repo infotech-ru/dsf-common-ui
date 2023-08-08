@@ -296,14 +296,14 @@ tbody tr {
         th {
           top: 0;
           &:first-child {
+            z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+            &[rowspan="2"] {
               z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
-              &[rowspan="2"] {
-                z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
-              }
-              &[rowspan="3"] {
-                z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
-              }
             }
+            &[rowspan="3"] {
+              z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+            }
+          }
         }
       }
       &:nth-child(2) {
@@ -328,6 +328,15 @@ tbody tr {
     th{
       position: sticky;
       z-index: _zindex(tableStickyTheadTh);
+      &:first-child {
+        z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+        &[rowspan="2"] {
+          z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+        }
+        &[rowspan="3"] {
+          z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+        }
+      }
     }
   }
 }

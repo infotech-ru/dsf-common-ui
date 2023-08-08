@@ -9044,6 +9044,18 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   position: sticky;
   z-index: 1001;
 }
+.table__tfootSticky > tfoot td:first-child,
+.table__tfootSticky > tfoot th:first-child {
+  z-index: 1003;
+}
+.table__tfootSticky > tfoot td:first-child[rowspan="2"],
+.table__tfootSticky > tfoot th:first-child[rowspan="2"] {
+  z-index: 1003;
+}
+.table__tfootSticky > tfoot td:first-child[rowspan="3"],
+.table__tfootSticky > tfoot th:first-child[rowspan="3"] {
+  z-index: 1003;
+}
 
 .summary {
   font-size: 0.6875rem;
