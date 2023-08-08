@@ -7570,6 +7570,9 @@ fieldset[disabled] .checkbox-inline {
   padding-right: 0;
   padding-left: 0;
 }
+.form-control-static__height {
+  height: 1.75rem;
+}
 
 .has-success .help-block,
 .has-success .control-label,

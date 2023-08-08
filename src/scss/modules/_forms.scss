@@ -308,11 +308,11 @@ textarea.form-control {
   padding-bottom: ($padding-base-vertical + 1);
   // Remove default margin from `p`
   margin-bottom: 0;
-  // &.input-lg,
   padding-right: 0;
   padding-left: 0;
-  // &.input-sm {
-  // }
+  &__height{
+    height: rem(calc(_lineHeight(input) + 2));
+  }
 }
 
 // Feedback states
