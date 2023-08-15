@@ -36,6 +36,15 @@
   &:after{
     @extend %label;
     content: attr(data-label-text);
+    margin-left: var(--label_margin-left, 5px);
+  }
+}
+
+.label__before{
+  &:before{
+    @extend %label;
+    content: attr(data-label-text);
+    margin-right: var(--label_margin-right, 5px);
   }
 }
 

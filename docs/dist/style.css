@@ -7126,7 +7126,7 @@ input[type=button].btn-block {
 /* path: dsf-common-ui/src/scss/modules/_labels.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.label__after:after, .label {
+.label__before:before, .label__after:after, .label {
   align-items: center;
   border-radius: 2px;
   background-color: var(--label_bgc, #00000000);
@@ -7152,6 +7152,12 @@ input[type=button].btn-block {
 
 .label__after:after {
   content: attr(data-label-text);
+  margin-left: var(--label_margin-left, 5px);
+}
+
+.label__before:before {
+  content: attr(data-label-text);
+  margin-right: var(--label_margin-right, 5px);
 }
 
 .label-default {

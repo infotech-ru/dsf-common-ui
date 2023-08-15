@@ -33,18 +33,26 @@ order: 10
 </div>
 
 <p> 
-Для вывода дополнительной информации в виде `label`, но без модификации контейнера на котором навешивается - используется `.label__after` и необходимый модификатор цвета. Текст дополнительного поля выводится через дата-атрибут `data-label-text`
+Для вывода дополнительной информации в виде `label`, но без модификации всего контейнера, на котором навешивается класс - используется `.label__after` или `label__before` и необходимый модификатор цвета. Текст дополнительного поля выводится через дата-атрибут `data-label-text`. Возможно изменения отступа от поля через переменные --label_margin-left или --label_margin-right
 </p>
 
 {% highlight html %}
 <div class="form-group"> 
-  <label class="control-label label__after label-danger" data-label-text="Название доп. поля">Название поля</label>
+  <label class="control-label label__after label-danger" data-label-text="Название доп. постзаголовка" style="--label_margin-left: 10px">Название заголовка</label>
   <input type="text" class="form-control">
 </div>
+<div class="form-group"> 
+    <label class="control-label label__before label-danger" data-label-text="Название nредзаголовка">Название заголовка</label>
+    <input type="text" class="form-control">
+  </div>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="form-group"> 
-    <label class="control-label label__after label-danger" data-label-text="Название доп. поля">Название поля</label>
+    <label class="control-label label__after label-danger" data-label-text="Название nостзаголовка" style="--label_margin-left: 10px">Название заголовка</label>
+    <input type="text" class="form-control">
+  </div>
+  <div class="form-group"> 
+    <label class="control-label label__before label-danger" data-label-text="Название nредзаголовка">Название заголовка</label>
     <input type="text" class="form-control">
   </div>
 </div>
