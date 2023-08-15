@@ -1,51 +1,29 @@
 ---
-Title: Чекбокс
-menutitle: Чекбокс
+Title: Radiobtn
+menutitle: Кнопки-переключатели
 category: forms
-anchor: checkbox-item
-order: 5
+anchor: radiobtn-item
+order: 6
 ---
+<p>Стилизация переключателя radio</p>
 
-Для стилизации radiobtn используется следующая структура.
-
-{% highlight html %}
-
-<div id="requestform-showbuyblock" class="btn-group btn-group__radioCheck" data-toggle="buttons" role="radiogroup"><label class="btn btn-group__radioCheckItem "><input type="radio" class="js-toggle" name="RequestForm[showBuyBlock]" value="0"> Нет</label>
-<label class="btn btn-group__radioCheckItem  active"><input type="radio" class="js-toggle" name="RequestForm[showBuyBlock]" value="1" checked=""> Да</label></div>
-
-  
-  или
-  
-
-<?= $form->field($client, 'sex', [
-      'options' => [
-          'class' => 'ml-10',
-      ],
-  ])
-  ->label(false)
-  ->radioList(
-      [true => 'Муж.', false => 'Жен.'],
-      [
-          'class' => 'btn-group btn-group__radioCheck',
-          'data-toggle' => 'buttons',
-          'item' => function ($index, $label, $name, $checked, $value) {
-              unset($index);
-              $itemOptions = [
-                  'value' => $value,
-                  'label' => $label,
-                  'class' => 'js-toggle',
-                  'labelOptions' => ['class' => 'btn btn-group__radioCheckItem ' . ($checked ? ' active' : '')],
-              ];
-
-              return Html::radio($name, $checked, $itemOptions);
-          },
-      ]
-  ) ?>
-{% endhighlight %}
-  <div class="bs-docs-example mb-10">
-<div id="clientform-sex" class="btn-group btn-group__radioCheck" data-toggle="buttons" role="radiogroup"><label class="btn btn-group__radioCheckItem"><input type="radio" class="js-toggle" name="ClientForm[sex]" value="1"> Муж.</label>
-<label class="btn btn-group__radioCheckItem active"><input type="radio" class="js-toggle" name="ClientForm[sex]" value="0"> Жен.</label></div>
+<div class="bs-docs-example mb-10">
+    <div class="d-flex" role="radiogroup">
+        <div class="radio-item mr-10">
+            <input type="radio" id="exampleName-1" name="exampleName" value="1">
+            <label class="radio" for="exampleName-1">
+                Муж.
+            </label>
+        </div>
+        <div class="radio-item mr-10">
+            <input type="radio" id="exampleName-0" name="exampleName" value="0">
+            <label class="radio" for="exampleName-0">
+                Жен.
+            </label>
+        </div>
+    </div>
 </div>
+
 {% highlight html %}
         <?= $form->field($model, 'creditType')->radioList(RequestCredit::getCreditTypeList(), [
             'class' => 'd-flex',
@@ -63,7 +41,72 @@ order: 5
             }
         ])->label(false) ?>
 {% endhighlight %}
-  <div class="bs-docs-example mb-10">
-    <div id="clientform-sex" class="d-flex" role="radiogroup"><div class="radio-item mr-10"><input type="radio" id="clientform-sex-1" name="ClientForm[sex]" value="1"><label class="radio" for="clientform-sex-1">Муж.</label></div>
-<div class="radio-item mr-10"><input type="radio" id="clientform-sex-0" name="ClientForm[sex]" value="0"><label class="radio" for="clientform-sex-0">Жен.</label></div></div>
+
+
+<p>Для стилизации под маленький переключатель (false-true) используется следующая структура:</p>
+
+<div class="bs-docs-example mb-10">
+    <div class="btn-group btn-group__radioCheck" data-toggle="buttons" role="radiogroup">
+        <button class="btn btn-group__radioCheckItem">
+            Нет
+        </button>
+        <button class="btn btn-group__radioCheckItem active">
+            Да
+        </button>
+    </div>
 </div>
+
+{% highlight html %}
+html:
+
+<div class="btn-group btn-group__radioCheck" data-toggle="buttons" role="radiogroup">
+    <button class="btn btn-group__radioCheckItem" type="button">
+        Нет
+    </button>
+    <button class="btn btn-group__radioCheckItem active" type="button">
+        Да
+    </button>
+</div>
+
+или
+
+<div class="btn-group btn-group__radioCheck" data-toggle="buttons" role="radiogroup">
+    <label class="btn btn-group__radioCheckItem" type="button">
+        <input type="radio" name="exampleName0" value="0">
+        Нет
+    </label>
+    <label class="btn btn-group__radioCheckItem active" type="button">
+        <input type="radio" name="exampleName0" value="1" checked=""> 
+        Да
+    </label>
+</div>
+  
+php:
+    radioList:
+
+    <?= $form->field($client, 'exampleName0', [
+        'options' => [
+            'class' => 'ml-10',
+        ],
+    ]) 
+    ->label(false)
+    ->radioList(
+        [true => 'Нет', false => 'Да'],
+        [
+            'class' => 'btn-group btn-group__radioCheck',
+            'data-toggle' => 'buttons',
+            'item' => function ($index, $label, $name, $checked, $value) {
+                unset($index);
+                $itemOptions = [
+                    'value' => $value,
+                    'label' => $label,
+                    'labelOptions' => ['class' => 'btn btn-group__radioCheckItem ' . ($checked ? ' active' : '')],
+                ];
+
+            },
+        ]
+    ) ?>
+
+
+{% endhighlight %}
+

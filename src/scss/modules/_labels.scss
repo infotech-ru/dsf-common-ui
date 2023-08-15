@@ -4,11 +4,11 @@
 /* path: dsf-common-ui/src/scss/modules/_labels.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.label {
+%label{
   align-items: center;
   border-radius: 2px;
-  color: _brand-colors(_white);
-  // display: inline-block;
+  background-color: var(--label_bgc, _brand-colors(_transparent));
+  color: var(--label_color, _brand-colors(_white));
   display: inline-flex;
   font-size: rem(10);
   font-weight: 700;
@@ -17,22 +17,34 @@
   padding: 0 5px 0.05em 4px;
   text-align: center;
   text-transform: uppercase;
-  // vertical-align: baseline;
   white-space: nowrap;
+}
+
+.label {
+  @extend %label;
   &:empty {
     display: none;
   }
-  @each $label in default, primary, success, danger, warning, info, 'yellow', 'black', 'dark-grey' {
-    &-#{$label}{
-      background-color: _brand-label(#{$label}_bg);
-      color: _brand-label(#{$label}_color);
-    }
-  }
-
   // Quick fix for labels in buttons
   .btn & {
     position: relative;
     top: -1px;
+  }
+}
+
+.label__after{
+  &:after{
+    @extend %label;
+    content: attr(data-label-text);
+  }
+}
+
+@each $label in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'yellow', 'black', 'dark-grey' {
+  .label-#{$label}{
+    // background-color: _brand-label(#{$label}_bg);
+    // color: _brand-label(#{$label}_color);
+    #{--label_color}: _brand-label(#{$label}_color);
+    #{--label_bgc}: _brand-label(#{$label}_bg);
   }
 }
 

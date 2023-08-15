@@ -7126,10 +7126,11 @@ input[type=button].btn-block {
 /* path: dsf-common-ui/src/scss/modules/_labels.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.label {
+.label__after:after, .label {
   align-items: center;
   border-radius: 2px;
-  color: #ffffff;
+  background-color: var(--label_bgc, #00000000);
+  color: var(--label_color, #ffffff);
   display: inline-flex;
   font-size: 0.625rem;
   font-weight: 700;
@@ -7140,48 +7141,62 @@ input[type=button].btn-block {
   text-transform: uppercase;
   white-space: nowrap;
 }
+
 .label:empty {
   display: none;
-}
-.label-default {
-  background-color: #ffffff;
-  color: #333333;
-}
-.label-primary {
-  background-color: #4A8DC6;
-  color: #ffffff;
-}
-.label-success {
-  background-color: #69C26A;
-  color: #ffffff;
-}
-.label-danger {
-  background-color: #D9534F;
-  color: #ffffff;
-}
-.label-warning {
-  background-color: #FFBD41;
-  color: #333333;
-}
-.label-info {
-  background-color: #B6D1E8;
-  color: #333333;
-}
-.label-yellow {
-  background-color: #FFF741;
-  color: #333333;
-}
-.label-black {
-  background-color: #000000;
-  color: #ffffff;
-}
-.label-dark-grey {
-  background-color: #333333;
-  color: #ffffff;
 }
 .btn .label {
   position: relative;
   top: -1px;
+}
+
+.label__after:after {
+  content: attr(data-label-text);
+}
+
+.label-default {
+  --label_color: #333333;
+  --label_bgc: #ffffff;
+}
+
+.label-primary {
+  --label_color: #ffffff;
+  --label_bgc: #4A8DC6;
+}
+
+.label-success {
+  --label_color: #ffffff;
+  --label_bgc: #69C26A;
+}
+
+.label-danger {
+  --label_color: #ffffff;
+  --label_bgc: #D9534F;
+}
+
+.label-warning {
+  --label_color: #333333;
+  --label_bgc: #FFBD41;
+}
+
+.label-info {
+  --label_color: #333333;
+  --label_bgc: #B6D1E8;
+}
+
+.label-yellow {
+  --label_color: #333333;
+  --label_bgc: #FFF741;
+}
+
+.label-black {
+  --label_color: #ffffff;
+  --label_bgc: #000000;
+}
+
+.label-dark-grey {
+  --label_color: #ffffff;
+  --label_bgc: #333333;
 }
 
 a.label:hover, a.label:focus {
