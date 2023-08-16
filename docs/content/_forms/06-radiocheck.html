@@ -54,7 +54,20 @@ order: 6
             Да
         </button>
     </div>
+
+    <div class="form-group d-flex flex-row-reverse justify-flex-end align-center field-clientform-is_corporate">
+        <label class="form-control-static ml-5" for="clientform-is_corporate">Заголовок переключателя</label>
+        <div id="clientform-is_corporate" class="form-control btn-group btn-group__radioCheck" value="0" data-toggle="buttons">
+            <label class="btn btn-group__radioCheckItem active">
+                <input type="radio" class="js-toggle" name="ClientForm[is_corporate]" value="0" checked=""> Нет
+            </label>
+            <label class="btn btn-group__radioCheckItem">
+                <input type="radio" class="js-toggle" name="ClientForm[is_corporate]" value="1"> Да
+            </label>
+        </div>
+    </div>
 </div>
+
 
 {% highlight html %}
 html:
@@ -82,6 +95,13 @@ html:
 </div>
   
 php:
+    use app\widgets\Toggle
+
+    <?= $form->field($model, 'XXX', ['options' => ['class' => 'form-group d-flex flex-row-reverse justify-flex-end align-center']])
+        ->widget(Toggle::class, ['options' => ['value' => ''],])
+        ->label($model->getAttributeLabel('XXX'), ['class' => 'form-control-static ml-5']) ?>
+
+php:
     radioList:
 
     <?= $form->field($client, 'exampleName0', [
@@ -106,7 +126,6 @@ php:
             },
         ]
     ) ?>
-
 
 {% endhighlight %}
 

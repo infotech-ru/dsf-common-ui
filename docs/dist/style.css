@@ -7434,6 +7434,7 @@ output {
   display: block;
   height: 1.75rem;
   font-size: 0.75rem;
+  font-weight: 400;
   line-height: 1.625rem;
   padding: 0 0.625rem;
   width: 100%;
@@ -7584,6 +7585,9 @@ fieldset[disabled] .checkbox-inline {
 }
 
 .form-control-static {
+  color: #333333;
+  font-size: 0.75rem;
+  font-weight: 400;
   min-height: auto;
   padding-top: 7px;
   padding-bottom: 7px;
