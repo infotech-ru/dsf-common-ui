@@ -33,7 +33,9 @@ order: 10
 </div>
 
 <p> 
-Для вывода дополнительной информации в виде `label`, но без модификации всего контейнера, на котором навешивается класс - используется `.label__after` или `label__before` и необходимый модификатор цвета. Текст дополнительного поля выводится через дата-атрибут `data-label-text`. Возможно изменения отступа от поля через переменные --label_margin-left или --label_margin-right
+Для вывода дополнительной информации в виде `label`, но без модификации всего контейнера, на котором навешивается класс - используется `.label__after` или `label__before` и необходимый модификатор цвета. <br>
+Текст дополнительного поля выводится через дата-атрибут `data-label-text`. <br>
+Возможно изменения отступа от поля через изменения в style переменной --label_margin-left или --label_margin-right
 </p>
 
 {% highlight html %}
@@ -42,17 +44,17 @@ order: 10
   <input type="text" class="form-control">
 </div>
 <div class="form-group"> 
-    <label class="control-label label__before label-danger" data-label-text="Название nредзаголовка">Название заголовка</label>
+    <label class="control-label label__before label-success" data-label-text="Название предзаголовка">Название заголовка</label>
     <input type="text" class="form-control">
   </div>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="form-group"> 
-    <label class="control-label label__after label-danger" data-label-text="Название nостзаголовка" style="--label_margin-left: 10px">Название заголовка</label>
+    <label class="control-label label__after label-danger" data-label-text="Название постзаголовка" style="--label_margin-left: 10px">Название заголовка</label>
     <input type="text" class="form-control">
   </div>
   <div class="form-group"> 
-    <label class="control-label label__before label-danger" data-label-text="Название nредзаголовка">Название заголовка</label>
+    <label class="control-label label__before label-success" data-label-text="Название предзаголовка">Название заголовка</label>
     <input type="text" class="form-control">
   </div>
 </div>
