@@ -11180,6 +11180,10 @@ tbody.collapse.in {
   text-transform: capitalize;
 }
 
+.text-regular {
+  font-weight: 400;
+}
+
 .text-bold {
   font-weight: 700;
 }
