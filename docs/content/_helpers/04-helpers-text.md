@@ -8,16 +8,14 @@ order: 4
 
 #### Классы для работы с переносом или длиной текста
 
-`nowrap`
-`break-word`
-`overflow-ellipsis`
+`nowrap`, `whitespace-normal`, `break-word`, `overflow-ellipsis`, `overflow-hidden`, `overflowX-auto`, `overflowY-auto`
 
-#### Классы для выравнивание текста в контейнере по горизонтали.
+только для мобильных:
+ `nowrap__mobile`,  `whitespace-normal__mobile`
+#### Классы для выравнивание текста в контейнере по горизонтали
 
-`text-left`
-`text-right`
-`text-center`
-`text-justify`
+`text-left`, `text-right`, `text-center`, `text-justify`
+
 {% highlight html %}
 <div class="text-left">text-left</div>
 <div class="text-right">text-right</div>
@@ -28,17 +26,15 @@ order: 4
   <div class="text-right mb-10">text-right</div>
   <div class="text-center mb-10">text-center</div>
 </div>
-#### Классы для выравнивание текста в контейнере по вертикали.
 
-`va-middle`
-`va-top`
-`va-bottom`
+#### Классы для выравнивание текста в контейнере по вертикали
 
-#### Классы для изменения регистра текста.
+`va-middle`, `va-top`, `va-bottom`
 
-`text-lowercase`
-`text-uppercase`
-`text-capitalize`
+#### Классы для изменения регистра текста
+
+`text-lowercase`, `text-uppercase`, `text-capitalize`
+
 {% highlight html %}
   <div class="text-capitalize">text-capitalize</div>
   <div class="text-uppercase">text-uppercase</div>
@@ -50,17 +46,24 @@ order: 4
   <div class="text-lowercase mb-10">text-lowercase</div>
 </div>
 
-#### Классы для изменения толщины текста.
+#### Классы для изменения толщины текста
 
-`text-regular`, `text-bold`
+`text-regular`, `text-bold`,
 
-#### Классы для изменения размера текста.
+только на мобильных устройствах:
+
+`text-regular__mobile`, `text-bold__mobile`,
+
+#### Классы для изменения размера текста
+
+Следующие классы устанавливают размер шрифта в `rem` эквивалентное числу в классе, указанного `px`:
+
 `fz10`, `fz11`, `fz12`, `fz13`, `fz14`, `fz16`, `fz18`, `fz20`, `fz24`
 
-Устанавливает размер шрифта в `rem` эквивалентное числу в классе, указанного `px`
+
+Следующие классы устанавливают размер шрифта в `rem` только для мобильный устройств эквивалентное числу в классе, указанного `px`:
 
 `fz10__mobile`, `fz11__mobile`, `fz12__mobile`, `fz13__mobile`, `fz14__mobile`, `fz16__mobile`, `fz18__mobile`, `fz20__mobile`, `fz24__mobile`
-Устанавливает размер шрифта в `rem` только для мобильный устройств эквивалентное числу в классе, указанного `px`
 
 {% highlight html %}
 <div class="fz10">fz10</div>
@@ -80,8 +83,14 @@ order: 4
 
 #### Классы для изменения междустрочного интервала.
 
-Устанавливает значение в `px` равное числу в классе, указанного `px`
-`lh12`, `lh14`, `lh16`, `lh18`
+Следующие классы устанавливают значение в `px` равное числу в классе, указанного `px`:
+
+`lh12`, `lh14`, `lh16`, `lh18`, `lh20`, `lh24`
+
+
+Следующие классы устанавливают для мобильных устройств значение в `px` равное числу в классе, указанного `px`:
+
+`lh12__mobile`, `lh14__mobile`, `lh16__mobile`, `lh18__mobile`, `lh20__mobile`, `lh24__mobile`
 
 #### Поворот текста
 
@@ -95,6 +104,7 @@ order: 4
   <div class="transformText__right mb-10">transformText__right</div>
   <div class="transformText__left mb-10">transformText__left</div>
 </div>
+
 #### Классы для изменения  цвета текста.
 
 {% highlight html %}
