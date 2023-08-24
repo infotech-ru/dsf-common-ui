@@ -8,12 +8,12 @@ order: 1
 
 #### Классы для работы с контейнерами
 
-`d-mobile-none` - устанавливает display: none для мобильных устройств
-`d-mobile-flex` - устанавливает display: flex для мобильных устройств
-`d-mobile-block` - устанавливает display: block для мобильных устройств
-`d-mobile-inline-block` - устанавливает display: inline-block для мобильных устройств
-`d-mobile-inline-flex` - устанавливает display: inline-flex для мобильных устройств
-`d-mobile-grid` - устанавливает display: grid для мобильных устройств
+`d-none__mobile` - устанавливает display: none для мобильных устройств
+`d-block__mobile` - устанавливает display: block для мобильных устройств
+`d-inline-block__mobile` - устанавливает display: inline-block для мобильных устройств
+`d-flex__mobile` - устанавливает display: flex для мобильных устройств
+`d-inline-flex__mobile` - устанавливает display: inline-flex для мобильных устройств
+`d-grid__mobile` - устанавливает display: grid для мобильных устройств
 
 `d-none` - устанавливает display: none
 `d-flex` - устанавливает display: flex
@@ -41,9 +41,15 @@ order: 1
 `flex-shrink-1` устанавливает flex-shrink: 1
 `flex-basis-100p` устанавливает flex-basis: 100%
 
+`order-1`, `order-2`, `order-3`, `order-4`, `order-5`, `order-6`, `order-7`, `order-8`, `order-9`, `order-10` -
+Устанавливает соответствующие значение order.
+`order-1__mobile`, `order-2__mobile`, `order-3__mobile`, `order-4__mobile`, `order-5__mobile`, `order-6__mobile`, `order-7__mobile`, `order-8__mobile`, `order-9__mobile`, `order-10__mobile` -
+Устанавливает соответствующие значение order только при мобильном просмотре.
 #### Высота контейнера
 `h-auto` - устанавливает автоматическую высоту
 `h-100p` - устанавливает значение в 100% для высоты контейнера
+`maxh-none` - устанавливает значение `max-height` в значение `none`
+`minh-auto` - устанавливает значение `min-height` в значение `auto`
 
 #### Ширина контейнера
 `w-auto` - устанавливает автоматическую ширину

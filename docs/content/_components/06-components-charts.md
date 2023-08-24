@@ -7,7 +7,7 @@ order: 6
 ---
 
 Оформления график: в шапку помещается название и по необходимости подзаголовок. В тело `chartsBlock_body` помещаем сам график с рекомнедуемыми предустановками:
-использовать пустые значения для класса и для заголовка `title`, а также обязательные стили для графика - см. пример. 
+использовать пустые значения для класса и для заголовка `title`, а также обязательные стили для графика - см. пример.
 В качестве цвета `color` использовать переменные из списка:
 <div class="row">
 <div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-orange)"></span></div> - `var(--chart-orange)`</div></div>

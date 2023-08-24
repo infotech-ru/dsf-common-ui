@@ -55,54 +55,38 @@ order: 4
 `text-regular`, `text-bold`
 
 #### Классы для изменения размера текста.
+`fz10`, `fz11`, `fz12`, `fz13`, `fz14`, `fz16`, `fz18`, `fz20`, `fz24`
 
-`fz10` - устанавливает размер шрифта в 10px
+Устанавливает размер шрифта в `rem` эквивалентное числу в классе, указанного `px`
 
-`fz11` - устанавливает размер шрифта в 11px
+`fz10__mobile`, `fz11__mobile`, `fz12__mobile`, `fz13__mobile`, `fz14__mobile`, `fz16__mobile`, `fz18__mobile`, `fz20__mobile`, `fz24__mobile`
+Устанавливает размер шрифта в `rem` только для мобильный устройств эквивалентное числу в классе, указанного `px`
 
-`fz12` - устанавливает размер шрифта в 12px
-
-`fz13` - устанавливает размер шрифта в 13px
-
-`fz14` - устанавливает размер шрифта в 14px
-
-`fz16` - устанавливает размер шрифта в 16px
-
-`fz18` - устанавливает размер шрифта в 18px
-
-`fz20` - устанавливает размер шрифта в 20px
 {% highlight html %}
 <div class="fz10">fz10</div>
-<div class="fz11">fz11</div>
-<div class="fz12">fz12</div>
-<div class="fz13">fz13</div>
 <div class="fz14">fz14</div>
-<div class="fz16">fz16</div>
 <div class="fz18">fz18</div>
-<div class="fz20">fz20</div>
+<div class="fz24__mobile fz20">fz24__mobile fz20</div>
+<div class="fz24">fz24</div>
 {% endhighlight html %}
+
 <div class="bs-docs-example">
-  <div class="fz10 mb-10">fz10</div>
-  <div class="fz11 mb-10">fz11</div>
-  <div class="fz12 mb-10">fz12</div>
-  <div class="fz13 mb-10">fz13</div>
-  <div class="fz14 mb-10">fz14</div>
-  <div class="fz16 mb-10">fz16</div>
-  <div class="fz18 mb-10">fz18</div>
-  <div class="fz20 mb-10">fz20</div>
+  <div class="fz10 mr-10">fz10 = 10px</div>
+  <div class="fz14 mr-10">fz14 = 14px</div>
+  <div class="fz18 mr-10">fz18 = 18px</div>
+  <div class="fz24__mobile fz20">fz24__mobile = 24 на мобильных fz20 = 20px</div>
+  <div class="fz24 mr-10">fz24 = 24px</div>
 </div>
+
 #### Классы для изменения междустрочного интервала.
 
-`lh12` - устанавливает размер шрифта в 12px
-
-`lh14` - устанавливает размер шрифта в 14px
-
-`lh16` - устанавливает размер шрифта в 16px
-
-`lh18` - устанавливает размер шрифта в 18px
+Устанавливает значение в `px` равное числу в классе, указанного `px`
+`lh12`, `lh14`, `lh16`, `lh18`
 
 #### Поворот текста
+
 `transformText__left`, `transformText__right` - устанавливает поворот текста
+
 {% highlight html %}
   <div class="transformText__right">transformText__right</div>
   <div class="transformText__left">transformText__left</div>

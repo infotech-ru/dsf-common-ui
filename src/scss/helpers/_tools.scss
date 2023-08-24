@@ -120,11 +120,6 @@
 .overflowX-auto        { overflow-x: auto;}
 .overflowY-auto        { overflow-y: auto;}
 
-.p-relative            { position: relative; }
-.p-absolute            { position: absolute; }
-.p-sticky              { position: sticky; }
-
-
 .text-left             { text-align: left; }
 .text-right            { text-align: right; }
 .text-center           { text-align: center; }
@@ -141,26 +136,30 @@
 .text-regular          { font-weight: 400; }
 .text-bold             { font-weight: 700; }
 
-.fz10 { font-size: rem(10); }
-.fz11 { font-size: rem(11); }
-.fz12 { font-size: rem(12); }
-.fz13 { font-size: rem(13); }
-.fz14 { font-size: rem(14); }
-.fz16 { font-size: rem(16); }
-.fz18 { font-size: rem(18); }
-.fz20 { font-size: rem(20); }
+.transformText__left   { writing-mode: vertical-lr; transform: rotate(0deg); }
+.transformText__right  { writing-mode: vertical-lr; transform: rotate(180deg); }
+
+@each $fontSize in $fontSizeList {
+  .fz#{$fontSize} {
+      font-size: rem($fontSize);
+  }
+}
 
 .lh12 { line-height: 12px; }
 .lh14 { line-height: 14px; }
 .lh16 { line-height: 16px; }
 .lh18 { line-height: 18px; }
 
-.mobile-view .d-mobile-none { display: none; }
-.mobile-view .d-mobile-block { display: block; }
-.mobile-view .d-mobile-inline-block { display: inline-block; }
-.mobile-view .d-mobile-flex { display: flex; }
-.mobile-view .d-mobile-inlineflex { display: inline-flex; }
-.mobile-view .d-mobile-grid { display: grid; }
+.p-relative            { position: relative; }
+.p-absolute            { position: absolute; }
+.p-sticky              { position: sticky; }
+
+.mobile-view .d-none__mobile { display: none; }
+.mobile-view .d-block__mobile { display: block; }
+.mobile-view .d-inline-block__mobile { display: inline-block; }
+.mobile-view .d-flex__mobile { display: flex; }
+.mobile-view .d-inline-flex__mobile { display: inline-flex; }
+.mobile-view .d-grid__mobile { display: grid; }
 
 .d-none                { display: none !important; }
 .d-flex                { display: flex; }
@@ -185,14 +184,26 @@
 .flex-shrink-1         { flex-shrink: 1; }
 .flex-basis-100p       { flex-basis: 100%; }
 
+
+@each $order in 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 {
+  .order-#{$order} {
+      order: $order;
+  }
+  .mobile-view {
+    .order-#{$order}__mobile {
+      order: $order;
+    }
+  }
+}
+
 .rotate90              { transform: rotate(90deg); }
 .rotate180             { transform: rotate(180deg); }
 .rotate270             { transform: rotate(270deg); }
-.transformText__left   { writing-mode: vertical-lr; transform: rotate(0deg); }
-.transformText__right  { writing-mode: vertical-lr; transform: rotate(180deg); }
 
 .h-auto                { height: auto; }
 .h-100p                { height: 100%; }
+.maxh-none             { max-height: none;}
+.minh-auto             { min-height: auto;}
 
 .w-auto                { width: auto; }
 .w-100p                { width: 100%; }
@@ -250,7 +261,6 @@
 }
 
 @each $name, $value in $brand-namecolors {
-
   .svg-#{$name},
   .svg-#{$name}.svg--icon {
     svg {
