@@ -51,16 +51,31 @@
   .mt-#{$marginSize} {
       margin-top: rem($marginSize);
   }
+  .mobile-view .mt-#{$marginSize}__mobile {
+      margin-top: rem($marginSize);
+  }
   .mr-#{$marginSize} {
+      margin-right: rem($marginSize);
+  }
+  .mobile-view .mr-#{$marginSize}__mobile {
       margin-right: rem($marginSize);
   }
   .mb-#{$marginSize} {
       margin-bottom: rem($marginSize);
   }
+  .mobile-view .mb-#{$marginSize}__mobile {
+      margin-bottom: rem($marginSize);
+  }
   .ml-#{$marginSize} {
       margin-left: rem($marginSize);
   }
+  .mobile-view .ml-#{$marginSize}__mobile {
+      margin-left: rem($marginSize);
+  }
   .margin-#{$marginSize} {
+      margin: rem($marginSize);
+  }
+  .mobile-view .margin-#{$marginSize}__mobile {
       margin: rem($marginSize);
   }
 }
