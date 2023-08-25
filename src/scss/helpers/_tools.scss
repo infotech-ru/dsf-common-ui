@@ -110,6 +110,15 @@
   }
 }
 
+@each $gapSize in $gapSizes {
+  .gap-#{$gapSize} {
+      gap: rem($gapSize);
+  }
+  .mobile-view .gap-#{$gapSize}__mobile {
+      gap: rem($gapSize);
+  }
+}
+
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -186,24 +195,24 @@
 
 .d-none                                     { display: none !important; }
 .mobile-view .d-none__mobile                { display: none; }
-.d-block                                    { display: block;}
+.d-block                                    { display: block; }
 .mobile-view .d-block__mobile               { display: block; }
 .d-flex                                     { display: flex; }
 .mobile-view .d-flex__mobile                { display: flex; }
 .d-inline-flex                              { display: inline-flex; }
 .mobile-view .d-inline-flex__mobile         { display: inline-flex; }
-.d-inline-block                             { display: inline-block;}
+.d-inline-block                             { display: inline-block; }
 .mobile-view .d-inline-block__mobile        { display: inline-block; }
-.d-grid                                     { display: grid;}
+.d-grid                                     { display: grid; }
 .mobile-view .d-grid__mobile                { display: grid; }
 
 .justify-flex-start                         { justify-content: flex-end; }
-.justify-space-between                      { justify-content: space-between; }
-.justify-flex-end                           { justify-content: flex-end; }
-.justify-center                             { justify-content: center; }
-.mobile-view .justify-flex-start__mobile    { justify-content: flex-end; }
-.mobile-view .justify-space-between__mobile { justify-content: space-between; }
 .mobile-view .justify-flex-end__mobile      { justify-content: flex-end; }
+.justify-space-between                      { justify-content: space-between; }
+.mobile-view .justify-space-between__mobile { justify-content: space-between; }
+.justify-flex-end                           { justify-content: flex-end; }
+.mobile-view .justify-flex-start__mobile    { justify-content: flex-end; }
+.justify-center                             { justify-content: center; }
 .mobile-view .justify-center__mobile        { justify-content: center; }
 
 .align-start                                { align-items: flex-start; }
@@ -231,6 +240,8 @@
 .flex-shrink-1                              { flex-shrink: 1; }
 .flex-basis-100p                            { flex-basis: 100%; }
 .mobile-view .flex-basis-100p__moblie       { flex-basis: 100%; }
+.flex-basis-auto                            { flex-basis: auto; }
+.mobile-view .flex-basis-auto__moblie       { flex-basis: auto; }
 
 
 @each $order in 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 {
