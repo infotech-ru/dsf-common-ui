@@ -85,7 +85,11 @@ order: 1
 
 `flex-row-reverse__mobile` устанавливает только для мобильных flex-direction: row-reverse
 
-`flex-grow-null` устанавливает flex-grow: 0
+`flex-grow-0` устанавливает flex-grow: 0
+
+`flex-grow-1` устанавливает flex-grow: 1
+
+`flex-shrink-0` устанавливает flex-shrink: 0
 
 `flex-shrink-1` устанавливает flex-shrink: 1
 
@@ -122,6 +126,10 @@ order: 1
 
 `maxh-none__mobile` - устанавливает только для мобильных значение `max-height` в значение `none`
 
+`maxh-100p` - устанавливает значение `max-height` в значение `100%`
+
+`maxh-100p__mobile` - устанавливает только для мобильных значение `max-height` в значение `100%`
+
 `minh-auto` - устанавливает значение `min-height` в значение `auto`
 
 `minh-auto__mobile` - устанавливает только для мобильных значение `min-height` в значение `auto`
@@ -135,6 +143,8 @@ order: 1
 `maxw-none` - устанавливает значение `max-width` в значение `none`
 
 `maxw-none__mobile` - устанавливает только для мобильных значение `max-width` в значение `none`
+
+`maxh-100p` - устанавливает значение `max-height` в значение `100%`
 
 `maxw-100p` - устанавливает значение `max-width` в значение `100%`
 
