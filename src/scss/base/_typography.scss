@@ -46,7 +46,7 @@ h6, .h6 {
 h1, .h1 { font-size: $font-size-h1; }
 h2, .h2 {
   font-size: rem(18);
-  font-weight: 500;
+  font-weight: 400;
   line-height: rem(21);
 }
 h3, .h3 {
@@ -80,4 +80,30 @@ h6, .h6 { font-size: $font-size-h6; }
       margin-left: $dl-horizontal-offset;
     }
   }
+}
+
+.headline{
+    align-items: center;
+    background-color: var(--color_light-blue2);
+    border-left: 5px solid var(--color_vibrant-blue);
+    display: flex;
+    justify-content: space-between;
+    // line-height: 44px;
+    margin-bottom: 10px;
+    min-height: 36px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &_title{
+        color: var(--color_blue);
+        font-size: rem(12);
+        font-weight: 700;
+        line-height: 14px;
+        // line-height: 36px;
+        margin: 0;
+    }
+    &_optional{
+        color: var(--color_vibrant-blue);
+        font-size: rem(14);
+        font-weight: 700;
+    }
 }

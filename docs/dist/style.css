@@ -68,9 +68,9 @@
 @font-face {
   font-family: "Roboto";
   font-style: "normal";
-  font-weight: 600;
+  font-weight: 700;
   src: url("roboto-v18-cyrillic_latin-700.eot");
-  src: local("Roboto"), local("Roboto-600"), url("roboto-v18-cyrillic_latin-700.woff2") format("woff2"), url("roboto-v18-cyrillic_latin-700.woff") format("woff"), url("roboto-v18-cyrillic_latin-700.ttf") format("truetype"), url("roboto-v18-cyrillic_latin-700.svg#Roboto") format("svg");
+  src: local("Roboto"), local("Roboto-700"), url("roboto-v18-cyrillic_latin-700.woff2") format("woff2"), url("roboto-v18-cyrillic_latin-700.woff") format("woff"), url("roboto-v18-cyrillic_latin-700.ttf") format("truetype"), url("roboto-v18-cyrillic_latin-700.svg#Roboto") format("svg");
 }
 @font-face {
   font-family: "Roboto";
@@ -82,9 +82,9 @@
 @font-face {
   font-family: "Roboto";
   font-style: "italic";
-  font-weight: 600;
+  font-weight: 700;
   src: url("roboto-v18-cyrillic_latin-700italic.eot");
-  src: local("Roboto"), local("Roboto-600"), url("roboto-v18-cyrillic_latin-700italic.woff2") format("woff2"), url("roboto-v18-cyrillic_latin-700italic.woff") format("woff"), url("roboto-v18-cyrillic_latin-700italic.ttf") format("truetype"), url("roboto-v18-cyrillic_latin-700italic.svg#Roboto") format("svg");
+  src: local("Roboto"), local("Roboto-700"), url("roboto-v18-cyrillic_latin-700italic.woff2") format("woff2"), url("roboto-v18-cyrillic_latin-700italic.woff") format("woff"), url("roboto-v18-cyrillic_latin-700italic.ttf") format("truetype"), url("roboto-v18-cyrillic_latin-700italic.svg#Roboto") format("svg");
 }
 @font-face {
   font-family: "Glyphicons Regular";
@@ -788,7 +788,7 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.3125rem;
 }
 
@@ -833,6 +833,30 @@ h6, .h6 {
   .dl-horizontal dd {
     margin-left: 180px;
   }
+}
+
+.headline {
+  align-items: center;
+  background-color: var(--color_light-blue2);
+  border-left: 5px solid var(--color_vibrant-blue);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  min-height: 36px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.headline_title {
+  color: var(--color_blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 14px;
+  margin: 0;
+}
+.headline_optional {
+  color: var(--color_vibrant-blue);
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -2729,7 +2753,7 @@ h6, .h6 {
   display: flex;
   justify-content: space-between;
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.3125rem;
   margin: 0;
 }

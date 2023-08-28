@@ -160,3 +160,20 @@ order: 4
   <div class="text-white bg-default mb-10">text-white bg-default</div>
   <div class="bg-muted text-center mb-10">text-clear with bg-mu<span class="text-clear">te</span>d and text-center</div>
 </div>
+
+#### Особое оформление заголовков и заголовков с доп. информацией
+
+Используется `headline` для контейнера родителя, `headline_title` - для оформления заголовка и `headline__optional`
+
+{% highlight html %}
+  <div class="headline">
+    <div class="headline_title">Заголовок</div>
+    <div class="headline_optional">доп. инфа</div>
+  </div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="headline">
+    <div class="headline_title">Заголовок</div>
+    <div class="headline_optional">доп. инфа</div>
+  </div>
+</div>
