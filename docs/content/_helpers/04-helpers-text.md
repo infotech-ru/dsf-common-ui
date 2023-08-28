@@ -18,13 +18,13 @@ order: 4
 
 {% highlight html %}
 <div class="text-left">text-left</div>
-<div class="text-right">text-right</div>
 <div class="text-center">text-center</div>
+<div class="text-right">text-right</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
   <div class="text-left mb-10">text-left</div>
-  <div class="text-right mb-10">text-right</div>
   <div class="text-center mb-10">text-center</div>
+  <div class="text-right mb-10">text-right</div>
 </div>
 
 #### Классы для выравнивание текста в контейнере по вертикали
@@ -36,14 +36,14 @@ order: 4
 `text-lowercase`, `text-uppercase`, `text-capitalize`
 
 {% highlight html %}
+  <div class="text-lowercase">text-lowercase</div>
   <div class="text-capitalize">text-capitalize</div>
   <div class="text-uppercase">text-uppercase</div>
-  <div class="text-lowercase">text-lowercase</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
+  <div class="text-lowercase mb-10">text-lowercase</div>
   <div class="text-capitalize mb-10">text-capitalize</div>
   <div class="text-uppercase mb-10">text-uppercase</div>
-  <div class="text-lowercase mb-10">text-lowercase</div>
 </div>
 
 #### Классы для изменения толщины текста
@@ -65,22 +65,6 @@ order: 4
 
 `fz10__mobile`, `fz11__mobile`, `fz12__mobile`, `fz13__mobile`, `fz14__mobile`, `fz16__mobile`, `fz18__mobile`, `fz20__mobile`, `fz24__mobile`
 
-{% highlight html %}
-<div class="fz10">fz10</div>
-<div class="fz14">fz14</div>
-<div class="fz18">fz18</div>
-<div class="fz24__mobile fz20">fz24__mobile fz20</div>
-<div class="fz24">fz24</div>
-{% endhighlight html %}
-
-<div class="bs-docs-example">
-  <div class="fz10 mr-10">fz10 = 10px</div>
-  <div class="fz14 mr-10">fz14 = 14px</div>
-  <div class="fz18 mr-10">fz18 = 18px</div>
-  <div class="fz24__mobile fz20">fz24__mobile = 24 на мобильных fz20 = 20px</div>
-  <div class="fz24 mr-10">fz24 = 24px</div>
-</div>
-
 #### Классы для изменения междустрочного интервала.
 
 Следующие классы устанавливают значение в `px` равное числу в классе, указанного `px`:
@@ -92,6 +76,24 @@ order: 4
 
 `lh12__mobile`, `lh14__mobile`, `lh16__mobile`, `lh18__mobile`, `lh20__mobile`, `lh24__mobile`
 
+
+{% highlight html %}
+<div class="fz10 lh14">fz10 = 10px lh14 = 14px</div>
+<div class="fz14 lh16 lh18__mobile">fz14 = 14px lh16 = 16px, на мобильном lh18__mobile = 18px</div>
+<div class="fz18 lh20">fz18 = 18px lh20 = 20px</div>
+<div class="fz20 lh20 fz24__mobile lh24__mobile">fz20 = 20px lh20 = 20px, fz24__mobile = 24 на мобильных lh24 = 24px</div>
+<div class="fz24 lh24">fz24, lh24 = 24px</div>
+{% endhighlight html %}
+
+<div class="bs-docs-example">
+  <div class="fz10 lh14 mr-10">fz10 = 10px lh14 = 14px</div>
+  <div class="fz14 lh16 lh18__mobile mr-10">fz14 = 14px lh16 = 16px, на мобильном lh18__mobile = 18px</div>
+  <div class="fz18 lh20 mr-10">fz18 = 18px lh20 = 20px</div>
+  <div class="fz20 lh20 fz24__mobile lh24__mobile">fz20 = 20px lh20 = 20px, fz24__mobile = 24 на мобильных lh24 = 24px</div>
+  <div class="fz24 lh24 mr-10">fz24 = 24px, lh24 = 24px</div>
+</div>
+
+
 #### Поворот текста
 
 `transformText__left`, `transformText__right` - устанавливает поворот текста
@@ -101,8 +103,10 @@ order: 4
   <div class="transformText__left">transformText__left</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
-  <div class="transformText__right mb-10">transformText__right</div>
-  <div class="transformText__left mb-10">transformText__left</div>
+  <div class="d-flex">
+    <div class="transformText__right mb-10">transformText__right</div>
+    <div class="transformText__left mb-10">transformText__left</div>
+  </div>
 </div>
 
 #### Классы для изменения  цвета текста.

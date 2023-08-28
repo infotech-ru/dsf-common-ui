@@ -89,26 +89,26 @@ order: 4
   <div class="padding-5 bg-grey4"><div class="border border-clear">border border-clear</div></div>
 {% endhighlight html %}
 <div class="bs-docs-example">
-  <div class="mb-10 border border-default">border border-default</div>
-  <div class="mb-10 border border-primary">border border-primary</div>
-  <div class="mb-10 border border-vibrant-blue">border border-vibrant-blue</div>
-  <div class="mb-10 border border-success">border border-success</div>
-  <div class="mb-10 border border-info">border border-info</div>
-  <div class="mb-10 border border-light-blue">border border-light-blue</div>
-  <div class="mb-10 border border-light-blue3">border border-light-blue3</div>
-  <div class="mb-10 border border-dark-red">border border-dark-red</div>
-  <div class="mb-10 border border-danger">border border-danger</div>
-  <div class="mb-10 border border-rose">border border-rose</div>
-  <div class="mb-10 border border-warning">border border-warning</div>
-  <div class="mb-10 border border-orange">border border-orange</div>
-  <div class="mb-10 border border-light-yellow">border border-light-yellow</div>
-  <div class="mb-10 border border-dark-grey">border border-dark-grey</div>
-  <div class="mb-10 border border-muted">border border-muted</div>
-  <div class="mb-10 border border-grey">border border-grey</div>
-  <div class="mb-10 border border-grey2">border border-grey2</div>
-  <div class="mb-10 border border-grey4">border border-grey4</div>
-  <div class="mb-10 border border-light-grey2">border border-light-grey2</div>
-  <div class="mb-10 border border-light-grey">border border-light-grey</div>
+  <div class="mb-10 padding-5 border border-default">border border-default</div>
+  <div class="mb-10 padding-5 border border-primary">border border-primary</div>
+  <div class="mb-10 padding-5 border border-vibrant-blue">border border-vibrant-blue</div>
+  <div class="mb-10 padding-5 border border-success">border border-success</div>
+  <div class="mb-10 padding-5 border border-info">border border-info</div>
+  <div class="mb-10 padding-5 border border-light-blue">border border-light-blue</div>
+  <div class="mb-10 padding-5 border border-light-blue3">border border-light-blue3</div>
+  <div class="mb-10 padding-5 border border-dark-red">border border-dark-red</div>
+  <div class="mb-10 padding-5 border border-danger">border border-danger</div>
+  <div class="mb-10 padding-5 border border-rose">border border-rose</div>
+  <div class="mb-10 padding-5 border border-warning">border border-warning</div>
+  <div class="mb-10 padding-5 border border-orange">border border-orange</div>
+  <div class="mb-10 padding-5 border border-light-yellow">border border-light-yellow</div>
+  <div class="mb-10 padding-5 border border-dark-grey">border border-dark-grey</div>
+  <div class="mb-10 padding-5 border border-muted">border border-muted</div>
+  <div class="mb-10 padding-5 border border-grey">border border-grey</div>
+  <div class="mb-10 padding-5 border border-grey2">border border-grey2</div>
+  <div class="mb-10 padding-5 border border-grey4">border border-grey4</div>
+  <div class="mb-10 padding-5 border border-light-grey2">border border-light-grey2</div>
+  <div class="mb-10 padding-5 border border-light-grey">border border-light-grey</div>
   <div class="mb-10 padding-5 bg-grey4"><div class="border border-white">border border-white</div></div>
   <div class="mb-10 padding-5 bg-grey4"><div class="border border-clear">border border-clear</div></div>
 </div>
