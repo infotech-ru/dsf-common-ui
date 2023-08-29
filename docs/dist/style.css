@@ -9456,6 +9456,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   height: 1.75rem;
   padding-right: 7px;
 }
+.commentBlock_inputGroup__bigHeight {
+  align-items: flex-start;
+  height: 3.375rem;
+}
 .commentBlock_formControl {
   background-color: transparent;
   border: none;
@@ -9514,10 +9518,16 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   font-weight: 400;
   opacity: 1;
 }
+.commentBlock_inputGroup__bigHeight .commentBlock_formControl {
+  height: 3.375rem;
+}
 .commentBlock_formControl:hover, .commentBlock_formControl:focus, .commentBlock_formControl:active, .commentBlock_formControl:focus-visible {
   border: none;
   box-shadow: none;
   outline: none;
+}
+.commentBlock_inputGroup__bigHeight .commentBlock .btn-icon {
+  margin-top: 6px;
 }
 .commentBlock_btnSend {
   background-color: transparent;
@@ -9561,11 +9571,8 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
-.commentBlock_comments__lightGreen {
-  background-color: #DAF0DA;
-}
-.commentBlock_comments__lightBlue {
-  background-color: #E4EEF7;
+.mobile-view .commentBlock_comments {
+  min-width: auto;
 }
 .commentBlock_comments__shadow {
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);

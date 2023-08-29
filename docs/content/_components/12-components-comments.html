@@ -7,7 +7,7 @@ order: 12
 ---
 
 <p>Комментарии имееют следующие оформление.</p>
-<p>Блок с вводом сообщения как правило ставиться перед списком комментариев.</p>
+<p>Блок с вводом сообщения как правило ставиться как перед списком комментариев, так и после</p>
 <p>Цвет фона списка комментариев задается с помощью helper-классов. По умолчанию, bg-light-yellow</p>
 <p>Если есть возможность прикреплять файлы, и существует информационое поле с именем добавленяемого файла, то высота списка должна быть переключаемой: + высоту информационного поля. Например с 240 на 264. А само поле менять цвет с цвета фона списка комментариева (по умолчанию bg-light-yellow) на цветполя ввода комментариев - bg-white</p>
 <p>Тень на блоке одиночного комментария задается через `commentBlock_comments__shadow`</p>
@@ -62,7 +62,7 @@ order: 12
                 Загружаем файл ${uploadName}... Файл ${uploadName} готов к отправке
             </div>
             <div class="padding-10 bg-white">
-                <div class="commentBlock_inputGroup commentBlock_inputGroup__whatsup">
+                <div class="commentBlock_inputGroup">
                     <input type="file" style="display: none;">
                     <textarea name="message" class="commentBlock_formControl" placeholder="Введите сообщение"></textarea>
                     <button class="btn-icon">
@@ -125,7 +125,7 @@ order: 12
                 Загружаем файл ${uploadName}... Файл ${uploadName} готов к отправке
             </div>
             <div class="padding-10 bg-white">
-                <div class="commentBlock_inputGroup commentBlock_inputGroup__whatsup">
+                <div class="commentBlock_inputGroup">
                     <input type="file" style="display: none;">
                     <textarea name="message" class="commentBlock_formControl" placeholder="Введите сообщение"></textarea>
                     <button class="btn-icon">

@@ -207,7 +207,11 @@
     height: rem(calc(_lineHeight(input) + 2)); //  + border-top and border-bottom
     padding-right: 7px;
     &__whatsup{
-      border-color: _brand-colors(grey2);
+        border-color: _brand-colors(grey2);
+    }
+    &__bigHeight{
+        align-items: flex-start;
+        height: rem(calc(_lineHeight(input) * 2 + 2));
     }
   }
   &_formControl{
@@ -228,10 +232,18 @@
     .commentBlock_inputGroup__whatsup &{
       @include placeholder2(_brand-colors(grey), 400, 12);
     }
+    .commentBlock_inputGroup__bigHeight &{
+        height: rem(calc(_lineHeight(input) * 2 + 2));
+    }
     &:hover, &:focus, &:active, &:focus-visible{
       border: none;
       box-shadow: none;
       outline: none;
+    }
+  }
+  .btn-icon{ 
+    .commentBlock_inputGroup__bigHeight &{
+        margin-top: 6px;
     }
   }
   &_btnSend{
@@ -246,6 +258,7 @@
         border: none;
         box-shadow: none;
         outline: none;
+        
       }
   }
   .user-event {
@@ -278,12 +291,15 @@
     margin-top: 5px;
     word-wrap: break-word;
     white-space: pre-wrap;
-    &__lightGreen{ 
-      background-color: _brand-colors(_light-green);
+    .mobile-view &{
+        min-width: auto;
     }
-    &__lightBlue{
-      background-color: _brand-colors(_light-blue2);
-    }
+    // &__lightGreen{ 
+    //   background-color: _brand-colors(_light-green);
+    // }
+    // &__lightBlue{
+    //   background-color: _brand-colors(_light-blue2);
+    // }
     &__shadow{
       box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
     }
