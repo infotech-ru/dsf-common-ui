@@ -2,7 +2,7 @@
 Title: Фон контейнера
 menutitle: Фон контейнера
 category: helpers
-anchor: helpers-container
+anchor: helpers-bgcontainer
 order: 2
 ---
 
