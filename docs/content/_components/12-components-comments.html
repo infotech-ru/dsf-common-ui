@@ -15,7 +15,7 @@ order: 12
 
 {% highlight html %}
 
-      <div class="commentBlock">
+    <div class="commentBlock">
         <div class="bg-light-yellow padding-10 scrollbar__thin overflowY-auto" style="height:240px" :style="{ height: uploadName ? '240px' : '264px' }">
             <div class="mb-10 user-event">
                 <div class="commentBlock_info">
@@ -75,3 +75,67 @@ order: 12
             </div>
         </div>
     </div>
+
+{% endhighlight %}
+<div class="bs-docs-example">
+<div class="commentBlock">
+        <div class="bg-light-yellow padding-10 scrollbar__thin overflowY-auto" style="height:240px" :style="{ height: uploadName ? '240px' : '264px' }">
+            <div class="mb-10 user-event">
+                <div class="commentBlock_info">
+                    <span class="commentBlock_infoUser">User</span>
+                    <span class="commentBlock_infoDate">00.00.0000</span>
+                </div>
+                <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
+                    <div>Тело сообщения User</div>
+                    <div><a href="" target="_blank"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
+                </div>
+            </div>
+            <div class="mb-10 current-user-comment">
+                <div class="commentBlock_info">
+                    <span class="commentBlock_infoUser">Админ</span>
+                    <span class="commentBlock_infoDate">00.00.0000</span>
+                </div>
+                <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
+                    <div>Тело сообщения админа</div>
+                </div>
+            </div>
+            <div class="mb-10 user-event">
+                <div class="commentBlock_info">
+                    <span class="commentBlock_infoUser">User</span>
+                    <span class="commentBlock_infoDate">00.00.0000</span>
+                </div>
+                <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
+                    <div>Тело сообщения User</div>
+                </div>
+            </div>
+            <div class="mb-10 current-user-comment">
+                <div class="commentBlock_info">
+                    <span class="commentBlock_infoUser">Админ</span>
+                    <span class="commentBlock_infoDate">00.00.0000</span>
+                </div>
+                <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
+                    <div>Тело сообщения админа</div>
+                    <div><a href="" target="_blank"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="pl-10 pr-10 pt-10 bg-light-yellow" style="display: none;"></div>
+            <div class="pl-10 pr-10 pt-10 bg-white" style="display: block;">
+                Загружаем файл ${uploadName}... Файл ${uploadName} готов к отправке
+            </div>
+            <div class="padding-10 bg-white">
+                <div class="commentBlock_inputGroup commentBlock_inputGroup__whatsup">
+                    <input type="file" style="display: none;">
+                    <textarea name="message" class="commentBlock_formControl" placeholder="Введите сообщение"></textarea>
+                    <button class="btn-icon">
+                        <span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-doc_add"></use></svg></span>
+                    </button>
+                    <button class="btn-icon ml-10" title="Отправить">
+                        <span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-telegram"></use></svg></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
