@@ -212,6 +212,9 @@
     &__bigHeight{
         align-items: flex-start;
         height: rem(calc(_lineHeight(input) * 2 + 2));
+        .btn-icon{ 
+            margin-top: 6px;
+        }
     }
   }
   &_formControl{
@@ -239,11 +242,6 @@
       border: none;
       box-shadow: none;
       outline: none;
-    }
-  }
-  .btn-icon{ 
-    .commentBlock_inputGroup__bigHeight &{
-        margin-top: 6px;
     }
   }
   &_btnSend{
