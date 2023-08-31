@@ -252,9 +252,13 @@
 .mobile-view .flex-row-reverse__mobile      { flex-direction: row-reverse; }
 
 .flex-grow-0                                { flex-grow: 0 }
+.mobile-view .flex-grow-0__mobile           { flex-grow: 0 }
 .flex-grow-1                                { flex-grow: 1 }
+.mobile-view .flex-grow-1__mobile           { flex-grow: 1 }
 .flex-shrink-0                              { flex-shrink: 0; }
+.mobile-view .flex-shrink-0__mobile         { flex-shrink: 0; }
 .flex-shrink-1                              { flex-shrink: 1; }
+.mobile-view .flex-shrink-1__mobile         { flex-shrink: 1; }
 .flex-basis-100p                            { flex-basis: 100%; }
 .mobile-view .flex-basis-100p__mobile       { flex-basis: 100%; }
 .flex-basis-auto                            { flex-basis: auto; }

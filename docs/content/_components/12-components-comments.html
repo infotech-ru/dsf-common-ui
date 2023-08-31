@@ -12,6 +12,7 @@ order: 12
 <p>Если есть возможность прикреплять файлы, и существует информационое поле с именем добавленяемого файла, то высота списка должна быть переключаемой: + высоту информационного поля. Например с 240 на 264. А само поле менять цвет с цвета фона списка комментариева (по умолчанию bg-light-yellow) на цветполя ввода комментариев - bg-white</p>
 <p>Тень на блоке одиночного комментария задается через `commentBlock_comments__shadow`</p>
 <p>Цвет фона блока одиночного комментария задается с помощью helper-классов. По умолчанию используется `bg-light-green` или `bg-info`</p>
+<p>Для увеличенного поля ввода используется класс `commentBlock_inputGroup__bigHeight`</p>
 
 {% highlight html %}
 
@@ -24,7 +25,7 @@ order: 12
                 </div>
                 <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
                     <div>Тело сообщения User</div>
-                    <div><a href="" target="_blank"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
+                    <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon mr-5"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
                 </div>
             </div>
             <div class="mb-10 current-user-comment">
@@ -52,7 +53,7 @@ order: 12
                 </div>
                 <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
                     <div>Тело сообщения админа</div>
-                    <div><a href="" target="_blank"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
+                    <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon mr-5"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
                 </div>
             </div>
         </div>
@@ -62,7 +63,7 @@ order: 12
                 Загружаем файл ${uploadName}... Файл ${uploadName} готов к отправке
             </div>
             <div class="padding-10 bg-white">
-                <div class="commentBlock_inputGroup">
+                <div class="commentBlock_inputGroup commentBlock_inputGroup__bigHeight">
                     <input type="file" style="display: none;">
                     <textarea name="message" class="commentBlock_formControl" placeholder="Введите сообщение"></textarea>
                     <button class="btn-icon">
@@ -78,7 +79,7 @@ order: 12
 
 {% endhighlight %}
 <div class="bs-docs-example">
-<div class="commentBlock">
+    <div class="commentBlock">
         <div class="bg-light-yellow padding-10 scrollbar__thin overflowY-auto" style="height:240px" :style="{ height: uploadName ? '240px' : '264px' }">
             <div class="mb-10 user-event">
                 <div class="commentBlock_info">
@@ -87,7 +88,7 @@ order: 12
                 </div>
                 <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
                     <div>Тело сообщения User</div>
-                    <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon ml-5"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
+                    <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon mr-5"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
                 </div>
             </div>
             <div class="mb-10 current-user-comment">
@@ -115,7 +116,7 @@ order: 12
                 </div>
                 <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
                     <div>Тело сообщения админа</div>
-                    <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon ml-5"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
+                    <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon mr-5"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
                 </div>
             </div>
         </div>

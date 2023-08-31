@@ -87,11 +87,19 @@ order: 1
 
 `flex-grow-0` устанавливает flex-grow: 0
 
+`flex-grow-0__mobile` устанавливает только для мобильных flex-grow: 0
+
 `flex-grow-1` устанавливает flex-grow: 1
+
+`flex-grow-1__mobile` устанавливает только для мобильных flex-grow: 1
 
 `flex-shrink-0` устанавливает flex-shrink: 0
 
+`flex-shrink-0__mobile` устанавливает только для мобильных flex-shrink: 0
+
 `flex-shrink-1` устанавливает flex-shrink: 1
+
+`flex-shrink-1__mobile` устанавливает только для мобильных flex-shrink: 1
 
 `flex-basis-100p` устанавливает flex-basis: 100%
 
