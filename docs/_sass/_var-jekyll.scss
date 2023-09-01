@@ -1,0 +1,5 @@
+---
+varcolorlist: $brandnamecolorslist;
+---
+
+$brandnamecolorslist: to-list($brand-namecolors, 'keys');

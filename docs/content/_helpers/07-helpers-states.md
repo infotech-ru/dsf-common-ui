@@ -3,7 +3,7 @@ Title: Изменения состояний
 menutitle: Изменения состояний
 category: helpers
 anchor: helpers-states
-order: 6
+order: 7
 ---
 
 ### Появлление элемента по наведению (hover)

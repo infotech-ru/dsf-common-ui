@@ -155,16 +155,22 @@
 .whitespace-normal                      { white-space: normal; }
 .mobile-view .whitespace-normal__mobile { white-space: normal; }
 .break-word                             { word-break: break-word; }
+.mobile-view .break-word__mobile        { word-break: break-word; }
 
 .overflow-ellipsis                      { overflow: hidden; text-overflow: ellipsis; }
 .overflow-hidden                        { overflow: hidden;}
+.mobile-view .overflow-hidden__mobile   { overflow: hidden;}
 .overflowX-auto                         { overflow-x: auto;}
 .overflowY-auto                         { overflow-y: auto;}
 
 .text-left                              { text-align: left; }
+.mobile-view .text-left__mobile         { text-align: left; }
 .text-right                             { text-align: right; }
+.mobile-view .text-right__mobile        { text-align: right; }
 .text-center                            { text-align: center; }
+.mobile-view .text-center__mobile       { text-align: center; }
 .text-justify                           { text-align: justify; }
+.mobile-view .text-justify__mobile      { text-align: justify; }
 
 .va-middle                              { vertical-align: middle;}
 .va-top                                 { vertical-align: top;}
@@ -290,6 +296,8 @@
 .mobile-view .maxh-100p__mobile   { max-height: 100%; }
 .minh-auto                        { min-height: auto;}
 .mobile-view .minh-auto__mobile   { min-height: auto;}
+.minh-100p                        { min-height: 100%;}
+.mobile-view .minh-100p__mobile   { min-height: 100%;}
 
 .w-auto                           { width: auto; }
 .mobile-view .w-auto__mobile      { width: auto; }
@@ -314,43 +322,103 @@
     border-top: 1px solid _brand-palette(border);
     &__none{
       border-top: none !important;
+      &__mobile{ 
+        .mobile-view &{
+          border-top: none !important;
+        }
+      }
     }
     &__dotted{
       border-top-style: dotted;
+    }
+    &__dashed{ 
+      border-top-style: dashed;
+    }
+    &__mobile{ 
+      .mobile-view &{
+        border-top: 1px solid _brand-palette(border);
+      }
     }
   }
   &-right{
     border-right: 1px solid _brand-palette(border);
     &__none {
       border-right: none !important;
+      &__mobile{ 
+        .mobile-view &{
+          border-right: none !important;
+        }
+      }
     }
     &__dotted {
       border-right-style: dotted;
+    }
+    &__dashed{ 
+      border-right-style: dashed;
+    }
+    &__mobile{ 
+      .mobile-view &{
+        border-right: 1px solid _brand-palette(border);
+      }
     }
   }
   &-bottom{
     border-bottom: 1px solid _brand-palette(border);
     &__none {
       border-bottom: none !important;
+      &__mobile{ 
+        .mobile-view &{
+          border-bottom: none !important;
+        }
+      }
     }
     &__dotted {
       border-bottom-style: dotted;
+    }
+    &__dashed{ 
+      border-bottom-style: dashed;
+    }
+    &__mobile{ 
+      .mobile-view &{
+        border-bottom: 1px solid _brand-palette(border);
+      }
     }
   }
   &-left{
     border-left: 1px solid _brand-palette(border);
     &__none {
       border-left: none !important;
+      &__mobile{ 
+        .mobile-view &{
+          border-left: none !important;
+        }
+      }
     }
     &__dotted {
       border-left-style: dotted;
     }
+    &__dashed{ 
+      border-left-style: dashed;
+    }
+    &__mobile{ 
+      .mobile-view &{
+        border-left: 1px solid _brand-palette(border);
+      }
+    }
   }
   &__none{
     border: none !important;
+    &__mobile{ 
+      .mobile-view &{
+        border: none !important;
+      }
+    }
   }
   &__dotted {
     border-style: dotted;
+  }
+  &__dashed{ 
+    border-style: dashed;
   }
 }
 

@@ -61,55 +61,113 @@
   $breakpoint-counter: 0;
   @each $breakpoint in map-keys($breakpoints) {
 
-
     $breakpoint-counter: ($breakpoint-counter + 1);
 
     // Allow columns to stretch full width below their breakpoints
-    .col-#{$breakpoint} {
-      @extend %gridColumn;
+    @if $breakpoint == '' {
+      .col {
+        @extend %gridColumn;
+      }
+      .col-0-5 {
+        @extend %gridColumn;
+      }
     }
-
-    .col-#{$breakpoint}-0-5 {
-      @extend %gridColumn;
+    @else{ 
+      .col-#{$breakpoint} {
+        @extend %gridColumn;
+      }
+      .col-#{$breakpoint}-0-5 {
+        @extend %gridColumn;
+      }
     }
 
     @for $i from 1 through $columns {
       @if $i == $columns {
-        .col-#{$breakpoint}-#{$i}{
-          @extend %gridColumn;
+        @if $breakpoint == '' {
+        .col-#{$i}{
+            @extend %gridColumn;
+          }
+        }
+        @else{
+          .col-#{$breakpoint}-#{$i}{
+            @extend %gridColumn;
+          }
         }
       }
       @else {
-        .col-#{$breakpoint}-#{$i},
-        .col-#{$breakpoint}-#{$i}-5 {
-          @extend %gridColumn;
+        @if $breakpoint == '' {
+          .col-#{$i},
+          .col-#{$i}-5 {
+            @extend %gridColumn;
+          }
+        }
+        @else{
+          .col-#{$breakpoint}-#{$i},
+          .col-#{$breakpoint}-#{$i}-5 {
+            @extend %gridColumn;
+          }
         }
       }
     }
 
     @include media-breakpoint-up($breakpoint, $breakpoints) {
       @if $enable-grid-flex {
-        .col-#{$breakpoint} {
-          flex-basis: 0;
-          flex-grow: 1;
-          max-width: 100%;
+        @if $breakpoint == '' {
+          .col {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+          }
+        }
+        @else{ 
+          .col-#{$breakpoint} {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+          }
         }
       }
-      .col-#{$breakpoint}-0-5 {
-        @include makeCol5(0);
+      @if $breakpoint == '' {
+        .col-0-5 {
+          @include makeCol5(0);
+        }
       }
+      @else{ 
+        .col-#{$breakpoint}-0-5 {
+          @include makeCol5(0);
+        }
+      }
+
       @for $i from 1 through $columns {
         @if $i == $columns {
-          .col-#{$breakpoint}-#{$i} {
-            @include makeCol($i, $columns);
+          @if $breakpoint == '' {
+            .col-#{$i} {
+              @include makeCol($i, $columns);
+            }
+          } 
+          @else{ 
+            .col-#{$breakpoint}-#{$i} {
+              @include makeCol($i, $columns);
+            }
           }
         }
         @else{
-          .col-#{$breakpoint}-#{$i} {
-            @include makeCol($i, $columns);
+          @if $breakpoint == '' {
+            .col-#{$i} {
+              @include makeCol($i, $columns);
+            }
+            .col-#{$i}-5 {
+              @include makeCol5($i, $columns);
+            }
+
           }
-          .col-#{$breakpoint}-#{$i}-5 {
-            @include makeCol5($i, $columns);
+          @else{
+            .col-#{$breakpoint}-#{$i} {
+              @include makeCol($i, $columns);
+            }
+            .col-#{$breakpoint}-#{$i}-5 {
+              @include makeCol5($i, $columns);
+            }
           }
         }
       }
@@ -119,16 +177,33 @@
       @for $i from 0 through ($columns - 1) {
         @if $breakpoint-counter != 1 or $i != 0 { // Avoid emitting useless .offset-xs-0
           @if $i == $columns {
-            .offset-#{$breakpoint}-#{$i} {
-              @include make-col-offset($i, $columns)
+            @if $breakpoint == '' {
+              .offset-#{$i} {
+                @include make-col-offset($i, $columns)
+              }
+            }
+            @else{ 
+              .offset-#{$breakpoint}-#{$i} {
+                @include make-col-offset($i, $columns)
+              }
             }
           }
           @else{
-            .offset-#{$breakpoint}-#{$i} {
-              @include make-col-offset($i, $columns)
+            @if $breakpoint == '' {
+              .offset-#{$i} {
+                @include make-col-offset($i, $columns)
+              }
+              .offset-#{$i}-5 {
+                @include make-col-offset5($i, $columns)
+              }
             }
-            .offset-#{$breakpoint}-#{$i}-5 {
-              @include make-col-offset5($i, $columns)
+            @else{ 
+              .offset-#{$breakpoint}-#{$i} {
+                @include make-col-offset($i, $columns)
+              }
+              .offset-#{$breakpoint}-#{$i}-5 {
+                @include make-col-offset5($i, $columns)
+              }
             }
           }
         }

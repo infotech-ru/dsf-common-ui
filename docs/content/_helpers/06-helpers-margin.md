@@ -3,7 +3,7 @@ Title: Отступы
 menutitle: Отступы
 category: helpers
 anchor: helpers-margin
-order: 5
+order: 6
 ---
 
 ### Классы для отступов. _Первые буквы названия правил - размер отсупа_

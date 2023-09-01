@@ -7,60 +7,69 @@ order: 4
 ---
 
 #### Расположение границы
-`border` - добавляет границу-черту в 1px вокруг контейнера(блока). 
+
+`border` - добавляет границу-черту в 1px вокруг контейнера(блока).
 
 Классы `border-top`, `border-bottom`, `border-left`, `border-right` добавляют границу-черту толщиной в 1px сверху, снизу, слева или справа блока.
+
+Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
 
 {% highlight html %}
   <div class="border">border</div>
   <div class="border-top">border-top</div>
-  <div class="border-right">border-right</div>
+  <div class="border-right border-left__mobile">border-right border-left__mobile</div>
   <div class="border-bottom">border-bottom</div>
   <div class="border-left">border-left</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
   <div class="mb-10 border">border</div>
   <div class="mb-10 border-top">border-top</div>
-  <div class="mb-10 border-right">border-right</div>
+  <div class="mb-10 border-right border-left__mobile">border-right border-left__mobile</div>
   <div class="mb-10 border-bottom">border-bottom</div>
   <div class="mb-10 border-left">border-left</div>
 </div>
 
 Классы `border__none`, `border-top__none`, `border-bottom__none`, `border-left__none`, `border-right__none` - классы отключают границу в с соответствующей стороны контейнера или со всех сторон.
 
+Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
+
 {% highlight html %}
   <div class="border border-top__none">border border-top__none</div>
   <div class="border border-right__none">border border-right__none</div>
-  <div class="border border-bottom__none">border border-bottom__none</div>
+  <div class="border border-bottom__none border-top__none__mobile">border border-bottom__none border-top__none__mobile</div>
   <div class="border border-left__none">border border-left__none</div>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="mb-10 border border-top__none">border border-top__none</div>
   <div class="mb-10 border border-right__none">border border-right__none</div>
-  <div class="mb-10 border border-bottom__none">border border-bottom__none</div>
+  <div class="mb-10 border border-bottom__none border-top__none__mobile">border border-bottom__none border-top__none__mobile</div>
   <div class="mb-10 border border-left__none">border border-left__none</div>
 </div>
 
 `border__dotted` - модифициурет границу-линию в границу-точку.
+`border__dashed` - модифициурет границу-линию в границу-прерывистую линию.
 
-Классы `border-top__dotted`, `border-bottom__dotted`, `border-left__dotted`, `border-right__dotted` модифициурет границу-линию в границу-точку. 
+Классы `border-top__dotted`, `border-bottom__dotted`, `border-left__dotted`, `border-right__dotted` модифициурет границу-линию в границу-точку.
+
 {% highlight html %}
   <div class="border border__dotted">border border__dotted</div>
   <div class="border-top border-top__dotted">border-top border-top__dotted</div>
-  <div class="border-right border-right__dotted">border-right border-right__dotted</div>
+  <div class="border-right border-right__dotted border-left border-left__dashed">border-right border-right__dotted border-left border-left__dashed</div>
   <div class="border-bottom border-bottom__dotted">border-bottom border-bottom__dotted</div>
   <div class="border-left border-left__dotted">border-left border-left__dotted</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
     <div class="mb-10 border border__dotted">border border__dotted</div>
     <div class="mb-10 border-top border-top__dotted">border-top border-top__dotted</div>
-    <div class="mb-10 border-right border-right__dotted">border-right border-right__dotted</div>
+    <div class="mb-10 border-right border-right__dotted border-left border-left__dashed">border-right border-right__dotted border-left border-left__dashed</div>
     <div class="mb-10 border-bottom border-bottom__dotted">border-bottom border-bottom__dotted</div>
     <div class="mb-10 border-left border-left__dotted">border-left border-left__dotted</div>
 </div>
 
+
 #### Цвет границы
-Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-dark-grey`, `border-grey`, `border-grey2`, `border-grey4`, `border-light-grey`, `border-light-grey2`, `border-white`, `border-light-blue`, `border-light-blue3`, `border-vibrant-blue`, `border-dark-red`, `border-rose`, `border-light-yellow`,   добавляют соответсвующего цвета для границ. 
+
+Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-dark-grey`, `border-grey`, `border-grey2`, `border-grey4`, `border-light-grey`, `border-light-grey2`, `border-white`, `border-light-blue`, `border-light-blue3`, `border-vibrant-blue`, `border-dark-red`, `border-rose`, `border-light-yellow`, добавляют соответсвующего цвета для границ.
 
 `border-clear` - класс делает прозрачным цвет границы
 

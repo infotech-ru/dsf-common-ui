@@ -3,7 +3,7 @@ Title: Для изменения стилей текста
 menutitle: Текст
 category: helpers
 anchor: helpers-text
-order: 4
+order: 5
 ---
 
 #### Классы для работы с переносом или длиной текста
@@ -11,25 +11,31 @@ order: 4
 `nowrap`, `whitespace-normal`, `break-word`, `overflow-ellipsis`, `overflow-hidden`, `overflowX-auto`, `overflowY-auto`
 
 только для мобильных:
- `nowrap__mobile`,  `whitespace-normal__mobile`
+`nowrap__mobile`,  `whitespace-normal__mobile`, `break-word__mobile`, `overflow-hidden__mobile`
+
+
 #### Классы для выравнивание текста в контейнере по горизонтали
 
 `text-left`, `text-right`, `text-center`, `text-justify`
 
+Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
+
 {% highlight html %}
 <div class="text-left">text-left</div>
-<div class="text-center">text-center</div>
+<div class="text-center text-left__mobile">text-center text-left__mobile</div>
 <div class="text-right">text-right</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
   <div class="text-left mb-10">text-left</div>
-  <div class="text-center mb-10">text-center</div>
+  <div class="text-center text-left__mobile mb-10">text-center text-left__mobile</div>
   <div class="text-right mb-10">text-right</div>
 </div>
+
 
 #### Классы для выравнивание текста в контейнере по вертикали
 
 `va-middle`, `va-top`, `va-bottom`
+
 
 #### Классы для изменения регистра текста
 
@@ -46,13 +52,13 @@ order: 4
   <div class="text-uppercase mb-10">text-uppercase</div>
 </div>
 
+
 #### Классы для изменения толщины текста
 
 `text-regular`, `text-bold`,
 
-только на мобильных устройствах:
+Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
 
-`text-regular__mobile`, `text-bold__mobile`,
 
 #### Классы для изменения размера текста
 
@@ -60,21 +66,16 @@ order: 4
 
 `fz10`, `fz11`, `fz12`, `fz13`, `fz14`, `fz16`, `fz18`, `fz20`, `fz24`
 
+Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
 
-Следующие классы устанавливают размер шрифта в `rem` только для мобильный устройств эквивалентное числу в классе, указанного `px`:
 
-`fz10__mobile`, `fz11__mobile`, `fz12__mobile`, `fz13__mobile`, `fz14__mobile`, `fz16__mobile`, `fz18__mobile`, `fz20__mobile`, `fz24__mobile`
-
-#### Классы для изменения междустрочного интервала.
+#### Классы для изменения междустрочного интервала
 
 Следующие классы устанавливают значение в `px` равное числу в классе, указанного `px`:
 
 `lh12`, `lh14`, `lh16`, `lh18`, `lh20`, `lh24`
 
-
-Следующие классы устанавливают для мобильных устройств значение в `px` равное числу в классе, указанного `px`:
-
-`lh12__mobile`, `lh14__mobile`, `lh16__mobile`, `lh18__mobile`, `lh20__mobile`, `lh24__mobile`
+Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
 
 
 {% highlight html %}
@@ -109,7 +110,8 @@ order: 4
   </div>
 </div>
 
-#### Классы для изменения  цвета текста.
+
+#### Классы для изменения  цвета текста
 
 {% highlight html %}
   <div class="text-default">text-default</div>
@@ -160,6 +162,12 @@ order: 4
   <div class="text-white bg-default mb-10">text-white bg-default</div>
   <div class="bg-muted text-center mb-10">text-clear with bg-mu<span class="text-clear">te</span>d and text-center</div>
 </div>
+
+#### Классы для списков
+
+`list-unstyled` - убирает отступ и стилизацию (type)
+`list-inline` - приводит список в горизонтальную версию
+
 
 #### Особое оформление заголовков и заголовков с доп. информацией
 

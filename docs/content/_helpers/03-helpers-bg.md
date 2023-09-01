@@ -3,7 +3,7 @@ Title: Фон контейнера
 menutitle: Фон контейнера
 category: helpers
 anchor: helpers-bgcontainer
-order: 2
+order: 3
 ---
 
 #### Классы для установленния цвет фона контейнера
