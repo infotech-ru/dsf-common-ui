@@ -16,7 +16,7 @@
         width: auto;
     }
 }
-@each $svgMod in 9, 10, 12, 14, 16, 18, 21, 24{
+@each $svgMod in 9, 10, 12, 14, 16, 18, 20, 21, 22, 24{
   .svg--icon__#{$svgMod}{
     &,
     &.svg--icon{ 

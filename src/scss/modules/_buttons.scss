@@ -386,9 +386,13 @@ input[type="button"] {
     box-shadow: none;
     outline: 0;
   }
+  .btn-text{
+    margin: 0;
+  }
   .svg--icon {
-    height: rem(_brand-sizes(btnIcon_height));
+    height: rem(20);
     vertical-align: middle;
+    width: rem(20);
     #{--svg-icon-fill}: _brand-palette(btnIconSvg_color);
     #{--svg-icon-fill_blue}: _brand-palette(btnIconSvg_color);
     #{--svg-icon-stroke_blue}: _brand-palette(btnIconSvg_color);

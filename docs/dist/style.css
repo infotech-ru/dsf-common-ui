@@ -6301,11 +6301,25 @@ h6, .h6 {
   height: 18px;
 }
 
+.svg--icon__20, .svg--icon__20.svg--icon {
+  height: 20px;
+}
+.svg--icon__20 svg, .svg--icon__20.svg--icon svg {
+  height: 20px;
+}
+
 .svg--icon__21, .svg--icon__21.svg--icon {
   height: 21px;
 }
 .svg--icon__21 svg, .svg--icon__21.svg--icon svg {
   height: 21px;
+}
+
+.svg--icon__22, .svg--icon__22.svg--icon {
+  height: 22px;
+}
+.svg--icon__22 svg, .svg--icon__22.svg--icon svg {
+  height: 22px;
 }
 
 .svg--icon__24, .svg--icon__24.svg--icon {
@@ -7402,9 +7416,13 @@ input[type=button].btn-block {
   box-shadow: none;
   outline: 0;
 }
+.btn-download .btn-text {
+  margin: 0;
+}
 .btn-download .svg--icon {
-  height: 1rem;
+  height: 1.25rem;
   vertical-align: middle;
+  width: 1.25rem;
   --svg-icon-fill: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
