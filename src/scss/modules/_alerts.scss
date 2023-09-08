@@ -47,7 +47,7 @@
         #{--svg-icon-stroke}: _brand-alert(#{$alert}_close);
         #{--svg-icon-stroke_blue}: _brand-alert(#{$alert}_close);
       }
-      h4{
+      h4, .h4{
         color: _brand-alert(#{$alert}_title);
       }
     }
@@ -71,7 +71,7 @@
     }
   }
   &__attention{
-    background-image: sprite("bicolors-information");
+    // background-image: sprite("bicolors-information");
     background-image: svg-url("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12.05.94A11.06,11.06,0,1,0,23.11,12,11.07,11.07,0,0,0,12.05.94m0,23.06a12,12,0,1,1,12-12,12,12,0,0,1-12,12' fill='var(--svg-icon-fill, #D9534F)' stroke='none'/><path d='M10.18,7.65A1.65,1.65,0,1,0,11.83,6a1.64,1.64,0,0,0-1.65,1.65M13,10.92l-2.7.85-.19.62,1.53.07-.66,6,2.77-.73,0-.52-1.2-.06Z' fill='var(--svg-icon-fill, #D9534F)' stroke='none'/></svg>");
     background-repeat: no-repeat;
     background-size: 20px;

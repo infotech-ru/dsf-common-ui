@@ -368,7 +368,7 @@ $brand-alert:(
   success_border:                         map-get($brand-colors, _dark-green),
   success_close:                          map-get($brand-colors, _dark-green),
   success_color:                          map-get($brand-colors, _dark-grey),
-  success_title:                          map-get($brand-colors, _dark-grey),
+  success_title:                          map-get($brand-colors, _dark-green),
   danger_bg:                              map-get($brand-colors, _light-red),
   danger_border:                          map-get($brand-colors, _red),
   danger_close:                           map-get($brand-colors, _red),
@@ -383,7 +383,7 @@ $brand-alert:(
   info_border:                            map-get($brand-colors, _light-blue),
   info_close:                             map-get($brand-colors, _light-blue),
   info_color:                             map-get($brand-colors, _dark-grey),
-  info_title:                             map-get($brand-colors, _dark-grey),
+  info_title:                             map-get($brand-colors, _light-blue),
 );
 
 @function _brand-table($keys...) {

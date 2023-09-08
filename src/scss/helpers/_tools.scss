@@ -430,12 +430,14 @@
       #{--svg-icon-stroke}: $value;
       #{--svg-icon-fill_blue}: $value;
       #{--svg-icon-stroke_blue}: $value;
+      #{--svg-valute-fill}: $value;
     }
   }
 
   .text-#{$name}{
     color: #{$value};
     #{--text_color}: #{$value};
+    #{--svg-valute-fill}: #{$value};
   }
   .bg-#{$name}{
     background-color: #{$value};

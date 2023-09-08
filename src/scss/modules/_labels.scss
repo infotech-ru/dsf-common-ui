@@ -53,6 +53,7 @@
     // background-color: _brand-label(#{$label}_bg);
     // color: _brand-label(#{$label}_color);
     #{--label_color}: _brand-label(#{$label}_color);
+    #{--svg-valute-fill}: _brand-label(#{$label}_color);
     #{--label_bgc}: _brand-label(#{$label}_bg);
   }
 }
