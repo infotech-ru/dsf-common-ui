@@ -9768,14 +9768,14 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   display: flex;
   justify-content: space-between;
   height: 1.75rem;
-  padding-right: 7px;
+  position: relative;
+  padding-right: 0px;
 }
 .commentBlock_inputGroup__bigHeight {
   align-items: flex-start;
-  height: 3.375rem;
-}
-.commentBlock_inputGroup__bigHeight .btn-icon {
-  margin-top: 6px;
+  height: auto;
+  padding-top: 6px;
+  min-height: 3.375rem;
 }
 .commentBlock_formControl {
   background-color: transparent;
@@ -9787,7 +9787,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   font-size: 0.75rem;
   line-height: 1.75rem;
   height: 1.75rem;
-  padding: 0 7px;
+  padding: 0 3.5rem 0 7px;
   resize: none;
   overflow: hidden;
 }
@@ -9836,12 +9836,24 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   opacity: 1;
 }
 .commentBlock_inputGroup__bigHeight .commentBlock_formControl {
-  height: 3.375rem;
+  height: auto;
+  min-height: 3.375rem;
+  line-height: 0.875rem;
+}
+.commentBlock_formControl__resizeVert {
+  resize: vertical;
 }
 .commentBlock_formControl:hover, .commentBlock_formControl:focus, .commentBlock_formControl:active, .commentBlock_formControl:focus-visible {
   border: none;
   box-shadow: none;
   outline: none;
+}
+.commentBlock_actionBlock {
+  display: flex;
+  position: absolute;
+  top: 6px;
+  padding-right: 7px;
+  right: 0;
 }
 .commentBlock_btnSend {
   background-color: transparent;

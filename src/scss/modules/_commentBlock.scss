@@ -197,6 +197,7 @@
 }
 
 .commentBlock{
+  $textareaFormControlPaddingX: 7;
   &_inputGroup {
     align-items: center;
     background-color: _brand-palette(formControl-bgc);
@@ -205,16 +206,19 @@
     display: flex;
     justify-content: space-between;
     height: rem(calc(_lineHeight(input) + 2)); //  + border-top and border-bottom
-    padding-right: 7px;
+    position: relative;
+    padding-right: 0px;
     &__whatsup{
         border-color: _brand-colors(grey2);
     }
     &__bigHeight{
         align-items: flex-start;
-        height: rem(calc(_lineHeight(input) * 2 + 2));
-        .btn-icon{ 
-            margin-top: 6px;
-        }
+        height: auto;
+        padding-top: 6px;
+        min-height: rem(calc(_lineHeight(input) * 2 + 2));
+        // .btn-icon{
+            // margin-top: 6px;
+        // }
     }
   }
   &_formControl{
@@ -227,7 +231,7 @@
     font-size: rem(_fontSizes(formElem));
     line-height: rem(calc(_lineHeight(input) + 2));
     height: rem(calc(_lineHeight(input) + 2));
-    padding: 0 7px;
+    padding: 0 rem(calc((_brand-sizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
     resize: none;
     // resize: vertical;
     overflow: hidden;
@@ -236,13 +240,25 @@
       @include placeholder2(_brand-colors(grey), 400, 12);
     }
     .commentBlock_inputGroup__bigHeight &{
-        height: rem(calc(_lineHeight(input) * 2 + 2));
+        height: auto;
+        min-height: rem(calc(_lineHeight(input) * 2 + 2));
+        line-height: rem(calc(_fontSizes(formElem) + 2));
+    }
+    &__resizeVert{
+        resize: vertical;
     }
     &:hover, &:focus, &:active, &:focus-visible{
       border: none;
       box-shadow: none;
       outline: none;
     }
+  }
+  &_actionBlock{
+    display: flex;
+    position: absolute;
+    top: 6px;
+    padding-right: #{$textareaFormControlPaddingX}px;
+    right: 0;
   }
   &_btnSend{
       background-color: transparent;

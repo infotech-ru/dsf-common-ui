@@ -13,11 +13,13 @@ order: 12
 <p>Тень на блоке одиночного комментария задается через `commentBlock_comments__shadow`</p>
 <p>Цвет фона блока одиночного комментария задается с помощью helper-классов. По умолчанию используется `bg-light-green` или `bg-info`</p>
 <p>Для увеличенного поля ввода используется класс `commentBlock_inputGroup__bigHeight`</p>
+<p>Для возможности изменения высоты textarea выставляем класс `commentBlock_formControl__resizeVert` на ней.</p>
+<p>Для появления полосы прокруткии на textarea - класс `overflowY-auto` на ней.</p>
 
 {% highlight html %}
 
     <div class="commentBlock">
-        <div class="bg-light-yellow padding-10 scrollbar__thin overflowY-auto" style="height:240px" :style="{ height: uploadName ? '240px' : '264px' }">
+        <div class="bg-light-yellow padding-10 scrollbar__thin overflowY-auto" style="max-height:240px" :style="{ height: uploadName ? '240px' : '264px' }">
             <div class="mb-10 user-event">
                 <div class="commentBlock_info">
                     <span class="commentBlock_infoUser">User</span>
@@ -65,13 +67,15 @@ order: 12
             <div class="padding-10 bg-white">
                 <div class="commentBlock_inputGroup commentBlock_inputGroup__bigHeight">
                     <input type="file" style="display: none;">
-                    <textarea name="message" class="commentBlock_formControl" placeholder="Введите сообщение"></textarea>
-                    <button class="btn-icon">
-                        <span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-doc_add"></use></svg></span>
-                    </button>
-                    <button class="btn-icon ml-10" title="Отправить">
-                        <span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-telegram"></use></svg></span>
-                    </button>
+                    <textarea name="message" class="commentBlock_formControl scrollbar__thin commentBlock_formControl__resizeVert overflowY-auto" placeholder="Введите сообщение"></textarea>
+                    <div class="commentBlock_actionBlock"> 
+                        <button class="btn-icon">
+                            <span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-doc_add"></use></svg></span>
+                        </button>
+                        <button class="btn-icon ml-10" title="Отправить">
+                            <span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-telegram"></use></svg></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,7 +132,7 @@ order: 12
             <div class="padding-10 bg-white">
                 <div class="commentBlock_inputGroup">
                     <input type="file" style="display: none;">
-                    <textarea name="message" class="commentBlock_formControl" placeholder="Введите сообщение"></textarea>
+                    <textarea name="message" class="commentBlock_formControl scrollbar__thin commentBlock_formControl__resizeVert overflowY-auto" placeholder="Введите сообщение"></textarea>
                     <button class="btn-icon">
                         <span class="svg--icon"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-doc_add"></use></svg></span>
                     </button>
