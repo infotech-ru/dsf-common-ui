@@ -204,9 +204,9 @@ $brand-btn: (
   default_outline__hover:                 map-get($brand-colors, _dark-grey),
   
   primary_bg:                             map-get($brand-colors, _light-blue),
-  primary-end_bg:                         map-get($brand-colors, _blue),
+  primary-end_bg:                         map-get($brand-colors, _light-blue),
   primary_bg__hover:                      map-get($brand-colors, _blue),
-  primary-end_bg__hover:                  map-get($brand-colors, _light-blue),
+  primary-end_bg__hover:                  map-get($brand-colors, _blue),
   primary_border:                         map-get($brand-colors, _blue),
   primary_border__hover:                  map-get($brand-colors, _blue),
   primary_color:                          map-get($brand-colors, _white),
@@ -252,9 +252,9 @@ $brand-btn: (
   warning_outline__hover:                 map-get($brand-colors, _dark-orange),
   
   success_bg:                             map-get($brand-colors, _green),
-  success-end_bg:                         map-get($brand-colors, _dark-green),
+  success-end_bg:                         map-get($brand-colors, _green),
   success_bg__hover:                      map-get($brand-colors, _dark-green),
-  success-end_bg__hover:                  map-get($brand-colors, _green),
+  success-end_bg__hover:                  map-get($brand-colors, _dark-green),
   success_border:                         map-get($brand-colors, _dark-green),
   success_border__hover:                  map-get($brand-colors, _dark-green),
   success_color:                          map-get($brand-colors, _white),

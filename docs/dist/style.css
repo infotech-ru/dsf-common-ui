@@ -6824,13 +6824,13 @@ h6, .h6 {
 
 .btn-primary, .btn-group_theme > [class^=btn].active {
   background-color: #4A8DC6;
-  background-image: -webkit-linear-gradient(#4A8DC6 0%, #1E6393 100%);
-  background-image: linear-gradient(#4A8DC6 0%, #1E6393 100%);
+  background-image: -webkit-linear-gradient(#4A8DC6 0%, #4A8DC6 100%);
+  background-image: linear-gradient(#4A8DC6 0%, #4A8DC6 100%);
   border-color: #1E6393;
   color: #ffffff;
   --btn_bg: #4A8DC6;
-  --btn_bgEnd: #1E6393;
-  --btn_bgEnd__hover: #4A8DC6;
+  --btn_bgEnd: #4A8DC6;
+  --btn_bgEnd__hover: #1E6393;
   --btn_bg__hover: #1E6393;
   --borderColor__hover: #1E6393;
   --btn_svg: #ffffff;
@@ -6840,8 +6840,8 @@ h6, .h6 {
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-group_theme > .active[class^=btn], .btn-primary.focus {
   background-color: #1E6393;
-  background-image: -webkit-linear-gradient(#1E6393 0%, #4A8DC6 100%);
-  background-image: linear-gradient(#1E6393 0%, #4A8DC6 100%);
+  background-image: -webkit-linear-gradient(#1E6393 0%, #1E6393 100%);
+  background-image: linear-gradient(#1E6393 0%, #1E6393 100%);
   background-position: inherit;
   border-color: #1E6393;
   color: #ffffff;
@@ -6863,13 +6863,13 @@ h6, .h6 {
 
 .btn-success {
   background-color: #69C26A;
-  background-image: -webkit-linear-gradient(#69C26A 0%, #467B46 100%);
-  background-image: linear-gradient(#69C26A 0%, #467B46 100%);
+  background-image: -webkit-linear-gradient(#69C26A 0%, #69C26A 100%);
+  background-image: linear-gradient(#69C26A 0%, #69C26A 100%);
   border-color: #467B46;
   color: #ffffff;
   --btn_bg: #69C26A;
-  --btn_bgEnd: #467B46;
-  --btn_bgEnd__hover: #69C26A;
+  --btn_bgEnd: #69C26A;
+  --btn_bgEnd__hover: #467B46;
   --btn_bg__hover: #467B46;
   --borderColor__hover: #467B46;
   --btn_svg: #ffffff;
@@ -6879,8 +6879,8 @@ h6, .h6 {
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.focus {
   background-color: #467B46;
-  background-image: -webkit-linear-gradient(#467B46 0%, #69C26A 100%);
-  background-image: linear-gradient(#467B46 0%, #69C26A 100%);
+  background-image: -webkit-linear-gradient(#467B46 0%, #467B46 100%);
+  background-image: linear-gradient(#467B46 0%, #467B46 100%);
   background-position: inherit;
   border-color: #467B46;
   color: #ffffff;
