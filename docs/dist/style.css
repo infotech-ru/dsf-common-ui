@@ -10985,6 +10985,18 @@ tbody.collapse.in {
   --limited-stroke-on: inherit;
   --svg-icon-fill: inherit;
 }
+.limited.collapsed .btn-text__show {
+  display: inline-block;
+}
+.limited.collapsed .btn-text__hide {
+  display: none;
+}
+.limited .btn-text__show {
+  display: none;
+}
+.limited .btn-text__hide {
+  display: inline-block;
+}
 
 .svg--collapseIcon {
   transform: rotate(180deg);
@@ -12048,7 +12060,15 @@ tbody.collapse.in {
   text-transform: lowercase;
 }
 
+.mobile-view .text-lowercase__mobile {
+  text-transform: lowercase;
+}
+
 .text-uppercase {
+  text-transform: uppercase;
+}
+
+.mobile-view .text-uppercase__mobile {
   text-transform: uppercase;
 }
 
@@ -12056,11 +12076,15 @@ tbody.collapse.in {
   text-transform: capitalize;
 }
 
+.mobile-view .text-capitalize__mobile {
+  text-transform: capitalize;
+}
+
 .text-regular {
   font-weight: 400;
 }
 
-.mobile-view .text-regular {
+.mobile-view .text-regular__mobile {
   font-weight: 400;
 }
 
@@ -12068,7 +12092,7 @@ tbody.collapse.in {
   font-weight: 700;
 }
 
-.mobile-view .text-bold {
+.mobile-view .text-bold__mobile {
   font-weight: 700;
 }
 

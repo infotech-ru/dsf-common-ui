@@ -45,10 +45,22 @@ tbody.collapse.in { display: table-row-group; }
   --svg-icon-fill: transparent;
   }
   &.collapsed{
-  .svg--icon{ 
+    .svg--icon{ 
       --limited-stroke-on: inherit;
       --svg-icon-fill: inherit;
     }
+    .btn-text__show{
+      display: inline-block;
+    }
+    .btn-text__hide{
+      display: none;
+    }
+  }
+  .btn-text__show{
+    display: none;
+  }
+  .btn-text__hide{
+    display: inline-block;
   }
 }
 

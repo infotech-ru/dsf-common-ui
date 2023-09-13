@@ -41,6 +41,8 @@ order: 5
 
 `text-lowercase`, `text-uppercase`, `text-capitalize`
 
+Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
+
 {% highlight html %}
   <div class="text-lowercase">text-lowercase</div>
   <div class="text-capitalize">text-capitalize</div>

@@ -177,13 +177,16 @@
 .va-bottom                              { vertical-align: bottom;}
 
 .text-lowercase                         { text-transform: lowercase; }
+.mobile-view .text-lowercase__mobile    { text-transform: lowercase; }
 .text-uppercase                         { text-transform: uppercase; }
+.mobile-view .text-uppercase__mobile    { text-transform: uppercase; }
 .text-capitalize                        { text-transform: capitalize; }
+.mobile-view .text-capitalize__mobile   { text-transform: capitalize; }
 
 .text-regular                           { font-weight: 400; }
-.mobile-view .text-regular              { font-weight: 400; }
+.mobile-view .text-regular__mobile      { font-weight: 400; }
 .text-bold                              { font-weight: 700; }
-.mobile-view .text-bold                 { font-weight: 700; }
+.mobile-view .text-bold__mobile         { font-weight: 700; }
 
 .transformText__left   { writing-mode: vertical-lr; transform: rotate(0deg); }
 .transformText__right  { writing-mode: vertical-lr; transform: rotate(180deg); }
