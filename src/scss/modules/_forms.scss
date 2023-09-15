@@ -184,10 +184,11 @@ output {
 
 // Reset height for `textarea`s
 textarea.form-control {
-  border-radius: _brand-sizes(borderRadiusFormElem);
+  border-radius: rem(_brand-sizes(borderRadiusFormElem));
   height: auto;
-  line-height: 1em;
-  padding: 2px 6px;
+  line-height: rem(calc(_fontSizes(formElem) + 2));
+  min-height: rem(calc(_lineHeight(input) + 2));
+  padding: 6px rem(_brand-sizes(formControl_paddingX)) 2px;
   resize: vertical;
 }
 

@@ -7837,10 +7837,11 @@ output {
 }
 
 textarea.form-control {
-  border-radius: 1;
+  border-radius: 0.0625rem;
   height: auto;
-  line-height: 1em;
-  padding: 2px 6px;
+  line-height: 0.875rem;
+  min-height: 1.75rem;
+  padding: 6px 0.625rem 2px;
   resize: vertical;
 }
 
