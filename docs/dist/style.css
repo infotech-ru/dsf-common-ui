@@ -10676,6 +10676,11 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   height: 100%;
   width: 100%;
 }
+.thumbsBlock_outer {
+  display: inline-flex;
+  position: relative;
+  margin-bottom: 10px;
+}
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */

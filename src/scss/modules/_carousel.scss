@@ -584,4 +584,9 @@
     height: 100%;
     width: 100%;
   }
+  &_outer{
+    display: inline-flex;
+    position: relative;
+    margin-bottom: 10px;
+  }
 }
