@@ -7,6 +7,7 @@ import {
   
 import {init} from "./init.js";
 import { FormsFree } from "./forms-free.js";
+import { AutoresizeTextarea } from "./autoresizeTextarea.js";
   
 export function OnLoad() {
   itemActionMenu();
@@ -14,6 +15,7 @@ export function OnLoad() {
   CopyToClipboard();
   init();
   FormsFree();
+  AutoresizeTextarea();
 }
   
 export function tablesInit() { 

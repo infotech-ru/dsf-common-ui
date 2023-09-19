@@ -189,12 +189,27 @@ var DSFUI = (function (exports) {
   } // TODO: сбрасывать значение при нажатие удаления значения.
   // $(el).val('default').selectpicker("refresh");
 
+  function AutoresizeTextarea() {
+    var tx = document.getElementsByClassName("js-formControl__resize");
+
+    for (var i = 0; i < tx.length; i++) {
+      tx[i].setAttribute("style", "height:" + tx[i].scrollHeight + "px;overflow-y:hidden;");
+      tx[i].addEventListener("input", OnInput, false);
+    }
+
+    function OnInput() {
+      this.style.height = 0;
+      this.style.height = this.scrollHeight + "px";
+    }
+  }
+
   function OnLoad() {
     itemActionMenu();
     multilevelMenu();
     CopyToClipboard();
     init();
     FormsFree();
+    AutoresizeTextarea();
   }
   function tablesInit() {
     initTreeTable();
