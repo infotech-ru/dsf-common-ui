@@ -497,20 +497,20 @@ textarea.form-control {
     // }
   // }
 
-  // .bs-placeholder {
-  //   .filter-option-inner-inner {
-  //     .css-formFree & {
-  //       opacity: 0;  issue #16994 
-  //     }
-  //   }
-  // }
-  // .selectPrompt + .bs-placeholder {
-  //   .filter-option-inner-inner {
-  //     .css-formFree & {
-  //       opacity: 1;
-  //     }
-  //   }
-  // }
+  .bs-placeholder {
+    .filter-option-inner-inner {
+      .css-formFree & {
+        opacity: 0;
+      }
+    }
+  }
+  .selectPrompt + .bs-placeholder {
+    .filter-option-inner-inner {
+      .css-formFree & {
+        opacity: 1;
+      }
+    }
+  }
   .btn-default,
   .btn {
     .css-formFree & {
