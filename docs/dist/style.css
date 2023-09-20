@@ -8094,12 +8094,6 @@ fieldset[disabled] .checkbox-inline {
 .css-formFree .bootstrap-select.form-control {
   background-color: transparent;
 }
-.css-formFree .bootstrap-select .bs-placeholder .filter-option-inner-inner {
-  opacity: 0;
-}
-.css-formFree .bootstrap-select .selectPrompt + .bs-placeholder .filter-option-inner-inner {
-  opacity: 1;
-}
 .css-formFree .bootstrap-select .btn-default, .css-formFree .bootstrap-select .btn-group_theme > [class^=btn],
 .css-formFree .bootstrap-select .btn {
   background-color: transparent;
@@ -10637,6 +10631,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   position: relative;
   width: auto;
   height: auto;
+  max-width: 64px;
 }
 .carousel-indicators-image .carousel-indicators-item-inner {
   display: block;
