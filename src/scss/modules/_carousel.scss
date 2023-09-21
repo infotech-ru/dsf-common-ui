@@ -6,6 +6,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
 @use "sass:math";
+
 .carousel {
   position: relative;
   &.pointer-event {
@@ -237,90 +238,101 @@
     text-align: center;
   }
   &-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 15;
+    gap: 3px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 0; // override <ol> default
-    // Use the .carousel-control's width as margin so we don't overlay those
-    margin-right: $carousel-control-width;
-    margin-left: $carousel-control-width;
+    justify-content: space-between;
     list-style: none;
-  
-    &-item  {
-      box-sizing: content-box;
-      flex: 0 1 auto;
-      width: $carousel-indicator-width;
-      height: $carousel-indicator-height;
-      margin-right: $carousel-indicator-spacer;
-      margin-left: $carousel-indicator-spacer;
-      text-indent: -999px;
-      cursor: pointer;
-      background-color: $carousel-indicator-active-bg;
-      background-clip: padding-box;
-      // Use transparent borders to increase the hit area by 10px on top and bottom.
-      border-top: $carousel-indicator-hit-area-height solid transparent;
-      border-bottom: $carousel-indicator-hit-area-height solid transparent;
-      opacity: .5;
-      @include transition($carousel-indicator-transition);
-    }
-
-    .active {
-      opacity: 1;
-      
-      width: 12px; // old
-      height: 12px; // old
-      margin: 0; // old
-      background-color: $carousel-indicator-active-bg; // old
-    }
-    &-image{
-      bottom: 0;
+    margin: 0;
+    padding-left: 0; // override <ol> default
+    position: relative;
+    width: 100%;
+    z-index: _zindex(carouselIndicatorsImage);
+    // text-align: center;
+    // Use the .carousel-control's width as margin so we don't overlay those
+    // margin-right: $carousel-control-width;
+    // margin-left: $carousel-control-width;
+    &__abs{
+      position: absolute;
       left: 0;
-      list-style: none;
-      padding-left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    &-item {
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
       position: relative;
-      text-align: center;
-      width: 100%;
-      z-index: _zindex(carouselIndicatorsImage);
-      margin-left: rem(20);
-      .carousel-indicators-item {
-        border: none;
-        cursor: pointer;
-        // border-radius: 10px;
-        display: inline-block;
-        // text-indent: -999px;
-        margin: 0px;
-        position: relative;
-        width: auto;
-        height: auto;
-        max-width: 64px;
-        &-inner{
-          display: block;
-          height: 70px;
-          width: 95px;
+      margin-bottom: 10px;
+      // width: auto;
+      // height: auto;
+      @include transition($carousel-indicator-transition);
+      .carousel-indicators__line{ 
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: $carousel-indicator-width;
+        height: $carousel-indicator-height;
+        margin-right: $carousel-indicator-spacer;
+        margin-left: $carousel-indicator-spacer;
+        text-indent: -999px;
+        background-color: $carousel-indicator-active-bg;
+        background-clip: padding-box;
+        // Use transparent borders to increase the hit area by 10px on top and bottom.
+        border-top: $carousel-indicator-hit-area-height solid transparent;
+        border-bottom: $carousel-indicator-hit-area-height solid transparent;
+        opacity: .5;
+      }
+      &_inner{
+        align-items: center;
+        border: 4px solid white;
+        display: inline-flex;
+        justify-content: center;
+        outline: 1px solid var(--color_grey2);
+        overflow: hidden;
+        height: #{_brand-sizes(carousel-thumbs_size)}px;
+        width: #{_brand-sizes(carousel-thumbs_size)}px;
+        &Button{ 
+          align-items: center;
+          background-color: var(--color_light-blue2);
+          border: 4px solid white;
+          color: var(--color_light-blue);
+          display: inline-flex;
+          flex-direction: column;
+          font-size: rem(10);
+          height: #{_brand-sizes(carousel-thumbs_size)}px;
+          line-height: rem(12);
+          justify-content: center;
+          outline: 1px dashed var(--color_light-blue);
           overflow: hidden;
+          text-align: center;
+          width: #{_brand-sizes(carousel-thumbs_size)}px;
+          svg{
+            --svg-icon-stroke: var(--color_light-blue);
+            --svg-icon-stroke_blue: var(--color_light-blue);
+          }
         }
-        &:after{
-          // background-color: $medium-grey;
-          background-color: _brand-colors(_grey);
-          content: '';
-          display: block;
-          height: 5px;
-          // margin-top: 6px;
+        img{
+          object-fit: cover;
+          height: 100%;
           width: 100%;
         }
       }
-      .active {
-        background-color: transparent;
-        margin: 0;
-        height: auto;
-        width: auto;
-        &:after{
-          background-color: _brand-colors(_green);
+      &:hover,
+      &:focus,
+      &.active {
+        .carousel-indicators-item_inner{
+          outline-color: var(--color_dark-grey);
+        }
+        // background-color: transparent;
+        // margin: 0;
+        // height: auto;
+        // width: auto;
+        .carousel-indicators__line{ 
+          opacity: 1;
+          width: 12px; // old
+          height: 12px; // old
+          margin: 0; // old
+          background-color: $carousel-indicator-active-bg; // old
         }
       }
     }
@@ -571,23 +583,23 @@
 // }
 
 
-.thumbsBlock{
-  align-items: center;
-  border: 4px solid white;
-  display: inline-flex;
-  justify-content: center;
-  outline: 1px solid var(--color_grey2);
-  overflow: hidden;
-  height: 64px;
-  width: 64px;
-  img{
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-  }
-  &_outer{
-    display: inline-flex;
-    position: relative;
-    margin-bottom: 10px;
-  }
-}
+// .thumbsBlock{
+//   align-items: center;
+//   border: 4px solid white;
+//   display: inline-flex;
+//   justify-content: center;
+//   outline: 1px solid var(--color_grey2);
+//   overflow: hidden;
+//   height: 64px;
+//   width: 64px;
+//   img{
+//     object-fit: cover;
+//     height: 100%;
+//     width: 100%;
+//   }
+//   &_outer{
+//     display: inline-flex;
+//     position: relative;
+//     margin-bottom: 10px;
+//   }
+// }
