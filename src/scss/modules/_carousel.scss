@@ -90,6 +90,7 @@
     // }
   }
   &-item {
+    aspect-ratio: 4 / 3;
     position: relative;
     display: none;
     float: left;
@@ -131,24 +132,40 @@
       transition-property: opacity;
       transform: none;
     }
+    img{
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      max-height: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    &:hover{
+      .carousel-action{
+        display: flex;
+      }
+    }
   }
   &-control-prev,
   &-control-next {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    // Use flex for alignment (1-3)
-    display: flex; // 1. allow flex styles
-    align-items: center; // 2. vertically center contents
-    justify-content: center; // 3. horizontally center contents
-    width: $carousel-control-width;
-    padding: 0;
-    color: $carousel-control-color;
-    text-align: center;
+    align-items: center;
     background: none;
-    border: 0;
-    opacity: $carousel-control-opacity;
+    background-color:  transparentize(_brand-colors(_grey4), .4);
+    border: 1px solid var(--color_grey2);
+    // color: $carousel-control-color;
+    bottom: auto;
+    display: flex;
+    justify-content: center;
+    height: #{_brand-sizes(carousel-control_size)}px;
+    margin-top: #{calc(_brand-sizes(carousel-control_size) / 2 * -1)}px;
+    outline: 0;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    opacity: 1;
+    z-index: 1;
+    width: #{_brand-sizes(carousel-control_size)}px;
     @include transition($carousel-control-transition);
 
     // Hover/focus state
@@ -157,74 +174,76 @@
       color: $carousel-control-color;
       text-decoration: none;
       outline: 0;
-      @include opacity(.9);
+      opacity: 1;
+      // @include opacity(.9);
     }
-    &-icon {
-      display: inline-block;
-      width: $carousel-control-icon-width;
-      height: $carousel-control-icon-width;
-      background: 50% / 100% 100% no-repeat;
-    }
-    .glyphicon-chevron-left,
-    .glyphicon-chevron-right {
-      display: inline-block;
-      position: absolute;
-      margin-top: -10px;
-      top: 50%;
-      z-index: 5;
+    // &-icon {
+    //   display: inline-block;
+    //   width: $carousel-control-icon-width;
+    //   height: $carousel-control-icon-width;
+    //   background: 50% / 100% 100% no-repeat;
+    // }
+    // .glyphicon-chevron-left,
+    // .glyphicon-chevron-right {
+    //   display: inline-block;
+    //   position: absolute;
+    //   margin-top: -10px;
+    //   top: 50%;
+    //   z-index: 5;
 
-      font-size: rem(20);
-      height: rem(20);
-      width: rem(20);
-    }
-    .carousel__theme &{
-      align-items: center;
-      background-image: none;
-      background-color: _brand-colors(_grey4);
-      display: flex;
-      text-align: left;
-      width: 66px;
-    }
+    //   font-size: rem(20);
+    //   height: rem(20);
+    //   width: rem(20);
+    // }
+    // .carousel__theme &{
+    //   align-items: center;
+    //   background-image: none;
+    //   background-color: _brand-colors(_grey4);
+    //   // display: flex;
+    //   text-align: left;
+    //   width: 66px;
+    // }
     .svg--icon{
-      background-color: transparentize(#fff, 0.3);
-      height: 36px;
-      width: 36px;
+      --svg-icon-stroke: var(--color_grey2);
+      --svg-icon-stroke_blue: var(--color_grey2);
+      height: 16px;
+      width: 16px;
       svg{ 
-        height: 36px;
-        width: 36px;
+        height: 16px;
+        width: 16px;
       }
     }
   }
   &-control-prev {
-    left: 0;
-    @include gradient-horizontal($start-color: rgba(0, 0, 0, .5), $end-color: rgba(0, 0, 0, .0001));
-    .carousel__theme &{
-      padding-left: 10px;
-      justify-content: flex-start;
-    }
-    &-icon {
-      background-image: escape-svg($carousel-control-prev-icon-bg);
-    }
-    .glyphicon-chevron-left {
-      left: 50%;
-      margin-left: -10px;
-    }
+    left: 5px;
+    // @include gradient-horizontal($start-color: rgba(0, 0, 0, .5), $end-color: rgba(0, 0, 0, .0001));
+    // .carousel__theme &{
+    //   padding-left: 10px;
+    //   justify-content: flex-start;
+    // }
+    // &-icon {
+    //   background-image: escape-svg($carousel-control-prev-icon-bg);
+    // }
+    // .glyphicon-chevron-left {
+    //   left: 50%;
+    //   margin-left: -10px;
+    // }
   }
   &-control-next {
-    right: 0;
+    right: 5px;
     left: auto;
-    @include gradient-horizontal($start-color: rgba(0, 0, 0, .0001), $end-color: rgba(0, 0, 0, .5));
-    .carousel__theme &{
-      padding-right: 10px;
-      justify-content: flex-end;
-    }
-    &-icon {
-      background-image: escape-svg($carousel-control-next-icon-bg);
-    }
-    .glyphicon-chevron-right {
-      right: 50%;
-      margin-right: -10px;
-    }
+    // @include gradient-horizontal($start-color: rgba(0, 0, 0, .0001), $end-color: rgba(0, 0, 0, .5));
+    // .carousel__theme &{
+    //   padding-right: 10px;
+    //   justify-content: flex-end;
+    // }
+    // &-icon {
+    //   background-image: escape-svg($carousel-control-next-icon-bg);
+    // }
+    // .glyphicon-chevron-right {
+    //   right: 50%;
+    //   margin-right: -10px;
+    // }
   }
   &-caption {
     position: absolute;
@@ -335,6 +354,40 @@
           background-color: $carousel-indicator-active-bg; // old
         }
       }
+    }
+  }
+  &-action{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    &__center{
+      align-self: center;
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 50%;
+      z-index: 1;
+    }
+    &__topRight{
+      align-self: end;
+      position: relative;
+      right: 5px;
+      top: 5px;
+      z-index: 1;
+    }
+    &:before{
+      background-color: #000c;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1;
     }
   }
 }
