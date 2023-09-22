@@ -10504,6 +10504,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   clear: both;
 }
 .carousel-item {
+  align-items: center;
   aspect-ratio: 4/3;
   position: relative;
   display: none;
@@ -10516,7 +10517,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   transition: transform 0.6s ease-in-out;
 }
 .carousel-item.active, .carousel-item-next, .carousel-item-prev {
-  display: block;
+  display: flex;
 }
 .carousel-fade .carousel-item.active, .carousel-fade .carousel-item-next.carousel-item-left, .carousel-fade .carousel-item-prev.carousel-item-right {
   z-index: 1;
@@ -10608,10 +10609,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   text-align: center;
 }
 .carousel-indicators {
-  gap: 3px;
+  gap: 4px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style: none;
   margin: 0;
   padding-left: 0;
