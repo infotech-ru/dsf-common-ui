@@ -10701,7 +10701,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 .carousel-action__center {
   align-self: center;
