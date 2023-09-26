@@ -89,9 +89,18 @@
 
 @each $btn in default, primary, success, danger, warning, info, 'grey', 'lightGrey' {
   .btn-#{$btn}{
-    background-color: _brand-btn(#{$btn}_bg);
-    background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
-    background-image: linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
+    @if (_brand-btn(#{$btn}_bg) == _brand-btn(#{$btn}-end_bg)) {
+      background-color: _brand-btn(#{$btn}_bg);
+      background-image: none;
+    }
+    @else{
+      background-color: _brand-btn(#{$btn}_bg);
+      background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
+      background-image: linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
+    }
+    // background-color: _brand-btn(#{$btn}_bg);
+    // background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
+    // background-image: linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
     border-color: _brand-btn(#{$btn}_border);
     color: _brand-btn(#{$btn}_color);
     @extend %btn;
@@ -100,9 +109,15 @@
     &:active,
     &.active,
     &.focus {
-      background-color: _brand-btn(#{$btn}_bg__hover);
-      background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg__hover) 0%, _brand-btn(#{$btn}-end_bg__hover) 100%);
-      background-image: linear-gradient(_brand-btn(#{$btn}_bg__hover) 0%, _brand-btn(#{$btn}-end_bg__hover) 100%);
+      @if (_brand-btn(#{$btn}_bg__hover) == _brand-btn(#{$btn}-end_bg__hover)) {
+        background-color: _brand-btn(#{$btn}_bg__hover);
+        background-image: none;
+      }
+      @else{
+        background-color: _brand-btn(#{$btn}_bg__hover);
+        background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg__hover) 0%, _brand-btn(#{$btn}-end_bg__hover) 100%);
+        background-image: linear-gradient(_brand-btn(#{$btn}_bg__hover) 0%, _brand-btn(#{$btn}-end_bg__hover) 100%);
+      }
       background-position: inherit;
       border-color: _brand-btn(#{$btn}_border__hover);
       color: _brand-btn(#{$btn}_color__hover);
@@ -125,10 +140,20 @@
         fill: _brand-btn(#{$btn}_svg);
       }
     }
-    #{--btn_bg}: _brand-btn(#{$btn}_bg);
-    #{--btn_bgEnd}: _brand-btn(#{$btn}-end_bg);
-    #{--btn_bgEnd__hover}: _brand-btn(#{$btn}-end_bg__hover);
-    #{--btn_bg__hover}: _brand-btn(#{$btn}_bg__hover);
+    @if (_brand-btn(#{$btn}_bg) == _brand-btn(#{$btn}-end_bg)) {
+      #{--btn_bg}: _brand-btn(#{$btn}_bg);
+    }
+    @else{ 
+      #{--btn_bg}: _brand-btn(#{$btn}_bg);
+      #{--btn_bgEnd}: _brand-btn(#{$btn}-end_bg);
+    }
+    @if (_brand-btn(#{$btn}_bg__hover) == _brand-btn(#{$btn}-end_bg__hover)) {
+      #{--btn_bg__hover}: _brand-btn(#{$btn}_bg__hover);
+    }
+    @else{
+      #{--btn_bgEnd__hover}: _brand-btn(#{$btn}-end_bg__hover);
+      #{--btn_bg__hover}: _brand-btn(#{$btn}_bg__hover);
+    }
     #{--borderColor__hover}: _brand-btn(#{$btn}_border__hover);
     #{--btn_svg}: _brand-btn(#{$btn}_svg);
     #{--btn_svg_blue}: _brand-btn(#{$btn}_svg_blue);

@@ -39,6 +39,26 @@ _Использование:_ класс `btn-group`
   </div>
 </div>
 
+
+#### Вертикальное группирование кнопок
+_Использование:_ класс `btn-group__vertical`
+
+{% highlight html %}
+<div class="btn-group btn-group__vertical">
+  <button class="btn">btn</button>
+  <button class="btn-default">btn-default</button>
+  <button class="btn-primary">btn-primary</button>
+</div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="btn-group">
+    <button class="btn">btn</button>
+    <button class="btn-default">btn-default</button>
+    <button class="btn-primary">btn-primary</button>
+  </div>
+</div>
+
+
 #### Отображения состояния нажатой / активной кнопки
 
 _Использование:_ класс `active` на кнопке
@@ -75,6 +95,10 @@ _Использование:_ класс `active` на кнопке
   <button class="btn-primary active">btn-primary active</button>
   <button class="btn-primary">btn-primary</button>
 </div>
+<div class="btn-group_theme">
+    <button class="btn-success active">btn-success active</button>
+    <button class="btn-primary">btn-primary</button>
+  </div>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="btn-group_theme mr-20">
@@ -87,3 +111,26 @@ _Использование:_ класс `active` на кнопке
     <button class="btn-primary">btn-primary</button>
   </div>
 </div>
+
+#### Модификация группы кнопок: прозрачность на неактивных кнопках
+
+На контейнере родителя вместо с `btn-group` используется класс `btn-group__opacity`
+
+{% highlight html %}
+<div class="btn-group_theme">
+  <button class="btn-primary active">btn-primary active</button>
+  <button class="btn-primary">btn-primary</button>
+</div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="btn-group_theme mr-20">
+    <button class="btn-primary active">btn-primary active</button>
+    <button class="btn-primary">btn-primary</button>
+  </div>
+
+  <div class="btn-group_theme mr-20">
+    <button class="btn-success active">btn-success active</button>
+    <button class="btn-primary">btn-primary</button>
+  </div>
+</div>
+

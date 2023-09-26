@@ -168,6 +168,17 @@
     @extend .btn-primary;
   }
 }
+
+.btn-group__opacity{
+  @extend .btn-group;
+  & > [class^="btn"] {
+    opacity: 0.4;
+  }
+  & > [class^="btn"].active{
+    opacity: 1;
+  }
+}
+
 .btn-group__radioCheck{
   align-items: center;
   background-color: _brand-colors(_grey2);
@@ -233,15 +244,31 @@
   }
 }
 
-// .btn-group-vertical {
-//   > [class^="btn"]
+.btn-group__vertical {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 //   > .btn-group,
-//   > .btn-group > [class^="btn"] {
+//   > .btn-group > [class^="btn"],
+  > [class^="btn"] {
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
 //     display: block;
 //     float: none;
-//     width: 100%;
 //     max-width: 100%;
-//   }
+    &:first-child:not(:last-child):not(.dropdown-toggle) {
+      @include border-top-radius(1px);
+      @include border-bottom-radius(0);
+    }
+    &:last-child:not(:first-child) {
+      @include border-top-radius(0);
+      @include border-bottom-radius(1px);
+    }
+    & + [class^="btn"] {
+      margin-left: 0;
+    }
+  }
 //
   // Clear floats so dropdown menus can be properly placed
   // > .btn-group {
@@ -261,22 +288,15 @@
 //     margin-top: -1px;
 //     margin-left: 0;
 //   }
-// }
+}
 
-// .btn-group-vertical > .btn {
-// .btn-group-vertical > [class^="btn"] {
-//   &:not(:first-child):not(:last-child) {
-//     border-radius: 0;
-//   }
-//   &:first-child:not(:last-child) {
-//     @include border-top-radius($btn-border-radius-base);
-//     @include border-bottom-radius(0);
-//   }
-//   &:last-child:not(:first-child) {
-//     @include border-top-radius(0);
-//     @include border-bottom-radius($btn-border-radius-base);
-//   }
-// }
+// .btn-group-vertical > .btn,
+.btn-group-vertical > [class^="btn"] {
+  // &:not(:first-child):not(:last-child) {
+  //   border-radius: 0;
+  // }
+
+}
 // .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
 // .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > [class^="btn"] {
 //   border-radius: 0;
