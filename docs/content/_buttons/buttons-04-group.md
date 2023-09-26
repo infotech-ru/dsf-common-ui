@@ -40,8 +40,8 @@ _Использование:_ класс `btn-group`
 </div>
 
 
-#### Вертикальное группирование кнопок
-_Использование:_ класс `btn-group__vertical`
+#### Вертикальное группирование кнопок.
+_Использование:_ класс `btn-group__vertical` вместе с `btn-group`
 
 {% highlight html %}
 <div class="btn-group btn-group__vertical">
@@ -51,42 +51,72 @@ _Использование:_ класс `btn-group__vertical`
 </div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="btn-group">
+  <div class="btn-group btn-group__vertical">
     <button class="btn">btn</button>
     <button class="btn-default">btn-default</button>
     <button class="btn-primary">btn-primary</button>
   </div>
 </div>
 
-
-#### Отображения состояния нажатой / активной кнопки
-
-_Использование:_ класс `active` на кнопке
+#### Одинаковая ширина кнопок при горизонтальном группирование кнопок.
+_Использование:_ класс `btn-group__equal` вместе с `btn-group`
 
 {% highlight html %}
-<div class="btn-group">
-  <button class="btn active">btn active</button>
+<div class="btn-group btn-group__equal">
   <button class="btn">btn</button>
+  <button class="btn-default">btn-default</button>
+  <button class="btn-primary">btn-primary</button>
 </div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="btn-group mr-20">
+  <div class="btn-group btn-group__equal">
+    <button class="btn">btn</button>
+    <button class="btn-default">btn-default</button>
+    <button class="btn-primary">btn-primary</button>
+  </div>
+</div>
+
+#### Отображения состояния нажатой / активной кнопки
+_Использование:_ класс `active` на кнопке. 
+Инициализация скрипта bootstap.buttons - `data-toggle="button"` (для одной кнопки),
+`data-toggle="buttons"` - для нескольких кнопок.
+Для работы скрипта обязательно должен быть класс у кнопок `.btn`
+
+{% highlight html %}
+<div class="btn-group" data-toggle="buttons">
+  <button class="btn active">btn active</button>
+  <button class="btn">btn</button>
+</div>
+<div class="btn-group" data-toggle="buttons">
+    <button class="btn btn-primary active">btn-primary active</button>
+    <button class="btn btn-primary">btn-primary</button>
+  </div>
+
+  <div class="btn-group" data-toggle="buttons">
+    <button class="btn active">btn active</button>
+    <button class="btn btn-success">btn-success</button>
+  </div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="btn-group mr-20" data-toggle="buttons">
     <button class="btn active">btn active</button>
     <button class="btn">btn</button>
   </div>
 
-  <div class="btn-group mr-20">
-    <button class="btn-primary active">btn-primary active</button>
-    <button class="btn-primary">btn-primary</button>
+  <div class="btn-group mr-20" data-toggle="buttons">
+    <button class="btn btn-primary active">btn-primary active</button>
+    <button class="btn btn-primary">btn-primary</button>
   </div>
 
-  <div class="btn-group">
+  <div class="btn-group" data-toggle="buttons">
     <button class="btn active">btn active</button>
-    <button class="btn-success">btn-success</button>
+    <button class="btn btn-success">btn-success</button>
   </div>
 </div>
 
-#### Модификация группы кнопок в одном стиле: только состояние нажатой / ненажатой кнопки
+#### Модификация группы кнопок в стиле default-primary(active)
+Когда состояние нажатой, то принимает цвет .btn-primary вне зависимости от применненой модификации
+Когда состояние ненажатой кнопки, то принимает цвет .btn-default вне зависимости от применненой модификации к кнопке
 
 На контейнере родителя вместо `btn-group` используется класс `btn-group_theme`
 
@@ -112,24 +142,19 @@ _Использование:_ класс `active` на кнопке
   </div>
 </div>
 
-#### Модификация группы кнопок: прозрачность на неактивных кнопках
+#### Модификация группы кнопок в стиле прозрачности (прозрачность для неактивных кнопкок)
 
-На контейнере родителя вместо с `btn-group` используется класс `btn-group__opacity`
+На контейнере родителя используется класс `btn-group__opacity` вместе с `btn-group`
 
 {% highlight html %}
-<div class="btn-group_theme">
+<div class="btn-group__opacity" data-toggle="buttons">
   <button class="btn-primary active">btn-primary active</button>
   <button class="btn-primary">btn-primary</button>
 </div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="btn-group_theme mr-20">
+  <div class="btn-group__opacity mr-20" data-toggle="buttons">
     <button class="btn-primary active">btn-primary active</button>
-    <button class="btn-primary">btn-primary</button>
-  </div>
-
-  <div class="btn-group_theme mr-20">
-    <button class="btn-success active">btn-success active</button>
     <button class="btn-primary">btn-primary</button>
   </div>
 </div>

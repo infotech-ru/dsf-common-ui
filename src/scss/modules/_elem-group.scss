@@ -170,7 +170,6 @@
 }
 
 .btn-group__opacity{
-  @extend .btn-group;
   & > [class^="btn"] {
     opacity: 0.4;
   }
@@ -269,47 +268,14 @@
       margin-left: 0;
     }
   }
-//
-  // Clear floats so dropdown menus can be properly placed
-  // > .btn-group {
-  //   @include clearfix;
-  //   > .btn {
-  //     float: none;
-  //   }
-  // }
-
-  // > .btn + .btn,
-//   > [class^="btn"] + [class^="btn"],
-//   // > .btn + .btn-group,
-//   > [class^="btn"] + .btn-group,
-//   // > .btn-group + .btn,
-//   > .btn-group + [class^="btn"],
-//   > .btn-group + .btn-group {
-//     margin-top: -1px;
-//     margin-left: 0;
-//   }
 }
 
-// .btn-group-vertical > .btn,
-.btn-group-vertical > [class^="btn"] {
-  // &:not(:first-child):not(:last-child) {
-  //   border-radius: 0;
-  // }
-
+.btn-group__equal{
+  > [class^="btn"] {
+    flex: 1 1 0px;
+    width: 0;
+  }
 }
-// .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
-// .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > [class^="btn"] {
-//   border-radius: 0;
-// }
-// .btn-group-vertical > .btn-group:first-child:not(:last-child) {
-//   > .btn:last-child,
-//   > .dropdown-toggle {
-//     @include border-bottom-radius(0);
-//   }
-// }
-// .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
-//   @include border-top-radius(0);
-// }
 
 
 // Justified button groups

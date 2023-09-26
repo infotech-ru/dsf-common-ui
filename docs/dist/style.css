@@ -8289,112 +8289,80 @@ fieldset[disabled] .checkbox-inline {
 /* path: dsf-common-ui/src/scss/modules/_elem-group.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.btn-group, .btn-group__opacity, .btn-group_theme {
+.btn-group, .btn-group_theme {
   position: relative;
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > [class^=btn], .btn-group__opacity > [class^=btn], .btn-group_theme > [class^=btn] {
+.btn-group > [class^=btn], .btn-group_theme > [class^=btn] {
   position: relative;
 }
-.btn-group > [class^=btn]:hover, .btn-group__opacity > [class^=btn]:hover, .btn-group_theme > [class^=btn]:hover, .btn-group > [class^=btn]:focus, .btn-group__opacity > [class^=btn]:focus, .btn-group_theme > [class^=btn]:focus, .btn-group > [class^=btn]:active, .btn-group__opacity > [class^=btn]:active, .btn-group_theme > [class^=btn]:active, .btn-group > [class^=btn].active, .btn-group__opacity > [class^=btn].active, .btn-group_theme > [class^=btn].active {
+.btn-group > [class^=btn]:hover, .btn-group_theme > [class^=btn]:hover, .btn-group > [class^=btn]:focus, .btn-group_theme > [class^=btn]:focus, .btn-group > [class^=btn]:active, .btn-group_theme > [class^=btn]:active, .btn-group > [class^=btn].active, .btn-group_theme > [class^=btn].active {
   z-index: 2;
 }
 
-.btn-group [class^=btn] + [class^=btn], .btn-group__opacity [class^=btn] + [class^=btn], .btn-group_theme [class^=btn] + [class^=btn],
+.btn-group [class^=btn] + [class^=btn], .btn-group_theme [class^=btn] + [class^=btn],
 .btn-group [class^=btn] + .btn-group,
-.btn-group__opacity [class^=btn] + .btn-group,
-.btn-group [class^=btn] + .btn-group__opacity,
-.btn-group__opacity [class^=btn] + .btn-group__opacity,
 .btn-group_theme [class^=btn] + .btn-group,
-.btn-group_theme [class^=btn] + .btn-group__opacity,
 .btn-group [class^=btn] + .btn-group_theme,
-.btn-group__opacity [class^=btn] + .btn-group_theme,
 .btn-group_theme [class^=btn] + .btn-group_theme,
 .btn-group .btn-group + [class^=btn],
-.btn-group__opacity .btn-group + [class^=btn],
-.btn-group .btn-group__opacity + [class^=btn],
-.btn-group__opacity .btn-group__opacity + [class^=btn],
 .btn-group_theme .btn-group + [class^=btn],
-.btn-group_theme .btn-group__opacity + [class^=btn],
 .btn-group .btn-group_theme + [class^=btn],
-.btn-group__opacity .btn-group_theme + [class^=btn],
 .btn-group_theme .btn-group_theme + [class^=btn],
 .btn-group .btn-group + .btn-group,
-.btn-group__opacity .btn-group + .btn-group,
-.btn-group .btn-group__opacity + .btn-group,
-.btn-group__opacity .btn-group__opacity + .btn-group,
-.btn-group .btn-group + .btn-group__opacity,
-.btn-group__opacity .btn-group + .btn-group__opacity,
-.btn-group .btn-group__opacity + .btn-group__opacity,
-.btn-group__opacity .btn-group__opacity + .btn-group__opacity,
 .btn-group_theme .btn-group + .btn-group,
-.btn-group_theme .btn-group__opacity + .btn-group,
-.btn-group_theme .btn-group + .btn-group__opacity,
-.btn-group_theme .btn-group__opacity + .btn-group__opacity,
 .btn-group .btn-group_theme + .btn-group,
-.btn-group__opacity .btn-group_theme + .btn-group,
-.btn-group .btn-group_theme + .btn-group__opacity,
-.btn-group__opacity .btn-group_theme + .btn-group__opacity,
 .btn-group_theme .btn-group_theme + .btn-group,
-.btn-group_theme .btn-group_theme + .btn-group__opacity,
 .btn-group .btn-group + .btn-group_theme,
-.btn-group__opacity .btn-group + .btn-group_theme,
-.btn-group .btn-group__opacity + .btn-group_theme,
-.btn-group__opacity .btn-group__opacity + .btn-group_theme,
 .btn-group_theme .btn-group + .btn-group_theme,
-.btn-group_theme .btn-group__opacity + .btn-group_theme,
 .btn-group .btn-group_theme + .btn-group_theme,
-.btn-group__opacity .btn-group_theme + .btn-group_theme,
 .btn-group_theme .btn-group_theme + .btn-group_theme {
   margin-left: -1px;
 }
 
-.btn-group > [class^=btn]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group__opacity > [class^=btn]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group_theme > [class^=btn]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > [class^=btn]:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group_theme > [class^=btn]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
-.btn-group > [class^=btn]:first-child, .btn-group__opacity > [class^=btn]:first-child, .btn-group_theme > [class^=btn]:first-child {
+.btn-group > [class^=btn]:first-child, .btn-group_theme > [class^=btn]:first-child {
   margin-left: 0;
 }
-.btn-group > [class^=btn]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group__opacity > [class^=btn]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group_theme > [class^=btn]:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > [class^=btn]:first-child:not(:last-child):not(.dropdown-toggle), .btn-group_theme > [class^=btn]:first-child:not(:last-child):not(.dropdown-toggle) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.btn-group > [class^=btn]:last-child:not(:first-child), .btn-group__opacity > [class^=btn]:last-child:not(:first-child), .btn-group_theme > [class^=btn]:last-child:not(:first-child),
+.btn-group > [class^=btn]:last-child:not(:first-child), .btn-group_theme > [class^=btn]:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child),
-.btn-group__opacity > .dropdown-toggle:not(:first-child),
 .btn-group_theme > .dropdown-toggle:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.btn-group .dropdown-toggle:active, .btn-group__opacity .dropdown-toggle:active, .btn-group_theme .dropdown-toggle:active,
+.btn-group .dropdown-toggle:active, .btn-group_theme .dropdown-toggle:active,
 .btn-group.open .dropdown-toggle,
-.open.btn-group__opacity .dropdown-toggle,
 .open.btn-group_theme .dropdown-toggle {
   outline: 0;
 }
 
-.btn-group > [class^=btn], .btn-group__opacity > [class^=btn], .btn-group_theme > [class^=btn],
+.btn-group > [class^=btn], .btn-group_theme > [class^=btn],
 .btn-group-sm > .btn,
 .btn-group-lg > .btn {
   line-height: 1.625rem;
 }
 
-.btn-group > .btn-xs, .btn-group__opacity > .btn-xs, .btn-group_theme > .btn-xs,
+.btn-group > .btn-xs, .btn-group_theme > .btn-xs,
 .btn-group > .btn-small,
-.btn-group__opacity > .btn-small,
 .btn-group_theme > .btn-small {
   line-height: 1.125rem;
 }
 
-.btn-group > .btn-large, .btn-group__opacity > .btn-large, .btn-group_theme > .btn-large {
+.btn-group > .btn-large, .btn-group_theme > .btn-large {
   line-height: 1.875rem;
 }
 
-.btn-group > [class^=btn] + .dropdown-toggle, .btn-group__opacity > [class^=btn] + .dropdown-toggle, .btn-group_theme > [class^=btn] + .dropdown-toggle {
+.btn-group > [class^=btn] + .dropdown-toggle, .btn-group_theme > [class^=btn] + .dropdown-toggle {
   padding-right: 8px;
   padding-left: 8px;
 }
@@ -8497,6 +8465,11 @@ fieldset[disabled] .checkbox-inline {
   margin-left: 0;
 }
 
+.btn-group__equal > [class^=btn] {
+  flex: 1 1 0px;
+  width: 0;
+}
+
 [data-toggle=buttons] > [class^=btn] input[type=radio],
 [data-toggle=buttons] > [class^=btn] input[type=checkbox],
 [data-toggle=buttons] > .btn-group > [class^=btn] input[type=radio],
@@ -8567,12 +8540,10 @@ fieldset[disabled] .checkbox-inline {
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group > .btn,
 .input-group-btn:first-child > .btn-group_theme > .btn,
-.input-group-btn:first-child > .btn-group__opacity > .btn,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
-.input-group-btn:last-child > .btn-group_theme:not(:last-child) > .btn,
-.input-group-btn:last-child > .btn-group__opacity:not(:last-child) > .btn {
+.input-group-btn:last-child > .btn-group_theme:not(:last-child) > .btn {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -8586,12 +8557,10 @@ fieldset[disabled] .checkbox-inline {
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn-group > .btn,
 .input-group-btn:last-child > .btn-group_theme > .btn,
-.input-group-btn:last-child > .btn-group__opacity > .btn,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
-.input-group-btn:first-child > .btn-group_theme:not(:first-child) > .btn,
-.input-group-btn:first-child > .btn-group__opacity:not(:first-child) > .btn {
+.input-group-btn:first-child > .btn-group_theme:not(:first-child) > .btn {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -8616,14 +8585,12 @@ fieldset[disabled] .checkbox-inline {
 }
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group,
-.input-group-btn:first-child > .btn-group_theme,
-.input-group-btn:first-child > .btn-group__opacity {
+.input-group-btn:first-child > .btn-group_theme {
   margin-right: -1px;
 }
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn-group,
-.input-group-btn:last-child > .btn-group_theme,
-.input-group-btn:last-child > .btn-group__opacity {
+.input-group-btn:last-child > .btn-group_theme {
   z-index: 2;
   margin-left: -1px;
 }
