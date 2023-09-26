@@ -8449,8 +8449,12 @@ fieldset[disabled] .checkbox-inline {
   margin-left: 0;
 }
 
+.btn-group__equal {
+  flex-wrap: wrap;
+}
 .btn-group__equal > [class^=btn] {
   flex: 1 1 0px;
+  min-width: fit-content;
   width: 0;
 }
 

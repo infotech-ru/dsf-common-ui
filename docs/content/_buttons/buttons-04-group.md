@@ -159,9 +159,9 @@ _Использование:_ класс `active` на кнопке.
 
 {% highlight html %}
   <div class="btn-group btn-group__theme" data-toggle="buttons">
-    <label class="btn btn-primary active">
+    <label class="btn btn-primary">
       <input type="radio" name="options4" id="option41" checked>
-      btn-primary active
+      btn-primary
     </label>
     <label class="btn btn-primary">
         <input type="radio" name="options4" id="option42">
@@ -169,9 +169,9 @@ _Использование:_ класс `active` на кнопке.
     </label>
   </div>
   <div class="btn-group btn-group__theme" data-toggle="buttons">
-    <label class="btn btn-success active">
+    <label class="btn btn-success">
         <input type="radio" name="options5" id="option51" checked>
-        btn-success active
+        btn-success
     </label>
     <label class="btn btn-primary">
         <input type="radio" name="options5" id="option52">
@@ -181,9 +181,9 @@ _Использование:_ класс `active` на кнопке.
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="btn-group btn-group__theme mr-20" data-toggle="buttons">
-    <label class="btn btn-primary active">
+    <label class="btn btn-primary">
       <input type="radio" name="options4" id="option41" checked>
-      btn-primary active
+      btn-primary
     </label>
     <label class="btn btn-primary">
         <input type="radio" name="options4" id="option42">
@@ -191,9 +191,9 @@ _Использование:_ класс `active` на кнопке.
     </label>
   </div>
   <div class="btn-group btn-group__theme" data-toggle="buttons">
-    <label class="btn btn-success active">
+    <label class="btn btn-success">
         <input type="radio" name="options5" id="option51" checked>
-        btn-success active
+        btn-success
     </label>
     <label class="btn btn-primary">
         <input type="radio" name="options5" id="option52">
