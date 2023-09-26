@@ -148,7 +148,7 @@ _Использование:_ класс `active` на кнопке.
       btn-success
       <input type="radio" name="options3" id="option32">
     </label>
-  </div>>
+  </div>
 </div>
 
 #### Модификация группы кнопок в стиле default-primary(active)
@@ -158,7 +158,7 @@ _Использование:_ класс `active` на кнопке.
 На контейнере родителя используется класс `btn-group__theme` вместе с `btn-group`
 
 {% highlight html %}
-  <div class="btn-group btn-group__theme">
+  <div class="btn-group btn-group__theme" data-toggle="buttons">
     <label class="btn btn-primary active">
       <input type="radio" name="options4" id="option41" checked>
       btn-primary active
@@ -168,7 +168,7 @@ _Использование:_ класс `active` на кнопке.
         btn-primary
     </label>
   </div>
-  <div class="btn-group btn-group__theme">
+  <div class="btn-group btn-group__theme" data-toggle="buttons">
     <label class="btn btn-success active">
         <input type="radio" name="options5" id="option51" checked>
         btn-success active
@@ -180,7 +180,7 @@ _Использование:_ класс `active` на кнопке.
   </div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="btn-group btn-group__theme mr-20">
+  <div class="btn-group btn-group__theme mr-20" data-toggle="buttons">
     <label class="btn btn-primary active">
       <input type="radio" name="options4" id="option41" checked>
       btn-primary active
@@ -190,7 +190,7 @@ _Использование:_ класс `active` на кнопке.
         btn-primary
     </label>
   </div>
-  <div class="btn-group btn-group__theme">
+  <div class="btn-group btn-group__theme" data-toggle="buttons">
     <label class="btn btn-success active">
         <input type="radio" name="options5" id="option51" checked>
         btn-success active
