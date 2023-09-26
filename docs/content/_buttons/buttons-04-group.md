@@ -62,14 +62,14 @@ _Использование:_ класс `btn-group__vertical` вместе с `
 _Использование:_ класс `btn-group__equal` вместе с `btn-group`
 
 {% highlight html %}
-<div class="btn-group btn-group__equal">
+<div class="btn-group btn-group__equal w-100p">
   <button class="btn">btn</button>
   <button class="btn-default">btn-default</button>
   <button class="btn-primary">btn-primary</button>
 </div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="btn-group btn-group__equal">
+  <div class="btn-group btn-group__equal w-100p">
     <button class="btn">btn</button>
     <button class="btn-default">btn-default</button>
     <button class="btn-primary">btn-primary</button>
@@ -83,62 +83,122 @@ _Использование:_ класс `active` на кнопке.
 Для работы скрипта обязательно должен быть класс у кнопок `.btn`
 
 {% highlight html %}
-<div class="btn-group" data-toggle="buttons">
-  <button class="btn active">btn active</button>
-  <button class="btn">btn</button>
-</div>
-<div class="btn-group" data-toggle="buttons">
-    <button class="btn btn-primary active">btn-primary active</button>
-    <button class="btn btn-primary">btn-primary</button>
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn active">
+      <input type="radio" name="options1" id="option1" checked>
+      btn active
+    </label>
+    <label class="btn">
+      <input type="radio" name="options1" id="option2">
+      btn
+    </label>
   </div>
 
   <div class="btn-group" data-toggle="buttons">
-    <button class="btn active">btn active</button>
-    <button class="btn btn-success">btn-success</button>
+    <label class="btn btn-primary active">
+      btn-primary active
+      <input type="radio" name="options2" id="option1" checked>
+    </label>
+    <label class="btn btn-primary">
+      btn-primary
+      <input type="radio" name="options2" id="option2">
+    </label>
+  </div>
+
+  <div class="btn-group" data-toggle="buttons">
+    <label class="btn active">
+      btn active
+      <input type="radio" name="options3" id="option1" checked>
+    </label>
+    <label class="btn btn-success">
+      btn-success
+      <input type="radio" name="options3" id="option2">
+    </label>
   </div>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="btn-group mr-20" data-toggle="buttons">
-    <button class="btn active">btn active</button>
-    <button class="btn">btn</button>
+    <label class="btn active">
+      <input type="radio" name="options1" id="option11" checked>
+      btn active
+    </label>
+    <label class="btn">
+      <input type="radio" name="options1" id="option12">
+      btn
+    </label>
   </div>
-
+  
   <div class="btn-group mr-20" data-toggle="buttons">
-    <button class="btn btn-primary active">btn-primary active</button>
-    <button class="btn btn-primary">btn-primary</button>
+    <label class="btn btn-primary active">
+      btn-primary active
+      <input type="radio" name="options2" id="option21" checked>
+    </label>
+    <label class="btn btn-primary">
+      btn-primary
+      <input type="radio" name="options2" id="option22">
+    </label>
   </div>
 
   <div class="btn-group" data-toggle="buttons">
-    <button class="btn active">btn active</button>
-    <button class="btn btn-success">btn-success</button>
-  </div>
+    <label class="btn active">
+      btn active
+      <input type="radio" name="options3" id="option31" checked>
+    </label>
+    <label class="btn btn-success">
+      btn-success
+      <input type="radio" name="options3" id="option32">
+    </label>
+  </div>>
 </div>
 
 #### Модификация группы кнопок в стиле default-primary(active)
 Когда состояние нажатой, то принимает цвет .btn-primary вне зависимости от применненой модификации
 Когда состояние ненажатой кнопки, то принимает цвет .btn-default вне зависимости от применненой модификации к кнопке
 
-На контейнере родителя вместо `btn-group` используется класс `btn-group_theme`
+На контейнере родителя используется класс `btn-group__theme` вместе с `btn-group`
 
 {% highlight html %}
-<div class="btn-group_theme">
-  <button class="btn-primary active">btn-primary active</button>
-  <button class="btn-primary">btn-primary</button>
-</div>
-<div class="btn-group_theme">
-    <button class="btn-success active">btn-success active</button>
-    <button class="btn-primary">btn-primary</button>
+  <div class="btn-group btn-group__theme">
+    <label class="btn btn-primary active">
+      <input type="radio" name="options4" id="option41" checked>
+      btn-primary active
+    </label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options4" id="option42">
+        btn-primary
+    </label>
+  </div>
+  <div class="btn-group btn-group__theme">
+    <label class="btn btn-success active">
+        <input type="radio" name="options5" id="option51" checked>
+        btn-success active
+    </label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options5" id="option52">
+        btn-primary
+    </label>
   </div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="btn-group_theme mr-20">
-    <button class="btn-primary active">btn-primary active</button>
-    <button class="btn-primary">btn-primary</button>
+  <div class="btn-group btn-group__theme mr-20">
+    <label class="btn btn-primary active">
+      <input type="radio" name="options4" id="option41" checked>
+      btn-primary active
+    </label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options4" id="option42">
+        btn-primary
+    </label>
   </div>
-
-  <div class="btn-group_theme mr-20">
-    <button class="btn-success active">btn-success active</button>
-    <button class="btn-primary">btn-primary</button>
+  <div class="btn-group btn-group__theme">
+    <label class="btn btn-success active">
+        <input type="radio" name="options5" id="option51" checked>
+        btn-success active
+    </label>
+    <label class="btn btn-primary">
+        <input type="radio" name="options5" id="option52">
+        btn-primary
+    </label>
   </div>
 </div>
 
@@ -147,15 +207,38 @@ _Использование:_ класс `active` на кнопке.
 На контейнере родителя используется класс `btn-group__opacity` вместе с `btn-group`
 
 {% highlight html %}
-<div class="btn-group__opacity" data-toggle="buttons">
-  <button class="btn-primary active">btn-primary active</button>
-  <button class="btn-primary">btn-primary</button>
+<div class="btn-group btn-group__opacity" data-toggle="buttons">
+  <label class="btn btn-primary active">
+    <input type="radio" name="options6" id="option62" checked>
+    btn-primary active
+  </label>
+  <label class="btn btn-primary"> 
+    <input type="radio" name="options6" id="option62">
+    btn-primary
+  </label>
+  <label class="btn btn-success">
+    <input type="radio" name="options6" id="option63">
+    btn-success
+  </label>
 </div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="btn-group__opacity mr-20" data-toggle="buttons">
-    <button class="btn-primary active">btn-primary active</button>
-    <button class="btn-primary">btn-primary</button>
+  <div class="btn-group btn-group__opacity" data-toggle="buttons">
+    <label class="btn btn-primary active">
+      <input type="radio" name="options6" id="option62" checked>
+      btn-primary active
+    </label>
+    <label class="btn btn-primary"> 
+      <input type="radio" name="options6" id="option62">
+      btn-primary
+    </label>
+    <label class="btn btn-success">
+      <input type="radio" name="options6" id="option63">
+      btn-success
+    </label>
   </div>
 </div>
 
+
+#### Кнопки переключатели
+См. в разделе <a href="/forms.html#radiobtn-item">элементы формы#Кнопки-переключатели</a>

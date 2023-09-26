@@ -159,8 +159,8 @@
 }
 
 
-.btn-group_theme{
-  @extend .btn-group;
+.btn-group__theme{
+  // @extend .btn-group;
   & > [class^="btn"] {
     @extend .btn-default;
   }

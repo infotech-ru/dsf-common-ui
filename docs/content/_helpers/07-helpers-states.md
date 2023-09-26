@@ -13,6 +13,7 @@ order: 7
 
 При наведении на родителя с классом `.hoverTarget_parent` будет отображаться ребенок с классом `hoverTarget_item__block`, `hoverTarget_item__inlineFlex` и `hoverTarget_item__flex` изменением `display: none` на `display: block`, `display:inline-block`, `display: inline-flex`, `display: flex` и `display:grid`
 
+
 ### Модификации иконок при изменении состояния
 
-Описание для иконок смотреть в разделе Иконок [Модификации иконок при изменении состояния]
+Описание для иконок смотреть в разделе Иконок <a href="icons.html#icons-states">Модификации иконок при изменении состояния</a>
