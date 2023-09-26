@@ -6,6 +6,8 @@ anchor: select
 order: 2
 ---
 
+Используется скрипт <a href="https://developer.snapappointments.com/bootstrap-select/">bootstap-select</a>
+
 ### Смещение выпадающего списка влево.
 
 1. Используется класс `dropdown-menu-left`

@@ -1,0 +1,55 @@
+---
+Title: Переключатель - текст с иконкой
+menutitle: Переключатель - текст-иконка
+category: forms
+anchor: radio-item
+order: 7
+---
+
+<p>Стилизация переключателя в текст с иконкой</p>
+<div class="bs-docs-example mb-10">
+    <div class="radioCheck mb-10">
+        <input type="radio" id="id-1" class="" name="nameGroup" value="1">  
+        <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-1">
+            <span class="svg--icon">
+                <svg width="24" height="24">
+                    <use xlink:href="dist/sprite.symbol.svg#bicolors-checkbox_round"></use>
+                </svg>
+            </span>
+        </label>
+    </div>
+    <div class="radioCheck mb-10">
+        <input type="radio" id="id-2" class="" name="nameGroup" value="2">  
+        <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-2">
+            <span class="svg--icon">
+                <svg width="24" height="24">
+                    <use xlink:href="dist/sprite.symbol.svg#bicolors-checkbox_round"></use>
+                </svg>
+            </span>
+        </label>
+    </div>
+</div>
+
+{% highlight html %}
+     <div class="radioCheck mb-10">
+        <?= Html::radio(
+            'nameGroup',
+            $model,
+            [
+                'value' => $model->id,
+                'class' => '',
+                'uncheckValue' => null,
+                'id' => "id-$main->id",
+            ]
+        ) ?>
+        <?= Html::label(
+            '<span class="svg--icon">' . Icons::icon('bicolors-checkbox_round') . '</span>',
+            "id-$model->id",
+            [
+                'class' => 'radio',
+                'data-mainImageText' => Yii::t('app', 'Главное изображение'),
+                'data-plainImageText' => Yii::t('app', 'Сделать главным')
+            ]
+        ) ?>
+    </div>
+{% endhighlight %}

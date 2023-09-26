@@ -7,7 +7,7 @@ order: 5
 ---
 
 ### Табы
-По умолчанию использует скрипт от Bootstrap 3 - tabs.js.
+По умолчанию использует скрипт от Bootstrap 3 - <a href="https://getbootstrap.com/docs/3.4/javascript/#tabs">tabs.js</a>.
 
 Переключатели вкладок имеют несколько вариантов дизайна.
 

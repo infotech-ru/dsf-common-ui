@@ -1,0 +1,43 @@
+---
+Title: Стилизация переключателя radio
+menutitle: Стилизация переключателя radio
+category: forms
+anchor: radio-item
+order: 6
+---
+<p>Простая стилизация переключателя radio</p>
+
+<div class="bs-docs-example mb-10">
+    <div class="d-flex" role="radiogroup">
+        <div class="radio-item mr-10">
+            <input type="radio" id="exampleName-1" name="exampleName" value="1">
+            <label class="radio" for="exampleName-1">
+                Муж.
+            </label>
+        </div>
+        <div class="radio-item mr-10">
+            <input type="radio" id="exampleName-0" name="exampleName" value="0">
+            <label class="radio" for="exampleName-0">
+                Жен.
+            </label>
+        </div>
+    </div>
+</div>
+
+{% highlight html %}
+        <?= $form->field($model, 'creditType')->radioList(RequestCredit::getCreditTypeList(), [
+            'class' => 'd-flex',
+            'item' => function ($index, $label, $name, $checked, $value) use ($model) {
+                $options = [
+                    'label' => null,
+                    'value' => $value,
+                    'id' => $id = Html::getInputId($model, 'creditType') . "-$value",
+                ];
+
+                return '<div class="radio-item mr-10">'
+                    . Html::radio($name, $checked, $options)
+                    . Html::label($label, $id, ['class' => 'radio'])
+                    . '</div>';
+            }
+        ])->label(false) ?>
+{% endhighlight %}

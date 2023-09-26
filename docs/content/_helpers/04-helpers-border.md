@@ -10,7 +10,12 @@ order: 4
 
 `border` - добавляет границу-черту в 1px вокруг контейнера(блока).
 
+
 Классы `border-top`, `border-bottom`, `border-left`, `border-right` добавляют границу-черту толщиной в 1px сверху, снизу, слева или справа блока.
+
+Классы `border-top__thick`, `border-bottom__thick`, `border-left__thick`, `border-right__thick` добавляют границу-черту толщиной в 2px сверху, снизу, слева или справа блока.
+
+`border__thick` - добавляет границу-черту в 2px вокруг контейнера(блока).
 
 Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
 
@@ -19,14 +24,14 @@ order: 4
   <div class="border-top">border-top</div>
   <div class="border-right border-left__mobile">border-right border-left__mobile</div>
   <div class="border-bottom">border-bottom</div>
-  <div class="border-left">border-left</div>
+  <div class="border-left border-left__thick">border-left border-left__thick</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
   <div class="mb-10 border">border</div>
   <div class="mb-10 border-top">border-top</div>
   <div class="mb-10 border-right border-left__mobile">border-right border-left__mobile</div>
   <div class="mb-10 border-bottom">border-bottom</div>
-  <div class="mb-10 border-left">border-left</div>
+  <div class="mb-10 border-left border-left__thick">border-left border-left__thick</div>
 </div>
 
 Классы `border__none`, `border-top__none`, `border-bottom__none`, `border-left__none`, `border-right__none` - классы отключают границу в с соответствующей стороны контейнера или со всех сторон.

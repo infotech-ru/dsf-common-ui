@@ -1,0 +1,75 @@
+---
+Title: Кнопки-переключатели
+menutitle: Кнопки-переключатели
+category: forms
+anchor: btn-group__radioCheckItem
+order: 8
+---
+
+<p>Для стилизации под маленький переключатель (false-true) используется следующая структура:</p>
+
+<div class="bs-docs-example mb-10">
+    <div class="form-group d-flex flex-row-reverse justify-flex-end align-center">
+        <label class="form-control-static ml-5" for="btn-group__radioCheck">Заголовок переключателя</label>
+        <div id="btn-group__radioCheck" class="form-control btn-group btn-group__radioCheck" value="0" data-toggle="buttons">
+            <label class="btn btn-group__radioCheckItem active">
+                <input type="radio" class="js-toggle" name="btn-group__radioCheckName" value="0" checked=""> 
+                Нет
+            </label>
+            <label class="btn btn-group__radioCheckItem">
+                <input type="radio" class="js-toggle" name="btn-group__radioCheckName" value="1"> 
+                Да
+            </label>
+        </div>
+    </div>
+</div>
+
+
+{% highlight html %}
+html:
+
+<div class="btn-group btn-group__radioCheck" data-toggle="buttons" role="radiogroup">
+    <label class="btn btn-group__radioCheckItem" type="button">
+        <input type="radio" name="exampleName0" value="0">
+        Нет
+    </label>
+    <label class="btn btn-group__radioCheckItem active" type="button">
+        <input type="radio" name="exampleName0" value="1" checked=""> 
+        Да
+    </label>
+</div>
+  
+php:
+    use app\widgets\Toggle
+
+    <?= $form->field($model, 'XXX', ['options' => ['class' => 'form-group d-flex flex-row-reverse justify-flex-end align-center']])
+        ->widget(Toggle::class, ['options' => ['value' => ''],])
+        ->label($model->getAttributeLabel('XXX'), ['class' => 'form-control-static ml-5']) ?>
+
+php:
+    radioList:
+
+    <?= $form->field($client, 'exampleName0', [
+        'options' => [
+            'class' => 'ml-10',
+        ],
+    ]) 
+    ->label(false)
+    ->radioList(
+        [true => 'Нет', false => 'Да'],
+        [
+            'class' => 'btn-group btn-group__radioCheck',
+            'data-toggle' => 'buttons',
+            'item' => function ($index, $label, $name, $checked, $value) {
+                unset($index);
+                $itemOptions = [
+                    'value' => $value,
+                    'label' => $label,
+                    'labelOptions' => ['class' => 'btn btn-group__radioCheckItem ' . ($checked ? ' active' : '')],
+                ];
+
+            },
+        ]
+    ) ?>
+
+{% endhighlight %}

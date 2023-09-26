@@ -337,6 +337,14 @@
     &__dashed{ 
       border-top-style: dashed;
     }
+    &__thick{
+      border-top-width: 2px;
+      &__mobile{ 
+        .mobile-view &{
+          border-top-width: 2px;
+        }
+      }
+    }
     &__mobile{ 
       .mobile-view &{
         border-top: 1px solid _brand-palette(border);
@@ -358,6 +366,14 @@
     }
     &__dashed{ 
       border-right-style: dashed;
+    }
+    &__thick{
+      border-right-width: 2px;
+      &__mobile{ 
+        .mobile-view &{
+          border-right-width: 2px;
+        }
+      }
     }
     &__mobile{ 
       .mobile-view &{
@@ -381,6 +397,14 @@
     &__dashed{ 
       border-bottom-style: dashed;
     }
+    &__thick{
+      border-bottom-width: 2px;
+      &__mobile{ 
+        .mobile-view &{
+          border-bottom-width: 2px;
+        }
+      }
+    }
     &__mobile{ 
       .mobile-view &{
         border-bottom: 1px solid _brand-palette(border);
@@ -403,6 +427,14 @@
     &__dashed{ 
       border-left-style: dashed;
     }
+    &__thick{
+      border-left-width: 2px;
+      &__mobile{ 
+        .mobile-view &{
+          border-left-width: 2px;
+        }
+      }
+    }
     &__mobile{ 
       .mobile-view &{
         border-left: 1px solid _brand-palette(border);
@@ -422,6 +454,14 @@
   }
   &__dashed{ 
     border-style: dashed;
+  }
+  &__thick{
+    border-width: 2px;
+    &__mobile{ 
+      .mobile-view &{
+        border-width: 2px;
+      }
+    }
   }
 }
 
