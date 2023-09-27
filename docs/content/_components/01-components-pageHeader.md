@@ -12,7 +12,7 @@ order: 1
 <div class="pageHeader">
   <div class="pageHeader__left">
     <h2 class="pageHeader__title">
-      Заголовок страницы
+      <?= $this->title ?>
     </h2>
     <span class="label label-success ml-10">Доп. элемент</span>
   </div>

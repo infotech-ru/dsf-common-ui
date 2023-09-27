@@ -481,9 +481,9 @@ textarea.form-control {
 
 .bootstrap-select {
   &.form-control {
-    .css-formFree & {
-      background-color: transparent;
-    }
+    background-color: transparent;
+    // .css-formFree & {
+    // }
   }
 
   // >.dropdown-toggle {
@@ -513,65 +513,65 @@ textarea.form-control {
   }
   .btn-default,
   .btn {
-    .css-formFree & {
-      background-color: transparent;
-      background-image: none;
-      border-color: _brand-palette(formControl-borderColor);
-    }
+    background-color: transparent;
+    background-image: none;
+    border-color: _brand-palette(formControl-borderColor);
+    // .css-formFree & {
+    // }
 
     &:active,
     &.active {
-      .css-formFree & {
-        background-color: transparent;
-        background-image: none;
-      }
+      background-color: transparent;
+      background-image: none;
+      // .css-formFree & {
+      // }
     }
   }
 
   &.bs3,
   & {
     .dropdown-toggle .filter-option {
-      .css-formFree & {
-        padding-right: rem(calc(_brand-sizes(formControl_paddingX) + 5));
-      }
+      padding-right: rem(calc(_brand-sizes(formControl_paddingX) + 5));
+      // .css-formFree & {
+      // }
     }
   }
-  .dropdown-toggle .caret{ 
-    .css-formFree & {
-      border: none;
-      right: 0;
-    }
+  .dropdown-toggle .bs-caret .caret{ 
+    border: none;
+    right: 0;
+    // .css-formFree & {
+    // }
   }
   .caret {
     &:before,
     &:after {
-      .css-formFree & {
-        border-style: solid;
-        border-color: var(--bg_color, _brand-palette(formControl-bgc)) transparent transparent transparent;
-        content: '';
-        display: block;
-        position: absolute;
-        height: 0;
-        top: 0px;
-        width: 0;
-      }
+      border-style: solid;
+      border-color: var(--bg_color, _brand-palette(formControl-bgc)) transparent transparent transparent;
+      content: '';
+      display: block;
+      position: absolute;
+      height: 0;
+      top: 0px;
+      width: 0;
+      // .css-formFree & {
+      // }
     }
 
     &:after {
-      .css-formFree & {
-        border-width: rem(calc(_brand-sizes(caret_size) - 1));
-        border-bottom-width: 0;
-        right: rem(_brand-sizes(formControl_paddingX));
-      }
+      border-width: rem(calc(_brand-sizes(caret_size) - 1));
+      border-bottom-width: 0;
+      right: rem(_brand-sizes(formControl_paddingX));
+      // .css-formFree & {
+      // }
     }
 
     &:before {
-      .css-formFree & {
-        border-width: rem(_brand-sizes(caret_size));
-        border-bottom-width: 0;
-        border-top-color: _brand-palette(bootstrapSelect_caret_color);
-        right: rem(calc(_brand-sizes(formControl_paddingX) - 1));
-      }
+      border-width: rem(_brand-sizes(caret_size));
+      border-bottom-width: 0;
+      border-top-color: _brand-palette(bootstrapSelect_caret_color);
+      right: rem(calc(_brand-sizes(formControl_paddingX) - 1));
+      // .css-formFree & {
+      // }
     }
   }
 
@@ -581,15 +581,15 @@ textarea.form-control {
 
       &:before,
       &:after {
-        .css-formFree & {
-          transform: rotate(180deg);
-        }
+        transform: rotate(180deg);
+        // .css-formFree & {
+        // }
       }
 
       &:before {
-        .css-formFree & {
-          top: -1px;
-        }
+        top: -1px;
+        // .css-formFree & {
+        // }
       }
     }
   }
@@ -599,11 +599,11 @@ textarea.form-control {
   &,
   &.btn-default,
   &.btn {
-    .css-formFree & {
-      background-color: transparent;
-      background-image: none;
-      border-color: _brand-palette(formControl-borderColor);
-    }
+    background-color: transparent;
+    background-image: none;
+    border-color: _brand-palette(formControl-borderColor);
+    // .css-formFree & {
+    // }
   }
 }
 
