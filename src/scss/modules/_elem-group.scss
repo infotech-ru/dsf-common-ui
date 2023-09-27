@@ -514,9 +514,9 @@
     }
   }
   >.form-control-container {
-    .css-formFree & {
-      padding-top: rem(_fontSizes(controlLabel_active__formFree));
-    }
+    // .css-formFree & {
+    //   padding-top: rem(_fontSizes(controlLabel_active__formFree));
+    // }
 
     &:not(:first-child) {
       .form-control {
@@ -558,9 +558,9 @@
 .inputGroup_prepend,
 .inputGroup_append {
   display: flex;
-  .css-formFree & {
-    padding-top: rem(_fontSizes(controlLabel_active__formFree));
-  }
+  // .css-formFree & {
+    // padding-top: rem(_fontSizes(controlLabel_active__formFree));
+  // }
   .btn {
     position: relative;
     z-index: 2;
