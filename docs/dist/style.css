@@ -12611,6 +12611,22 @@ tbody.collapse.in {
   font-size: 1.5rem;
 }
 
+.fz48 {
+  font-size: 3rem;
+}
+
+.mobile-view .fz48__mobile {
+  font-size: 3rem;
+}
+
+.lh10 {
+  line-height: 10px;
+}
+
+.mobile-view .lh10__mobile {
+  line-height: 10px;
+}
+
 .lh12 {
   line-height: 12px;
 }
@@ -12657,6 +12673,14 @@ tbody.collapse.in {
 
 .mobile-view .lh24__mobile {
   line-height: 24px;
+}
+
+.lh48 {
+  line-height: 48px;
+}
+
+.mobile-view .lh48__mobile {
+  line-height: 48px;
 }
 
 .p-relative {

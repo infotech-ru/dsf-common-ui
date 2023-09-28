@@ -196,18 +196,10 @@
   .mobile-view .fz#{$fontSize}__mobile { font-size: rem($fontSize); }
 }
 
-.lh12                                       { line-height: 12px; }
-.mobile-view .lh12__mobile                  { line-height: 12px; }
-.lh14                                       { line-height: 14px; }
-.mobile-view .lh14__mobile                  { line-height: 14px; }
-.lh16                                       { line-height: 16px; }
-.mobile-view .lh16__mobile                  { line-height: 16px; }
-.lh18                                       { line-height: 18px; }
-.mobile-view .lh18__mobile                  { line-height: 18px; }
-.lh20                                       { line-height: 20px; }
-.mobile-view .lh20__mobile                  { line-height: 20px; }
-.lh24                                       { line-height: 24px; }
-.mobile-view .lh24__mobile                  { line-height: 24px; }
+@each $lineHeightSize in $lineHeightSizeList {
+  .lh#{$lineHeightSize} { line-height: #{$lineHeightSize}px; }
+  .mobile-view .lh#{$lineHeightSize}__mobile { line-height: #{$lineHeightSize}px; }
+}
 
 .p-relative                                 { position: relative; }
 .mobile-view .p-relative__mobile            { position: relative; }
