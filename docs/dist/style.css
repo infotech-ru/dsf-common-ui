@@ -9041,6 +9041,9 @@ select.selectpicker {
 .inputGroup > .form-control:not(:last-child) {
   border-right-width: 0;
 }
+.css-formFree .inputGroup > .form-control-container {
+  padding-top: 0.6875rem;
+}
 .inputGroup > .form-control-container:not(:first-child) .form-control {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -9076,6 +9079,10 @@ select.selectpicker {
 .inputGroup_prepend,
 .inputGroup_append {
   display: flex;
+}
+.css-formFree .inputGroup_prepend,
+.css-formFree .inputGroup_append {
+  padding-top: 0.6875rem;
 }
 .inputGroup_prepend .btn,
 .inputGroup_append .btn {
