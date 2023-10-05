@@ -112,19 +112,3 @@ order: 2
 #### Поворот контейнера
 
 `rotate90`,`rotate180`, `rotate270` - устанавливает поворот
-
-
-#### Оформление данных
-
-Установлено оформление для отдельных полей телефона, комментария
-
-{% highlight html %}
-  <div class="phoneFieldOrange">+7(910)000-00-00</div>
-  <div class="phoneFieldBlue">+7(910)000-00-00</div>
-  <div class="commentField">комментарий</div>
-{% endhighlight %}
-<div class="bs-docs-example">
-  <div class="phoneFieldOrange mb-10">+7(910)000-00-00</div>
-  <div class="phoneFieldBlue mb-10">+7(910)000-00-00</div>
-  <div class="commentField">комментарий</div>
-</div>

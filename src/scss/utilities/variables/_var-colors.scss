@@ -40,6 +40,7 @@ $brand-colors: (
   _dark-cyan:                                                           #008B8B,
   _light-cyan:                                                          #d2efee,
   _color-eeecd:                                                         #eeecd8,
+  _color-e5e5e5:                                                        #e5e5e5,
 );
 
 @function _brand-hover($keys...) {
@@ -401,7 +402,7 @@ $brand-table: (
   thead_border:                           map-get($brand-colors, _grey2),
   thead_bgc:                              map-get($brand-colors, _white),
   thead_color:                            map-get($brand-colors, _dark-grey),
-  tfoot_bgc:                              map-get($brand-colors, _light-grey3),
+  tfoot_bgc:                              map-get($brand-colors, _color-e5e5e5),
   tfoot_color:                            map-get($brand-colors, _dark-grey),
   tdStrip_bgc:                            map-get($brand-colors, _light-grey),
   tdHover_bgc:                            map-get($brand-colors, _light-grey2),

@@ -485,14 +485,14 @@
 }
 
 .phoneField{
-  &Orange{ 
+  &__orange{ 
     background-color: _brand-colors(_light-orange);
     display: inline-flex;
     font-size: 13px;
     line-height: 16px;
     padding: 5px 7px;
   }
-  &Blue{
+  &__blue{
     align-items: center;
     background-color: _brand-colors(_light-blue2);
     display: flex;
@@ -512,4 +512,29 @@
   font-size: 12px;
   line-height: 14px;
   padding: 10px;
+}
+
+.colorField{
+  align-items: center;
+  display: inline-flex;
+  &__form-control{
+    height: rem(calc(_lineHeight(input) + 2));
+  }
+  &_formControl{
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 24px;
+    padding: 0;
+    overflow: hidden;
+    width: 24px;
+  }
+  &:after{ 
+    color: _brand-palette(formControl-color);
+    content: attr(data-colorField); 
+    display: block;
+    padding-left: 5px;
+    font-size: rem(_fontSizes(formElem));
+  }
 }

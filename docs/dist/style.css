@@ -569,6 +569,7 @@ table {
   --color_dark-cyan: #008B8B;
   --color_light-cyan: #d2efee;
   --color_color-eeecd: #eeecd8;
+  --color_color-e5e5e5: #e5e5e5;
 }
 
 html {
@@ -9689,7 +9690,7 @@ tbody .svg--icon svg {
 
 tfoot th,
 tfoot td {
-  background-color: #EEEEEE;
+  background-color: #e5e5e5;
   bottom: 0;
   color: #333333;
   font-size: 0.8125rem;
@@ -13821,14 +13822,14 @@ tbody.collapse.in {
   --border_color: #DAF0DA;
 }
 
-.phoneFieldOrange {
+.phoneField__orange {
   background-color: #FFDF9A;
   display: inline-flex;
   font-size: 13px;
   line-height: 16px;
   padding: 5px 7px;
 }
-.phoneFieldBlue {
+.phoneField__blue {
   align-items: center;
   background-color: #E4EEF7;
   display: flex;
@@ -13847,6 +13848,31 @@ tbody.collapse.in {
   font-size: 12px;
   line-height: 14px;
   padding: 10px;
+}
+
+.colorField {
+  align-items: center;
+  display: inline-flex;
+}
+.colorField__form-control {
+  height: 1.75rem;
+}
+.colorField_formControl {
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  display: inline-flex;
+  height: 24px;
+  padding: 0;
+  overflow: hidden;
+  width: 24px;
+}
+.colorField:after {
+  color: #333333;
+  content: attr(data-colorField);
+  display: block;
+  padding-left: 5px;
+  font-size: 0.75rem;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
