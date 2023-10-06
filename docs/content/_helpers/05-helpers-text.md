@@ -116,54 +116,57 @@ order: 5
 #### Классы для изменения  цвета текста
 Класс `text-default`, `text-primary`, `text-success`, `text-danger`, `text-warning`, `text-info`, `text-muted`, `text-dark-grey`, `text-grey`, `text-grey2`, `text-grey4`, `text-light-grey`, `text-light-grey2`, `text-white`, `text-light-blue`, `text-light-blue3`, `text-vibrant-blue`, `text-dark-red`, `text-rose`, `text-light-yellow`, добавляют соответсвующего цвета текста.
 
+
 {% highlight html %}
-  <div class="textHover-default text-default">textHover-default text-default</div>
-  <div class="textHover-primary text-primary">textHover-primary text-primary</div>
-  <div class="textHover-vibrant-blue text-vibrant-blue">textHover-vibrant-blue text-vibrant-blue</div>
-  <div class="textHover-success text-success">textHover-success text-success</div>
-  <div class="textHover-info text-info">textHover-info text-info</div>
-  <div class="textHover-light-blue text-light-blue">textHover-light-blue text-light-blue</div>
-  <div class="textHover-light-blue3 text-light-blue3">textHover-light-blue3 text-light-blue3</div>
-  <div class="textHover-dark-red text-dark-red">textHover-dark-red text-dark-red</div>
-  <div class="textHover-danger text-danger">textHover-danger text-danger</div>
-  <div class="textHover-rose text-rose">textHover-rose text-rose</div>
-  <div class="textHover-warning text-warning">textHover-warning text-warning</div>
-  <div class="textHover-orange text-orange">textHover-orange text-orange</div>
-  <div class="textHover-light-yellow text-light-yellow">textHover-light-yellow text-light-yellow</div>
-  <div class="textHover-dark-grey text-dark-grey">textHover-dark-grey text-dark-grey</div>
-  <div class="textHover-muted text-muted">textHover-muted text-muted</div>
-  <div class="textHover-grey text-grey">textHover-grey text-grey</div>
-  <div class="textHover-grey2 text-grey2">textHover-grey2 text-grey2</div>
-  <div class="textHover-grey4 text-grey4">textHover-grey4 text-grey4</div>
-  <div class="textHover-light-grey2 text-light-grey2">textHover-light-grey2 text-light-grey2</div>
-  <div class="textHover-light-grey text-light-grey">textHover-light-grey text-light-grey</div>
-  <div class="text-white bg-default">textHover- text-white bg-default</div>
-  <div class="bg-muted text-center">textHover- text-clear with bg-mu<span class="text-clear">te</span>d and text-center</div>
+  <div class="textHover-white text-default">textHover-white text-default</div>
+  <div class="textHover-default text-primary">textHover-default text-primary</div>
+  <div class="textHover-primary text-vibrant-blue">textHover-primary text-vibrant-blue</div>
+  <div class="textHover-vibrant-blue text-success">textHover-vibrant-blue text-success</div>
+  <div class="textHover-success text-info">textHover-success text-info</div>
+  <div class="textHover-info text-light-blue">textHover-info text-light-blue</div>
+  <div class="textHover-light-blue text-light-blue3">textHover-light-blue text-light-blue3</div>
+  <div class="textHover-light-blue3 text-dark-red">textHover-light-blue3 text-dark-red</div>
+  <div class="textHover-dark-red text-danger">textHover-dark-red text-danger</div>
+  <div class="textHover-danger text-rose">textHover-danger text-rose</div>
+  <div class="textHover-rose text-warning">textHover-rose text-warning</div>
+  <div class="textHover-warning text-orange">textHover-warning text-orange</div>
+  <div class="textHover-orange text-light-yellow">textHover-orange text-light-yellow</div>
+  <div class="textHover-light-yellow text-dark-grey">textHover-light-yellow text-dark-grey</div>
+  <div class="textHover-dark-grey text-muted">textHover-dark-grey text-muted</div>
+  <div class="textHover-muted text-grey">textHover-muted text-grey</div>
+  <div class="textHover-grey text-grey2">textHover-grey text-grey2</div>
+  <div class="textHover-grey2 text-grey4">textHover-grey2 text-grey4</div>
+  <div class="textHover-grey4 text-light-grey2">textHover-grey4 text-light-grey2</div>
+  <div class="textHover-light-grey2 text-light-grey">textHover-light-grey2 text-light-grey</div>
+  <div class="textHover-light-grey text-white bg-default">textHover-light-grey text-white bg-default</div>
+white bg-default
+  <div class="bg-muted text-center">text-clear with bg-mu<span class="text-clear">te</span>d and text-center</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
-  <div class="textHover-default text-default mb-10">textHover-default text-default</div>
-  <div class="textHover-primary text-primary mb-10">textHover-primary text-primary</div>
-  <div class="textHover-vibrant-blue text-vibrant-blue mb-10">textHover-vibrant-blue text-vibrant-blue</div>
-  <div class="textHover-success text-success mb-10">textHover-success text-success</div>
-  <div class="textHover-info text-info mb-10">textHover-info text-info</div>
-  <div class="textHover-light-blue text-light-blue mb-10">textHover-light-blue text-light-blue</div>
-  <div class="textHover-light-blue3 text-light-blue3 mb-10">textHover-light-blue3 text-light-blue3</div>
-  <div class="textHover-dark-red text-dark-red mb-10">textHover-dark-red text-dark-red</div>
-  <div class="textHover-danger text-danger mb-10">textHover-danger text-danger</div>
-  <div class="textHover-rose text-rose mb-10">textHover-rose text-rose</div>
-  <div class="textHover-warning text-warning mb-10">textHover-warning text-warning</div>
-  <div class="textHover-orange text-orange mb-10">textHover-orange text-orange</div>
-  <div class="textHover-light-yellow text-light-yellow mb-10">textHover-light-yellow text-light-yellow</div>
-  <div class="textHover-dark-grey text-dark-grey mb-10">textHover-dark-grey text-dark-grey</div>
-  <div class="textHover-muted text-muted mb-10">textHover-muted text-muted</div>
-  <div class="textHover-grey text-grey mb-10">textHover-grey text-grey</div>
-  <div class="textHover-grey2 text-grey2 mb-10">textHover-grey2 text-grey2</div>
-  <div class="textHover-grey4 text-grey4 mb-10">textHover-grey4 text-grey4</div>
-  <div class="textHover-light-grey2 text-light-grey2 mb-10">textHover-light-grey2 text-light-grey2</div>
-  <div class="textHover-light-grey text-light-grey mb-10">textHover-light-grey text-light-grey</div>
-  <div class="text-white bg-default mb-10">textHover- text-white bg-default</div>
-  <div class="bg-muted text-center mb-10">textHover- text-clear with bg-mu<span class="text-clear">te</span>d and text-center</div>
+  <div class="textHover-white text-default mb-10">textHover-white text-default mb-10</div>
+  <div class="textHover-default text-primary mb-10">textHover-default text-primary mb-10</div>
+  <div class="textHover-primary text-vibrant-blue mb-10">textHover-primary text-vibrant-blue mb-10</div>
+  <div class="textHover-vibrant-blue text-success mb-10">textHover-vibrant-blue text-success mb-10</div>
+  <div class="textHover-success text-info mb-10">textHover-success text-info mb-10</div>
+  <div class="textHover-info text-light-blue mb-10">textHover-info text-light-blue mb-10</div>
+  <div class="textHover-light-blue text-light-blue3 mb-10">textHover-light-blue text-light-blue3 mb-10</div>
+  <div class="textHover-light-blue3 text-dark-red mb-10">textHover-light-blue3 text-dark-red mb-10</div>
+  <div class="textHover-dark-red text-danger mb-10">textHover-dark-red text-danger mb-10</div>
+  <div class="textHover-danger text-rose mb-10">textHover-danger text-rose mb-10</div>
+  <div class="textHover-rose text-warning mb-10">textHover-rose text-warning mb-10</div>
+  <div class="textHover-warning text-orange mb-10">textHover-warning text-orange mb-10</div>
+  <div class="textHover-orange text-light-yellow mb-10">textHover-orange text-light-yellow mb-10</div>
+  <div class="textHover-light-yellow text-muted mb-10">textHover-light-yellow text-muted mb-10</div>
+  <div class="textHover-muted text-dark-grey mb-10">textHover-muted text-dark-grey mb-10</div>
+  <div class="textHover-dark-grey text-grey mb-10">textHover-dark-grey text-grey mb-10</div>
+  <div class="textHover-grey text-grey2 mb-10">textHover-grey text-grey2 mb-10</div>
+  <div class="textHover-grey2 text-grey4 mb-10">textHover-grey2 text-grey4 mb-10</div>
+  <div class="textHover-grey4 text-light-grey2 mb-10">textHover-grey4 text-light-grey2 mb-10</div>
+  <div class="textHover-grey-light2 text-light-grey mb-10">textHover-grey-light2 text-light-grey mb-10</div>
+  <div class="textHover-grey-light text-white bg-default mb-10">textHover-grey-light text-white bg-default mb-10</div>
+  white bg-default
+  <div class="bg-muted text-center mb-10">text-clear with bg-mu<span class="text-clear">te</span>d and text-center</div>
 </div>
 
 
@@ -173,6 +176,7 @@ order: 5
 Для активаци hover-эффекта на элементе-родителе выставить класс на родителя - `textHoverTarget`
 
 Пример выше.
+
 
 
 #### Классы для списков
