@@ -493,6 +493,14 @@
     #{--text_color}: #{$value};
     #{--svg-valute-fill}: #{$value};
   }
+  .textHover-#{$name}{
+    &:hover,
+    .textHoverTarget:hover &{ 
+      color: #{$value};
+      #{--text_color}: #{$value};
+      #{--svg-valute-fill}: #{$value};
+    }
+  }
   .bg-#{$name}{
     background-color: #{$value};
     #{--bg_color}: #{$value};

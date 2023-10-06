@@ -13268,6 +13268,12 @@ tbody.collapse.in {
   --svg-valute-fill: #777777;
 }
 
+.textHover-default:hover, .textHoverTarget:hover .textHover-default {
+  color: #777777;
+  --text_color: #777777;
+  --svg-valute-fill: #777777;
+}
+
 .bg-default {
   background-color: #777777;
   --bg_color: #777777;
@@ -13288,6 +13294,12 @@ tbody.collapse.in {
 }
 
 .text-primary {
+  color: #1E6393;
+  --text_color: #1E6393;
+  --svg-valute-fill: #1E6393;
+}
+
+.textHover-primary:hover, .textHoverTarget:hover .textHover-primary {
   color: #1E6393;
   --text_color: #1E6393;
   --svg-valute-fill: #1E6393;
@@ -13318,6 +13330,12 @@ tbody.collapse.in {
   --svg-valute-fill: #D9534F;
 }
 
+.textHover-danger:hover, .textHoverTarget:hover .textHover-danger {
+  color: #D9534F;
+  --text_color: #D9534F;
+  --svg-valute-fill: #D9534F;
+}
+
 .bg-danger {
   background-color: #D9534F;
   --bg_color: #D9534F;
@@ -13338,6 +13356,12 @@ tbody.collapse.in {
 }
 
 .text-warning {
+  color: #DE8500;
+  --text_color: #DE8500;
+  --svg-valute-fill: #DE8500;
+}
+
+.textHover-warning:hover, .textHoverTarget:hover .textHover-warning {
   color: #DE8500;
   --text_color: #DE8500;
   --svg-valute-fill: #DE8500;
@@ -13368,6 +13392,12 @@ tbody.collapse.in {
   --svg-valute-fill: #69C26A;
 }
 
+.textHover-success:hover, .textHoverTarget:hover .textHover-success {
+  color: #69C26A;
+  --text_color: #69C26A;
+  --svg-valute-fill: #69C26A;
+}
+
 .bg-success {
   background-color: #69C26A;
   --bg_color: #69C26A;
@@ -13388,6 +13418,12 @@ tbody.collapse.in {
 }
 
 .text-info {
+  color: #E4EEF7;
+  --text_color: #E4EEF7;
+  --svg-valute-fill: #E4EEF7;
+}
+
+.textHover-info:hover, .textHoverTarget:hover .textHover-info {
   color: #E4EEF7;
   --text_color: #E4EEF7;
   --svg-valute-fill: #E4EEF7;
@@ -13418,6 +13454,12 @@ tbody.collapse.in {
   --svg-valute-fill: #BABABA;
 }
 
+.textHover-muted:hover, .textHoverTarget:hover .textHover-muted {
+  color: #BABABA;
+  --text_color: #BABABA;
+  --svg-valute-fill: #BABABA;
+}
+
 .bg-muted {
   background-color: #BABABA;
   --bg_color: #BABABA;
@@ -13438,6 +13480,12 @@ tbody.collapse.in {
 }
 
 .text-orange {
+  color: #FFBD41;
+  --text_color: #FFBD41;
+  --svg-valute-fill: #FFBD41;
+}
+
+.textHover-orange:hover, .textHoverTarget:hover .textHover-orange {
   color: #FFBD41;
   --text_color: #FFBD41;
   --svg-valute-fill: #FFBD41;
@@ -13468,6 +13516,12 @@ tbody.collapse.in {
   --svg-valute-fill: #333333;
 }
 
+.textHover-dark-grey:hover, .textHoverTarget:hover .textHover-dark-grey {
+  color: #333333;
+  --text_color: #333333;
+  --svg-valute-fill: #333333;
+}
+
 .bg-dark-grey {
   background-color: #333333;
   --bg_color: #333333;
@@ -13488,6 +13542,12 @@ tbody.collapse.in {
 }
 
 .text-grey {
+  color: #cccccc;
+  --text_color: #cccccc;
+  --svg-valute-fill: #cccccc;
+}
+
+.textHover-grey:hover, .textHoverTarget:hover .textHover-grey {
   color: #cccccc;
   --text_color: #cccccc;
   --svg-valute-fill: #cccccc;
@@ -13518,6 +13578,12 @@ tbody.collapse.in {
   --svg-valute-fill: #dddddd;
 }
 
+.textHover-grey2:hover, .textHoverTarget:hover .textHover-grey2 {
+  color: #dddddd;
+  --text_color: #dddddd;
+  --svg-valute-fill: #dddddd;
+}
+
 .bg-grey2 {
   background-color: #dddddd;
   --bg_color: #dddddd;
@@ -13538,6 +13604,12 @@ tbody.collapse.in {
 }
 
 .text-grey4 {
+  color: #777777;
+  --text_color: #777777;
+  --svg-valute-fill: #777777;
+}
+
+.textHover-grey4:hover, .textHoverTarget:hover .textHover-grey4 {
   color: #777777;
   --text_color: #777777;
   --svg-valute-fill: #777777;
@@ -13568,6 +13640,12 @@ tbody.collapse.in {
   --svg-valute-fill: #f9f9f9;
 }
 
+.textHover-light-grey:hover, .textHoverTarget:hover .textHover-light-grey {
+  color: #f9f9f9;
+  --text_color: #f9f9f9;
+  --svg-valute-fill: #f9f9f9;
+}
+
 .bg-light-grey {
   background-color: #f9f9f9;
   --bg_color: #f9f9f9;
@@ -13588,6 +13666,12 @@ tbody.collapse.in {
 }
 
 .text-light-grey2 {
+  color: #F5F5F5;
+  --text_color: #F5F5F5;
+  --svg-valute-fill: #F5F5F5;
+}
+
+.textHover-light-grey2:hover, .textHoverTarget:hover .textHover-light-grey2 {
   color: #F5F5F5;
   --text_color: #F5F5F5;
   --svg-valute-fill: #F5F5F5;
@@ -13618,6 +13702,12 @@ tbody.collapse.in {
   --svg-valute-fill: #FCEEEE;
 }
 
+.textHover-light-red:hover, .textHoverTarget:hover .textHover-light-red {
+  color: #FCEEEE;
+  --text_color: #FCEEEE;
+  --svg-valute-fill: #FCEEEE;
+}
+
 .bg-light-red {
   background-color: #FCEEEE;
   --bg_color: #FCEEEE;
@@ -13638,6 +13728,12 @@ tbody.collapse.in {
 }
 
 .text-dark-red {
+  color: #762624;
+  --text_color: #762624;
+  --svg-valute-fill: #762624;
+}
+
+.textHover-dark-red:hover, .textHoverTarget:hover .textHover-dark-red {
   color: #762624;
   --text_color: #762624;
   --svg-valute-fill: #762624;
@@ -13668,6 +13764,12 @@ tbody.collapse.in {
   --svg-valute-fill: #FF9996;
 }
 
+.textHover-rose:hover, .textHoverTarget:hover .textHover-rose {
+  color: #FF9996;
+  --text_color: #FF9996;
+  --svg-valute-fill: #FF9996;
+}
+
 .bg-rose {
   background-color: #FF9996;
   --bg_color: #FF9996;
@@ -13688,6 +13790,12 @@ tbody.collapse.in {
 }
 
 .text-clear {
+  color: #00000000;
+  --text_color: #00000000;
+  --svg-valute-fill: #00000000;
+}
+
+.textHover-clear:hover, .textHoverTarget:hover .textHover-clear {
   color: #00000000;
   --text_color: #00000000;
   --svg-valute-fill: #00000000;
@@ -13718,6 +13826,12 @@ tbody.collapse.in {
   --svg-valute-fill: #ffffff;
 }
 
+.textHover-white:hover, .textHoverTarget:hover .textHover-white {
+  color: #ffffff;
+  --text_color: #ffffff;
+  --svg-valute-fill: #ffffff;
+}
+
 .bg-white {
   background-color: #ffffff;
   --bg_color: #ffffff;
@@ -13738,6 +13852,12 @@ tbody.collapse.in {
 }
 
 .text-light-blue {
+  color: #4A8DC6;
+  --text_color: #4A8DC6;
+  --svg-valute-fill: #4A8DC6;
+}
+
+.textHover-light-blue:hover, .textHoverTarget:hover .textHover-light-blue {
   color: #4A8DC6;
   --text_color: #4A8DC6;
   --svg-valute-fill: #4A8DC6;
@@ -13768,6 +13888,12 @@ tbody.collapse.in {
   --svg-valute-fill: #B6D1E8;
 }
 
+.textHover-light-blue3:hover, .textHoverTarget:hover .textHover-light-blue3 {
+  color: #B6D1E8;
+  --text_color: #B6D1E8;
+  --svg-valute-fill: #B6D1E8;
+}
+
 .bg-light-blue3 {
   background-color: #B6D1E8;
   --bg_color: #B6D1E8;
@@ -13788,6 +13914,12 @@ tbody.collapse.in {
 }
 
 .text-vibrant-blue {
+  color: #0094FF;
+  --text_color: #0094FF;
+  --svg-valute-fill: #0094FF;
+}
+
+.textHover-vibrant-blue:hover, .textHoverTarget:hover .textHover-vibrant-blue {
   color: #0094FF;
   --text_color: #0094FF;
   --svg-valute-fill: #0094FF;
@@ -13818,6 +13950,12 @@ tbody.collapse.in {
   --svg-valute-fill: #FFF6DF;
 }
 
+.textHover-light-yellow:hover, .textHoverTarget:hover .textHover-light-yellow {
+  color: #FFF6DF;
+  --text_color: #FFF6DF;
+  --svg-valute-fill: #FFF6DF;
+}
+
 .bg-light-yellow {
   background-color: #FFF6DF;
   --bg_color: #FFF6DF;
@@ -13838,6 +13976,12 @@ tbody.collapse.in {
 }
 
 .text-light-green {
+  color: #DAF0DA;
+  --text_color: #DAF0DA;
+  --svg-valute-fill: #DAF0DA;
+}
+
+.textHover-light-green:hover, .textHoverTarget:hover .textHover-light-green {
   color: #DAF0DA;
   --text_color: #DAF0DA;
   --svg-valute-fill: #DAF0DA;
