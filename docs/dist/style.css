@@ -7583,6 +7583,18 @@ input[type=button].btn-block {
   --label_bgc: #333333;
 }
 
+.label-grey2 {
+  --label_color: #333333;
+  --svg-valute-fill: #333333;
+  --label_bgc: #dddddd;
+}
+
+.label-vibrant-blue {
+  --label_color: #ffffff;
+  --svg-valute-fill: #ffffff;
+  --label_bgc: #0094FF;
+}
+
 a.label:hover, a.label:focus {
   color: #fff;
   text-decoration: none;

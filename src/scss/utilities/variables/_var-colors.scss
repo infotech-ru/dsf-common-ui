@@ -349,6 +349,12 @@ $brand-label: (
   dark-grey_bg:                           map-get($brand-colors, _dark-grey),
   dark-grey_color:                        map-get($brand-colors, _white),
   dark-grey_svg:                          map-get($brand-colors, _white),
+  grey2_bg:                               map-get($brand-colors, _grey2),
+  grey2_color:                            map-get($brand-colors, _dark-grey),
+  grey2_svg:                              map-get($brand-colors, _dark-grey),
+  vibrant-blue_bg:                        map-get($brand-colors, _vibrant-blue),
+  vibrant-blue_color:                     map-get($brand-colors, _white),
+  vibrant-blue_svg:                       map-get($brand-colors, _white),
 
 );
 

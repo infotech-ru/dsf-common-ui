@@ -48,7 +48,7 @@
   }
 }
 
-@each $label in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'yellow', 'black', 'dark-grey' {
+@each $label in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'yellow', 'black', 'dark-grey', 'grey2', 'vibrant-blue' {
   .label-#{$label}{
     // background-color: _brand-label(#{$label}_bg);
     // color: _brand-label(#{$label}_color);
