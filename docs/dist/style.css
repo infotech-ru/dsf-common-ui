@@ -8792,7 +8792,7 @@ select.selectpicker {
 .btn-group__opacity > [class^=btn] {
   opacity: 0.4;
 }
-.btn-group__opacity > [class^=btn].active {
+.btn-group__opacity > [class^=btn]:hover, .btn-group__opacity > [class^=btn]:focus, .btn-group__opacity > [class^=btn].active {
   opacity: 1;
 }
 

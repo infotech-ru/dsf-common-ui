@@ -173,6 +173,8 @@
   & > [class^="btn"] {
     opacity: 0.4;
   }
+  & > [class^="btn"]:hover,
+  & > [class^="btn"]:focus,
   & > [class^="btn"].active{
     opacity: 1;
   }
