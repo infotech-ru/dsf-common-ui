@@ -26,6 +26,7 @@ $brand-colors: (
   _light-grey:                                                          #f9f9f9,
   _light-grey2:                                                         #F5F5F5,
   _light-grey3:                                                         #EEEEEE,
+  _light-grey4:                                                         #e5e5e5,
   _dark-grey:                                                           #333333,
   _yellow:                                                              #FFDA7D,
   _yellow2:                                                             #FFF741,
@@ -40,7 +41,6 @@ $brand-colors: (
   _dark-cyan:                                                           #008B8B,
   _light-cyan:                                                          #d2efee,
   _color-eeecd:                                                         #eeecd8,
-  _color-e5e5e5:                                                        #e5e5e5,
 );
 
 @function _brand-hover($keys...) {
@@ -172,6 +172,7 @@ $brand-namecolors: (
   'grey4':                               map-get($brand-colors, _grey4),
   'light-grey':                          map-get($brand-colors, _light-grey),
   'light-grey2':                         map-get($brand-colors, _light-grey2),
+  'light-grey4':                         map-get($brand-colors, _light-grey4),
   'light-red':                           map-get($brand-colors, _light-red),
   'dark-red':                            map-get($brand-colors, _dark-red),
   'rose':                                map-get($brand-colors, _rose),
@@ -408,7 +409,7 @@ $brand-table: (
   thead_border:                           map-get($brand-colors, _grey2),
   thead_bgc:                              map-get($brand-colors, _white),
   thead_color:                            map-get($brand-colors, _dark-grey),
-  tfoot_bgc:                              map-get($brand-colors, _color-e5e5e5),
+  tfoot_bgc:                              map-get($brand-colors, _light-grey4),
   tfoot_color:                            map-get($brand-colors, _dark-grey),
   tdStrip_bgc:                            map-get($brand-colors, _light-grey),
   tdHover_bgc:                            map-get($brand-colors, _light-grey2),

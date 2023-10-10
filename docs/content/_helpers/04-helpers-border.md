@@ -74,7 +74,7 @@ order: 4
 
 #### Цвет границы
 
-Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-dark-grey`, `border-grey`, `border-grey2`, `border-grey4`, `border-light-grey`, `border-light-grey2`, `border-white`, `border-light-blue`, `border-light-blue3`, `border-vibrant-blue`, `border-dark-red`, `border-rose`, `border-light-yellow`, добавляют соответсвующего цвета для границ.
+Класс `border-default`, `border-primary`, `border-success`, `border-danger`, `border-warning`, `border-info`, `border-muted`, `border-dark-grey`, `border-grey`, `border-grey2`, `border-grey4`, `border-light-grey`, `border-light-grey2`, `border-light-grey4`, `border-white`, `border-light-blue`, `border-light-blue3`, `border-vibrant-blue`, `border-dark-red`, `border-rose`, `border-light-yellow`, добавляют соответсвующего цвета для границ.
 
 `border-clear` - класс делает прозрачным цвет границы
 
@@ -98,6 +98,7 @@ order: 4
   <div class="border border-grey2">border border-grey2</div>
   <div class="border border-grey4">border border-grey4</div>
   <div class="border border-light-grey2">border border-light-grey2</div>
+  <div class="border border-light-grey4">border border-light-grey4</div>
   <div class="border border-light-grey">border border-light-grey</div>
   <div class="padding-5 bg-grey4"><div class="border border-white">border border-white</div></div>
   <div class="padding-5 bg-grey4"><div class="border border-clear">border border-clear</div></div>
@@ -122,6 +123,7 @@ order: 4
   <div class="mb-10 padding-5 border border-grey2">border border-grey2</div>
   <div class="mb-10 padding-5 border border-grey4">border border-grey4</div>
   <div class="mb-10 padding-5 border border-light-grey2">border border-light-grey2</div>
+  <div class="mb-10 padding-5 border border-light-grey4">border border-light-grey4</div>
   <div class="mb-10 padding-5 border border-light-grey">border border-light-grey</div>
   <div class="mb-10 padding-5 bg-grey4"><div class="border border-white">border border-white</div></div>
   <div class="mb-10 padding-5 bg-grey4"><div class="border border-clear">border border-clear</div></div>

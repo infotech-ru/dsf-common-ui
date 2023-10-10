@@ -114,7 +114,7 @@ order: 5
 
 
 #### Классы для изменения  цвета текста
-Класс `text-default`, `text-primary`, `text-success`, `text-danger`, `text-warning`, `text-info`, `text-muted`, `text-dark-grey`, `text-grey`, `text-grey2`, `text-grey4`, `text-light-grey`, `text-light-grey2`, `text-white`, `text-light-blue`, `text-light-blue3`, `text-vibrant-blue`, `text-dark-red`, `text-rose`, `text-light-yellow`, добавляют соответсвующего цвета текста.
+Класс `text-default`, `text-primary`, `text-success`, `text-danger`, `text-warning`, `text-info`, `text-muted`, `text-dark-grey`, `text-grey`, `text-grey2`, `text-grey4`, `text-light-grey`, `text-light-grey2`,`text-light-grey4`, `text-white`, `text-light-blue`, `text-light-blue3`, `text-vibrant-blue`, `text-dark-red`, `text-rose`, `text-light-yellow`, добавляют соответсвующего цвета текста.
 
 
 {% highlight html %}
@@ -137,6 +137,7 @@ order: 5
   <div class="textHover-grey text-grey2">textHover-grey text-grey2</div>
   <div class="textHover-grey2 text-grey4">textHover-grey2 text-grey4</div>
   <div class="textHover-grey4 text-light-grey2">textHover-grey4 text-light-grey2</div>
+  <div class="textHover-white text-light-grey4">textHover-white text-light-grey4</div>
   <div class="textHover-light-grey2 text-light-grey">textHover-light-grey2 text-light-grey</div>
   <div class="textHover-light-grey text-white bg-default">textHover-light-grey text-white bg-default</div>
 white bg-default
@@ -163,6 +164,7 @@ white bg-default
   <div class="textHover-grey text-grey2 mb-10">textHover-grey text-grey2 mb-10</div>
   <div class="textHover-grey2 text-grey4 mb-10">textHover-grey2 text-grey4 mb-10</div>
   <div class="textHover-grey4 text-light-grey2 mb-10">textHover-grey4 text-light-grey2 mb-10</div>
+  <div class="textHover-white text-light-grey4 mb-10">textHover-white text-light-grey4</div>
   <div class="textHover-grey-light2 text-light-grey mb-10">textHover-grey-light2 text-light-grey mb-10</div>
   <div class="textHover-grey-light text-white bg-default mb-10">textHover-grey-light text-white bg-default mb-10</div>
   white bg-default
@@ -171,7 +173,7 @@ white bg-default
 
 
 #### Классы для изменения цвета текста при наведении
-Класс `textHover-default`, `textHover-primary`, `textHover-success`, `textHover-danger`, `textHover-warning`, `textHover-info`, `textHover-muted`, `textHover-dark-grey`, `textHover-grey`, `textHover-grey2`, `textHover-grey4`, `textHover-light-grey`, `textHover-light-grey2`, `textHover-white`, `textHover-light-blue`, `textHover-light-blue3`, `textHover-vibrant-blue`, `textHover-dark-red`, `textHover-rose`, `textHover-light-yellow`, добавляют соответсвующего цвета текста при наведении.
+Класс `textHover-default`, `textHover-primary`, `textHover-success`, `textHover-danger`, `textHover-warning`, `textHover-info`, `textHover-muted`, `textHover-dark-grey`, `textHover-grey`, `textHover-grey2`, `textHover-grey4`, `textHover-light-grey`, `textHover-light-grey2`,`textHover-light-grey4`, `textHover-white`, `textHover-light-blue`, `textHover-light-blue3`, `textHover-vibrant-blue`, `textHover-dark-red`, `textHover-rose`, `textHover-light-yellow`, добавляют соответсвующего цвета текста при наведении.
 
 Для активаци hover-эффекта на элементе-родителе выставить класс на родителя - `textHoverTarget`
 

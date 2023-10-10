@@ -7,7 +7,7 @@ order: 3
 ---
 
 #### Классы для установленния цвет фона контейнера
-`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `dark-grey`, `bg-grey`, `bg-grey2`, `bg-grey4`, `bg-clear`, `bg-white`, `bg-vibrant-blue`, `bg-light-blue`,`bg-light-blue3`, `dark-red`, `bg-rose`, `bg-orange`, `bg-light-yellow`, `bg-muted`, `bg-light-grey`, `bg-light-grey2`,
+`.bg-default`,`.bg-primary`,`.bg-success`,`.bg-danger`,`.bg-warning`,`.bg-info`,`.bg-muted`, `dark-grey`, `bg-grey`, `bg-grey2`, `bg-grey4`, `bg-clear`, `bg-white`, `bg-vibrant-blue`, `bg-light-blue`,`bg-light-blue3`, `dark-red`, `bg-rose`, `bg-orange`, `bg-light-yellow`, `bg-muted`, `bg-light-grey`, `bg-light-grey2`, `bg-light-grey4`,
 
 {% highlight html %}
   <div class="bg-default">bg-default</div>
@@ -26,6 +26,7 @@ order: 3
   <div class="bg-muted">bg-muted</div>
   <div class="bg-light-grey">bg-light-grey</div>
   <div class="bg-light-grey2">bg-light-grey2</div>
+  <div class="bg-light-grey4">bg-light-grey4</div>
   <div class="bg-grey">bg-grey</div>
   <div class="bg-grey2">bg-grey2</div>
   <div class="bg-grey4">bg-grey4</div>
@@ -51,6 +52,7 @@ order: 3
   <div class="bg-muted mb-10 padding-5">bg-muted</div>
   <div class="bg-light-grey mb-10 padding-5">bg-light-grey</div>
   <div class="bg-light-grey2 mb-10 padding-5">bg-light-grey2</div>
+  <div class="bg-light-grey4 mb-10 padding-5">bg-light-grey4</div>
   <div class="bg-grey mb-10 padding-5">bg-grey</div>
   <div class="bg-grey2 mb-10 padding-5">bg-grey2</div>
   <div class="bg-grey4 mb-10 padding-5">bg-grey4</div>

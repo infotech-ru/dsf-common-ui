@@ -556,6 +556,7 @@ table {
   --color_light-grey: #f9f9f9;
   --color_light-grey2: #F5F5F5;
   --color_light-grey3: #EEEEEE;
+  --color_light-grey4: #e5e5e5;
   --color_dark-grey: #333333;
   --color_yellow: #FFDA7D;
   --color_yellow2: #FFF741;
@@ -569,7 +570,6 @@ table {
   --color_dark-cyan: #008B8B;
   --color_light-cyan: #d2efee;
   --color_color-eeecd: #eeecd8;
-  --color_color-e5e5e5: #e5e5e5;
 }
 
 html {
@@ -13692,6 +13692,37 @@ tbody.collapse.in {
 .border-light-grey2 {
   border-color: #F5F5F5;
   --border_color: #F5F5F5;
+}
+
+.svg-light-grey4 svg,
+.svg-light-grey4.svg--icon svg {
+  --svg-icon-fill: #e5e5e5;
+  --svg-icon-stroke: #e5e5e5;
+  --svg-icon-fill_blue: #e5e5e5;
+  --svg-icon-stroke_blue: #e5e5e5;
+  --svg-valute-fill: #e5e5e5;
+}
+
+.text-light-grey4 {
+  color: #e5e5e5;
+  --text_color: #e5e5e5;
+  --svg-valute-fill: #e5e5e5;
+}
+
+.textHover-light-grey4:hover, .textHoverTarget:hover .textHover-light-grey4 {
+  color: #e5e5e5;
+  --text_color: #e5e5e5;
+  --svg-valute-fill: #e5e5e5;
+}
+
+.bg-light-grey4 {
+  background-color: #e5e5e5;
+  --bg_color: #e5e5e5;
+}
+
+.border-light-grey4 {
+  border-color: #e5e5e5;
+  --border_color: #e5e5e5;
 }
 
 .svg-light-red svg,
