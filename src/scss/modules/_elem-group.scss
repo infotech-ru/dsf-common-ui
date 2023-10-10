@@ -279,8 +279,17 @@
     min-width: fit-content;
     width: 0;
   }
+  &.btn-group__vertical {
+    > [class^="btn"] {
+      width: 100%;
+    }
+  }
 }
-
+.btn-group__alignLeft{ 
+    > [class^="btn"] {
+      text-align: left;
+    }
+}
 
 // Justified button groups
 // ----------------------

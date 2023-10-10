@@ -76,6 +76,24 @@ _Использование:_ класс `btn-group__equal` вместе с `btn
   </div>
 </div>
 
+#### Выравнивание по левому краю при с одинаковой шириной кнопок.
+_Использование:_ класс `btn-group__alignLeft` вместе с `btn-group`
+
+{% highlight html %}
+<div class="btn-group btn-group__equal btn-group__vertical btn-group__alignLeft">
+  <button class="btn">btn</button>
+  <button class="btn-default">btn-default</button>
+  <button class="btn-primary">btn-primary wide</button>
+</div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="btn-group btn-group__equal btn-group__vertical btn-group__alignLeft">
+    <button class="btn">btn</button>
+    <button class="btn-default">btn-default</button>
+    <button class="btn-primary">btn-primary wide</button>
+  </div>
+</div>
+
 #### Отображения состояния нажатой / активной кнопки
 _Использование:_ класс `active` на кнопке. 
 Инициализация скрипта bootstap.buttons - `data-toggle="button"` (для одной кнопки),

@@ -8895,6 +8895,13 @@ select.selectpicker {
   min-width: fit-content;
   width: 0;
 }
+.btn-group__equal.btn-group__vertical > [class^=btn] {
+  width: 100%;
+}
+
+.btn-group__alignLeft > [class^=btn] {
+  text-align: left;
+}
 
 [data-toggle=buttons] > [class^=btn] input[type=radio],
 [data-toggle=buttons] > [class^=btn] input[type=checkbox],
