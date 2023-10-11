@@ -10,30 +10,20 @@ order: 2
 
 ### Смещение выпадающего списка влево.
 
-1. Используется класс `dropdown-menu-left`
+1. Используется класс `dropdown-menu-right`
 2. 'data-dropdown-align-right' => 'auto', - автоматическое смещение
 
 {% highlight html %}
   widget(Select::class,[
     'options' => [
-      'class' => 'dropdown-menu-left',
+      'class' => 'dropdown-menu-right',
 или
       'data-dropdown-align-right' => 'auto',
 {% endhighlight %}
 
 <div class="bs-docs-example">
-  <p>Make this:</p>
-
-  <select>
-    <option>Mustard</option>
-    <option>Ketchup</option>
-    <option>Relish</option>
-  </select>
-
-  <p>Become this:</p>
-
-  <div class="d-flex justify-flex-end">
-    <select class="selectpicker dropdown-menu-left" data-dropdown-align-right="auto">
+  <div class="d-flex">
+    <select class="selectpicker dropdown-menu-right" data-dropdown-align-right="auto">
       <option>Mustard</option>
       <option>KetchupKetchupKetchupKetchupKetchupKetchup</option>
       <option>Relish</option>
@@ -42,7 +32,7 @@ order: 2
 </div>
 
 ```html
-<select class="selectpicker dropdown-menu-left">
+<select class="selectpicker dropdown-menu-right">
   <option>Mustard</option>
   <option>Ketchup</option>
   <option>Relish</option>

@@ -6406,10 +6406,6 @@ h6, .h6 {
   height: 24px;
   width: 24px;
 }
-.dropdown-menu .ownicons-chevron-right {
-  height: 20px;
-  width: 8px;
-}
 .dropdown-menu .divider {
   background-color: #777777;
   height: 1px;
@@ -6494,17 +6490,17 @@ h6, .h6 {
 }
 
 .dropdown-menu-right {
-  right: 0;
   left: auto;
+  right: 0;
 }
 .dropdown-menu-right > .dropdown-menu {
-  right: 0;
   left: auto;
+  right: 0;
 }
 
 .dropdown-menu-left {
-  right: auto;
   left: 0;
+  right: auto;
 }
 .dropdown-menu-left > .dropdown-menu {
   left: 0;
