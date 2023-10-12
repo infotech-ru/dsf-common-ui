@@ -3,16 +3,130 @@
   &::-webkit-scrollbar {
     height: 6px;
     width: 6px;
-    background-color: #777777;
+    background-color: _brand-colors(_grey4);
   }
   &::-webkit-scrollbar-button {
     width: 6px;
     height: 6px;
   }
   &::-webkit-scrollbar-track {
-    background-color: #F5F5F5;
+    background-color: _brand-colors(_light-grey2);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #777777;
+    background-color: _brand-colors(_grey4);
+  }
+}
+
+%dropdown-menu{
+  background-color: _brand-palette(dropdown_bgc);
+  background-clip: padding-box;
+  box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.35);
+  border: none;
+  border-radius: 0;
+  display: none; // none by default, but block on "open" of the menu
+  font-size: rem(_fontSizes(dropdown));
+  list-style: none;
+  left: 0;
+  margin: 0 0 0; // override default ul
+  min-width: 160px;
+  padding: 0px; // #12782
+  position: absolute;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  top: 100%;
+}
+
+%dropdown__link {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: _brand-palette(dropdown_color);
+  clear: both;
+  display: inline-flex;
+  font-weight: 400;
+  padding: 0px rem(_brand-sizes(dropdownLink_paddingX));
+  line-height: rem(_lineHeight(dropdownLink));
+  min-height: rem(_brand-sizes(dropdownLink_minH));
+  text-decoration: none;
+  width: 100%;
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+}
+
+%dropdown__linkHover {
+  background-color: _brand-palette(dropdownActive_bgc);
+  color: _brand-palette(dropdownActive_color);
+  text-decoration: none;
+  outline: 0;
+}
+
+%dropdown__link__active {
+  &, 
+  &:hover,
+  &:focus{
+    @extend %dropdown__linkHover;
+  }
+}
+
+%dropdown__link__disable {
+  &,
+  &:hover,
+  &:focus {
+    color: $dropdown-link-disabled-color;
+  }
+
+  // Nuke hover/focus effects
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    cursor: $cursor-disabled;
+    background-color: transparent;
+    background-image: none; // Remove CSS gradient
+    @include reset-filter;
+  }
+}
+
+%caret {
+  &:before,
+  &:after {
+    border-style: solid;
+    border-color: var(--bg_color, _brand-palette(formControl-bgc)) transparent transparent transparent;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    top: 0px;
+    width: 0;
+  }
+  &:after {
+    border-width: rem(calc(_brand-sizes(caret_size) - 1));
+    border-bottom-width: 0;
+    right: 0;
+  }
+
+  &:before {
+    border-width: rem(_brand-sizes(caret_size));
+    border-bottom-width: 0;
+    border-top-color: _brand-palette(bootstrapSelect_caret_color);
+    right: -1px;
+  }
+  @at-root .open#{&},
+  .show#{&} { 
+    &:before,
+    &:after {
+      transform: rotate(180deg);
+    }
+
+    &:before {
+      top: -1px;
+    }
+  }
+  @at-root .show#{&} {
+    &:before,
+    &:after {
+      transform: rotate(180deg);
+    }
+
+    &:before {
+      top: -1px;
+    }
   }
 }

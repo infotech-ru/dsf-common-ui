@@ -1,6 +1,6 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
-/* SELECT (bootstrap-select)                                                  */
+/* SELECT (bootstrap-select, comboTree)                                       */
 /* path: dsf-common-ui/src/scss/modules/_select.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -20,22 +20,6 @@ $input-padding-x-lg: 1rem !default;
 @keyframes bs-notify-fadeOut {
   0% {opacity: 0.9;}
   100% {opacity: 0;}
-}
-
-// Mixins
-@mixin cursor-disabled() {
-  cursor: not-allowed;
-}
-
-@mixin box-sizing($fmt) {
-  -webkit-box-sizing: $fmt;
-     -moz-box-sizing: $fmt;
-          box-sizing: $fmt;
-}
-
-@mixin box-shadow($fmt) {
-  -webkit-box-shadow: $fmt;
-          box-shadow: $fmt;
 }
 
 @function fade($color, $amnt) {
@@ -193,13 +177,13 @@ select.selectpicker {
   }
 
   // Forces the pull to the right, if necessary
-  &,
-  &[class*="col-"],
-  .row &[class*="col-"] {
-    &.dropdown-menu-right {
-      float: right;
-    }
-  }
+  // &,
+  // &[class*="col-"],
+  // .row &[class*="col-"] {
+  //   &.dropdown-menu-right {
+  //     float: right;
+  //   }
+  // }
 
   .form-inline &,
   .form-horizontal &,
@@ -229,7 +213,7 @@ select.selectpicker {
 
   &.disabled,
   > .disabled {
-    @include cursor-disabled();
+    cursor: not-allowed;
 
     &:focus {
       outline: none !important;
@@ -297,59 +281,11 @@ select.selectpicker {
   .caret {
     position: absolute;
     top: 50%;
-    // right: 12px;
     margin-top: -2px;
-    // vertical-align: middle;
     border: none;
     display: block;
     right: 0;
-    &:before,
-    &:after {
-      border-style: solid;
-      border-color: var(--bg_color, _brand-palette(formControl-bgc)) transparent transparent transparent;
-      content: '';
-      display: block;
-      position: absolute;
-      height: 0;
-      top: 0px;
-      width: 0;
-    }
-
-    &:after {
-      border-width: rem(calc(_brand-sizes(caret_size) - 1));
-      border-bottom-width: 0;
-      // right: rem(_brand-sizes(formControl_paddingX));
-      right: 0;
-    }
-
-    &:before {
-      border-width: rem(_brand-sizes(caret_size));
-      border-bottom-width: 0;
-      border-top-color: _brand-palette(bootstrapSelect_caret_color);
-      // right: rem(calc(_brand-sizes(formControl_paddingX) - 1));
-      right: -1px;
-    }
-    @at-root .open#{&},
-    .show#{&} { 
-      &:before,
-      &:after {
-        transform: rotate(180deg);
-      }
-
-      &:before {
-        top: -1px;
-      }
-    }
-    @at-root .show#{&} {
-      &:before,
-      &:after {
-        transform: rotate(180deg);
-      }
-
-      &:before {
-        top: -1px;
-      }
-    }
+    @extend %caret;
   }
 
   .input-group &.form-control .dropdown-toggle {
@@ -365,8 +301,8 @@ select.selectpicker {
   // The selectpicker dropdown
   .dropdown-menu {
     min-width: 100%;
-    z-index: _zindex(bootstrapSelectDropdownMenu); // может перекрываться таблицей
-    @include box-sizing(border-box);
+    z-index: _zindex(selectDropdownMenu); // может перекрываться таблицей
+    box-sizing: border-box;
     @extend %scrollVar;
     > .inner:focus {
       outline: none !important;
@@ -390,12 +326,12 @@ select.selectpicker {
       }
 
       &.disabled a {
-        @include cursor-disabled();
+        cursor: not-allowed;
       }
 
       a {
         cursor: pointer;
-        font-size: rem(12);
+        font-size: rem(_fontSizes(dropdown));
         user-select: none;
 
         &.opt {
@@ -429,10 +365,10 @@ select.selectpicker {
       padding: 3px 5px;
       background: rgb(245, 245, 245);
       border: 1px solid rgb(227, 227, 227);
-      @include box-shadow(inset 0 1px 1px fade(rgb(0, 0, 0), 5));
+      box-shadow: inset 0 1px 1px fade(rgb(0, 0, 0), 5);
       pointer-events: none;
       opacity: 0.9;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
 
       &.fadeOut {
         animation: 300ms linear 750ms forwards bs-notify-fadeOut;
@@ -613,17 +549,19 @@ select.selectpicker {
     white-space: pre-wrap;
   }
 }
-
 .bs-searchbox,
 .bs-actionsbox,
 .bs-donebutton {
-  padding: 4px 8px;
+  padding-top: rem(_brand-sizes(dropdownLink_paddingX));
+  padding-bottom: 4px;
+  padding-left: rem(_brand-sizes(dropdownLink_paddingX));
+  padding-right: rem(_brand-sizes(dropdownLink_paddingX));
 }
 
 .bs-actionsbox {
-  width: 100%;
+  box-sizing: border-box;
   min-width: 220px;
-  @include box-sizing(border-box);
+  width: 100%;
 
   & .btn-group button {
     width: 50%;
@@ -634,9 +572,9 @@ select.selectpicker {
 }
 
 .bs-donebutton {
+  box-sizing: border-box;
   float: left;
   width: 100%;
-  @include box-sizing(border-box);
 
   & .btn-group button {
     width: 100%;
@@ -644,16 +582,151 @@ select.selectpicker {
 }
 
 .bs-searchbox {
+  padding-top: rem(_brand-sizes(dropdownLink_paddingX));
+  padding-bottom: rem(_brand-sizes(dropdownLink_paddingX));
   & + .bs-actionsbox {
-    padding: 0 8px 4px;
+    padding-top: 0px;
   }
 
   & .form-control {
     // margin-bottom: 0;
-    width: 100%;
+    // border-radius: 0;
     float: none;
-    border-radius: 0;
+    margin-bottom: 0;
     height: rem(26); // fix для высоты поиска
-    margin-bottom: rem(3);
+    width: 100%;
+  }
+}
+
+
+// comboTree
+.comboTree{ 
+  &Wrapper{
+    position: relative;
+    text-align: left !important;
+  }
+  &Expanded {
+    .comboTreeInputWrapper,
+    .comboTreeDropDownContainer .comboTreeFilter {
+      display: none;
+    }
+
+    .comboTreeDropDownContainer {
+      display: block;
+      max-height: none;
+      border: none;
+      position: relative;
+
+      >ul {
+        max-height: none;
+      }
+    }
+  }
+  &InputWrapper{
+    position: relative;
+  }
+  &DropDownContainer {
+    @extend %dropdown-menu;
+    min-width: 100%;
+    z-index: _zindex(selectDropdownMenu);
+    ul{
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    & > ul {
+      max-height: 250px; // нет автоподстраиванния высоты от позиции селекта
+      overflow-y: auto;
+      padding-left: 0;
+      @extend %scrollVar;
+    }
+  }
+  &Item{ 
+    &Chlid{
+      cursor: pointer;
+      // font-size: rem(_fontSizes(dropdown));
+      list-style-type: none;
+      position: relative;
+      @extend %dropdown__link;
+      @at-root .comboTreeDropDownContainer > #{&}{
+        flex-wrap: wrap;
+      }
+      .comboTreeItemParent &{
+        padding-left: calc(#{_brand-sizes(dropdownLink_paddingX) * 2}px);
+      }
+      &:hover,
+      &:focus{
+        @extend %dropdown__linkHover;
+      }
+    }
+    &Parent{
+      @extend %dropdown__link;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      min-height: auto;
+      padding: 0;
+      &Plus{
+        height: 14px;
+        margin-left: #{_brand-sizes(dropdownLink_paddingX)}px;
+        width: 14px;
+        & + .comboTreeItemTitle{ 
+          @extend %dropdown__link;
+          padding-right: 0;
+          // padding-left: #{_brand-sizes(dropdownLink_paddingX)}px;
+          width: auto;
+        }
+        .svg--icon,
+        svg{
+          height: 14px;
+          width: 14px;
+          vertical-align: top;
+        }
+      }
+    }
+    &Title{
+      align-items: center;
+      display: inline-flex;
+      input[type="checkbox"]{
+        margin: 0 #{_brand-sizes(dropdownLink_paddingX)}px 0 0;
+      }
+    }
+    &Hover{
+      & + ul{
+        @extend %dropdown__linkHover;
+      }
+    }
+  }
+  &Filter{
+    display: block;
+    float: none;
+    margin: rem(_brand-sizes(dropdownLink_paddingX));
+    width: calc(100% - #{_brand-sizes(dropdownLink_paddingX) * 2}px);
+  }
+  &InputBox {
+    text-align: left;
+    width: 100%;
+    .has-error & {
+        border-color: _brand-palette(hasDanger_borderColor);
+    }
+  }
+  &ArrowBtn {
+      cursor: pointer;
+      -webkit-user-select: none; /* Safari */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* IE10+/Edge */
+      user-select: none; /* Standard */
+      position: absolute;
+      top: 50%;
+      margin-top: -2px;
+      border: none;
+      display: block;
+      right: 12px;
+      @extend %caret;
+      &Img{
+        display: none;
+      }
   }
 }

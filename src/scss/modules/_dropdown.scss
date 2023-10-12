@@ -29,35 +29,12 @@
   outline: 0;
 }
 
+
 // The dropdown menu (ul)
 .dropdown-menu {
-  background-color: _brand-palette(dropdown_bgc);
-  background-clip: padding-box;
-  box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.35);
-  border: none;
-  border-radius: 0;
-  display: none; // none by default, but block on "open" of the menu
-  font-size: rem(_fontSizes(dropdown));
-  position: absolute;
+  @extend %dropdown-menu;
   // float: left;
-  left: 0;
-  list-style: none;
-  margin: 0 0 0; // override default ul
-  min-width: 160px;
-  padding: 0px; // #12782
-  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  top: 100%;
-  // border: 1px solid $dropdown-fallback-border; // IE8 fallback
-  // @include box-shadow(0 6px 12px rgba(0, 0, 0, .175));
-
   z-index: _zindex(dropdown-menu);
-  // Aligns the dropdown menu to right
-  //
-  // Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]`
-  // .dropdown.pull-right &{
-  //   right: 0;
-  //   left: auto;
-  // }
   .svg-icon-viewbox24{
     height: 24px;
     width: 24px;
@@ -73,7 +50,11 @@
   // Links within the dropdown menu
   > li > a,
   > li > span {
-    @extend .dropdown__link;
+    @extend %dropdown__link;
+    &:hover,
+    &:focus {
+      @extend %dropdown__linkHover;
+    }
   }
   .active > .dropdown__link,
   .dropdown__link.active,
@@ -90,26 +71,11 @@
 }
 
 .dropdown__link {
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  color: _brand-palette(dropdown_color);
-  clear: both;
-  // display: block;
-  display: inline-flex;
-  font-weight: 400;
-  padding: 0px rem(_brand-sizes(dropdownLink_paddingX));
-  line-height: rem(_lineHeight(dropdownLink));
-  min-height: rem(_brand-sizes(dropdownLink_minH));
-  text-decoration: none;
-  width: 100%;
-  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  @extend %dropdown__link;
 
   &:hover,
   &:focus {
-    background-color: _brand-palette(dropdownActive_bgc);
-    color: _brand-palette(dropdownActive_color);
-    text-decoration: none;
+    @extend %dropdown__linkHover;
   }
   // .svg--icon,
   // svg{
@@ -118,33 +84,7 @@
   // }
 }
 
-%dropdown__link__active {
-  &, 
-  &:hover,
-  &:focus{
-    background-color: _brand-palette(dropdownActive_bgc);
-    color: _brand-palette(dropdownActive_color);
-    text-decoration: none;
-    outline: 0;
-  }
-}
-%dropdown__link__disable {
-  &,
-  &:hover,
-  &:focus {
-    color: $dropdown-link-disabled-color;
-  }
 
-  // Nuke hover/focus effects
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    cursor: $cursor-disabled;
-    background-color: transparent;
-    background-image: none; // Remove CSS gradient
-    @include reset-filter;
-  }
-}
 
 .dropdown__linkIcon{
   margin-right: 5px;
@@ -217,7 +157,6 @@
     content: "";
     border-top: 0;
     border-bottom: $caret-width-base dashed;
-    border-bottom: $caret-width-base solid \9; // IE8
   }
   // Different positioning for bottom up menu
   .dropdown-menu {
