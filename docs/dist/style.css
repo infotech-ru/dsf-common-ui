@@ -88,7 +88,7 @@
   white-space: nowrap;
 }
 
-.comboTreeItemHover + ul, .comboTreeItemChlid:hover, .comboTreeItemChlid:focus, .dropdown__link:hover, .dropdown__link:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
+.comboTreeItemParentGroupTitle:hover + ul, .comboTreeItemParentGroupTitle:focus + ul, .comboTreeItemParentGroupTitle:hover, .comboTreeItemParentGroupTitle:focus, .comboTreeItemChlid:hover, .comboTreeItemChlid:focus, .dropdown__link:hover, .dropdown__link:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
 .dropdown-menu > li > span:hover,
 .dropdown-menu > li > span:focus, .dropdown-menu .active > .dropdown__link,
 .dropdown-menu .dropdown__link.active, .dropdown-menu > li > a.active, .dropdown-menu > .active > a {
@@ -8698,6 +8698,7 @@ select.selectpicker {
   flex-basis: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 .comboTreeDropDownContainer > ul {
   max-height: 250px;
@@ -8714,7 +8715,7 @@ select.selectpicker {
 }
 
 .comboTreeItemParent .comboTreeItemChlid {
-  padding-left: calc(20px);
+  padding-left: 34px;
 }
 .comboTreeItemParent {
   cursor: pointer;
@@ -8728,15 +8729,21 @@ select.selectpicker {
   margin-left: 10px;
   width: 14px;
 }
-.comboTreeItemParentPlus + .comboTreeItemTitle {
-  padding-right: 0;
-  width: auto;
-}
 .comboTreeItemParentPlus .svg--icon,
 .comboTreeItemParentPlus svg {
   height: 14px;
   width: 14px;
   vertical-align: top;
+}
+.comboTreeItemParentPlus + .comboTreeItemTitle {
+  padding-right: 0;
+  width: auto;
+}
+.comboTreeItemParentGroupTitle {
+  align-items: center;
+  display: flex;
+  padding: 0;
+  width: 100%;
 }
 .comboTreeItemTitle {
   align-items: center;

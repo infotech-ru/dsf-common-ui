@@ -635,6 +635,7 @@ select.selectpicker {
       flex-basis: 100%;
       margin: 0;
       padding: 0;
+      width: 100%;
     }
     & > ul {
       max-height: 250px; // нет автоподстраиванния высоты от позиции селекта
@@ -654,7 +655,7 @@ select.selectpicker {
         flex-wrap: wrap;
       }
       .comboTreeItemParent &{
-        padding-left: calc(#{_brand-sizes(dropdownLink_paddingX) * 2}px);
+        padding-left: #{_brand-sizes(dropdownLink_paddingX) * 2 + _brand-sizes(comboTreeCheckbox_size)}px;
       }
       &:hover,
       &:focus{
@@ -669,20 +670,32 @@ select.selectpicker {
       min-height: auto;
       padding: 0;
       &Plus{
-        height: 14px;
+        height: #{_brand-sizes(comboTreeCheckbox_size)}px;
         margin-left: #{_brand-sizes(dropdownLink_paddingX)}px;
-        width: 14px;
+        width: #{_brand-sizes(comboTreeCheckbox_size)}px;
+        .svg--icon,
+        svg{
+          height: #{_brand-sizes(comboTreeCheckbox_size)}px;
+          width: #{_brand-sizes(comboTreeCheckbox_size)}px;
+          vertical-align: top;
+        }
         & + .comboTreeItemTitle{ 
           @extend %dropdown__link;
           padding-right: 0;
-          // padding-left: #{_brand-sizes(dropdownLink_paddingX)}px;
           width: auto;
         }
-        .svg--icon,
-        svg{
-          height: 14px;
-          width: 14px;
-          vertical-align: top;
+      }
+      &GroupTitle{
+        align-items: center;
+        display: flex;
+        padding: 0;
+        width: 100%;
+        &:hover,
+        &:focus{
+          @extend %dropdown__linkHover;
+          & + ul{
+            @extend %dropdown__linkHover;
+          }
         }
       }
     }
@@ -691,11 +704,6 @@ select.selectpicker {
       display: inline-flex;
       input[type="checkbox"]{
         margin: 0 #{_brand-sizes(dropdownLink_paddingX)}px 0 0;
-      }
-    }
-    &Hover{
-      & + ul{
-        @extend %dropdown__linkHover;
       }
     }
   }
