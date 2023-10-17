@@ -208,12 +208,12 @@
 	height: 24px;
 }
 
-.svg-bicolors-book-lamp-dims {
+.svg-bicolors-book_lamp-dims {
 	width: 19px;
 	height: 20px;
 }
 
-.svg-bicolors-book-lamp__24vb-dims {
+.svg-bicolors-book_lamp__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
@@ -363,17 +363,17 @@
 	height: 15.92px;
 }
 
-.svg-bicolors-cart-check-dims {
-	width: 18.16px;
-	height: 15.92px;
-}
-
-.svg-bicolors-cart-check__24vb-dims {
+.svg-bicolors-cart__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
 
-.svg-bicolors-cart__24vb-dims {
+.svg-bicolors-cart_check-dims {
+	width: 18.16px;
+	height: 15.92px;
+}
+
+.svg-bicolors-cart_check__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
@@ -428,12 +428,12 @@
 	height: 24px;
 }
 
-.svg-bicolors-circule-ignore-dims {
+.svg-bicolors-circule_ignore-dims {
 	width: 18px;
 	height: 18px;
 }
 
-.svg-bicolors-circule-ignore__24vb-dims {
+.svg-bicolors-circule_ignore__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
@@ -668,6 +668,26 @@
 	height: 24px;
 }
 
+.svg-bicolors-door_enter-dims {
+	width: 16.5px;
+	height: 17px;
+}
+
+.svg-bicolors-door_enter__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-bicolors-door_exit-dims {
+	width: 17.21px;
+	height: 17px;
+}
+
+.svg-bicolors-door_exit__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
 .svg-bicolors-drag-dims {
 	width: 17px;
 	height: 17px;
@@ -744,16 +764,6 @@
 }
 
 .svg-bicolors-engine__24vb-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-bicolors-enter-dims {
-	width: 16.5px;
-	height: 17px;
-}
-
-.svg-bicolors-enter__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
@@ -853,17 +863,17 @@
 	height: 14px;
 }
 
-.svg-bicolors-folder-plus-dims {
-	width: 19px;
-	height: 14px;
-}
-
-.svg-bicolors-folder-plus__24vb-dims {
+.svg-bicolors-folder__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
 
-.svg-bicolors-folder__24vb-dims {
+.svg-bicolors-folder_plus-dims {
+	width: 19px;
+	height: 14px;
+}
+
+.svg-bicolors-folder_plus__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
@@ -1978,26 +1988,6 @@
 	height: 23.04px;
 }
 
-.svg-glyphicons-arrow-down-dims {
-	width: 14.96px;
-	height: 22.26px;
-}
-
-.svg-glyphicons-arrow-left-dims {
-	width: 22.26px;
-	height: 14.96px;
-}
-
-.svg-glyphicons-arrow-right-dims {
-	width: 22.28px;
-	height: 14.96px;
-}
-
-.svg-glyphicons-arrow-up-dims {
-	width: 16.92px;
-	height: 19.99px;
-}
-
 .svg-glyphicons-bank-dims {
 	width: 24px;
 	height: 23.95px;
@@ -2058,76 +2048,6 @@
 	height: 19.16px;
 }
 
-.svg-glyphicons-chevron-down-dims {
-	width: 22.13px;
-	height: 14.18px;
-}
-
-.svg-glyphicons-chevron-left-dims {
-	width: 14.18px;
-	height: 22.12px;
-}
-
-.svg-glyphicons-chevron-right-dims {
-	width: 14.18px;
-	height: 22.12px;
-}
-
-.svg-glyphicons-chevron-up-dims {
-	width: 20.98px;
-	height: 14.17px;
-}
-
-.svg-glyphicons-circle-alert-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-glyphicons-circle-check-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-glyphicons-circle-empty-alert-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-glyphicons-circle-empty-check-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-glyphicons-circle-empty-info-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-glyphicons-circle-empty-question-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-glyphicons-circle-empty-remove-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-glyphicons-circle-info-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-glyphicons-circle-menu-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-glyphicons-circle-question-dims {
-	width: 24px;
-	height: 24px;
-}
-
 .svg-glyphicons-clipboard-dims {
 	width: 20px;
 	height: 24px;
@@ -2163,21 +2083,6 @@
 	height: 24px;
 }
 
-.svg-glyphicons-direction-dims {
-	width: 22.95px;
-	height: 22.95px;
-}
-
-.svg-glyphicons-email-dims {
-	width: 22px;
-	height: 22px;
-}
-
-.svg-glyphicons-envelope-dims {
-	width: 24px;
-	height: 17.99px;
-}
-
 .svg-glyphicons-export-dims {
 	width: 24px;
 	height: 21.84px;
@@ -2196,11 +2101,6 @@
 .svg-glyphicons-filter-dims {
 	width: 22px;
 	height: 23.42px;
-}
-
-.svg-glyphicons-flash-dims {
-	width: 16.93px;
-	height: 24px;
 }
 
 .svg-glyphicons-global-dims {
