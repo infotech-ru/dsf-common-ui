@@ -51,6 +51,7 @@
   > li > a,
   > li > span {
     @extend %dropdown__link;
+    @extend %dropdown__linkColors;
     &:hover,
     &:focus {
       @extend %dropdown__linkHover;
@@ -72,6 +73,7 @@
 
 .dropdown__link {
   @extend %dropdown__link;
+  @extend %dropdown__linkColors;
 
   &:hover,
   &:focus {

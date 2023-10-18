@@ -37,20 +37,21 @@
 
 %dropdown__link {
   align-items: center;
-  background-color: transparent;
-  border: none;
-  color: _brand-palette(dropdown_color);
   clear: both;
   display: inline-flex;
   font-weight: 400;
   padding: 0px rem(_brand-sizes(dropdownLink_paddingX));
   line-height: rem(_lineHeight(dropdownLink));
   min-height: rem(_brand-sizes(dropdownLink_minH));
-  text-decoration: none;
   width: 100%;
   white-space: nowrap; // prevent links from randomly breaking onto new lines
 }
-
+%dropdown__linkColors {
+  background-color: transparent;
+  border: none;
+  color: _brand-palette(dropdown_color);
+  text-decoration: none;
+}
 %dropdown__linkHover {
   background-color: _brand-palette(dropdownActive_bgc);
   color: _brand-palette(dropdownActive_color);

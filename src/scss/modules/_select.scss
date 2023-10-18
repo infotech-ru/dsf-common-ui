@@ -651,6 +651,7 @@ select.selectpicker {
       list-style-type: none;
       position: relative;
       @extend %dropdown__link;
+      @extend %dropdown__linkColors;
       @at-root .comboTreeDropDownContainer > #{&}{
         flex-wrap: wrap;
       }
@@ -664,14 +665,19 @@ select.selectpicker {
     }
     &Parent{
       @extend %dropdown__link;
+      @extend %dropdown__linkColors;
       cursor: pointer;
       display: flex;
       flex-wrap: wrap;
       min-height: auto;
       padding: 0;
+      position: relative;
       &Plus{
         height: #{_brand-sizes(comboTreeCheckbox_size)}px;
-        margin-left: #{_brand-sizes(dropdownLink_paddingX)}px;
+        left: #{_brand-sizes(dropdownLink_paddingX)}px;
+        margin-top: #{_brand-sizes(comboTreeCheckbox_size) * 0.5 * -1}px;
+        position: absolute;
+        top: rem(_brand-sizes(dropdownLink_minH) * .5);
         width: #{_brand-sizes(comboTreeCheckbox_size)}px;
         .svg--icon,
         svg{
@@ -682,28 +688,40 @@ select.selectpicker {
         & + .comboTreeItemTitle{ 
           @extend %dropdown__link;
           padding-right: 0;
-          width: auto;
+          padding-left: #{_brand-sizes(dropdownLink_paddingX) * 2 + _brand-sizes(comboTreeCheckbox_size)}px;
+          // width: auto;
+          width: 100%;
         }
       }
-      &GroupTitle{
-        align-items: center;
-        display: flex;
-        padding: 0;
-        width: 100%;
-        &:hover,
-        &:focus{
-          @extend %dropdown__linkHover;
-          & + ul{
-            @extend %dropdown__linkHover;
-          }
-        }
-      }
+      // &GroupTitle{
+      //   align-items: center;
+      //   display: flex;
+      //   padding: 0;
+      //   width: 100%;
+      //   &:hover,
+      //   &:focus{
+      //     @extend %dropdown__linkHover;
+      //     & + ul{
+      //       @extend %dropdown__linkHover;
+      //     }
+      //   }
+      // }
     }
     &Title{
       align-items: center;
       display: inline-flex;
       input[type="checkbox"]{
         margin: 0 #{_brand-sizes(dropdownLink_paddingX)}px 0 0;
+      }
+    }
+    &Hover{
+      .comboTreeItemParent > &{
+        @extend %dropdown__linkHover;
+      }
+      & + ul{
+      .comboTreeItemParent &{
+          @extend %dropdown__linkHover;
+        }
       }
     }
   }

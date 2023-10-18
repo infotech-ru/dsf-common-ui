@@ -74,21 +74,25 @@
 .comboTreeItemParentPlus + .comboTreeItemTitle, .comboTreeItemParent, .comboTreeItemChlid, .dropdown__link, .dropdown-menu > li > a,
 .dropdown-menu > li > span {
   align-items: center;
-  background-color: transparent;
-  border: none;
-  color: #333333;
   clear: both;
   display: inline-flex;
   font-weight: 400;
   padding: 0px 0.625rem;
   line-height: 1.5rem;
   min-height: 2.25rem;
-  text-decoration: none;
   width: 100%;
   white-space: nowrap;
 }
 
-.comboTreeItemParentGroupTitle:hover + ul, .comboTreeItemParentGroupTitle:focus + ul, .comboTreeItemParentGroupTitle:hover, .comboTreeItemParentGroupTitle:focus, .comboTreeItemChlid:hover, .comboTreeItemChlid:focus, .dropdown__link:hover, .dropdown__link:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
+.comboTreeItemParent, .comboTreeItemChlid, .dropdown__link, .dropdown-menu > li > a,
+.dropdown-menu > li > span {
+  background-color: transparent;
+  border: none;
+  color: #333333;
+  text-decoration: none;
+}
+
+.comboTreeItemParent .comboTreeItemHover + ul, .comboTreeItemParent > .comboTreeItemHover, .comboTreeItemChlid:hover, .comboTreeItemChlid:focus, .dropdown__link:hover, .dropdown__link:focus, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
 .dropdown-menu > li > span:hover,
 .dropdown-menu > li > span:focus, .dropdown-menu .active > .dropdown__link,
 .dropdown-menu .dropdown__link.active, .dropdown-menu > li > a.active, .dropdown-menu > .active > a {
@@ -8723,10 +8727,14 @@ select.selectpicker {
   flex-wrap: wrap;
   min-height: auto;
   padding: 0;
+  position: relative;
 }
 .comboTreeItemParentPlus {
   height: 14px;
-  margin-left: 10px;
+  left: 10px;
+  margin-top: -7px;
+  position: absolute;
+  top: 1.125rem;
   width: 14px;
 }
 .comboTreeItemParentPlus .svg--icon,
@@ -8737,12 +8745,7 @@ select.selectpicker {
 }
 .comboTreeItemParentPlus + .comboTreeItemTitle {
   padding-right: 0;
-  width: auto;
-}
-.comboTreeItemParentGroupTitle {
-  align-items: center;
-  display: flex;
-  padding: 0;
+  padding-left: 34px;
   width: 100%;
 }
 .comboTreeItemTitle {
