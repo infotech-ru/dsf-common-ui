@@ -605,25 +605,11 @@ select.selectpicker {
     position: relative;
     text-align: left !important;
   }
-  &Expanded {
-    .comboTreeInputWrapper,
-    .comboTreeDropDownContainer .comboTreeFilter {
-      display: none;
-    }
-
-    .comboTreeDropDownContainer {
-      display: block;
-      max-height: none;
-      border: none;
-      position: relative;
-
-      >ul {
-        max-height: none;
-      }
-    }
-  }
   &InputWrapper{
     position: relative;
+    .comboTreeExpanded & {
+      display: none;
+    }
   }
   &DropDownContainer {
     @extend %dropdown-menu;
@@ -642,6 +628,17 @@ select.selectpicker {
       overflow-y: auto;
       padding-left: 0;
       @extend %scrollVar;
+      .comboTreeExpanded & {
+        max-height: none;
+      }
+    }
+    .comboTreeExpanded & {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      display: block;
+      max-height: none;
+      position: relative;
     }
   }
   &Item{ 
@@ -687,10 +684,14 @@ select.selectpicker {
         }
         & + .comboTreeItemTitle{ 
           @extend %dropdown__link;
+          line-height: 1.3em;
           padding-right: 0;
           padding-left: #{_brand-sizes(dropdownLink_paddingX) * 2 + _brand-sizes(comboTreeCheckbox_size)}px;
           // width: auto;
           width: 100%;
+          .comboTreeExpanded & {
+            white-space: normal;
+          }
         }
       }
       // &GroupTitle{
@@ -710,6 +711,10 @@ select.selectpicker {
     &Title{
       align-items: center;
       display: inline-flex;
+      line-height: 1.3em;
+      .comboTreeExpanded & {
+        white-space: normal;
+      }
       input[type="checkbox"]{
         margin: 0 #{_brand-sizes(dropdownLink_paddingX)}px 0 0;
       }
@@ -730,6 +735,9 @@ select.selectpicker {
     float: none;
     margin: rem(_brand-sizes(dropdownLink_paddingX));
     width: calc(100% - #{_brand-sizes(dropdownLink_paddingX) * 2}px);
+    .comboTreeExpanded & {
+      display: none;
+    }
   }
   &InputBox {
     text-align: left;

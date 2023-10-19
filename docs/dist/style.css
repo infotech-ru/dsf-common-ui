@@ -8676,21 +8676,11 @@ select.selectpicker {
   position: relative;
   text-align: left !important;
 }
-.comboTreeExpanded .comboTreeInputWrapper,
-.comboTreeExpanded .comboTreeDropDownContainer .comboTreeFilter {
-  display: none;
-}
-.comboTreeExpanded .comboTreeDropDownContainer {
-  display: block;
-  max-height: none;
-  border: none;
-  position: relative;
-}
-.comboTreeExpanded .comboTreeDropDownContainer > ul {
-  max-height: none;
-}
 .comboTreeInputWrapper {
   position: relative;
+}
+.comboTreeExpanded .comboTreeInputWrapper {
+  display: none;
 }
 .comboTreeDropDownContainer {
   min-width: 100%;
@@ -8708,6 +8698,17 @@ select.selectpicker {
   max-height: 250px;
   overflow-y: auto;
   padding-left: 0;
+}
+.comboTreeExpanded .comboTreeDropDownContainer > ul {
+  max-height: none;
+}
+.comboTreeExpanded .comboTreeDropDownContainer {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  display: block;
+  max-height: none;
+  position: relative;
 }
 .comboTreeItemChlid {
   cursor: pointer;
@@ -8744,13 +8745,21 @@ select.selectpicker {
   vertical-align: top;
 }
 .comboTreeItemParentPlus + .comboTreeItemTitle {
+  line-height: 1.3em;
   padding-right: 0;
   padding-left: 34px;
   width: 100%;
 }
+.comboTreeExpanded .comboTreeItemParentPlus + .comboTreeItemTitle {
+  white-space: normal;
+}
 .comboTreeItemTitle {
   align-items: center;
   display: inline-flex;
+  line-height: 1.3em;
+}
+.comboTreeExpanded .comboTreeItemTitle {
+  white-space: normal;
 }
 .comboTreeItemTitle input[type=checkbox] {
   margin: 0 10px 0 0;
@@ -8760,6 +8769,9 @@ select.selectpicker {
   float: none;
   margin: 0.625rem;
   width: calc(100% - 20px);
+}
+.comboTreeExpanded .comboTreeFilter {
+  display: none;
 }
 .comboTreeInputBox {
   text-align: left;
