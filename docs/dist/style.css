@@ -11259,6 +11259,224 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
+/* MODAL                                                                      */
+/* path: dsf-common-ui/src/scss/modules/_modal.scss                           */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  transform: translate(0, -25%);
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    margin: 10px auto;
+    width: 640px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-dialog {
+    margin: 30px auto;
+  }
+}
+
+.modal-content {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  position: relative;
+  outline: 0;
+}
+
+.modal-backdrop {
+  background-color: #000000;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1040;
+}
+
+.modal-header {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid #dddddd;
+  box-shadow: inset rgba(0, 0, 0, 0.1) 0 -10px 10px -10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding: 10px 30px 10px 15px;
+  position: relative;
+}
+.modal-header .close {
+  appearance: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.41 9.41'%3E%3Cpath d='M1,1,9,9' transform='translate(-0.29 -0.29)' fill='none' stroke='%23bababa' stroke-width='2'/%3E%3Cpath d='M9,1,1,9' transform='translate(-0.29 -0.29)' fill='none' stroke='%23bababa' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+  height: 10px;
+  padding: 0;
+  margin-top: -5px;
+  opacity: 1;
+  position: absolute;
+  right: 15px;
+  text-indent: -9999px;
+  top: 50%;
+  width: 10px;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body {
+  position: relative;
+  padding: 10px 15px;
+}
+.modal-body h5 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.modal-body .h2 {
+  font-size: 1rem;
+  line-height: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.modal-body:first-child {
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-top: 20px;
+}
+.modalScrollableBody .modal-body {
+  max-height: calc(91vh - 100px);
+  overflow-y: auto;
+}
+
+.modal-footer {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid #dddddd;
+  box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px -10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  text-align: right;
+}
+.modal-footer [class^=btn]:first-child:last-child {
+  margin-left: auto;
+}
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+@media (min-width: 992px) {
+  .modal-responsive {
+    min-width: 900px;
+    width: 90vw;
+  }
+}
+@media (min-width: 480px) {
+  .modal-xs {
+    width: 320px;
+  }
+}
+@media (min-width: 768px) {
+  .modal-sm {
+    width: 700px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-md {
+    width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-lg {
+    width: 1200px;
+  }
+}
+@media (min-width: 1280px) {
+  .modal-xl {
+    width: 1240px;
+  }
+}
+@media (min-width: 1366px) {
+  .modal-xxl {
+    width: 1320px;
+  }
+}
+@media (min-width: 1440px) {
+  .modal-xxxl {
+    width: 1400px;
+  }
+}
+.modalHeader_item {
+  align-items: center;
+  display: flex;
+}
+.modalHeader_itemTitleSvg {
+  height: 24px;
+  margin-right: 5px;
+  width: 24px;
+}
+.modalHeader_itemTitleSvg svg {
+  height: 24px;
+  width: 24px;
+}
+
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
 /* MODAL-SIDEBAR                                                              */
 /* path: dsf-common-ui/src/scss/modules/_sidebarModal.scss                    */
 /*                                                                            */
@@ -11491,8 +11709,14 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
+.fade.modal-backdrop {
+  opacity: 0;
+}
 .fade.in, .fade.show {
   opacity: 1;
+}
+.fade.in.modal-backdrop, .fade.show.modal-backdrop {
+  opacity: 0.5;
 }
 
 .collapse {

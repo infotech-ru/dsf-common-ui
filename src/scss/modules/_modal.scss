@@ -1,7 +1,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
-/* LABELS                                                                     */
-/* path: dsf-common-ui/src/scss/modules/_labels.scss                          */
+/* MODAL                                                                      */
+/* path: dsf-common-ui/src/scss/modules/_modal.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
@@ -86,22 +86,22 @@
   // z-index: $zindex-modal-background;
   z-index: _zindex(modalBackground);
   // Fade for backdrop
-  &.fade { opacity: 0; }
-  &.in { opacity: .5; }
+  // &.fade { opacity: 0; }
+  // &.in { opacity: .5; }
 }
 
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.03);
+  // background-color: rgba(0, 0, 0, 0.03);
   background-color: _brand-palette(modalHeader_bgc);
   border-bottom: 1px solid _brand-palette(modalHeader_borderColor);
   box-shadow: inset rgba(0, 0, 0, 0.1) 0 -10px 10px -10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
-  padding: _brand-sizes(modal_paddingY) 30px _brand-sizes(modal_paddingY) _brand-sizes(modal_paddingX);
+  padding: #{_brand-sizes(modal_paddingY)}px 30px #{_brand-sizes(modal_paddingY)}px #{_brand-sizes(modal_paddingX)}px;
   position: relative;
 
   // @include clearfix;
@@ -137,7 +137,7 @@
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
-  padding: _brand-sizes(modal_paddingY) _brand-sizes(modal_paddingX);
+  padding: #{_brand-sizes(modal_paddingY)}px #{_brand-sizes(modal_paddingX)}px;
   h5{
     font-size: rem(12);
     font-weight: 700;
@@ -171,7 +171,7 @@
   display: flex;
   justify-content: space-between;
   // margin-top: 0;
-  padding: _brand-sizes(modal_paddingY) _brand-sizes(modal_paddingX);
+  padding: #{_brand-sizes(modal_paddingY)}px #{_brand-sizes(modal_paddingX)}px;
   text-align: right; // right align buttons
   // @include clearfix; // clear it in case folks use .pull-* classes on buttons
   [class^="btn"]:first-child:last-child{

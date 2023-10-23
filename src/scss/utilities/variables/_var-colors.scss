@@ -523,12 +523,12 @@ $brand-palette: (
   menuDropdownHeader_color:               map-get($brand-colors, _grey),
   
   modal_bgc:                              map-get($brand-colors, _white),
-  modal_borderColor:                      lighten(map-get($brand-colors, _black), 20%),
+  modal_borderColor:                      transparentize(map-get($brand-colors, _black), .8),
   modalBackdrop_bgc:                      map-get($brand-colors, _black),
-  modalFooter_bgc:                        lighten(map-get($brand-colors, _black), 3%),
+  modalFooter_bgc:                        transparentize(map-get($brand-colors, _black), .97),
   modalFooter_borderColor:                map-get($brand-colors, _grey2),
   modalHeader_borderColor:                map-get($brand-colors, _grey2),
-  modalHeader_bgc:                        lighten(map-get($brand-colors, _black), 3%),
+  modalHeader_bgc:                        transparentize(map-get($brand-colors, _black), .97),
   
   navPills_border:                        map-get($brand-colors, _light-blue),
   navPills-active_border:                 map-get($brand-colors, _light-blue),
