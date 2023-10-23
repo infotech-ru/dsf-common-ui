@@ -11,11 +11,15 @@
   position: fixed;
   top: 0;
   right: -17px;
+  right: 0;
   bottom: 0;
   left: 0;
   z-index: 1050;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+  body[style^="padding-right"] &{
+    right: -17px;
+  }
   .modal-sidebar-open &,
   .modal-open & {
     overflow-x: hidden;
@@ -63,8 +67,9 @@
     }
   }
   &-body {
+    background-color: #fff;
     position: relative;
-    padding: 0 rem(_brand-sizes(modalSidebar_padding));
+    padding: 0 rem(_brand-sizes(modalSidebar_padding)) 1px;
     &_inner{
       margin: 0 rem(calc(_brand-sizes(modalSidebar_padding) * -1));
     }

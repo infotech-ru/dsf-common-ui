@@ -11487,11 +11487,15 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   position: fixed;
   top: 0;
   right: -17px;
+  right: 0;
   bottom: 0;
   left: 0;
   z-index: 1050;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+}
+body[style^=padding-right] .modal-sidebar {
+  right: -17px;
 }
 .modal-sidebar-open .modal-sidebar, .modal-open .modal-sidebar {
   overflow-x: hidden;
@@ -11540,8 +11544,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   float: left;
 }
 .modal-sidebar-body {
+  background-color: #fff;
   position: relative;
-  padding: 0 1rem;
+  padding: 0 1rem 1px;
 }
 .modal-sidebar-body_inner {
   margin: 0 -1rem;
