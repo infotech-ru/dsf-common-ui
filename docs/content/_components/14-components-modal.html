@@ -1,0 +1,38 @@
+---
+Title: Модальное окно 
+menutitle: Модальное окно (modal)
+category: components
+anchor: modal-modal
+order: 14
+---
+
+Виджет Modal показывает модальное окно посредине экрана. 
+
+Используемый скрипт bootstrap v3 <a href="https://getbootstrap.com/docs/3.4/javascript/#modals">modal.js</a>
+
+Размер окна изменяется через добавление класса:
+
+'size' => SIZE_LARGE и SIZE_SMALL (это modal-lg и modal-sm) или просто класс 
+
+modal-xs (width: 320px)
+modal-sm (width: 700px)
+modal-md (width: 900px)
+modal-lg (width: 1200px)
+modal-xl (width: 1240px)
+modal-xxl (width: 1320px)
+modal-xxxl (width: 1400px)
+
+'size' => 'modal-xl modal-xxl',
+
+`modal-responsive` - класс для добавления резиновой ширины модалки
+'size' => 'modal-responsive',
+
+
+Добавление вертикального скрола осуществляется добавлением класса `modalScrollableBody` - 'size' => 'modalScrollableBody'
+
+Шапка окна отрисовывается через 'header'. 
+{% highlight html %}
+'header' => '<div class="modalHeader_item"><span class="modalHeader_itemTitleSvg">' .  Icons::icon('bicolors-list_questionnaires__24vb') . '</span><h4 class="modal-title modalHeader_title h4">' . Yii::t('app', 'Название') . '</h4></div><div class="modalHeader_item">'<span class="svg--icon">' . Icons::icon('bicolors-timeback') . '</span> <span class="btn-text">История изменения</span>',</div>',
+{% endhighlight %}
+
+Рядом с названиеи могут находится другие элементы - иконки, кнопки, лейблы.

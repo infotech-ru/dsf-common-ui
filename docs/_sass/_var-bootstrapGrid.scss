@@ -29,6 +29,10 @@ $gridGutterWidth: $grid-gutter-width;
   $gridGutterWidth: $grid-gutter-widths;
 }
 
+@function _grid-breakpoints($keys...) {
+  @return val($grid-breakpoints, $keys...);
+}
+
 $grid-breakpoints: (
   '': 0,
   xs: 480px,
@@ -39,6 +43,7 @@ $grid-breakpoints: (
   xxl: 1366px,
   xxxl: 1440px
 ) !default;
+
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
