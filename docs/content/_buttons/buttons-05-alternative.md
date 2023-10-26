@@ -115,18 +115,18 @@ _Использование:_ `btn-link`
 
 Кнопка закачивания
 
-<btn class="btn-download">
+<button class="btn-download">
     <span class="btn-download_inner">
         <span class="svg--icon svg--icon__21"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
         <span class="btn-text">Добавить фото</span>
     </span>
-</btn>
+</button>
 
 {% highlight html %}
-<btn class="btn-download">
+<button class="btn-download">
     <span class="btn-download_inner">
         <span class="svg--icon svg--icon__21"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
         <span class="btn-text">Добавить фото</span>
     </span>
-</btn>
+</button>
 {% endhighlight %}

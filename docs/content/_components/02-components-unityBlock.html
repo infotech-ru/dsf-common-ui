@@ -7,9 +7,9 @@ order: 2
 ---
 
 Основная единица объединения информации - контейнер `unityBlock` <br>
-Имеет шапку `unityBlock_header` и unityBlock_body <br>
-Шапка состоит из контейненров `unityBlock_headerItem`, которые позиционируются в разные строны. <br>
-В шапке может быть иконка, заголовок с классами `h4 unityBlock_headerTitle`, кнопки действия и статусы. <br>
+Имеет шапку <code class="language-plaintext highlighter-rouge">unityBlock_header</code> и unityBlock_body <br>
+Шапка состоит из контейненров <code class="language-plaintext highlighter-rouge">unityBlock_headerItem</code>, которые позиционируются в разные строны. <br>
+В шапке может быть иконка, заголовок с классами <code class="language-plaintext highlighter-rouge">h4 unityBlock_headerTitle</code>, кнопки действия и статусы. <br>
 Все остальная информация находится в unityBlock_body
 
 {% highlight html %}
@@ -19,7 +19,7 @@ order: 2
           <span class="svg--icon unityBlock_headerSvgTitle"> 
             <?= Icons::icon('bicolors-car_model__24vb') ?>
           </span>
-          <h4 class="h4 unityBlock_headerTitle">Название блока</h4>
+          <h4 class="h4 unityBlock_headerTitle"><?= Yii::t('app', 'Название блока') ?></h4>
       </div>
       <div class="unityBlock_headerItem">
         <button class="btn-icon btn-icon__h20">

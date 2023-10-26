@@ -12,23 +12,30 @@ order: 14
 
 Размер окна изменяется через добавление класса:
 
-'size' => SIZE_LARGE и SIZE_SMALL (это modal-lg и modal-sm) или просто класс 
+<code class="language-plaintext highlighter-rouge">'size' => SIZE_LARGE</code> и <code class="language-plaintext highlighter-rouge">SIZE_SMALL</code> (это modal-lg и modal-sm) или просто класс 
 
-modal-xs (width: 320px)
-modal-sm (width: 700px)
-modal-md (width: 900px)
-modal-lg (width: 1200px)
-modal-xl (width: 1240px)
-modal-xxl (width: 1320px)
-modal-xxxl (width: 1400px)
+<p><code class="language-plaintext highlighter-rouge">modal-xs</code> (width: 320px)</p>
+<p><code class="language-plaintext highlighter-rouge">modal-sm</code> (width: 700px)</p>
+<p><code class="language-plaintext highlighter-rouge">modal-md</code> (width: 900px)</p>
+<p><code class="language-plaintext highlighter-rouge">modal-lg</code> (width: 1200px)</p>
+<p><code class="language-plaintext highlighter-rouge">modal-xl</code> (width: 1240px)</p>
+<p><code class="language-plaintext highlighter-rouge">modal-xxl</code> (width: 1320px)</p>
+<p><code class="language-plaintext highlighter-rouge">modal-xxxl</code> (width: 1400px)</p>
 
-'size' => 'modal-xl modal-xxl',
+{% highlight html %}
+  'size' => 'modal-xl modal-xxl',
+{% endhighlight %}
 
-`modal-responsive` - класс для добавления резиновой ширины модалки
-'size' => 'modal-responsive',
+<code class="language-plaintext highlighter-rouge">modal-responsive</code> - класс для добавления резиновой ширины модалки
+{% highlight html %}
+  'size' => 'modal-responsive',
+{% endhighlight %}
 
 
-Добавление вертикального скрола осуществляется добавлением класса `modalScrollableBody` - 'size' => 'modalScrollableBody'
+Добавление вертикального скрола осуществляется добавлением класса <code class="language-plaintext highlighter-rouge">modalScrollableBody</code> - 
+{% highlight html %}
+'size' => 'modalScrollableBody'
+{% endhighlight %}
 
 Шапка окна отрисовывается через 'header'. 
 {% highlight html %}

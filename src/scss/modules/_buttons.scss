@@ -395,6 +395,7 @@ input[type="button"] {
   font-size: rem(10);
   font-weight: 400;
   line-height: 12px;
+  margin-bottom: 0;
   height: 64px;
   padding: 4px;
   outline: none;
@@ -413,6 +414,7 @@ input[type="button"] {
   }
   .btn-text{
     margin: 0;
+    line-height: 12px;
   }
   .svg--icon {
     height: rem(20);
