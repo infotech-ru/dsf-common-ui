@@ -20,7 +20,7 @@ _Использование:_ `btn-link`
   <div class="">
   <button class="btn-link">btn-link</button>
 
-  <button class="btn-default ml-10">Кнопка для сравнения</button>
+  <button class="btn-default ml-10">Оьычная кнопка для сравнения</button>
   </div>
 </div>
 
@@ -92,8 +92,6 @@ _Использование:_ `btn-link`
   <button class="btn-warning__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
   
   <button class="btn-grey__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
-
-
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -115,7 +113,7 @@ _Использование:_ `btn-link`
 
 Кнопка закачивания
 
-<button class="btn-download">
+<button class="btn-download w-100p">
     <span class="btn-download_inner">
         <span class="svg--icon svg--icon__21"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
         <span class="btn-text">Добавить фото</span>
@@ -123,7 +121,7 @@ _Использование:_ `btn-link`
 </button>
 
 {% highlight html %}
-<button class="btn-download">
+<button class="btn-download w-100p">
     <span class="btn-download_inner">
         <span class="svg--icon svg--icon__21"><svg width="24" height="24"><use xlink:href="dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
         <span class="btn-text">Добавить фото</span>

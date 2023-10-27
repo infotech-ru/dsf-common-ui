@@ -11045,6 +11045,12 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   -o-transition: transform 0.6s ease-in-out;
   transition: transform 0.6s ease-in-out;
 }
+.carousel__aspectRatio16-9 .carousel-item {
+  aspect-ratio: 16/9;
+}
+.carousel__aspectRatio16-10 .carousel-item {
+  aspect-ratio: 16/10;
+}
 .carousel-item.active, .carousel-item-next, .carousel-item-prev {
   display: flex;
 }
@@ -11165,19 +11171,19 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   -o-transition: opacity 0.6s ease;
   transition: opacity 0.6s ease;
 }
-.carousel-indicators-item .carousel-indicators__line {
+.carousel-indicators__line .carousel-indicators-item {
+  background-color: #fff;
+  background-clip: padding-box;
   box-sizing: content-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
   flex: 0 1 auto;
-  width: 30px;
   height: 3px;
   margin-right: 3px;
   margin-left: 3px;
-  text-indent: -999px;
-  background-color: #fff;
-  background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
   opacity: 0.5;
+  text-indent: -999px;
+  width: 30px;
 }
 .carousel-indicators-item_inner {
   align-items: center;
@@ -11217,7 +11223,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .carousel-indicators-item:hover .carousel-indicators-item_inner, .carousel-indicators-item:focus .carousel-indicators-item_inner, .carousel-indicators-item.active .carousel-indicators-item_inner {
   outline-color: var(--color_dark-grey);
 }
-.carousel-indicators-item:hover .carousel-indicators__line, .carousel-indicators-item:focus .carousel-indicators__line, .carousel-indicators-item.active .carousel-indicators__line {
+.carousel-indicators__line .carousel-indicators-item:hover, .carousel-indicators__line .carousel-indicators-item:focus, .carousel-indicators__line .carousel-indicators-item.active {
   opacity: 1;
   width: 12px;
   height: 12px;
