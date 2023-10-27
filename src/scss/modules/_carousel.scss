@@ -185,6 +185,11 @@
       right: 0;
       bottom: 0;
     }
+    &__line {
+      img{
+        display: none;
+      }
+    }
     &-item {
       border: none;
       cursor: pointer;
@@ -192,7 +197,7 @@
       position: relative;
       margin-bottom: 10px;
       @include transition($carousel-indicator-transition);
-      .carousel-indicators__line &{ 
+      .carousel-indicators__line &{
         background-color: $carousel-indicator-active-bg;
         background-clip: padding-box;
         box-sizing: content-box;
