@@ -8,13 +8,13 @@ order: 12
 
 <p>Комментарии имееют следующие оформление.</p>
 <p>Блок с вводом сообщения как правило ставиться как перед списком комментариев, так и после</p>
-<p>Цвет фона списка комментариев задается с помощью helper-классов. По умолчанию, bg-light-yellow</p>
-<p>Если есть возможность прикреплять файлы, и существует информационое поле с именем добавленяемого файла, то высота списка должна быть переключаемой: + высоту информационного поля. Например с 240 на 264. А само поле менять цвет с цвета фона списка комментариева (по умолчанию bg-light-yellow) на цветполя ввода комментариев - bg-white</p>
-<p>Тень на блоке одиночного комментария задается через <code class="language-plaintext highlighter-rouge">commentBlock_comments__shadow<code class="language-plaintext highlighter-rouge"></code></p>
+<p>Цвет фона списка комментариев задается с помощью helper-классов. По умолчанию, <code class="language-plaintext highlighter-rouge">bg-light-yellow</code></p>
+<p>Если есть возможность прикреплять файлы, и существует информационое поле с именем добавленяемого файла, то высота списка должна быть переключаемой: + высоту информационного поля. Например с 240 на 264. А само поле менять цвет с цвета фона списка комментариева (по умолчанию bg-light-yellow) на цветполя ввода комментариев - <code class="language-plaintext highlighter-rouge">bg-white</code></p>
+<p>Тень на блоке одиночного комментария задается через <code class="language-plaintext highlighter-rouge">commentBlock_comments__shadow</code</p>
 <p>Цвет фона блока одиночного комментария задается с помощью helper-классов. По умолчанию используется <code class="language-plaintext highlighter-rouge">bg-light-green</code> или <code class="language-plaintext highlighter-rouge">bg-info</code></p>
 <p>Для увеличенного поля ввода используется класс <code class="language-plaintext highlighter-rouge">commentBlock_inputGroup__bigHeight</code></p>
 <p>Для возможности изменения высоты textarea выставляем класс <code class="language-plaintext highlighter-rouge">commentBlock_formControl__resizeVert</code> на ней.</p>
-<p>Для появления полосы прокруткии на textarea - класс <code class="language-plaintext highlighter-rouge">overflowY-auto</code> на ней.</p>
+<p>Для появления полосы прокруткии на поле ввода на textarea указываем класс <code class="language-plaintext highlighter-rouge">overflowY-auto</code>.</p>
 
 {% highlight html %}
 
@@ -80,8 +80,8 @@ order: 12
             </div>
         </div>
     </div>
-
 {% endhighlight %}
+
 <div class="bs-docs-example">
     <div class="commentBlock">
         <div class="bg-light-yellow padding-10 scrollbar__thin overflowY-auto" style="height:240px" :style="{ height: uploadName ? '240px' : '264px' }">

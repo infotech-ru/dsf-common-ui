@@ -6,13 +6,18 @@ anchor: modal-modal
 order: 14
 ---
 
-Виджет Modal показывает модальное окно посредине экрана. 
+<p>Виджет Modal показывает модальное окно посредине экрана.</p>
 
-Используемый скрипт bootstrap v3 <a href="https://getbootstrap.com/docs/3.4/javascript/#modals">modal.js</a>
+<p>Используемый скрипт bootstrap v3 <a href="https://getbootstrap.com/docs/3.4/javascript/#modals">modal.js</a></p>
 
-Размер окна изменяется через добавление класса:
+<p>Размер окна изменяется добавлением класса. <br>
+Для классов modal-lg и modal-sm в yii можно использовать SIZE_LARGE и SIZE_SMALL</p>
 
-<code class="language-plaintext highlighter-rouge">'size' => SIZE_LARGE</code> и <code class="language-plaintext highlighter-rouge">SIZE_SMALL</code> (это modal-lg и modal-sm) или просто класс 
+{% highlight html %}
+  'size' => SIZE_LARGE
+  'size' => SIZE_SMALL
+  'size' => 'modal-xl'
+{% endhighlight %}
 
 <p><code class="language-plaintext highlighter-rouge">modal-xs</code> (width: 320px)</p>
 <p><code class="language-plaintext highlighter-rouge">modal-sm</code> (width: 700px)</p>
@@ -26,20 +31,27 @@ order: 14
   'size' => 'modal-xl modal-xxl',
 {% endhighlight %}
 
-<code class="language-plaintext highlighter-rouge">modal-responsive</code> - класс для добавления резиновой ширины модалки
+Класс <code class="language-plaintext highlighter-rouge">modal-responsive</code> - добавления резиновой ширины модалки.
 {% highlight html %}
   'size' => 'modal-responsive',
 {% endhighlight %}
 
 
-Добавление вертикального скрола осуществляется добавлением класса <code class="language-plaintext highlighter-rouge">modalScrollableBody</code> - 
+Класс <code class="language-plaintext highlighter-rouge">modalScrollableBody</code> - Добавление вертикального скрола для modal-body.
 {% highlight html %}
-'size' => 'modalScrollableBody'
+  'size' => 'modalScrollableBody'
 {% endhighlight %}
 
 Шапка окна отрисовывается через 'header'. 
 {% highlight html %}
-'header' => '<div class="modalHeader_item"><span class="modalHeader_itemTitleSvg">' .  Icons::icon('bicolors-list_questionnaires__24vb') . '</span><h4 class="modal-title modalHeader_title h4">' . Yii::t('app', 'Название') . '</h4></div><div class="modalHeader_item">'<span class="svg--icon">' . Icons::icon('bicolors-timeback') . '</span> <span class="btn-text">История изменения</span>',</div>',
+'header' => '<div class="modalHeader_item">
+              <span class="modalHeader_itemTitleSvg">' . Icons::icon('bicolors-list_questionnaires__24vb') . '</span>
+              <h4 class="modal-title modalHeader_title h4">' . Yii::t('app', 'Название') . '</h4>
+            </div>
+            <div class="modalHeader_item">
+              <span class="svg--icon">' . Icons::icon('bicolors-timeback') . '</span>
+              <span class="btn-text">' . Yii::t('app', 'История изменения') . '</span>
+            </div>',
 {% endhighlight %}
 
 Рядом с названиеи могут находится другие элементы - иконки, кнопки, лейблы.
