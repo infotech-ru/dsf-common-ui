@@ -1,7 +1,7 @@
 <ul class="headerMenu nav">
 {% for item in site.data.navigation %}
   <li class="headerMenu__item  {% if page.url == item.link %} active{% endif %}">
-    <a class="headerMenu__link" href="{% if page.permalink %}{{ page.permalink }}{% else%}{{ item.link }}{% endif %}">
+    <a class="headerMenu__link" href="{% if site.baseurl  %}{{ site.baseurl }}/{% endif %}{% if page.permalink %}{{ page.permalink }}{% else%}{{ item.link }}{% endif %}">
       {{ item.name }}
     </a>
   </li>
