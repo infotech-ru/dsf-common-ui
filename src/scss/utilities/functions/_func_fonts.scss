@@ -1,0 +1,68 @@
+// ----------------------------------------------------------------- FUNCTION //
+// HELPER FOR MAP GOOGLEFONTS
+// how use: @include import-google-font-family($open-sans);
+// $font-family: google-font-family($open-sans);
+//
+// DEPENDENCIES: @str-replace from helpers-functions.scss
+
+@function font-subset(){
+  $subset-cyrillic: '';
+  $subset-cyrillic-ext: '';
+  $subset-latin-ext: '';
+  @if $google-subset-cyrillic {
+    $subset-cyrillic: '&subset=cyrillic';
+  }
+  @if $google-subset-cyrillic-ext {
+    @if $google-subset-cyrillic {
+      $subset-cyrillic-ext: ',cyrillic-ext';
+    }
+    @else{
+      $subset-cyrillic-ext: '&subset=cyrillic-ext';
+    }
+  }
+  @if $google-subset-latin-ext {
+    @if $google-subset-cyrillic {
+      $subset-latin-ext: ',latin-ext';
+    }
+    @else{
+      @if $google-subset-cyrillic-ext {
+        $subset-latin-ext: ',latin-ext';
+      }
+      @else{
+        $subset-latin-ext: '&subset=latin-ext';
+      }
+    }
+  }
+  @return unquote($subset-cyrillic + $subset-cyrillic-ext + $subset-latin-ext);
+}
+
+@function function-import-google-font-family($import-ff) {
+  $google-url: 'https://fonts.googleapis.com/css?family=';
+  $google-font-subset: font-subset();
+  @return unquote(unquote($google-url) + str-replace(map-get($import-ff, ff1), ' ', '+') + ':' + map-get($import-ff, ffstyle) + '' + unquote($google-font-subset));
+}
+
+@function google-font-family($google-ff){
+  @return unquote('"' + map-get($google-ff, ff1) + '"' + ',' + map-get($google-ff, ff2));
+}
+
+// ----------------------------------------------------------------- FUNCTION //
+// ИСПОЛЬЗОВАНИЕ EM/REM ВМЕСТО PX
+// how use: font-size: rem(14)
+
+$browser-context: 16;
+$font-size-context: $browser-context;
+
+@function rem( $pixels, $context: $font-size-context ) {
+  @return calc(($pixels/$context)*1rem);
+}
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1em;
+}

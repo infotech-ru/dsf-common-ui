@@ -11447,9 +11447,21 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
     width: 700px;
   }
 }
+
+@media (min-width: 768px) {
+  .modal-md {
+    width: 90vw;
+  }
+}
 @media (min-width: 992px) {
   .modal-md {
     width: 900px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-lg {
+    width: 90vw;
   }
 }
 @media (min-width: 1200px) {
@@ -11457,9 +11469,21 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
     width: 1200px;
   }
 }
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90vw;
+  }
+}
 @media (min-width: 1280px) {
   .modal-xl {
     width: 1240px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-xxl {
+    width: 90vw;
   }
 }
 @media (min-width: 1366px) {
@@ -11467,11 +11491,18 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
     width: 1320px;
   }
 }
+
+@media (min-width: 768px) {
+  .modal-xxxl {
+    width: 90vw;
+  }
+}
 @media (min-width: 1440px) {
   .modal-xxxl {
     width: 1400px;
   }
 }
+
 .modalHeader_item {
   align-items: center;
   display: flex;

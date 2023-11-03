@@ -220,38 +220,53 @@
   // }
 }
 
-@media (min-width: _grid-breakpoints(sm)) {
-  .modal-sm { 
+.modal-sm { 
+  @media (min-width: _grid-breakpoints(sm)) {
     width: 700px;
   }
 }
 
-@media (min-width: _grid-breakpoints(md)) {
-  .modal-md { 
+.modal-md {
+  @media (min-width: _grid-breakpoints(sm)) {
+    width: 90vw;
+  }
+  @media (min-width: _grid-breakpoints(md)) {
     width: 900px; 
   }
 }
 
-@media (min-width: _grid-breakpoints(lg)) {
-  .modal-lg { 
+.modal-lg { 
+  @media (min-width: _grid-breakpoints(sm)) {
+    width: 90vw;
+  }
+  @media (min-width: _grid-breakpoints(lg)) {
     width: 1200px; 
   }
 }
 
-@media (min-width: _grid-breakpoints(xl)) {
-  .modal-xl {
+.modal-xl {
+  @media (min-width: _grid-breakpoints(sm)) {
+    width: 90vw;
+  }
+  @media (min-width: _grid-breakpoints(xl)) {
     width: 1240px;
   }
 }
 
-@media (min-width: _grid-breakpoints(xxl)) {
-  .modal-xxl {
+.modal-xxl {
+  @media (min-width: _grid-breakpoints(sm)) {
+    width: 90vw;
+  }
+  @media (min-width: _grid-breakpoints(xxl)) {
     width: 1320px;
   }
 }
 
-@media (min-width: _grid-breakpoints(xxxl)) {
-  .modal-xxxl {
+.modal-xxxl {
+  @media (min-width: _grid-breakpoints(sm)) {
+    width: 90vw;
+  }
+  @media (min-width: _grid-breakpoints(xxxl)) {
     width: 1400px;
   }
 }

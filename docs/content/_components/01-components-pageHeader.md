@@ -8,6 +8,8 @@ order: 1
 
 Шапка страницы имеет следующую структуру:
 
+Для прилипания шапки страницы при пркручивания используется класс `pageHeader_sticky`
+
 {% highlight html %}
 <div class="pageHeader">
   <div class="pageHeader__left">
@@ -22,14 +24,8 @@ order: 1
 </div>
 {% endhighlight %}
 
-Для прилипания шапки страницы при пркручивания используется класс `pageHeader_sticky`
-
-{% highlight html %}
-<div class="pageHeader pageHeader_sticky">
-{% endhighlight %}
-
 <div class="bs-docs-example">
-<div class="pageHeader pageHeader_sticky">
+<div class="pageHeader mb-0">
   <div class="pageHeader__left">
     <h2 class="pageHeader__title">
       Заголовок страницы

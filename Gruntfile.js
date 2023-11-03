@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                     },
                 ]
             },
-            sass:{
+            sass_var:{
               files: [
                     {
                         expand: true,
@@ -51,6 +51,27 @@ module.exports = function (grunt) {
                         dest: "./docs/_sass/"
                     },
                 ]
+            },
+            sass_func:{
+              files: [
+                {
+                    expand: true,
+                    cwd: "./src/scss/utilities/functions",
+                    src: "*.scss",
+                    dest: "./docs/_sass/"
+                },
+              ]
+            },
+            jekyll:{
+                    expand: true,
+                    cwd: "./docs/dist/",
+                    src: "jekyll.yml",
+                    dest: "./docs/_data/",
+                    options: {
+                      process: function (content, srcpath) {
+                        return content.replace(/(\jekyll)(\D\W){2}(\s)/gm, '');
+                      },
+                    },
             }
         },
         svg_sprite: {
@@ -122,8 +143,9 @@ module.exports = function (grunt) {
             default: {
                 files: {
                   "./docs/dist/style.css": "./src/scss/index.scss",
+                  "./docs/dist/jekyll.yml": "./docs/_sass/jekyll.scss",
                 }
-            }
+            },
         },
         rollup: {
             options: {
@@ -177,7 +199,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-sass");
     grunt.loadNpmTasks("grunt-rollup");
-
-    grunt.registerTask("default", ["rollup", "svg_sprite", "copy", "sass"]);
+    grunt.registerTask('copy-default', ['copy:svg_sprite__template', 'copy:svg_sprite__symbolSpriteForDocs', 'copy:js', 'copy:sass_var', 'copy:sass_func']);
+    grunt.registerTask("default", ["rollup", "svg_sprite", "copy-default", "sass", "copy:jekyll"]);
 
 };

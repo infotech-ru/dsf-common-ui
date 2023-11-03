@@ -1,10 +1,6 @@
 <header class="header">
-  <div class="header__top">
-    <div class="header__block header__block_left">
-      <a class="navbar-brand" href="{{ nav.homepage.url|url }}">{{ site.title }}</a>
-    </div>
-  </div>
   <nav class="header__bottom">
+    <a class="navbar-brand" href="{{ nav.homepage.url|url }}">{{ site.title }}</a>
       {% include nav.html %}
   </nav>
 </header>

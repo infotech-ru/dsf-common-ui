@@ -1,0 +1,12 @@
+@use "sass:map";
+
+@import "_func_maps";
+@import "_var-colors";
+
+// $brandnamecolor-keys: to-list($brand-namecolors, 'keys');
+// $breakpoints-keys: to-list($breakpoints, 'keys');
+
+
+@each $name, $value in $brand-namecolors {
+jekyll{ #{$name}: $value }
+}

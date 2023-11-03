@@ -18,14 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Infotech. Common UI for CRM, DSF, DNM
+title: Infotech. Common UI for DNM, CRM, DSF
 email: bend.r.bender@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The UI elements for CRM.
+  The UI elements for DNM, CRM, DFS.
 author: "Infotech"
-baseurl: "/dsf-common-ui/" # the subpath of your site, e.g. /blog
-url: "https://infotech-ru.github.io/dsf-common-ui/" # the base hostname & protocol for your site, e.g. http://example.com
-canonical_url: "https://infotech-ru.github.io/dsf-common-ui/"
+baseurl: "/dsf-common-ui" # the subpath of your site, e.g. /blog
+url: "https://infotech-ru.github.io/dsf-common-ui" # the base hostname & protocol for your site, e.g. http://example.com
+canonical_url: "https://infotech-ru.github.io/dsf-common-ui"
 
 
 # Build settings
@@ -48,9 +48,9 @@ collections:
     sort_by: order
   tables:
     sort_by: order
-#sass:
-#  sass_dir: _sass
-#  style: compressed
+sass:
+  sass_dir: _sass
+  style: compressed
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

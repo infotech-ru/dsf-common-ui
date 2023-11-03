@@ -1,0 +1,99 @@
+jekyll {
+  default: #777777;
+}
+
+jekyll {
+  primary: #1E6393;
+}
+
+jekyll {
+  danger: #D9534F;
+}
+
+jekyll {
+  warning: #DE8500;
+}
+
+jekyll {
+  success: #69C26A;
+}
+
+jekyll {
+  info: #E4EEF7;
+}
+
+jekyll {
+  muted: #BABABA;
+}
+
+jekyll {
+  orange: #FFBD41;
+}
+
+jekyll {
+  dark-grey: #333333;
+}
+
+jekyll {
+  grey: #cccccc;
+}
+
+jekyll {
+  grey2: #dddddd;
+}
+
+jekyll {
+  grey4: #777777;
+}
+
+jekyll {
+  light-grey: #f9f9f9;
+}
+
+jekyll {
+  light-grey2: #F5F5F5;
+}
+
+jekyll {
+  light-grey4: #e5e5e5;
+}
+
+jekyll {
+  light-red: #FCEEEE;
+}
+
+jekyll {
+  dark-red: #762624;
+}
+
+jekyll {
+  rose: #FF9996;
+}
+
+jekyll {
+  clear: #00000000;
+}
+
+jekyll {
+  white: #ffffff;
+}
+
+jekyll {
+  light-blue: #4A8DC6;
+}
+
+jekyll {
+  light-blue3: #B6D1E8;
+}
+
+jekyll {
+  vibrant-blue: #0094FF;
+}
+
+jekyll {
+  light-yellow: #FFF6DF;
+}
+
+jekyll {
+  light-green: #DAF0DA;
+}
