@@ -5,7 +5,7 @@
         {% for doc in site.components %}
         {% if doc.category == page.category %}
         <li class="nav-item">
-          <a class="nav-link" href="{{site.baseurl}}{{ page.url }}#{{ doc.anchor }}">{{ doc.menutitle }}
+          <a class="nav-link" href="{{site.baseurl}}/{{ page.url }}#{{ doc.anchor }}">{{ doc.menutitle }}
           </a>
         </li>
         {% endif %}
