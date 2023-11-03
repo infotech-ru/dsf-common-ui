@@ -8777,6 +8777,8 @@ select.selectpicker {
   display: none;
 }
 .comboTreeInputBox {
+  align-items: center;
+  display: inline-flex;
   text-align: left;
   width: 100%;
 }

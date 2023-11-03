@@ -740,6 +740,8 @@ select.selectpicker {
     }
   }
   &InputBox {
+    align-items: center;
+    display: inline-flex;
     text-align: left;
     width: 100%;
     .has-error & {
