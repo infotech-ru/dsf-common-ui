@@ -1,99 +1,103 @@
-jekyll {
+brandnamecolor {
+  jekyll: jekyll;
+}
+
+-jekyll {
   default: #777777;
 }
 
-jekyll {
+-jekyll {
   primary: #1E6393;
 }
 
-jekyll {
+-jekyll {
   danger: #D9534F;
 }
 
-jekyll {
+-jekyll {
   warning: #DE8500;
 }
 
-jekyll {
+-jekyll {
   success: #69C26A;
 }
 
-jekyll {
+-jekyll {
   info: #E4EEF7;
 }
 
-jekyll {
+-jekyll {
   muted: #BABABA;
 }
 
-jekyll {
+-jekyll {
   orange: #FFBD41;
 }
 
-jekyll {
+-jekyll {
   dark-grey: #333333;
 }
 
-jekyll {
+-jekyll {
   grey: #cccccc;
 }
 
-jekyll {
+-jekyll {
   grey2: #dddddd;
 }
 
-jekyll {
+-jekyll {
   grey4: #777777;
 }
 
-jekyll {
+-jekyll {
   light-grey: #f9f9f9;
 }
 
-jekyll {
+-jekyll {
   light-grey2: #F5F5F5;
 }
 
-jekyll {
+-jekyll {
   light-grey4: #e5e5e5;
 }
 
-jekyll {
+-jekyll {
   light-red: #FCEEEE;
 }
 
-jekyll {
+-jekyll {
   dark-red: #762624;
 }
 
-jekyll {
+-jekyll {
   rose: #FF9996;
 }
 
-jekyll {
+-jekyll {
   clear: #00000000;
 }
 
-jekyll {
+-jekyll {
   white: #ffffff;
 }
 
-jekyll {
+-jekyll {
   light-blue: #4A8DC6;
 }
 
-jekyll {
+-jekyll {
   light-blue3: #B6D1E8;
 }
 
-jekyll {
+-jekyll {
   vibrant-blue: #0094FF;
 }
 
-jekyll {
+-jekyll {
   light-yellow: #FFF6DF;
 }
 
-jekyll {
+-jekyll {
   light-green: #DAF0DA;
 }

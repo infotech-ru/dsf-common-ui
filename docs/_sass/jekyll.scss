@@ -6,7 +6,9 @@
 // $brandnamecolor-keys: to-list($brand-namecolors, 'keys');
 // $breakpoints-keys: to-list($breakpoints, 'keys');
 
-
+brandnamecolor{
+  jekyll: jekyll;
+}
 @each $name, $value in $brand-namecolors {
-jekyll{ #{$name}: $value }
+-jekyll{ #{$name}: $value }
 }

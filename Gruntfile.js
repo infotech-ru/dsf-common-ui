@@ -69,7 +69,7 @@ module.exports = function (grunt) {
                     dest: "./docs/_data/",
                     options: {
                       process: function (content, srcpath) {
-                        return content.replace(/(\jekyll)(\D\W){2}(\s)/gm, '');
+                        return content.replace(/jekyll| \{|\n| |^[[:xdigit:]]|\}|;\s/g, '');
                       },
                     },
             }
