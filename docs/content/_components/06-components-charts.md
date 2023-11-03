@@ -134,7 +134,7 @@ order: 6
             <h3>Название графика</h3>
         </div>
         <div class="chartsBlock_headerItem">
-            <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dist/sprite.symbol.svg#bicolors-car_model__24vb"></use></svg></span>
+            <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-car_model__24vb"></use></svg></span>
         </div>
     </div>
     <div class="chartsBlock_headerSubtitles">Подзаголовок</div>
