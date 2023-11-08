@@ -15,7 +15,8 @@
   font-size: rem(_fontSizes(btn));
   font-weight: _fontWeight(btn);
   line-height: rem(_lineHeight(btn));
-  height: min-content;
+  // height: min-content; не работает в сафари с <input>
+  height: auto;
   margin-bottom: 0; // For input.btn
   padding: 0 #{_brand-sizes(btn_paddingX)}px;
   text-align: center;

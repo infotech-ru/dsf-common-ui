@@ -6816,7 +6816,7 @@ h6, .h6 {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.625rem;
-  height: min-content;
+  height: auto;
   margin-bottom: 0;
   padding: 0 10px;
   text-align: center;
