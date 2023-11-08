@@ -3,12 +3,7 @@
 @import "_func_maps";
 @import "_var-colors";
 
-// $brandnamecolor-keys: to-list($brand-namecolors, 'keys');
-// $breakpoints-keys: to-list($breakpoints, 'keys');
 
-brandnamecolor{
-  jekyll: jekyll;
-}
 @each $name, $value in $brand-namecolors {
--jekyll{ #{$name}: $value }
+  brandnamecolor{ #{$name}: $value }
 }

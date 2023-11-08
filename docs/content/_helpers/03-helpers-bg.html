@@ -1,0 +1,30 @@
+---
+Title: Фон контейнера
+menutitle: Фон контейнера
+category: helpers
+anchor: helpers-bgcontainer
+order: 3
+---
+
+<h4>Классы для установленния цвет фона контейнера</h4>
+<p>Доступные для использования классы:</p>
+{% for item in site.data.jekyll.brandnamecolor %}
+  <code class="language-plaintext highlighter-rouge">bg-{{ item.name }}</code>, 
+{% endfor %}
+
+{% highlight html %}
+  <div class="bg-primary">...</div>
+  <div class="bg-light-green">...</div>
+{% endhighlight %}
+
+<div class="bs-docs-example">
+  {% for item in site.data.jekyll.brandnamecolor %}
+    {% if item.name == 'clear' %}
+      <div class="bg-grey padding-5 mb-10"><div class="bg-{{ item.name }} border border-white">bg-grey.padding-5 > border.border-white.bg-{{ item.name }}</div></div>
+    {% elsif item.name == 'white' %}
+      <div class="bg-grey padding-5 mb-10"><div class="bg-{{ item.name }}">bg-grey.padding-5 > bg-{{ item.name }}</div></div>
+    {% else %}
+      <div class="bg-{{ item.name }} padding-5 mb-10">bg-{{ item.name }}</div>
+    {% endif %}
+  {% endfor %}
+</div>

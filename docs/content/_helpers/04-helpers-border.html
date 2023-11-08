@@ -1,0 +1,99 @@
+---
+Title: Граница контейнера (border)
+menutitle: Граница (border)
+category: helpers
+anchor: helpers-border
+order: 4
+---
+
+<h4>Расположение границы</h4>
+
+<p><code class="language-plaintext highlighter-rouge">border</code> - добавляет границу-черту в 1px вокруг контейнера(блока).</p>
+
+<p>Классы <code class="language-plaintext highlighter-rouge">border-top</code>, <code class="language-plaintext highlighter-rouge">border-bottom</code>, <code class="language-plaintext highlighter-rouge">border-left</code>, <code class="language-plaintext highlighter-rouge">border-right</code> добавляют границу-черту толщиной в 1px сверху, снизу, слева или справа блока.</p>
+
+<p>Классы <code class="language-plaintext highlighter-rouge">border-top__thick</code>, <code class="language-plaintext highlighter-rouge">border-bottom__thick</code>, <code class="language-plaintext highlighter-rouge">border-left__thick</code>, <code class="language-plaintext highlighter-rouge">border-right__thick</code> добавляют границу-черту толщиной в 2px сверху, снизу, слева или справа блока.</p>
+
+<p><code class="language-plaintext highlighter-rouge">border__thick</code> - добавляет границу-черту в 2px вокруг контейнера(блока).</p>
+
+<p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
+
+{% highlight html %}
+  <div class="border">border</div>
+  <div class="border-top">border-top</div>
+  <div class="border-right border-left__mobile">border-right border-left__mobile</div>
+  <div class="border-bottom">border-bottom</div>
+  <div class="border-left border-left__thick">border-left border-left__thick</div>
+{% endhighlight html %}
+<div class="bs-docs-example">
+  <div class="mb-10 border">border</div>
+  <div class="mb-10 border-top">border-top</div>
+  <div class="mb-10 border-right border-left__mobile">border-right border-left__mobile</div>
+  <div class="mb-10 border-bottom">border-bottom</div>
+  <div class="mb-10 border-left border-left__thick">border-left border-left__thick</div>
+</div>
+
+<p>Классы <code class="language-plaintext highlighter-rouge">border__none</code>, <code class="language-plaintext highlighter-rouge">border-top__none</code>, <code class="language-plaintext highlighter-rouge">border-bottom__none</code>, <code class="language-plaintext highlighter-rouge">border-left__none</code>, <code class="language-plaintext highlighter-rouge">border-right__none</code> - классы отключают границу в с соответствующей стороны контейнера или со всех сторон.</p>
+
+<p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
+
+{% highlight html %}
+  <div class="border border-top__none">border border-top__none</div>
+  <div class="border border-right__none">border border-right__none</div>
+  <div class="border border-bottom__none border-top__none__mobile">border border-bottom__none border-top__none__mobile</div>
+  <div class="border border-left__none">border border-left__none</div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="mb-10 border border-top__none">border border-top__none</div>
+  <div class="mb-10 border border-right__none">border border-right__none</div>
+  <div class="mb-10 border border-bottom__none border-top__none__mobile">border border-bottom__none border-top__none__mobile</div>
+  <div class="mb-10 border border-left__none">border border-left__none</div>
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">border__dotted</code> - модифициурет границу-линию в границу-точку.</p>
+<p><code class="language-plaintext highlighter-rouge">border__dashed</code> - модифициурет границу-линию в границу-прерывистую линию.</p>
+
+<p>Классы <code class="language-plaintext highlighter-rouge">border-top__dotted</code>, <code class="language-plaintext highlighter-rouge">border-bottom__dotted</code>, <code class="language-plaintext highlighter-rouge">border-left__dotted</code>, <code class="language-plaintext highlighter-rouge">border-right__dotted</code> модифициурет границу-линию в границу-точку.</p>
+
+{% highlight html %}
+  <div class="border border__dotted">border border__dotted</div>
+  <div class="border-top border-top__dotted">border-top border-top__dotted</div>
+  <div class="border-right border-right__dotted border-left border-left__dashed">border-right border-right__dotted border-left border-left__dashed</div>
+  <div class="border-bottom border-bottom__dotted">border-bottom border-bottom__dotted</div>
+  <div class="border-left border-left__dotted">border-left border-left__dotted</div>
+{% endhighlight html %}
+<div class="bs-docs-example">
+    <div class="mb-10 border border__dotted">border border__dotted</div>
+    <div class="mb-10 border-top border-top__dotted">border-top border-top__dotted</div>
+    <div class="mb-10 border-right border-right__dotted border-left border-left__dashed">border-right border-right__dotted border-left border-left__dashed</div>
+    <div class="mb-10 border-bottom border-bottom__dotted">border-bottom border-bottom__dotted</div>
+    <div class="mb-10 border-left border-left__dotted">border-left border-left__dotted</div>
+</div>
+
+
+<h4>Цвет границы</h4>
+<p>Доступные для использования классы для установления цвета границ (border-color):</p>
+{% for item in site.data.jekyll.brandnamecolor %}
+  {% if item.name == 'clear' %}
+    <code class="language-plaintext highlighter-rouge">border-{{ item.name }}</code> - (устанавливает прозрачный цвет), 
+  {% else %}
+    <code class="language-plaintext highlighter-rouge">border-{{ item.name }}</code>, 
+  {% endif %}
+{% endfor %}
+
+
+{% highlight html %}
+  <div class="border border-success">...</div>
+  <div class="border border-grey">...</div>
+{% endhighlight html %}
+<div class="bs-docs-example">
+  {% for item in site.data.jekyll.brandnamecolor %}
+    {% if item.name == 'clear' %}
+      <div class="bg-grey padding-5 mb-10"><div class="border border-{{ item.name }}">bg-grey.padding-5 > border.border-{{ item.name }}</div></div>
+    {% elsif item.name == 'white' %}
+      <div class="bg-grey padding-5 mb-10"><div class="border border-{{ item.name }}">bg-grey.padding-5 > border.border-{{ item.name }}</div></div>
+    {% else %}
+      <div class="border border-{{ item.name }} padding-5 mb-10">border border-{{ item.name }}</div>
+    {% endif %}
+  {% endfor %}
+</div>

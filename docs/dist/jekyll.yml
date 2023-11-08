@@ -1,103 +1,99 @@
 brandnamecolor {
-  jekyll: jekyll;
-}
-
--jekyll {
   default: #777777;
 }
 
--jekyll {
+brandnamecolor {
   primary: #1E6393;
 }
 
--jekyll {
+brandnamecolor {
   danger: #D9534F;
 }
 
--jekyll {
+brandnamecolor {
   warning: #DE8500;
 }
 
--jekyll {
+brandnamecolor {
   success: #69C26A;
 }
 
--jekyll {
+brandnamecolor {
   info: #E4EEF7;
 }
 
--jekyll {
+brandnamecolor {
   muted: #BABABA;
 }
 
--jekyll {
+brandnamecolor {
   orange: #FFBD41;
 }
 
--jekyll {
+brandnamecolor {
   dark-grey: #333333;
 }
 
--jekyll {
+brandnamecolor {
   grey: #cccccc;
 }
 
--jekyll {
+brandnamecolor {
   grey2: #dddddd;
 }
 
--jekyll {
+brandnamecolor {
   grey4: #777777;
 }
 
--jekyll {
+brandnamecolor {
   light-grey: #f9f9f9;
 }
 
--jekyll {
+brandnamecolor {
   light-grey2: #F5F5F5;
 }
 
--jekyll {
+brandnamecolor {
   light-grey4: #e5e5e5;
 }
 
--jekyll {
+brandnamecolor {
   light-red: #FCEEEE;
 }
 
--jekyll {
+brandnamecolor {
   dark-red: #762624;
 }
 
--jekyll {
+brandnamecolor {
   rose: #FF9996;
 }
 
--jekyll {
+brandnamecolor {
   clear: #00000000;
 }
 
--jekyll {
+brandnamecolor {
   white: #ffffff;
 }
 
--jekyll {
+brandnamecolor {
   light-blue: #4A8DC6;
 }
 
--jekyll {
+brandnamecolor {
   light-blue3: #B6D1E8;
 }
 
--jekyll {
+brandnamecolor {
   vibrant-blue: #0094FF;
 }
 
--jekyll {
+brandnamecolor {
   light-yellow: #FFF6DF;
 }
 
--jekyll {
+brandnamecolor {
   light-green: #DAF0DA;
 }

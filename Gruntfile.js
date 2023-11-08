@@ -62,17 +62,44 @@ module.exports = function (grunt) {
                 },
               ]
             },
-            // jekyll:{
-            //         expand: true,
-            //         cwd: "./docs/dist/",
-            //         src: "jekyll.yml",
-            //         dest: "./docs/_data/",
-            //         options: {
-            //           process: function (content, srcpath) {
-            //             return content.replace(/jekyll| \{|\n| |^[[:xdigit:]]|\}|;\s/g, '');
-            //           },
-            //         },
-            // }
+            jekyll:{
+                expand: true,
+                cwd: "./docs/dist/",
+                src: "jekyll.yml",
+                dest: "./docs/_data/",
+                options: {
+                  process: function (content, srcpath) {
+                    const lines = content.split('\n')
+                    let mapName, isInBlock = false, parts, key, value
+                    const maps = {}
+                    for (const line of lines) {
+                      if (isInBlock) {
+                        parts = line.replace(';', '').split(':')
+                        key = parts[0].trim()
+                        value = parts[1].trim()
+                        maps[mapName][key] = value
+                        isInBlock = false
+                      } else {
+                        if (line.trim().endsWith('{')) {
+                          mapName = line.split('{')[0].trim()
+                          maps[mapName] = maps[mapName] || {}
+                          isInBlock = true
+                        }
+                      }
+                    }
+                    let result = ''
+                    for (mapName in maps) {
+                      result += mapName + ':\n'
+                      for (key in maps[mapName]) {
+                        result += '- name: ' + key + '\n'
+                        result += '  value: ' + maps[mapName][key] + '\n'
+                      }
+                      result += '\n'
+                    }
+                    return result
+                  },
+                },
+            }
         },
         svg_sprite: {
           default: {
@@ -143,7 +170,7 @@ module.exports = function (grunt) {
             default: {
                 files: {
                   "./docs/dist/style.css": "./src/scss/index.scss",
-                  // "./docs/dist/jekyll.yml": "./docs/_sass/jekyll.scss",
+                  "./docs/dist/jekyll.yml": "./docs/_sass/jekyll.scss",
                 }
             },
         },
@@ -200,7 +227,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-sass");
     grunt.loadNpmTasks("grunt-rollup");
     grunt.registerTask('copy-default', ['copy:svg_sprite__template', 'copy:svg_sprite__symbolSpriteForDocs', 'copy:js', 'copy:sass_var', 'copy:sass_func']);
-    // grunt.registerTask("default", ["rollup", "svg_sprite", "copy-default", "sass", "copy:jekyll"]);
-    grunt.registerTask("default", ["rollup", "svg_sprite", "copy-default", "sass"]);
+    grunt.registerTask("default", ["rollup", "svg_sprite", "copy-default", "sass", "copy:jekyll"]);
+    // grunt.registerTask("default", ["rollup", "svg_sprite", "copy-default", "sass"]);
+    grunt.registerTask("tmp", ["copy:jekyll"]);
 
 };
