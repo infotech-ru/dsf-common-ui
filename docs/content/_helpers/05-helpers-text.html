@@ -129,7 +129,7 @@ order: 5
 {% highlight html %}
   <div class="text-default">...</div>
   <div class="text-primary textHover-danger">text-primary textHover-danger</div>
-  <div class="text-white textHover-grey-light">text-white textHover-grey-light</div>
+  <div class="text-white textHover-light-grey">text-white textHover-light-grey</div>
   <div class="textHoverTarget bg-muted text-center">text-clear bg-mu<span class="text-clear textHover-success">te</span>d text-center textHover-success on parent</div>
 {% endhighlight %}
 
@@ -138,7 +138,7 @@ order: 5
     {% if item.name == 'primary' %}
       <div class="mb-10"><span class="text-{{ item.name }} textHover-danger text-bold">text-{{ item.name }} textHover-danger</span></div>
     {% elsif item.name == 'white' %}
-      <div class="bg-default padding-5 mb-10"><span class="text-{{ item.name }} textHover-grey-light text-bold">text-{{ item.name }} textHover-grey-light</span></div>
+      <div class="bg-default padding-5 mb-10"><span class="text-{{ item.name }} textHover-light-grey text-bold">text-{{ item.name }} textHover-light-grey</span></div>
     {% elsif item.name == 'clear' %}
       <div class="textHoverTarget bg-muted text-center text-bold padding-5 mb-10">text-clear bg-mu<span class="text-{{ item.name }} textHover-success">te</span>d text-center textHover-success on parent</div>
     {% else %}
