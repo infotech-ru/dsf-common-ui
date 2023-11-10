@@ -476,6 +476,10 @@
   }
 }
 
+.borderadius-100p{
+  border-radius: 100%;
+}
+
 @each $name, $value in $brand-namecolors {
   .svg-#{$name},
   .svg-#{$name}.svg--icon {

@@ -115,7 +115,7 @@ _Использование:_ `btn-link`
 
 <button class="btn-download w-100p">
     <span class="btn-download_inner">
-        <span class="svg--icon svg--icon__21"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+        <span class="svg--icon svg--icon__h21"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
         <span class="btn-text">Добавить фото</span>
     </span>
 </button>
@@ -123,7 +123,7 @@ _Использование:_ `btn-link`
 {% highlight html %}
 <button class="btn-download w-100p">
     <span class="btn-download_inner">
-        <span class="svg--icon svg--icon__21"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+        <span class="svg--icon svg--icon__h21"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
         <span class="btn-text">Добавить фото</span>
     </span>
 </button>

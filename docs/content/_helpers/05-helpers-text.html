@@ -1,20 +1,21 @@
 ---
-Title: Для изменения стилей текста
+Title: Изменение стилей текста
 menutitle: Текст
 category: helpers
 anchor: helpers-text
 order: 5
 ---
 
-<h4>Классы для работы с переносом или длиной текста</h4>
+<h3>Классы для работы с переносом или длиной текста</h3>
 
 <p><code class="language-plaintext highlighter-rouge">nowrap</code>,<code class="language-plaintext highlighter-rouge">whitespace-normal</code>, <code class="language-plaintext highlighter-rouge">break-word</code>, <code class="language-plaintext highlighter-rouge">overflow-ellipsis</code>, <code class="language-plaintext highlighter-rouge">overflow-hidden</code>, <code class="language-plaintext highlighter-rouge">overflowX-auto</code>, <code class="language-plaintext highlighter-rouge">overflowY-auto</code></p>
 
 <p>только для мобильных:
 <code class="language-plaintext highlighter-rouge">nowrap__mobile</code>, <code class="language-plaintext highlighter-rouge">whitespace-normal__mobile</code>, <code class="language-plaintext highlighter-rouge">break-word__mobile</code>, <code class="language-plaintext highlighter-rouge">overflow-hidden__mobile</code></p>
 
-
-<h4>Классы для выравнивание текста в контейнере по горизонтали</h4>
+<br>
+<br>
+<h3>Классы для выравнивание текста в контейнере по горизонтали</h3>
 
 <code class="language-plaintext highlighter-rouge">text-left</code>, <code class="language-plaintext highlighter-rouge">text-right</code>, <code class="language-plaintext highlighter-rouge">text-center</code>, <code class="language-plaintext highlighter-rouge">text-justify</code>
 
@@ -31,13 +32,15 @@ order: 5
   <div class="text-right mb-10">text-right</div>
 </div>
 
+<br>
+<br>
+<h3>Классы для выравнивание текста в контейнере по вертикали</h3>
 
-<h4>Классы для выравнивание текста в контейнере по вертикали</h4>
+<p><code class="language-plaintext highlighter-rouge">va-middle</code>, <code class="language-plaintext highlighter-rouge">va-top</code>, <code class="language-plaintext highlighter-rouge">va-bottom</code></p>
 
-<code class="language-plaintext highlighter-rouge">va-middle</code>, <code class="language-plaintext highlighter-rouge">va-top</code>, <code class="language-plaintext highlighter-rouge">va-bottom</code>
-
-
-<h4>Классы для изменения регистра текста</h4>
+<br>
+<br>
+<h3>Классы для изменения регистра текста</h3>
 
 <code class="language-plaintext highlighter-rouge">text-lowercase</code>, <code class="language-plaintext highlighter-rouge">text-uppercase</code>, <code class="language-plaintext highlighter-rouge">text-capitalize</code>
 
@@ -54,27 +57,35 @@ order: 5
   <div class="text-uppercase mb-10">text-uppercase</div>
 </div>
 
-
-<h4>Классы для изменения толщины текста</h4>
+<br>
+<br>
+<h3>Классы для изменения толщины текста</h3>
 
 <code class="language-plaintext highlighter-rouge">text-regular</code>, <code class="language-plaintext highlighter-rouge">text-bold</code>,
 
 <p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
 
-<h4>Классы для изменения размера текста</h4>
+<br>
+<br>
+<h3>Классы для изменения размера текста</h3>
 
-<p>Следующие классы устанавливают размер шрифта в <code class="language-plaintext highlighter-rouge">rem</code> эквивалентное числу в классе, указанного <code class="language-plaintext highlighter-rouge">px</code>: fz{FZ},</p>
-
-<p>где <code class="language-plaintext highlighter-rouge">FZ = 10, 11, 12, 13, 14, 16, 18, 20, 24, 48</code></p>
+<p>Классы устанавливают размер шрифта эквивалентное числу, указанного в классе:
+  {% for item in site.data.jekyll.fontSizeList %}
+    <code class="language-plaintext highlighter-rouge">fz{{ item.name }}</code>, 
+  {% endfor %}
+</p>
 
 <p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
 
+<br>
+<br>
+<h3>Классы для изменения междустрочного интервала</h3>
 
-<h4>Классы для изменения междустрочного интервала</h4>
-
-<p>Следующие классы устанавливают значение в <code class="language-plaintext highlighter-rouge">px</code> равное числу в классе, указанного <code class="language-plaintext highlighter-rouge">px</code>: <code class="language-plaintext highlighter-rouge">lh{LH}</code>,</p>
-
-<p>где <code class="language-plaintext highlighter-rouge">LH = 10, 12, 14, 16, 18, 20, 24, 48</code></p>
+<p>Классы устанавливают значение междустрочного интервала равное числу указанного в классе:
+  {% for item in site.data.jekyll.lineheightsizelist %}
+    <code class="language-plaintext highlighter-rouge">lh{{ item.name }}</code>, 
+  {% endfor %}
+</p>
 
 <p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
 
@@ -95,8 +106,9 @@ order: 5
   <div class="fz24 lh24 mr-10">fz24 = 24px, lh24 = 24px</div>
 </div>
 
-
-<h4>Поворот текста</h4>
+<br>
+<br>
+<h3>Поворот текста</h3>
 
 <p><code class="language-plaintext highlighter-rouge">transformText__left</code>, <code class="language-plaintext highlighter-rouge">transformText__righ</code>` - устанавливает поворот текста</p>
 
@@ -111,25 +123,29 @@ order: 5
   </div>
 </div>
 
-
-<h4>Классы изменения цвета текста</h4>
-<p>Доступные для использования классы:</p>
+<br>
+<br>
+<h3>Классы изменения цвета текста</h3>
+<p>
 {% for item in site.data.jekyll.brandnamecolor %}
   <code class="language-plaintext highlighter-rouge">text-{{ item.name }}</code>, 
-{% endfor %}
+{% endfor %}</p>
 
-<h4>Классы для изменения цвета текста при наведении (hover)</h4>
+<br>
+<br>
+<h3>Классы для изменения цвета текста при наведении (hover)</h3>
 
 {% for item in site.data.jekyll.brandnamecolor %}
   <code class="language-plaintext highlighter-rouge">textHover-{{ item.name }}</code>, 
 {% endfor %}
-
+<br>
+<br>
 <p>Для активаци hover-эффекта текста при наведении на элемент-родителя выставить класс на родителе - <code class="language-plaintext highlighter-rouge">textHoverTarget</code></p>
 
 {% highlight html %}
   <div class="text-default">...</div>
   <div class="text-primary textHover-danger">text-primary textHover-danger</div>
-  <div class="text-white textHover-light-grey">text-white textHover-light-grey</div>
+  <div class="text-white textHover-orange">text-white textHover-orange</div>
   <div class="textHoverTarget bg-muted text-center">text-clear bg-mu<span class="text-clear textHover-success">te</span>d text-center textHover-success on parent</div>
 {% endhighlight %}
 
@@ -138,7 +154,7 @@ order: 5
     {% if item.name == 'primary' %}
       <div class="mb-10"><span class="text-{{ item.name }} textHover-danger text-bold">text-{{ item.name }} textHover-danger</span></div>
     {% elsif item.name == 'white' %}
-      <div class="bg-default padding-5 mb-10"><span class="text-{{ item.name }} textHover-light-grey text-bold">text-{{ item.name }} textHover-light-grey</span></div>
+      <div class="bg-default padding-5 mb-10"><span class="text-{{ item.name }} textHover-orange text-bold">text-{{ item.name }} textHover-orange</span></div>
     {% elsif item.name == 'clear' %}
       <div class="textHoverTarget bg-muted text-center text-bold padding-5 mb-10">text-clear bg-mu<span class="text-{{ item.name }} textHover-success">te</span>d text-center textHover-success on parent</div>
     {% else %}
@@ -147,14 +163,16 @@ order: 5
   {% endfor %}
 </div>
 
-
-<h4>Классы для списков</h4>
+<br>
+<br>
+<h3>Классы для списков</h3>
 
 <p><code class="language-plaintext highlighter-rouge">list-unstyled</code> - убирает отступ и стилизацию (type)</p>
 <p><code class="language-plaintext highlighter-rouge">list-inline</code> - приводит список в горизонтальную версию</p>
 
-
-<h4>Особое оформление заголовков и заголовков с доп. информацией</h4>
+<br>
+<br>
+<h3>Особое оформление заголовков и заголовков с доп. информацией</h3>
 
 <p>Используется <code class="language-plaintext highlighter-rouge">headline</code> для контейнера родителя, <code class="language-plaintext highlighter-rouge">headline_title</code> - для оформления заголовка и <code class="language-plaintext highlighter-rouge">headline__optional</code></p>
 

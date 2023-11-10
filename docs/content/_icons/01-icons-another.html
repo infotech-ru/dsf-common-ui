@@ -1,6 +1,6 @@
 ---
-Title: Own Icons
-menutitle: Наши иконки
+Title: Иконки
+menutitle: Иконки
 category: icons
 anchor: iconown
 order: 1
@@ -24,7 +24,8 @@ order: 1
 {% highlight html %}
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.8 14"><path d="M0,12.6A1.4,1.4,0,1,1,1.4,14,1.4,1.4,0,0,1,0,12.6ZM0,1.4A1.4,1.4,0,1,1,1.4,2.8,1.4,1.4,0,0,1,0,1.4ZM1.4,5.6A1.4,1.4,0,1,0,2.8,7,1.4,1.4,0,0,0,1.4,5.6Z" fill="var(--svg-icon-fill, #000)" fill-rule="evenodd"/></svg>
 {% endhighlight %}
-<h4>Использование.</h4>
+
+<h3>Использование.</h3>
 
 {% highlight html %}
   html:
@@ -66,10 +67,14 @@ order: 1
   </span>
 </div>
 
-<p>Для задания размера иконок используются классы модификаторы <code class="language-plaintext highlighter-rouge">svg--icon__{X}</code></p>
-{% highlight html %}
-  где {X} = `8`, `9`, `10`, `11`, `12`, `14`, `16`, `18`, `20`, `21`, `22`, `24`,
-{% endhighlight %}
+<p>Для задания размера иконок используются классы модификаторы.</p>
+<p>Классы формируются по схеме: <code class="language-plaintext highlighter-rouge">svg--icon__{X}</code> - для изменения высоты и ширины.</p>
+<p><code class="language-plaintext highlighter-rouge">svg--icon__h{X}</code> - для изменения только высоты.</p>
+<p><code class="language-plaintext highlighter-rouge">X</code> может принимать следующие значения:
+{% for item in site.data.jekyll.svgsizes %}
+  <span class="fz16">{{ item.name }}</span>, 
+{% endfor %}</p>
+
 <div class="bs-docs-example">
   <span class="svg--icon svg--icon__14 svg-danger">
     <svg width="24" height="24">
@@ -83,6 +88,6 @@ order: 1
   </span>
 </div>
 
-<h4>Загруженные в проект-пакет иконки</h4>
+<h3>Загруженные в проект-пакет иконки</h3>
 
 {% include sprite.symbol.html %}

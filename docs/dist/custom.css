@@ -42,11 +42,18 @@ pre{
   justify-content: space-between;
   padding: 0 0px 0 10px;
 }
+.navbar-brand{
+  text-transform: uppercase;
+}
+.headerMenu__link{
+  font-size: 12px;
+  text-transform: uppercase;
+}
 .bs-docs-header {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-top: -10px;
   background-color: #B6D1E8;
   color: #333;
@@ -58,13 +65,16 @@ pre{
 }
 
 .bs-docs-header h1 {
-  /* color: #fff; */
-  margin-bottom: 0px;
+  color: #FFDA7D;
   font-size: 28px;
   line-height: 28px;
+  margin-bottom: 0px;
+  text-shadow: 1px 2px 0 #00000015;
 }
 .bs-docs-header h3 {
   color: #fff;
+  margin-top: 10px;
+  text-shadow: 1px 2px 0 #00000030;
 }
 
 .bs-docs-header .lead {
@@ -271,7 +281,7 @@ pre{
 
 /* First level of nav */
 .bs-sidenav {
-    margin-top: 0px;
+    margin-top: 20px;
     margin-bottom: 30px;
     padding: 10px 0;
     border-radius: 5px;
@@ -283,6 +293,11 @@ pre{
     display: block;
     padding: 5px 20px;
     z-index: 1;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-transform: uppercase;
 }
 .bs-sidebar .nav > li > a:hover,
 .bs-sidebar .nav > li > a:focus {
@@ -317,14 +332,15 @@ pre{
     /* Widen the fixed sidebar */
     .bs-sidebar {
         position: sticky; /* Undo the static from mobile first approach */
-        top: 80px;
+        top: 40px;
     }
 
 }
 .pageItem{
   padding-bottom: 20px;
-  border-bottom: 1px solid #000;
-  margin-bottom: 40px;
+  padding-top: 30px;
+  border-bottom: 1px dotted #000;
+  margin-bottom: 10px;
 }
 .set-detail-list{
   align-items: center;

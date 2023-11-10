@@ -97,3 +97,223 @@ brandnamecolor {
 brandnamecolor {
   light-green: #DAF0DA;
 }
+
+fontsizelist {
+  10: 0;
+}
+
+fontsizelist {
+  11: 0;
+}
+
+fontsizelist {
+  12: 0;
+}
+
+fontsizelist {
+  13: 0;
+}
+
+fontsizelist {
+  14: 0;
+}
+
+fontsizelist {
+  16: 0;
+}
+
+fontsizelist {
+  18: 0;
+}
+
+fontsizelist {
+  20: 0;
+}
+
+fontsizelist {
+  24: 0;
+}
+
+fontsizelist {
+  48: 0;
+}
+
+lineheightsizelist {
+  10: 0;
+}
+
+lineheightsizelist {
+  12: 0;
+}
+
+lineheightsizelist {
+  14: 0;
+}
+
+lineheightsizelist {
+  16: 0;
+}
+
+lineheightsizelist {
+  18: 0;
+}
+
+lineheightsizelist {
+  20: 0;
+}
+
+lineheightsizelist {
+  24: 0;
+}
+
+lineheightsizelist {
+  48: 0;
+}
+
+marginsizes {
+  0: 0;
+}
+
+marginsizes {
+  5: 0;
+}
+
+marginsizes {
+  8: 0;
+}
+
+marginsizes {
+  10: 0;
+}
+
+marginsizes {
+  15: 0;
+}
+
+marginsizes {
+  20: 0;
+}
+
+marginsizes {
+  25: 0;
+}
+
+marginsizes {
+  30: 0;
+}
+
+marginsizes {
+  40: 0;
+}
+
+marginsizes {
+  50: 0;
+}
+
+paddingsizes {
+  0: 0;
+}
+
+paddingsizes {
+  5: 0;
+}
+
+paddingsizes {
+  8: 0;
+}
+
+paddingsizes {
+  10: 0;
+}
+
+paddingsizes {
+  12: 0;
+}
+
+paddingsizes {
+  15: 0;
+}
+
+paddingsizes {
+  16: 0;
+}
+
+paddingsizes {
+  20: 0;
+}
+
+paddingsizes {
+  25: 0;
+}
+
+paddingsizes {
+  30: 0;
+}
+
+gapsizes {
+  0: 0;
+}
+
+gapsizes {
+  5: 0;
+}
+
+gapsizes {
+  10: 0;
+}
+
+gapsizes {
+  15: 0;
+}
+
+gapsizes {
+  20: 0;
+}
+
+svgsizes {
+  8: 0;
+}
+
+svgsizes {
+  9: 0;
+}
+
+svgsizes {
+  10: 0;
+}
+
+svgsizes {
+  11: 0;
+}
+
+svgsizes {
+  12: 0;
+}
+
+svgsizes {
+  14: 0;
+}
+
+svgsizes {
+  16: 0;
+}
+
+svgsizes {
+  18: 0;
+}
+
+svgsizes {
+  20: 0;
+}
+
+svgsizes {
+  21: 0;
+}
+
+svgsizes {
+  22: 0;
+}
+
+svgsizes {
+  24: 0;
+}

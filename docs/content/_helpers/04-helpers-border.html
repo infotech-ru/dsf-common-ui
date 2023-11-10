@@ -6,7 +6,7 @@ anchor: helpers-border
 order: 4
 ---
 
-<h4>Расположение границы</h4>
+<h3>Расположение и вид границ</h3>
 
 <p><code class="language-plaintext highlighter-rouge">border</code> - добавляет границу-черту в 1px вокруг контейнера(блока).</p>
 
@@ -17,6 +17,14 @@ order: 4
 <p><code class="language-plaintext highlighter-rouge">border__thick</code> - добавляет границу-черту в 2px вокруг контейнера(блока).</p>
 
 <p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
+<p>Классы <code class="language-plaintext highlighter-rouge">border__none</code>, <code class="language-plaintext highlighter-rouge">border-top__none</code>, <code class="language-plaintext highlighter-rouge">border-bottom__none</code>, <code class="language-plaintext highlighter-rouge">border-left__none</code>, <code class="language-plaintext highlighter-rouge">border-right__none</code> - классы отключают границу в с соответствующей стороны контейнера или со всех сторон.</p>
+
+<p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
+<p><code class="language-plaintext highlighter-rouge">border__dotted</code> - модифициурет границу-линию в границу-точку.</p>
+<p><code class="language-plaintext highlighter-rouge">border__dashed</code> - модифициурет границу-линию в границу-прерывистую линию.</p>
+<p>Классы <code class="language-plaintext highlighter-rouge">border-top__dotted</code>, <code class="language-plaintext highlighter-rouge">border-bottom__dotted</code>, <code class="language-plaintext highlighter-rouge">border-left__dotted</code>, <code class="language-plaintext highlighter-rouge">border-right__dotted</code> модифициурет границу-линию в границу-точку.</p>
+
+<p>Для закругления границ на 100% класс <code class="language-plaintext highlighter-rouge">borderadius-100p</code></p>
 
 {% highlight html %}
   <div class="border">border</div>
@@ -24,38 +32,10 @@ order: 4
   <div class="border-right border-left__mobile">border-right border-left__mobile</div>
   <div class="border-bottom">border-bottom</div>
   <div class="border-left border-left__thick">border-left border-left__thick</div>
-{% endhighlight html %}
-<div class="bs-docs-example">
-  <div class="mb-10 border">border</div>
-  <div class="mb-10 border-top">border-top</div>
-  <div class="mb-10 border-right border-left__mobile">border-right border-left__mobile</div>
-  <div class="mb-10 border-bottom">border-bottom</div>
-  <div class="mb-10 border-left border-left__thick">border-left border-left__thick</div>
-</div>
-
-<p>Классы <code class="language-plaintext highlighter-rouge">border__none</code>, <code class="language-plaintext highlighter-rouge">border-top__none</code>, <code class="language-plaintext highlighter-rouge">border-bottom__none</code>, <code class="language-plaintext highlighter-rouge">border-left__none</code>, <code class="language-plaintext highlighter-rouge">border-right__none</code> - классы отключают границу в с соответствующей стороны контейнера или со всех сторон.</p>
-
-<p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
-
-{% highlight html %}
   <div class="border border-top__none">border border-top__none</div>
   <div class="border border-right__none">border border-right__none</div>
   <div class="border border-bottom__none border-top__none__mobile">border border-bottom__none border-top__none__mobile</div>
   <div class="border border-left__none">border border-left__none</div>
-{% endhighlight %}
-<div class="bs-docs-example">
-  <div class="mb-10 border border-top__none">border border-top__none</div>
-  <div class="mb-10 border border-right__none">border border-right__none</div>
-  <div class="mb-10 border border-bottom__none border-top__none__mobile">border border-bottom__none border-top__none__mobile</div>
-  <div class="mb-10 border border-left__none">border border-left__none</div>
-</div>
-
-<p><code class="language-plaintext highlighter-rouge">border__dotted</code> - модифициурет границу-линию в границу-точку.</p>
-<p><code class="language-plaintext highlighter-rouge">border__dashed</code> - модифициурет границу-линию в границу-прерывистую линию.</p>
-
-<p>Классы <code class="language-plaintext highlighter-rouge">border-top__dotted</code>, <code class="language-plaintext highlighter-rouge">border-bottom__dotted</code>, <code class="language-plaintext highlighter-rouge">border-left__dotted</code>, <code class="language-plaintext highlighter-rouge">border-right__dotted</code> модифициурет границу-линию в границу-точку.</p>
-
-{% highlight html %}
   <div class="border border__dotted">border border__dotted</div>
   <div class="border-top border-top__dotted">border-top border-top__dotted</div>
   <div class="border-right border-right__dotted border-left border-left__dashed">border-right border-right__dotted border-left border-left__dashed</div>
@@ -63,15 +43,24 @@ order: 4
   <div class="border-left border-left__dotted">border-left border-left__dotted</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
-    <div class="mb-10 border border__dotted">border border__dotted</div>
-    <div class="mb-10 border-top border-top__dotted">border-top border-top__dotted</div>
-    <div class="mb-10 border-right border-right__dotted border-left border-left__dashed">border-right border-right__dotted border-left border-left__dashed</div>
-    <div class="mb-10 border-bottom border-bottom__dotted">border-bottom border-bottom__dotted</div>
-    <div class="mb-10 border-left border-left__dotted">border-left border-left__dotted</div>
+  <div class="mb-10 border">border</div>
+  <div class="mb-10 border-top">border-top</div>
+  <div class="mb-10 border-right border-left__mobile">border-right border-left__mobile</div>
+  <div class="mb-10 border-bottom">border-bottom</div>
+  <div class="mb-10 border-left border-left__thick">border-left border-left__thick</div>
+  <div class="mb-10 border border-top__none">border border-top__none</div>
+  <div class="mb-10 border border-right__none">border border-right__none</div>
+  <div class="mb-10 border border-bottom__none border-top__none__mobile">border border-bottom__none border-top__none__mobile</div>
+  <div class="mb-10 border border-left__none">border border-left__none</div>
+  <div class="mb-10 border border__dotted">border border__dotted</div>
+  <div class="mb-10 border-top border-top__dotted">border-top border-top__dotted</div>
+  <div class="mb-10 border-right border-right__dotted border-left border-left__dashed">border-right border-right__dotted border-left border-left__dashed</div>
+  <div class="mb-10 border-bottom border-bottom__dotted">border-bottom border-bottom__dotted</div>
+  <div class="mb-10 border-left border-left__dotted">border-left border-left__dotted</div>
 </div>
 
 
-<h4>Цвет границы</h4>
+<h3>Цвет границы</h3>
 <p>Доступные для использования классы для установления цвета границ (border-color):</p>
 {% for item in site.data.jekyll.brandnamecolor %}
   {% if item.name == 'clear' %}

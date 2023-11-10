@@ -1,0 +1,52 @@
+---
+Title: Отступы
+menutitle: Отступы
+category: helpers
+anchor: helpers-margin
+order: 6
+---
+
+<h3>Внешние отступы</h3>
+
+<p>Классы формируются по схеме: отступ сверху <code class="language-plaintext highlighter-rouge">mt-{X}</code>, справа <code class="language-plaintext highlighter-rouge">mr-{X}</code>, снизу <code class="language-plaintext highlighter-rouge">mb-{X}</code>, слева <code class="language-plaintext highlighter-rouge">ml-{X}</code>. Отступ со всех сторон <code class="language-plaintext highlighter-rouge">margin-{X}</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">X</code> может принимать следующие значения:
+{% for item in site.data.jekyll.marginsizes %}
+  <span class="fz16">{{ item.name }}</span>, 
+{% endfor %}
+<span class="fz16">auto</span></p>
+
+<p>Для мобильных устройств к правилу дописывается постфикс <code class="language-plaintext highlighter-rouge">__mobile</code>.</p>
+
+<p>Пример: <code class="language-plaintext highlighter-rouge">ml-10</code>, <code class="language-plaintext highlighter-rouge">margin-20</code>, <code class="language-plaintext highlighter-rouge">ml-0__mobile</code>, <code class="language-plaintext highlighter-rouge">mr-20</code>, <code class="language-plaintext highlighter-rouge">mb-10</code></p>
+
+<br>
+<br>
+
+<h3>Внутренние отступы </h3>
+
+<p>Классы формируются по схеме: отступ сверху <code class="language-plaintext highlighter-rouge">pt-{X}</code>, справа <code class="language-plaintext highlighter-rouge">pr-{X}</code>, снизу <code class="language-plaintext highlighter-rouge">pb-{X}</code>, слева <code class="language-plaintext highlighter-rouge">pl-{X}</code>. Отступ со всех сторон <code class="language-plaintext highlighter-rouge">padding-{X}</code></p>
+
+<p>Для мобильных устройств к правилу дописывается постфикс <code class="language-plaintext highlighter-rouge">__mobile</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">X</code> может принимать следующие значения:
+{% for item in site.data.jekyll.paddingsizes %}
+  <span class="fz16">{{ item.name }}</span>, 
+{% endfor %}</p>
+
+<p>Пример: <code class="language-plaintext highlighter-rouge">pl-10</code>, <code class="language-plaintext highlighter-rouge">padding-10</code>, <code class="language-plaintext highlighter-rouge">pl-0__mobile</code>, <code class="language-plaintext highlighter-rouge">pr-20</code>, <code class="language-plaintext highlighter-rouge">pb-10</code></p>
+
+<br>
+<br>
+<h3>GAP</h3>
+
+<p>Классы формируются по схеме: <code class="language-plaintext highlighter-rouge">gap-{X}</code></p>
+
+<p>Для мобильных устройств к правилу дописывается постфикс <code class="language-plaintext highlighter-rouge">__mobile</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">X</code> может принимать следующие значения:
+{% for item in site.data.jekyll.gapsizes %}
+  <span class="fz16">{{ item.name }}</span>, 
+{% endfor %}</p>
+
+<p>Пример: <code class="language-plaintext highlighter-rouge">gap-10</code>, <code class="language-plaintext highlighter-rouge">gap-5__mobile</code></p>

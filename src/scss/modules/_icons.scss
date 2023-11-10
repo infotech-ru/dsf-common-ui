@@ -16,8 +16,19 @@
         width: auto;
     }
 }
-@each $svgMod in 8, 9, 10, 11, 12, 14, 16, 18, 20, 21, 22, 24{
+@each $svgMod in $svgSizes{
   .svg--icon__#{$svgMod}{
+    &,
+    &.svg--icon{ 
+      height: #{$svgMod}px;
+      width: #{$svgMod}px;
+      svg{
+        height: #{$svgMod}px;
+        width: #{$svgMod}px;
+      }
+    }
+  }
+  .svg--icon__h#{$svgMod}{
     &,
     &.svg--icon{ 
       height: #{$svgMod}px;

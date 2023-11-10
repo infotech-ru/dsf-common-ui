@@ -2,8 +2,34 @@
 
 @import "_func_maps";
 @import "_var-colors";
+@import "_var-fonts";
+@import "_var-sizes";
 
 
 @each $name, $value in $brand-namecolors {
   brandnamecolor{ #{$name}: $value }
+}
+
+@each $name in $fontSizeList {
+  fontsizelist{ #{$name}: 0 }
+}
+
+@each $name in $lineHeightSizeList {
+  lineheightsizelist{ #{$name}: 0 }
+}
+
+@each $name in $marginSizes {
+  marginsizes{ #{$name}: 0 }
+}
+
+@each $name in $paddingSizes {
+  paddingsizes{ #{$name}: 0 }
+}
+
+@each $name in $gapSizes {
+  gapsizes{ #{$name}: 0 }
+}
+
+@each $name in $svgSizes {
+  svgsizes{ #{$name}: 0 }
 }

@@ -50,3 +50,125 @@ brandnamecolor:
 - name: light-green
   value: #DAF0DA
 
+fontsizelist:
+- name: 10
+  value: 0
+- name: 11
+  value: 0
+- name: 12
+  value: 0
+- name: 13
+  value: 0
+- name: 14
+  value: 0
+- name: 16
+  value: 0
+- name: 18
+  value: 0
+- name: 20
+  value: 0
+- name: 24
+  value: 0
+- name: 48
+  value: 0
+
+lineheightsizelist:
+- name: 10
+  value: 0
+- name: 12
+  value: 0
+- name: 14
+  value: 0
+- name: 16
+  value: 0
+- name: 18
+  value: 0
+- name: 20
+  value: 0
+- name: 24
+  value: 0
+- name: 48
+  value: 0
+
+marginsizes:
+- name: 0
+  value: 0
+- name: 5
+  value: 0
+- name: 8
+  value: 0
+- name: 10
+  value: 0
+- name: 15
+  value: 0
+- name: 20
+  value: 0
+- name: 25
+  value: 0
+- name: 30
+  value: 0
+- name: 40
+  value: 0
+- name: 50
+  value: 0
+
+paddingsizes:
+- name: 0
+  value: 0
+- name: 5
+  value: 0
+- name: 8
+  value: 0
+- name: 10
+  value: 0
+- name: 12
+  value: 0
+- name: 15
+  value: 0
+- name: 16
+  value: 0
+- name: 20
+  value: 0
+- name: 25
+  value: 0
+- name: 30
+  value: 0
+
+gapsizes:
+- name: 0
+  value: 0
+- name: 5
+  value: 0
+- name: 10
+  value: 0
+- name: 15
+  value: 0
+- name: 20
+  value: 0
+
+svgsizes:
+- name: 8
+  value: 0
+- name: 9
+  value: 0
+- name: 10
+  value: 0
+- name: 11
+  value: 0
+- name: 12
+  value: 0
+- name: 14
+  value: 0
+- name: 16
+  value: 0
+- name: 18
+  value: 0
+- name: 20
+  value: 0
+- name: 21
+  value: 0
+- name: 22
+  value: 0
+- name: 24
+  value: 0
+

@@ -15,7 +15,7 @@
         $name: nth($fontNames, $i);
         @font-face {
           font-family: $fontFamily;
-          font-style: $fontStyleName;
+          font-style: unquote($fontStyleName);
           font-weight: $weight;
           src: url('#{$name}.eot');
           src: local('#{$fontFamily}'), local('#{$fontFamily}-#{$weight}'),

@@ -164,36 +164,36 @@
 /*                                                                            */
 @font-face {
   font-family: "Roboto";
-  font-style: "normal";
+  font-style: normal;
   font-weight: 400;
   src: url("roboto-v18-cyrillic_latin-regular.eot");
-  src: local("Roboto"), local("Roboto-400"), url("roboto-v18-cyrillic_latin-regular.woff2") format("woff2"), url("roboto-v18-cyrillic_latin-regular.woff") format("woff"), url("roboto-v18-cyrillic_latin-regular.ttf") format("truetype"), url("roboto-v18-cyrillic_latin-regular.svg#Roboto") format("svg");
+  src: local("Roboto"), local("Roboto-400"), url("/dist/roboto-v18-cyrillic_latin-regular.woff2") format("woff2"), url("/dist/roboto-v18-cyrillic_latin-regular.woff") format("woff"), url("/dist/roboto-v18-cyrillic_latin-regular.ttf") format("truetype"), url("/dist/roboto-v18-cyrillic_latin-regular.svg#Roboto") format("svg");
 }
 @font-face {
   font-family: "Roboto";
-  font-style: "normal";
+  font-style: normal;
   font-weight: 700;
   src: url("roboto-v18-cyrillic_latin-700.eot");
-  src: local("Roboto"), local("Roboto-700"), url("roboto-v18-cyrillic_latin-700.woff2") format("woff2"), url("roboto-v18-cyrillic_latin-700.woff") format("woff"), url("roboto-v18-cyrillic_latin-700.ttf") format("truetype"), url("roboto-v18-cyrillic_latin-700.svg#Roboto") format("svg");
+  src: local("Roboto"), local("Roboto-700"), url("/dist/roboto-v18-cyrillic_latin-700.woff2") format("woff2"), url("/dist/roboto-v18-cyrillic_latin-700.woff") format("woff"), url("/dist/roboto-v18-cyrillic_latin-700.ttf") format("truetype"), url("/dist/roboto-v18-cyrillic_latin-700.svg#Roboto") format("svg");
 }
 @font-face {
   font-family: "Roboto";
-  font-style: "italic";
+  font-style: italic;
   font-weight: 400;
   src: url("roboto-v18-cyrillic_latin-italic.eot");
-  src: local("Roboto"), local("Roboto-400"), url("roboto-v18-cyrillic_latin-italic.woff2") format("woff2"), url("roboto-v18-cyrillic_latin-italic.woff") format("woff"), url("roboto-v18-cyrillic_latin-italic.ttf") format("truetype"), url("roboto-v18-cyrillic_latin-italic.svg#Roboto") format("svg");
+  src: local("Roboto"), local("Roboto-400"), url("/dist/roboto-v18-cyrillic_latin-italic.woff2") format("woff2"), url("/dist/roboto-v18-cyrillic_latin-italic.woff") format("woff"), url("/dist/roboto-v18-cyrillic_latin-italic.ttf") format("truetype"), url("/dist/roboto-v18-cyrillic_latin-italic.svg#Roboto") format("svg");
 }
 @font-face {
   font-family: "Roboto";
-  font-style: "italic";
+  font-style: italic;
   font-weight: 700;
   src: url("roboto-v18-cyrillic_latin-700italic.eot");
-  src: local("Roboto"), local("Roboto-700"), url("roboto-v18-cyrillic_latin-700italic.woff2") format("woff2"), url("roboto-v18-cyrillic_latin-700italic.woff") format("woff"), url("roboto-v18-cyrillic_latin-700italic.ttf") format("truetype"), url("roboto-v18-cyrillic_latin-700italic.svg#Roboto") format("svg");
+  src: local("Roboto"), local("Roboto-700"), url("/dist/roboto-v18-cyrillic_latin-700italic.woff2") format("woff2"), url("/dist/roboto-v18-cyrillic_latin-700italic.woff") format("woff"), url("/dist/roboto-v18-cyrillic_latin-700italic.ttf") format("truetype"), url("/dist/roboto-v18-cyrillic_latin-700italic.svg#Roboto") format("svg");
 }
 @font-face {
   font-family: "Glyphicons Regular";
-  src: url("glyphicons-regular.eot");
-  src: url("glyphicons-regular.eot?#iefix") format("embedded-opentype"), url("glyphicons-regular.woff2") format("woff2"), url("glyphicons-regular.woff") format("woff"), url("glyphicons-regular.ttf") format("truetype"), url("glyphicons-regular.svg#glyphiconsregular") format("svg");
+  src: url("/dist/glyphicons-regular.eot");
+  src: url("/dist/glyphicons-regular.eot?#iefix") format("embedded-opentype"), url("/dist/glyphicons-regular.woff2") format("woff2"), url("/dist/glyphicons-regular.woff") format("woff"), url("/dist/glyphicons-regular.ttf") format("truetype"), url("/dist/glyphicons-regular.svg#glyphiconsregular") format("svg");
 }
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
@@ -6367,85 +6367,193 @@ h6, .h6 {
 
 .svg--icon__8, .svg--icon__8.svg--icon {
   height: 8px;
+  width: 8px;
 }
 .svg--icon__8 svg, .svg--icon__8.svg--icon svg {
+  height: 8px;
+  width: 8px;
+}
+
+.svg--icon__h8, .svg--icon__h8.svg--icon {
+  height: 8px;
+}
+.svg--icon__h8 svg, .svg--icon__h8.svg--icon svg {
   height: 8px;
 }
 
 .svg--icon__9, .svg--icon__9.svg--icon {
   height: 9px;
+  width: 9px;
 }
 .svg--icon__9 svg, .svg--icon__9.svg--icon svg {
+  height: 9px;
+  width: 9px;
+}
+
+.svg--icon__h9, .svg--icon__h9.svg--icon {
+  height: 9px;
+}
+.svg--icon__h9 svg, .svg--icon__h9.svg--icon svg {
   height: 9px;
 }
 
 .svg--icon__10, .svg--icon__10.svg--icon {
   height: 10px;
+  width: 10px;
 }
 .svg--icon__10 svg, .svg--icon__10.svg--icon svg {
+  height: 10px;
+  width: 10px;
+}
+
+.svg--icon__h10, .svg--icon__h10.svg--icon {
+  height: 10px;
+}
+.svg--icon__h10 svg, .svg--icon__h10.svg--icon svg {
   height: 10px;
 }
 
 .svg--icon__11, .svg--icon__11.svg--icon {
   height: 11px;
+  width: 11px;
 }
 .svg--icon__11 svg, .svg--icon__11.svg--icon svg {
+  height: 11px;
+  width: 11px;
+}
+
+.svg--icon__h11, .svg--icon__h11.svg--icon {
+  height: 11px;
+}
+.svg--icon__h11 svg, .svg--icon__h11.svg--icon svg {
   height: 11px;
 }
 
 .svg--icon__12, .svg--icon__12.svg--icon {
   height: 12px;
+  width: 12px;
 }
 .svg--icon__12 svg, .svg--icon__12.svg--icon svg {
+  height: 12px;
+  width: 12px;
+}
+
+.svg--icon__h12, .svg--icon__h12.svg--icon {
+  height: 12px;
+}
+.svg--icon__h12 svg, .svg--icon__h12.svg--icon svg {
   height: 12px;
 }
 
 .svg--icon__14, .svg--icon__14.svg--icon {
   height: 14px;
+  width: 14px;
 }
 .svg--icon__14 svg, .svg--icon__14.svg--icon svg {
+  height: 14px;
+  width: 14px;
+}
+
+.svg--icon__h14, .svg--icon__h14.svg--icon {
+  height: 14px;
+}
+.svg--icon__h14 svg, .svg--icon__h14.svg--icon svg {
   height: 14px;
 }
 
 .svg--icon__16, .svg--icon__16.svg--icon {
   height: 16px;
+  width: 16px;
 }
 .svg--icon__16 svg, .svg--icon__16.svg--icon svg {
+  height: 16px;
+  width: 16px;
+}
+
+.svg--icon__h16, .svg--icon__h16.svg--icon {
+  height: 16px;
+}
+.svg--icon__h16 svg, .svg--icon__h16.svg--icon svg {
   height: 16px;
 }
 
 .svg--icon__18, .svg--icon__18.svg--icon {
   height: 18px;
+  width: 18px;
 }
 .svg--icon__18 svg, .svg--icon__18.svg--icon svg {
+  height: 18px;
+  width: 18px;
+}
+
+.svg--icon__h18, .svg--icon__h18.svg--icon {
+  height: 18px;
+}
+.svg--icon__h18 svg, .svg--icon__h18.svg--icon svg {
   height: 18px;
 }
 
 .svg--icon__20, .svg--icon__20.svg--icon {
   height: 20px;
+  width: 20px;
 }
 .svg--icon__20 svg, .svg--icon__20.svg--icon svg {
+  height: 20px;
+  width: 20px;
+}
+
+.svg--icon__h20, .svg--icon__h20.svg--icon {
+  height: 20px;
+}
+.svg--icon__h20 svg, .svg--icon__h20.svg--icon svg {
   height: 20px;
 }
 
 .svg--icon__21, .svg--icon__21.svg--icon {
   height: 21px;
+  width: 21px;
 }
 .svg--icon__21 svg, .svg--icon__21.svg--icon svg {
+  height: 21px;
+  width: 21px;
+}
+
+.svg--icon__h21, .svg--icon__h21.svg--icon {
+  height: 21px;
+}
+.svg--icon__h21 svg, .svg--icon__h21.svg--icon svg {
   height: 21px;
 }
 
 .svg--icon__22, .svg--icon__22.svg--icon {
   height: 22px;
+  width: 22px;
 }
 .svg--icon__22 svg, .svg--icon__22.svg--icon svg {
+  height: 22px;
+  width: 22px;
+}
+
+.svg--icon__h22, .svg--icon__h22.svg--icon {
+  height: 22px;
+}
+.svg--icon__h22 svg, .svg--icon__h22.svg--icon svg {
   height: 22px;
 }
 
 .svg--icon__24, .svg--icon__24.svg--icon {
   height: 24px;
+  width: 24px;
 }
 .svg--icon__24 svg, .svg--icon__24.svg--icon svg {
+  height: 24px;
+  width: 24px;
+}
+
+.svg--icon__h24, .svg--icon__h24.svg--icon {
+  height: 24px;
+}
+.svg--icon__h24 svg, .svg--icon__h24.svg--icon svg {
   height: 24px;
 }
 
@@ -13626,6 +13734,10 @@ tbody.collapse.in {
 .mobile-view .border__thick__mobile {
   --width_border__thick: 2px;
   border-width: 2px;
+}
+
+.borderadius-100p {
+  border-radius: 100%;
 }
 
 .svg-default svg,
