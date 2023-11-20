@@ -192,6 +192,7 @@
     }
     &_outer{
       position: relative;
+      min-height: #{_brand-sizes(carousel-thumbs_size) + 4}px;
     }
     &-item {
       border: none;
