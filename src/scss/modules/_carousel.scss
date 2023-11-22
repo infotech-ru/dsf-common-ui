@@ -276,9 +276,14 @@
       }
       .checkbox-item{
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 4px;
+        top: 4px;
         z-index: _zindex(carouselIndicatorsButton);
+        label.checkbox{
+          line-height: rem(_brand-sizes(checkboxItem_size));
+          padding-left: rem(_brand-sizes(checkboxItem_size));
+          width: rem(_brand-sizes(checkboxItem_size));
+        }
       }
       &:first-child{ 
         .carousel-indicators_outer &{
