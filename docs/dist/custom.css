@@ -443,8 +443,8 @@ pre{
   position: absolute;
   top: auto;
 }
-[title*='bicolors']:after{
-  content: 'NEW';
+[title*='glyphicons']:after{
+  content: 'OLD';
   color: red;
   display: block;
   right: 2px;
@@ -452,8 +452,8 @@ pre{
   position: absolute;
   top: 2px;
 }
-[title*='ownicons']:after{
-  content: 'USE';
+[title*='eventIcon']:after{
+  content: 'OLD';
   color: red;
   display: block;
   right: 2px;
