@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 3C2 2.44772 2.44772 2 3 2H21C21.5523 2 22 2.44772 22 3V21C22 21.5523 21.5523 22 21 22H2V3Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M2 7H22" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M13.25 10.75L19.5 10.75" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M13.25 14.5L19.5 14.5" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M4.5 18.25H19.5" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<rect x="5" y="10" width="5.25" height="5.25" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+</svg>

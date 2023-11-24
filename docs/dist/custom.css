@@ -324,6 +324,7 @@ pre{
 
 /* All levels of nav */
 .bs-sidebar .nav > li > a {
+    color: #333;
     display: block;
     padding: 5px 20px;
     z-index: 1;
@@ -393,6 +394,14 @@ pre{
   text-align: center;
   height: 100px;
 }
+.set-ico-list-item:hover {
+  background-color: #fff;
+  border-color: #BABABA;
+  border-style: solid;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
 [title*='glyphicons']{
   --svg-icon-fill: #1E6393;
   --svg-icon-stroke: #1E6393;
@@ -435,10 +444,10 @@ pre{
 }
 .set-ico-list-item:hover:after{
   bottom: 2px;
-  content: 'Подсветка viewbox';
+  content: '* подсветка viewbox';
   color: rgb(255, 165, 0);
   display: block;
-  font-size: 10px;
+  font-size: 9px;
   left: 2px;
   position: absolute;
   top: auto;
