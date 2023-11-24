@@ -88,6 +88,26 @@
 	height: 24px;
 }
 
+.svg-bicolors-arrow_drag-dims {
+	width: 17px;
+	height: 17px;
+}
+
+.svg-bicolors-arrow_drag__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-bicolors-arrow_expand-dims {
+	width: 12.34px;
+	height: 12.34px;
+}
+
+.svg-bicolors-arrow_expand__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
 .svg-bicolors-arrow_left-dims {
 	width: 9px;
 	height: 17px;
@@ -488,16 +508,6 @@
 	height: 24px;
 }
 
-.svg-bicolors-checkbox-dims {
-	width: 16px;
-	height: 16px;
-}
-
-.svg-bicolors-checkbox__24vb-dims {
-	width: 24px;
-	height: 24px;
-}
-
 .svg-bicolors-checklist-dims {
 	width: 12px;
 	height: 18px;
@@ -538,12 +548,22 @@
 	height: 24px;
 }
 
-.svg-bicolors-circle_checkbox-dims {
+.svg-bicolors-circle_banned-dims {
+	width: 21px;
+	height: 21px;
+}
+
+.svg-bicolors-circle_banned__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-bicolors-circle_check-dims {
 	width: 18px;
 	height: 18px;
 }
 
-.svg-bicolors-circle_checkbox__24vb-dims {
+.svg-bicolors-circle_check__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
@@ -613,27 +633,27 @@
 	height: 21px;
 }
 
-.svg-bicolors-coffee-call-dims {
-	width: 20.32px;
-	height: 21px;
-}
-
-.svg-bicolors-coffee-call__24vb-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-bicolors-coffee-internet-dims {
-	width: 20.32px;
-	height: 21px;
-}
-
-.svg-bicolors-coffee-internet__24vb-dims {
-	width: 24px;
-	height: 24px;
-}
-
 .svg-bicolors-coffee__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-bicolors-coffee_call-dims {
+	width: 20.32px;
+	height: 21px;
+}
+
+.svg-bicolors-coffee_call__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-bicolors-coffee_internet-dims {
+	width: 20.32px;
+	height: 21px;
+}
+
+.svg-bicolors-coffee_internet__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
@@ -938,16 +958,6 @@
 	height: 24px;
 }
 
-.svg-bicolors-drag-dims {
-	width: 17px;
-	height: 17px;
-}
-
-.svg-bicolors-drag__24vb-dims {
-	width: 24px;
-	height: 24px;
-}
-
 .svg-bicolors-edit-dims {
 	width: 16px;
 	height: 16px;
@@ -1018,16 +1028,6 @@
 	height: 24px;
 }
 
-.svg-bicolors-expand-dims {
-	width: 12.34px;
-	height: 12.34px;
-}
-
-.svg-bicolors-expand__24vb-dims {
-	width: 24px;
-	height: 24px;
-}
-
 .svg-bicolors-export-dims {
 	width: 17px;
 	height: 15.5px;
@@ -1093,17 +1093,17 @@
 	height: 14px;
 }
 
-.svg-bicolors-folder-arrow-in-dims {
-	width: 19px;
-	height: 17.5px;
-}
-
-.svg-bicolors-folder-arrow-in__24vb-dims {
+.svg-bicolors-folder__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
 
-.svg-bicolors-folder__24vb-dims {
+.svg-bicolors-folder_arrow-in-dims {
+	width: 19px;
+	height: 17.5px;
+}
+
+.svg-bicolors-folder_arrow-in__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
@@ -1598,6 +1598,26 @@
 	height: 24px;
 }
 
+.svg-bicolors-sms-dims {
+	width: 21px;
+	height: 13.5px;
+}
+
+.svg-bicolors-sms__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-bicolors-sms_check-dims {
+	width: 21px;
+	height: 20.35px;
+}
+
+.svg-bicolors-sms_check__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
 .svg-bicolors-social-dims {
 	width: 19px;
 	height: 20px;
@@ -1658,6 +1678,26 @@
 	height: 24px;
 }
 
+.svg-bicolors-square_empty-dims {
+	width: 15px;
+	height: 15px;
+}
+
+.svg-bicolors-square_empty__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-bicolors-square_empty_check-dims {
+	width: 16px;
+	height: 16px;
+}
+
+.svg-bicolors-square_empty_check__24vb-dims {
+	width: 24px;
+	height: 24px;
+}
+
 .svg-bicolors-star-dims {
 	width: 17.19px;
 	height: 16.35px;
@@ -1684,26 +1724,6 @@
 }
 
 .svg-bicolors-start__24vb-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-bicolors-stop2-dims {
-	width: 15px;
-	height: 15px;
-}
-
-.svg-bicolors-stop2__24vb-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-bicolors-stop3-dims {
-	width: 21px;
-	height: 21px;
-}
-
-.svg-bicolors-stop3__24vb-dims {
 	width: 24px;
 	height: 24px;
 }
@@ -1754,16 +1774,6 @@
 }
 
 .svg-bicolors-telegram_circle__24vb-dims {
-	width: 24px;
-	height: 24px;
-}
-
-.svg-bicolors-test_sms-dims {
-	width: 21px;
-	height: 20.35px;
-}
-
-.svg-bicolors-test_sms__24vb-dims {
 	width: 24px;
 	height: 24px;
 }

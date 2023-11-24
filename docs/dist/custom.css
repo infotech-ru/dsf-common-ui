@@ -189,7 +189,7 @@ pre{
   }
 }
 
-.highlight pre { background-color: #272822; }
+.highlight pre { background-color: #333; }
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */
@@ -386,7 +386,7 @@ pre{
   align-items: center;
   display: flex;
   justify-content: center;
-  border: .5px solid #ddd;
+  border: .5px dashed #ddd;
   flex-basis: 10%;
   padding: 40px 20px;
   position: relative;
@@ -475,7 +475,7 @@ pre{
   display: block;
   left: 2px;
   font-size: 10px;
-  color: #000;
+  color: #ccc;
   position: absolute;
   top: 2px;
 }
