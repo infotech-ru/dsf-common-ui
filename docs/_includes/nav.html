@@ -1,6 +1,8 @@
+{% assign filetype = ".html" %}
 <ul class="headerMenu nav">
 {% for item in site.data.navigation %}
-  <li class="headerMenu__item  {% if page.url == item.link %} active{% endif %}">
+  {% assign itempagelink = item.link | append: filetype %}
+  <li class="headerMenu__item  {% if page.path == itempagelink %} active{% endif %}">
     <a class="headerMenu__link" href="{% if site.baseurl  %}{{ site.baseurl }}/{% endif %}{% if page.permalink %}{{ page.permalink }}{% else%}{{ item.link }}{% endif %}">
       {{ item.name }}
     </a>

@@ -1,0 +1,45 @@
+---
+title: Главная
+layout: default
+---
+
+<h1>Унификация стилей</h1>
+
+<h2>Правила именования классов:</h2>
+
+<p>- Дефис в именах классов используем для префикса. <code class="language-plaintext highlighter-rouge">crm-</code> или в правилах переопределения стилей bootstrap <code class="language-plaintext highlighter-rouge">btn-default</code>.</p>
+
+<p>- Стиль написания имён классов: camelCase  <code class="language-plaintext highlighter-rouge">className</code>.</p>
+
+<p>- Полный состав имён классов: <code class="language-plaintext highlighter-rouge">blockName_elemName__modName__modVal</code>.</p>
+
+<p>- <code class="language-plaintext highlighter-rouge">blockName</code>: Имя функционально независимого компонента, который может быть повторно использован.</p>
+
+<p>- <code class="language-plaintext highlighter-rouge">elemName</code>: Имя составной части блока, которая НЕ может использоваться в отрыве от него. Отделяется одним нижним подчеркиванием <code class="language-plaintext highlighter-rouge">_</code>.</p>
+
+<p>- <code class="language-plaintext highlighter-rouge">modName</code>: Имя определяющие внешний вид, состояние или поведение блока либо элемента. Отделяется двумя нижними подчеркиваниями <code class="language-plaintext highlighter-rouge">__</code>.</p>
+
+<p>- <code class="language-plaintext highlighter-rouge">modVal</code>:  Имя определяющее значение, например цвет. Отделяется двумя нижними подчеркиваниями <code class="language-plaintext highlighter-rouge">__</code>.</p>
+
+<h2>Правила написания стилей</h2>
+
+<p>- Чем меньше уровней вложенностей - тем лучше. В идеале без вложенностей.</p>
+
+<p>- Выносим в модификаторы CSS-свойства блока, изменение которых кажется вероятным. <code class="language-plaintext highlighter-rouge">.blockName_elemName__modName {}</code>, <code class="language-plaintext highlighter-rouge">.blockName__modName {}</code>.</p>
+
+<p>- Внешняя геометрия и позиционирование может задаваться через родительский блок.</p>
+
+
+<h2>Не использовать в стилях, так как усложняет переопределение:</h2>
+
+<p>- Не использовать id-селекторы  <code class="language-plaintext highlighter-rouge">#idName</code></p>
+
+<p>- Не использовать в именах классов селектор тегов. Например, <code class="language-plaintext highlighter-rouge">className_div</code>, <code class="language-plaintext highlighter-rouge">className_span</code></p>
+
+<p>- Не использовать совмещение тегов и классов. Например, <code class="language-plaintext highlighter-rouge">div.className</code></p>
+
+<p>- Не использовать одиночные селекторы тегов вместо классов и вместе с классами, например <code class="language-plaintext highlighter-rouge">span</code>, <code class="language-plaintext highlighter-rouge">p</code>, <code class="language-plaintext highlighter-rouge">span .className</code></p>
+
+<p>- Исключить использование <code class="language-plaintext highlighter-rouge">!important</code></p>
+
+

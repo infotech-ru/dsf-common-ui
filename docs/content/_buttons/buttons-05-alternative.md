@@ -20,7 +20,7 @@ _Использование:_ `btn-link`
   <div class="">
   <button class="btn-link">btn-link</button>
 
-  <button class="btn-default ml-10">Оьычная кнопка для сравнения</button>
+  <button class="btn-default ml-10">Обычная кнопка для сравнения</button>
   </div>
 </div>
 
@@ -60,7 +60,7 @@ _Использование:_ `btn-link`
 Размер обычной кнопки.
 
 {% highlight html %}
-  <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-triangle-alert"></use></svg></span></button>
+  <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
 
   <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-filter"></use></svg></span> Фильтр</button>
 
@@ -70,7 +70,7 @@ _Использование:_ `btn-link`
 {% endhighlight %}
 
 <div class="bs-docs-example">
-  <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-triangle-alert"></use></svg></span></button>
+  <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
   <button class="btn-link ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-filter"></use></svg></span><span class="btn-text">Фильтр</span></button>
   <button class="btn-success ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-filter"></use></svg></span></button>
   <button class="btn-primary ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span><span class="btn-text">Скачать</span></button>
@@ -81,7 +81,7 @@ _Использование:_ `btn-link`
 #### Кнопки с прозрачным фоном (outline)
 
 {% highlight html %}
-  <button class="btn-default__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-triangle-alert"></use></svg></span></button>
+  <button class="btn-default__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
 
   <button class="btn-primary__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-filter"></use></svg></span> <span class="btn-text">Текст кнопки</span></button>
 
@@ -95,7 +95,7 @@ _Использование:_ `btn-link`
 {% endhighlight %}
 
 <div class="bs-docs-example">
-  <button class="btn-default__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-triangle-alert"></use></svg></span></button>
+  <button class="btn-default__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
 
   <button class="btn-primary__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-filter"></use></svg></span><span class="btn-text">Текст кнопки</span></button>
 
