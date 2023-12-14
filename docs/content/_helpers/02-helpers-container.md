@@ -6,104 +6,108 @@ anchor: helpers-container
 order: 2
 ---
 
-### Классы для работы с контейнерами
+### Классы, устанавливающие свойства, как показывать контейнер
 
-`d-none` - устанавливает display: none
+`d-none` - display: none
 
-`d-flex` - устанавливает display: flex
+`d-flex` - display: flex
 
-`d-block` - устанавливает display: block
+`d-block` - display: block
 
-`d-inline-block` - устанавливает display: inline-block
+`d-inline-block` - display: inline-block
 
-`d-inline-flex` - устанавливает display: inline-flex
+`d-inline-flex` - display: inline-flex
 
-`d-grid` - устанавливает display: grid
+`d-grid` - display: grid
 
+### Вспомогательные классы, используемые если у контейнера установлено свойство - display: flex
 
-`justify-flex-start` устанавливает justify-content: flex-end;
+`justify-flex-start` - justify-content: flex-end
 
-`justify-space-between` устанавливает justify-content: space-between;
+`justify-space-between` - justify-content: space-between
 
-`justify-flex-end` устанавливает justify-content: flex-end;
+`justify-flex-end` - justify-content: flex-end
 
-`justify-center` устанавливает justify-content: center;
-
-
-`align-start` устанавливает align-items: flex-start;
-
-`align-center` устанавливает align-items: center;
-
-`align-end` устанавливает align-items: flex-end;
+`justify-center` - justify-content: center
 
 
-`flex-wrap` устанавливает flex-wrap: wrap;
+`align-start` - align-items: flex-start
 
-`flex-nowrap` устанавливает flex-wrap: nowrap;
+`align-center` - align-items: center
 
-`flex-column` устанавливает flex-direction: column
+`align-end` - align-items: flex-end
 
-`flex-column-reverse` устанавливает flex-direction: column-reverse
 
-`flex-row` устанавливает flex-direction: row
+`flex-wrap` - flex-wrap: wrap
 
-`flex-grow-0` устанавливает flex-grow: 0
+`flex-nowrap` - flex-wrap: nowrap
 
-`flex-grow-1` устанавливает flex-grow: 1
+`flex-column` - flex-direction: column
 
-`flex-shrink-0` устанавливает flex-shrink: 0
+`flex-column-reverse` - flex-direction: column-reverse
 
-`flex-shrink-1` устанавливает flex-shrink: 1
+`flex-row` - flex-direction: row
 
-`flex-basis-100p` устанавливает flex-basis: 100%
+`flex-grow-0` - flex-grow: 0
 
-Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
+`flex-grow-1` - flex-grow: 1
 
-Устанавливает соответствующие значение order:
+`flex-shrink-0` - flex-shrink: 0
 
-`order-1`, `order-2`, `order-3`, `order-4`, `order-5`, `order-6`, `order-7`, `order-8`, `order-9`, `order-10` -
+`flex-shrink-1` - flex-shrink: 1
 
-Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
+`flex-basis-100p` - flex-basis: 100%
 
-Устанавливает соответствующие значение позиционирования:
-`.p-relative`, `.p-absolute`, `.p-sticky`
+`order-1`, `order-2`, `order-3`, `order-4`, `order-5`, `order-6`, `order-7`, `order-8`, `order-9`, `order-10` - устанавливает соответствующие значение order
 
-Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
+#### Постфикс `__mobile`, дописанный к этим классам, устанавливают такие значения только для мобильных устройств
 
-### Высота контейнера
+### Классы, устанавливает соответствующие свойства позиционирования (position)
 
-`h-auto` - устанавливает автоматическую высоту
+`p-relative`, `p-absolute`, `p-sticky`
 
-`h-100p` - устанавливает значение в 100% для высоты контейнера
+#### Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств
 
-`maxh-none` - устанавливает значение `max-height` в значение `none`
+### Классы, устанавливающие высоту (height) контейнера
 
-`maxh-100p` - устанавливает значение `max-height` в значение `100%`
+`h-auto` - автоматическая высота
 
-`minh-auto` - устанавливает значение `min-height` в значение `auto`
+`h-100p` - значение в 100%
 
-`minh-100p` - устанавливает значение `min-height` в значение `100%`
+`maxh-none` - свойство max-height в значение none
 
-Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
+`maxh-100p` - свойство max-height в значение 100%
 
-### Ширина контейнера
+`minh-auto` - свойство min-height в значение auto
 
-`w-auto` - устанавливает автоматическую ширину
+`minh-100p` - свойство min-height в значение 100%
 
-`w-100p` - устанавливает значение в 100% для ширины контейнера
+#### Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств
 
-`maxw-none` - устанавливает значение `max-width` в значение `none`
+### Классы, устанавливающие ширину (width) контейнера
 
-`maxh-100p` - устанавливает значение `max-height` в значение `100%`
+`w-auto` -  автоматическую ширину
 
-`maxw-100p` - устанавливает значение `max-width` в значение `100%`
+`w-100p` - значение в 100%
 
-`minw-auto` - устанавливает значение `min-width` в значение `auto`
+`maxw-none` - свойство max-width в значение none
 
-`minw-100p` - устанавливает значение `min-width` в значение `100%`
+`maxh-100p` - свойство max-height в значение 100%
 
-Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
+`maxw-100p` - свойство max-width в значение 100%
 
-### Поворот контейнера
+`minw-auto` - свойство min-width в значение auto
 
-`rotate90`,`rotate180`, `rotate270` - устанавливает поворот
+`minw-100p` - свойство min-width в значение 100%
+
+#### Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств.
+
+### Классы, устанавливающие поворот контейнера
+
+`rotate90`, `rotate180`, `rotate270`
+
+### Всомогательные классы для работы с таблицами
+
+`table__layoutAuto`, `table__layoutFixed`  - уставливает свойство table-layout в значение auto или fixed
+
+#### Постфикс `__mobile` дописанный к этим классам устанавливают такие значения только для мобильных устройств

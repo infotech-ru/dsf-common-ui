@@ -10,8 +10,8 @@ order: 5
 
 <p><code class="language-plaintext highlighter-rouge">nowrap</code>,<code class="language-plaintext highlighter-rouge">whitespace-normal</code>, <code class="language-plaintext highlighter-rouge">break-word</code>, <code class="language-plaintext highlighter-rouge">overflow-ellipsis</code>, <code class="language-plaintext highlighter-rouge">overflow-hidden</code>, <code class="language-plaintext highlighter-rouge">overflowX-auto</code>, <code class="language-plaintext highlighter-rouge">overflowY-auto</code></p>
 
-<p>только для мобильных:
-<code class="language-plaintext highlighter-rouge">nowrap__mobile</code>, <code class="language-plaintext highlighter-rouge">whitespace-normal__mobile</code>, <code class="language-plaintext highlighter-rouge">break-word__mobile</code>, <code class="language-plaintext highlighter-rouge">overflow-hidden__mobile</code></p>
+<h4>только для мобильных:
+<code class="language-plaintext highlighter-rouge">nowrap__mobile</code>, <code class="language-plaintext highlighter-rouge">whitespace-normal__mobile</code>, <code class="language-plaintext highlighter-rouge">break-word__mobile</code>, <code class="language-plaintext highlighter-rouge">overflow-hidden__mobile</code></h4>
 
 <br>
 <br>
@@ -19,7 +19,7 @@ order: 5
 
 <code class="language-plaintext highlighter-rouge">text-left</code>, <code class="language-plaintext highlighter-rouge">text-right</code>, <code class="language-plaintext highlighter-rouge">text-center</code>, <code class="language-plaintext highlighter-rouge">text-justify</code>
 
-<p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
+<h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
 
 {% highlight html %}
 <div class="text-left">text-left</div>
@@ -34,17 +34,17 @@ order: 5
 
 <br>
 <br>
-<h3>Классы для выравнивание текста в контейнере по вертикали</h3>
+<h3>Классы, выравнивающие текст в контейнере по вертикали</h3>
 
 <p><code class="language-plaintext highlighter-rouge">va-middle</code>, <code class="language-plaintext highlighter-rouge">va-top</code>, <code class="language-plaintext highlighter-rouge">va-bottom</code></p>
 
 <br>
 <br>
-<h3>Классы для изменения регистра текста</h3>
+<h3>Классы, изменяющие регистр текста</h3>
 
 <code class="language-plaintext highlighter-rouge">text-lowercase</code>, <code class="language-plaintext highlighter-rouge">text-uppercase</code>, <code class="language-plaintext highlighter-rouge">text-capitalize</code>
 
-<p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
+<h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
 
 {% highlight html %}
   <div class="text-lowercase">text-lowercase</div>
@@ -59,11 +59,11 @@ order: 5
 
 <br>
 <br>
-<h3>Классы для изменения толщины текста</h3>
+<h3>Классы, изменяющие толщину текста</h3>
 
 <code class="language-plaintext highlighter-rouge">text-regular</code>, <code class="language-plaintext highlighter-rouge">text-bold</code>,
 
-<p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
+<h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
 
 <br>
 <br>
@@ -75,7 +75,7 @@ order: 5
   {% endfor %}
 </p>
 
-<p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
+<h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
 
 <br>
 <br>
@@ -87,7 +87,7 @@ order: 5
   {% endfor %}
 </p>
 
-<p>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</p>
+<h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
 
 
 {% highlight html %}
@@ -110,7 +110,7 @@ order: 5
 <br>
 <h3>Поворот текста</h3>
 
-<p><code class="language-plaintext highlighter-rouge">transformText__left</code>, <code class="language-plaintext highlighter-rouge">transformText__righ</code>` - устанавливает поворот текста</p>
+<p><code class="language-plaintext highlighter-rouge">transformText__left</code>, <code class="language-plaintext highlighter-rouge">transformText__right</code>` - устанавливает поворот текста</p>
 
 {% highlight html %}
   <div class="transformText__right">transformText__right</div>
@@ -125,7 +125,7 @@ order: 5
 
 <br>
 <br>
-<h3>Классы изменения цвета текста</h3>
+<h3>Классы, изменяющие цвета текста</h3>
 <p>
 {% for item in site.data.jekyll.brandnamecolor %}
   <code class="language-plaintext highlighter-rouge">text-{{ item.name }}</code>, 
@@ -133,7 +133,7 @@ order: 5
 
 <br>
 <br>
-<h3>Классы для изменения цвета текста при наведении (hover)</h3>
+<h3>Классы, изменяющие цвета текста при наведении (hover)</h3>
 
 {% for item in site.data.jekyll.brandnamecolor %}
   <code class="language-plaintext highlighter-rouge">textHover-{{ item.name }}</code>, 

@@ -38,11 +38,8 @@
         color: _brand-palette(checkboxItem_color);
         display: inline-block;
         font-size: rem(_fontSizes(checkbox));
-        // font-weight: normal;
         margin: 0;
-        // line-height: rem(_brand-sizes(checkboxItem_size));
         padding-left: rem(calc(_brand-sizes(checkboxItem_size) / 0.75));
-        // padding-top: $checkbox-label-pt;
         position: relative;
         text-align: left;
 
@@ -75,6 +72,10 @@
         }
         fieldset[disabled]{
             cursor: disable;
+        }
+        .tableHelpIcon{
+            display: inline-flex;
+            margin: 0;
         }
     }
     // &-big{

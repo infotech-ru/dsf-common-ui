@@ -562,6 +562,7 @@ $brand-palette: (
   popoverHeader_color:                    map-get($brand-colors, _dark-grey),
 
   radioItem_color:                        map-get($brand-colors, _dark-grey),
+  radioItemDisabled_color:                map-get($brand-colors, _grey3),
   radioItem_bg:                           map-get($brand-colors, _white),
   radioItem_border:                       map-get($brand-colors, _grey3),
   radioItem-active_bg:                    map-get($brand-colors, _white),

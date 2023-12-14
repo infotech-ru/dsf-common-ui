@@ -48,6 +48,12 @@
 }
 
 @each $marginSize in $marginSizes {
+  .margin-#{$marginSize} {
+      margin: rem($marginSize);
+  }
+  .mobile-view .margin-#{$marginSize}__mobile {
+      margin: rem($marginSize);
+  }
   .mt-#{$marginSize} {
       margin-top: rem($marginSize);
   }
@@ -72,12 +78,6 @@
   .mobile-view .ml-#{$marginSize}__mobile {
       margin-left: rem($marginSize);
   }
-  .margin-#{$marginSize} {
-      margin: rem($marginSize);
-  }
-  .mobile-view .margin-#{$marginSize}__mobile {
-      margin: rem($marginSize);
-  }
 }
 .mt-auto{
   margin-top: auto;
@@ -93,6 +93,12 @@
 }
 
 @each $paddingSize in $paddingSizes {
+  .padding-#{$paddingSize} {
+    padding: rem($paddingSize);
+  }
+  .mobile-view .padding-#{$paddingSize}__mobile {
+    padding: rem($paddingSize);
+  }
   .pt-#{$paddingSize} {
       padding-top: rem($paddingSize);
   }
@@ -116,12 +122,6 @@
   }
   .mobile-view .pl-#{$paddingSize}__mobile {
       padding-left: rem($paddingSize);
-  }
-  .padding-#{$paddingSize} {
-    padding: rem($paddingSize);
-  }
-  .mobile-view .padding-#{$paddingSize}__mobile {
-    padding: rem($paddingSize);
   }
 }
 
@@ -265,7 +265,6 @@
 .flex-basis-auto                            { flex-basis: auto; }
 .mobile-view .flex-basis-auto__mobile       { flex-basis: auto; }
 
-
 @each $order in 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 {
   .order-#{$order} {
       order: $order;
@@ -275,6 +274,19 @@
       order: $order;
     }
   }
+}
+
+.table__layoutFixed{
+  table-layout: fixed;
+}
+.mobile-view .table__layoutFixed__mobile{
+  table-layout: fixed;
+}
+.table__layoutAuto{
+  table-layout: auto;
+}
+.mobile-view .table__layoutAuto__mobile{
+  table-layout: auto;
 }
 
 .rotate90              { transform: rotate(90deg); }
