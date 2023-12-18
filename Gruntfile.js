@@ -169,7 +169,7 @@ module.exports = function (grunt) {
             },
             default: {
                 files: {
-                  "./docs/dist/style.css": "./src/scss/index.scss",
+                  "./docs/dist/style.css": "./docs/_sass/index.scss",
                   "./docs/dist/jekyll.yml": "./docs/_sass/jekyll.scss",
                 }
             },

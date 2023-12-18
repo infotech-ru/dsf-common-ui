@@ -210,7 +210,8 @@
     display: none;
   }
   .popoverActionMenu &{
-    padding: 10px;
+    // padding: 10px;
+    padding: 0px;
   }
 }
 
@@ -218,7 +219,7 @@
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 0;
-  li + li{
-    margin-top: 10px;
-  }
+  // li + li{
+  //   margin-top: 10px;
+  // }
 }

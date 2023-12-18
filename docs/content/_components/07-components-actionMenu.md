@@ -1,6 +1,6 @@
 ---
-Title: Меню для кнопок (actionMenu с dropdown)
-menutitle: Меню для кнопок (actionMenu с dropdown)
+Title: Меню (actionMenu с dropdown)
+menutitle: Меню (actionMenu с dropdown)
 category: components
 anchor: components-menu
 order: 7
@@ -8,17 +8,19 @@ order: 7
 
 ### Инициализация
 
-Используется для объединения кнопок действия под одной кнопкой. В качестве скрипта используется popover.js
+Используется для объединения ссылок или кнопок с js-обработкой под одной кнопкой меню. 
+
+В качестве скрипта для подменю используется popover.js
 
 Кнопки вносятся в data-content. Инициализация js по классу `js-actionMenu`
 
-В системе реализовано через widgets DropDownActionColumn
+В системе реализовано через widgets `DropDownActionColumn`
+
 {% highlight html %}
   use app\widgets\DropDownActionColumn;
  
     'class' => DropDownActionColumn::class,
 {% endhighlight %}
-
 
 Popover изначально не попадает в DOM, скрипт по типу `$(".js-action").click` внутри него не будет работать.
 
@@ -34,71 +36,55 @@ Popover изначально не попадает в DOM, скрипт по т�
 Для использования рядом с другими кнопками возможно использовать `.btn-link`
 
 ### Отображения пунктов меню
-Пункты меню в виде кнопок должны находятся в структуре
+Пункты меню должны находятся в структуре
 `<div class="popover-body"><ul class="popoverActionMenu__ul"><li> Пункт меню </li>`
 
-Способы отображения пунктов:
-- Придания пунктам вида кнопок. Например, `btn-default`.
-- Исопользование класса `dropdown__link`
+На ссылку или кнопку навешиваем класс `dropdown__link`,
+для иконки внутри класс - `dropdown__linkIcon`, текста внутри `dropdown__linkText`
 
 {% highlight html %}
   <button class="btn-icon js-actionMenu"
           type="button"
           data-content="
-            <button class='dropdown__link'>
-              <span class='svg--icon'>
+            <a class='dropdown__link' href='#'>
+              <span class='dropdown__linkIcon'>
                 <svg class='bicolors-edit' width='24' height='24'>
                   <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
                 </svg>
               </span>
-              <span class='btn-text'>Редактировать</span>
-            </button>
-            <button class='dropdown__link'>
-              <span class='svg--icon'>
+              <span class='dropdown__linkText'>Редактировать</span>
+            </a>
+            <a class='dropdown__link' href='#'>
+              <span class='dropdown__linkIcon'>
                 <svg class='bicolors-edit' width='24' height='24'>
                   <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use>
                 </svg>
               </span>
-              <span class='btn-text'>Удалить</span>
-            </button>
+              <span class='dropdown__linkText'>Удалить</span>
+            </a>
           ">
           <span class="svg--icon">
             <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
-          </span>
-  </button>
-  <button class="btn-default js-actionMenu"
-          type="button"
-          data-content="
-            <button class='btn-default btn-block'>
-              <span class='svg--icon'>
-                <svg class='bicolors-doc_add' width='24' height='24'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc_add'></use>
-                </svg>
-              </span>
-              <span class='btn-text'>Редактировать</span>
-            </button>
-          ">
-          <span class="svg--icon">
-            <svg class="bicolors-filter" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg>
           </span>
   </button>
   <button class="btn-link js-actionMenu"
           type="button"
           data-content="
             <button class='dropdown__link'>
-              <span class='svg--icon'>
-                <svg class='bicolors-edit' width='16' height='16'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit'></use>
+              <span class='dropdown__linkIcon'>
+                <svg class='bicolors-edit' width='24' height='24'>
+                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
                 </svg>
               </span>
-              <span class='btn-text'>Редактировать</span>
+              <span class='dropdown__linkText'>Редактировать</span>
             </button>
-              <span class='svg--icon'>
+            <button class='dropdown__link'>
+              <span class='dropdown__linkIcon'>
                 <svg class='bicolors-plus' width='24' height='24'>
                   <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use>
                 </svg>
               </span>
-              <span class='btn-text'>Добавить</span>
+              <span class='dropdown__linkText'>Добавить</span>
             </button>
           ">
           <span class="svg--icon">
@@ -108,11 +94,10 @@ Popover изначально не попадает в DOM, скрипт по т�
 {% endhighlight %}
 
 <div class="bs-docs-example">
-  <button class="btn-icon mr-10 js-actionMenu" type="button" data-content="<button class='dropdown__link'><span class='svg--icon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='btn-text'>Редактировать</span></button><button class='dropdown__link'><span class='svg--icon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use></svg></span><span class='btn-text'>Удалить</span></button> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
+  <button class="btn-icon mr-10 js-actionMenu" type="button" data-content="<a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='dropdown__linkIconText'>Редактировать</span></a><a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use></svg></span><span class='dropdown__linkIconText'>Удалить</span></a> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
 
-  <button class="btn-default js-actionMenu ml-10" type="button" data-content="<button class='btn-default btn-block'><span class='svg--icon'><svg class='bicolors-doc_add' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc_add'></use></svg></span><span class='btn-text'>Редактировать</span></button> "><span class="svg--icon"><svg class="bicolors-filter" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg></span></button>
 
-  <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='dropdown__link'><span class='svg--icon'><svg class='bicolors-plus' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use></svg></span><span class='btn-text'>Добавить</span></button> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
+  <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='dropdown__link'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='dropdown__linkIconText'>Редактировать</span></button><button class='dropdown__link'><span class='dropdown__linkIcon'><svg class='bicolors-plus' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use></svg></span><span class='dropdown__linkIconText'>Добавить</span></button>"><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
 </div>
 
 ### Многоуровневое меню dropdown. 
