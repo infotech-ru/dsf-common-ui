@@ -2877,9 +2877,6 @@ h6, .h6 {
 .reset-view .footer__item_right, .guest-view .footer__item_right {
   line-height: 18px;
 }
-.footer__item + .footer__item {
-  margin-left: 10px;
-}
 
 .footer___logo {
   background-color: transparent;
