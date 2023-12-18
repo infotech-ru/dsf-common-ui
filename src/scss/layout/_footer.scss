@@ -62,6 +62,8 @@
     }
   }
   &__item{
+    align-items: center;
+    display: flex;
     font-size: 11px;
     margin: 0;
     .reset-view &,
@@ -84,13 +86,9 @@
         line-height: 18px;
       }
     }
-        // width: 100%;
-        // &:last-child{
-        //     text-align: right;
-        //     .mobile-view &{
-        //         text-align: left;
-        //     }
-        // }
+    & + &{
+      margin-left: 10px;
+    }
   }
 }
 .footer___logo {
