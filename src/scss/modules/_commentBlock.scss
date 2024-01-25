@@ -304,7 +304,7 @@
     max-width: 100%;
     margin-top: 5px;
     word-wrap: break-word;
-    white-space: pre-wrap;
+    // white-space: pre-wrap; // множестывенные пробелы добавляют нежелательные отступы
     .mobile-view &{
         min-width: auto;
     }
