@@ -629,8 +629,8 @@ table {
   --color_dark-grey: #333333;
   --color_yellow: #FFDA7D;
   --color_yellow2: #FFF741;
-  --color_light-yellow: #FFF6DF;
-  --color_light-yellow2: #FFFBA0;
+  --color_light-yellow: #FFFBA0;
+  --color_light-yellow2: #FFF6DF;
   --color_red: #D9534F;
   --color_rose: #FF9996;
   --color_light-red: #FCEEEE;
@@ -7690,6 +7690,24 @@ input[type=button].btn-block {
   position: relative;
   top: -1px;
 }
+.label_text {
+  display: inline-flex;
+}
+.label_text + .svg--icon {
+  margin-left: 10px;
+}
+.svg--icon + .label_text {
+  margin-left: 10px;
+}
+.label .svg--icon {
+  display: inline-flex;
+  height: 16px;
+  width: 16px;
+}
+.label .svg--icon svg {
+  height: 16px;
+  width: 16px;
+}
 
 .label__after:after {
   content: attr(data-label-text);
@@ -7705,66 +7723,170 @@ input[type=button].btn-block {
   --label_color: #333333;
   --svg-valute-fill: #333333;
   --label_bgc: #ffffff;
+  --svg-icon-fill: #1E6393;
+  --svg-icon-stroke: #1E6393;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
 }
 
 .label-primary {
   --label_color: #ffffff;
   --svg-valute-fill: #ffffff;
   --label_bgc: #4A8DC6;
-}
-
-.label-success {
-  --label_color: #ffffff;
-  --svg-valute-fill: #ffffff;
-  --label_bgc: #69C26A;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
 }
 
 .label-danger {
   --label_color: #ffffff;
   --svg-valute-fill: #ffffff;
   --label_bgc: #D9534F;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+}
+
+.label-success {
+  --label_color: #ffffff;
+  --svg-valute-fill: #ffffff;
+  --label_bgc: #69C26A;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
 }
 
 .label-warning {
   --label_color: #333333;
   --svg-valute-fill: #333333;
   --label_bgc: #FFBD41;
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
+  --svg-icon-fill_blue: #333333;
+  --svg-icon-stroke_blue: #333333;
 }
 
 .label-info {
-  --label_color: #333333;
-  --svg-valute-fill: #333333;
-  --label_bgc: #B6D1E8;
+  --label_color: #4A8DC6;
+  --svg-valute-fill: #4A8DC6;
+  --label_bgc: #E4EEF7;
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
 }
 
 .label-yellow {
   --label_color: #333333;
   --svg-valute-fill: #333333;
   --label_bgc: #FFF741;
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
+  --svg-icon-fill_blue: #333333;
+  --svg-icon-stroke_blue: #333333;
 }
 
 .label-black {
   --label_color: #ffffff;
   --svg-valute-fill: #ffffff;
   --label_bgc: #000000;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
 }
 
 .label-dark-grey {
   --label_color: #ffffff;
   --svg-valute-fill: #ffffff;
   --label_bgc: #333333;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
 }
 
 .label-grey2 {
   --label_color: #333333;
   --svg-valute-fill: #333333;
   --label_bgc: #dddddd;
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
+  --svg-icon-fill_blue: #333333;
+  --svg-icon-stroke_blue: #333333;
 }
 
 .label-vibrant-blue {
   --label_color: #ffffff;
   --svg-valute-fill: #ffffff;
   --label_bgc: #0094FF;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+}
+
+.label-light-yellow2 {
+  --label_color: #DE8500;
+  --svg-valute-fill: #DE8500;
+  --label_bgc: #FFF6DF;
+  --svg-icon-fill: #DE8500;
+  --svg-icon-stroke: #DE8500;
+  --svg-icon-fill_blue: #DE8500;
+  --svg-icon-stroke_blue: #DE8500;
+}
+
+.label-dark-green {
+  --label_color: #ffffff;
+  --svg-valute-fill: #ffffff;
+  --label_bgc: #467B46;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+}
+
+.label-light-green {
+  --label_color: #467B46;
+  --svg-valute-fill: #467B46;
+  --label_bgc: #DAF0DA;
+  --svg-icon-fill: #467B46;
+  --svg-icon-stroke: #467B46;
+  --svg-icon-fill_blue: #467B46;
+  --svg-icon-stroke_blue: #467B46;
+}
+
+.label-light-green2 {
+  --label_color: #467B46;
+  --svg-valute-fill: #467B46;
+  --label_bgc: #B4E1B5;
+  --svg-icon-fill: #467B46;
+  --svg-icon-stroke: #467B46;
+  --svg-icon-fill_blue: #467B46;
+  --svg-icon-stroke_blue: #467B46;
+}
+
+.label-light-red {
+  --label_color: #D9534F;
+  --svg-valute-fill: #D9534F;
+  --label_bgc: #FCEEEE;
+  --svg-icon-fill: #D9534F;
+  --svg-icon-stroke: #D9534F;
+  --svg-icon-fill_blue: #D9534F;
+  --svg-icon-stroke_blue: #D9534F;
+}
+
+.label-grey4 {
+  --label_color: #ffffff;
+  --svg-valute-fill: #ffffff;
+  --label_bgc: #777777;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
 }
 
 a.label:hover, a.label:focus {
@@ -10021,14 +10143,14 @@ td.table__clear {
 .table__light-yellow th:first-child,
 .table__light-yellow td,
 .table__light-yellow td:first-child {
-  background-color: #FFF6DF;
+  background-color: #FFFBA0;
 }
 
 th.table__light-yellow,
 th.table__light-yellow:first-child,
 td.table__light-yellow:first-child,
 td.table__light-yellow {
-  background-color: #FFF6DF;
+  background-color: #FFFBA0;
 }
 
 .table__light-red th,
@@ -10326,7 +10448,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   padding: 15px 15px 10px;
 }
 .comment-block--field--field-yellow {
-  background-color: #FFF6DF;
+  background-color: #FFFBA0;
   padding: 10px;
 }
 .comment-block--scroll {
@@ -10837,7 +10959,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --chart-light-blue: #4A8DC6;
   --chart-light-blue3: #B6D1E8;
   --chart-blue: #0094FF;
-  --chart-light-yellow2: #FFFBA0;
+  --chart-light-yellow2: #FFF6DF;
   --chart-yellow2: #FFF741;
   --chart-black: #000000;
   --chart-grey: #BABABA;
@@ -13054,36 +13176,52 @@ tbody.collapse.in {
   vertical-align: bottom;
 }
 
-.text-lowercase {
+.transformNone {
+  text-transform: none;
+}
+
+.mobile-view .transformNone__mobile {
+  text-transform: none;
+}
+
+.transformLowercase {
   text-transform: lowercase;
 }
 
-.mobile-view .text-lowercase__mobile {
+.mobile-view .transformLowercase__mobile {
   text-transform: lowercase;
 }
 
-.text-uppercase {
+.transformUppercase {
   text-transform: uppercase;
 }
 
-.mobile-view .text-uppercase__mobile {
+.mobile-view .transformUppercase__mobile {
   text-transform: uppercase;
 }
 
-.text-capitalize {
+.transformCapitalize {
   text-transform: capitalize;
 }
 
-.mobile-view .text-capitalize__mobile {
+.mobile-view .transformCapitalize__mobile {
   text-transform: capitalize;
 }
 
-.text-regular {
+.fontWeightNormal {
   font-weight: 400;
 }
 
-.mobile-view .text-regular__mobile {
+.mobile-view .fontWeightNormal__mobile {
   font-weight: 400;
+}
+
+.fontWeightBold {
+  font-weight: 700;
+}
+
+.mobile-view .fontWeightBold__mobile {
+  font-weight: 700;
 }
 
 .text-bold {
@@ -14540,33 +14678,33 @@ tbody.collapse.in {
 
 .svg-light-yellow svg,
 .svg-light-yellow.svg--icon svg {
-  --svg-icon-fill: #FFF6DF;
-  --svg-icon-stroke: #FFF6DF;
-  --svg-icon-fill_blue: #FFF6DF;
-  --svg-icon-stroke_blue: #FFF6DF;
-  --svg-valute-fill: #FFF6DF;
+  --svg-icon-fill: #FFFBA0;
+  --svg-icon-stroke: #FFFBA0;
+  --svg-icon-fill_blue: #FFFBA0;
+  --svg-icon-stroke_blue: #FFFBA0;
+  --svg-valute-fill: #FFFBA0;
 }
 
 .text-light-yellow {
-  color: #FFF6DF;
-  --text_color: #FFF6DF;
-  --svg-valute-fill: #FFF6DF;
+  color: #FFFBA0;
+  --text_color: #FFFBA0;
+  --svg-valute-fill: #FFFBA0;
 }
 
 .textHover-light-yellow:hover, .textHoverTarget:hover .textHover-light-yellow {
-  color: #FFF6DF;
-  --text_color: #FFF6DF;
-  --svg-valute-fill: #FFF6DF;
+  color: #FFFBA0;
+  --text_color: #FFFBA0;
+  --svg-valute-fill: #FFFBA0;
 }
 
 .bg-light-yellow {
-  background-color: #FFF6DF;
-  --bg_color: #FFF6DF;
+  background-color: #FFFBA0;
+  --bg_color: #FFFBA0;
 }
 
 .border-light-yellow {
-  border-color: #FFF6DF;
-  --border_color: #FFF6DF;
+  border-color: #FFFBA0;
+  --border_color: #FFFBA0;
 }
 
 .svg-light-green svg,

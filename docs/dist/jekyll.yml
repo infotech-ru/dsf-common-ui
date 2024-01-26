@@ -91,11 +91,79 @@ brandnamecolor {
 }
 
 brandnamecolor {
-  light-yellow: #FFF6DF;
+  light-yellow: #FFFBA0;
 }
 
 brandnamecolor {
   light-green: #DAF0DA;
+}
+
+brandlabel {
+  default: 0;
+}
+
+brandlabel {
+  primary: 0;
+}
+
+brandlabel {
+  danger: 0;
+}
+
+brandlabel {
+  success: 0;
+}
+
+brandlabel {
+  warning: 0;
+}
+
+brandlabel {
+  info: 0;
+}
+
+brandlabel {
+  yellow: 0;
+}
+
+brandlabel {
+  black: 0;
+}
+
+brandlabel {
+  dark-grey: 0;
+}
+
+brandlabel {
+  grey2: 0;
+}
+
+brandlabel {
+  vibrant-blue: 0;
+}
+
+brandlabel {
+  light-yellow2: 0;
+}
+
+brandlabel {
+  dark-green: 0;
+}
+
+brandlabel {
+  light-green: 0;
+}
+
+brandlabel {
+  light-green2: 0;
+}
+
+brandlabel {
+  light-red: 0;
+}
+
+brandlabel {
+  grey4: 0;
 }
 
 fontsizelist {

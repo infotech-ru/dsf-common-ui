@@ -10,6 +10,10 @@
   brandnamecolor{ #{$name}: $value }
 }
 
+@each $name, $value in $brand-label {
+  brandlabel{ #{$name}: 0 }
+}
+
 @each $name in $fontSizeList {
   fontsizelist{ #{$name}: 0 }
 }

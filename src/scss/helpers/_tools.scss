@@ -150,43 +150,47 @@
   }
 }
 
-.nowrap                                 { white-space: nowrap; }
-.mobile-view .nowrap__mobile            { white-space: nowrap; }
-.whitespace-normal                      { white-space: normal; }
-.mobile-view .whitespace-normal__mobile { white-space: normal; }
-.break-word                             { word-break: break-word; }
-.mobile-view .break-word__mobile        { word-break: break-word; }
+.nowrap                                     { white-space: nowrap; }
+.mobile-view .nowrap__mobile                { white-space: nowrap; }
+.whitespace-normal                          { white-space: normal; }
+.mobile-view .whitespace-normal__mobile     { white-space: normal; }
+.break-word                                 { word-break: break-word; }
+.mobile-view .break-word__mobile            { word-break: break-word; }
 
-.overflow-ellipsis                      { overflow: hidden; text-overflow: ellipsis; }
-.overflow-hidden                        { overflow: hidden;}
-.mobile-view .overflow-hidden__mobile   { overflow: hidden;}
-.overflowX-auto                         { overflow-x: auto;}
-.overflowY-auto                         { overflow-y: auto;}
+.overflow-ellipsis                          { overflow: hidden; text-overflow: ellipsis; }
+.overflow-hidden                            { overflow: hidden;}
+.mobile-view .overflow-hidden__mobile       { overflow: hidden;}
+.overflowX-auto                             { overflow-x: auto;}
+.overflowY-auto                             { overflow-y: auto;}
 
-.text-left                              { text-align: left; }
-.mobile-view .text-left__mobile         { text-align: left; }
-.text-right                             { text-align: right; }
-.mobile-view .text-right__mobile        { text-align: right; }
-.text-center                            { text-align: center; }
-.mobile-view .text-center__mobile       { text-align: center; }
-.text-justify                           { text-align: justify; }
-.mobile-view .text-justify__mobile      { text-align: justify; }
+.text-left                                  { text-align: left; }
+.mobile-view .text-left__mobile             { text-align: left; }
+.text-right                                 { text-align: right; }
+.mobile-view .text-right__mobile            { text-align: right; }
+.text-center                                { text-align: center; }
+.mobile-view .text-center__mobile           { text-align: center; }
+.text-justify                               { text-align: justify; }
+.mobile-view .text-justify__mobile          { text-align: justify; }
 
-.va-middle                              { vertical-align: middle;}
-.va-top                                 { vertical-align: top;}
-.va-bottom                              { vertical-align: bottom;}
+.va-middle                                  { vertical-align: middle;}
+.va-top                                     { vertical-align: top;}
+.va-bottom                                  { vertical-align: bottom;}
 
-.text-lowercase                         { text-transform: lowercase; }
-.mobile-view .text-lowercase__mobile    { text-transform: lowercase; }
-.text-uppercase                         { text-transform: uppercase; }
-.mobile-view .text-uppercase__mobile    { text-transform: uppercase; }
-.text-capitalize                        { text-transform: capitalize; }
-.mobile-view .text-capitalize__mobile   { text-transform: capitalize; }
+.transformNone                              { text-transform: none; }
+.mobile-view .transformNone__mobile         { text-transform: none; }
+.transformLowercase                         { text-transform: lowercase; }
+.mobile-view .transformLowercase__mobile    { text-transform: lowercase; }
+.transformUppercase                         { text-transform: uppercase; }
+.mobile-view .transformUppercase__mobile    { text-transform: uppercase; }
+.transformCapitalize                        { text-transform: capitalize; }
+.mobile-view .transformCapitalize__mobile   { text-transform: capitalize; }
 
-.text-regular                           { font-weight: 400; }
-.mobile-view .text-regular__mobile      { font-weight: 400; }
-.text-bold                              { font-weight: 700; }
-.mobile-view .text-bold__mobile         { font-weight: 700; }
+.fontWeightNormal                           { font-weight: 400; }
+.mobile-view .fontWeightNormal__mobile      { font-weight: 400; }
+.fontWeightBold                             { font-weight: 700; }
+.mobile-view .fontWeightBold__mobile        { font-weight: 700; }
+.text-bold                                  { font-weight: 700; }
+.mobile-view .text-bold__mobile             { font-weight: 700; }
 
 .transformText__left   { writing-mode: vertical-lr; transform: rotate(0deg); }
 .transformText__right  { writing-mode: vertical-lr; transform: rotate(180deg); }

@@ -46,9 +46,45 @@ brandnamecolor:
 - name: vibrant-blue
   value: #0094FF
 - name: light-yellow
-  value: #FFF6DF
+  value: #FFFBA0
 - name: light-green
   value: #DAF0DA
+
+brandlabel:
+- name: default
+  value: 0
+- name: primary
+  value: 0
+- name: danger
+  value: 0
+- name: success
+  value: 0
+- name: warning
+  value: 0
+- name: info
+  value: 0
+- name: yellow
+  value: 0
+- name: black
+  value: 0
+- name: dark-grey
+  value: 0
+- name: grey2
+  value: 0
+- name: vibrant-blue
+  value: 0
+- name: light-yellow2
+  value: 0
+- name: dark-green
+  value: 0
+- name: light-green
+  value: 0
+- name: light-green2
+  value: 0
+- name: light-red
+  value: 0
+- name: grey4
+  value: 0
 
 fontsizelist:
 - name: 10

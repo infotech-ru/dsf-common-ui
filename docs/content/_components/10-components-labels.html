@@ -6,47 +6,43 @@ anchor: components-labels
 order: 10
 ---
 
-Для <code class="language-plaintext highlighter-rouge">.label</code> используются следующие цветовые модификаци:
-
-<code class="language-plaintext highlighter-rouge">default</code>,
-<code class="language-plaintext highlighter-rouge">primary</code>,
-<code class="language-plaintext highlighter-rouge">success</code>,
-<code class="language-plaintext highlighter-rouge">danger</code>,
-<code class="language-plaintext highlighter-rouge">warning</code>,
-<code class="language-plaintext highlighter-rouge">info</code>,
-<code class="language-plaintext highlighter-rouge">yellow</code>,
-<code class="language-plaintext highlighter-rouge">black,</code>,
-<code class="language-plaintext highlighter-rouge">dark-grey</code>,
-<code class="language-plaintext highlighter-rouge">grey2,</code>,
-<code class="language-plaintext highlighter-rouge">vibrant-blue</code>,
+Для <code class="language-plaintext highlighter-rouge">.label</code> доступны следующие цветовые модификаци:
 
 {% highlight html %}
-<span class="label label-default">label label-default</span>
-<span class="label label-primary">label label-primary</span>
-<span class="label label-success">label label-success</span>
-<span class="label label-danger">label label-danger</span>
-<span class="label label-warning">label label-warning</span>
-<span class="label label-info">label label-info</span>
-<span class="label label-yellow">label label-yellow</span>
-<span class="label label-black">label label-black</span>
-<span class="label label-dark-grey">label label-dark-grey</span>
-<span class="label label-grey2">label label-grey2</span>
-<span class="label label-vibrant-blue">label label-vibrant-blue</span>
+  {% for item in site.data.jekyll.brandlabel %}
+    <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
+  {% endfor %}
 {% endhighlight %}
 <div class="bs-docs-example">
-  <span class="label label-default">label label-default</span>
-  <span class="label label-primary ml-5">label label-primary</span>
-  <span class="label label-success ml-5">label label-success</span>
-  <span class="label label-danger ml-5">label label-danger</span>
-  <span class="label label-warning ml-5">label label-warning</span>
-  <span class="label label-info ml-5">label label-info</span>
-  <span class="label label-yellow ml-5">label label-yellow</span>
-  <span class="label label-black ml-5">label label-black</span>
-  <span class="label label-dark-grey ml-5">label label-dark-grey</span>
-  <span class="label label-grey2 ml-5">label label-grey2</span>
-  <span class="label label-vibrant-blue ml-5">label label-vibrant-blue</span>
+  {% for item in site.data.jekyll.brandlabel %}
+    <span class="label label-{{ item.name }} ml-5 mb-5">label-{{ item.name }}</span>
+  {% endfor %}
 </div>
 
+Модификации текста в лейбле:
+
+{% highlight html %}
+    <span class="label label-success fontWeightNormal">fontWeightNormal</span>
+    <span class="label label-danger transformNone">transformNone</span>
+{% endhighlight %}
+<div class="bs-docs-example">
+    <span class="label label-success fontWeightNormal">fontWeightNormal</span>
+    <span class="label label-danger transformNone mr-10">transformNone</span>
+</div>
+
+<p>
+Для вывода иконки внутри лейбла:
+</p>
+{% highlight html %}
+      <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon"><?= Icons::icon('bicolors-attention__24vb') ?></span></span>
+      <span class="label label-success"><span class="svg--icon"><?= Icons::icon('bicolors-filter__24vb') ?></span><span class="label_text">label-success</span></span>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="d-flex"> 
+      <span class="label label-danger ml-5 mb-5"><span class="label_text">label-danger</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
+      <span class="label label-success ml-5 mb-5"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter__24vb"></use></svg></span><span class="label_text">label-success</span></span>
+  </div>
+</div>
 <p> 
 Для вывода дополнительной информации в виде <code class="language-plaintext highlighter-rouge">label</code>, но без модификации всего контейнера, на котором навешивается класс - используется <code class="language-plaintext highlighter-rouge">label__after</code> или <code class="language-plaintext highlighter-rouge">label__before</code> и необходимый модификатор цвета. <br>
 Текст дополнительного поля выводится через дата-атрибут <code class="language-plaintext highlighter-rouge">data-label-text</code>. <br>

@@ -30,6 +30,24 @@
     position: relative;
     top: -1px;
   }
+  &_text{
+    display: inline-flex;
+    & + .svg--icon{
+      margin-left: 10px;
+    }
+    .svg--icon + &{
+      margin-left: 10px;
+    }
+  }
+  .svg--icon{
+    display: inline-flex;
+    height: 16px;
+    width: 16px;
+    svg{
+      height: 16px;
+      width: 16px;
+    }
+  }
 }
 
 .label__after{
@@ -48,15 +66,19 @@
   }
 }
 
-@each $label in 'default', 'primary', 'success', 'danger', 'warning', 'info', 'yellow', 'black', 'dark-grey', 'grey2', 'vibrant-blue' {
-  .label-#{$label}{
-    // background-color: _brand-label(#{$label}_bg);
-    // color: _brand-label(#{$label}_color);
-    #{--label_color}: _brand-label(#{$label}_color);
-    #{--svg-valute-fill}: _brand-label(#{$label}_color);
-    #{--label_bgc}: _brand-label(#{$label}_bg);
+@each $name, $value in $brand-label {
+  .label-#{$name}{
+    #{--label_color}: map-deep-get($brand-label, $name, 'color');
+    #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'color');
+    #{--label_bgc}: map-deep-get($brand-label, $name, 'bg');
+    #{--svg-icon-fill}: map-deep-get($brand-label, $name, 'svg');
+    #{--svg-icon-stroke}: map-deep-get($brand-label, $name, 'svg');
+    #{--svg-icon-fill_blue}: map-deep-get($brand-label, $name, 'svg');
+    #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'svg');
   }
 }
+
+
 
 // Add hover effects, but only for links
 a.label {

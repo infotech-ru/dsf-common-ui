@@ -42,26 +42,26 @@ order: 5
 <br>
 <h3>Классы, изменяющие регистр текста</h3>
 
-<code class="language-plaintext highlighter-rouge">text-lowercase</code>, <code class="language-plaintext highlighter-rouge">text-uppercase</code>, <code class="language-plaintext highlighter-rouge">text-capitalize</code>
+<code class="language-plaintext highlighter-rouge">transformLowercase</code>, <code class="language-plaintext highlighter-rouge">transformUppercase</code>, <code class="language-plaintext highlighter-rouge">transformCapitalize</code>
 
 <h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
 
 {% highlight html %}
-  <div class="text-lowercase">text-lowercase</div>
-  <div class="text-capitalize">text-capitalize</div>
-  <div class="text-uppercase">text-uppercase</div>
+  <div class="transformLowercase">transformLowercase</div>
+  <div class="transformCapitalize">transformCapitalize</div>
+  <div class="transformUppercase">transformUppercase</div>
 {% endhighlight html %}
 <div class="bs-docs-example">
-  <div class="text-lowercase mb-10">text-lowercase</div>
-  <div class="text-capitalize mb-10">text-capitalize</div>
-  <div class="text-uppercase mb-10">text-uppercase</div>
+  <div class="transformLowercase mb-10">transformLowercase</div>
+  <div class="transformCapitalize mb-10">transformCapitalize</div>
+  <div class="transformUppercase mb-10">transformUppercase</div>
 </div>
 
 <br>
 <br>
 <h3>Классы, изменяющие толщину текста</h3>
 
-<code class="language-plaintext highlighter-rouge">text-regular</code>, <code class="language-plaintext highlighter-rouge">text-bold</code>,
+<code class="language-plaintext highlighter-rouge">fontWeightNormal</code>, <code class="language-plaintext highlighter-rouge">fontWeightBold</code>,
 
 <h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
 
@@ -152,11 +152,11 @@ order: 5
 <div class="bs-docs-example">
   {% for item in site.data.jekyll.brandnamecolor %}
     {% if item.name == 'primary' %}
-      <div class="mb-10"><span class="text-{{ item.name }} textHover-danger text-bold">text-{{ item.name }} textHover-danger</span></div>
+      <div class="mb-10"><span class="text-{{ item.name }} textHover-danger fontWeightBold">text-{{ item.name }} textHover-danger</span></div>
     {% elsif item.name == 'white' %}
-      <div class="bg-default padding-5 mb-10"><span class="text-{{ item.name }} textHover-orange text-bold">text-{{ item.name }} textHover-orange</span></div>
+      <div class="bg-default padding-5 mb-10"><span class="text-{{ item.name }} textHover-orange fontWeightBold">text-{{ item.name }} textHover-orange</span></div>
     {% elsif item.name == 'clear' %}
-      <div class="textHoverTarget bg-muted text-center text-bold padding-5 mb-10">text-clear bg-mu<span class="text-{{ item.name }} textHover-success">te</span>d text-center textHover-success on parent</div>
+      <div class="textHoverTarget bg-muted text-center fontWeightBold padding-5 mb-10">text-clear bg-mu<span class="text-{{ item.name }} textHover-success">te</span>d text-center textHover-success on parent</div>
     {% else %}
       <div class="padding-5 mb-10"><span class="text-{{ item.name }}">text-{{ item.name }}</span></div>
     {% endif %}
