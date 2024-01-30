@@ -62,19 +62,19 @@ _Использование:_ `btn-link`
 {% highlight html %}
   <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
 
-  <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-filter"></use></svg></span> Фильтр</button>
+  <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-filter"></use></svg></span> Фильтр</button>
 
-  <button class="btn-success"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span><span class="btn-text">Скачать</span></button>
+  <button class="btn-success"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span><span class="btn-text">Скачать</span></button>
 
-  <button class="btn-primary"><span class="btn-text">Скачать</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  <button class="btn-primary"><span class="btn-text">Скачать</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span></button>
 {% endhighlight %}
 
 <div class="bs-docs-example">
   <button class="btn-link"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
-  <button class="btn-link ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-filter"></use></svg></span><span class="btn-text">Фильтр</span></button>
-  <button class="btn-success ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-filter"></use></svg></span></button>
-  <button class="btn-primary ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span><span class="btn-text">Скачать</span></button>
-  <button class="btn-primary ml-10"><span class="btn-text">Скачать</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  <button class="btn-link ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg></span><span class="btn-text">Фильтр</span></button>
+  <button class="btn-success ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg></span></button>
+  <button class="btn-primary ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span><span class="btn-text">Скачать</span></button>
+  <button class="btn-primary ml-10"><span class="btn-text">Скачать</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span></button>
 </div>
 
 
@@ -83,29 +83,29 @@ _Использование:_ `btn-link`
 {% highlight html %}
   <button class="btn-default__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
 
-  <button class="btn-primary__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-filter"></use></svg></span> <span class="btn-text">Текст кнопки</span></button>
+  <button class="btn-primary__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-filter"></use></svg></span> <span class="btn-text">Текст кнопки</span></button>
 
-  <button class="btn-success__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span><span class="btn-text">Скачать</span></button>
+  <button class="btn-success__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span><span class="btn-text">Скачать</span></button>
 
-  <button class="btn-danger__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  <button class="btn-danger__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span></button>
   
-  <button class="btn-warning__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  <button class="btn-warning__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span></button>
   
-  <button class="btn-grey__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  <button class="btn-grey__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span></button>
 {% endhighlight %}
 
 <div class="bs-docs-example">
   <button class="btn-default__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
 
-  <button class="btn-primary__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-filter"></use></svg></span><span class="btn-text">Текст кнопки</span></button>
+  <button class="btn-primary__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg></span><span class="btn-text">Текст кнопки</span></button>
 
-  <button class="btn-success__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span><span class="btn-text">Скачать</span></button>
+  <button class="btn-success__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span><span class="btn-text">Скачать</span></button>
 
-  <button class="btn-danger__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  <button class="btn-danger__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span></button>
   
-  <button class="btn-warning__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  <button class="btn-warning__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span></button>
   
-  <button class="btn-grey__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#glyphicons-cloud-download"></use></svg></span></button>
+  <button class="btn-grey__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span></button>
 
 </div>
 

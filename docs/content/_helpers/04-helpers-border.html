@@ -16,10 +16,14 @@ order: 4
 
 <p><code class="language-plaintext highlighter-rouge">border__thick</code> - добавляет границу-черту в 2px вокруг контейнера(блока).</p>
 
+<br>
 <h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
+<br>
 <p>Классы <code class="language-plaintext highlighter-rouge">border__none</code>, <code class="language-plaintext highlighter-rouge">border-top__none</code>, <code class="language-plaintext highlighter-rouge">border-bottom__none</code>, <code class="language-plaintext highlighter-rouge">border-left__none</code>, <code class="language-plaintext highlighter-rouge">border-right__none</code> - классы отключают границу в с соответствующей стороны контейнера или со всех сторон.</p>
 
+<br>
 <h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
+<br>
 <p><code class="language-plaintext highlighter-rouge">border__dotted</code> - модифициурет границу-линию в границу-точку.</p>
 <p><code class="language-plaintext highlighter-rouge">border__dashed</code> - модифициурет границу-линию в границу-прерывистую линию.</p>
 <p>Классы <code class="language-plaintext highlighter-rouge">border-top__dotted</code>, <code class="language-plaintext highlighter-rouge">border-bottom__dotted</code>, <code class="language-plaintext highlighter-rouge">border-left__dotted</code>, <code class="language-plaintext highlighter-rouge">border-right__dotted</code> модифициурет границу-линию в границу-точку.</p>
@@ -64,9 +68,9 @@ order: 4
 <p>Классы, установливающие цвет границ (border-color):</p>
 {% for item in site.data.jekyll.brandnamecolor %}
   {% if item.name == 'clear' %}
-    <code class="language-plaintext highlighter-rouge">border-{{ item.name }}</code> - (устанавливает прозрачный цвет), 
+    <code class="language-plaintext highlighter-rouge mb-5 mr-5">border-{{ item.name }}</code> - (устанавливает прозрачный цвет), 
   {% else %}
-    <code class="language-plaintext highlighter-rouge">border-{{ item.name }}</code>, 
+    <code class="language-plaintext highlighter-rouge mb-5 mr-5">border-{{ item.name }}</code>, 
   {% endif %}
 {% endfor %}
 

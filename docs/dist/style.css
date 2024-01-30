@@ -14678,33 +14678,33 @@ tbody.collapse.in {
 
 .svg-light-yellow svg,
 .svg-light-yellow.svg--icon svg {
-  --svg-icon-fill: #FFFBA0;
-  --svg-icon-stroke: #FFFBA0;
-  --svg-icon-fill_blue: #FFFBA0;
-  --svg-icon-stroke_blue: #FFFBA0;
-  --svg-valute-fill: #FFFBA0;
+  --svg-icon-fill: #FFF6DF;
+  --svg-icon-stroke: #FFF6DF;
+  --svg-icon-fill_blue: #FFF6DF;
+  --svg-icon-stroke_blue: #FFF6DF;
+  --svg-valute-fill: #FFF6DF;
 }
 
 .text-light-yellow {
-  color: #FFFBA0;
-  --text_color: #FFFBA0;
-  --svg-valute-fill: #FFFBA0;
+  color: #FFF6DF;
+  --text_color: #FFF6DF;
+  --svg-valute-fill: #FFF6DF;
 }
 
 .textHover-light-yellow:hover, .textHoverTarget:hover .textHover-light-yellow {
-  color: #FFFBA0;
-  --text_color: #FFFBA0;
-  --svg-valute-fill: #FFFBA0;
+  color: #FFF6DF;
+  --text_color: #FFF6DF;
+  --svg-valute-fill: #FFF6DF;
 }
 
 .bg-light-yellow {
-  background-color: #FFFBA0;
-  --bg_color: #FFFBA0;
+  background-color: #FFF6DF;
+  --bg_color: #FFF6DF;
 }
 
 .border-light-yellow {
-  border-color: #FFFBA0;
-  --border_color: #FFFBA0;
+  border-color: #FFF6DF;
+  --border_color: #FFF6DF;
 }
 
 .svg-light-green svg,

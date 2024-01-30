@@ -19,7 +19,26 @@ order: 10
   {% endfor %}
 </div>
 
-Модификации текста в лейбле:
+<h3>Семантика использования текста</h3>
+<p>Для "промежуточных" статусов используется <code class="language-plaintext highlighter-rouge">label-info</code></p>
+<div class="bs-docs-example">
+  <div class="mb-5"><span class="label label-grey2">Черновик</span></div>
+  <div class="mb-5"><span class="label label-light-yellow2">Неполные данные</span></div>
+  <div class="mb-5"><span class="label label-light-yellow2">Необходимы исправления</span></div>
+  <div class="mb-5"><span class="label label-light-green2">Исправлен</span></div>
+  <div class="mb-5"><span class="label label-light-green">Признан</span></div>
+  <div class="mb-5"><span class="label label-dark-green">Выполнен</span></div>
+  <div class="mb-5"><span class="label label-light-red">Отклонен</span></div>
+  <div class="mb-5"><span class="label label-grey4">Закрыт</span></div>
+  <div class="mb-5"><span class="label label-info">Запрос</span></div>
+  <div class="mb-5"><span class="label label-info">Новый</span></div>
+  <div class="mb-5"><span class="label label-info">Необходим осмотр</span></div>
+  <div class="mb-5"><span class="label label-info">Обработан</span></div>
+  <div class="mb-5"><span class="label label-info">Принят </span></div>
+</div>
+
+<h3>Модификации лейблов</h3>
+<p>Модификации текста в лейбле:</p>
 
 {% highlight html %}
     <span class="label label-success fontWeightNormal">fontWeightNormal</span>
@@ -30,17 +49,16 @@ order: 10
     <span class="label label-danger transformNone mr-10">transformNone</span>
 </div>
 
-<p>
-Для вывода иконки внутри лейбла:
-</p>
+<p>Для вывода иконки внутри лейбла:</p>
+
 {% highlight html %}
       <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon"><?= Icons::icon('bicolors-attention__24vb') ?></span></span>
       <span class="label label-success"><span class="svg--icon"><?= Icons::icon('bicolors-filter__24vb') ?></span><span class="label_text">label-success</span></span>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="d-flex"> 
-      <span class="label label-danger ml-5 mb-5"><span class="label_text">label-danger</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
-      <span class="label label-success ml-5 mb-5"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter__24vb"></use></svg></span><span class="label_text">label-success</span></span>
+      <span class="label label-danger ml-5"><span class="label_text">label-danger</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
+      <span class="label label-success ml-5"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter__24vb"></use></svg></span><span class="label_text">label-success</span></span>
   </div>
 </div>
 <p> 
