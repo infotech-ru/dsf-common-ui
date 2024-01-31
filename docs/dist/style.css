@@ -627,8 +627,8 @@ table {
   --color_light-grey3: #EEEEEE;
   --color_light-grey4: #e5e5e5;
   --color_dark-grey: #333333;
-  --color_yellow: #FFDA7D;
-  --color_yellow2: #FFF741;
+  --color_yellow: #FFF741;
+  --color_yellow2: #FFDA7D;
   --color_light-yellow: #FFFBA0;
   --color_light-yellow2: #FFF6DF;
   --color_red: #D9534F;
@@ -7782,7 +7782,7 @@ input[type=button].btn-block {
 .label-yellow {
   --label_color: #333333;
   --svg-valute-fill: #333333;
-  --label_bgc: #FFF741;
+  --label_bgc: #FFDA7D;
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
@@ -10153,14 +10153,14 @@ td.table__clear {
 .table__light-yellow th:first-child,
 .table__light-yellow td,
 .table__light-yellow td:first-child {
-  background-color: #FFFBA0;
+  background-color: #FFF6DF;
 }
 
 th.table__light-yellow,
 th.table__light-yellow:first-child,
 td.table__light-yellow:first-child,
 td.table__light-yellow {
-  background-color: #FFFBA0;
+  background-color: #FFF6DF;
 }
 
 .table__light-red th,
@@ -10458,7 +10458,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   padding: 15px 15px 10px;
 }
 .comment-block--field--field-yellow {
-  background-color: #FFFBA0;
+  background-color: #FFF6DF;
   padding: 10px;
 }
 .comment-block--scroll {
@@ -10970,7 +10970,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --chart-light-blue3: #B6D1E8;
   --chart-blue: #0094FF;
   --chart-light-yellow2: #FFF6DF;
-  --chart-yellow2: #FFF741;
+  --chart-yellow2: #FFDA7D;
   --chart-black: #000000;
   --chart-grey: #BABABA;
   --chart-dark-grey: #333333;
