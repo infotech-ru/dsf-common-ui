@@ -68,9 +68,9 @@ order: 4
 <p>Классы, установливающие цвет границ (border-color):</p>
 {% for item in site.data.jekyll.brandnamecolor %}
   {% if item.name == 'clear' %}
-    <code class="language-plaintext highlighter-rouge mb-5 mr-5">border-{{ item.name }}</code> - (устанавливает прозрачный цвет), 
+    <code class="language-plaintext highlighter-rouge d-inline-flex mb-5 mr-5">border-{{ item.name }}</code> - (устанавливает прозрачный цвет), 
   {% else %}
-    <code class="language-plaintext highlighter-rouge mb-5 mr-5">border-{{ item.name }}</code>, 
+    <code class="language-plaintext highlighter-rouge d-inline-flex mb-5 mr-5">border-{{ item.name }}</code>, 
   {% endif %}
 {% endfor %}
 

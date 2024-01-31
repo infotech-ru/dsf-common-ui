@@ -138,7 +138,7 @@ $brand-hover: (
   _light-yellow:(
     borderColor:                        _brand-colors(_dark-orange),
     borderColor-hover:                  _brand-colors(_dark-orange),
-    bgColor:                            _brand-colors(_light-yellow),
+    bgColor:                            _brand-colors(_light-yellow2),
     bgColor-hover:                      _brand-colors(_dark-orange),
     color:                              _brand-colors(_dark-orange),
     color-hover:                        _brand-colors(_white),
@@ -402,6 +402,11 @@ $brand-label: (
     'bg':                                 map-get($brand-colors, _light-red),
     'color':                              map-get($brand-colors, _red),
     'svg':                                map-get($brand-colors, _red),
+  ),
+  'rose':(
+    'bg':                                 map-get($brand-colors, _rose),
+    'color':                              map-get($brand-colors, _white),
+    'svg':                                map-get($brand-colors, _white),
   ),
   'grey4':(
     'bg':                                 map-get($brand-colors, _grey4),

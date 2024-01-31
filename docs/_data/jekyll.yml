@@ -83,6 +83,8 @@ brandlabel:
   value: 0
 - name: light-red
   value: 0
+- name: rose
+  value: 0
 - name: grey4
   value: 0
 

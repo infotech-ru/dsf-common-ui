@@ -163,6 +163,10 @@ brandlabel {
 }
 
 brandlabel {
+  rose: 0;
+}
+
+brandlabel {
   grey4: 0;
 }
 

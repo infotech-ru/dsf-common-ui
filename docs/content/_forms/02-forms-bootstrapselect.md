@@ -10,8 +10,8 @@ order: 2
 
 ### Смещение выпадающего списка влево.
 
-1. Используется класс `dropdown-menu-right`
-2. 'data-dropdown-align-right' => 'auto', - автоматическое смещение
+1. `'data-dropdown-align-right' => 'auto'`, - автоматическое смещение
+2. Используется класс `dropdown-menu-right`
 
 {% highlight html %}
   widget(Select::class,[

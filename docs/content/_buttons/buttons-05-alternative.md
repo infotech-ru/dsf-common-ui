@@ -41,15 +41,14 @@ _Использование:_ `btn-link`
 
 
 {% highlight html %}
-  <button class="btn-icon"><span class="svg--icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.5 24.5"><path d="M12.3 0C5.5 0 0 5.5 0 12.3s5.5 12.3 12.3 12.3S24.5 19 24.5 12.3 19 0 12.3 0zm7 13.8c0 .3-.2.5-.5.5h-4.6v4.6c0 .3-.2.5-.5.5h-3c-.3 0-.5-.2-.5-.5v-4.6H5.7c-.3 0-.5-.2-.5-.5v-3c0-.3.2-.5.5-.5h4.6V5.7c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v4.6h4.6c.3 0 .5.2.5.5l-.1 3z" class="fill nostroke"></path></svg></span></button>
-
-  <button class="btn-icon"><span class="glyphicon glyphicon-refresh"></span></button>
+  <button class="btn-icon"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-plus"></use></svg></span></button>
+  <button class="btn-icon"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-reload"></use></svg></span></button>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="">
-  <button class="btn-icon"><span class="svg--icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.5 24.5"><path d="M12.3 0C5.5 0 0 5.5 0 12.3s5.5 12.3 12.3 12.3S24.5 19 24.5 12.3 19 0 12.3 0zm7 13.8c0 .3-.2.5-.5.5h-4.6v4.6c0 .3-.2.5-.5.5h-3c-.3 0-.5-.2-.5-.5v-4.6H5.7c-.3 0-.5-.2-.5-.5v-3c0-.3.2-.5.5-.5h4.6V5.7c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v4.6h4.6c.3 0 .5.2.5.5l-.1 3z" class="fill nostroke"></path></svg></span></button>
-
-  <button class="btn-icon ml-10"><span class="glyphicon glyphicon-refresh"></span></button>
+  <button class="btn-icon ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span></button>
+  
+  <button class="btn-icon ml-10"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-reload"></use></svg></span></button>
 
   <button class="btn-default btn-small ml-10">Кнопка btn-small</button>
   </div>

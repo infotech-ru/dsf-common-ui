@@ -7879,6 +7879,16 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #D9534F;
 }
 
+.label-rose {
+  --label_color: #ffffff;
+  --svg-valute-fill: #ffffff;
+  --label_bgc: #FF9996;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+}
+
 .label-grey4 {
   --label_color: #ffffff;
   --svg-valute-fill: #ffffff;
