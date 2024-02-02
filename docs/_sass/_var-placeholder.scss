@@ -86,6 +86,10 @@
 }
 
 %caret {
+  #{--svg-icon-fill}: _brand-palette(bootstrapSelect_caret_color);
+  #{--svg-icon-stroke}: _brand-palette(bootstrapSelect_caret_color);
+  #{--svg-icon-fill_blue}: _brand-palette(bootstrapSelect_caret_color);
+  #{--svg-icon-stroke_blue}: _brand-palette(bootstrapSelect_caret_color);
   &:before,
   &:after {
     border-style: solid;
