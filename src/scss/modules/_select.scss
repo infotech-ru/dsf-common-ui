@@ -673,6 +673,10 @@ select.selectpicker {
       padding: 0;
       position: relative;
       &Plus{
+        #{--svg-icon-fill}: _brand-palette(bootstrapSelect_caret_color);
+        #{--svg-icon-stroke}: _brand-palette(bootstrapSelect_caret_color);
+        #{--svg-icon-fill_blue}: _brand-palette(bootstrapSelect_caret_color);
+        #{--svg-icon-stroke_blue}: _brand-palette(bootstrapSelect_caret_color);
         height: #{_brand-sizes(comboTreeCheckbox_size)}px;
         // left: #{_brand-sizes(dropdownLink_paddingX)}px;
         left: auto;
