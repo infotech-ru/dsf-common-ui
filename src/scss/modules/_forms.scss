@@ -318,6 +318,10 @@ textarea.form-control {
   &__height{
     height: rem(calc(_lineHeight(input) + 2));
   }
+  .css-formFree &{ 
+    padding-left: rem(_brand-sizes(formControl_paddingX));
+    padding-right: rem(_brand-sizes(formControl_paddingX));
+  }
 }
 
 // Feedback states

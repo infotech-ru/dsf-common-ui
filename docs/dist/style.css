@@ -8299,6 +8299,10 @@ fieldset[disabled] .checkbox-inline {
 .form-control-static__height {
   height: 1.75rem;
 }
+.css-formFree .form-control-static {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
 
 .has-success .help-block,
 .has-success .control-label,
