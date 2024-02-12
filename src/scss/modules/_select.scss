@@ -730,7 +730,9 @@ select.selectpicker {
       display: inline-flex;
       font-weight: 400;
       line-height: 1.3em;
+      min-height: 2.25rem;
       margin-bottom: 0;
+      width: 100%;
       .comboTreeExpanded & {
         white-space: normal;
       }
