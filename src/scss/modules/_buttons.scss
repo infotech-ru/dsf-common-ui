@@ -404,6 +404,7 @@ input[type="button"] {
     align-items: center;
     background: var(--color_light-blue2);
     display: flex;
+    height: 100%;
     justify-content: center;
     flex-direction: column;
     width: 100%;
@@ -412,6 +413,9 @@ input[type="button"] {
     background-image: none;
     box-shadow: none;
     outline: 0;
+  }
+  &__dragover{
+    opacity: 0.4;
   }
   .btn-text{
     margin: 0;
