@@ -6,9 +6,17 @@ anchor: formsfree
 order: 3
 ---
 
-Родителю добавляем классы `js-allSelect-formFree css-formFree`
+<p>- Родителю добавляем классы <code class="language-plaintext highlighter-rouge">js-allSelect-formFree css-formFree</code></p>
+<p>- Инициализируем скрипт FormsFree();</p>
 
-Инициализируем скрипт FormsFree();
+{% highlight js %}
+<script>
+  import {FormsFree} from "../forms-free";
+  mounted() {
+    FormsFree();
+  }
+</script>
+{% endhighlight %}
 {% highlight html %}
 <div class="js-allSelect-formFree css-formFree">
   <div class="form-group"> 
