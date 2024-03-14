@@ -11060,21 +11060,11 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --chart-black: #000000;
   --chart-grey: #BABABA;
   --chart-dark-grey: #333333;
+  --chart-transparent: #00000000;
+  --chart-white: #ffffff;
+  --chart-grey2: #dddddd;
+  --chart-grey4: #777777;
   --chart-label-color: #333333;
-  --highcharts-background-color: #00000000;
-  --highcharts-neutral-color-100: #ffffff;
-  --highcharts-neutral-color-80: #dddddd;
-  --highcharts-neutral-color-60: #BABABA;
-  --highcharts-neutral-color-40: #BABABA;
-  --highcharts-neutral-color-20: #777777;
-  --highcharts-neutral-color-10: #777777;
-  --highcharts-neutral-color-5: #333333;
-  --highcharts-neutral-color-3: #333333;
-  --highcharts-highlight-color-100: #B6D1E8;
-  --highcharts-highlight-color-80: #4A8DC6;
-  --highcharts-highlight-color-60: #4A8DC6;
-  --highcharts-highlight-color-20: #4A8DC6;
-  --highcharts-highlight-color-10: #777777;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
