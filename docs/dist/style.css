@@ -11061,20 +11061,20 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --chart-grey: #BABABA;
   --chart-dark-grey: #333333;
   --chart-label-color: #333333;
-  --highcharts-background-color: _brand-colors(_transparent);
-  --highcharts-neutral-color-100: _brand-colors(_white);
-  --highcharts-neutral-color-80: _brand-colors(_grey2);
-  --highcharts-neutral-color-60: _brand-colors(_grey);
-  --highcharts-neutral-color-40: _brand-colors(_grey);
-  --highcharts-neutral-color-20: _brand-colors(_grey4);
-  --highcharts-neutral-color-10: _brand-colors(_grey4);
-  --highcharts-neutral-color-5: _brand-colors(_dark-grey);
-  --highcharts-neutral-color-3: _brand-colors(_dark-grey);
-  --highcharts-highlight-color-100: _brand-colors(_light-blue3);
-  --highcharts-highlight-color-80: _brand-colors(_light-blue);
-  --highcharts-highlight-color-60: _brand-colors(_light-blue);
-  --highcharts-highlight-color-20: _brand-colors(_light-blue);
-  --highcharts-highlight-color-10: _brand-colors(_grey4);
+  --highcharts-background-color: #00000000;
+  --highcharts-neutral-color-100: #ffffff;
+  --highcharts-neutral-color-80: #dddddd;
+  --highcharts-neutral-color-60: #BABABA;
+  --highcharts-neutral-color-40: #BABABA;
+  --highcharts-neutral-color-20: #777777;
+  --highcharts-neutral-color-10: #777777;
+  --highcharts-neutral-color-5: #333333;
+  --highcharts-neutral-color-3: #333333;
+  --highcharts-highlight-color-100: #B6D1E8;
+  --highcharts-highlight-color-80: #4A8DC6;
+  --highcharts-highlight-color-60: #4A8DC6;
+  --highcharts-highlight-color-20: #4A8DC6;
+  --highcharts-highlight-color-10: #777777;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
