@@ -1,23 +1,4 @@
 .chartsBlock{
-  #{--chart-orange}: _brand-colors(_orange);
-  #{--chart-dark-orange}: _brand-colors(_dark-orange);
-  #{--chart-dark-red}: _brand-colors(_dark-red);
-  #{--chart-red}: _brand-colors(_red);
-  #{--chart-rose}: _brand-colors(_rose);
-  #{--chart-dark-green}: _brand-colors(_dark-green);
-  #{--chart-green}: _brand-colors(_green);
-  #{--chart-light-green}: _brand-colors(_light-green);
-  #{--chart-light-blue}: _brand-colors(_light-blue);
-  #{--chart-light-blue3}: _brand-colors(_light-blue3);
-  #{--chart-blue}: _brand-colors(_vibrant-blue);
-  #{--chart-light-yellow2}: _brand-colors(_light-yellow2);
-  #{--chart-yellow2}: _brand-colors(_yellow2);
-  #{--chart-black}: _brand-colors(_black);
-  #{--chart-grey}: _brand-colors(_grey);
-  #{--chart-dark-grey}: _brand-colors(_dark-grey);
-  
-  #{--chart-label-color}: _brand-colors(_dark-grey);
-  
   border: 1px solid _brand-palette(chartBlock_border);
   padding: 10px;
   &_header{
@@ -69,4 +50,41 @@
     min-height: 220px;
   //   margin-top: 20px;
   }
+}
+.highcharts-container {
+  #{--chart-orange}:                _brand-colors(_orange);
+  #{--chart-dark-orange}:           _brand-colors(_dark-orange);
+  #{--chart-dark-red}:              _brand-colors(_dark-red);
+  #{--chart-red}:                   _brand-colors(_red);
+  #{--chart-rose}:                  _brand-colors(_rose);
+  #{--chart-dark-green}:            _brand-colors(_dark-green);
+  #{--chart-green}:                 _brand-colors(_green);
+  #{--chart-light-green}:           _brand-colors(_light-green);
+  #{--chart-light-blue}:            _brand-colors(_light-blue);
+  #{--chart-light-blue3}:           _brand-colors(_light-blue3);
+  #{--chart-blue}:                  _brand-colors(_vibrant-blue);
+  #{--chart-light-yellow2}:         _brand-colors(_light-yellow2);
+  #{--chart-yellow2}:               _brand-colors(_yellow2);
+  #{--chart-black}:                 _brand-colors(_black);
+  #{--chart-grey}:                  _brand-colors(_grey);
+  #{--chart-dark-grey}:             _brand-colors(_dark-grey);
+  
+  #{--chart-label-color}:           _brand-colors(_dark-grey);
+
+  --highcharts-background-color:    _brand-colors(_transparent); // old  #303030;
+  
+  --highcharts-neutral-color-100:   _brand-color(_white); // old  #ffffff;
+  --highcharts-neutral-color-80:    _brand-color(_grey2); // old  #d6d6d6;
+  --highcharts-neutral-color-60:    _brand-color(_grey); // old  #adadad;
+  --highcharts-neutral-color-40:    _brand-color(_grey); // old  #858585;
+  --highcharts-neutral-color-20:    _brand-color(_grey4); // old  #5c5c5c;
+  --highcharts-neutral-color-10:    _brand-color(_grey4); // old  #474747;
+  --highcharts-neutral-color-5:     _brand-color(_dark-grey); // old  #3d3d3d;
+  --highcharts-neutral-color-3:     _brand-color(_dark-grey); // old  #393939;
+
+  --highcharts-highlight-color-100: _brand-color(_light-blue3); // old  #7aa7ff;
+  --highcharts-highlight-color-80:  _brand-color(_light-blue); // old  #6c90d6;
+  --highcharts-highlight-color-60:  _brand-color(_light-blue); // old  #5e79ad;
+  --highcharts-highlight-color-20:  _brand-color(_light-blue); // old  #414a5c;
+  --highcharts-highlight-color-10:  _brand-color(_grey4); // old  #3a3f47;
 }

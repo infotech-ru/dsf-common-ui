@@ -10994,23 +10994,6 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 
 .chartsBlock {
-  --chart-orange: #FFBD41;
-  --chart-dark-orange: #DE8500;
-  --chart-dark-red: #762624;
-  --chart-red: #D9534F;
-  --chart-rose: #FF9996;
-  --chart-dark-green: #467B46;
-  --chart-green: #69C26A;
-  --chart-light-green: #DAF0DA;
-  --chart-light-blue: #4A8DC6;
-  --chart-light-blue3: #B6D1E8;
-  --chart-blue: #0094FF;
-  --chart-light-yellow2: #FFF6DF;
-  --chart-yellow2: #FFDA7D;
-  --chart-black: #000000;
-  --chart-grey: #BABABA;
-  --chart-dark-grey: #333333;
-  --chart-label-color: #333333;
   border: 1px solid #dddddd;
   padding: 10px;
 }
@@ -11058,6 +11041,40 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   position: relative;
   z-index: 1;
   min-height: 220px;
+}
+
+.highcharts-container {
+  --chart-orange: #FFBD41;
+  --chart-dark-orange: #DE8500;
+  --chart-dark-red: #762624;
+  --chart-red: #D9534F;
+  --chart-rose: #FF9996;
+  --chart-dark-green: #467B46;
+  --chart-green: #69C26A;
+  --chart-light-green: #DAF0DA;
+  --chart-light-blue: #4A8DC6;
+  --chart-light-blue3: #B6D1E8;
+  --chart-blue: #0094FF;
+  --chart-light-yellow2: #FFF6DF;
+  --chart-yellow2: #FFDA7D;
+  --chart-black: #000000;
+  --chart-grey: #BABABA;
+  --chart-dark-grey: #333333;
+  --chart-label-color: #333333;
+  --highcharts-background-color: _brand-colors(_transparent);
+  --highcharts-neutral-color-100: _brand-color(_white);
+  --highcharts-neutral-color-80: _brand-color(_grey2);
+  --highcharts-neutral-color-60: _brand-color(_grey);
+  --highcharts-neutral-color-40: _brand-color(_grey);
+  --highcharts-neutral-color-20: _brand-color(_grey4);
+  --highcharts-neutral-color-10: _brand-color(_grey4);
+  --highcharts-neutral-color-5: _brand-color(_dark-grey);
+  --highcharts-neutral-color-3: _brand-color(_dark-grey);
+  --highcharts-highlight-color-100: _brand-color(_light-blue3);
+  --highcharts-highlight-color-80: _brand-color(_light-blue);
+  --highcharts-highlight-color-60: _brand-color(_light-blue);
+  --highcharts-highlight-color-20: _brand-color(_light-blue);
+  --highcharts-highlight-color-10: _brand-color(_grey4);
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
