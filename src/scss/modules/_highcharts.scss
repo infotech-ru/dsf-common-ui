@@ -1,0 +1,968 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* Highcgarts                                                                 */
+/* path: dsf-common-ui/src/scss/modules/_highcharts.scss                      */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
+.highcharts{
+  $this: &;
+  &-container {
+    // position: relative;
+    // overflow: hidden;
+    // width: 100%;
+    // height: 100%;
+    // text-align: left;
+    // line-height: normal;
+    z-index: 0; /* #1072 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    // font-family: Helvetica, Arial, sans-serif;
+    // font-size: 1rem;
+    // user-select: none;
+    // touch-action: manipulation;
+    // outline: none;
+  }
+  &-root {
+    display: block;
+    text {
+      stroke-width: 0;
+    }
+  }
+  // &-strong {
+  //     font-weight: bold;
+  // }
+  // &-emphasized {
+  //     font-style: italic;
+  // }
+  &-anchor {
+    cursor: pointer;
+  }
+  &-background {
+    // fill: var(--chart-transparent);
+    fill: transparent;
+  }
+  &-plot-border,
+  &-plot-background {
+    fill: none;
+  }
+  &-label-box {
+    fill: none;
+  }
+  &-label text {
+    fill: var(--chart-grey2);
+    // font-size: 0.8em;
+  }
+  &-tracker-line {
+    stroke-linejoin: round;
+    stroke: rgba(192, 192, 192, 0.0001);
+    stroke-width: 22;
+    fill: none;
+  }
+  &-tracker-area {
+    fill: rgba(192, 192, 192, 0.0001);
+    stroke-width: 0;
+  }
+  &-title {
+    fill: var(--chart-grey2);
+    // font-size: 1.2em;
+    // font-weight: bold;
+  }
+  &-subtitle {
+    fill: var(--chart-grey);
+    // font-size: 0.8em;
+    .highcharts_pieHalf &{
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  &-axis-line {
+    fill: none;
+    stroke: var(--chart-grey2);
+  }
+  &-yaxis .highcharts-axis-line {
+    stroke-width: 0;
+  }
+  &-axis-title {
+    fill: var(--chart-grey);
+    // font-size: 0.8em;
+  }
+  &-axis-labels {
+    fill: var(--chart-grey4);
+    cursor: default;
+    font-size: rem(10);
+    // font-size: 0.8em;
+  }
+  &-grid-line {
+    fill: none;
+    stroke: var(--chart-grey2);
+  }
+  &-xaxis-grid .highcharts-grid-line {
+    stroke-width: 0;
+  }
+  &-tick {
+    stroke: var(--chart-grey2);
+  }
+  &-yaxis .highcharts-tick {
+    stroke-width: 0;
+  }
+  &-minor-grid-line {
+    stroke: var(--chart-grey2);
+  }
+  &-crosshair-thin {
+    stroke-width: 1px;
+    stroke: var(--chart-grey4);
+  }
+  &-crosshair-category {
+    stroke: var(--chart-light-blue);
+    stroke-opacity: 0.25;
+  }
+  &-credits {
+    cursor: pointer;
+    fill: var(--chart-grey);
+    // font-size: 0.6em;
+    // transition: fill 250ms, font-size 250ms;
+    &:hover {
+      fill: var(--chart-white);
+      // font-size: 0.7em;
+    }
+  }
+  &-tooltip {
+    cursor: default;
+    pointer-events: none;
+    // white-space: nowrap;
+    // transition: stroke 150ms;
+    #{$this}-tracker {
+      fill: none;
+      stroke: none;
+    }
+    text {
+      // fill: var(--chart-grey2);
+      // fill: _brand-palette(tooltip_color);
+      fill: _brand-palette(popover_color);
+      // font-size: 0.8em;
+    }
+    // .highcharts-header {
+    //     font-size: 0.8em;
+    // }
+    &-box {
+      // stroke-width: 1px;
+      // fill: var(--chart-transparent);
+      // fill: _brand-palette(tooltip_bgc);
+      fill: _brand-palette(popover_bgc);
+      stroke-width: 0;
+      .highcharts-label-box {
+        fill: var(--chart-transparent);
+      }
+    }
+  }
+  &-selection-marker {
+    fill: var(--chart-light-blue);
+    fill-opacity: 0.25;
+  }
+  &-graph {
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  &-empty-series {
+    stroke-width: 1px;
+    fill: none;
+    stroke: var(--chart-grey4);
+  }
+  &-state-hover .highcharts-graph {
+    stroke-width: 3;
+  }
+  &-point-inactive {
+    opacity: 0.2;
+    transition: opacity 50ms; /* quick in */
+  }
+  &-series-inactive {
+    opacity: 0.2;
+    transition: opacity 50ms; /* quick in */
+  }
+  &-state-hover path {
+    transition: stroke-width 50ms; /* quick in */
+  }
+  &-state-normal path {
+    transition: stroke-width 250ms; /* slow out */
+  }
+  &-area {
+    fill-opacity: 0.75;
+    stroke-width: 0;
+  }
+  &-markers {
+    stroke-width: 1px;
+    stroke: var(--chart-transparent);
+  }
+  &-a11y-markers-hidden #{$this}-point:not(#{$this}-point-hover,
+    #{$this}-a11y-marker-visible),
+  &-a11y-marker-hidden {
+    opacity: 0;
+  }
+  &-point {
+    stroke-width: 1px;
+  }
+  &-dense-data #{$this}-point {
+    stroke-width: 0;
+  }
+  // &-data-label text,
+  // text.highcharts-data-label {
+  //     font-size: 0.7em;
+  //     font-weight: bold;
+  // }
+  &-data-label-box {
+    fill: none;
+    stroke-width: 0;
+  }
+  &-data-label text,
+  text.highcharts-data-label {
+    fill: var(--chart-grey4);
+    font-size: 11px;
+  }
+  &-data-label-connector {
+    fill: none;
+  }
+  &-data-label-hidden {
+    pointer-events: none;
+  }
+  &-halo {
+    fill-opacity: 0.25;
+    stroke-width: 0;
+  }
+  &-series-label text {
+    fill: inherit;
+    // font-weight: bold;
+  }
+  &-series:not(.highcharts-pie-series) .highcharts-point-select,
+  &-markers .highcharts-point-select {
+    fill: var(--chart-grey4);
+    stroke: var(--chart-white);
+  }
+  &-column-series path.highcharts-point,
+  &-bar-series path.highcharts-point {
+    /* path to prevent stroke on 3D columns and bars */
+    stroke: var(--chart-transparent);
+  }
+  &-column-series #{$this}-point {
+    transition: fill-opacity 250ms;
+  }
+  &-column-series #{$this}-point-hover {
+    fill-opacity: 0.75;
+    transition: fill-opacity 50ms;
+  }
+  &-pie-series #{$this}-point {
+    stroke-linejoin: round;
+    stroke: var(--chart-transparent);
+  }
+  &-pie-series #{$this}-point-hover {
+    fill-opacity: 0.75;
+    transition: fill-opacity 50ms;
+  }
+  &-funnel-series {
+    .highcharts-point {
+      stroke-linejoin: round;
+      stroke: var(--chart-transparent);
+      &-hover {
+        fill-opacity: 0.75;
+        transition: fill-opacity 50ms;
+      }
+      &-select {
+        fill: inherit;
+        stroke: inherit;
+      }
+    }
+  }
+  &-pyramid-series {
+    .highcharts-point {
+      stroke-linejoin: round;
+      stroke: var(--chart-transparent);
+      &-hover {
+        fill-opacity: 0.75;
+        transition: fill-opacity 50ms;
+      }
+      &-select {
+        fill: inherit;
+        stroke: inherit;
+      }
+    }
+  }
+  &-solidgauge-series .highcharts-point {
+    stroke-width: 0;
+  }
+  &-treemap-series {
+    .highcharts-point {
+      stroke-width: 1px;
+      stroke: var(--chart-grey4);
+      transition: stroke 250ms, fill 250ms, fill-opacity 250ms;
+      &-hover {
+        stroke: var(--chart-grey);
+        transition: stroke 25ms, fill 25ms, fill-opacity 25ms;
+      }
+    }
+    #{$this}-above-level {
+      display: none;
+    }
+    #{$this}-internal-node {
+      fill: none;
+      &-interactive {
+        fill-opacity: 0.15;
+        cursor: pointer;
+        &:hover {
+          fill-opacity: 0.75;
+        }
+      }
+    }
+  }
+  &-vector-series .highcharts-point {
+    fill: none;
+    stroke-width: 2px;
+  }
+  &-windbarb-series .highcharts-point {
+    fill: none;
+    stroke-width: 2px;
+  }
+  &-lollipop-stem {
+    stroke: var(--chart-white);
+  }
+  &-focus-border {
+    fill: none;
+    stroke-width: 2px;
+  }
+  &-legend-item-hidden #{$this}-focus-border {
+    fill: none !important;
+  }
+  &-legend-box {
+    fill: none;
+    stroke-width: 0;
+  }
+  &-legend-item {
+    > text {
+      fill: var(--chart-grey4);
+      // font-weight: bold;
+      // font-size: 0.8em;
+      cursor: pointer;
+      stroke-width: 0;
+    }
+    // &:hover text {
+    //     fill: var(--chart-white);
+    // }
+    &-hidden * {
+      fill: var(--chart-grey) !important;
+      stroke: var(--chart-grey) !important;
+      transition: fill 250ms;
+      text-decoration: line-through;
+    }
+  }
+  &-legend-nav-active {
+    fill: var(--chart-light-blue3);
+    cursor: pointer;
+  }
+  &-legend-nav-inactive {
+    fill: var(--chart-grey4);
+  }
+  &-legend-title-box {
+    fill: none;
+    stroke-width: 0;
+  }
+  &-bubble-legend{
+    &-symbol {
+      stroke-width: 2;
+      fill-opacity: 0.5;
+    }
+    &-connectors {
+      stroke-width: 1;
+    }
+    &-labels {
+      fill: var(--chart-grey2);
+      // font-size: 0.7em;
+    }
+  }
+  &-loading {
+    position: absolute;
+    background-color: var(--chart-transparent);
+    opacity: 0.5;
+    // text-align: center;
+    z-index: 10;
+    transition: opacity 250ms;
+    &-hidden {
+      height: 0 !important;
+      opacity: 0;
+      overflow: hidden;
+      transition: opacity 250ms, height 250ms step-end;
+    }
+    &-inner {
+      // font-weight: bold;
+      position: relative;
+      top: 45%;
+    }
+  }
+  &-plot-band,
+  &-pane {
+    fill: var(--chart-white);
+    fill-opacity: 0.05;
+  }
+  &-plot-line {
+    fill: none;
+    stroke: var(--chart-grey);
+    stroke-width: 1px;
+  }
+  // &-plot-line-label {
+  //     font-size: 0.8em;
+  // }
+  /* Highcharts More and modules */
+  &-boxplot-box {
+    fill: var(--chart-transparent);
+  }
+  &-boxplot-median {
+    stroke-width: 2px;
+  }
+  &-bubble-series .highcharts-point {
+    fill-opacity: 0.5;
+  }
+  &-errorbar-series .highcharts-point {
+    stroke: var(--chart-white);
+  }
+  &-gauge-series .highcharts-data-label-box {
+    stroke: var(--chart-grey4);
+    stroke-width: 1px;
+  }
+  &-gauge-series .highcharts-dial {
+    fill: var(--chart-white);
+    stroke-width: 0;
+  }
+  &-polygon-series .highcharts-graph {
+    fill: inherit;
+    stroke-width: 0;
+  }
+  &-waterfall-series .highcharts-graph {
+    stroke: var(--chart-grey2);
+    stroke-dasharray: 1, 3;
+  }
+  &-sankey-series .highcharts-point {
+    stroke-width: 0;
+  }
+  &-sankey-series .highcharts-link {
+    transition: fill 250ms, fill-opacity 250ms;
+    fill-opacity: 0.5;
+  }
+  &-sankey-series .highcharts-point-hover.highcharts-link {
+    transition: fill 50ms, fill-opacity 50ms;
+    fill-opacity: 1;
+  }
+  &-venn-series .highcharts-point {
+    fill-opacity: 0.75;
+    stroke: var(--chart-grey4);
+    transition: stroke 250ms, fill-opacity 250ms;
+  }
+  &-venn-series .highcharts-point-hover {
+    fill-opacity: 1;
+    stroke: var(--chart-grey4);
+  }
+  &-timeline-series .highcharts-graph {
+    stroke: var(--chart-grey4);
+  }
+  &-navigator{
+    &-mask {
+      &-outside {
+        fill-opacity: 0;
+      }
+      &-inside {
+        fill: var(--chart-light-blue); /* navigator.maskFill option */
+        fill-opacity: 0.25;
+        cursor: ew-resize;
+      }
+    }
+    &-outline {
+      stroke: var(--chart-grey);
+      fill: none;
+    }
+    &-handle {
+      stroke: var(--chart-grey);
+      fill: var(--chart-dark-grey);
+      cursor: ew-resize;
+    }
+    &-series {
+      fill: var(--chart-light-blue);
+      stroke: var(--chart-light-blue);
+    }
+    &-series .highcharts-graph {
+      stroke-width: 1px;
+    }
+    &-series .highcharts-area {
+      fill-opacity: 0.05;
+    }
+    &-xaxis .highcharts-axis-line {
+      stroke-width: 0;
+    }
+    &-xaxis .highcharts-grid-line {
+      stroke-width: 1px;
+      stroke: var(--chart-grey4);
+    }
+    &-xaxis.highcharts-axis-labels {
+      fill: var(--chart-white);
+      // font-size: 0.7em;
+      opacity: 0.6;
+    }
+    &-yaxis .highcharts-grid-line {
+      stroke-width: 0;
+    }
+  }
+  &-scrollbar{
+    &-thumb {
+      fill: var(--chart-grey4);
+      stroke: var(--chart-grey4);
+      stroke-width: 0;
+    }
+    &-button {
+      fill: var(--chart-grey4);
+      stroke: var(--chart-grey4);
+      stroke-width: 1px;
+    }
+    &-arrow {
+      fill: var(--chart-grey);
+    }
+    &-rifles {
+      stroke: none;
+      stroke-width: 1px;
+    }
+    &-track {
+      fill: rgba(255, 255, 255, 0.001);
+      stroke: var(--chart-grey4);
+      stroke-width: 1px;
+    }
+  }
+  &-button {
+    fill: var(--chart-dark-grey);
+    stroke: var(--chart-grey4);
+    cursor: default;
+    stroke-width: 1px;
+    transition: fill 250ms;
+    text {
+      fill: var(--chart-grey2);
+      // font-size: 0.8em;
+    }
+    &-hover {
+      transition: fill 0ms;
+      fill: var(--chart-grey4);
+      stroke: var(--chart-grey4);
+    }
+    &-hover text {
+      fill: var(--chart-grey2);
+    }
+    &-pressed {
+      font-weight: bold;
+      fill: var(--chart-grey4);
+      stroke: var(--chart-grey4);
+    }
+    &-pressed text {
+      fill: var(--chart-grey2);
+      // font-weight: bold;
+    }
+    &-disabled text {
+      fill: var(--chart-grey2);
+    }
+    &-box{
+      fill: var(--chart-transparent);
+    }
+  }
+  &-range{
+    &-selector-buttons .highcharts-button {
+      stroke-width: 0;
+    }
+    &-label {
+      rect {
+        fill: none;
+      }
+      text {
+        fill: var(--chart-grey);
+      }
+    }
+    &-input {
+      stroke-width: 1px;
+      stroke: var(--chart-grey4);
+      rect {
+        fill: none;
+      }
+      text {
+        fill: var(--chart-grey2);
+        // font-size: 0.8em;
+      }
+    }
+  }
+  &-crosshair-label {
+    text {
+      fill: var(--chart-transparent);
+      // font-size: 1.7em;
+    }
+    .highcharts-label-box {
+      fill: inherit;
+    }
+  }
+  &-candlestick-series {
+    .highcharts-point {
+      stroke: var(--chart-white);
+      stroke-width: 1px;
+    }
+    .highcharts-point-up {
+      fill: var(--chart-transparent);
+    }
+  }
+  &-hollowcandlestick-series {
+    .highcharts-point-down {
+      fill: var(--chart-red);
+      stroke: var(--chart-red);
+    }
+    .highcharts-point-down-bearish-up {
+      fill: var(--chart-green);
+      stroke: var(--chart-green);
+    }
+    .highcharts-point-up {
+      fill: transparent;
+      stroke: var(--chart-green);
+    }
+  }
+  &-ohlc-series .highcharts-point-hover {
+    stroke-width: 3px;
+  }
+  &-flags-series{
+    .highcharts-point {
+      .highcharts-label-box {
+        stroke: var(--chart-grey);
+        fill: var(--chart-transparent);
+        transition: fill 250ms;
+      }
+      &-hover .highcharts-label-box {
+        stroke: var(--chart-white);
+        fill: var(--chart-light-blue);
+      }
+      text {
+        fill: var(--chart-white);
+        // font-size: 0.9em;
+        // font-weight: bold;
+      }
+    }
+  }
+  &-map-series {
+    .highcharts-point {
+      transition: fill 500ms, fill-opacity 500ms, stroke-width 250ms;
+      stroke: var(--chart-grey4);
+      stroke-width: inherit;
+    }
+    .highcharts-point-hover {
+      transition: fill 0ms, fill-opacity 0ms;
+      fill-opacity: 0.5;
+    }
+  }
+  &-mapline-series .highcharts-point {
+    fill: none;
+  }
+  &-heatmap-series .highcharts-point {
+    stroke-width: 0;
+  }
+  &-map-navigation {
+    // font-size: 1.3em;
+    // font-weight: bold;
+    // text-align: center;
+    &.highcharts-button {
+      fill: var(--chart-transparent);
+      stroke: var(--chart-grey4);
+    }
+    &.highcharts-button:hover {
+      fill: var(--chart-grey4);
+    }
+    &.highcharts-button .highcharts-button-symbol {
+      stroke-width: 2px;
+    }
+  }
+  &-mapview-inset-border {
+    stroke: var(--chart-grey4);
+    stroke-width: 1px;
+    fill: none;
+  }
+  &-coloraxis {
+    stroke-width: 0;
+    &-marker {
+      fill: var(--chart-grey);
+    }
+  }
+  &-null-point {
+    fill: var(--chart-dark-grey);
+  }
+  &-3d-frame {
+    fill: transparent;
+  }
+  &-contextbutton {
+    cursor: pointer;
+    fill: var(--chart-transparent);
+    stroke: none;
+    stroke-linecap: round;
+    // &:hover {
+    //     fill: var(--chart-grey4);
+    //     stroke: var(--chart-grey4);
+    // }
+  }
+  &-button-symbol {
+    stroke: var(--chart-dark-grey);
+    stroke-width: 1px;
+  }
+  &-menu {
+    // border: none;
+    // background: var(--chart-white);
+    // box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.35);
+    @extend %dropdown-menu;
+    display: block;
+    left: auto;
+    position: relative;
+    top: auto;
+    // border-radius: 3px;
+    // padding: 0.5em;
+    // box-shadow: 3px 3px 10px #888888;
+    &-item {
+      // background: none;
+      // border-radius: 3px;
+      // color: var(--chart-grey2);
+      @extend %dropdown__link;
+      @extend %dropdown__linkColors;
+      cursor: pointer;
+      // font-size: 0.8em;
+      list-style-type: none;
+      // padding: 0.5em;
+      transition: background 250ms, color 250ms;
+      &:hover {
+        // background: var(--chart-dark-grey);
+        @extend %dropdown__linkHover;
+      }
+    }
+  }
+  &-breadcrumbs{
+    &-button {
+      fill: none;
+      stroke-width: 0;
+      cursor: pointer;
+    }
+    &-separator {
+      fill: var(--chart-grey);
+    }
+  }
+  &-drilldown-point {
+    cursor: pointer;
+  }
+  &-no-data text {
+    // font-weight: bold;
+    // font-size: 0.8em;
+    fill: var(--chart-grey);
+  }
+  &-axis-resizer {
+    cursor: ns-resize;
+    stroke: var(--chart-white);
+    stroke-width: 2px;
+  }
+  &-bullet-target {
+    stroke-width: 0;
+  }
+  &-lineargauge-target {
+    stroke-width: 1px;
+    stroke: var(--chart-grey2);
+  }
+  &-lineargauge-target-line {
+    stroke-width: 1px;
+    stroke: var(--chart-grey2);
+  }
+  &-annotation-label-box {
+    stroke-width: 1px;
+    stroke: var(--chart-white);
+    fill: var(--chart-white);
+    fill-opacity: 0.75;
+  }
+  &-annotation-label text {
+    fill: var(--chart-grey4);
+    // font-size: 0.8em;
+  }
+  &-a11y-proxy{
+    &-element {
+      border-width: 0;
+      background-color: transparent;
+      cursor: pointer;
+      outline: none;
+      opacity: 0.001;
+      z-index: 999;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      display: block;
+      position: absolute;
+    }
+    &-group li {
+      list-style: none;
+    }
+    &-container,
+    &-container-before,
+    &-container-after {
+      display: none;
+      position: absolute;
+      white-space: nowrap;
+    }
+  }
+  &-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(1px, 1px, 1px, 1px);
+    margin-top: -3px;
+    opacity: 0.01;
+  }
+  &-a11y-invisible {
+    visibility: hidden;
+  }
+  &-treegrid-node-collapsed,
+  &-treegrid-node-expanded {
+    cursor: pointer;
+  }
+  &-point-connecting-path {
+    fill: none;
+  }
+  &-grid-axis {
+    .highcharts-tick {
+      stroke: var(--chart-grey4);
+      stroke-width: 1px;
+    }
+    .highcharts-axis-line {
+      stroke: var(--chart-grey4);
+      stroke-width: 1px;
+    }
+  }
+}
+
+div.highcharts-tooltip {
+  filter: none;
+  // font-size: 0.8em;
+}
+
+g.highcharts-series,
+.highcharts-point,
+.highcharts-markers,
+.highcharts-data-labels {
+  transition: opacity 250ms;
+}
+
+.highcharts-legend-series-active g.highcharts-series:not(.highcharts-series-hover),
+.highcharts-legend-point-active .highcharts-point:not(.highcharts-point-hover, .highcharts-point-select),
+.highcharts-legend-series-active .highcharts-markers:not(.highcharts-series-hover),
+.highcharts-legend-series-active .highcharts-data-labels:not(.highcharts-series-hover) {
+  opacity: 0.2;
+}
+
+circle.highcharts-legend-nav-active,
+circle.highcharts-legend-nav-inactive {
+  fill: rgba(192, 192, 192, 0.0001);
+}
+
+input.highcharts-range-selector {
+  position: absolute;
+  border: 0;
+  width: 1px; /* Chrome needs a pixel to see it */
+  height: 1px;
+  padding: 0;
+  text-align: center;
+  left: -9em; /* #4798 */
+}
+
+.highcharts-drilldown-data-label text,
+text.highcharts-drilldown-data-label,
+.highcharts-drilldown-axis-label {
+  cursor: pointer;
+  fill: var(--chart-light-blue3);
+  // font-weight: bold;
+  text-decoration: underline;
+}
+
+g.highcharts-series,
+.highcharts-markers,
+.highcharts-point {
+  outline: none;
+}
+
+/************************************* наши цвета *****************************************/
+
+.highcharts-color-0 {
+  fill: var(--chart-blue);
+  stroke: var(--chart-blue);
+}
+
+.highcharts-color-1 {
+  fill: var(--chart-green);
+  stroke: var(--chart-green);
+}
+
+.highcharts-color-2 {
+  fill: var(--chart-red);
+  stroke: var(--chart-red);
+}
+
+.highcharts-color-3 {
+  fill: var(--chart-light-blue);
+  stroke: var(--chart-light-blue);
+}
+
+.highcharts-color-4 {
+  fill: var(--chart-orange);
+  stroke: var(--chart-orange);
+}
+
+.highcharts-color-5 {
+  fill: var(--chart-rose);
+  stroke: var(--chart-rose);
+}
+
+.highcharts-color-6 {
+  fill: var(--chart-light-yellow2);
+  stroke: var(--chart-light-yellow2);
+}
+
+.highcharts-color-7 {
+  fill: var(--chart-dark-green);
+  stroke: var(--chart-dark-green);
+}
+
+.highcharts-color-8 {
+  fill: var(--chart-grey);
+  stroke: var(--chart-grey);
+}
+
+.highcharts-color-9 {
+  fill: var(--chart-light-green);
+  stroke: var(--chart-light-green);
+}
+
+.highcharts-color-10 {
+  fill: var(--chart-dark-grey);
+  stroke: var(--chart-dark-grey);
+}
+
+.highcharts-color-11 {
+  fill: var(--chart-black);
+  stroke: var(--chart-black);
+}
+
+.highcharts-color-12 {
+  fill: var(--chart-dark-red);
+  stroke: var(--chart-dark-red);
+}
+
+.highcharts-color-13 {
+  fill: var(--chart-dark-orange);
+  stroke: var(--chart-dark-orange);
+}
+
+.highcharts-color-14 {
+  fill: var(--chart-yellow2);
+  stroke: var(--chart-yellow2);
+}
+
+.highcharts-color-1000 {
+  fill: transparent;
+  stroke: transparent;
+}
