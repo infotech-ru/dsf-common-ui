@@ -7030,10 +7030,6 @@ h6, .h6 {
   position: relative;
   top: 45%;
 }
-.highcharts-plot-band, .highcharts-pane {
-  fill: var(--chart-white);
-  fill-opacity: 0.05;
-}
 .highcharts-plot-line {
   fill: none;
   stroke: var(--chart-grey);
@@ -7054,10 +7050,6 @@ h6, .h6 {
 .highcharts-gauge-series .highcharts-data-label-box {
   stroke: var(--chart-grey4);
   stroke-width: 1px;
-}
-.highcharts-gauge-series .highcharts-dial {
-  fill: var(--chart-white);
-  stroke-width: 0;
 }
 .highcharts-polygon-series .highcharts-graph {
   fill: inherit;
@@ -7393,6 +7385,9 @@ h6, .h6 {
 .highcharts-grid-axis .highcharts-axis-line {
   stroke: var(--chart-grey4);
   stroke-width: 1px;
+}
+.highcharts-radial-axis-grid .highcharts-grid-line {
+  stroke: none;
 }
 
 div.highcharts-tooltip {

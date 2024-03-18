@@ -398,11 +398,11 @@
       top: 45%;
     }
   }
-  &-plot-band,
-  &-pane {
-    fill: var(--chart-white);
-    fill-opacity: 0.05;
-  }
+  // &-plot-band,  // ломает графики gwm.autocrm.ru/service/dashboard/dealer
+  // &-pane {
+  //   fill: var(--chart-white);
+  //   fill-opacity: 0.05;
+  // }
   &-plot-line {
     fill: none;
     stroke: var(--chart-grey);
@@ -428,10 +428,10 @@
     stroke: var(--chart-grey4);
     stroke-width: 1px;
   }
-  &-gauge-series .highcharts-dial {
-    fill: var(--chart-white);
-    stroke-width: 0;
-  }
+  // &-gauge-series .highcharts-dial { // ломает графики gwm.autocrm.ru/service/dashboard/dealer
+  //   fill: var(--chart-white);
+  //   stroke-width: 0;
+  // }
   &-polygon-series .highcharts-graph {
     fill: inherit;
     stroke-width: 0;
@@ -834,6 +834,9 @@
       stroke: var(--chart-grey4);
       stroke-width: 1px;
     }
+  }
+  &-radial-axis-grid .highcharts-grid-line {
+    stroke: none;
   }
 }
 
