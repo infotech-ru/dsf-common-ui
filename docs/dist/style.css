@@ -6809,7 +6809,8 @@ h6, .h6 {
 }
 .highcharts-tooltip-box {
   fill: #ffffff;
-  stroke-width: 0;
+  stroke-width: 1;
+  stroke: rgba(0, 0, 0, 0.25);
 }
 .highcharts-tooltip-box .highcharts-label-box {
   fill: var(--chart-transparent);
