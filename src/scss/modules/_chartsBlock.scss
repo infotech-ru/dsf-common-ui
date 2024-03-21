@@ -52,26 +52,26 @@
   }
 }
 .highcharts-container {
-  #{--chart-orange}:                   _brand-colors(_orange);
-  #{--chart-dark-orange}:              _brand-colors(_dark-orange);
-  #{--chart-dark-red}:                 _brand-colors(_dark-red);
-  #{--chart-red}:                      _brand-colors(_red);
-  #{--chart-rose}:                     _brand-colors(_rose);
-  #{--chart-dark-green}:               _brand-colors(_dark-green);
-  #{--chart-green}:                    _brand-colors(_green);
-  #{--chart-light-green}:              _brand-colors(_light-green);
-  #{--chart-light-blue}:               _brand-colors(_light-blue);
-  #{--chart-light-blue3}:              _brand-colors(_light-blue3);
   #{--chart-blue}:                     _brand-colors(_vibrant-blue);
+  #{--chart-green}:                    _brand-colors(_green);
+  #{--chart-red}:                      _brand-colors(_red);
+  #{--chart-light-blue}:               _brand-colors(_light-blue);
+  #{--chart-orange}:                   _brand-colors(_orange);
+  #{--chart-rose}:                     _brand-colors(_rose);
   #{--chart-light-yellow2}:            _brand-colors(_light-yellow2);
-  #{--chart-yellow2}:                  _brand-colors(_yellow2);
-  #{--chart-black}:                    _brand-colors(_black);
+  #{--chart-dark-green}:               _brand-colors(_dark-green);
   #{--chart-grey}:                     _brand-colors(_grey);
+  #{--chart-light-green}:              _brand-colors(_light-green);
   #{--chart-dark-grey}:                _brand-colors(_dark-grey);
-  #{--chart-transparent}:              _brand-colors(_transparent);
-  #{--chart-white}:                    _brand-colors(_white);
+  #{--chart-black}:                    _brand-colors(_black);
+  #{--chart-dark-red}:                 _brand-colors(_dark-red);
+  #{--chart-dark-orange}:              _brand-colors(_dark-orange);
+  #{--chart-yellow2}:                  _brand-colors(_yellow2);
+  #{--chart-light-blue3}:              _brand-colors(_light-blue3);
   #{--chart-grey2}:                    _brand-colors(_grey2);
   #{--chart-grey4}:                    _brand-colors(_grey4);
+  #{--chart-white}:                    _brand-colors(_white);
+  #{--chart-transparent}:              _brand-colors(_transparent);
   
   #{--chart-label-color}:              _brand-colors(_dark-grey);
 

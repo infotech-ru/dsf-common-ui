@@ -11866,26 +11866,26 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 
 .highcharts-container {
-  --chart-orange: #FFBD41;
-  --chart-dark-orange: #DE8500;
-  --chart-dark-red: #762624;
-  --chart-red: #D9534F;
-  --chart-rose: #FF9996;
-  --chart-dark-green: #467B46;
-  --chart-green: #69C26A;
-  --chart-light-green: #DAF0DA;
-  --chart-light-blue: #4A8DC6;
-  --chart-light-blue3: #B6D1E8;
   --chart-blue: #0094FF;
+  --chart-green: #69C26A;
+  --chart-red: #D9534F;
+  --chart-light-blue: #4A8DC6;
+  --chart-orange: #FFBD41;
+  --chart-rose: #FF9996;
   --chart-light-yellow2: #FFF6DF;
-  --chart-yellow2: #FFDA7D;
-  --chart-black: #000000;
+  --chart-dark-green: #467B46;
   --chart-grey: #BABABA;
+  --chart-light-green: #DAF0DA;
   --chart-dark-grey: #333333;
-  --chart-transparent: #00000000;
-  --chart-white: #ffffff;
+  --chart-black: #000000;
+  --chart-dark-red: #762624;
+  --chart-dark-orange: #DE8500;
+  --chart-yellow2: #FFDA7D;
+  --chart-light-blue3: #B6D1E8;
   --chart-grey2: #dddddd;
   --chart-grey4: #777777;
+  --chart-white: #ffffff;
+  --chart-transparent: #00000000;
   --chart-label-color: #333333;
 }
 
@@ -13038,7 +13038,7 @@ tbody.collapse.in {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* HELPER TOOLS                                                               */
-/* path: dsf-common-ui/src/scss/content/_helperTools.scss                     */
+/* path: dsf-common-ui/src/scss/helpers/_tools.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .img-responsive {
