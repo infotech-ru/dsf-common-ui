@@ -13906,6 +13906,86 @@ tbody.collapse.in {
   padding-left: 1.875rem;
 }
 
+.padding-40 {
+  padding: 2.5rem;
+}
+
+.mobile-view .padding-40__mobile {
+  padding: 2.5rem;
+}
+
+.pt-40 {
+  padding-top: 2.5rem;
+}
+
+.mobile-view .pt-40__mobile {
+  padding-top: 2.5rem;
+}
+
+.pr-40 {
+  padding-right: 2.5rem;
+}
+
+.mobile-view .pr-40__mobile {
+  padding-right: 2.5rem;
+}
+
+.pb-40 {
+  padding-bottom: 2.5rem;
+}
+
+.mobile-view .pb-40__mobile {
+  padding-bottom: 2.5rem;
+}
+
+.pl-40 {
+  padding-left: 2.5rem;
+}
+
+.mobile-view .pl-40__mobile {
+  padding-left: 2.5rem;
+}
+
+.padding-50 {
+  padding: 3.125rem;
+}
+
+.mobile-view .padding-50__mobile {
+  padding: 3.125rem;
+}
+
+.pt-50 {
+  padding-top: 3.125rem;
+}
+
+.mobile-view .pt-50__mobile {
+  padding-top: 3.125rem;
+}
+
+.pr-50 {
+  padding-right: 3.125rem;
+}
+
+.mobile-view .pr-50__mobile {
+  padding-right: 3.125rem;
+}
+
+.pb-50 {
+  padding-bottom: 3.125rem;
+}
+
+.mobile-view .pb-50__mobile {
+  padding-bottom: 3.125rem;
+}
+
+.pl-50 {
+  padding-left: 3.125rem;
+}
+
+.mobile-view .pl-50__mobile {
+  padding-left: 3.125rem;
+}
+
 .gap-0 {
   gap: 0rem;
 }

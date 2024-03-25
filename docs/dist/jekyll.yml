@@ -322,6 +322,14 @@ paddingsizes {
   30: 0;
 }
 
+paddingsizes {
+  40: 0;
+}
+
+paddingsizes {
+  50: 0;
+}
+
 gapsizes {
   0: 0;
 }
