@@ -7437,7 +7437,11 @@ g.highcharts-series,
   outline: none;
 }
 
-/************************************* наши цвета *****************************************/
+.highcharts-color-1000 {
+  fill: transparent;
+  stroke: transparent;
+}
+
 .highcharts-color-0 {
   fill: var(--chart-blue);
   stroke: var(--chart-blue);
@@ -7511,11 +7515,6 @@ g.highcharts-series,
 .highcharts-color-14 {
   fill: var(--chart-yellow2);
   stroke: var(--chart-yellow2);
-}
-
-.highcharts-color-1000 {
-  fill: transparent;
-  stroke: transparent;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
