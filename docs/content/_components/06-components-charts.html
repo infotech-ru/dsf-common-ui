@@ -6,28 +6,31 @@ anchor: components-charts
 order: 6
 ---
 
-Для диаграм подключен скрипт <a href="https://www.highcharts.com/docs/getting-started/your-first-chart">highcharts.js</a>
-
-Оформления график: в шапку помещается название и по необходимости подзаголовок. В тело `chartsBlock_body` помещаем сам график с рекомнедуемыми предустановками:
-использовать пустые значения для класса и для заголовка `title`, а также обязательные стили для графика - см. пример.
-В качестве цвета `color` использовать переменные из списка:
-<div class="row">
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-orange)"></span></div> - `var(--chart-orange)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-dark-orange)"></span></div> - `var(--chart-dark-orange)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-dark-red)"></span></div> - `var(--chart-dark-red)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-red)"></span></div> - `var(--chart-red)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-rose)"></span></div> - `var(--chart-rose)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-dark-green)"></span></div> - `var(--chart-dark-green)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-green)"></span></div> - `var(--chart-green)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-light-green)"></span></div> - `var(--chart-light-green)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-light-blue)"></span></div> - `var(--chart-light-blue)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-blue)"></span></div> - `var(--chart-blue)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-light-yellow2)"></span></div> - `var(--chart-light-yellow2)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-yellow2)"></span></div> - `var(--chart-yellow2)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-black)"></span></div> - `var(--chart-black)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-grey)"></span></div> - `var(--chart-grey)`</div></div>
-<div class="col-sm-6"><div class="mb-10"><div class="d-inline-block chartsBlock"><span style="width:20px; height:20px;display:inline-block; background-color: var(--chart-dark-grey)"></span></div> - `var(--chart-dark-grey)`</div></div>
-</div>
+<p>Для диаграм подключен скрипт <a href="https://www.highcharts.com/docs/getting-started/your-first-chart">highcharts.js</a></p>
+<h3>Оформления блока с графиком</h3>
+<p>Блок родитель - <code class="language-plaintext highlighter-rouge">chartsBlock</code></p>
+<p>В блок с классом<code class="language-plaintext highlighter-rouge">chartsBlock_header</code> помещается название, иконка и другие информационные элементы (например, статусы).</p>
+<p>По необходимости вставляем текст в подзаголовок. <code class="language-plaintext highlighter-rouge">chartsBlock_headerSubtitles</code> По умолчанию, вставлять неразрывый пробел - <code class="language-plaintext highlighter-rouge">&nbsp;</code></p>
+<p>В блок <code class="language-plaintext highlighter-rouge">chartsBlock_body</code> помещаем сам график с рекомнедуемыми предустановками:</p>
+<h4>1. Без использования  <code class="language-plaintext highlighter-rouge">app\helpers\HighchartsHelper</code></h4>
+    <p>В качестве цвета <code class="language-plaintext highlighter-rouge">color</code> использовать переменные из списка:</p>
+<p>
+    <code class="language-plaintext highlighter-rouge">var(--chart-blue)`</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-green)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-red)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-light-blue)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-orange)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-rose)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-light-yellow2)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-dark-green)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-grey)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-light-green)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-dark-grey)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-black)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-dark-red)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-dark-orange)</code>,
+    <code class="language-plaintext highlighter-rouge">var(--chart-yellow2)</code>,
+</p>
 {% highlight html %}
 <div class="chartsBlock mb-10">
   <div class="chartsBlock_header">
@@ -143,3 +146,8 @@ order: 6
     </div>
   </div>
 </div>
+
+<h4>2. C использованием  <code class="language-plaintext highlighter-rouge">app\helpers\HighchartsHelper</code></h4>
+<p>По умолчанию используется -  <code class="language-plaintext highlighter-rouge">HighchartsHelper::chart(['chart' => ['type' => '...']</code></p>
+<p>Настроенные виды графиков (column, funnel, spline, pie, pieHalf...) смотреть в <code class="language-plaintext highlighter-rouge">app\helpers\HighchartsHelper.php</code> а их примеры использования в проекте в <code class="language-plaintext highlighter-rouge">docs/HighchartsHelper.md</code></p>
+<p>Цвета для каждого элемента графика переопределять в <code class="language-plaintext highlighter-rouge">'series' => ['colorIndex' => HighchartsHelper::COLOR_RED]</code></p>
