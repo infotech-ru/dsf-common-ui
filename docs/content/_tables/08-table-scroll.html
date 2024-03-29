@@ -1,0 +1,25 @@
+---
+Title: Duplicate Scroll
+menutitle: Верхний Скролл
+category: tables
+anchor: table-scroll
+order: 8
+---
+
+<p>
+<div class="alert alert-warning alert__attention">
+<h4>Устраревший скрипт. Вместо него использовать <code class="language-plaintext highlighter-rouge">DuplicateScroll()</code></h4>
+  Для вывода верхнего скрола:
+  - Добавлем контейнер:  {% highlight html %}<div id="topscrl"><div id="topfake"></div></div>{% endhighlight %}
+  
+  - Добавляем селектор контейнеру, где находится таблица, например <code class="language-plaintext highlighter-rouge">#js-tableScroll</code>.
+  
+  - Инициализируем скрипт с этим селектором - <code class="language-plaintext highlighter-rouge">TopScroll("#js-tableScroll", "#topscrl", "#topfake")</code> 
+  При необхоимости делаем <code class="language-plaintext highlighter-rouge">import {TopScroll} from "../TopScroll"</code>
+  </div>
+</p>
+
+<p>- Инициализируем скрипт - <code class="language-plaintext highlighter-rouge">DuplicateScroll();</code> (если надо делаем <code class="language-plaintext highlighter-rouge">import {DuplicateScroll} from "../DuplicateScroll")</code></p>
+<p>- Для обертки таблицы, которой нужен верхний скролл по умолчанию используется класс <code class="language-plaintext highlighter-rouge">js-tableScroll</code>. (Переопределить можно - <code class="language-plaintext highlighter-rouge">DuplicateScroll(false, ".js-другой_класс")</code>)</p>
+<p>- Добавлять контейнер со скроллом не нужно.</p>
+<p>Для вывода в консоль тестировачных данных использовать true первым значением -  <code class="language-plaintext highlighter-rouge">DuplicateScroll(true)</code></p>

@@ -1,0 +1,111 @@
+---
+Title: Модификации таблицы
+menutitle: Модификации таблицы
+category: tables
+anchor: table-modification
+order: 1
+---
+
+<p>Для выравнивания данных в ячейках используем классы <code class="language-plaintext highlighter-rouge">text-center</code>, <code class="language-plaintext highlighter-rouge">text-right</code> на нужные ячейки.</p>
+
+<p>Добавление границ в ячейках используем класс модификатор табилцы<code class="language-plaintext highlighter-rouge">table__border</code>.</p>
+
+<p>Изменение толщины линии ячейки добавляет соответсвующий класс <code class="language-plaintext highlighter-rouge">border-top__thick</code>, <code class="language-plaintext highlighter-rouge">border-bottom__thick</code>, <code class="language-plaintext highlighter-rouge">border-left__thick</code> или <code class="language-plaintext highlighter-rouge">border-right__thick</code></p>
+
+<p>Убрать границу можно с помощью классов <code class="language-plaintext highlighter-rouge">border__none</code>, <code class="language-plaintext highlighter-rouge">border-top__none</code>, <code class="language-plaintext highlighter-rouge">border-bottom__none</code>, <code class="language-plaintext highlighter-rouge">border-left__none</code>, <code class="language-plaintext highlighter-rouge">border-right__none</code></p>
+
+<p>Для черезстрочного изменения фона используем классы-модификаторы таблицы <code class="language-plaintext highlighter-rouge">table__striped</code> и <code class="language-plaintext highlighter-rouge">table__stripedReverse</code> (изменена очередность чредования фона). Устаревший класс - <code class="language-plaintext highlighter-rouge">table-striped</code></p>
+
+<p>Миниимальну ширину для первой ячейки каждой строки можно установить через класс-модификатор табилцы<code class="language-plaintext highlighter-rouge">table__firstChildMinWidth</code></p>
+
+<div class="bs-docs-example">
+  <table class="table table__border">
+    <thead>
+      <tr>
+        <th class="text-center" colspan="2">lorem</th>
+        <th class="text-center">lorem</th>
+        <th>lorem</th>
+      </tr>
+      <tr>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th class="text-right">lorem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>lorem</td>
+        <td class="text-center">text-center</td>
+        <td>lorem</td>
+        <td class="text-right">text-right</td>
+      </tr>
+      <tr>
+        <td>lorem</td>
+        <td class="text-center">text-center</td>
+        <td>lorem</td>
+        <td class="text-right">text-right</td>
+      </tr>
+      <tr>
+        <td>lorem</td>
+        <td class="text-center">text-center</td>
+        <td>lorem</td>
+        <td class="text-right">text-right</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>lorem</th>
+        <th class="text-center">lorem</th>
+        <th>lorem</th>
+        <th class="text-right">lorem</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+<div class="bs-docs-example">
+  <table class="table table__border table__striped">
+    <thead>
+      <tr>
+        <th class="text-center" colspan="2">lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+      </tr>
+      <tr>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+      </tr>
+      <tr>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+      </tr>
+      <tr>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+        <td>lorem</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+        <th>lorem</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>

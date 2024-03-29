@@ -1,0 +1,168 @@
+---
+Title: Table Icons
+menutitle: Использование иконок
+category: tables
+anchor: table-icons
+order: 2
+---
+
+<h3>Использование иконок в шапке.</h3>
+
+<p>Для подсказки вставить контейнер <code class="language-plaintext highlighter-rouge"><span class="tableHelpIcon" data-toggle="tooltip" title="Текст подсказки"><?= Icons::icon('bicolors-questions_full')?></span></code> с иконкой и текстом подсказки. На ячейку добавляем класс <code class="language-plaintext highlighter-rouge">tableHelpIcon_td</code></p>
+
+<p>Для функционала раскрытия колонок используем <code class="language-plaintext highlighter-rouge"><a class="css-td-expand collapsible-col collapseTdIcon_link"><span class="collapseTdIcon"><?= Icons::icon('bicolors-width__24vb') ?></span></a></code>. На ячейку добавляем класс <code class="language-plaintext highlighter-rouge">collapseTdIcon_td</code></p>
+
+<h3>Иконки в теле таблицы</h3>
+<p>Обычно функционал с ионками располагается в последней ячейки строки таблицы. В этом случае на ячейку навешиваем классы <code class="language-plaintext highlighter-rouge">text-right nowrap</code></p>
+<p>Для кнопок используем класс <code class="language-plaintext highlighter-rouge">btn-icon</code></p>
+<p>Сами иконки оборачиваем в <code class="language-plaintext highlighter-rouge"><span class="svg--icon"><?= Icons::icon('bicolors-edit') ?></span></code></button></p>
+<p>Функционал удаления выделяем цветом <code class="language-plaintext highlighter-rouge"><span class="svg--icon svg-danger"><?= Icons::icon('bicolors-delete') ?></span></code></p>
+
+{% highlight html %}
+<table class="table">
+  <thead>
+    <tr>
+      <th>lorem</th>
+      <th>lorem</th>
+      <th class="collapseTdIcon_td">Заголовок с раскрытием колонок <a class="css-td-expand collapsible-col collapseTdIcon_link"><span class="collapseTdIcon"><?= Icons::icon('bicolors-width__24vb') ?></span></a></th>
+      <th class="tableHelpIcon_td">
+        Заголовок с подсказкой
+        <span class="tableHelpIcon" data-toggle="tooltip"
+          title="Текст подсказки">
+          <?= Icons::icon('bicolors-questions_full') ?>
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td class="text-right">
+          <button class="btn-icon">
+            <span class="svg--icon">
+                <?= Icons::icon('bicolors-edit') ?>
+            </span>
+          </button>
+          <button class="btn-icon ml-5">
+            <span class="svg--icon svg-danger">
+                <?= Icons::icon('bicolors-delete') ?>
+            </span>
+          </button>
+        </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>lorem</th>
+      <th>lorem</th>
+      <th>lorem</th>
+      <th>lorem</th>
+    </tr>
+  </tfoot>
+</table>
+{% endhighlight %}
+
+<div class="bs-docs-example">
+ <table class="table">
+  <thead>
+    <tr>
+      <th>lorem</th>
+      <th>lorem</th>
+      <th class="collapseTdIcon_td">
+        Заголовок с раскрытием колонок
+        <a class="css-td-expand collapsible-col collapseTdIcon_link">
+          <span class="collapseTdIcon">
+            <svg class="bicolors-questions_full" width="24" height="24">
+              <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-width"></use>
+            </svg>
+          </span>
+        </a>
+      </th>
+      <th class="tableHelpIcon_td">
+        Заголовок с подсказкой
+        <span class="tableHelpIcon" data-toggle="tooltip"
+          title="Текст подсказки">
+          <svg class="bicolors-questions_full" width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions_full"></use>
+          </svg>
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td class="text-right">
+          <button class="btn-icon">
+            <span class="svg--icon">
+                <svg class="bicolors-edit" width="24" height="24">
+                  <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit"></use>
+                </svg>
+            </span>
+          </button>
+          <button class="btn-icon ml-5">
+            <span class="svg--icon svg-danger">
+                <svg class="bicolors-delete" width="24" height="24">
+                  <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use>
+                </svg>
+            </span>
+          </button>
+        </td>
+    </tr>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td class="text-right">
+          <button class="btn-icon">
+            <span class="svg--icon">
+                <svg class="bicolors-edit" width="24" height="24">
+                  <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit"></use>
+                </svg>
+            </span>
+          </button>
+          <button class="btn-icon ml-5">
+            <span class="svg--icon svg-danger">
+                <svg class="bicolors-delete" width="24" height="24">
+                  <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use>
+                </svg>
+            </span>
+          </button>
+        </td>
+    </tr>
+    <tr>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td>lorem</td>
+      <td class="text-right">
+          <button class="btn-icon">
+            <span class="svg--icon">
+                <svg class="bicolors-edit" width="24" height="24">
+                  <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit"></use>
+                </svg>
+            </span>
+          </button>
+          <button class="btn-icon ml-5">
+            <span class="svg--icon svg-danger">
+                <svg class="bicolors-delete" width="24" height="24">
+                  <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use>
+                </svg>
+            </span>
+          </button>
+        </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>lorem</th>
+      <th>lorem</th>
+      <th>lorem</th>
+      <th>lorem</th>
+    </tr>
+  </tfoot>
+</table>
+</div>

@@ -204,6 +204,7 @@ tfoot {
     }
   }
 }
+
 .table__stripedReverse{
   & > tbody >{
     tr:nth-of-type(2n+1) {
@@ -322,7 +323,9 @@ tbody tr {
     }
   }
 }
-.table__tfootSticky{
+
+.table__tfootSticky,
+.table__tfootSticky__2tr{
   > tfoot{ 
     td,
     th{
@@ -335,6 +338,22 @@ tbody tr {
         }
         &[rowspan="3"] {
           z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+        }
+      }
+    }
+  }
+  &__2tr{
+    tfoot{
+      tr{
+        &:nth-child(1){
+          th, td{
+            bottom: rem(_brand-sizes(tableCell_height));
+          }
+        }
+        &:nth-child(2){
+          th, td{
+            bottom: 0;
+          }
         }
       }
     }
@@ -403,6 +422,7 @@ tbody tr {
     margin-left: #{$value}px;
   }
 }
+
 .collapseTdIcon{
   display: inline-flex;
   height: #{_brand-sizes(collapseTdIcon_size)}px;

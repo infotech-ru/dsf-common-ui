@@ -5,14 +5,14 @@ category: tables
 anchor: table-bgc
 order: 5
 ---
-<p>Для изменения фона таблиц используется классы модификаторы: 
+<p>Для изменения фона всей таблицы используется классы модификаторы: 
   <code class="language-plaintext highlighter-rouge">table__clear</code> - transparent
   <code class="language-plaintext highlighter-rouge">table__light-yellow</code>
   <code class="language-plaintext highlighter-rouge">table__light-red</code>
   <code class="language-plaintext highlighter-rouge">table__red</code>
   <code class="language-plaintext highlighter-rouge">table__rose</code>
 </p>
-<p>Класс модификатор <code class="language-plaintext highlighter-rouge">bg-цвет</code> могут использоваться для изменения фона конкретней ячеейки таблицы</p>
+<p>Класс-модификатор <code class="language-plaintext highlighter-rouge">bg-имя_цвета</code> используется для изменения фона конкретней ячеейки таблицы или всей строки</p>
 <div class="bs-docs-example">
   <table class="table table__light-yellow mb-10">
     <thead>
@@ -66,21 +66,21 @@ order: 5
     </thead>
     <tbody>
       <tr>
-        <td class="bg-rose">lorem</td>
+        <td class="bg-rose">bg-rose</td>
         <td>lorem</td>
         <td>lorem</td>
-        <td class="bg-white">lorem</td>
+        <td class="bg-white">bg-white</td>
       </tr>
       <tr>
         <td>lorem</td>
-        <td class="bg-warning">lorem</td>
+        <td class="bg-danger">bg-danger</td>
         <td>lorem</td>
-        <td class="bg-orange">lorem</td>
+        <td class="bg-light-green">bg-light-green</td>
       </tr>
       <tr>
-        <td class="bg-rose">lorem</td>
+        <td class="bg-grey">bg-grey</td>
         <td>lorem</td>
-        <td class="bg-light-blue3">lorem</td>
+        <td class="bg-light-blue3">bg-light-blue3</td>
         <td>lorem</td>
       </tr>
     </tbody>
@@ -135,13 +135,11 @@ order: 5
   </table>
 </div>
 
-<p>
-  Для изменения градиента цвета фона подстрок в раскрывающихся строках вставить в раскрывающиеся строки код стилей:
-</p>
+<p>Для изменения градиента цвета фона подстрок в раскрывающихся строках вставить в раскрывающиеся строки код стилей:</p>
 {% highlight html %}
   <style>
-    .tr__slave-<?=$level ?> td {
-      --tdnesting-bgc: <?=96 - $level * 2 ?>%;
+    .tr__slave-<?= $level ?> td {
+      --tdnesting-bgc: <?= 96 - $level * 2 ?>%;
       background-color: hsl(0deg 0% var(--tdnesting-bgc));
     }
   </style>

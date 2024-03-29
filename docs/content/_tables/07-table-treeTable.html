@@ -6,12 +6,14 @@ anchor: table-treeTable
 order: 7
 ---
 
-<p>Для вывода строк таблицы в виде дерева - со скрытием подстрок используем скрипт `jQuery treetable`:<br>
-- таблице дописываем класс `js-tree-table` и инициализируем скрипт с помощью initTreeTable() (При необходимости делаем import {initTreeTable} from "../utils") <br>
-- строкам родителям задаем data-tt-id="уникальное_id_родителя", a для подстрок задаем data-tt-parent-id="уникальное_id_родителя" и своё `data-tt-id`. <br>
-- для расскраски в цветовую схему строке - верхнему родителю  задаем класс - `tr__master` <br>
-- для потомков используем `tr__slave` и `tr__subSlave`
-</p>
+<p>Для вывода строк таблицы в виде дерева - со скрытием подстрок используем скрипт <code class="language-plaintext highlighter-rouge">jQuery treetable</code>:</p>
+
+<p>- таблице дописываем класс <code class="language-plaintext highlighter-rouge">js-tree-table</code> и инициализируем скрипт с помощью <code class="language-plaintext highlighter-rouge">initTreeTable()</code> (При необходимости делаем <code class="language-plaintext highlighter-rouge">import {initTreeTable} from "../utils")</code></p>
+
+<p>- строкам родителям задаем <code class="language-plaintext highlighter-rouge">data-tt-id="уникальное_id_родителя"</code>, a для подстрок задаем <code class="language-plaintext highlighter-rouge">data-tt-parent-id="уникальное_id_родителя"</code> и своё <code class="language-plaintext highlighter-rouge">data-tt-id</code></p>
+
+<p>- для расскраски в цветовую схему строке - верхнему родителю  задаем класс - <code class="language-plaintext highlighter-rouge">tr__master</code></p>
+<p>- для потомков используем <code class="language-plaintext highlighter-rouge">tr__slave</code> и <code class="language-plaintext highlighter-rouge">tr__subSlave</code></p>
 
 <div class="bs-docs-example">
   <div class="wrapper__tableSticky" style="max-height: 40vh;">
