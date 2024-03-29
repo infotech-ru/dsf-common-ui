@@ -8,18 +8,27 @@ order: 2
 
 <h3>Использование иконок в шапке.</h3>
 
-<p>Для подсказки вставить контейнер <code class="language-plaintext highlighter-rouge"><span class="tableHelpIcon" data-toggle="tooltip" title="Текст подсказки"><?= Icons::icon('bicolors-questions_full')?></span></code> с иконкой и текстом подсказки. На ячейку добавляем класс <code class="language-plaintext highlighter-rouge">tableHelpIcon_td</code></p>
+<p>Для подсказки вставить контейнер с иконкой и текстом подсказки 
+  {% highlight html %}<span class="tableHelpIcon" data-toggle="tooltip" title="Текст подсказки"><?= Icons::icon('bicolors-questions_full')?></span>{% endhighlight %}. </p>
+<p>>А на ячейку добавляем класс <code class="language-plaintext highlighter-rouge">tableHelpIcon_td</code></p>
 
-<p>Для функционала раскрытия колонок используем <code class="language-plaintext highlighter-rouge"><a class="css-td-expand collapsible-col collapseTdIcon_link"><span class="collapseTdIcon"><?= Icons::icon('bicolors-width__24vb') ?></span></a></code>. На ячейку добавляем класс <code class="language-plaintext highlighter-rouge">collapseTdIcon_td</code></p>
+
+<p>Для функционала раскрытия колонок используем 
+  {% highlight html %}<a class="css-td-expand collapsible-col collapseTdIcon_link"><span class="collapseTdIcon"><?= Icons::icon('bicolors-width__24vb') ?></span></a>{% endhighlight %}. </p>
+  <p>На ячейку добавляем класс <code class="language-plaintext highlighter-rouge">collapseTdIcon_td</code></p>
 
 <h3>Иконки в теле таблицы</h3>
+
 <p>Обычно функционал с ионками располагается в последней ячейки строки таблицы. В этом случае на ячейку навешиваем классы <code class="language-plaintext highlighter-rouge">text-right nowrap</code></p>
+
 <p>Для кнопок используем класс <code class="language-plaintext highlighter-rouge">btn-icon</code></p>
-<p>Сами иконки оборачиваем в <code class="language-plaintext highlighter-rouge"><span class="svg--icon"><?= Icons::icon('bicolors-edit') ?></span></code></button></p>
-<p>Функционал удаления выделяем цветом <code class="language-plaintext highlighter-rouge"><span class="svg--icon svg-danger"><?= Icons::icon('bicolors-delete') ?></span></code></p>
+
+<p>Сами иконки оборачиваем в {% highlight html %}<span class="svg--icon"><?= Icons::icon('bicolors-edit') ?></span>{% endhighlight %}</p>
+<p>Функционал удаления выделяем цветом 
+  {% highlight html %}<span class="svg--icon svg-danger"><?= Icons::icon('bicolors-delete') ?></span>{% endhighlight %}</p>
 
 {% highlight html %}
-<table class="table">
+<table class="table table__border">
   <thead>
     <tr>
       <th>lorem</th>
