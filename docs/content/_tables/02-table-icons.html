@@ -8,14 +8,18 @@ order: 2
 
 <h3>Использование иконок в шапке.</h3>
 
-<p>Для подсказки вставить контейнер с иконкой и текстом подсказки 
-  {% highlight html %}<span class="tableHelpIcon" data-toggle="tooltip" title="Текст подсказки"><?= Icons::icon('bicolors-questions_full')?></span>{% endhighlight %}. </p>
+<p>Для подсказки вставить контейнер с иконкой и текстом подсказки</p>
+
+{% highlight html %}<span class="tableHelpIcon" data-toggle="tooltip" title="Текст подсказки"><?= Icons::icon('bicolors-questions_full')?></span>{% endhighlight %}
+
 <p>>А на ячейку добавляем класс <code class="language-plaintext highlighter-rouge">tableHelpIcon_td</code></p>
 
 
-<p>Для функционала раскрытия колонок используем 
-  {% highlight html %}<a class="css-td-expand collapsible-col collapseTdIcon_link"><span class="collapseTdIcon"><?= Icons::icon('bicolors-width__24vb') ?></span></a>{% endhighlight %}. </p>
-  <p>На ячейку добавляем класс <code class="language-plaintext highlighter-rouge">collapseTdIcon_td</code></p>
+<p>Для функционала раскрытия колонок используем</p>
+
+{% highlight html %}<a class="css-td-expand collapsible-col collapseTdIcon_link"><span class="collapseTdIcon"><?= Icons::icon('bicolors-width__24vb') ?></span></a>{% endhighlight %}
+
+<p>На ячейку добавляем класс <code class="language-plaintext highlighter-rouge">collapseTdIcon_td</code></p>
 
 <h3>Иконки в теле таблицы</h3>
 
@@ -23,9 +27,13 @@ order: 2
 
 <p>Для кнопок используем класс <code class="language-plaintext highlighter-rouge">btn-icon</code></p>
 
-<p>Сами иконки оборачиваем в {% highlight html %}<span class="svg--icon"><?= Icons::icon('bicolors-edit') ?></span>{% endhighlight %}</p>
-<p>Функционал удаления выделяем цветом 
-  {% highlight html %}<span class="svg--icon svg-danger"><?= Icons::icon('bicolors-delete') ?></span>{% endhighlight %}</p>
+<p>Сами иконки оборачиваем в </p>
+
+{% highlight html %}<span class="svg--icon"><?= Icons::icon('bicolors-edit') ?></span>{% endhighlight %}
+
+<p>Функционал удаления выделяем цветом</p>
+
+{% highlight html %}<span class="svg--icon svg-danger"><?= Icons::icon('bicolors-delete') ?></span>{% endhighlight %}
 
 {% highlight html %}
 <table class="table table__border">
@@ -74,7 +82,7 @@ order: 2
 {% endhighlight %}
 
 <div class="bs-docs-example">
- <table class="table">
+ <table class="table table__border">
   <thead>
     <tr>
       <th>lorem</th>

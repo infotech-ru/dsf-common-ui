@@ -8,6 +8,7 @@ order: 6
 
 <p>При фиксировании шапки таблицы и каждой первой ячейки во всей таблице используется контейнер-обёртка <code class="language-plaintext highlighter-rouge">wrapper__tableSticky</code>. Устаревшее имя <code class="language-plaintext highlighter-rouge">table-sticky-head-left_col</code></p>
 <p>Для фиксация строк футера таблицы - добавлем еще к таблице класс-модификатор <code class="language-plaintext highlighter-rouge">table__tfootSticky</code> или если нужно зафиксировать 2 строки - то класс-модификатор <code class="language-plaintext highlighter-rouge">table__tfootSticky__2tr</code></p>
+<p>Для закрепления конкретной ячейки навешиваем на неё <code class="language-plaintext highlighter-rouge">stickyCell</code>. Значение left необходимо указать с учётом ширины всех предыдущих в строке.</p>
 <div class="bs-docs-example">
   <div class="wrapper__tableSticky">
     <table class="table table__border table__tfootSticky">
