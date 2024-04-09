@@ -668,6 +668,9 @@ body {
 body.guest-view, body.reset-view {
   background-image: linear-gradient(90deg, #002D4E 0%, #005492 100%);
 }
+body.error-view {
+  background: linear-gradient(90deg, #002743 0%, #003101 100%);
+}
 
 a {
   color: #1E6393;
@@ -1002,6 +1005,10 @@ h6, .h6 {
   margin-right: auto;
   padding-right: 5px;
   padding-left: 5px;
+}
+.error-view .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .row {
@@ -2573,6 +2580,9 @@ h6, .h6 {
 .body_maximized .header {
   display: none;
 }
+.error-view .header {
+  margin-bottom: 0;
+}
 .header__top {
   align-items: center;
   background-color: #ffffff;
@@ -3084,6 +3094,25 @@ h6, .h6 {
   position: sticky;
   top: 0;
   z-index: 1004;
+}
+
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* SINGLE                                                                     */
+/* path: dsf-common-ui/src/scss/layout/_single.scss                          */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.mainContainer {
+  min-height: calc(100vh - 164px);
+}
+.guest-view .mainContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 121px);
+}
+.mobile-view .mainContainer {
+  min-height: calc(100vh - 200px);
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -10204,6 +10233,7 @@ select.selectpicker {
 .btn-group__radioCheck {
   align-items: center;
   background-color: #dddddd;
+  border-color: #dddddd;
   border-radius: 1px;
   display: inline-flex;
   justify-content: space-between;
@@ -13075,21 +13105,22 @@ body[style^=padding-right] .modal-sidebar {
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
-/* SINGLE                                                                     */
-/* path: dsf-common-ui/src/scss/content/_single.scss                          */
+/* ERROR PAGE                                                                 */
+/* path: dsf-common-ui/src/scss/content/_errorPage.scss                        */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.mainContainer {
-  min-height: calc(100vh - 164px);
+.errorPage {
+  position: relative;
+  max-height: 100vh;
+  height: calc(100vh - 34px - 44px - 52px);
 }
-.guest-view .mainContainer {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: calc(100vh - 121px);
+.errorPage_title {
+  font-size: 160px;
+  font-weight: 700;
+  z-index: 1;
 }
-.mobile-view .mainContainer {
-  min-height: calc(100vh - 200px);
+.errorPage_item {
+  z-index: 1;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -13104,8 +13135,43 @@ body[style^=padding-right] .modal-sidebar {
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
+/* ANIMATIONS                                                                 */
+/* path: dsf-common-ui/src/scss/helpers/_animations.scss                      */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+.svg--looper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+.svg--looper-g {
+  opacity: 0.3;
+}
+.svg--looper-path {
+  stroke-width: 2;
+}
+.svg--looper-linearGradientStopStart {
+  stop-color: #0094FF;
+}
+.svg--looper-linearGradientStopEnd {
+  stop-color: #69C26A;
+}
+
+.svg--mainImageCenter {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
 /* STATES                                                                     */
-/* path: dsf-common-ui/src/scss/states/_states.scss                           */
+/* path: dsf-common-ui/src/scss/helpers/_states.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .fade {

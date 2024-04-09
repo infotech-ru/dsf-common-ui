@@ -56,6 +56,9 @@ body {
   &.reset-view{
     background-image: linear-gradient(90deg, #002D4E 0%, #005492 100%);
   }
+  &.error-view{
+    background: linear-gradient(90deg, #002743 0%, #003101 100%);
+  }
 }
 
 a {

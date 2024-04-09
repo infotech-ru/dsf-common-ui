@@ -1,0 +1,21 @@
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* ERROR PAGE                                                                 */
+/* path: dsf-common-ui/src/scss/content/_errorPage.scss                        */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
+  .errorPage{
+      position: relative;
+      max-height: 100vh;
+      height: calc(100vh - #{_brand-sizes(headerBottom_height)}px - #{_brand-sizes(headerTop_height)}px - #{_brand-sizes(footer__guest_height)}px);
+      &_title{
+      font-size:160px;
+      font-weight: 700;
+      z-index: 1;
+    }
+    &_item{
+      z-index: 1;
+    }
+  }
+  

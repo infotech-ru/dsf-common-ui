@@ -16,6 +16,10 @@
 
 .container-fluid {
   @include makeContainer();
+  .error-view &{
+      padding-left: 0;
+      padding-right: 0;
+  }
 }
 
 .row {
