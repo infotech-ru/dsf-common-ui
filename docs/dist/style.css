@@ -2834,15 +2834,16 @@ h6, .h6 {
   margin: 10px auto 0;
   display: flex;
   justify-content: space-between;
-  padding: 13px 15px 11px;
+  height: 52px;
+  padding: 0 15px 0;
   border-radius: 0;
-  box-sizing: content-box;
-  -moz-box-sizing: content-box;
 }
 .reset-view .footer, .guest-view .footer {
   margin-top: 0;
-  padding-top: 0;
   padding-bottom: 15px;
+}
+.error-view .footer {
+  margin-top: 0;
 }
 .mobile-view .footer {
   align-items: stretch;
@@ -2853,7 +2854,6 @@ h6, .h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 52px;
 }
 .mobile-view .footer__left, .mobile-view .footer__right {
   align-items: center;
