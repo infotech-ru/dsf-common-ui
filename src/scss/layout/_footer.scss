@@ -24,7 +24,11 @@
     padding-bottom: 15px;
   }
   .error-view &{
+    color: _brand-colors(_white);
     margin-top: 0;
+    a{
+      color: _brand-colors(_vibrant-blue);
+    }
   }
   .mobile-view &{
       align-items: stretch;

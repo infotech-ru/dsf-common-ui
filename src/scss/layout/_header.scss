@@ -16,8 +16,14 @@
   .body_maximized &{
     display: none;
   }
+  .guest-view &{
+    margin-bottom: 0;
+  }
   .error-view &{
     margin-bottom: 0;
+  }
+  .mobile-view &{
+    
   }
   &__top{
     align-items: center;
