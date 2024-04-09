@@ -323,6 +323,11 @@
 .maxw-none                        { max-width: none; }
 .mobile-view .maxw-none__mobile   { max-width: none; }
 
+.opacity1                         {opacity: 1;}
+.mobile-view .opacity1__mobile    {opacity: 1;}
+.opacity0                         {opacity: 0;}
+.mobile-view .opacity0__mobile    {opacity: 0;}
+
 .scrollbar__thin{
   @extend %scrollVar;
 }

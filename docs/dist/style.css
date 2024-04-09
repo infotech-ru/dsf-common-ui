@@ -15047,6 +15047,22 @@ tbody.collapse.in {
   max-width: none;
 }
 
+.opacity1 {
+  opacity: 1;
+}
+
+.mobile-view .opacity1__mobile {
+  opacity: 1;
+}
+
+.opacity0 {
+  opacity: 0;
+}
+
+.mobile-view .opacity0__mobile {
+  opacity: 0;
+}
+
 .border {
   border: 1px solid #BABABA;
   --width_border: 1px;
