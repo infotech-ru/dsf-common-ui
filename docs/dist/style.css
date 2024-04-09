@@ -2849,6 +2849,7 @@ h6, .h6 {
   align-items: stretch;
   flex-direction: column;
   padding: 0;
+  height: 124px;
 }
 .reset-view .footer__left, .guest-view .footer__left, .reset-view .footer__right, .guest-view .footer__right {
   display: flex;
@@ -3103,16 +3104,20 @@ h6, .h6 {
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .mainContainer {
-  min-height: calc(100vh - 164px);
+  min-height: calc(100vh - 34px - 44px - 52px);
 }
 .guest-view .mainContainer {
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 121px);
+  min-height: calc(100vh - 44px - 52px);
+}
+.error-view .mainContainer {
+  display: flex;
+  max-height: 100vh;
 }
 .mobile-view .mainContainer {
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 44px - 124px);
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -13111,8 +13116,7 @@ body[style^=padding-right] .modal-sidebar {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .errorPage {
   position: relative;
-  max-height: 100vh;
-  height: calc(100vh - 34px - 44px - 52px);
+  width: 100%;
 }
 .errorPage_title {
   font-size: 160px;

@@ -5,31 +5,35 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-  .svg--looper{
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      z-index: 0;
-    &-g {
-        opacity: .3;
-    }
-    &-path {
-        stroke-width: 2;
-    }
-    &-linearGradientStopStart {
-        stop-color: _brand-colors(_vibrant-blue);
-    }
-    &-linearGradientStopEnd {
-        stop-color: _brand-colors(_green);
-    }
+.svg--looper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+
+  &-g {
+    opacity: .3;
   }
-  .svg--mainImageCenter{
-      position: absolute;
-      left: 0;
-      height: 100%;
-      top: 0;
-      width: 100%;
-      z-index: 0;
+
+  &-path {
+    stroke-width: 2;
   }
-  
+
+  &-linearGradientStopStart {
+    stop-color: _brand-colors(_vibrant-blue);
+  }
+
+  &-linearGradientStopEnd {
+    stop-color: _brand-colors(_green);
+  }
+}
+
+.svg--mainImageCenter {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}

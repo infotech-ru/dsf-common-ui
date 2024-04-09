@@ -5,17 +5,17 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-  .errorPage{
-      position: relative;
-      max-height: 100vh;
-      height: calc(100vh - #{_brand-sizes(headerBottom_height)}px - #{_brand-sizes(headerTop_height)}px - #{_brand-sizes(footer_height)}px);
-      &_title{
-      font-size:160px;
-      font-weight: 700;
-      z-index: 1;
-    }
-    &_item{
-      z-index: 1;
-    }
-  }
+.errorPage {
+  position: relative;
+  width: 100%;
   
+  &_title {
+    font-size: 160px;
+    font-weight: 700;
+    z-index: 1;
+  }
+
+  &_item {
+    z-index: 1;
+  }
+}
