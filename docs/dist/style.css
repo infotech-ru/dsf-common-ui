@@ -12642,6 +12642,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 100%;
   z-index: 1;
 }
+.carousel-action_visible {
+  display: flex;
+}
 .carousel-action__center {
   align-self: center;
   margin-top: auto;
@@ -12654,6 +12657,14 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   position: relative;
   right: 5px;
   top: 5px;
+  z-index: 1;
+}
+.carousel-action__bottomRight {
+  align-self: end;
+  bottom: 5px;
+  margin-top: auto;
+  right: 5px;
+  position: relative;
   z-index: 1;
 }
 .carousel-action:before {
