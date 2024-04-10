@@ -300,8 +300,22 @@
     height: 100%;
     width: 100%;
     z-index: 1;
+    &:before{
+      background-color: #000c;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
     &_visible{
       display: flex;
+      &:before{
+        display: none;
+      }
     }
     &__center{
       align-self: center;
@@ -324,20 +338,6 @@
       right: 5px;
       position: relative;
       z-index: 1;
-    }
-    &:before{
-      background-color: #000c;
-      content: "";
-      display: block;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      z-index: 1;
-      .carousel-action_visible &{
-        display: none;
-      }
     }
   }
 }

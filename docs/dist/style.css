@@ -12642,8 +12642,22 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 100%;
   z-index: 1;
 }
+.carousel-action:before {
+  background-color: rgba(0, 0, 0, 0.8);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
 .carousel-action_visible {
   display: flex;
+}
+.carousel-action_visible:before {
+  display: none;
 }
 .carousel-action__center {
   align-self: center;
@@ -12666,20 +12680,6 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   right: 5px;
   position: relative;
   z-index: 1;
-}
-.carousel-action:before {
-  background-color: rgba(0, 0, 0, 0.8);
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-.carousel-action_visible .carousel-action:before {
-  display: none;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
