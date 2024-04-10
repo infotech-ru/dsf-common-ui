@@ -6,7 +6,9 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
 .errorPage {
-  position: relative;
+  .auth-view &{
+    position: relative;
+  }
   width: 100%;
 
   &_title {

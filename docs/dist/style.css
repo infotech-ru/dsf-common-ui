@@ -13122,8 +13122,10 @@ body[style^=padding-right] .modal-sidebar {
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .errorPage {
-  position: relative;
   width: 100%;
+}
+.auth-view .errorPage {
+  position: relative;
 }
 .errorPage_title {
   font-size: 160px;
