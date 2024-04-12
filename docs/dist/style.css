@@ -2904,7 +2904,7 @@ h6, .h6 {
 
 .footer___logo {
   background-color: transparent;
-  background-image: url(../images/infotek_logo.svg);
+  background-image: url(../images/logo-infotech__dark__ru.svg);
   background-repeat: no-repeat;
   background-size: 120px 22px;
   display: inline-block;
@@ -2913,13 +2913,24 @@ h6, .h6 {
   vertical-align: middle;
   width: 120px;
 }
+.lang__ru .footer___logo {
+  background-image: url(../images/logo-infotech__dark__ru.svg);
+}
+.lang__en .footer___logo {
+  background-image: url(../images/logo-infotech__dark__en.svg);
+}
 .reset-view .footer___logo, .guest-view .footer___logo {
-  background-image: url(../images/infotek_logo_white.svg);
   background-position-y: center;
   margin: 0;
 }
+.reset-view.lang__en .footer___logo, .guest-view.lang__en .footer___logo {
+  background-image: url(../images/logo-infotech__white__en.svg);
+}
+.reset-view.lang__ru .footer___logo, .guest-view.lang__ru .footer___logo {
+  background-image: url(../images/logo-infotech__white__ru.svg);
+}
 .mobile-view .footer___logo {
-  background-image: url(../images/infotek_logo_mobile.svg);
+  background-image: url(../images/logo-infotech__mobile.svg);
   background-size: contain;
   height: 16px;
   margin: 0;
