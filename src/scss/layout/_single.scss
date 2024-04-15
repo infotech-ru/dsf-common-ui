@@ -5,7 +5,7 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .mainContainer{
-  min-height: calc(100vh - #{_brand-sizes(headerBottom_height)}px - #{_brand-sizes(headerTop_height)}px - #{_brand-sizes(footer_height)}px);
+  min-height: calc(100vh - #{_brand-sizes(headerBottom_height)}px - #{_brand-sizes(headerTop_height)}px - #{_brand-sizes(footer_height)}px - #{_brand-sizes(footer_marginTop)}px - #{_brand-sizes(header_marginBottom)}px);
   .guest-view & {
     align-items: center;
     display: flex;

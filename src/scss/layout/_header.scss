@@ -8,7 +8,7 @@
   // background: linear-gradient(180deg, #F9F9F9 0%, #CACACA 100%);
   box-shadow: none;
   border-radius: 0px;
-  margin: 0 0 10px;
+  margin: 0 0 #{_brand-sizes(header_marginBottom)}px;
   padding: 0;
   position: relative;
   filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.25));

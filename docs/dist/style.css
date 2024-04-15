@@ -3122,7 +3122,7 @@ h6, .h6 {
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .mainContainer {
-  min-height: calc(100vh - 34px - 44px - 52px);
+  min-height: calc(100vh - 34px - 44px - 52px - 10px - 10px);
 }
 .guest-view .mainContainer {
   align-items: center;
