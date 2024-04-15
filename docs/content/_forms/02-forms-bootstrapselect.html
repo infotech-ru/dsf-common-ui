@@ -31,10 +31,10 @@ order: 2
 
 <p><code class="language-plaintext highlighter-rouge">dropupAuto</code> - по умолчанию true, т.е автоматические выбирает, когда открывать вверх. Если выставить false и добавить класс <code class="language-plaintext highlighter-rouge">dropup</code> - будет всегда открывать вверх</p>
 
-<h3>Максимальное количество выбираемых пунктов при мультивыборе <code class="language-plaintext highlighter-rouge">multiple</code></h3>
-
+<h3>Максимальное количество выбираемых пунктов при мультивыборе</code></h3>
+<p><code class="language-plaintext highlighter-rouge">'data-multiple' => true</code></p>
 <p>Ограничьте количество пунктов, которые могут быть выбраны с помощью атрибута <code class="language-plaintext highlighter-rouge">data-max-options</code>. Он также работает для групп опций. </p>
-<p>Сообщение, отображаемое при достижении предела, указывается с помощью <code class="language-plaintext highlighter-rouge"></code>maxOptionsText</p>.</p>
+<>Сообщение, отображаемое при достижении предела, указывается с помощью <code class="language-plaintext highlighter-rouge">maxOptionsText</code></p>
 
 <h3>Кастомизация текста по умолчанию <code class="language-plaintext highlighter-rouge">title</code></h3>
 
@@ -173,15 +173,15 @@ order: 2
 </div>
 {% endhighlight %}
 
-<h4>2. Используя атрибут  <code class="language-plaintext highlighter-rouge">data-width</code></h4>
+<h4>2. Используя атрибут data-width</h4>
 
-<p>- <code class="language-plaintext highlighter-rouge">'data-width' => 'auto'</code> автоматическая подсторйка пол максимальную ширину.</p>
-<p>- <code class="language-plaintext highlighter-rouge">'data-width' => 'fit'</code>  автоматически подстраивает ширину селекта под ширину выбранной в данный момент пункта</p>
-<p>- Фиксированное значение в процентах или px (Например, 300px или 50%).</p>
+<p><code class="language-plaintext highlighter-rouge">'data-width' => 'auto'</code> - автоматическая подсторйка пол максимальную ширину.</p>
+<p><code class="language-plaintext highlighter-rouge">'data-width' => 'fit'</code> - автоматически подстраивает ширину селекта под ширину выбранной в данный момент пункта</p>
+<p><code class="language-plaintext highlighter-rouge">'data-width' => '200px'</code> - Фиксированное значение в процентах или px (Например, 300px или 50%).</p>
 
 <div class="bs-docs-example js-allSelect-formFree css-formFree">
   <div class="form-group">
-    <label class="control-label" for="bootstrap-select__data-selected-text-format10"><code>width: 'auto'</code></label>
+    <label class="control-label" for="bootstrap-select__data-selected-text-format10">data-width: 'auto'</label>
     <select class="selectpicker form-control" data-width="auto" id="bootstrap-select__data-selected-text-format10">
       <option>Mustard</option>
       <option>Ketchup</option>
@@ -190,7 +190,7 @@ order: 2
     </select>
   </div>
   <div class="form-group">
-    <label class="control-label" for="bootstrap-select__data-selected-text-format11"><code>width: 'fit'</code></label>
+    <label class="control-label" for="bootstrap-select__data-selected-text-format11">data-width: 'fit'</label>
     <select class="selectpicker form-control" data-width="fit" id="bootstrap-select__data-selected-text-format11">
       <option>Mustard</option>
       <option>Ketchup</option>
@@ -199,7 +199,7 @@ order: 2
     </select>
   </div>
   <div class="form-group">
-    <label class="control-label" for="bootstrap-select__data-selected-text-format12"><code>width: '150px'</code></label>
+    <label class="control-label" for="bootstrap-select__data-selected-text-format12">data-width: '150px'</label>
     <select class="selectpicker form-control" data-width="150px" id="bootstrap-select__data-selected-text-format12">
       <option>Mustard</option>
       <option>Ketchup</option>
@@ -208,7 +208,7 @@ order: 2
     </select>
   </div>
   <div class="form-group">
-    <label class="control-label" for="bootstrap-select__data-selected-text-format13"><code>width: '75%'</code></label>
+    <label class="control-label" for="bootstrap-select__data-selected-text-format13">data-width: '75%'</label>
     <select class="selectpicker form-control" data-width="75%" id="bootstrap-select__data-selected-text-format13">
       <option>Mustard</option>
       <option>Ketchup</option>
@@ -261,30 +261,34 @@ order: 2
 <div class="bs-docs-example"> 
   <div class="form-group"> 
     <select class="selectpicker">
-      <option data-subtext="и подтекст">Текст</option>
+      <option data-subtext="и подтекст 1">Текст 1</option>
+      <option data-subtext="и подтекст 2">Текст 2</option>
+      <option data-subtext="и подтекст 3">Текст 3</option>
     </select>
   </div>
   <div class="form-group"> 
     <select class="selectpicker" data-show-subtext="true">
-      <option data-subtext="Подтекстом 1">Текст с</option>
-      <option data-subtext="Подтекстом 2">Текст с</option>
-      <option data-subtext="Подтекстом 3">Текст с</option>
-      <option data-subtext="Подтекстом 4">Текст с</option>
+      <option data-subtext="Подтекстом 1">Текст 1 с</option>
+      <option data-subtext="Подтекстом 2">Текст 2 с</option>
+      <option data-subtext="Подтекстом 3">Текст 3 с</option>
+      <option data-subtext="Подтекстом 4">Текст 4 с</option>
     </select>
   </div>
 </div>
 {% highlight html %}
   <div class="form-group"> 
     <select class="selectpicker">
-      <option data-subtext="и подтекст">Текст</option>
+      <option data-subtext="и подтекст 1">Текст 1</option>
+      <option data-subtext="и подтекст 2">Текст 2</option>
+      <option data-subtext="и подтекст 3">Текст 3</option>
     </select>
   </div>
   <div class="form-group"> 
     <select class="selectpicker" data-show-subtext="true">
-      <option data-subtext="Подтекстом 1">Текст с</option>
-      <option data-subtext="Подтекстом 2">Текст с</option>
-      <option data-subtext="Подтекстом 3">Текст с</option>
-      <option data-subtext="Подтекстом 4">Текст с</option>
+      <option data-subtext="Подтекстом 1">Текст 1 с</option>
+      <option data-subtext="Подтекстом 2">Текст 2 с</option>
+      <option data-subtext="Подтекстом 3">Текст 3 с</option>
+      <option data-subtext="Подтекстом 4">Текст 4 с</option>
     </select>
   </div>
 {% endhighlight %}
@@ -398,7 +402,7 @@ order: 2
 
 <p>Это полезно, если элемент select находится внутри элемента с <code class="language-plaintext highlighter-rouge">overflow: hidden</code>. и подменю находится в самом низу около закрывающегося тега <code class="language-plaintext highlighter-rouge">body</code></p>
 
-<p>Но можно выводить и непосредствено в контейнере родителя селекта <code class="language-plaintext highlighter-rouge">'data-container' => false</code> или в любом другом месте <code class="language-plaintext highlighter-rouge"><code class="language-plaintext highlighter-rouge">'data-container' => '.other-container'</code></p>
+<p>Но можно выводить и непосредствено в контейнере родителя селекта <code class="language-plaintext highlighter-rouge">'data-container' => false</code> или в любом другом месте <code class="language-plaintext highlighter-rouge">'data-container' => '.other-container'</code></p>
 
 <div class="bs-docs-example js-allSelect-formFree css-formFree" style="overflow: hidden;">
   <div class="row">
@@ -447,3 +451,7 @@ order: 2
   </select>
 </div>
 {% endhighlight %}
+
+
+<h4>Изменение вывода пунктов меню в одну строчку</h4>
+<p>Дополнительные классы навешанные на селект изменяют вывод пунктов меню в одну строчку<code class="language-plaintext highlighter-rouge">bootstrap-select__whitespace-normal</code> и <code class="language-plaintext highlighter-rouge">bootstrap-select__whitespace-prewrap</code></p>

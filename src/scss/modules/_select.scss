@@ -531,6 +531,9 @@ select.selectpicker {
       }
     }
   }
+  .dropdown-divider {
+    border-bottom: 1px solid _brand-palette(bootstrapSelect_divider_color);
+  }
 }
 
 
