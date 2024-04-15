@@ -1,0 +1,449 @@
+---
+Title: Селекты / bootstrap-select
+menutitle: Селекты / selects
+category: forms
+anchor: select
+order: 2
+---
+
+<p>Используется скрипт <a href="https://developer.snapappointments.com/bootstrap-select/">bootstap-select</a></p>
+
+<h3>Смещение выпадающего списка влево.</h3>
+
+<p>1. <code class="language-plaintext highlighter-rouge">'data-dropdown-align-right' => 'auto'</code> - автоматическое смещение</p>
+<p>2. <code class="language-plaintext highlighter-rouge">'class' => 'dropdown-menu-right'</code> - принудительное смещение</p>
+
+{% highlight php %}
+  ...
+  widget(Select::class, [
+    'options' => [
+      'class' => 'dropdown-menu-right',
+
+или
+
+      'data' => [
+        'dropdown-align-right' => 'auto',
+      ])
+{% endhighlight %}
+
+
+<h3>Dropup menu - Открытие выпадающего списка вверх</h3>
+
+<p><code class="language-plaintext highlighter-rouge">dropupAuto</code> - по умолчанию true, т.е автоматические выбирает, когда открывать вверх. Если выставить false и добавить класс <code class="language-plaintext highlighter-rouge">dropup</code> - будет всегда открывать вверх</p>
+
+<h3>Максимальное количество выбираемых пунктов при мультивыборе <code class="language-plaintext highlighter-rouge">multiple</code></h3>
+
+<p>Ограничьте количество пунктов, которые могут быть выбраны с помощью атрибута <code class="language-plaintext highlighter-rouge">data-max-options</code>. Он также работает для групп опций. </p>
+<p>Сообщение, отображаемое при достижении предела, указывается с помощью <code class="language-plaintext highlighter-rouge"></code>maxOptionsText</p>.</p>
+
+<h3>Кастомизация текста по умолчанию <code class="language-plaintext highlighter-rouge">title</code></h3>
+
+<p>Важно! С <a href="forms.html#formsFree">всплывающими лейблами</a>, смысл <code class="language-plaintext highlighter-rouge">title</code> теряется</p>
+
+<h3>Поиск внутри выпадающего меню</h3>
+<p>Включается <code class="language-plaintext highlighter-rouge">'data-live-search' => true</code></p>
+
+<h3>Форматирование текста выбранного пункта</h3>
+
+<p>*value  - Список выбранных значений, разделенный запятыми (по умолчанию)</p>
+<p>*count <code class="language-plaintext highlighter-rouge">'data-selected-text-format' => '2'</code> - Если выбран один элемент, то отображается значение пункта. Если выбрано более одного, то отображается количество выбранных элементов, например <code class="language-plaintext highlighter-rouge">2 из 6 выбрано</code></p>
+<p>*count > x <code class="language-plaintext highlighter-rouge">'data-selected-text-format' => 'count > 2'</code>, где x - количество элементов, выбранных при изменении формата отображения со `*value` на `*count`.</p>
+<p>* static <code class="language-plaintext highlighter-rouge">'data-selected-text-format' => 'static'</code> Всегда отображайте заголовок выбора (placeholder), независимо от выбора</p>
+
+<div class="bs-docs-example js-allSelect-formFree css-formFree">
+  <div class="form-group"> 
+    <label class="control-label" for="bootstrap-select__data-selected-text-format1">data-selected-text-format="*value"</label>
+    <select class="selectpicker" multiple id="bootstrap-select__data-selected-text-format1">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+    </select>
+  </div>
+  <div class="form-group"> 
+    <label class="control-label" for="bootstrap-select__data-selected-text-format2">data-selected-text-format="count"</label>
+    <select class="selectpicker" multiple data-selected-text-format="count" id="bootstrap-select__data-selected-text-format2">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+    </select>
+  </div>
+  <div class="form-group"> 
+    <label class="control-label" for="bootstrap-select__data-selected-text-format3">data-selected-text-format="count > x"</label>
+    <select class="selectpicker" multiple data-selected-text-format="count > 3" id="bootstrap-select__data-selected-text-format3">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>Onions</option>
+    </select>
+  </div>
+  <div class="form-group"> 
+    <label class="control-label" for="bootstrap-select__data-selected-text-format4">data-selected-text-format="static"</label>
+    <select class="selectpicker" multiple data-selected-text-format="static" id="bootstrap-select__data-selected-text-format4">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>Onions</option>
+    </select>
+  </div>
+</div>
+
+<h3>Стилизация отдельных пунктов в выпадающем меню</h3>
+
+<p>Классы и стили, добавленные к пункту, переносятся в поле выбора. Используются предустановленные классы изменения <a href="helpers.html#helpers-text">цвета</a> и <a href="helpers.html#helpers-bg">фона</a></p>
+
+
+<h3>Ширина селекта</h3>
+
+<h4>1. Используя элементы сетки</h4>
+
+<div class="bs-docs-example">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="form-group">
+        <select class="selectpicker form-control">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <div class="form-group">
+        <select class="selectpicker form-control">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+       <div class="form-group">
+        <select class="selectpicker form-control">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-8">
+       <div class="form-group">
+        <select class="selectpicker form-control">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="form-group">
+        <select class="selectpicker form-control">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <div class="form-group">
+        <select class="selectpicker form-control">
+          <option>Mustard</option>
+          <option>Ketchup</option>
+          <option>Relish</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<div class="row">
+  <div class="col-sm-3">
+    <div class="form-group">
+      <select class="selectpicker form-control">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+      </select>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>2. Используя атрибут  <code class="language-plaintext highlighter-rouge">data-width</code></h4>
+
+<p>- <code class="language-plaintext highlighter-rouge">'data-width' => 'auto'</code> автоматическая подсторйка пол максимальную ширину.</p>
+<p>- <code class="language-plaintext highlighter-rouge">'data-width' => 'fit'</code>  автоматически подстраивает ширину селекта под ширину выбранной в данный момент пункта</p>
+<p>- Фиксированное значение в процентах или px (Например, 300px или 50%).</p>
+
+<div class="bs-docs-example js-allSelect-formFree css-formFree">
+  <div class="form-group">
+    <label class="control-label" for="bootstrap-select__data-selected-text-format10"><code>width: 'auto'</code></label>
+    <select class="selectpicker form-control" data-width="auto" id="bootstrap-select__data-selected-text-format10">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>All of the above (and much, much more!)</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="bootstrap-select__data-selected-text-format11"><code>width: 'fit'</code></label>
+    <select class="selectpicker form-control" data-width="fit" id="bootstrap-select__data-selected-text-format11">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>All of the above (and much, much more!)</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="bootstrap-select__data-selected-text-format12"><code>width: '150px'</code></label>
+    <select class="selectpicker form-control" data-width="150px" id="bootstrap-select__data-selected-text-format12">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>All of the above (and much, much more!)</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="bootstrap-select__data-selected-text-format13"><code>width: '75%'</code></label>
+    <select class="selectpicker form-control" data-width="75%" id="bootstrap-select__data-selected-text-format13">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>All of the above (and much, much more!)</option>
+    </select>
+  </div>
+</div>
+
+{% highlight php %}
+  ...
+  widget(Select::class, [
+    'options' => [
+      'data' => [
+        'width' => 'auto',
+        'width' => 'fit',
+        'width' => '100px',
+        'width' => '75%',
+      ])
+{% endhighlight %}
+
+<h3>Дополнительные контент в пунктах выпадающего меню</h3>
+
+<p>Вставьте пользовательский HTML в пункт с помощью атрибута <code class="language-plaintext highlighter-rouge">data-content</code></p>
+
+<span class="alert alert-warning d-block" role="alert">
+  <strong>Внимание:</strong> Необходимо удоствовериться, что используемый тег не очищается через <a href="https://developer.snapappointments.com/bootstrap-select/options/#sanitizer">[sanitizer]</a>.
+</span>
+
+<div class="bs-docs-example">
+  <select class="selectpicker">
+    <option data-content="<span class='label label-warning'>Mustard</span>">Mustard</option>
+    <option data-content="<span class='label label-danger'>Ketchup</span>">Ketchup</option>
+    <option data-content="<span class='label label-success'>Relish</span>">Relish</option>
+    <option data-content="<span class='label label-info'>Mayonnaise</span>">Mayonnaise</option>
+  </select>
+</div>
+
+{% highlight html %}
+<select class="selectpicker">
+    <option data-content="<span class='label label-warning'>Mustard</span>">Mustard</option>
+    <option data-content="<span class='label label-danger'>Ketchup</span>">Ketchup</option>
+    <option data-content="<span class='label label-success'>Relish</span>">Relish</option>
+    <option data-content="<span class='label label-info'>Mayonnaise</span>">Mayonnaise</option>
+</select>
+{% endhighlight %}
+
+<p>Добавьте подтекст к пункту или оптгруппе с помощью атрибута <code class="language-plaintext highlighter-rouge">data-subtext</code></p>
+<p>Отображение подтекста в выбранном включается <code class="language-plaintext highlighter-rouge">'data-show-subtext' => 'true'</code></p>
+<div class="bs-docs-example"> 
+  <div class="form-group"> 
+    <select class="selectpicker">
+      <option data-subtext="и подтекст">Текст</option>
+    </select>
+  </div>
+  <div class="form-group"> 
+    <select class="selectpicker" data-show-subtext="true">
+      <option data-subtext="Подтекстом 1">Текст с</option>
+      <option data-subtext="Подтекстом 2">Текст с</option>
+      <option data-subtext="Подтекстом 3">Текст с</option>
+      <option data-subtext="Подтекстом 4">Текст с</option>
+    </select>
+  </div>
+</div>
+{% highlight html %}
+  <div class="form-group"> 
+    <select class="selectpicker">
+      <option data-subtext="и подтекст">Текст</option>
+    </select>
+  </div>
+  <div class="form-group"> 
+    <select class="selectpicker" data-show-subtext="true">
+      <option data-subtext="Подтекстом 1">Текст с</option>
+      <option data-subtext="Подтекстом 2">Текст с</option>
+      <option data-subtext="Подтекстом 3">Текст с</option>
+      <option data-subtext="Подтекстом 4">Текст с</option>
+    </select>
+  </div>
+{% endhighlight %}
+
+<h3>Размер по высоте выпадющего меню.</h3>
+
+<p>По умолчанию для опции <code class="language-plaintext highlighter-rouge">'data-size' => 'auto'</code> - меню всегда раскрывается, чтобы показать столько пунктов, сколько позволяет окно, не обрезая их.</p>
+<p><code class="language-plaintext highlighter-rouge">'data-size' => false</code> - будет показывать все пункты. </p>
+<p><code class="language-plaintext highlighter-rouge">'data-size' => '5'</code> - устанавливает максимальное количество видимых пунктов в меню.</p>
+
+<div class="bs-docs-example js-allSelect-formFree css-formFree">
+  <div class="form-group">
+    <label class="control-label" for="bootstrap-select_110">Без data-size</label>
+    <select class="selectpicker">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>Mayonnaise</option>
+      <option>Barbecue Sauce</option>
+      <option>Salad Dressing</option>
+      <option>Tabasco</option>
+      <option>Salsa</option>
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>Mayonnaise</option>
+      <option>Barbecue Sauce</option>
+      <option>Salad Dressing</option>
+      <option>Tabasco</option>
+      <option>Salsa</option>
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>Mayonnaise</option>
+      <option>Barbecue Sauce</option>
+      <option>Salad Dressing</option>
+      <option>Tabasco</option>
+      <option>Salsa</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="bootstrap-select_110">с data-size = 5</label>
+    <select class="selectpicker" data-size="5" id="bootstrap-select_110">
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Relish</option>
+      <option>Mayonnaise</option>
+      <option>Barbecue Sauce</option>
+      <option>Salad Dressing</option>
+      <option>Tabasco</option>
+      <option>Salsa</option>
+    </select>
+  </div>
+</div>
+
+{% highlight html %}
+<select class="selectpicker" data-size="5">
+  ...
+</select>
+{% endhighlight %}
+
+<h3>Кнопки выбрать и отменить выбор</h3>
+
+<p>Кнопки действий добавляются черех <code class="language-plaintext highlighter-rouge">'data-actions-box' => true</code></p>
+
+<div class="bs-docs-example">
+  <select class="selectpicker" multiple data-actions-box="true">
+    <option>Mustard</option>
+    <option>Ketchup</option>
+    <option>Relish</option>
+  </select>
+</div>
+
+{% highlight html %}
+<select class="selectpicker" multiple data-actions-box="true">
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
+</select>
+{% endhighlight %}
+
+<h3>Разделитель между пунктами выпадающего меню</h3>
+
+<p>Добавив <code class="language-plaintext highlighter-rouge">data-divider="true"</code> к пункту меню</p> можно сделать из него разделитель.
+
+<div class="bs-docs-example">
+  <select class="selectpicker">
+    <option>Mustard</option>
+    <option>Ketchup</option>
+    <option>Relish</option>
+    <option>Mayonnaise</option>
+    <option data-divider="true"></option>
+    <option>Barbecue Sauce</option>
+    <option>Salad Dressing</option>
+    <option>Tabasco</option>
+    <option>Salsa</option>
+  </select>
+</div>
+
+{% highlight html %}
+<select class="selectpicker">
+  ...
+  <option data-divider="true"></option>
+  ....
+</select>
+{% endhighlight %}
+
+<h3>DOM: Вывод выпадающего меню в/вне контейнера родителя</h3>
+
+<p>По умолчанию <code class="language-plaintext highlighter-rouge">'data-container' => 'body'</code></p>
+
+<p>Это полезно, если элемент select находится внутри элемента с <code class="language-plaintext highlighter-rouge">overflow: hidden</code>. и подменю находится в самом низу около закрывающегося тега <code class="language-plaintext highlighter-rouge">body</code></p>
+
+<p>Но можно выводить и непосредствено в контейнере родителя селекта <code class="language-plaintext highlighter-rouge">'data-container' => false</code> или в любом другом месте <code class="language-plaintext highlighter-rouge"><code class="language-plaintext highlighter-rouge">'data-container' => '.other-container'</code></p>
+
+<div class="bs-docs-example js-allSelect-formFree css-formFree" style="overflow: hidden;">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group"> 
+        <label class="control-label" for="bootstrap-select__data-selected-text-format20"><code>container: false</code></label>
+        <select class="selectpicker form-control" id="bootstrap-select__data-selected-text-format20">
+          <option data-subtext="French's">Mustard</option>
+          <option data-subtext="Heinz">Ketchup</option>
+          <option data-subtext="Sweet">Relish</option>
+          <option data-subtext="Miracle Whip">Mayonnaise</option>
+          <option data-divider="true"></option>
+          <option data-subtext="Honey">Barbecue Sauce</option>
+          <option data-subtext="Ranch">Salad Dressing</option>
+          <option data-subtext="Sweet & Spicy">Tabasco</option>
+          <option data-subtext="Chunky">Salsa</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group"> 
+        <label class="control-label" for="bootstrap-select__data-selected-text-format21"><code>container: 'body'</code></label>
+        <select class="selectpicker form-control" data-container="body" id="bootstrap-select__data-selected-text-format21">
+          <option data-subtext="French's">Mustard</option>
+          <option data-subtext="Heinz">Ketchup</option>
+          <option data-subtext="Sweet">Relish</option>
+          <option data-subtext="Miracle Whip">Mayonnaise</option>
+          <option data-divider="true"></option>
+          <option data-subtext="Honey">Barbecue Sauce</option>
+          <option data-subtext="Ranch">Salad Dressing</option>
+          <option data-subtext="Sweet & Spicy">Tabasco</option>
+          <option data-subtext="Chunky">Salsa</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<div style="overflow:hidden;">
+  <select class="selectpicker">
+    ...
+  </select>
+  <select class="selectpicker" data-container="body">
+    ...
+  </select>
+</div>
+{% endhighlight %}
