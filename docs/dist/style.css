@@ -9954,6 +9954,9 @@ select.selectpicker {
 .css-formFree .bootstrap-select .selectPrompt + .bs-placeholder .filter-option-inner-inner {
   opacity: 1;
 }
+.bootstrap-select .dropdown-divider {
+  border-bottom: 1px solid #dddddd;
+}
 
 .bootstrap-select__whitespace-normal .dropdown__link,
 .bootstrap-select__whitespace-normal .dropdown-menu > li > a,

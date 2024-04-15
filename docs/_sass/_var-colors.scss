@@ -480,6 +480,7 @@ $brand-palette: (
 
   border:                                 map-get($brand-colors, _grey),
   bootstrapSelect_caret_color:            map-get($brand-colors, _dark-grey),
+  bootstrapSelect_divider_color:          map-get($brand-colors, _grey2),
 
   btnIconSvg_color:                       map-get($brand-colors, _light-blue),
 
