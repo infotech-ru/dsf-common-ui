@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17">
-<circle cx="8.5" cy="8.5" r="8" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M5.5,5.72A3.05,3.05,0,0,1,8.36,3.5,2.32,2.32,0,0,1,10.9,5.72,2.81,2.81,0,0,1,9.13,8.24c-1.1.4-1,1.27-1,2.53" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-<ellipse cx="8.21" cy="12.59" rx="0.9" ry="0.91" fill="var(--svg-icon-fill_blue, #0094ff)"/>
+<circle cx="8.5" cy="8.5" r="8" stroke="var(--svg-icon-stroke, var(--questions-stroke-active, #333))" fill="var(--questions-fill, var(--questions-fill-active, none))" />
+<path d="M5.5,5.72A3.05,3.05,0,0,1,8.36,3.5,2.32,2.32,0,0,1,10.9,5.72,2.81,2.81,0,0,1,9.13,8.24c-1.1.4-1,1.27-1,2.53" stroke="var(--svg-icon-stroke_blue, var(--questions-stroke_blue-active, #0094ff))" fill="none"/>
+<ellipse cx="8.21" cy="12.59" rx="0.9" ry="0.91" fill="var(--svg-icon-fill_blue, var(--questions-fill_blue-active, #0094ff))"/>
 </svg>

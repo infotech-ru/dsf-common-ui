@@ -13312,6 +13312,13 @@ tbody.collapse.in {
   --star-stroke_blue-active: #0094FF;
 }
 
+.active .svg--icon {
+  --questions-stroke-active: #333333;
+  --questions-fill-active: #333333;
+  --questions-stroke_blue-active: #ffffff;
+  --questions-fill_blue-active: #ffffff;
+}
+
 .hoverTarget_parent .hoverTarget_item__block,
 .hoverTarget_parent .hoverTarget_item__inline-block,
 .hoverTarget_parent .hoverTarget_item__flex,

@@ -29,14 +29,17 @@ order: 2
   </div>
 </div>
 
-<h4>Модификация иконки bicolors-favorite, bicolors-star</h4>
+<h4>Модификация иконки bicolors-favorite, bicolors-star, bicolors-questions</h4>
 <p>Использование иконки <code class="language-plaintext highlighter-rouge">bicolors-favorite</code> для применения с классом родителя <code class="language-plaintext highlighter-rouge">favorite__active</code> и создание эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-favorite-full</code>.</p>
 <p>Использование иконки <code class="language-plaintext highlighter-rouge">bicolors-star</code> для применения с классом родителя <code class="language-plaintext highlighter-rouge">star__active</code> и создание эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-star-full</code>.</p>
+<p>Использование иконки <code class="language-plaintext highlighter-rouge">bicolors-questions</code> для применения с классом родителя <code class="language-plaintext highlighter-rouge">active</code> и создание эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-questions-full</code>.</p>
 
   {% highlight html %}
-  <div class="">
-    <span class="svg--icon">
-      <?= Icons::icon('bicolors-favorite') ?>
+  <div>
+    <span class=""> 
+      <span class="svg--icon">
+        <?= Icons::icon('bicolors-favorite') ?>
+      </span>
     </span>
     <span class="favorite__active">
       <span class="svg--icon">
@@ -45,12 +48,26 @@ order: 2
     </span>
   </div>
   <div> 
-    <span class="svg--icon">
-      <?= Icons::icon('bicolors-star') ?>
+    <span class="">
+      <span class="svg--icon">
+        <?= Icons::icon('bicolors-star') ?>
+      </span>
     </span>
     <span class="star__active">
       <span class="svg--icon">
         <?= Icons::icon('bicolors-star') ?>
+      </span>
+    </span>
+  </div>
+  <div> 
+    <span class="">
+      <span class="svg--icon">
+        <?= Icons::icon('bicolors-questions') ?>
+      </span>
+    </span>
+    <span class="active">
+      <span class="svg--icon">
+        <?= Icons::icon('bicolors-questions') ?>
       </span>
     </span>
   </div>
@@ -80,6 +97,20 @@ order: 2
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div class="">
+      <span class="svg--icon"> 
+        <svg width="24" height="24">
+          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions__24vb"></use>
+        </svg>
+      </span>
+      <span class="active">
+        <span class="svg--icon"> 
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions__24vb"></use>
           </svg>
         </span>
       </span>

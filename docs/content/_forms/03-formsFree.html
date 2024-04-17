@@ -1,17 +1,19 @@
 ---
-Title: Всплывающие лейблы
-menutitle: Всплывающие лейблы
+Title: Заголовки элементов формы (лейблы)
+menutitle: Заголовки элементов формы (лейблы)
 category: forms
 anchor: formsfree
 order: 3
 ---
 
+<h4>Всплывающие заголовки элементов формы. Скрипт formsFree</h4>
 <p>- Родителю добавляем классы <code class="language-plaintext highlighter-rouge">js-allSelect-formFree css-formFree</code></p>
 <p>- Инициализируем скрипт FormsFree();</p>
 
 {% highlight js %}
 <script>
-  import {FormsFree} from "../forms-free";
+  import { FormsFree } from "../forms-free";
+  
   mounted() {
     FormsFree();
   }
@@ -20,7 +22,7 @@ order: 3
 {% highlight html %}
 <div class="js-allSelect-formFree css-formFree">
   <div class="form-group"> 
-    <label class="control-label" for="formsfree_1">Всплывающий лейбл</label>
+    <label class="control-label" for="formsfree_1">Всплывающий заголовок1</label>
     <input type="text" class="form-control" id="formsfree_1">
   </div>
 </div>
@@ -28,8 +30,38 @@ order: 3
 <div class="bs-docs-example">
   <div class="js-allSelect-formFree css-formFree">
     <div class="form-group">
-      <label class="control-label" for="formsfree_1">Всплывающий лейбл</label>
+      <label class="control-label" for="formsfree_1">Всплывающий заголовок1</label>
       <input type="text" class="form-control" id="formsfree_1">
+    </div>
+  </div>
+</div>
+
+<h4>Подсказки в элементах формы</h4>
+<p>Для всплывающих подсказок есть <code class="language-plaintext highlighter-rouge">app\components\Html::labelTooltip</code></p>
+
+{% highlight html %}
+<div class="js-allSelect-formFree css-formFree">
+  <div class="form-group"> 
+    <label class="control-label" for="formsfree_2">
+        Всплывающий заголовок2
+        <?= Html::labelTooltip(Yii::t('app', 'Всплывающий заголовок2')) ?>
+      </label>
+    <input type="text" class="form-control" id="formsfree_2">
+  </div>
+</div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="js-allSelect-formFree css-formFree">
+    <div class="form-group">
+      <label class="control-label" for="formsfree_2">
+        Всплывающий заголовок2
+        <span class="svg--icon labelTooltipIcon" data-container="body" data-toggle="tooltip" data-html="true" data-title="Всплывающий заголовок2">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions__24vb"></use>
+          </svg>
+        </span>
+      </label>
+      <input type="text" class="form-control" id="formsfree_2">
     </div>
   </div>
 </div>

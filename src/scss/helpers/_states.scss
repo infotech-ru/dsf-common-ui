@@ -93,6 +93,15 @@ tbody.collapse.in { display: table-row-group; }
   }
 }
 
+.active{
+  .svg--icon{
+    #{--questions-stroke-active}: map-get($brand-namecolors, 'dark-grey');
+    #{--questions-fill-active}: map-get($brand-namecolors, 'dark-grey');
+    #{--questions-stroke_blue-active}: map-get($brand-namecolors, 'white');
+    #{--questions-fill_blue-active}: map-get($brand-namecolors, 'white');
+  }
+}
+
 .hoverTarget_parent{
   .hoverTarget_item__block,
   .hoverTarget_item__inline-block,
