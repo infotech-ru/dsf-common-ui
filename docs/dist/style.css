@@ -9583,6 +9583,10 @@ fieldset[disabled] .checkbox-inline {
   top: 10px;
 }
 
+.hint-block {
+  font-size: 11px;
+}
+
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* SELECT (bootstrap-select, comboTree)                                       */

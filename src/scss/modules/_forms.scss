@@ -337,7 +337,6 @@ textarea.form-control {
 
 // Reposition feedback icon if input has visible label above
 .has-feedback label {
-
   & ~ .form-control-feedback {
     top: ($line-height-computed + 5); // Height of the `label` and its margin
   }
@@ -483,7 +482,6 @@ textarea.form-control {
   }
 }
 
-
 .comboTreeInputBox{
   &,
   &.btn-default,
@@ -495,7 +493,6 @@ textarea.form-control {
     // }
   }
 }
-
 
 .redactorBlock{
   display: flex;
@@ -575,4 +572,8 @@ textarea.form-control {
       top: 10px;
     }
   }
+}
+
+.hint-block{
+  font-size: 11px;
 }
