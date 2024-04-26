@@ -16066,23 +16066,23 @@ tbody.collapse.in {
   width: 24px;
   -webkit-appearance: none;
 }
+.colorField_formControl::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.colorField_formControl::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+.colorField_formControl::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
 .colorField:after {
   color: #333333;
   content: attr(data-colorField);
   display: block;
   padding-left: 5px;
   font-size: 0.75rem;
-}
-.colorField::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-.colorField::-webkit-color-swatch {
-  border: none;
-  border-radius: 50%;
-}
-.colorField::-moz-color-swatch {
-  border: none;
-  border-radius: 50%;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
