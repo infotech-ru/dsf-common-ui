@@ -16064,6 +16064,7 @@ tbody.collapse.in {
   padding: 0;
   overflow: hidden;
   width: 24px;
+  -webkit-appearance: none;
 }
 .colorField:after {
   color: #333333;
@@ -16071,6 +16072,17 @@ tbody.collapse.in {
   display: block;
   padding-left: 5px;
   font-size: 0.75rem;
+}
+.colorField::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.colorField::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+.colorField::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
