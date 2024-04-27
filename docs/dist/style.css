@@ -13321,6 +13321,10 @@ tbody.collapse.in {
   --questions-fill-active: #333333;
   --questions-stroke_blue-active: #ffffff;
   --questions-fill_blue-active: #ffffff;
+  --play-stroke: #0094FF;
+  --play-stroke_blue: #0094FF;
+  --play-fill-active: #0094FF;
+  --play-fill_blue-active: #0094FF;
 }
 
 .hoverTarget_parent .hoverTarget_item__block,
