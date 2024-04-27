@@ -18,7 +18,7 @@ order: 1
   1. Нужно чтобы viewBox совпадал с контурами иконки и имел размер 24px по высоте. <br>
   2. Неизменяемые цвета оставляем в иконке, другие зачищаем, чтобы можно было изменять стилями.<br>
   3. Если иконка использует stroke - прописываем к элементу svg атрибут stroke, если fill - то класс fill.<br>
-  {% highlight html %}fill="var(--svg-icon-fill, #000)" stroke="var(--svg-icon-stroke, #000)"}{% endhighlight %}
+  {% highlight html %}fill="var(--svg-icon-fill, #333)", stroke="var(--svg-icon-stroke, #333)", fill="var(--svg-icon-fill_blue, #0094ff)", stroke="var(--svg-icon-stroke_blue, #0094ff)"{% endhighlight %}
   Например:
 </p>
 {% highlight html %}

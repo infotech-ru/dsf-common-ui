@@ -332,6 +332,30 @@ a.btn {
       }
     }
   }
+  &__h22{
+    .glyphicon {
+      font-size: rem(22);
+      height: rem(22);
+    }
+    .svg--icon {
+      height: rem(22);
+      svg{ 
+        height: rem(22);
+      }
+    }
+  }
+  &__h24{
+    .glyphicon {
+      font-size: rem(24);
+      height: rem(24);
+    }
+    .svg--icon {
+      height: rem(24);
+      svg{ 
+        height: rem(24);
+      }
+    }
+  }
   .nostroke{
     stroke: none;
   }
