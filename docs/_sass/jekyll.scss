@@ -37,3 +37,7 @@
 @each $name in $svgSizes {
   svgsizes{ #{$name}: 0 }
 }
+
+@each $name, $value in $posSizes {
+  posSizes{ #{$name}: $value }
+}

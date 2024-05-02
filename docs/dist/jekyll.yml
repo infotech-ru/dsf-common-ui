@@ -397,3 +397,19 @@ svgsizes {
 svgsizes {
   24: 0;
 }
+
+posSizes {
+  left: 0, 50, 100, auto;
+}
+
+posSizes {
+  right: 0, 50, 100, auto;
+}
+
+posSizes {
+  top: 0, 50, 100, auto;
+}
+
+posSizes {
+  bottom: 0, 50, 100, auto;
+}

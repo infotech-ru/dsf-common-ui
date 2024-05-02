@@ -50,3 +50,14 @@ order: 6
 {% endfor %}</p>
 
 <p>Пример: <code class="language-plaintext highlighter-rouge">gap-10</code>, <code class="language-plaintext highlighter-rouge">gap-5__mobile</code></p>
+
+<h3>Top, Right, Bottom, Left</h3>
+
+<p>Классы формируются по схеме: <code class="language-plaintext highlighter-rouge">left-{X}</code></p>
+
+<p>Для мобильных устройств к правилу дописывается постфикс <code class="language-plaintext highlighter-rouge">__mobile</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">X</code> может принимать следующие значения для сторон (Числовое значение будет процентым (%)):</p>
+{% for item in site.data.jekyll.posSizes %}
+  <div><span class="fz14">{{ item.name }}</span>: <span class="fz16">{{ item.value }}</span></div>
+{% endfor %}

@@ -14361,6 +14361,134 @@ tbody.collapse.in {
   gap: 1.25rem;
 }
 
+.left-0p {
+  left: 0%;
+}
+
+.mobile-view .left-0p__mobile {
+  left: 0%;
+}
+
+.left-50p {
+  left: 50%;
+}
+
+.mobile-view .left-50p__mobile {
+  left: 50%;
+}
+
+.left-100p {
+  left: 100%;
+}
+
+.mobile-view .left-100p__mobile {
+  left: 100%;
+}
+
+.left-auto {
+  left: auto;
+}
+
+.mobile-view .left-auto__mobile {
+  left: auto;
+}
+
+.right-0p {
+  right: 0%;
+}
+
+.mobile-view .right-0p__mobile {
+  right: 0%;
+}
+
+.right-50p {
+  right: 50%;
+}
+
+.mobile-view .right-50p__mobile {
+  right: 50%;
+}
+
+.right-100p {
+  right: 100%;
+}
+
+.mobile-view .right-100p__mobile {
+  right: 100%;
+}
+
+.right-auto {
+  right: auto;
+}
+
+.mobile-view .right-auto__mobile {
+  right: auto;
+}
+
+.top-0p {
+  top: 0%;
+}
+
+.mobile-view .top-0p__mobile {
+  top: 0%;
+}
+
+.top-50p {
+  top: 50%;
+}
+
+.mobile-view .top-50p__mobile {
+  top: 50%;
+}
+
+.top-100p {
+  top: 100%;
+}
+
+.mobile-view .top-100p__mobile {
+  top: 100%;
+}
+
+.top-auto {
+  top: auto;
+}
+
+.mobile-view .top-auto__mobile {
+  top: auto;
+}
+
+.bottom-0p {
+  bottom: 0%;
+}
+
+.mobile-view .bottom-0p__mobile {
+  bottom: 0%;
+}
+
+.bottom-50p {
+  bottom: 50%;
+}
+
+.mobile-view .bottom-50p__mobile {
+  bottom: 50%;
+}
+
+.bottom-100p {
+  bottom: 100%;
+}
+
+.mobile-view .bottom-100p__mobile {
+  bottom: 100%;
+}
+
+.bottom-auto {
+  bottom: auto;
+}
+
+.mobile-view .bottom-auto__mobile {
+  bottom: auto;
+}
+
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -15126,6 +15254,18 @@ tbody.collapse.in {
 
 .mobile-view .opacity0__mobile {
   opacity: 0;
+}
+
+.cursor__pointer {
+  cursor: pointer;
+}
+
+.cursor__default {
+  cursor: default;
+}
+
+.cursor__notAllowed {
+  cursor: not-allowed;
 }
 
 .border {

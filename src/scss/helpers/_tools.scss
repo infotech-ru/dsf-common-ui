@@ -4,6 +4,7 @@
 /* path: dsf-common-ui/src/scss/helpers/_tools.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use 'sass:math';
 
 .img-responsive {
   @include img-responsive;
@@ -133,6 +134,36 @@
       gap: rem($gapSize);
   }
 }
+
+@each $posName, $posSize in $posSizes {
+  $length: length($posSize);
+  @for $value from 1 through $length {
+    $mapValue: nth($posSize, $value);
+    @if $mapValue == auto {
+      .#{$posName}-#{$mapValue}{
+        #{$posName}: #{$mapValue};
+      }
+      .mobile-view .#{$posName}-#{$mapValue}__mobile{
+        #{$posName}: #{$mapValue};
+      }
+    } @else if unitless($mapValue) {
+      .#{$posName}-#{$mapValue}p{
+        #{$posName}: #{$mapValue}#{'%'};
+      }
+      .mobile-view .#{$posName}-#{$mapValue}p__mobile{
+        #{$posName}: #{$mapValue}#{'%'};
+      }
+    } @else {
+      .#{$posName}-#{$mapValue}{
+        #{$posName}: $mapValue;
+      }
+      .mobile-view .#{$posName}-#{$mapValue}__mobile{
+        #{$posName}: #{$mapValue};
+      }
+    }
+  }
+}
+
 
 .list-unstyled {
   padding-left: 0;
@@ -330,6 +361,18 @@
 
 .scrollbar__thin{
   @extend %scrollVar;
+}
+
+.cursor__pointer{
+  cursor: pointer;
+}
+
+.cursor__default{
+  cursor: default;
+}
+
+.cursor__notAllowed{
+  cursor: not-allowed;
 }
 
 .border{

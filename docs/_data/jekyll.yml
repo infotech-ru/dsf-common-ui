@@ -214,3 +214,13 @@ svgsizes:
 - name: 24
   value: 0
 
+posSizes:
+- name: left
+  value: 0, 50, 100, auto
+- name: right
+  value: 0, 50, 100, auto
+- name: top
+  value: 0, 50, 100, auto
+- name: bottom
+  value: 0, 50, 100, auto
+
