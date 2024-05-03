@@ -48,3 +48,13 @@ order: 8
     </div>
   </div>
 </div>
+
+### Блоки с изменением фона при наведении
+
+<div class="bs-docs-example">
+  <div class="row">
+    {% for item in site.data.jekyll.brandHover %}
+      <div class="col-3 mb-10"><div class="d-flex square{{ item.name }}"><span class="fz14">square{{ item.name }}</span></div></div>
+    {% endfor %}
+  </div>
+</div>

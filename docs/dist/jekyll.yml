@@ -413,3 +413,71 @@ posSizes {
 posSizes {
   bottom: 0, 50, 100, auto;
 }
+
+brandHover {
+  _outline_dark-green: 0;
+}
+
+brandHover {
+  _outline_dark-orange: 0;
+}
+
+brandHover {
+  _outline_grey4: 0;
+}
+
+brandHover {
+  _outline_light-blue: 0;
+}
+
+brandHover {
+  _outline_red: 0;
+}
+
+brandHover {
+  _outline_green: 0;
+}
+
+brandHover {
+  _light-grey2: 0;
+}
+
+brandHover {
+  _grey2: 0;
+}
+
+brandHover {
+  _light-blue: 0;
+}
+
+brandHover {
+  _light-blue2: 0;
+}
+
+brandHover {
+  _light-blue3: 0;
+}
+
+brandHover {
+  _light-red: 0;
+}
+
+brandHover {
+  _rose: 0;
+}
+
+brandHover {
+  _light-green: 0;
+}
+
+brandHover {
+  _light-green2: 0;
+}
+
+brandHover {
+  _light-yellow: 0;
+}
+
+brandHover {
+  _light-seaGreen: 0;
+}

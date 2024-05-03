@@ -41,3 +41,7 @@
 @each $name, $value in $posSizes {
   posSizes{ #{$name}: $value }
 }
+
+@each $name, $value in $brand-hover {
+  brandHover{ #{$name}: 0 }
+}

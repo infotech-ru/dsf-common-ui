@@ -30,6 +30,8 @@ order: 2
 
 `justify-center` - justify-content: center
 
+`justify-evenly` - justify-content: space-evenly
+
 `align-start` - align-items: flex-start
 
 `align-center` - align-items: center

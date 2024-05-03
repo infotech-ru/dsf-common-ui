@@ -265,6 +265,8 @@
 .mobile-view .justify-flex-end__mobile      { justify-content: flex-end; }
 .justify-center                             { justify-content: center; }
 .mobile-view .justify-center__mobile        { justify-content: center; }
+.justify-evenly                             { justify-content: space-evenly; }
+.mobile-view .justify-evenly__mobile        { justify-content: space-evenly; }
 
 .align-start                                { align-items: flex-start; }
 .mobile-view .align-start__mobile           { align-items: flex-start; }
@@ -295,6 +297,8 @@
 .mobile-view .flex-shrink-0__mobile         { flex-shrink: 0; }
 .flex-shrink-1                              { flex-shrink: 1; }
 .mobile-view .flex-shrink-1__mobile         { flex-shrink: 1; }
+.flex-basis-0                               { flex-basis: 0; }
+.mobile-view .flex-basis-0__mobile          { flex-basis: 0; }
 .flex-basis-100p                            { flex-basis: 100%; }
 .mobile-view .flex-basis-100p__mobile       { flex-basis: 100%; }
 .flex-basis-auto                            { flex-basis: auto; }
@@ -572,6 +576,10 @@
   .bg-#{$name}{
     background-color: #{$value};
     #{--bg_color}: #{$value};
+    &.isHover,
+    .isHover & {
+      background-color: var(--bg__hover-#{$name}, #{$value});
+    }
   }
   .border-#{$name}{
     border-color: #{$value};
