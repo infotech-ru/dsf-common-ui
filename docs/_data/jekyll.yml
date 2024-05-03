@@ -257,6 +257,8 @@ brandHover:
   value: 0
 - name: _light-yellow
   value: 0
+- name: _light-yellow2
+  value: 0
 - name: _light-seaGreen
   value: 0
 

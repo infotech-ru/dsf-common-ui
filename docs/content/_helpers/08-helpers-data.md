@@ -51,10 +51,18 @@ order: 8
 
 ### Блоки с изменением фона при наведении
 
+`square` - базовый класс оформления блоков
+
+`square__shadowOnHover` - тень при наведении
+
+`square__borderThick` - бордер толщиной 2px
+
+Следующий модификации `square` возможно использовать отдельно. При наличии в блоке класса `isHover`, `active` или при наведение по псевдоклассу будет изменяться фон, бордер и цвет шрифта.aborted
+
 <div class="bs-docs-example">
   <div class="row">
     {% for item in site.data.jekyll.brandHover %}
-      <div class="col-3 mb-10"><div class="d-flex square{{ item.name }}"><span class="fz14">square{{ item.name }}</span></div></div>
+      <div class="col-2 mb-10"><div class="square square{{ item.name }}" style="height:40px"><span class="fz14">square{{ item.name }}</span></div></div>
     {% endfor %}
   </div>
 </div>

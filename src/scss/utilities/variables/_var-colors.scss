@@ -168,6 +168,14 @@ $brand-hover: (
     'color-hover':                        map-get($brand-colors, _white),
   ),
   '_light-yellow': (
+    'borderColor':                        map-get($brand-colors, _light-yellow),
+    'borderColor-hover':                  map-get($brand-colors, _yellow),
+    'bgColor':                            map-get($brand-colors, _light-yellow),
+    'bgColor-hover':                      map-get($brand-colors, _yellow),
+    'color':                              map-get($brand-colors, _dark-orange),
+    'color-hover':                        map-get($brand-colors, _dark-orange),
+  ),
+  '_light-yellow2': (
     'borderColor':                        map-get($brand-colors, _dark-orange),
     'borderColor-hover':                  map-get($brand-colors, _dark-orange),
     'bgColor':                            map-get($brand-colors, _light-yellow2),

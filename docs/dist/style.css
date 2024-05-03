@@ -13327,11 +13327,21 @@ body[style^=padding-right] .modal-sidebar {
   color: #ffffff;
 }
 .square_light-yellow {
+  background-color: #FFFBA0;
+  border-color: #FFFBA0;
+  color: #DE8500;
+}
+.square_light-yellow.isHover, .square_light-yellow:hover, .square_light-yellow.active {
+  background-color: #FFF741;
+  border-color: #FFF741;
+  color: #DE8500;
+}
+.square_light-yellow2 {
   background-color: #FFF6DF;
   border-color: #DE8500;
   color: #DE8500;
 }
-.square_light-yellow.isHover, .square_light-yellow:hover, .square_light-yellow.active {
+.square_light-yellow2.isHover, .square_light-yellow2:hover, .square_light-yellow2.active {
   background-color: #DE8500;
   border-color: #DE8500;
   color: #ffffff;

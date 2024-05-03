@@ -479,5 +479,9 @@ brandHover {
 }
 
 brandHover {
+  _light-yellow2: 0;
+}
+
+brandHover {
   _light-seaGreen: 0;
 }
