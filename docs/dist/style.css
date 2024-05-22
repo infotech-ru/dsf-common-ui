@@ -9165,12 +9165,13 @@ output {
   line-height: 1.75rem;
   margin-bottom: 0;
   overflow: hidden;
+  pointer-events: none;
   text-overflow: ellipsis;
   transition: top 0.2s ease-out, font-size 0.2s ease-out;
   transform: translateX(0) translateY(0);
   transform-origin: 0% 100%;
   top: 0.6875rem;
-  z-index: 0;
+  z-index: 1;
   white-space: nowrap;
 }
 .css-formFree .control-label.active {

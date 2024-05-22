@@ -87,12 +87,14 @@ output {
       margin-bottom: 0;
       // transition: color .2s ease-out;
       overflow: hidden;
+      pointer-events: none;
       text-overflow: ellipsis;
       transition: top .2s ease-out, font-size .2s ease-out;
       transform: translateX(0) translateY(0);
       transform-origin: 0% 100%;
       top: rem(_fontSizes(controlLabel_active__formFree));
-      z-index: 0; // Если больше 0 - появляется некликабельный участок
+      // z-index: 0; // Если больше 0 - появляется некликабельный участок. Fix: pointer-events: none;
+      z-index: 1;
       white-space: nowrap;
     }
     &.active {
