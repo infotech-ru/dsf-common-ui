@@ -15497,6 +15497,14 @@ tbody.collapse.in {
   opacity: 0;
 }
 
+.pointer-events__all {
+  pointer-events: all;
+}
+
+.pointer-events__none {
+  pointer-events: none;
+}
+
 .cursor__pointer {
   cursor: pointer;
 }
