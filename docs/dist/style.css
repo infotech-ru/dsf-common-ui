@@ -9174,6 +9174,9 @@ output {
   z-index: 1;
   white-space: nowrap;
 }
+.css-formFree .control-label > span {
+  pointer-events: all;
+}
 .css-formFree .control-label.active {
   background-color: var(--bg_color, #ffffff);
   font-size: 0.6875rem;

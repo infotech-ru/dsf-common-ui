@@ -96,6 +96,9 @@ output {
       // z-index: 0; // Если больше 0 - появляется некликабельный участок. Fix: pointer-events: none;
       z-index: 1;
       white-space: nowrap;
+      > span{
+        pointer-events: all;
+      }
     }
     &.active {
       .css-formFree & {
