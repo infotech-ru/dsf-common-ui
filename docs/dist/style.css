@@ -12260,7 +12260,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   background-color: #ffffff;
   border-top-color: #69C26A;
   border-bottom-color: transparent;
-  color: #BABABA;
+  color: #333333;
 }
 .nav-tabs > li.active > a:hover, .nav-tabs-vertical > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs-vertical > li.active > a:focus, .nav-tabs > li.active > a:active, .nav-tabs-vertical > li.active > a:active,
 .nav-tabs > li > a.active:hover,
@@ -12278,7 +12278,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   background-color: #ffffff;
   border-top-color: #69C26A;
   border-bottom-color: transparent;
-  color: #BABABA;
+  color: #333333;
 }
 
 .nav-pills > li.active > a,
