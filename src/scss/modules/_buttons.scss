@@ -320,6 +320,42 @@ a.btn {
     #{--svg-icon-stroke_blue}: _brand-palette(btnIconSvg_color);
     #{--svg-icon-stroke}: _brand-palette(btnIconSvg_color);
   }
+  &__h12{
+    .glyphicon {
+      font-size: rem(12);
+      height: rem(12);
+    }
+    .svg--icon {
+      height: rem(12);
+      svg{ 
+        height: rem(12);
+      }
+    }
+  }
+  &__h14{
+    .glyphicon {
+      font-size: rem(14);
+      height: rem(14);
+    }
+    .svg--icon {
+      height: rem(14);
+      svg{ 
+        height: rem(14);
+      }
+    }
+  }
+  &__h18{
+    .glyphicon {
+      font-size: rem(18);
+      height: rem(18);
+    }
+    .svg--icon {
+      height: rem(18);
+      svg{ 
+        height: rem(18);
+      }
+    }
+  }
   &__h20{
     .glyphicon {
       font-size: rem(20);

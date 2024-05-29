@@ -8598,6 +8598,36 @@ a.btn.disabled, fieldset[disabled] a.btn {
 .btn-icon .svg--icon svg {
   height: 1rem;
 }
+.btn-icon__h12 .glyphicon {
+  font-size: 0.75rem;
+  height: 0.75rem;
+}
+.btn-icon__h12 .svg--icon {
+  height: 0.75rem;
+}
+.btn-icon__h12 .svg--icon svg {
+  height: 0.75rem;
+}
+.btn-icon__h14 .glyphicon {
+  font-size: 0.875rem;
+  height: 0.875rem;
+}
+.btn-icon__h14 .svg--icon {
+  height: 0.875rem;
+}
+.btn-icon__h14 .svg--icon svg {
+  height: 0.875rem;
+}
+.btn-icon__h18 .glyphicon {
+  font-size: 1.125rem;
+  height: 1.125rem;
+}
+.btn-icon__h18 .svg--icon {
+  height: 1.125rem;
+}
+.btn-icon__h18 .svg--icon svg {
+  height: 1.125rem;
+}
 .btn-icon__h20 .glyphicon {
   font-size: 1.25rem;
   height: 1.25rem;
