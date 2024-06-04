@@ -221,8 +221,11 @@ $brand-namecolors: (
   'light-blue':                          map-get($brand-colors, _light-blue),
   'light-blue3':                         map-get($brand-colors, _light-blue3),
   'vibrant-blue':                        map-get($brand-colors, _vibrant-blue),
-  'light-yellow':                        map-get($brand-colors, _light-yellow2),
+  'light-yellow':                        map-get($brand-colors, _light-yellow),
+  'light-yellow2':                       map-get($brand-colors, _light-yellow2),
+  'yellow2':                             map-get($brand-colors, _yellow2),
   'light-green':                         map-get($brand-colors, _light-green),
+  'black':                               map-get($brand-colors, _black),
 );
 
 

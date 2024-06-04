@@ -11283,17 +11283,17 @@ td.table__clear {
   background-color: #00000000;
 }
 
-.table__light-yellow th,
-.table__light-yellow th:first-child,
-.table__light-yellow td,
-.table__light-yellow td:first-child {
+.table__light-yellow2 th,
+.table__light-yellow2 th:first-child,
+.table__light-yellow2 td,
+.table__light-yellow2 td:first-child {
   background-color: #FFF6DF;
 }
 
-th.table__light-yellow,
-th.table__light-yellow:first-child,
-td.table__light-yellow:first-child,
-td.table__light-yellow {
+th.table__light-yellow2,
+th.table__light-yellow2:first-child,
+td.table__light-yellow2:first-child,
+td.table__light-yellow2 {
   background-color: #FFF6DF;
 }
 
@@ -16506,6 +16506,40 @@ tbody.collapse.in {
 
 .svg-light-yellow svg,
 .svg-light-yellow.svg--icon svg {
+  --svg-icon-fill: #FFFBA0;
+  --svg-icon-stroke: #FFFBA0;
+  --svg-icon-fill_blue: #FFFBA0;
+  --svg-icon-stroke_blue: #FFFBA0;
+  --svg-valute-fill: #FFFBA0;
+}
+
+.text-light-yellow {
+  color: #FFFBA0;
+  --text_color: #FFFBA0;
+  --svg-valute-fill: #FFFBA0;
+}
+
+.textHover-light-yellow:hover, .textHoverTarget:hover .textHover-light-yellow {
+  color: #FFFBA0;
+  --text_color: #FFFBA0;
+  --svg-valute-fill: #FFFBA0;
+}
+
+.bg-light-yellow {
+  background-color: #FFFBA0;
+  --bg_color: #FFFBA0;
+}
+.bg-light-yellow.isHover, .isHover .bg-light-yellow {
+  background-color: var(--bg__hover-light-yellow, #FFFBA0);
+}
+
+.border-light-yellow {
+  border-color: #FFFBA0;
+  --border_color: #FFFBA0;
+}
+
+.svg-light-yellow2 svg,
+.svg-light-yellow2.svg--icon svg {
   --svg-icon-fill: #FFF6DF;
   --svg-icon-stroke: #FFF6DF;
   --svg-icon-fill_blue: #FFF6DF;
@@ -16513,29 +16547,63 @@ tbody.collapse.in {
   --svg-valute-fill: #FFF6DF;
 }
 
-.text-light-yellow {
+.text-light-yellow2 {
   color: #FFF6DF;
   --text_color: #FFF6DF;
   --svg-valute-fill: #FFF6DF;
 }
 
-.textHover-light-yellow:hover, .textHoverTarget:hover .textHover-light-yellow {
+.textHover-light-yellow2:hover, .textHoverTarget:hover .textHover-light-yellow2 {
   color: #FFF6DF;
   --text_color: #FFF6DF;
   --svg-valute-fill: #FFF6DF;
 }
 
-.bg-light-yellow {
+.bg-light-yellow2 {
   background-color: #FFF6DF;
   --bg_color: #FFF6DF;
 }
-.bg-light-yellow.isHover, .isHover .bg-light-yellow {
-  background-color: var(--bg__hover-light-yellow, #FFF6DF);
+.bg-light-yellow2.isHover, .isHover .bg-light-yellow2 {
+  background-color: var(--bg__hover-light-yellow2, #FFF6DF);
 }
 
-.border-light-yellow {
+.border-light-yellow2 {
   border-color: #FFF6DF;
   --border_color: #FFF6DF;
+}
+
+.svg-yellow2 svg,
+.svg-yellow2.svg--icon svg {
+  --svg-icon-fill: #FFDA7D;
+  --svg-icon-stroke: #FFDA7D;
+  --svg-icon-fill_blue: #FFDA7D;
+  --svg-icon-stroke_blue: #FFDA7D;
+  --svg-valute-fill: #FFDA7D;
+}
+
+.text-yellow2 {
+  color: #FFDA7D;
+  --text_color: #FFDA7D;
+  --svg-valute-fill: #FFDA7D;
+}
+
+.textHover-yellow2:hover, .textHoverTarget:hover .textHover-yellow2 {
+  color: #FFDA7D;
+  --text_color: #FFDA7D;
+  --svg-valute-fill: #FFDA7D;
+}
+
+.bg-yellow2 {
+  background-color: #FFDA7D;
+  --bg_color: #FFDA7D;
+}
+.bg-yellow2.isHover, .isHover .bg-yellow2 {
+  background-color: var(--bg__hover-yellow2, #FFDA7D);
+}
+
+.border-yellow2 {
+  border-color: #FFDA7D;
+  --border_color: #FFDA7D;
 }
 
 .svg-light-green svg,
@@ -16570,6 +16638,40 @@ tbody.collapse.in {
 .border-light-green {
   border-color: #DAF0DA;
   --border_color: #DAF0DA;
+}
+
+.svg-black svg,
+.svg-black.svg--icon svg {
+  --svg-icon-fill: #000000;
+  --svg-icon-stroke: #000000;
+  --svg-icon-fill_blue: #000000;
+  --svg-icon-stroke_blue: #000000;
+  --svg-valute-fill: #000000;
+}
+
+.text-black {
+  color: #000000;
+  --text_color: #000000;
+  --svg-valute-fill: #000000;
+}
+
+.textHover-black:hover, .textHoverTarget:hover .textHover-black {
+  color: #000000;
+  --text_color: #000000;
+  --svg-valute-fill: #000000;
+}
+
+.bg-black {
+  background-color: #000000;
+  --bg_color: #000000;
+}
+.bg-black.isHover, .isHover .bg-black {
+  background-color: var(--bg__hover-black, #000000);
+}
+
+.border-black {
+  border-color: #000000;
+  --border_color: #000000;
 }
 
 .phoneField__orange {

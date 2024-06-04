@@ -48,9 +48,15 @@ brandnamecolor:
 - name: vibrant-blue
   value: #0094FF
 - name: light-yellow
+  value: #FFFBA0
+- name: light-yellow2
   value: #FFF6DF
+- name: yellow2
+  value: #FFDA7D
 - name: light-green
   value: #DAF0DA
+- name: black
+  value: #000000
 
 brandlabel:
 - name: default

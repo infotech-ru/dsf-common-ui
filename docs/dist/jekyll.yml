@@ -95,11 +95,23 @@ brandnamecolor {
 }
 
 brandnamecolor {
-  light-yellow: #FFF6DF;
+  light-yellow: #FFFBA0;
+}
+
+brandnamecolor {
+  light-yellow2: #FFF6DF;
+}
+
+brandnamecolor {
+  yellow2: #FFDA7D;
 }
 
 brandnamecolor {
   light-green: #DAF0DA;
+}
+
+brandnamecolor {
+  black: #000000;
 }
 
 brandlabel {
