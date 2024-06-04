@@ -11148,7 +11148,6 @@ thead th {
   font-size: 0.6875rem;
   font-weight: 700;
   height: 2.5rem;
-  position: sticky;
   vertical-align: middle;
 }
 thead th:first-child {
@@ -11391,6 +11390,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .table-sticky-head-left_col thead th,
 .wrapper__tableSticky thead th {
+  position: sticky;
   z-index: 1001;
 }
 .table-sticky-head-left_col thead th:first-child,
@@ -11550,7 +11550,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* joinBlock                                                                  */
-/* path: dsf-common-ui/src/scss/modules/_joinBlock.scss                       */
+/* path: dsf-common-ui/src/scss/modules/_unityBlock.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .unityBlock {
@@ -16060,6 +16060,40 @@ tbody.collapse.in {
 .border-grey2 {
   border-color: #dddddd;
   --border_color: #dddddd;
+}
+
+.svg-grey3 svg,
+.svg-grey3.svg--icon svg {
+  --svg-icon-fill: #cccccc;
+  --svg-icon-stroke: #cccccc;
+  --svg-icon-fill_blue: #cccccc;
+  --svg-icon-stroke_blue: #cccccc;
+  --svg-valute-fill: #cccccc;
+}
+
+.text-grey3 {
+  color: #cccccc;
+  --text_color: #cccccc;
+  --svg-valute-fill: #cccccc;
+}
+
+.textHover-grey3:hover, .textHoverTarget:hover .textHover-grey3 {
+  color: #cccccc;
+  --text_color: #cccccc;
+  --svg-valute-fill: #cccccc;
+}
+
+.bg-grey3 {
+  background-color: #cccccc;
+  --bg_color: #cccccc;
+}
+.bg-grey3.isHover, .isHover .bg-grey3 {
+  background-color: var(--bg__hover-grey3, #cccccc);
+}
+
+.border-grey3 {
+  border-color: #cccccc;
+  --border_color: #cccccc;
 }
 
 .svg-grey4 svg,

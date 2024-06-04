@@ -43,6 +43,10 @@ brandnamecolor {
 }
 
 brandnamecolor {
+  grey3: #cccccc;
+}
+
+brandnamecolor {
   grey4: #777777;
 }
 

@@ -21,6 +21,8 @@ brandnamecolor:
   value: #cccccc
 - name: grey2
   value: #dddddd
+- name: grey3
+  value: #cccccc
 - name: grey4
   value: #777777
 - name: light-grey
