@@ -52,6 +52,9 @@ sass:
   sass_dir: _sass
   style: compressed
 highlighter: rouge
+permissions:
+  id-token: write # This is required for requesting the JWT
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
