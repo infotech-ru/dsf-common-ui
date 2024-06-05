@@ -10596,20 +10596,6 @@ select.selectpicker {
 .inputGroup > .form-control:not(:last-child) {
   border-right-width: 0;
 }
-.css-formFree .inputGroup > .form-control-container {
-  padding-top: 0.6875rem;
-}
-.inputGroup > .form-control-container + .form-control-container .form-control {
-  border-right-width: 1px;
-}
-.inputGroup > .form-control-container:not(:first-child) .form-control {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left-width: 0;
-}
-.inputGroup > .form-control-container:not(:last-child) .form-control {
-  border-right-width: 0;
-}
 .inputGroup:focus-within .inputGroup_text {
   border-color: #333333;
   -webkit-transition: border-color ease-in-out 0.15s;
@@ -10632,6 +10618,27 @@ select.selectpicker {
 .inputGroup:focus-within [class^=btn-] svg {
   --svg-icon-fill: var(--btn_svg__hover);
   --svg-icon-stroke: var(--btn_svg__hover);
+}
+
+.css-formFree .form-control-container {
+  padding-top: 0.6875rem;
+}
+.form-control-container .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+.form-control-container + .form-control-container .form-control {
+  border-left-width: 1px;
+}
+.form-control-container:first-child .form-control {
+  border-left-width: 1px;
+}
+.form-control-container:last-child .form-control {
+  border-right-width: 1px;
 }
 
 .inputGroup_prepend,
@@ -10701,20 +10708,20 @@ select.selectpicker {
   width: 16px;
 }
 
-.inputGroup > .inputGroup_prepend > .btn,
-.inputGroup > .inputGroup_prepend > .inputGroup_text,
-.inputGroup > .inputGroup_append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.inputGroup > .inputGroup_append:last-child > .inputGroup_text:not(:last-child) {
+.inputGroup_prepend > .btn,
+.inputGroup_prepend > .inputGroup_text,
+.inputGroup_append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.inputGroup_append:last-child > .inputGroup_text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.inputGroup > .inputGroup_append > .btn,
-.inputGroup > .inputGroup_append > .inputGroup_text,
-.inputGroup > .inputGroup_prepend:not(:first-child) > .btn,
-.inputGroup > .inputGroup_prepend:not(:first-child) > .inputGroup_text,
-.inputGroup > .inputGroup_prepend:first-child > .btn:not(:first-child),
-.inputGroup > .inputGroup_prepend:first-child > .inputGroup_text:not(:first-child) {
+.inputGroup_append > .btn,
+.inputGroup_append > .inputGroup_text,
+.inputGroup_prepend:not(:first-child) > .btn,
+.inputGroup_prepend:not(:first-child) > .inputGroup_text,
+.inputGroup_prepend:first-child > .btn:not(:first-child),
+.inputGroup_prepend:first-child > .inputGroup_text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
