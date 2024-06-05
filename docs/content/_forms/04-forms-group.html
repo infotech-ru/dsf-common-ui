@@ -8,93 +8,285 @@ order: 4
 
 {% highlight html %}
 <div class="js-allSelect-formFree css-formFree">
-    <div class="inputGroup mb-10">
+    <div class="inputGroup">
       <div class="form-control-container"> 
-        <label class="control-label" for="formsGroup_1">Всплывающий лейбл</label>
-        <input type="text" class="form-control" id="formsGroup_1">
+        <label class="control-label" for="formsGroup_10">Группировка инпута с иконкой справа</label>
+        <input type="text" class="form-control" id="formsGroup_10">
       </div>
       <div class="inputGroup_append">
-        <button class="btn-grey__outline" type="button"><span class="svg--icon"><svg width="24" height="24">
-          <use xlink:href="sprite.symbol.svg#bicolors-search"></use>
-        </svg></span></button>
+        <span class="inputGroup_text">
+          <span class="svg--icon">
+            <svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-arrow_check__24vb"></use></svg>
+          </span>
+        </span>
       </div>
   </div>
 </div>
 {% endhighlight %}
-<div class="bs-docs-example mb-10">
-  <div class="js-allSelect-formFree css-formFree">
-    <div class="inputGroup mb-10">
-      <div class="form-control-container"> 
-        <label class="control-label" for="formsGroup_2">Всплывающий лейбл</label>
-        <input type="text" class="form-control" id="formsGroup_2">
-      </div>
-      <div class="inputGroup_append">
+
+<div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
+  <div class="inputGroup">
+    <div class="form-control-container"> 
+      <label class="control-label" for="formsGroup_1">Группировка инпута с иконкой справа</label>
+      <input type="text" class="form-control" id="formsGroup_1">
+    </div>
+    <div class="inputGroup_append">
+      <span class="inputGroup_text">
+        <span class="svg--icon">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_check__24vb"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<div class="js-allSelect-formFree css-formFree">
+    <div class="inputGroup">
+      <div class="inputGroup_prepend">
         <span class="inputGroup_text">
           <span class="svg--icon">
             <svg width="24" height="24">
-              <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_check__24vb"></use>
+              <use xlink:href="sprite.symbol.svg#bicolors-arrow_check__24vb"></use>
             </svg>
           </span>
         </span>
       </div>
-    </div>
-    <div class="inputGroup mb-10">
-      <div class="inputGroup_prepend">
-        <span class="inputGroup_text">
-          <span class="svg--icon">
-            <svg width="24" height="24">
-              <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_check__24vb"></use>
-            </svg>
-          </span>
+      <div class="form-control-container"> 
+        <label class="control-label" for="formsGroup_20">Группировка инпута с иконкой слева</label>
+        <input type="text" class="form-control" id="formsGroup_20">
+      </div>
+  </div>
+</div>
+{% endhighlight %}
+
+<div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
+  <div class="inputGroup">
+    <div class="inputGroup_prepend">
+      <span class="inputGroup_text">
+        <span class="svg--icon">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_check__24vb"></use>
+          </svg>
         </span>
-      </div>
-      <div class="form-control-container"> 
-        <label class="control-label" for="formsGroup_3">Всплывающий лейбл</label>
-        <input type="text" class="form-control" id="formsGroup_3">
+      </span>
+    </div>
+    <div class="form-control-container"> 
+      <label class="control-label" for="formsGroup_2">Группировка инпута с иконкой слева</label>
+      <input type="text" class="form-control" id="formsGroup_2">
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<div class="inputGroup">
+  <div class="form-control-container"> 
+    <label class="control-label" for="formsGroup_30">Группировка инпута с кнопкой справа</label>
+    <input type="text" class="form-control" id="formsGroup_30">
+  </div>
+  <div class="inputGroup_append">
+    <button class="btn-lightGrey" type="button">
+      <span class="svg--icon"><svg width="24" height="24">
+      <use xlink:href="sprite.symbol.svg#bicolors-search"></use>
+      </svg></span>
+    </button>
+  </div>
+</div>
+{% endhighlight %}
+
+<div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
+  <div class="inputGroup">
+    <div class="form-control-container"> 
+      <label class="control-label" for="formsGroup_3">Группировка инпута с кнопкой справа</label>
+      <input type="text" class="form-control" id="formsGroup_3">
+    </div>
+    <div class="inputGroup_append">
+      <button class="btn-lightGrey" type="button">
+        <span class="svg--icon"><svg width="24" height="24">
+        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use>
+        </svg></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<div class="inputGroup">
+  <div class="inputGroup_prepend">
+    <button class="btn-lightGrey" type="button">
+      <span class="svg--icon"><svg width="24" height="24">
+      <use xlink:href="sprite.symbol.svg#bicolors-search"></use>
+      </svg></span>
+    </button>
+  </div>
+  <div class="form-control-container"> 
+    <label class="control-label" for="formsGroup_40">Группировка инпута с кнопкой слева</label>
+    <input type="text" class="form-control" id="formsGroup_40">
+  </div>
+</div>
+{% endhighlight %}
+<div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
+  <div class="inputGroup">
+    <div class="inputGroup_prepend">
+      <button class="btn-lightGrey" type="button">
+        <span class="svg--icon"><svg width="24" height="24">
+        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use>
+        </svg></span>
+      </button>
+    </div>
+    <div class="form-control-container"> 
+      <label class="control-label" for="formsGroup_4">Группировка инпута с кнопкой слева</label>
+      <input type="text" class="form-control" id="formsGroup_4">
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<div class="inputGroup">
+  <div class="inputGroup_prepend">
+    <button class="btn-grey__outline" type="button">
+      <span class="svg--icon">
+        <svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-search"></use></svg>
+      </span>
+    </button>
+  </div>
+  <div class="form-control-container"> 
+    <label class="control-label" for="formsGroup_5">Группировка инпута с кнопкам слева и справа</label>
+    <input type="text" class="form-control" id="formsGroup_5">
+  </div>
+  <div class="inputGroup_append">
+    <button class="btn-primary" type="button">
+      <span class="svg--icon">
+        <svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-search"></use></svg>
+      </span>
+    </button>
+  </div>
+</div>
+{% endhighlight %}
+
+<div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
+  <div class="inputGroup">
+    <div class="inputGroup_prepend">
+      <button class="btn-grey__outline" type="button"><span class="svg--icon"><svg width="24" height="24">
+        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use>
+      </svg></span></button>
+    </div>
+    <div class="form-control-container"> 
+      <label class="control-label" for="formsGroup_5">Группировка инпута с кнопкам слева и справа</label>
+      <input type="text" class="form-control" id="formsGroup_5">
+    </div>
+    <div class="inputGroup_append">
+      <button class="btn-primary" type="button"><span class="svg--icon"><svg width="24"
+            height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use>
+          </svg></span></button>
+    </div>
+  </div>
+</div>
+
+<p>Группировка пары инпутов с плейсхолдерами и с заголовоком слева и кнопкой справа</p>
+{% highlight html %}
+<div class="inputGroup">
+  <div class="inputGroup_prepend">
+    <span class="inputGroup_text">Заголовок группы</span>
+  </div>
+  <div class="form-control-container"> 
+    <input type="text" class="form-control form-control__placeholder" id="formsGroup_60" placeholder="От">
+  </div>
+  <div class="form-control-container"> 
+    <input type="text" class="form-control form-control__placeholder" id="formsGroup_610" placeholder="До">
+  </div>
+  <div class="inputGroup_append">
+    <button class="btn-primary" type="button">
+      <span class="svg--icon">
+        <svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-search"></use></svg>
+        </span>
+    </button>
+  </div>
+</div>
+{% endhighlight %}
+
+<div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
+  <div class="inputGroup">
+    <div class="inputGroup_prepend">
+      <span class="inputGroup_text">Заголовок группы</span>
+    </div>
+    <div class="form-control-container"> 
+      <input type="text" class="form-control form-control__placeholder" id="formsGroup_6" placeholder="От">
+    </div>
+    <div class="form-control-container"> 
+      <input type="text" class="form-control form-control__placeholder" id="formsGroup_61" placeholder="До">
+    </div>
+    <div class="inputGroup_append">
+      <button class="btn-primary" type="button">
+        <span class="svg--icon">
+          <svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use></svg>
+          </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<div class="inputGroup">
+    <div class="form-control-container"> 
+      <div class="form-group"> 
+          <label class="control-label" for="formGroup7">Группировка селектов с одним заголовком</label>
+          <select class="selectpicker" id="formGroup7">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
       </div>
     </div>
-    <div class="inputGroup mb-10">
-      <div class="form-control-container"> 
-        <label class="control-label" for="formsGroup_4">Всплывающий лейбл</label>
-        <input type="text" class="form-control" id="formsGroup_4">
-      </div>
-      <div class="inputGroup_append">
-        <button class="btn-lightGrey" type="button">
-          <span class="svg--icon"><svg width="24" height="24">
-          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use>
-          </svg></span>
-        </button>
+    <div class="form-control-container"> 
+      <div class="form-group"> 
+          <select class="selectpicker"  id="formGroup71">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
       </div>
     </div>
-    <div class="inputGroup mb-10">
-      <div class="inputGroup_prepend">
-        <button class="btn-lightGrey" type="button">
-          <span class="svg--icon"><svg width="24" height="24">
-          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use>
-          </svg></span>
-        </button>
-      </div>
-      <div class="form-control-container"> 
-        <label class="control-label" for="formsGroup_5">Всплывающий лейбл</label>
-        <input type="text" class="form-control" id="formsGroup_5">
+    <div class="inputGroup_append">
+      <button class="btn-icon" type="button">
+        <span class="svg--icon svg-danger">
+          <svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-delete"></use></svg>
+          </span>
+      </button>
+    </div>
+  </div>
+{% endhighlight %}
+
+<div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
+  <div class="inputGroup">
+    <div class="form-control-container"> 
+      <div class="form-group"> 
+          <label class="control-label" for="formGroup70">Группировка селектов с одним заголовком</label>
+          <select class="selectpicker" id="formGroup70">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
       </div>
     </div>
-    <div class="inputGroup mb-10">
-      <div class="inputGroup_prepend">
-        <button class="btn-grey__outline" type="button"><span class="svg--icon"><svg width="24" height="24">
-          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use>
-        </svg></span></button>
+    <div class="form-control-container"> 
+      <div class="form-group"> 
+          <select class="selectpicker"  id="formGroup701">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+          </select>
       </div>
-      <div class="form-control-container"> 
-        <label class="control-label" for="formsGroup_6">Всплывающий лейбл</label>
-        <input type="text" class="form-control" id="formsGroup_6">
-      </div>
-      <div class="inputGroup_append">
-        <button class="btn-primary" type="button"><span class="svg--icon"><svg width="24"
-              height="24">
-              <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use>
-            </svg></span></button>
-      </div>
+    </div>
+    <div class="inputGroup_append">
+      <button class="btn-icon" type="button">
+        <span class="svg--icon svg-danger">
+          <svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
+          </span>
+      </button>
     </div>
   </div>
 </div>

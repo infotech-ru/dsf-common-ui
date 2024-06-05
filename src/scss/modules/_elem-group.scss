@@ -529,7 +529,11 @@
     .css-formFree & {
       padding-top: rem(_fontSizes(controlLabel_active__formFree));
     }
-
+    & + .form-control-container {
+      .form-control {
+        border-right-width: 1px;
+      }
+    }
     &:not(:first-child) {
       .form-control {
         border-top-left-radius: 0;

@@ -9292,6 +9292,22 @@ output {
 .css-formFree .form-control::-webkit-input-placeholder {
   font-size: 0;
 }
+.css-formFree .form-control__placeholder::-moz-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.css-formFree .form-control__placeholder:-moz-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.css-formFree .form-control__placeholder:-ms-input-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.css-formFree .form-control__placeholder::-webkit-input-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
 
 textarea.form-control {
   border-radius: 0.0625rem;
@@ -10582,6 +10598,9 @@ select.selectpicker {
 }
 .css-formFree .inputGroup > .form-control-container {
   padding-top: 0.6875rem;
+}
+.inputGroup > .form-control-container + .form-control-container .form-control {
+  border-right-width: 1px;
 }
 .inputGroup > .form-control-container:not(:first-child) .form-control {
   border-top-left-radius: 0;

@@ -183,7 +183,32 @@ output {
       font-size: 0;
     }
   }
-
+  &__placeholder{
+    &::-moz-placeholder {
+      .css-formFree & {
+        color: _brand-palette(controlLabel_color);
+        font-size: rem(_fontSizes(controlLabel__formFree));
+      }
+    }
+    &:-moz-placeholder {
+      .css-formFree & {
+        color: _brand-palette(controlLabel_color);
+        font-size: rem(_fontSizes(controlLabel__formFree));
+      }
+    }
+    &:-ms-input-placeholder {
+      .css-formFree & {
+        color: _brand-palette(controlLabel_color);
+        font-size: rem(_fontSizes(controlLabel__formFree));
+      }
+    }
+    &::-webkit-input-placeholder {
+      .css-formFree & {
+        color: _brand-palette(controlLabel_color);
+        font-size: rem(_fontSizes(controlLabel__formFree));
+      }
+    }
+  }
   // [converter] extracted textarea& to textarea.form-control
 }
 
