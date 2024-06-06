@@ -9218,6 +9218,12 @@ output {
   top: 2px;
   z-index: 1;
 }
+.css-formFree .control-label__relative {
+  left: auto;
+  position: relative;
+  top: auto;
+  transform: none;
+}
 
 .form-control {
   background-image: none;

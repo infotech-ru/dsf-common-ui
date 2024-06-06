@@ -114,6 +114,14 @@ output {
         z-index: 1;
       }
     }
+    &__relative{
+      .css-formFree & {
+        left: auto;
+        position: relative;
+        top: auto;
+        transform: none;
+      }
+    }
 }
 
 .form-control {
