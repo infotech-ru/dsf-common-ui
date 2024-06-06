@@ -257,6 +257,29 @@ _Использование:_ класс `active` на кнопке.
   </div>
 </div>
 
+#### Кнопки с заголовком
+{% highlight html %}
+  
+    <?= $form->field($model, $attribute, [
+          'template' => '{label}{input}',
+          'options' => ['class' => 'form-group d-flex algin-center'],
+      ])->widget(CheckboxButtons::class, [
+          'label' => Yii::t('app', 'Заголовок для кнопок')
+      ])->label(false) ?>
+
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="form-group d-flex algin-center">
+    <div class="checkbox-buttons-wrap">
+      <div class="control-label control-label__relative">Согласие на обработку ПД</div>
+      <div id="" class="btn-group" role="group">
+        <button type="button" class="btn btn-default" data-value="1">Да</button>            
+        <button type="button" class="btn btn-default" data-value="0">Нет</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 #### Кнопки переключатели
 См. в разделе <a href="forms.html#radiobtn-item">элементы формы#Кнопки-переключатели</a>

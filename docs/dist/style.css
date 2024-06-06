@@ -9221,6 +9221,7 @@ output {
 .css-formFree .control-label__relative {
   left: auto;
   position: relative;
+  padding-right: 0.3125rem;
   top: auto;
   transform: none;
 }

@@ -118,6 +118,7 @@ output {
       .css-formFree & {
         left: auto;
         position: relative;
+        padding-right: rem(_brand-sizes(controlLabel_mr));
         top: auto;
         transform: none;
       }
