@@ -63,10 +63,12 @@ body {
 
 a {
   color: _brand-palette(link_color);
+  #{--svg-valute-fill}: _brand-palette(link_color);
   text-decoration: none;
   &:hover,
   &:focus {
     color: _brand-palette(linkHover_color);
+    #{--svg-valute-fill}: _brand-palette(linkHover_color);
     outline: none;
     text-decoration: none;
   }

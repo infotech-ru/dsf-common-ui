@@ -674,10 +674,12 @@ body.error-view {
 
 a {
   color: #1E6393;
+  --svg-valute-fill: #1E6393;
   text-decoration: none;
 }
 a:hover, a:focus {
   color: #1E6393;
+  --svg-valute-fill: #1E6393;
   outline: none;
   text-decoration: none;
 }
