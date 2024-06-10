@@ -444,6 +444,7 @@ tbody tr {
   }
   &_td{
     padding-right: #{calc(_brand-sizes(collapseTdIcon_size) + _brand-sizes(table_paddingY) * 1.5)}px;
+    position: sticky;
     &.tableHelpIcon_td{ 
       padding-right: #{calc(_brand-sizes(collapseTdIcon_size) + _brand-sizes(tableHelpIcon_size) + _brand-sizes(table_paddingX) * 1.5)}px;
     }
