@@ -68,13 +68,22 @@ order: 5
 <br>
 <br>
 <h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
+<br>
+<br>
+<h3>Классы, изменяющие начертание шрифта</h3>
+<p> 
+<code class="language-plaintext highlighter-rouge">fontStyleNormal</code>, <code class="language-plaintext highlighter-rouge">fontStyleItalic</code>,
+</p>
+<br>
+<br>
+<h4>Постфикс <code class="language-plaintext highlighter-rouge">__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств.</h4>
 
 <br>
 <br>
 <h3>Классы для изменения размера текста</h3>
 
 <p>Классы устанавливают размер шрифта эквивалентное числу, указанного в классе:
-  {% for item in site.data.jekyll.fontSizeList %}
+  {% for item in site.data.jekyll.fontsizelist %}
     <code class="language-plaintext highlighter-rouge">fz{{ item.name }}</code>, 
   {% endfor %}
 </p>

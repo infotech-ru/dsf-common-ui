@@ -11542,6 +11542,8 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 14px;
 }
 .collapseTrIcon_link {
+  background-color: transparent;
+  border: none;
   display: inline-flex;
   margin-right: 10px;
 }
@@ -11567,6 +11569,8 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 14px;
 }
 .collapseTdIcon_link {
+  background-color: transparent;
+  border: none;
   bottom: 50%;
   display: block;
   height: 14px;
@@ -14931,6 +14935,22 @@ tbody.collapse.in {
 
 .mobile-view .fontWeightBold__mobile {
   font-weight: 700;
+}
+
+.fontStyleNormal {
+  font-style: normal;
+}
+
+.mobile-view .fontStyleNormal__mobile {
+  font-style: normal;
+}
+
+.fontStyleItalic {
+  font-style: italic;
+}
+
+.mobile-view .fontStyleItalic__mobile {
+  font-style: italic;
 }
 
 .text-bold {

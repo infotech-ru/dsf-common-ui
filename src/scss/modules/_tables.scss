@@ -406,6 +406,8 @@ tbody tr {
     width: #{_brand-sizes(collapseTrIcon_size)}px;
   }
   &_link{
+    background-color: transparent;
+    border: none;
     display: inline-flex;
     margin-right: #{$value}px;
   }
@@ -432,6 +434,8 @@ tbody tr {
     width: #{_brand-sizes(collapseTdIcon_size)}px;
   }
   &_link{
+    background-color: transparent;
+    border: none;
     bottom: 50%;
     display: block;
     height: #{_brand-sizes(collapseTdIcon_size)}px;
