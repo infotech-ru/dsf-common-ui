@@ -48,6 +48,7 @@ tbody.collapse.in { display: table-row-group; }
 .limited{
   .svg--icon{ 
   --limited-stroke-on: transparent;
+  --limited-stroke-off: inherit;
   --svg-icon-fill: transparent;
   }
   &.collapsed{
@@ -60,6 +61,12 @@ tbody.collapse.in { display: table-row-group; }
     }
     .btn-text__hide{
       display: none;
+    }
+  }
+  &.active{ 
+    .svg--icon{ 
+      --limited-stroke-on: inherit;
+      --limited-stroke-off: transparent;
     }
   }
   .btn-text__show{

@@ -13593,6 +13593,7 @@ tbody.collapse.in {
 
 .limited .svg--icon {
   --limited-stroke-on: transparent;
+  --limited-stroke-off: inherit;
   --svg-icon-fill: transparent;
 }
 .limited.collapsed .svg--icon {
@@ -13604,6 +13605,10 @@ tbody.collapse.in {
 }
 .limited.collapsed .btn-text__hide {
   display: none;
+}
+.limited.active .svg--icon {
+  --limited-stroke-on: inherit;
+  --limited-stroke-off: transparent;
 }
 .limited .btn-text__show {
   display: none;

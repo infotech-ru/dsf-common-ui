@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.9798 3.99854L11.9798 9.99854" stroke="var(--limited-stroke-off, var(--svg-icon-stroke_blue, #0094ff))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.0199 19.9988V13.9988" stroke="var(--limited-stroke-off, var(--svg-icon-stroke_blue, #0094ff))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.0199 8L12.0199 10L10.0199 8" stroke="var(--limited-stroke-off, var(--svg-icon-stroke_blue, #0094ff))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.97977 16L11.9798 14L13.9798 16" stroke="var(--limited-stroke-off, var(--svg-icon-stroke_blue, #0094ff))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="20.9998" y="3" width="18" height="18" transform="rotate(90 20.9998 3)" stroke="var(--limited-stroke-off, var(--svg-icon-stroke, #333))" fill="none" stroke-dasharray="1 1"/>
+<path d="M11.96 4V10" stroke="var(--limited-stroke-on, var(--svg-icon-stroke_blue, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 20L12 14" stroke="var(--limited-stroke-on, var(--svg-icon-stroke_blue, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="20.98" y="7.04004" width="10" height="18" transform="rotate(90 20.98 7.04004)" stroke="var(--limited-stroke-on, var(--svg-icon-stroke, none))" fill="none" stroke-dasharray="1 1"/>
+<path d="M10 6L12 4L14 6" stroke="var(--limited-stroke-on, var(--svg-icon-stroke_blue, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.96 18L11.96 20L9.95999 18" stroke="var(--limited-stroke-on, var(--svg-icon-stroke_blue, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
