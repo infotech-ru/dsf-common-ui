@@ -13595,6 +13595,8 @@ tbody.collapse.in {
   --limited-stroke-on: transparent;
   --limited-stroke-off: inherit;
   --svg-icon-fill: transparent;
+  --svg-icon-stroke: #333;
+  --svg-icon-stroke_blue: #0094ff;
 }
 .limited.collapsed .svg--icon {
   --limited-stroke-on: inherit;
