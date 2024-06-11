@@ -65,17 +65,27 @@ tbody.collapse.in { display: table-row-group; }
       display: none;
     }
   }
-  &.active{ 
-    .svg--icon{ 
-      --limited-stroke-on: inherit;
-      --limited-stroke-off: transparent;
-    }
-  }
   .btn-text__show{
     display: none;
   }
   .btn-text__hide{
     display: inline-block;
+  }
+}
+
+.iconModification{
+  .svg--icon{ 
+  --limited-stroke-on: inherit;
+  --limited-stroke-off: transparent;
+  --svg-icon-fill: transparent;
+  --svg-icon-stroke: #333;
+  --svg-icon-stroke_blue: #0094ff;
+  }
+  &.active{ 
+    .svg--icon{ 
+      --limited-stroke-on: transparent;
+      --limited-stroke-off: inherit;
+    }
   }
 }
 

@@ -6,7 +6,7 @@ anchor: icons-states
 order: 2
 ---
 
-<h4>Модификация иконки bicolors-plus</h4>
+<h4>Модификация иконки bicolors-plus при использование скрипта collspse.js</h4>
 <p>Использование одной иконки bicolors-plus для cкрипта collapse. И создание эффекта замены на `minus` при расскрытии списка.
   <br>Для этого используется класс <code class="language-plaintext highlighter-rouge">limited</code>.</p>
 {% highlight html %}
@@ -29,12 +29,12 @@ order: 2
   </div>
 </div>
 
-<h4>Модификация иконки bicolors-favorite, bicolors-star, bicolors-questions</h4>
+<h4>Модификация с заменой на иконку с залитым фоном или заменой на другую</h4>
 <p>Использование иконки <code class="language-plaintext highlighter-rouge">bicolors-favorite</code> для применения с классом родителя <code class="language-plaintext highlighter-rouge">favorite__active</code> и создание эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-favorite-full</code>.</p>
 <p>Использование иконки <code class="language-plaintext highlighter-rouge">bicolors-star</code> для применения с классом родителя <code class="language-plaintext highlighter-rouge">star__active</code> и создание эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-star-full</code>.</p>
 <p>Использование иконки <code class="language-plaintext highlighter-rouge">bicolors-questions</code> для применения с классом родителя <code class="language-plaintext highlighter-rouge">active</code> и создание эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-questions-full</code>.</p>
 <p>Использование иконок <code class="language-plaintext highlighter-rouge">bicolors-play, bicolors-play_1_5x, bicolors-play_2x, bicolors-play_next</code> для применения с классом родителя <code class="language-plaintext highlighter-rouge">active</code> и создание эффекта заливки цветом.</p>
-<p>Использование иконок <code class="language-plaintext highlighter-rouge">bicolors-height_collapse, bicolors-height_collapse__24vb, bicolors-height_expand, bicolors-height_expand__24vb и bicolors-minus__24vb</code> для применения с классом родителя <code class="language-plaintext highlighter-rouge">limited</code> и создание эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-height_expand, bicolors-height_expand__24vb, bicolors-height_collapse, bicolors-height_collapse__24vb и bicolors-plus__24vb</code> соответственно при добавление класса <code class="language-plaintext highlighter-rouge">active</code></p>
+<p>Использование иконок <code class="language-plaintext highlighter-rouge">bicolors-height_collapse, bicolors-height_collapse__24vb, bicolors-height_expand, bicolors-height_expand__24vb, bicolors-plus__24vb, bicolors-plus и bicolors-minus__24vb</code> для применения с классом родителя <code class="language-plaintext highlighter-rouge">iconModification</code> и создание эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-height_expand, bicolors-height_expand__24vb, bicolors-height_collapse, bicolors-height_collapse__24vb, bicolors-minus__24vb, bicolors-minus и bicolors-plus__24vb</code> соответственно при добавление класса <code class="language-plaintext highlighter-rouge">active</code></p>
 
   {% highlight html %}
   <div>
@@ -196,14 +196,14 @@ order: 2
       </span>
     </div>
     <div>
-      <span class="limited">
+      <span class="iconModification">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-height_expand__24vb"></use>
           </svg>
         </span>
       </span>
-      <span class="limited active">
+      <span class="iconModification active">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-height_expand__24vb"></use>
@@ -212,14 +212,14 @@ order: 2
       </span>
     </div>
     <div>
-      <span class="limited">
+      <span class="iconModification">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-height_expand"></use>
           </svg>
         </span>
       </span>
-      <span class="limited active">
+      <span class="iconModification active">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-height_expand"></use>
@@ -228,14 +228,14 @@ order: 2
       </span>
     </div>
     <div>
-      <span class="limited">
+      <span class="iconModification">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-height_collapse__24vb"></use>
           </svg>
         </span>
       </span>
-      <span class="limited active">
+      <span class="iconModification active">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-height_collapse__24vb"></use>
@@ -244,14 +244,14 @@ order: 2
       </span>
     </div>
     <div>
-      <span class="limited">
+      <span class="iconModification">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-height_collapse"></use>
           </svg>
         </span>
       </span>
-      <span class="limited active">
+      <span class="iconModification active">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-height_collapse"></use>
@@ -260,17 +260,33 @@ order: 2
       </span>
     </div>
     <div>
-      <span class="limited">
+      <span class="iconModification">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-minus__24vb"></use>
           </svg>
         </span>
       </span>
-      <span class="limited active">
+      <span class="iconModification active">
         <span class="svg--icon"> 
           <svg width="24" height="24">
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-minus__24vb"></use>
+          </svg>
+        </span>
+      </span>
+    </div>
+    <div>
+      <span class="iconModification">
+        <span class="svg--icon"> 
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb"></use>
+          </svg>
+        </span>
+      </span>
+      <span class="iconModification active">
+        <span class="svg--icon"> 
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb"></use>
           </svg>
         </span>
       </span>

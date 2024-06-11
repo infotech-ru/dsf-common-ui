@@ -13608,15 +13608,23 @@ tbody.collapse.in {
 .limited.collapsed .btn-text__hide {
   display: none;
 }
-.limited.active .svg--icon {
-  --limited-stroke-on: inherit;
-  --limited-stroke-off: transparent;
-}
 .limited .btn-text__show {
   display: none;
 }
 .limited .btn-text__hide {
   display: inline-block;
+}
+
+.iconModification .svg--icon {
+  --limited-stroke-on: inherit;
+  --limited-stroke-off: transparent;
+  --svg-icon-fill: transparent;
+  --svg-icon-stroke: #333;
+  --svg-icon-stroke_blue: #0094ff;
+}
+.iconModification.active .svg--icon {
+  --limited-stroke-on: transparent;
+  --limited-stroke-off: inherit;
 }
 
 .svg--collapseIcon {
