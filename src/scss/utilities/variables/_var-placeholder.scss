@@ -135,3 +135,30 @@
     }
   }
 }
+%selectCaret{
+  background-repeat: no-repeat;
+  background-size: #{_brand-sizes(caretSelect_size)}px;
+  background-position: center;
+  background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: #{_brand-sizes(caretSelect_size)}px;
+  margin: 0;
+  left: auto;
+  position: absolute;
+  right: 0;
+  top: auto;
+  width: #{_brand-sizes(caretSelect_size)}px;
+  .has-error &{
+      background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33228L8.00002 10.6656" stroke="#D9534F" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33228L8.00004 10.6656" stroke="#D9534F" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  }
+  &[disabled],
+  &.disabled{
+      background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#777777" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  }
+  &:after,
+  &:before{
+      display: none;
+  }
+}

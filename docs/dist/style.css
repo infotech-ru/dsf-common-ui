@@ -82,50 +82,29 @@
 }
 
 .comboTreeArrowBtn, .bootstrap-select .caret {
-  --svg-icon-fill: #333333;
-  --svg-icon-stroke: #333333;
-  --svg-icon-fill_blue: #333333;
-  --svg-icon-stroke_blue: #333333;
-}
-.comboTreeArrowBtn:before, .bootstrap-select .caret:before, .comboTreeArrowBtn:after, .bootstrap-select .caret:after {
-  border-style: solid;
-  border-color: var(--bg_color, #ffffff) transparent transparent transparent;
-  content: "";
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.66669 5.33331L8.00002 10.6666' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.3334 5.33331L8.00004 10.6666' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  border: none;
+  cursor: pointer;
   display: block;
+  height: 16px;
+  margin: 0;
+  left: auto;
   position: absolute;
-  height: 0;
-  top: 0px;
-  width: 0;
-}
-.comboTreeArrowBtn:after, .bootstrap-select .caret:after {
-  border-width: 0.3125rem;
-  border-bottom-width: 0;
   right: 0;
+  top: auto;
+  width: 16px;
 }
-.comboTreeArrowBtn:before, .bootstrap-select .caret:before {
-  border-width: 0.375rem;
-  border-bottom-width: 0;
-  border-top-color: #333333;
-  right: -1px;
+.has-error .comboTreeArrowBtn, .has-error .bootstrap-select .caret, .bootstrap-select .has-error .caret {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.66669 5.33228L8.00002 10.6656' stroke='%23D9534F' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.3334 5.33228L8.00004 10.6656' stroke='%23D9534F' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
-.open.comboTreeArrowBtn:before, .bootstrap-select .open.caret:before, .open.comboTreeArrowBtn:after, .bootstrap-select .open.caret:after,
-.show.comboTreeArrowBtn:before,
-.bootstrap-select .show.caret:before,
-.show.comboTreeArrowBtn:after,
-.bootstrap-select .show.caret:after {
-  transform: rotate(180deg);
+[disabled].comboTreeArrowBtn, .bootstrap-select [disabled].caret, .disabled.comboTreeArrowBtn, .bootstrap-select .disabled.caret {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.66669 5.33331L8.00002 10.6666' stroke='%23777777' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.3334 5.33331L8.00004 10.6666' stroke='%23777777' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
-.open.comboTreeArrowBtn:before, .bootstrap-select .open.caret:before,
-.show.comboTreeArrowBtn:before,
-.bootstrap-select .show.caret:before {
-  top: -1px;
-}
-
-.show.comboTreeArrowBtn:before, .bootstrap-select .show.caret:before, .show.comboTreeArrowBtn:after, .bootstrap-select .show.caret:after {
-  transform: rotate(180deg);
-}
-.show.comboTreeArrowBtn:before, .bootstrap-select .show.caret:before {
-  top: -1px;
+.comboTreeArrowBtn:after, .bootstrap-select .caret:after, .comboTreeArrowBtn:before, .bootstrap-select .caret:before {
+  display: none;
 }
 
 /* ========================================================================== */
@@ -9192,7 +9171,7 @@ output {
   font-size: 0.75rem;
   left: 0;
   padding-left: 0.4375rem;
-  padding-right: 0.9375rem;
+  padding-right: calc(16px + 16px + 10px);
   position: absolute;
   line-height: 1.75rem;
   margin-bottom: 0;
@@ -9215,7 +9194,7 @@ output {
   left: -0.1875rem;
   line-height: 0.6875rem;
   padding-left: 0.4375rem;
-  padding-right: 0.625rem;
+  padding-right: calc(12px + 5px);
   transform: translateX(0.4375rem) translateY(0);
   top: 2px;
   z-index: 1;
@@ -9288,6 +9267,34 @@ output {
 }
 .form-control[type=file] {
   border: none;
+}
+.form-control.datepicker {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.5' y='4.16968' width='11' height='9' stroke='%23333333'/%3E%3Cpath d='M2.33331 6.3363H13.6666' stroke='%23333333'/%3E%3Cpath d='M4.66669 2.66968V5.33634' stroke='%23333333'/%3E%3Cpath d='M4 7.66968H5.33333' stroke='%23333333'/%3E%3Cpath d='M4 9.66968H5.33333' stroke='%23333333'/%3E%3Cpath d='M10.6667 7.66968H12' stroke='%23333333'/%3E%3Cpath d='M10.6667 9.66968H12' stroke='%23333333'/%3E%3Cpath d='M4 11.6697H5.33333' stroke='%23333333'/%3E%3Cpath d='M10.6667 11.6697H12' stroke='%23333333'/%3E%3Cpath d='M7.33331 7.66968H8.66665' stroke='%23333333'/%3E%3Cpath d='M7.33331 9.66968H8.66665' stroke='%23333333'/%3E%3Cpath d='M7.33331 11.6697H8.66665' stroke='%23333333'/%3E%3Cpath d='M11.3333 2.66968V5.33634' stroke='%23333333'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: calc(100% - 7px) center;
+}
+.has-error .form-control.datepicker {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.5' y='4.16766' width='11' height='9' stroke='%23D9534F'/%3E%3Cpath d='M2.33331 6.33429H13.6666' stroke='%23D9534F'/%3E%3Cpath d='M4.66669 2.66766V5.33433' stroke='%23D9534F'/%3E%3Cpath d='M4 7.66766H5.33333' stroke='%23D9534F'/%3E%3Cpath d='M4 9.66766H5.33333' stroke='%23D9534F'/%3E%3Cpath d='M10.6667 7.66766H12' stroke='%23D9534F'/%3E%3Cpath d='M10.6667 9.66766H12' stroke='%23D9534F'/%3E%3Cpath d='M4 11.6677H5.33333' stroke='%23D9534F'/%3E%3Cpath d='M10.6667 11.6677H12' stroke='%23D9534F'/%3E%3Cpath d='M7.33331 7.66766H8.66665' stroke='%23D9534F'/%3E%3Cpath d='M7.33331 9.66766H8.66665' stroke='%23D9534F'/%3E%3Cpath d='M7.33331 11.6677H8.66665' stroke='%23D9534F'/%3E%3Cpath d='M11.3333 2.66766V5.33433' stroke='%23D9534F'/%3E%3C/svg%3E");
+}
+.form-control.datepicker[disabled], .form-control.datepicker.disabled {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.5' y='4.16565' width='11' height='9' stroke='%23777777'/%3E%3Cpath d='M2.33331 6.33228H13.6666' stroke='%23777777'/%3E%3Cpath d='M4.66669 2.66565V5.33232' stroke='%23777777'/%3E%3Cpath d='M4 7.66565H5.33333' stroke='%23777777'/%3E%3Cpath d='M4 9.66565H5.33333' stroke='%23777777'/%3E%3Cpath d='M10.6667 7.66565H12' stroke='%23777777'/%3E%3Cpath d='M10.6667 9.66565H12' stroke='%23777777'/%3E%3Cpath d='M4 11.6656H5.33333' stroke='%23777777'/%3E%3Cpath d='M10.6667 11.6656H12' stroke='%23777777'/%3E%3Cpath d='M7.33331 7.66565H8.66665' stroke='%23777777'/%3E%3Cpath d='M7.33331 9.66565H8.66665' stroke='%23777777'/%3E%3Cpath d='M7.33331 11.6656H8.66665' stroke='%23777777'/%3E%3Cpath d='M11.3333 2.66565V5.33232' stroke='%23777777'/%3E%3C/svg%3E");
+}
+.css-formFree .form-control.datepicker::-moz-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.css-formFree .form-control.datepicker:-moz-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.css-formFree .form-control.datepicker:-ms-input-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.css-formFree .form-control.datepicker::-webkit-input-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
 }
 .css-formFree .form-control::-moz-placeholder {
   font-size: 0;
@@ -9484,12 +9491,17 @@ fieldset[disabled] .checkbox-inline {
 
 .help-block {
   display: block;
+  font-size: 10px;
+  line-height: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
   color: #737373;
 }
 .help-block:empty {
   display: none;
+}
+.css-formFree .help-block, .form-group .help-block {
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -9664,6 +9676,35 @@ fieldset[disabled] .checkbox-inline {
 
 .hint-block {
   font-size: 11px;
+}
+
+.labelTooltipIcon {
+  display: inline-block;
+}
+.css-formFree .labelTooltipIcon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 24px;
+}
+.css-formFree .labelTooltipIcon svg {
+  height: 16px;
+  width: 16px;
+}
+.css-formFree .control-label.active .labelTooltipIcon {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 12px;
+  top: 50%;
+  right: 0px;
+  padding-left: 5px;
+  margin-top: calc(12px * -0.5);
+  width: 22px;
+}
+.css-formFree .control-label.active .labelTooltipIcon svg {
+  height: 12px;
+  width: 12px;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -9856,14 +9897,11 @@ select.selectpicker {
 .bootstrap-select .bs-caret {
   position: relative;
 }
-.bootstrap-select .caret {
-  position: absolute;
-  top: 50%;
-  margin-top: -2px;
-  border: none;
-  display: block;
-  right: 0;
+.open.bootstrap-select .caret,
+.show.bootstrap-select .caret {
+  transform: rotate(180deg);
 }
+
 .input-group .bootstrap-select.form-control .dropdown-toggle {
   border-radius: inherit;
 }
@@ -10230,16 +10268,10 @@ select.selectpicker {
   border-color: #D9534F;
 }
 .comboTreeArrowBtn {
-  cursor: pointer;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
-  position: absolute;
-  top: 50%;
-  margin-top: -2px;
-  border: none;
-  display: block;
   right: 12px;
 }
 .comboTreeArrowBtnImg {
@@ -10648,6 +10680,19 @@ select.selectpicker {
 }
 .form-control-container:last-child .form-control {
   border-right-width: 1px;
+}
+.form-control-container__border {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.form-control-container__border .form-control {
+  border-left-width: 1px;
+}
+.css-formFree .form-control-container__border {
+  padding-top: 0.6875rem;
 }
 
 .inputGroup_prepend,

@@ -78,10 +78,9 @@ output {
       font-size: rem(_fontSizes(controlLabel__formFree));
       left: 0;
       // left: rem($paddinFromLeft * -1);
-      // padding-left: rem(_brand-sizes(formControl_paddingX));
       padding-left: rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft));
-      // padding-right: 3px;
-      padding-right: rem(calc(_brand-sizes(formControl_paddingX) + 5));
+      // padding-right: rem(calc(_brand-sizes(formControl_paddingX) + 5));
+      padding-right: calc(#{_brand-sizes(caretSelect_size)}px  + #{_brand-sizes(iconLabel)}px + 10px);
       position: absolute;
       line-height: rem(calc(_lineHeight(input) + 2));
       margin-bottom: 0;
@@ -108,7 +107,8 @@ output {
         left: rem($paddinFromLeft * -1);
         line-height: rem(_fontSizes(controlLabel_active__formFree));
         padding-left: rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft));
-        padding-right: rem(_brand-sizes(formControl_paddingX));
+        // padding-right: rem(_brand-sizes(formControl_paddingX));
+        padding-right: calc(#{_brand-sizes(iconLabelActive)}px + 5px);
         transform: translateX(rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
         top: 2px; // корректировка из-за line-height
         z-index: 1;
@@ -177,7 +177,43 @@ output {
   &[type=file] {
     border: none;
   }
-  
+  &.datepicker{
+      background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16968" width="11" height="9" stroke="#333333"/><path d="M2.33331 6.3363H13.6666" stroke="#333333"/><path d="M4.66669 2.66968V5.33634" stroke="#333333"/><path d="M4 7.66968H5.33333" stroke="#333333"/><path d="M4 9.66968H5.33333" stroke="#333333"/><path d="M10.6667 7.66968H12" stroke="#333333"/><path d="M10.6667 9.66968H12" stroke="#333333"/><path d="M4 11.6697H5.33333" stroke="#333333"/><path d="M10.6667 11.6697H12" stroke="#333333"/><path d="M7.33331 7.66968H8.66665" stroke="#333333"/><path d="M7.33331 9.66968H8.66665" stroke="#333333"/><path d="M7.33331 11.6697H8.66665" stroke="#333333"/><path d="M11.3333 2.66968V5.33634" stroke="#333333"/></svg>');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: calc(100% - 7px) center;
+      .has-error &{
+          background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16766" width="11" height="9" stroke="#D9534F"/><path d="M2.33331 6.33429H13.6666" stroke="#D9534F"/><path d="M4.66669 2.66766V5.33433" stroke="#D9534F"/><path d="M4 7.66766H5.33333" stroke="#D9534F"/><path d="M4 9.66766H5.33333" stroke="#D9534F"/><path d="M10.6667 7.66766H12" stroke="#D9534F"/><path d="M10.6667 9.66766H12" stroke="#D9534F"/><path d="M4 11.6677H5.33333" stroke="#D9534F"/><path d="M10.6667 11.6677H12" stroke="#D9534F"/><path d="M7.33331 7.66766H8.66665" stroke="#D9534F"/><path d="M7.33331 9.66766H8.66665" stroke="#D9534F"/><path d="M7.33331 11.6677H8.66665" stroke="#D9534F"/><path d="M11.3333 2.66766V5.33433" stroke="#D9534F"/></svg>');
+      }
+      &[disabled],
+      &.disabled{
+          background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16565" width="11" height="9" stroke="#777777"/><path d="M2.33331 6.33228H13.6666" stroke="#777777"/><path d="M4.66669 2.66565V5.33232" stroke="#777777"/><path d="M4 7.66565H5.33333" stroke="#777777"/><path d="M4 9.66565H5.33333" stroke="#777777"/><path d="M10.6667 7.66565H12" stroke="#777777"/><path d="M10.6667 9.66565H12" stroke="#777777"/><path d="M4 11.6656H5.33333" stroke="#777777"/><path d="M10.6667 11.6656H12" stroke="#777777"/><path d="M7.33331 7.66565H8.66665" stroke="#777777"/><path d="M7.33331 9.66565H8.66665" stroke="#777777"/><path d="M7.33331 11.6656H8.66665" stroke="#777777"/><path d="M11.3333 2.66565V5.33232" stroke="#777777"/></svg>');
+      }
+      &::-moz-placeholder {
+          .css-formFree &{ 
+              color: _brand-palette(controlLabel_color);
+              font-size: rem(_fontSizes(controlLabel__formFree));
+          }
+      }
+      &:-moz-placeholder {
+          .css-formFree &{ 
+              color: _brand-palette(controlLabel_color);
+              font-size: rem(_fontSizes(controlLabel__formFree));
+          }
+      }
+      &:-ms-input-placeholder {
+          .css-formFree &{ 
+              color: _brand-palette(controlLabel_color);
+              font-size: rem(_fontSizes(controlLabel__formFree));
+          }
+      }
+      &::-webkit-input-placeholder {
+          .css-formFree &{ 
+              color: _brand-palette(controlLabel_color);
+              font-size: rem(_fontSizes(controlLabel__formFree));
+          }
+      }
+    }
   .css-formFree & {
     &::-moz-placeholder {
       font-size: 0;
@@ -391,11 +427,18 @@ textarea.form-control {
 
 .help-block {
   display: block; // account for any element using help-block
+  font-size: 10px;
+  line-height: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
   color: lighten($text-color, 25%); // lighten the text some for contrast
   &:empty { // style.css
       display: none;
+  }
+  .css-formFree &,
+  .form-group &{
+      margin: 0;
+      // position: absolute; // большие тексты перекрываются
   }
 }
 
@@ -616,3 +659,35 @@ textarea.form-control {
 .hint-block{
   font-size: 11px;
 }
+
+.labelTooltipIcon{
+    display: inline-block;
+    .css-formFree &{
+        width: #{_brand-sizes(iconLabel)}px;
+        height: #{_brand-sizes(iconLabel)}px;
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        right: 24px;
+        svg { 
+            height: #{_brand-sizes(iconLabel)}px;
+            width: #{_brand-sizes(iconLabel)}px;
+        }
+    }
+    .control-label.active &{
+        .css-formFree &{
+            background-color: transparentize(_brand-colors(_white), .3);
+            height: #{_brand-sizes(iconLabelActive)}px;
+            top: 50%;
+            right: 0px;
+            padding-left: 5px;
+            margin-top: calc(#{_brand-sizes(iconLabelActive)}px * -0.5);
+            width: 22px;
+            svg { 
+                height: #{_brand-sizes(iconLabelActive)}px;
+                width: #{_brand-sizes(iconLabelActive)}px;
+            }   
+        }
+    }
+}
+

@@ -548,6 +548,7 @@
     }
   }
 }
+
 .form-control-container {
   .css-formFree & {
     padding-top: rem(_fontSizes(controlLabel_active__formFree));
@@ -575,7 +576,21 @@
       border-right-width: 1px;
     }
   }
+  &__border{ 
+      position: relative;
+      flex: 1 1 auto;
+      width: 1%;
+      min-width: 0;
+      margin-bottom: 0;
+      .form-control{
+        border-left-width: 1px;
+      }
+      .css-formFree &{
+          padding-top: rem(_fontSizes(controlLabel_active__formFree));
+      }
+  }
 }
+
 .inputGroup_prepend,
 .inputGroup_append {
   display: flex;
