@@ -9896,6 +9896,8 @@ select.selectpicker {
 }
 .bootstrap-select .bs-caret {
   position: relative;
+  height: 16px;
+  width: 16px;
 }
 .open.bootstrap-select .caret,
 .show.bootstrap-select .caret {
@@ -10272,7 +10274,8 @@ select.selectpicker {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
-  right: 12px;
+  right: 10px;
+  top: 6px;
 }
 .comboTreeArrowBtnImg {
   display: none;

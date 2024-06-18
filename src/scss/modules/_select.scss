@@ -277,6 +277,8 @@ select.selectpicker {
   }
   .bs-caret{
     position: relative;
+    height: #{_brand-sizes(caretSelect_size)}px;
+    width: #{_brand-sizes(caretSelect_size)}px;
   }
   .caret {
     @extend %selectCaret;
@@ -780,7 +782,8 @@ select.selectpicker {
       -ms-user-select: none; /* IE10+/Edge */
       user-select: none; /* Standard */
       @extend %selectCaret;
-      right: 12px;
+      right: 10px;
+      top: 6px;
       &Img{
         display: none;
       }
