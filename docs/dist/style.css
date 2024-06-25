@@ -9688,6 +9688,12 @@ fieldset[disabled] .checkbox-inline {
   height: 16px;
   width: 16px;
 }
+.css-formFree .checkbox-item label.checkbox .labelTooltipIcon {
+  position: relative;
+  margin-top: -1px;
+  right: 0;
+  top: auto;
+}
 .css-formFree .control-label.active .labelTooltipIcon {
   background-color: rgba(255, 255, 255, 0.7);
   height: 12px;

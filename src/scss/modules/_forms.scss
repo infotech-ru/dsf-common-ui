@@ -674,6 +674,12 @@ textarea.form-control {
             width: #{_brand-sizes(iconLabel)}px;
         }
     }
+    .css-formFree .checkbox-item label.checkbox &{
+      position: relative;
+      margin-top: -1px;
+      right: 0;
+      top: auto;
+    }
     .control-label.active &{
         .css-formFree &{
             background-color: transparentize(_brand-colors(_white), .3);
