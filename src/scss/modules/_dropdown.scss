@@ -155,11 +155,11 @@
 
 .dropup{
   // Reverse the caret
-  .caret {
-    content: "";
-    border-top: 0;
-    border-bottom: $caret-width-base dashed;
-  }
+  // .caret {
+    // content: "";
+    // border-top: 0; 
+    // border-bottom: $caret-width-base dashed;
+  // }
   // Different positioning for bottom up menu
   .dropdown-menu {
     top: auto;

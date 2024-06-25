@@ -6666,11 +6666,6 @@ h6, .h6 {
   z-index: 990;
 }
 
-.dropup .caret {
-  content: "";
-  border-top: 0;
-  border-bottom: 4px dashed;
-}
 .dropup .dropdown-menu {
   top: auto;
   margin-bottom: 2px;
