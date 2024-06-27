@@ -13741,10 +13741,6 @@ tbody.collapse.in {
   height: auto;
 }
 
-.img-rounded {
-  border-radius: calc(border-radius-large / 16 * 1rem);
-}
-
 .img-thumbnail {
   padding: 5px;
   background-color: #ffffff;

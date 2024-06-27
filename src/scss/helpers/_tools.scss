@@ -9,9 +9,7 @@
 .img-responsive {
   @include img-responsive;
 }
-.img-rounded {
-  border-radius: rem(border-radius-large);
-}
+
 .img-thumbnail {
   padding: calc($grid-gutter-width * 0.5);
   // line-height: $line-height-base;
