@@ -76,11 +76,11 @@ export function initTreeTable(options) {
 export function searchIcon() {
   document.addEventListener('DOMContentLoaded', () => {
 
-      const inputField = document.getElementById('inputFieldSearchIcon');
-      const checkBtn = document.getElementById('checkBtnSearchIcon');
-      const resetBtn = document.getElementById('resetBtnSearchIcon');
-      const parents = document.querySelector('.js-iconContainer');
-      const children = parents.querySelectorAll('.js-iconBlock');
+      const inputField = document.getElementById('input-field-search-icon');
+      // const checkBtn = document.getElementById('checkBtnSearchIcon');
+      // const resetBtn = document.getElementById('resetBtnSearchIcon');
+      const parent = document.querySelector('.js-icon-container');
+      const children = parent.querySelectorAll('.js-icon-block');
 
       const itemsObject = {
         'bicolors-2wd': ['2wd'],
@@ -572,7 +572,7 @@ export function searchIcon() {
           // Filter and display matching children
           for (const key in itemsObject) {
               if (itemsObject[key].some(value => value.includes(inputValue))) {
-                  const matchingChild = parents.querySelector(`.${key}`);
+                  const matchingChild = parent.querySelector(`.${key}`);
                   if (matchingChild) {
                       matchingChild.style.display = 'block';
                   }
@@ -592,13 +592,13 @@ export function searchIcon() {
     //     });
     // });
 
-    resetBtn.addEventListener('click', () => {
-        inputField.value = '';
-        parents.forEach(() => {
-            Array.from(children).forEach(child => {
-                child.style.display = 'block';
-            });
-        });
-    });
+    // resetBtn.addEventListener('click', () => {
+    //     inputField.value = '';
+    //     parents.forEach(() => {
+    //         Array.from(children).forEach(child => {
+    //             child.style.display = 'block';
+    //         });
+    //     });
+    // });
   });
 }

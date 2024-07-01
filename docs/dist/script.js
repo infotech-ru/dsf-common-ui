@@ -79,11 +79,11 @@ var DSFUI = (function (exports) {
   }
   function searchIcon() {
     document.addEventListener('DOMContentLoaded', function () {
-      var inputField = document.getElementById('inputFieldSearchIcon');
-      document.getElementById('checkBtnSearchIcon');
-      var resetBtn = document.getElementById('resetBtnSearchIcon');
-      var parents = document.querySelector('.js-iconContainer');
-      var children = parents.querySelectorAll('.js-iconBlock');
+      var inputField = document.getElementById('input-field-search-icon'); // const checkBtn = document.getElementById('checkBtnSearchIcon');
+      // const resetBtn = document.getElementById('resetBtnSearchIcon');
+
+      var parent = document.querySelector('.js-icon-container');
+      var children = parent.querySelectorAll('.js-icon-block');
       var itemsObject = {
         'bicolors-2wd': ['2wd'],
         'bicolors-2wd__24vb': ['2wd'],
@@ -575,7 +575,7 @@ var DSFUI = (function (exports) {
           if (itemsObject[key].some(function (value) {
             return value.includes(inputValue);
           })) {
-            var matchingChild = parents.querySelector(".".concat(key));
+            var matchingChild = parent.querySelector(".".concat(key));
 
             if (matchingChild) {
               matchingChild.style.display = 'block';
@@ -593,15 +593,14 @@ var DSFUI = (function (exports) {
       //         });
       //     });
       // });
-
-      resetBtn.addEventListener('click', function () {
-        inputField.value = '';
-        parents.forEach(function () {
-          Array.from(children).forEach(function (child) {
-            child.style.display = 'block';
-          });
-        });
-      });
+      // resetBtn.addEventListener('click', () => {
+      //     inputField.value = '';
+      //     parents.forEach(() => {
+      //         Array.from(children).forEach(child => {
+      //             child.style.display = 'block';
+      //         });
+      //     });
+      // });
     });
   }
 
