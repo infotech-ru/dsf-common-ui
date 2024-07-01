@@ -2,32 +2,21 @@
 <style type="text/css">
 {{#shapes}}	{{#selector.dimensions}}{{expression}}{{^last}}, {{/last}}{{/selector.dimensions}} { width: {{width.outer}}px; height: {{height.outer}}px; }
 {{/shapes}}</style>
+{{#inline}}
 <!--
-====================================================================================================
--->
-<!--
-
 Inline <symbol> SVG sprite
 ====================================================================================================
 This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
 below within this document. Please see
-
 	https://github.com/svg-sprite/svg-sprite/blob/1.5.x/docs/configuration.md#defs--symbol-mode
-
 for further details on how to create this embeddable sprite variant.
-
 -->
-
+{{/inline}}
 {{#inline}}
 <svg width="0" height="0" style="position:absolute">
 {{#shapes}}		{{{svg}}}
 {{/shapes}}
 </svg>
-<!--
-====================================================================================================
--->
-
-<section>
 
 <!--
 
@@ -35,11 +24,10 @@ A) Inline SVG with embedded sprite
 ====================================================================================================
 These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
 embedded above. They may be styled via CSS.
-
 -->
-	<h3>A) Inline SVG with embedded sprite</h3>
+<h3>A) Inline SVG with embedded sprite</h3>
 <div class="set-detail-list">
-{{#shapes}}					<div class="set-ico-list-item" title="{{name}}">
+{{#shapes}}					<div class="set-ico-list-item {{name}}" title="{{name}}">
 			<div class="icon-box" data-toggle="popover" data-content='
 				<div class="">
 					<div class="set-ico-modal-name">{{name}}</div>
@@ -53,62 +41,50 @@ embedded above. They may be styled via CSS.
 					</button>
 				</div>
 			'>
-
 				<!-- {{name}} -->
 				<svg class="{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
 					<use xlink:href="#{{name}}"></use>
 				</svg>
-
 			</div>
 		</div>
-{{/shapes}}			</div>
+{{/shapes}}			
+</div>
 
-<!--
-====================================================================================================
--->
-
-</section>
 {{/inline}}
-		<section>
-
-<!--
-
+		
+{{#inline}}<!--
 B) Inline SVG with external sprite (IE 9-11 with polyfill only)
 ====================================================================================================
 These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
 SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
--->
-
-			{{^inline}}<h4>Inline SVG with external sprite (IE 9-11 with polyfill only)</h4>{{/inline}}
-			{{#inline}}<p>Please set the <code>inline</code> option to <code>FALSE</code> in order to preview this method.</p>{{/inline}}{{^inline}}<div class="set-detail-list">
-
-{{#shapes}}				<div class="set-ico-list-item" title="{{name}}">
-					<div class="icon-box">
-					<button type="button" name="button" class="btn-icon js-icon-box"  data-content='
-						<div class="">
-							<div class="set-ico-modal-name">{{name}}</div>
-							<button class="btn-default js-copyToClipboard" data-clipboard-text="{{name}}">
-								<svg class="svg--icon" width="24" height="24">
-									<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use>
-								</svg>
-								<span class="btn-text">
-									Скопировать
-								</span>
-							</button>
-						</div>
-					'>
-						<!-- {{name}} -->
-						<svg class="{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
-							<use xlink:href="/dsf-common-ui/dist/{{{example}}}#{{name}}"></use>
-						</svg>
-						</button>
-					</div>
-				</div>
-{{/shapes}}			</div>{{/inline}}
-
-<!--
-====================================================================================================
--->
+-->{{/inline}}
+			{{#inline}}<h4>Inline SVG with external sprite (IE 9-11 with polyfill only)</h4>{{/inline}}
+			{{#inline}}<p>Please set the <code>inline</code> option to <code>FALSE</code> in order to preview this method.</p>{{/inline}}{{^inline}}
+<div class="set-detail-list js-iconContainer">
+{{#shapes}}
+<div class="set-ico-list-item js-iconBlock {{name}}" title="{{name}}">
+	<div class="icon-box">
+	<button type="button" name="button" class="btn-icon js-icon-box"  data-content='
+		<div class="">
+			<div class="mb-5"><span class="control-label">Имя иконки:</span> {{name}}</div>
+			<div class="mb-5"><span class="control-label">:</span> </div>
+			<button class="btn-default btn-block js-copyToClipboard" data-clipboard-text="{{name}}">
+				<svg class="svg--icon" width="24" height="24">
+					<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use>
+				</svg>
+				<span class="btn-text">Скопировать</span>
+			</button>
+		</div>
+	'>
+		<!-- {{name}} -->
+		<svg class="{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
+			<use xlink:href="/dsf-common-ui/dist/{{{example}}}#{{name}}"></use>
+		</svg>
+		</button>
+	</div>
+</div>
+{{/shapes}}			
+</div>{{/inline}}
 
 		</section>

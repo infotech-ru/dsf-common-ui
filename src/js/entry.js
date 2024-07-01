@@ -16,6 +16,7 @@ export function OnLoad() {
   init();
   FormsFree();
   AutoresizeTextarea();
+  searchIcon();
 }
   
 export function tablesInit() { 

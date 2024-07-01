@@ -73,7 +73,7 @@ var DSFUI = (function (exports) {
     $("table.js-tree-table").treetable(_objectSpread({
       expandable: true,
       indent: 34,
-      expanderTemplate: "<span class='collapseTrIcon'><svg width='14px' height='14px'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use></svg ></span>",
+      expanderTemplate: "<span class='collapseTrIcon'><svg width='14px' height='14px'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#'bicolors-plus__24vb'></use></sv'g ></span>",
       indenterTemplate: "<a class='collapseTrIcon_link' href=\"#\"></a>"
     }, options));
   }
@@ -210,6 +210,7 @@ var DSFUI = (function (exports) {
     init();
     FormsFree();
     AutoresizeTextarea();
+    searchIcon();
   }
   function tablesInit() {
     initTreeTable();
