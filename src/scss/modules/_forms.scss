@@ -662,6 +662,17 @@ textarea.form-control {
 
 .labelTooltipIcon{
     display: inline-block;
+    background-color: transparentize(_brand-colors(_white), .3);
+    height: #{_brand-sizes(iconLabelActive)}px;
+    top: 50%;
+    right: 0px;
+    padding-left: 5px;
+    margin-top: calc(#{_brand-sizes(iconLabelActive)}px * -0.5);
+    width: 22px;
+    svg { 
+        height: #{_brand-sizes(iconLabelActive)}px;
+        width: #{_brand-sizes(iconLabelActive)}px;
+    }
     .css-formFree &{
         width: #{_brand-sizes(iconLabel)}px;
         height: #{_brand-sizes(iconLabel)}px;
@@ -692,7 +703,7 @@ textarea.form-control {
             svg { 
                 height: #{_brand-sizes(iconLabelActive)}px;
                 width: #{_brand-sizes(iconLabelActive)}px;
-            }   
+            }
         }
     }
 }
