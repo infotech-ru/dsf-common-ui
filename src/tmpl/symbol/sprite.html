@@ -27,7 +27,8 @@ embedded above. They may be styled via CSS.
 -->
 <h3>A) Inline SVG with embedded sprite</h3>
 <div class="set-detail-list">
-{{#shapes}}					<div class="set-ico-list-item {{name}}" title="{{name}}">
+{{#shapes}}					
+		<div class="set-ico-list-item {{name}}" title="{{name}}">
 			<div class="icon-box" data-toggle="popover" data-content='
 				<div class="">
 					<div class="set-ico-modal-name">{{name}}</div>
@@ -65,10 +66,9 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 {{#shapes}}
 <div class="set-ico-list-item js-icon-block {{name}}" title="{{name}}">
 	<div class="icon-box">
-	<button type="button" name="button" class="btn-icon js-icon-box"  data-content='
+	<button type="button" name="button" class="btn-icon js-icon-box" title="Ключи:"  data-content='
 		<div class="">
 			<div class="mb-5"><span class="control-label">Имя иконки:</span> {{name}}</div>
-			<div class="mb-5"><span class="control-label">:</span> </div>
 			<button class="btn-default btn-block js-copyToClipboard" data-clipboard-text="{{name}}">
 				<svg class="svg--icon" width="24" height="24">
 					<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use>
