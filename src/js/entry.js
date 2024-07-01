@@ -3,6 +3,7 @@ import {
   CopyToClipboard,
   multilevelMenu,
   initTreeTable,
+  searchIcon,
 } from "./utils";
   
 import {init} from "./init.js";
