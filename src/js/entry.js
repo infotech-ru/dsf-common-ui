@@ -17,9 +17,11 @@ export function OnLoad() {
   init();
   FormsFree();
   AutoresizeTextarea();
-  searchIcon();
 }
   
+export function iconsInit() { 
+  searchIcon();
+}
 export function tablesInit() { 
   initTreeTable();
 }

@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-lg-3">
+  <div class="col-lg-4 col-xxl-3">
     <div class="bs-sidebar" id="sidebar">
       <ul class="nav bs-sidenav nav-tabs-vertical">
         {% for doc in site.components %}
@@ -13,7 +13,7 @@
       </ul>
     </div>
   </div>
-  <div class="col-lg-9" role="main">
+  <div class="col-lg-8 col-xxl-9" role="main">
     {% for doc in site.components %}
     {% if doc.category == page.category %}
       <div class="pageItem" id="{{ doc.anchor }}">

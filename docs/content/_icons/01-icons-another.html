@@ -19,13 +19,15 @@ order: 1
   2. Неизменяемые цвета оставляем в иконке, другие зачищаем, чтобы можно было изменять стилями.<br>
   3. Если иконка использует stroke - прописываем к элементу svg атрибут stroke, если fill - то класс fill.<br>
   {% highlight html %}fill="var(--svg-icon-fill, #333)", stroke="var(--svg-icon-stroke, #333)", fill="var(--svg-icon-fill_blue, #0094ff)", stroke="var(--svg-icon-stroke_blue, #0094ff)"{% endhighlight %}
-  Например:
 </p>
+<div class="bs-docs-example">Пример</div>
 {% highlight html %}
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.8 14"><path d="M0,12.6A1.4,1.4,0,1,1,1.4,14,1.4,1.4,0,0,1,0,12.6ZM0,1.4A1.4,1.4,0,1,1,1.4,2.8,1.4,1.4,0,0,1,0,1.4ZM1.4,5.6A1.4,1.4,0,1,0,2.8,7,1.4,1.4,0,0,0,1.4,5.6Z" fill="var(--svg-icon-fill, #000)" fill-rule="evenodd"/></svg>
 {% endhighlight %}
-
-<h3>Использование.</h3>
+<p></p>
+<div class="bs-docs-example">
+  <h3 class="mb-0">Как использовать</h3>
+</div>
 
 {% highlight html %}
   html:
@@ -88,7 +90,6 @@ order: 1
   </span>
 </div>
 
-<h3>Загруженные в проект-пакет иконки</h3>
 <div class="row">
   <div class="col-6">
     <div class="d-flex js-allSelect-formFree css-formFree"> 
@@ -96,12 +97,6 @@ order: 1
         <label class="control-label" for="input-field-search-icon">Поиск иконки</label>
         <input class="form-control" type="text" id="input-field-search-icon">
       </div>
-      <!-- <div class="form-group ml-10">
-        <button class="btn-primary" id="checkBtnSearchIcon" type="button">Проверить</button>
-      </div>
-      <div class="form-group ml-10">
-        <button class="btn-default" id="resetBtnSearchIcon" type="button">Сбросить</button>
-      </div> -->
     </div>
   </div>
 </div>
