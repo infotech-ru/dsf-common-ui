@@ -139,12 +139,12 @@ export function searchIcon() {
         'bicolors-book_lamp__24vb': ['книга', 'book', 'лампа', 'lamp', '24vb'],
         'bicolors-calculator': ['калькулятор', 'calculator'],
         'bicolors-calculator__24vb': ['калькулятор', 'calculator', '24vb'],
-        'bicolors-calendar': ['календарь', 'calendar'],
-        'bicolors-calendar__24vb': ['календарь', 'calendar', '24vb'],
+        'bicolors-calendar': ['календарь', 'дата', 'calendar'],
+        'bicolors-calendar__24vb': ['календарь', 'дата', 'calendar', '24vb'],
         'bicolors-calendar_date': ['календарь', 'calendar', 'дата', 'date'],
         'bicolors-calendar_date__24vb': ['календарь', 'calendar', 'дата', 'date', '24vb'],
-        'bicolors-calendar_task': ['календарь', 'calendar', 'задание', 'задача', 'task'],
-        'bicolors-calendar_task__24vb': ['календарь', 'calendar', 'задание', 'задача', 'task', '24vb'],
+        'bicolors-calendar_task': ['календарь', 'дата', 'calendar', 'задание', 'задача', 'task'],
+        'bicolors-calendar_task__24vb': ['календарь', 'дата', 'calendar', 'задание', 'задача', 'task', '24vb'],
         'bicolors-call': ['звонок', 'call'],
         'bicolors-call__24vb': ['звонок', 'call', '24vb'],
         'bicolors-call_back': ['звонок', 'call', 'назад', 'обратно', 'back'],
@@ -578,6 +578,18 @@ export function searchIcon() {
         html: true,
         container: "body",
         trigger: "click"
+      });
+      $('.js-icon-box').on('shown.bs.popover', function (e) {
+        $('.js-copyToClipboard').click(function (e) {
+          var clipText = this.getAttribute('data-clipboard-text');
+          navigator.clipboard.writeText(clipText).then(function () {
+            console.log('Async: Copying to clipboard was successful!');
+          });
+          this.classList.add('btn-success');
+          $('.js-icon-box').popover('hide');
+          $('.toast').toast('show');
+        });
+        return;
       });
       inputField.addEventListener('input', () => {
           const inputValue = inputField.value.toLowerCase();
