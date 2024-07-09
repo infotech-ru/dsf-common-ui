@@ -12786,15 +12786,6 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --svg-icon-stroke: var(--color_light-blue);
   --svg-icon-stroke_blue: var(--color_light-blue);
 }
-.carousel-indicators-item_inner .carousel-indicators_imgOuter {
-  align-items: end;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  position: relative;
-}
 .carousel-indicators-item_inner img {
   object-fit: cover;
   height: 100%;
@@ -12802,6 +12793,15 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .carousel-indicators__bigPreview .carousel-indicators-item_inner img {
   max-height: 108px;
+}
+.carousel-indicators-item_imgOuter {
+  align-items: end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: relative;
 }
 .carousel-indicators-item:hover .carousel-indicators-item_inner, .carousel-indicators-item:focus .carousel-indicators-item_inner, .carousel-indicators-item.active .carousel-indicators-item_inner {
   outline-color: var(--color_dark-grey);

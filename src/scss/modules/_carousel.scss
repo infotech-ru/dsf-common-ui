@@ -264,15 +264,6 @@
             --svg-icon-stroke_blue: var(--color_light-blue);
           }
         }
-        .carousel-indicators_imgOuter{
-          align-items: end;
-          background-repeat: no-repeat;
-          background-size: cover;
-          display: flex;
-          justify-content: center;
-          height: 100%;
-          position: relative;
-        }
         img{
           object-fit: cover;
           height: 100%;
@@ -281,6 +272,15 @@
             max-height: 108px;
           }
         }
+      }
+      &_imgOuter{
+          align-items: end;
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          height: 100%;
+          position: relative;
       }
       &:hover,
       &:focus,
