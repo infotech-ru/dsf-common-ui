@@ -26,11 +26,11 @@
             border-color: _brand-palette(checkboxItemHover_border);
         }
         &[disabled] + label.checkbox:before{
-            cursor: disable;
+            cursor: not-allowed;
         }
         &[disabled] + label.checkbox{
             color: _brand-palette(checkboxItemDisabled_color);
-            cursor: disable;
+            cursor: not-allowed;
         }
     }
     label.checkbox {
@@ -71,7 +71,7 @@
             vertical-align: middle;
         }
         fieldset[disabled]{
-            cursor: disable;
+            cursor: not-allowed;
         }
         .tableHelpIcon{
             display: inline-flex;

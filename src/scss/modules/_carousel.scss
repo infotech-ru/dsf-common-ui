@@ -169,7 +169,7 @@
     text-align: center;
   }
   &-indicators {
-    gap: 4px;
+    gap: 7px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -192,7 +192,7 @@
     }
     &_outer{
       position: relative;
-      min-height: #{_brand-sizes(carousel-thumbs_size) + 4}px;
+      min-height: #{_brand-sizes(carousel-thumbs_size) + _brand-sizes(carousel-thumbs_gap)}px;
     }
     &-item {
       border: none;
@@ -215,15 +215,25 @@
         text-indent: -999px;
         width: $carousel-indicator-width;
       }
+      .carousel-indicators__bigPreview &{ 
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
       &_inner{
         align-items: center;
         border: 4px solid white;
         display: inline-flex;
+        flex-direction: column;
         justify-content: center;
         outline: 1px solid var(--color_grey2);
         overflow: hidden;
         height: #{_brand-sizes(carousel-thumbs_size)}px;
         width: #{_brand-sizes(carousel-thumbs_size)}px;
+        .carousel-indicators__bigPreview &{
+          height: auto;
+          width: 100%;
+        }
         &Button{ 
           align-items: center;
           background-color: var(--color_light-blue2);
@@ -254,10 +264,22 @@
             --svg-icon-stroke_blue: var(--color_light-blue);
           }
         }
+        .carousel-indicators_imgOuter{
+          align-items: end;
+          background-repeat: no-repeat;
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          height: 100%;
+          position: relative;
+        }
         img{
           object-fit: cover;
           height: 100%;
           width: 100%;
+          .carousel-indicators__bigPreview &{
+            max-height: 108px;
+          }
         }
       }
       &:hover,
@@ -287,7 +309,7 @@
       }
       &:first-child{ 
         .carousel-indicators_outer &{
-          margin-left: #{_brand-sizes(carousel-thumbs_size) + 4}px;
+          margin-left: #{_brand-sizes(carousel-thumbs_size) + _brand-sizes(carousel-thumbs_gap)}px;
         }
       }
     }

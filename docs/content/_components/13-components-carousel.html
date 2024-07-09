@@ -13,6 +13,7 @@ order: 13
 <p>Классы для изменения пропорции картинок с 4/3 на 16/9 и 16/10<code class="language-plaintext highlighter-rouge">carousel__aspectRatio16-9</code> <code class="language-plaintext highlighter-rouge">carousel__aspectRatio16-10</code></p>
 
 <p>Класс <code class="language-plaintext highlighter-rouge">carousel-indicators__line</code> - изменяет превью из картинок в чёрточки</p>
+<p>Класс <code class="language-plaintext highlighter-rouge">carousel-indicators__bigPreview</code> - изменяет размер превью картинок в больший размер</p>
 
 <p>Класс <code class="language-plaintext highlighter-rouge">carousel-action carousel-action_visible</code> - вывод кнопок действия без эффекта наведения</p>
 <p>Класс <code class="language-plaintext highlighter-rouge">carousel-action__bottomRight</code> - вывод кнопок действия внизу справа</p>
@@ -24,7 +25,7 @@ order: 13
     <div class="p-relative mb-10">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://placehold.co/2100x1600/0094FF/FFFFFF/jpg?text=Infotech+UI\nImage+1" class="img-responsive" alt="">
+          <img src="" class="img-responsive" alt="">
           <div class="carousel-action">
               <div class="carousel-action__topRight">
                   <a class="btn-danger__outline js-delete-photo" href="">
@@ -49,10 +50,10 @@ order: 13
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://placehold.co/2100x1600/69C26A/FFFFFF/jpg?text=Infotech+UI\nImage+2" class="img-responsive" alt="">
+          <img src="" class="img-responsive" alt="">
         </div>
         <div class="carousel-item">
-          <img src="https://placehold.co/2100x1600/FFDA7D/FFFFFF/jpg?text=Infotech+UI\nImage+3" class="img-responsive" alt="">
+          <img src="" class="img-responsive" alt="">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -67,6 +68,24 @@ order: 13
           </span>
           <span class="sr-only"><?= Yii::t('app', 'Следующее') ?></span>
       </a>
+    </div>
+    <div class="carousel-indicators carousel-indicators__bigPreview">
+      <div data-target="#carouselExampleIndicators" data-slide-to="0" class="carousel-indicators-item active">
+        <div class="carousel-indicators-item_inner">
+          <div class="h4 mb-10">Заголовок</div>
+          <div class="carousel-indicators-imgOuter">
+            <img src="..." alt="">
+          </div>
+        </div>
+      </div>
+      <div data-target="#carouselExampleIndicators" data-slide-to="1" class="carousel-indicators-item">
+        <div class="carousel-indicators-item_inner">
+          <div class="h4 mb-10">Заголовок</div>
+          <div class="carousel-indicators__bigPreview">
+            <img src="..." alt="">
+          </div>
+        </div>
+      </div>
     </div>
     <div class="carousel-indicators">
       <div data-target="#carouselExampleIndicators" data-slide-to="0" class="carousel-indicators-item active">
@@ -173,6 +192,32 @@ order: 13
           </span>
           <span class="sr-only">Следующее</span>
       </a>
+    </div>
+    <div class="carousel-indicators carousel-indicators__bigPreview">
+      <div data-target="#carouselExampleIndicators" data-slide-to="0" class="carousel-indicators-item active">
+        <div class="carousel-indicators-item_inner">
+          <div class="h4 mb-10">Заголовок1</div>
+          <div class="carousel-indicators-imgOuter" style="background-image: url('https://placehold.co/200x200/69C26A/FFFFFF/jpg?text=Infotech+UI%5CnImage+1');">
+            <img src="https://placehold.co/200x200/69C26A/FFFFFF/jpg?text=Infotech+UI%5CnImage+1" alt="">
+          </div>
+        </div>
+      </div>
+      <div data-target="#carouselExampleIndicators" data-slide-to="1" class="carousel-indicators-item">
+        <div class="carousel-indicators-item_inner">
+          <div class="h4 mb-10">Заголовок2</div>
+          <div class="carousel-indicators-imgOuter" style="background-image: url('https://placehold.co/200x200/0094FF/FFFFFF/jpg?text=Infotech+UI%5CnImage+2');">
+            <img src="https://placehold.co/200x200/0094FF/FFFFFF/jpg?text=Infotech+UI%5CnImage+2" alt="">
+          </div>
+        </div>
+      </div>
+      <div data-target="#carouselExampleIndicators" data-slide-to="2" class="carousel-indicators-item">
+        <div class="carousel-indicators-item_inner">
+          <div class="h4 mb-10">Заголовок3</div>
+          <div class="carousel-indicators-imgOuter" style="background-image: url('https://placehold.co/200x200/FFDA7D/FFFFFF/jpg?text=Infotech+UI%5CnImage+3');">
+            <img src="https://placehold.co/200x200/FFDA7D/FFFFFF/jpg?text=Infotech+UI%5CnImage+3" alt="">
+          </div>
+        </div>
+      </div>
     </div>
     <div class="carousel-indicators">
       <div data-target="#carouselExampleIndicators" data-slide-to="0" class="carousel-indicators-item active">

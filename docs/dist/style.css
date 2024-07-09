@@ -7738,11 +7738,11 @@ g.highcharts-series,
   border-color: #1E6393;
 }
 .checkbox-item input[type=checkbox][disabled] + label.checkbox:before {
-  cursor: disable;
+  cursor: not-allowed;
 }
 .checkbox-item input[type=checkbox][disabled] + label.checkbox {
   color: #cccccc;
-  cursor: disable;
+  cursor: not-allowed;
 }
 .checkbox-item label.checkbox {
   cursor: pointer;
@@ -7782,7 +7782,7 @@ g.highcharts-series,
   vertical-align: middle;
 }
 .checkbox-item label.checkbox fieldset[disabled] {
-  cursor: disable;
+  cursor: not-allowed;
 }
 .checkbox-item label.checkbox .tableHelpIcon {
   display: inline-flex;
@@ -12688,7 +12688,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   text-align: center;
 }
 .carousel-indicators {
-  gap: 4px;
+  gap: 7px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -12710,7 +12710,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .carousel-indicators_outer {
   position: relative;
-  min-height: 68px;
+  min-height: 71px;
 }
 .carousel-indicators-item {
   border: none;
@@ -12736,15 +12736,25 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   text-indent: -999px;
   width: 30px;
 }
+.carousel-indicators__bigPreview .carousel-indicators-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
 .carousel-indicators-item_inner {
   align-items: center;
   border: 4px solid white;
   display: inline-flex;
+  flex-direction: column;
   justify-content: center;
   outline: 1px solid var(--color_grey2);
   overflow: hidden;
   height: 64px;
   width: 64px;
+}
+.carousel-indicators__bigPreview .carousel-indicators-item_inner {
+  height: auto;
+  width: 100%;
 }
 .carousel-indicators-item_innerButton {
   align-items: center;
@@ -12776,10 +12786,22 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --svg-icon-stroke: var(--color_light-blue);
   --svg-icon-stroke_blue: var(--color_light-blue);
 }
+.carousel-indicators-item_inner .carousel-indicators_imgOuter {
+  align-items: end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
 .carousel-indicators-item_inner img {
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+.carousel-indicators__bigPreview .carousel-indicators-item_inner img {
+  max-height: 108px;
 }
 .carousel-indicators-item:hover .carousel-indicators-item_inner, .carousel-indicators-item:focus .carousel-indicators-item_inner, .carousel-indicators-item.active .carousel-indicators-item_inner {
   outline-color: var(--color_dark-grey);
@@ -12803,7 +12825,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 0.75rem;
 }
 .carousel-indicators_outer .carousel-indicators-item:first-child {
-  margin-left: 68px;
+  margin-left: 71px;
 }
 .carousel-action {
   display: none;
