@@ -269,7 +269,7 @@
           height: 100%;
           width: 100%;
           .carousel-indicators__bigPreview &{
-            max-height: _brand-sizes(carousel-thumbsBig_size);
+            max-height: #{_brand-sizes(carousel-thumbsBig_size)}px;
             width: auto;
             z-index: 1;
           }
@@ -281,7 +281,7 @@
           background-size: cover;
           display: flex;
           justify-content: center;
-          max-height: _brand-sizes(carousel-thumbsBig_size);
+          max-height: #{_brand-sizes(carousel-thumbsBig_size)}px;
           height: 100%;
           position: relative;
           width: 100%;

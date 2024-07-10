@@ -12792,7 +12792,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 100%;
 }
 .carousel-indicators__bigPreview .carousel-indicators-item_inner img {
-  max-height: 108;
+  max-height: 108px;
   width: auto;
   z-index: 1;
 }
@@ -12802,7 +12802,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   background-size: cover;
   display: flex;
   justify-content: center;
-  max-height: 108;
+  max-height: 108px;
   height: 100%;
   position: relative;
   width: 100%;
