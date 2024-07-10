@@ -12792,7 +12792,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 100%;
 }
 .carousel-indicators__bigPreview .carousel-indicators-item_inner img {
-  max-height: 108px;
+  max-height: 108;
+  width: auto;
+  z-index: 1;
 }
 .carousel-indicators-item_imgOuter {
   align-items: end;
@@ -12800,8 +12802,18 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   background-size: cover;
   display: flex;
   justify-content: center;
+  max-height: 108;
   height: 100%;
   position: relative;
+  width: 100%;
+}
+.carousel-indicators-item_imgOuter:after {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: "";
+  display: flex;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 .carousel-indicators-item:hover .carousel-indicators-item_inner, .carousel-indicators-item:focus .carousel-indicators-item_inner, .carousel-indicators-item.active .carousel-indicators-item_inner {
   outline-color: var(--color_dark-grey);

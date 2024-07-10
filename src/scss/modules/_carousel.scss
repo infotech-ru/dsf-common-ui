@@ -269,7 +269,9 @@
           height: 100%;
           width: 100%;
           .carousel-indicators__bigPreview &{
-            max-height: 108px;
+            max-height: _brand-sizes(carousel-thumbsBig_size);
+            width: auto;
+            z-index: 1;
           }
         }
       }
@@ -279,8 +281,18 @@
           background-size: cover;
           display: flex;
           justify-content: center;
+          max-height: _brand-sizes(carousel-thumbsBig_size);
           height: 100%;
           position: relative;
+          width: 100%;
+          &:after {
+            background-color: #fff3;
+            content: '';
+            display: flex;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+          }
       }
       &:hover,
       &:focus,
