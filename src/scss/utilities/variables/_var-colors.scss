@@ -638,8 +638,8 @@ $brand-palette: (
   navPills-active_color:                  map-get($brand-colors, _white),
   
   navTabs_borderColor:                    map-get($brand-colors, _grey),
-  navTabs_bgc:                            map-get($brand-colors, _light-grey),
-  navTabs_color:                          map-get($brand-colors, _grey),
+  navTabs_bgc:                            map-get($brand-colors, _grey2),
+  navTabs_color:                          map-get($brand-colors, _grey4),
   navTabs-active_borderColor:             map-get($brand-colors, _green),
   navTabs-active_bgc:                     map-get($brand-colors, _white),
   navTabs-active_color:                   map-get($brand-colors, _dark-grey),

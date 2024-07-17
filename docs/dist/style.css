@@ -2853,10 +2853,12 @@ h6, .h6 {
 .footer__right {
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 .reset-view .footer__right, .guest-view .footer__right {
   align-items: end;
   justify-content: center;
+  gap: 0px;
 }
 .mobile-view .footer__right {
   align-items: center;
@@ -12310,7 +12312,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .nav-tabs > li, .nav-tabs-vertical > li,
 .nav-pills > li,
 .nav-item {
-  padding-right: 5px;
+  margin-left: -1px;
 }
 .nav-tabs-vertical .nav-tabs > li, .nav-tabs-vertical .nav-tabs-vertical > li,
 .nav-tabs-vertical .nav-pills > li,
@@ -12318,10 +12320,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   padding-right: 0;
   padding-bottom: 5px;
 }
-.nav-tabs > li:last-child, .nav-tabs-vertical > li:last-child,
-.nav-pills > li:last-child,
-.nav-item:last-child {
-  padding-right: 0;
+.nav-tabs > li:first-child, .nav-tabs-vertical > li:first-child,
+.nav-pills > li:first-child,
+.nav-item:first-child {
+  margin-left: 0;
 }
 .nav-tabs-vertical .nav-tabs > li:last-child, .nav-tabs-vertical .nav-tabs-vertical > li:last-child,
 .nav-tabs-vertical .nav-pills > li:last-child,
@@ -12333,11 +12335,11 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .nav-link {
   align-items: center;
   border-radius: 0;
-  background-color: #f9f9f9;
+  background-color: #dddddd;
   border-color: #BABABA;
   border-width: 1px;
   border-style: solid;
-  color: #BABABA;
+  color: #777777;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -12353,9 +12355,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
-  background-color: #f9f9f9;
+  background-color: #dddddd;
   border-color: #BABABA;
-  color: #BABABA;
+  color: #777777;
 }
 
 .nav-pills > li > a,

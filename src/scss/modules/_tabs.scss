@@ -23,13 +23,17 @@
 .nav-tabs>li,
 .nav-pills>li,
 .nav-item{
-  padding-right: 5px;
+  // padding-right: 5px;
+  margin-left: -1px;
   .nav-tabs-vertical &{ 
     padding-right: 0;
     padding-bottom: 5px;
   }
+  &:first-child{
+    margin-left: 0;
+  }
   &:last-child{
-    padding-right: 0;
+    // padding-right: 0;
     .nav-tabs-vertical &{ 
       padding-bottom: 0;
     } 
