@@ -9347,6 +9347,12 @@ input[type=month].form-control {
   padding-top: 0.6875rem;
   position: relative;
 }
+.form-group__10 {
+  margin-bottom: 0.625rem;
+}
+.css-formFree .form-group__10 {
+  margin-bottom: 0.625rem;
+}
 
 .radio,
 .checkbox {
@@ -10625,7 +10631,8 @@ select.selectpicker {
 .css-formFree .inputGroup {
   align-items: stretch;
 }
-.inputGroup .form-group {
+.inputGroup .form-group,
+.inputGroup .form-group__10 {
   margin-bottom: 0;
   padding-top: 0;
 }
@@ -13698,16 +13705,16 @@ tbody.collapse.in {
   --limited-stroke-on: inherit;
   --svg-icon-fill: inherit;
 }
-.limited.collapsed .btn-text__show {
+.limited.collapsed .block__show {
   display: inline-block;
 }
-.limited.collapsed .btn-text__hide {
+.limited.collapsed .block__hide {
   display: none;
 }
-.limited .btn-text__show {
+.limited .block__show {
   display: none;
 }
-.limited .btn-text__hide {
+.limited .btock__hide {
   display: inline-block;
 }
 

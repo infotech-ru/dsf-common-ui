@@ -301,6 +301,12 @@ textarea.form-control {
     padding-top: rem(_fontSizes(controlLabel_active__formFree));
     position: relative;
   }
+  &__10{
+    margin-bottom: rem(10);
+    .css-formFree &{ 
+      margin-bottom: rem(10);
+    }
+  }
 }
 
 // Checkboxes and radios

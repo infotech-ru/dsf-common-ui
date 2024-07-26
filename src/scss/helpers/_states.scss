@@ -58,17 +58,17 @@ tbody.collapse.in { display: table-row-group; }
       --limited-stroke-on: inherit;
       --svg-icon-fill: inherit;
     }
-    .btn-text__show{
+    .block__show{
       display: inline-block;
     }
-    .btn-text__hide{
+    .block__hide{
       display: none;
     }
   }
-  .btn-text__show{
+  .block__show{
     display: none;
   }
-  .btn-text__hide{
+  .btock__hide{
     display: inline-block;
   }
 }
