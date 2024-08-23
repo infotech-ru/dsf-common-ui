@@ -58,10 +58,10 @@
             }
             .svg--icon{
                 margin-right: rem(6);
-                @include svg-icon(16px);
                 vertical-align: text-top;
                 --svg-icon-stroke: var(--color_white);
                 --svg-icon-stroke_blue: var(--color_white);
+                @include svg-icon(16px);
             }
         }
     }

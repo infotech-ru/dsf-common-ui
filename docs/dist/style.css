@@ -7851,11 +7851,11 @@ g.highcharts-series,
 }
 .radioCheck label.radio .svg--icon {
   margin-right: 0.375rem;
-  height: 16px;
-  width: auto;
   vertical-align: text-top;
   --svg-icon-stroke: var(--color_white);
   --svg-icon-stroke_blue: var(--color_white);
+  height: 16px;
+  width: auto;
 }
 .radioCheck label.radio .svg--icon svg {
   height: 16px;
@@ -8012,6 +8012,18 @@ g.highcharts-series,
 .btn-link:active:focus, .btn-grey__outline:active:focus, .btn-warning__outline:active:focus, .btn-danger__outline:active:focus, .btn-success__outline:active:focus, .btn-primary__outline:active:focus, .btn-default__outline:active:focus, .btn-lightGrey:active:focus, .btn-grey:active:focus, .btn-info:active:focus, .btn-warning:active:focus, .btn-danger:active:focus, .btn-success:active:focus, .btn-primary:active:focus, .btn-default:active:focus, .btn-group__theme > [class^=btn]:active:focus, .btn:active:focus, .active.btn-link:focus, .active.btn-grey__outline:focus, .active.btn-warning__outline:focus, .active.btn-danger__outline:focus, .active.btn-success__outline:focus, .active.btn-primary__outline:focus, .active.btn-default__outline:focus, .active.btn-lightGrey:focus, .active.btn-grey:focus, .active.btn-info:focus, .active.btn-warning:focus, .active.btn-danger:focus, .active.btn-success:focus, .active.btn-primary:focus, .btn-group__theme > .active[class^=btn]:focus, .active.btn-default:focus, .active.btn:focus {
   outline: none;
 }
+.btn-link .btn-text_isActiveOn, .btn-grey__outline .btn-text_isActiveOn, .btn-warning__outline .btn-text_isActiveOn, .btn-danger__outline .btn-text_isActiveOn, .btn-success__outline .btn-text_isActiveOn, .btn-primary__outline .btn-text_isActiveOn, .btn-default__outline .btn-text_isActiveOn, .btn-lightGrey .btn-text_isActiveOn, .btn-grey .btn-text_isActiveOn, .btn-info .btn-text_isActiveOn, .btn-warning .btn-text_isActiveOn, .btn-danger .btn-text_isActiveOn, .btn-success .btn-text_isActiveOn, .btn-primary .btn-text_isActiveOn, .btn-default .btn-text_isActiveOn, .btn-group__theme > [class^=btn] .btn-text_isActiveOn, .btn .btn-text_isActiveOn {
+  display: none;
+}
+.btn-link .btn-text_isDefaultOn, .btn-grey__outline .btn-text_isDefaultOn, .btn-warning__outline .btn-text_isDefaultOn, .btn-danger__outline .btn-text_isDefaultOn, .btn-success__outline .btn-text_isDefaultOn, .btn-primary__outline .btn-text_isDefaultOn, .btn-default__outline .btn-text_isDefaultOn, .btn-lightGrey .btn-text_isDefaultOn, .btn-grey .btn-text_isDefaultOn, .btn-info .btn-text_isDefaultOn, .btn-warning .btn-text_isDefaultOn, .btn-danger .btn-text_isDefaultOn, .btn-success .btn-text_isDefaultOn, .btn-primary .btn-text_isDefaultOn, .btn-default .btn-text_isDefaultOn, .btn-group__theme > [class^=btn] .btn-text_isDefaultOn, .btn .btn-text_isDefaultOn {
+  display: inline-block;
+}
+.active.btn-link .btn-text_isActiveOn, .active.btn-grey__outline .btn-text_isActiveOn, .active.btn-warning__outline .btn-text_isActiveOn, .active.btn-danger__outline .btn-text_isActiveOn, .active.btn-success__outline .btn-text_isActiveOn, .active.btn-primary__outline .btn-text_isActiveOn, .active.btn-default__outline .btn-text_isActiveOn, .active.btn-lightGrey .btn-text_isActiveOn, .active.btn-grey .btn-text_isActiveOn, .active.btn-info .btn-text_isActiveOn, .active.btn-warning .btn-text_isActiveOn, .active.btn-danger .btn-text_isActiveOn, .active.btn-success .btn-text_isActiveOn, .active.btn-primary .btn-text_isActiveOn, .btn-group__theme > .active[class^=btn] .btn-text_isActiveOn, .active.btn-default .btn-text_isActiveOn, .active.btn .btn-text_isActiveOn {
+  display: inline-block;
+}
+.active.btn-link .btn-text_isDefaultOn, .active.btn-grey__outline .btn-text_isDefaultOn, .active.btn-warning__outline .btn-text_isDefaultOn, .active.btn-danger__outline .btn-text_isDefaultOn, .active.btn-success__outline .btn-text_isDefaultOn, .active.btn-primary__outline .btn-text_isDefaultOn, .active.btn-default__outline .btn-text_isDefaultOn, .active.btn-lightGrey .btn-text_isDefaultOn, .active.btn-grey .btn-text_isDefaultOn, .active.btn-info .btn-text_isDefaultOn, .active.btn-warning .btn-text_isDefaultOn, .active.btn-danger .btn-text_isDefaultOn, .active.btn-success .btn-text_isDefaultOn, .active.btn-primary .btn-text_isDefaultOn, .btn-group__theme > .active[class^=btn] .btn-text_isDefaultOn, .active.btn-default .btn-text_isDefaultOn, .active.btn .btn-text_isDefaultOn {
+  display: none;
+}
 .disabled.btn-link, .disabled.btn-grey__outline, .disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-lightGrey, .disabled.btn-grey, .disabled.btn-info, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group__theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, [disabled].btn-grey__outline, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-lightGrey, [disabled].btn-grey, [disabled].btn-info, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group__theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .btn-grey__outline, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-lightGrey, fieldset[disabled] .btn-grey, fieldset[disabled] .btn-info, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group__theme > [class^=btn], fieldset[disabled] .btn {
   cursor: not-allowed;
   filter: alpha(opacity=65);
@@ -8067,18 +8079,18 @@ g.highcharts-series,
   color: #333333;
 }
 .btn-default:hover .svg--icon svg, .btn-group__theme > [class^=btn]:hover .svg--icon svg, .btn:hover .svg--icon svg, .btn-default:focus .svg--icon svg, .btn-group__theme > [class^=btn]:focus .svg--icon svg, .btn:focus .svg--icon svg, .btn-default:active .svg--icon svg, .btn-group__theme > [class^=btn]:active .svg--icon svg, .btn:active .svg--icon svg, .btn-default.active .svg--icon svg, .btn-group__theme > .active[class^=btn] .svg--icon svg, .active.btn .svg--icon svg, .btn-default.focus .svg--icon svg, .btn-group__theme > .focus[class^=btn] .svg--icon svg, .focus.btn .svg--icon svg {
+  fill: #333333;
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-  fill: #333333;
 }
 .btn-default .svg--icon svg, .btn-group__theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
+  fill: #333333;
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-  fill: #333333;
 }
 
 .btn-primary, .btn-group__theme > [class^=btn].active {
@@ -8102,18 +8114,18 @@ g.highcharts-series,
   color: #ffffff;
 }
 .btn-primary:hover .svg--icon svg, .btn-primary:focus .svg--icon svg, .btn-primary:active .svg--icon svg, .btn-primary.active .svg--icon svg, .btn-group__theme > .active[class^=btn] .svg--icon svg, .btn-primary.focus .svg--icon svg {
+  fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #ffffff;
 }
 .btn-primary .svg--icon svg, .btn-group__theme > [class^=btn].active .svg--icon svg {
+  fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #ffffff;
 }
 
 .btn-success {
@@ -8137,18 +8149,18 @@ g.highcharts-series,
   color: #ffffff;
 }
 .btn-success:hover .svg--icon svg, .btn-success:focus .svg--icon svg, .btn-success:active .svg--icon svg, .btn-success.active .svg--icon svg, .btn-success.focus .svg--icon svg {
+  fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #ffffff;
 }
 .btn-success .svg--icon svg {
+  fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #ffffff;
 }
 
 .btn-danger {
@@ -8172,18 +8184,18 @@ g.highcharts-series,
   color: #ffffff;
 }
 .btn-danger:hover .svg--icon svg, .btn-danger:focus .svg--icon svg, .btn-danger:active .svg--icon svg, .btn-danger.active .svg--icon svg, .btn-danger.focus .svg--icon svg {
+  fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #ffffff;
 }
 .btn-danger .svg--icon svg {
+  fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #ffffff;
 }
 
 .btn-warning {
@@ -8207,18 +8219,18 @@ g.highcharts-series,
   color: #ffffff;
 }
 .btn-warning:hover .svg--icon svg, .btn-warning:focus .svg--icon svg, .btn-warning:active .svg--icon svg, .btn-warning.active .svg--icon svg, .btn-warning.focus .svg--icon svg {
+  fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #ffffff;
 }
 .btn-warning .svg--icon svg {
+  fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #ffffff;
 }
 
 .btn-info {
@@ -8242,18 +8254,18 @@ g.highcharts-series,
   color: #ffffff;
 }
 .btn-info:hover .svg--icon svg, .btn-info:focus .svg--icon svg, .btn-info:active .svg--icon svg, .btn-info.active .svg--icon svg, .btn-info.focus .svg--icon svg {
+  fill: #4A8DC6;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #4A8DC6;
 }
 .btn-info .svg--icon svg {
+  fill: #4A8DC6;
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
-  fill: #4A8DC6;
 }
 
 .btn-grey {
@@ -8277,18 +8289,18 @@ g.highcharts-series,
   color: #ffffff;
 }
 .btn-grey:hover .svg--icon svg, .btn-grey:focus .svg--icon svg, .btn-grey:active .svg--icon svg, .btn-grey.active .svg--icon svg, .btn-grey.focus .svg--icon svg {
+  fill: #333333;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  fill: #333333;
 }
 .btn-grey .svg--icon svg {
+  fill: #333333;
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-  fill: #333333;
 }
 
 .btn-lightGrey {
@@ -8312,18 +8324,18 @@ g.highcharts-series,
   color: #777777;
 }
 .btn-lightGrey:hover .svg--icon svg, .btn-lightGrey:focus .svg--icon svg, .btn-lightGrey:active .svg--icon svg, .btn-lightGrey.active .svg--icon svg, .btn-lightGrey.focus .svg--icon svg {
+  fill: #777777;
   --svg-icon-fill: #777777;
   --svg-icon-stroke: #777777;
   --svg-icon-fill_blue: #777777;
   --svg-icon-stroke_blue: #777777;
-  fill: #777777;
 }
 .btn-lightGrey .svg--icon svg {
+  fill: #777777;
   --svg-icon-fill: #777777;
   --svg-icon-stroke: #777777;
   --svg-icon-fill_blue: #777777;
   --svg-icon-stroke_blue: #777777;
-  fill: #777777;
 }
 
 .btn-default .badge, .btn-group__theme > [class^=btn] .badge, .btn .badge {
@@ -13714,7 +13726,7 @@ tbody.collapse.in {
 .limited .block__show {
   display: none;
 }
-.limited .btock__hide {
+.limited .block__hide {
   display: inline-block;
 }
 
@@ -15339,6 +15351,14 @@ tbody.collapse.in {
 
 .mobile-view .justify-evenly__mobile {
   justify-content: space-evenly;
+}
+
+.justify-stretch {
+  justify-content: stretch;
+}
+
+.mobile-view .justify-stretch__mobile {
+  justify-content: stretch;
 }
 
 .align-start {

@@ -40,6 +40,20 @@
       outline: none;
     }
   }
+  .btn-text_isActiveOn{
+    display: none;
+  }
+  .btn-text_isDefaultOn{
+    display: inline-block;
+  }
+  &.active {
+     .btn-text_isActiveOn{
+      display: inline-block;
+    }
+    .btn-text_isDefaultOn{
+      display: none;
+    }
+  }
 
   &.disabled,
   &[disabled],
@@ -124,21 +138,21 @@
       color: _brand-btn(#{$btn}_color__hover);
       .svg--icon {
         svg {
+          fill: _brand-btn(#{$btn}_svg);
           #{--svg-icon-fill}: _brand-btn(#{$btn}_svg__hover);
           #{--svg-icon-stroke}: _brand-btn(#{$btn}_svg__hover);
           #{--svg-icon-fill_blue}: _brand-btn(#{$btn}_svg_blue__hover);
           #{--svg-icon-stroke_blue}: _brand-btn(#{$btn}_svg_blue__hover);
-          fill: _brand-btn(#{$btn}_svg);
         }
       }
     }
     .svg--icon{
       svg{
+        fill: _brand-btn(#{$btn}_svg);
         #{--svg-icon-fill}: _brand-btn(#{$btn}_svg);
         #{--svg-icon-stroke}: _brand-btn(#{$btn}_svg);
         #{--svg-icon-fill_blue}: _brand-btn(#{$btn}_svg_blue);
         #{--svg-icon-stroke_blue}: _brand-btn(#{$btn}_svg_blue);
-        fill: _brand-btn(#{$btn}_svg);
       }
     }
     @if (_brand-btn(#{$btn}_bg) == _brand-btn(#{$btn}-end_bg)) {
