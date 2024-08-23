@@ -40,21 +40,7 @@
       outline: none;
     }
   }
-  .btn-text_isActiveOn{
-    display: none;
-  }
-  .btn-text_isDefaultOn{
-    display: inline-block;
-  }
-  &.active {
-     .btn-text_isActiveOn{
-      display: inline-block;
-    }
-    .btn-text_isDefaultOn{
-      display: none;
-    }
-  }
-
+  
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
@@ -450,6 +436,23 @@ a.btn {
   margin-top: -#{calc((_brand-sizes(btn_borderWidth) + _lineHeight(btn)) * .5)}px;
   position: absolute;
   top: 50%;
+}
+
+.btn__activable{
+  .btn-text_isActiveOn{
+    display: none;
+  }
+  .btn-text_isDefaultOn{
+    display: inline-block;
+  }
+  &.active {
+     .btn-text_isActiveOn{
+      display: inline-block;
+    }
+    .btn-text_isDefaultOn{
+      display: none;
+    }
+  }
 }
 // Specificity overrides
 input[type="submit"],

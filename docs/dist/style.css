@@ -8012,18 +8012,6 @@ g.highcharts-series,
 .btn-link:active:focus, .btn-grey__outline:active:focus, .btn-warning__outline:active:focus, .btn-danger__outline:active:focus, .btn-success__outline:active:focus, .btn-primary__outline:active:focus, .btn-default__outline:active:focus, .btn-lightGrey:active:focus, .btn-grey:active:focus, .btn-info:active:focus, .btn-warning:active:focus, .btn-danger:active:focus, .btn-success:active:focus, .btn-primary:active:focus, .btn-default:active:focus, .btn-group__theme > [class^=btn]:active:focus, .btn:active:focus, .active.btn-link:focus, .active.btn-grey__outline:focus, .active.btn-warning__outline:focus, .active.btn-danger__outline:focus, .active.btn-success__outline:focus, .active.btn-primary__outline:focus, .active.btn-default__outline:focus, .active.btn-lightGrey:focus, .active.btn-grey:focus, .active.btn-info:focus, .active.btn-warning:focus, .active.btn-danger:focus, .active.btn-success:focus, .active.btn-primary:focus, .btn-group__theme > .active[class^=btn]:focus, .active.btn-default:focus, .active.btn:focus {
   outline: none;
 }
-.btn-link .btn-text_isActiveOn, .btn-grey__outline .btn-text_isActiveOn, .btn-warning__outline .btn-text_isActiveOn, .btn-danger__outline .btn-text_isActiveOn, .btn-success__outline .btn-text_isActiveOn, .btn-primary__outline .btn-text_isActiveOn, .btn-default__outline .btn-text_isActiveOn, .btn-lightGrey .btn-text_isActiveOn, .btn-grey .btn-text_isActiveOn, .btn-info .btn-text_isActiveOn, .btn-warning .btn-text_isActiveOn, .btn-danger .btn-text_isActiveOn, .btn-success .btn-text_isActiveOn, .btn-primary .btn-text_isActiveOn, .btn-default .btn-text_isActiveOn, .btn-group__theme > [class^=btn] .btn-text_isActiveOn, .btn .btn-text_isActiveOn {
-  display: none;
-}
-.btn-link .btn-text_isDefaultOn, .btn-grey__outline .btn-text_isDefaultOn, .btn-warning__outline .btn-text_isDefaultOn, .btn-danger__outline .btn-text_isDefaultOn, .btn-success__outline .btn-text_isDefaultOn, .btn-primary__outline .btn-text_isDefaultOn, .btn-default__outline .btn-text_isDefaultOn, .btn-lightGrey .btn-text_isDefaultOn, .btn-grey .btn-text_isDefaultOn, .btn-info .btn-text_isDefaultOn, .btn-warning .btn-text_isDefaultOn, .btn-danger .btn-text_isDefaultOn, .btn-success .btn-text_isDefaultOn, .btn-primary .btn-text_isDefaultOn, .btn-default .btn-text_isDefaultOn, .btn-group__theme > [class^=btn] .btn-text_isDefaultOn, .btn .btn-text_isDefaultOn {
-  display: inline-block;
-}
-.active.btn-link .btn-text_isActiveOn, .active.btn-grey__outline .btn-text_isActiveOn, .active.btn-warning__outline .btn-text_isActiveOn, .active.btn-danger__outline .btn-text_isActiveOn, .active.btn-success__outline .btn-text_isActiveOn, .active.btn-primary__outline .btn-text_isActiveOn, .active.btn-default__outline .btn-text_isActiveOn, .active.btn-lightGrey .btn-text_isActiveOn, .active.btn-grey .btn-text_isActiveOn, .active.btn-info .btn-text_isActiveOn, .active.btn-warning .btn-text_isActiveOn, .active.btn-danger .btn-text_isActiveOn, .active.btn-success .btn-text_isActiveOn, .active.btn-primary .btn-text_isActiveOn, .btn-group__theme > .active[class^=btn] .btn-text_isActiveOn, .active.btn-default .btn-text_isActiveOn, .active.btn .btn-text_isActiveOn {
-  display: inline-block;
-}
-.active.btn-link .btn-text_isDefaultOn, .active.btn-grey__outline .btn-text_isDefaultOn, .active.btn-warning__outline .btn-text_isDefaultOn, .active.btn-danger__outline .btn-text_isDefaultOn, .active.btn-success__outline .btn-text_isDefaultOn, .active.btn-primary__outline .btn-text_isDefaultOn, .active.btn-default__outline .btn-text_isDefaultOn, .active.btn-lightGrey .btn-text_isDefaultOn, .active.btn-grey .btn-text_isDefaultOn, .active.btn-info .btn-text_isDefaultOn, .active.btn-warning .btn-text_isDefaultOn, .active.btn-danger .btn-text_isDefaultOn, .active.btn-success .btn-text_isDefaultOn, .active.btn-primary .btn-text_isDefaultOn, .btn-group__theme > .active[class^=btn] .btn-text_isDefaultOn, .active.btn-default .btn-text_isDefaultOn, .active.btn .btn-text_isDefaultOn {
-  display: none;
-}
 .disabled.btn-link, .disabled.btn-grey__outline, .disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-lightGrey, .disabled.btn-grey, .disabled.btn-info, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group__theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, [disabled].btn-grey__outline, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-lightGrey, [disabled].btn-grey, [disabled].btn-info, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group__theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .btn-grey__outline, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-lightGrey, fieldset[disabled] .btn-grey, fieldset[disabled] .btn-info, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group__theme > [class^=btn], fieldset[disabled] .btn {
   cursor: not-allowed;
   filter: alpha(opacity=65);
@@ -8688,6 +8676,19 @@ a.btn.disabled, fieldset[disabled] a.btn {
   margin-top: -13.5px;
   position: absolute;
   top: 50%;
+}
+
+.btn__activable .btn-text_isActiveOn {
+  display: none;
+}
+.btn__activable .btn-text_isDefaultOn {
+  display: inline-block;
+}
+.btn__activable.active .btn-text_isActiveOn {
+  display: inline-block;
+}
+.btn__activable.active .btn-text_isDefaultOn {
+  display: none;
 }
 
 input[type=submit].btn-block,

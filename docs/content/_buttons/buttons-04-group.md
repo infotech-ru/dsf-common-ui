@@ -1,6 +1,6 @@
 ---
 Title: Группирование кнопок
-menutitle: Группирование кнопок
+menutitle: Группировка
 category: buttons
 anchor: buttons-group
 rank: 4

@@ -1,6 +1,6 @@
 ---
 Title: Размеры кнопки
-menutitle: Размеры кнопки
+menutitle: Размеры
 category: buttons
 anchor: size
 rank: 3

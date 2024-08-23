@@ -1,6 +1,6 @@
 ---
 Title: Семантическое значение кнопок передаваемое через цвет
-menutitle: Семантические кнопки
+menutitle: Семантика (цвет)
 category: buttons
 anchor: semantic
 rank: 2

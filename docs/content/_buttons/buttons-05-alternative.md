@@ -1,6 +1,6 @@
 ---
-Title: Альтернативные кнопки
-menutitle: Альтернативные кнопки
+Title: Альтернативные от семантических кнопки
+menutitle: Модификации
 category: buttons
 anchor: buttons-alternative
 rank: 5
