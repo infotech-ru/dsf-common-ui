@@ -656,7 +656,7 @@ a {
   --svg-valute-fill: #1E6393;
   text-decoration: none;
 }
-a:hover, a:focus {
+a:hover, a:focus-visible {
   color: #1E6393;
   --svg-valute-fill: #1E6393;
   outline: none;
