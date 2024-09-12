@@ -106,7 +106,7 @@
     color: _brand-btn(#{$btn}_color);
     @extend %btn;
     &:hover,
-    &:focus,
+    &:focus-visible,
     &:active,
     &.active,
     &.focus {
@@ -184,7 +184,7 @@
     color: _brand-btn(#{$btn}_outline);
     @extend %btn;
     &:hover,
-    &:focus,
+    &:focus-visible,
     &:active,
     &.active,
     &.focus {
@@ -270,14 +270,14 @@ a.btn {
     outline: none;
   }
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: _brand-palette(linkHover_color);
     text-decoration: none;
   }
   &[disabled],
   fieldset[disabled] & {
     &:hover,
-    &:focus {
+    &:focus-visible {
       color: _brand-palette(linkDisabled_color);
       text-decoration: none;
     }

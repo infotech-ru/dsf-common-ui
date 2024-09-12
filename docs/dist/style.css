@@ -8059,14 +8059,14 @@ g.highcharts-series,
   --btn_svg__hover: #333333;
   --btn_svg_blue__hover: #333333;
 }
-.btn-default:hover, .btn-group__theme > [class^=btn]:hover, .btn:hover, .btn-default:focus, .btn-group__theme > [class^=btn]:focus, .btn:focus, .btn-default:active, .btn-group__theme > [class^=btn]:active, .btn:active, .btn-default.active, .btn-group__theme > .active[class^=btn], .active.btn, .btn-default.focus, .btn-group__theme > .focus[class^=btn], .focus.btn {
+.btn-default:hover, .btn-group__theme > [class^=btn]:hover, .btn:hover, .btn-default:focus-visible, .btn-group__theme > [class^=btn]:focus-visible, .btn:focus-visible, .btn-default:active, .btn-group__theme > [class^=btn]:active, .btn:active, .btn-default.active, .btn-group__theme > .active[class^=btn], .active.btn, .btn-default.focus, .btn-group__theme > .focus[class^=btn], .focus.btn {
   background-color: #dddddd;
   background-image: none;
   background-position: inherit;
   border-color: #dddddd;
   color: #333333;
 }
-.btn-default:hover .svg--icon svg, .btn-group__theme > [class^=btn]:hover .svg--icon svg, .btn:hover .svg--icon svg, .btn-default:focus .svg--icon svg, .btn-group__theme > [class^=btn]:focus .svg--icon svg, .btn:focus .svg--icon svg, .btn-default:active .svg--icon svg, .btn-group__theme > [class^=btn]:active .svg--icon svg, .btn:active .svg--icon svg, .btn-default.active .svg--icon svg, .btn-group__theme > .active[class^=btn] .svg--icon svg, .active.btn .svg--icon svg, .btn-default.focus .svg--icon svg, .btn-group__theme > .focus[class^=btn] .svg--icon svg, .focus.btn .svg--icon svg {
+.btn-default:hover .svg--icon svg, .btn-group__theme > [class^=btn]:hover .svg--icon svg, .btn:hover .svg--icon svg, .btn-default:focus-visible .svg--icon svg, .btn-group__theme > [class^=btn]:focus-visible .svg--icon svg, .btn:focus-visible .svg--icon svg, .btn-default:active .svg--icon svg, .btn-group__theme > [class^=btn]:active .svg--icon svg, .btn:active .svg--icon svg, .btn-default.active .svg--icon svg, .btn-group__theme > .active[class^=btn] .svg--icon svg, .active.btn .svg--icon svg, .btn-default.focus .svg--icon svg, .btn-group__theme > .focus[class^=btn] .svg--icon svg, .focus.btn .svg--icon svg {
   fill: #333333;
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
@@ -8094,14 +8094,14 @@ g.highcharts-series,
   --btn_svg__hover: #ffffff;
   --btn_svg_blue__hover: #ffffff;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-group__theme > .active[class^=btn], .btn-primary.focus {
+.btn-primary:hover, .btn-primary:focus-visible, .btn-primary:active, .btn-primary.active, .btn-group__theme > .active[class^=btn], .btn-primary.focus {
   background-color: #1E6393;
   background-image: none;
   background-position: inherit;
   border-color: #1E6393;
   color: #ffffff;
 }
-.btn-primary:hover .svg--icon svg, .btn-primary:focus .svg--icon svg, .btn-primary:active .svg--icon svg, .btn-primary.active .svg--icon svg, .btn-group__theme > .active[class^=btn] .svg--icon svg, .btn-primary.focus .svg--icon svg {
+.btn-primary:hover .svg--icon svg, .btn-primary:focus-visible .svg--icon svg, .btn-primary:active .svg--icon svg, .btn-primary.active .svg--icon svg, .btn-group__theme > .active[class^=btn] .svg--icon svg, .btn-primary.focus .svg--icon svg {
   fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -8129,14 +8129,14 @@ g.highcharts-series,
   --btn_svg__hover: #ffffff;
   --btn_svg_blue__hover: #ffffff;
 }
-.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.focus {
+.btn-success:hover, .btn-success:focus-visible, .btn-success:active, .btn-success.active, .btn-success.focus {
   background-color: #467B46;
   background-image: none;
   background-position: inherit;
   border-color: #467B46;
   color: #ffffff;
 }
-.btn-success:hover .svg--icon svg, .btn-success:focus .svg--icon svg, .btn-success:active .svg--icon svg, .btn-success.active .svg--icon svg, .btn-success.focus .svg--icon svg {
+.btn-success:hover .svg--icon svg, .btn-success:focus-visible .svg--icon svg, .btn-success:active .svg--icon svg, .btn-success.active .svg--icon svg, .btn-success.focus .svg--icon svg {
   fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -8164,14 +8164,14 @@ g.highcharts-series,
   --btn_svg__hover: #ffffff;
   --btn_svg_blue__hover: #ffffff;
 }
-.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.focus {
+.btn-danger:hover, .btn-danger:focus-visible, .btn-danger:active, .btn-danger.active, .btn-danger.focus {
   background-color: #762624;
   background-image: none;
   background-position: inherit;
   border-color: #762624;
   color: #ffffff;
 }
-.btn-danger:hover .svg--icon svg, .btn-danger:focus .svg--icon svg, .btn-danger:active .svg--icon svg, .btn-danger.active .svg--icon svg, .btn-danger.focus .svg--icon svg {
+.btn-danger:hover .svg--icon svg, .btn-danger:focus-visible .svg--icon svg, .btn-danger:active .svg--icon svg, .btn-danger.active .svg--icon svg, .btn-danger.focus .svg--icon svg {
   fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -8199,14 +8199,14 @@ g.highcharts-series,
   --btn_svg__hover: #ffffff;
   --btn_svg_blue__hover: #ffffff;
 }
-.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.focus {
+.btn-warning:hover, .btn-warning:focus-visible, .btn-warning:active, .btn-warning.active, .btn-warning.focus {
   background-color: #DE8500;
   background-image: none;
   background-position: inherit;
   border-color: #DE8500;
   color: #ffffff;
 }
-.btn-warning:hover .svg--icon svg, .btn-warning:focus .svg--icon svg, .btn-warning:active .svg--icon svg, .btn-warning.active .svg--icon svg, .btn-warning.focus .svg--icon svg {
+.btn-warning:hover .svg--icon svg, .btn-warning:focus-visible .svg--icon svg, .btn-warning:active .svg--icon svg, .btn-warning.active .svg--icon svg, .btn-warning.focus .svg--icon svg {
   fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -8234,14 +8234,14 @@ g.highcharts-series,
   --btn_svg__hover: #ffffff;
   --btn_svg_blue__hover: #ffffff;
 }
-.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.focus {
+.btn-info:hover, .btn-info:focus-visible, .btn-info:active, .btn-info.active, .btn-info.focus {
   background-color: #4A8DC6;
   background-image: none;
   background-position: inherit;
   border-color: #4A8DC6;
   color: #ffffff;
 }
-.btn-info:hover .svg--icon svg, .btn-info:focus .svg--icon svg, .btn-info:active .svg--icon svg, .btn-info.active .svg--icon svg, .btn-info.focus .svg--icon svg {
+.btn-info:hover .svg--icon svg, .btn-info:focus-visible .svg--icon svg, .btn-info:active .svg--icon svg, .btn-info.active .svg--icon svg, .btn-info.focus .svg--icon svg {
   fill: #4A8DC6;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -8269,14 +8269,14 @@ g.highcharts-series,
   --btn_svg__hover: #ffffff;
   --btn_svg_blue__hover: #ffffff;
 }
-.btn-grey:hover, .btn-grey:focus, .btn-grey:active, .btn-grey.active, .btn-grey.focus {
+.btn-grey:hover, .btn-grey:focus-visible, .btn-grey:active, .btn-grey.active, .btn-grey.focus {
   background-color: #333333;
   background-image: none;
   background-position: inherit;
   border-color: #333333;
   color: #ffffff;
 }
-.btn-grey:hover .svg--icon svg, .btn-grey:focus .svg--icon svg, .btn-grey:active .svg--icon svg, .btn-grey.active .svg--icon svg, .btn-grey.focus .svg--icon svg {
+.btn-grey:hover .svg--icon svg, .btn-grey:focus-visible .svg--icon svg, .btn-grey:active .svg--icon svg, .btn-grey.active .svg--icon svg, .btn-grey.focus .svg--icon svg {
   fill: #333333;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -8304,14 +8304,14 @@ g.highcharts-series,
   --btn_svg__hover: #777777;
   --btn_svg_blue__hover: #777777;
 }
-.btn-lightGrey:hover, .btn-lightGrey:focus, .btn-lightGrey:active, .btn-lightGrey.active, .btn-lightGrey.focus {
+.btn-lightGrey:hover, .btn-lightGrey:focus-visible, .btn-lightGrey:active, .btn-lightGrey.active, .btn-lightGrey.focus {
   background-color: #dddddd;
   background-image: none;
   background-position: inherit;
   border-color: #dddddd;
   color: #777777;
 }
-.btn-lightGrey:hover .svg--icon svg, .btn-lightGrey:focus .svg--icon svg, .btn-lightGrey:active .svg--icon svg, .btn-lightGrey.active .svg--icon svg, .btn-lightGrey.focus .svg--icon svg {
+.btn-lightGrey:hover .svg--icon svg, .btn-lightGrey:focus-visible .svg--icon svg, .btn-lightGrey:active .svg--icon svg, .btn-lightGrey.active .svg--icon svg, .btn-lightGrey.focus .svg--icon svg {
   fill: #777777;
   --svg-icon-fill: #777777;
   --svg-icon-stroke: #777777;
@@ -8339,13 +8339,13 @@ g.highcharts-series,
   border-color: #F5F5F5;
   color: #F5F5F5;
 }
-.btn-default__outline:hover, .btn-default__outline:focus, .btn-default__outline:active, .btn-default__outline.active, .btn-default__outline.focus {
+.btn-default__outline:hover, .btn-default__outline:focus-visible, .btn-default__outline:active, .btn-default__outline.active, .btn-default__outline.focus {
   background-color: #dddddd;
   background-image: none;
   background-position: inherit;
   color: #fff;
 }
-.btn-default__outline:hover .svg--icon svg, .btn-default__outline:focus .svg--icon svg, .btn-default__outline:active .svg--icon svg, .btn-default__outline.active .svg--icon svg, .btn-default__outline.focus .svg--icon svg {
+.btn-default__outline:hover .svg--icon svg, .btn-default__outline:focus-visible .svg--icon svg, .btn-default__outline:active .svg--icon svg, .btn-default__outline.active .svg--icon svg, .btn-default__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8366,13 +8366,13 @@ g.highcharts-series,
   border-color: #4A8DC6;
   color: #4A8DC6;
 }
-.btn-primary__outline:hover, .btn-primary__outline:focus, .btn-primary__outline:active, .btn-primary__outline.active, .btn-primary__outline.focus {
+.btn-primary__outline:hover, .btn-primary__outline:focus-visible, .btn-primary__outline:active, .btn-primary__outline.active, .btn-primary__outline.focus {
   background-color: #1E6393;
   background-image: none;
   background-position: inherit;
   color: #fff;
 }
-.btn-primary__outline:hover .svg--icon svg, .btn-primary__outline:focus .svg--icon svg, .btn-primary__outline:active .svg--icon svg, .btn-primary__outline.active .svg--icon svg, .btn-primary__outline.focus .svg--icon svg {
+.btn-primary__outline:hover .svg--icon svg, .btn-primary__outline:focus-visible .svg--icon svg, .btn-primary__outline:active .svg--icon svg, .btn-primary__outline.active .svg--icon svg, .btn-primary__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8393,13 +8393,13 @@ g.highcharts-series,
   border-color: #69C26A;
   color: #69C26A;
 }
-.btn-success__outline:hover, .btn-success__outline:focus, .btn-success__outline:active, .btn-success__outline.active, .btn-success__outline.focus {
+.btn-success__outline:hover, .btn-success__outline:focus-visible, .btn-success__outline:active, .btn-success__outline.active, .btn-success__outline.focus {
   background-color: #467B46;
   background-image: none;
   background-position: inherit;
   color: #fff;
 }
-.btn-success__outline:hover .svg--icon svg, .btn-success__outline:focus .svg--icon svg, .btn-success__outline:active .svg--icon svg, .btn-success__outline.active .svg--icon svg, .btn-success__outline.focus .svg--icon svg {
+.btn-success__outline:hover .svg--icon svg, .btn-success__outline:focus-visible .svg--icon svg, .btn-success__outline:active .svg--icon svg, .btn-success__outline.active .svg--icon svg, .btn-success__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8420,13 +8420,13 @@ g.highcharts-series,
   border-color: #D9534F;
   color: #D9534F;
 }
-.btn-danger__outline:hover, .btn-danger__outline:focus, .btn-danger__outline:active, .btn-danger__outline.active, .btn-danger__outline.focus {
+.btn-danger__outline:hover, .btn-danger__outline:focus-visible, .btn-danger__outline:active, .btn-danger__outline.active, .btn-danger__outline.focus {
   background-color: #762624;
   background-image: none;
   background-position: inherit;
   color: #fff;
 }
-.btn-danger__outline:hover .svg--icon svg, .btn-danger__outline:focus .svg--icon svg, .btn-danger__outline:active .svg--icon svg, .btn-danger__outline.active .svg--icon svg, .btn-danger__outline.focus .svg--icon svg {
+.btn-danger__outline:hover .svg--icon svg, .btn-danger__outline:focus-visible .svg--icon svg, .btn-danger__outline:active .svg--icon svg, .btn-danger__outline.active .svg--icon svg, .btn-danger__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8447,13 +8447,13 @@ g.highcharts-series,
   border-color: #FFBD41;
   color: #FFBD41;
 }
-.btn-warning__outline:hover, .btn-warning__outline:focus, .btn-warning__outline:active, .btn-warning__outline.active, .btn-warning__outline.focus {
+.btn-warning__outline:hover, .btn-warning__outline:focus-visible, .btn-warning__outline:active, .btn-warning__outline.active, .btn-warning__outline.focus {
   background-color: #DE8500;
   background-image: none;
   background-position: inherit;
   color: #fff;
 }
-.btn-warning__outline:hover .svg--icon svg, .btn-warning__outline:focus .svg--icon svg, .btn-warning__outline:active .svg--icon svg, .btn-warning__outline.active .svg--icon svg, .btn-warning__outline.focus .svg--icon svg {
+.btn-warning__outline:hover .svg--icon svg, .btn-warning__outline:focus-visible .svg--icon svg, .btn-warning__outline:active .svg--icon svg, .btn-warning__outline.active .svg--icon svg, .btn-warning__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8474,13 +8474,13 @@ g.highcharts-series,
   border-color: #cccccc;
   color: #cccccc;
 }
-.btn-grey__outline:hover, .btn-grey__outline:focus, .btn-grey__outline:active, .btn-grey__outline.active, .btn-grey__outline.focus {
+.btn-grey__outline:hover, .btn-grey__outline:focus-visible, .btn-grey__outline:active, .btn-grey__outline.active, .btn-grey__outline.focus {
   background-color: #333333;
   background-image: none;
   background-position: inherit;
   color: #fff;
 }
-.btn-grey__outline:hover .svg--icon svg, .btn-grey__outline:focus .svg--icon svg, .btn-grey__outline:active .svg--icon svg, .btn-grey__outline.active .svg--icon svg, .btn-grey__outline.focus .svg--icon svg {
+.btn-grey__outline:hover .svg--icon svg, .btn-grey__outline:focus-visible .svg--icon svg, .btn-grey__outline:active .svg--icon svg, .btn-grey__outline.active .svg--icon svg, .btn-grey__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8530,11 +8530,11 @@ a.btn.disabled, fieldset[disabled] a.btn {
   box-shadow: none;
   outline: none;
 }
-.btn-link:hover, .btn-link:focus {
+.btn-link:hover, .btn-link:focus-visible {
   color: #1E6393;
   text-decoration: none;
 }
-.btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
+.btn-link[disabled]:hover, .btn-link[disabled]:focus-visible, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus-visible {
   color: #777777;
   text-decoration: none;
 }
