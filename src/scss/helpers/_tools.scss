@@ -595,6 +595,22 @@
     border-color: #{$value};
     #{--border_color}: #{$value};
   }
+  .border-top-#{$name}{
+    border-top-color: #{$value};
+    #{--border_top_color}: #{$value};
+  }
+  .border-right-#{$name}{
+    border-right-color: #{$value};
+    #{--border_right_color}: #{$value};
+  }
+  .border-bottom-#{$name}{
+    border-bottom-color: #{$value};
+    #{--border_bottom_color}: #{$value};
+  }
+  .border-left-#{$name}{
+    border-left-color: #{$value};
+    #{--border_left_color}: #{$value};
+  }
 }
 
 .phoneField{
