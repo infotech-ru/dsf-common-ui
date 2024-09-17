@@ -11237,8 +11237,8 @@ td .empty {
 }
 .table__border th,
 .table__border td {
-  border-bottom: var(--width_border-bottom__thick, var(--width_border-bottom, 1px)) solid #dddddd;
-  border-right: var(--width_border-right__thick, var(--width_border-right, 1px)) solid #dddddd;
+  border-bottom: var(--width_border-bottom__thick, var(--width_border-bottom, 1px)) solid var(--border_color, #dddddd);
+  border-right: var(--width_border-right__thick, var(--width_border-right, 1px)) solid var(--border_color, #dddddd);
 }
 .tr__slave th,
 .tr__slave td {
@@ -11256,7 +11256,7 @@ td:first-child {
 }
 .table__border th:first-child,
 .table__border td:first-child {
-  border-left: var(--width_border-left__thick, var(--width_border-left, 1px)) solid #dddddd;
+  border-left: var(--width_border-left__thick, var(--width_border-left, 1px)) solid var(--border_color, #dddddd);
 }
 
 thead th {
@@ -11302,7 +11302,7 @@ thead th .asc:before {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168' stroke='%23333' fill='none' stroke-linecap='round' stroke-linejoin='round' /%3E%3Cpath d='M5.03333 16.6668V3.33346' stroke='%23333' fill='none' /%3E%3Cpath d='M9.16669 5.00012H12.5' stroke='%230094ff' fill='none' /%3E%3Cpath d='M9.16669 10.0001H14.1667' stroke='%230094ff' fill='none' /%3E%3Cpath d='M9.16669 15.0001H17.5' stroke='%230094ff' fill='none' /%3E%3C/svg%3E");
 }
 .table__border thead tr:first-child th {
-  border-top: var(--width_border-top__thick, var(--width_border-top, 1px)) solid #dddddd;
+  border-top: var(--width_border-top__thick, var(--width_border-top, 1px)) solid var(--border_color, #dddddd);
 }
 thead tr:last-child th {
   border-bottom: var(--width_border-bottom__thick, var(--width_border-bottom, 1px)) solid #dddddd;
