@@ -405,17 +405,19 @@
     }
     &__dotted{
       border-top-style: dotted;
+      --style_border_top: dotted;
     }
     &__dashed{ 
       border-top-style: dashed;
+      --style_border_top: dashed;
     }
     &__thick{
       border-top-width: 2px;
       --width_border-top__thick: 2px;
       &__mobile{ 
         .mobile-view &{
-          --width_border-top__thick: 2px;
           border-top-width: 2px;
+          --width_border-top__thick: 2px;
         }
       }
     }
@@ -439,17 +441,19 @@
     }
     &__dotted {
       border-right-style: dotted;
+      --style_border_right: dotted;
     }
     &__dashed{ 
       border-right-style: dashed;
+      --style_border_right: dashed;
     }
     &__thick{
       border-right-width: 2px;
       --width_border-right__thick: 2px;
       &__mobile{ 
         .mobile-view &{
-          --width_border-right__thick: 2px;
           border-right-width: 2px;
+          --width_border-right__thick: 2px;
         }
       }
     }
@@ -473,9 +477,11 @@
     }
     &__dotted {
       border-bottom-style: dotted;
+      --style_border_bottom: dotted;
     }
     &__dashed{ 
       border-bottom-style: dashed;
+      --style_border_bottom: dashed;
     }
     &__thick{
       border-bottom-width: 2px;
@@ -507,17 +513,19 @@
     }
     &__dotted {
       border-left-style: dotted;
+      --style_border_left: dotted;
     }
     &__dashed{ 
       border-left-style: dashed;
+      --style_border_left: dashed;
     }
     &__thick{
       border-left-width: 2px;
       --width_border-left__thick: 2px;
       &__mobile{ 
         .mobile-view &{
-          --width_border-left__thick: 2px;
           border-left-width: 2px;
+          --width_border-left__thick: 2px;
         }
       }
     }
@@ -538,9 +546,11 @@
   }
   &__dotted {
     border-style: dotted;
+    --style_border: dotted;
   }
   &__dashed{ 
     border-style: dashed;
+    --style_border: dashed;
   }
   &__thick{
     border-width: 2px;
