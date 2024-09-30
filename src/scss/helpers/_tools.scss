@@ -689,3 +689,63 @@
     font-size: rem(_fontSizes(formElem));
   }
 }
+
+.block {
+  &BusinessCard{
+      &Left{
+          flex-grow:0;
+          padding-left: 10px;
+          padding-right: 20px;
+          .mobile-view & {
+              padding-left: 0;
+              padding-right: 0;
+          }
+          .blockBusinessCardLeft__none &{
+              display: none;
+          }
+          &_image{
+              background-repeat: no-repeat;
+              background-size: 115px;
+              max-height: 115px;
+              height: 115px;
+              width: 115px;
+              &__personal{ 
+                  background-image: url('/images/placeholder_photo.svg');
+              }
+              &__contact{ 
+                  background-image: url('/images/placeholder_contact.svg');
+                  background-size: 104px;
+                  max-height: 104px;
+                  height: 104px;
+                  width: 104px;
+              }
+              &__auto{
+                  background-image: url('/images/placeholder_auto.svg');
+              }
+              &__corporate{ 
+                  background-image: url('/images/placeholder_corporate.svg');
+              }
+              img{ 
+                  max-width: 100%;
+                  &[src=""]{
+                    display: none;  
+                  }
+              }
+          }
+      }
+      &Right{
+          flex-grow:1;
+          padding-right: 10px;
+          padding-left: 10px;
+          width: 100%;
+          .mobile-view & {
+              padding-left: 0;
+              padding-right: 0;
+          }
+          .blockBusinessCardLeft__none &{
+              padding-left: 0;
+              padding-right: 0;
+          }
+      }
+  }
+}

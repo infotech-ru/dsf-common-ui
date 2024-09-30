@@ -54,6 +54,7 @@ sass:
 highlighter: rouge
 permissions:
   id-token: write # This is required for requesting the JWT
+excerpt_separator: <!--more-->  
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -49,6 +49,95 @@ order: 8
   </div>
 </div>
 
+### Блок-визитка
+Используется для вывода информации о клиенте или обе его контакте или об автомобиле.
+{% highlight html %}
+  <div class="d-flex">
+    <div class="blockBusinessCardLeft">
+        <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__personal">
+          <img src="" />
+        </div>
+    </div>
+    <div class="blockBusinessCardRight">
+    </div>
+  </div>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <div class="d-flex mb-10">
+    <div class="blockBusinessCardLeft">
+        <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__personal"></div>
+    </div>
+    <div class="blockBusinessCardRight">
+        <div class="row">
+            <div class="col-sm-3">
+                <label class="control-label">Заголовок информации</label>
+                <div>Информация</div>
+            </div> 
+            <div class="col-sm-3">
+                <label class="control-label">Заголовок информации</label>
+                <div>Информация</div>
+            </div> 
+            <div class="col-sm-3">
+                <label class="control-label">Заголовок информации</label>
+                <div>Информация</div>
+            </div> 
+        </div> 
+    </div>
+  </div>
+  <div class="d-flex mb-10">
+    <div class="blockBusinessCardLeft">
+        <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__auto"></div>
+    </div>
+    <div class="blockBusinessCardRight">
+        <div class="row">
+            <div class="col-sm-3">
+                <label class="control-label">Заголовок информации</label>
+                <div>Информация</div>
+            </div> 
+            <div class="col-sm-3">
+                <label class="control-label">Заголовок информации</label>
+                <div>Информация</div>
+            </div> 
+            <div class="col-sm-3">
+                <label class="control-label">Заголовок информации</label>
+                <div>Информация</div>
+            </div> 
+        </div> 
+    </div>
+  </div>
+  <section class="padding-10 border border-grey4 border__dotted mb-20">
+    <div class="unityBlock_header">
+        <div class="unityBlock_headerItem overflow-ellipsis">
+            <div class="d-inline-flex align-center fz13 text-grey4 mr-20">Контактное лицо</div>
+        </div>
+        <div class="unityBlock_headerItem">
+        </div>
+    </div>
+    <div class="unityBlock_body">
+        <div class="d-flex">
+            <div class="blockBusinessCardLeft pl-0">
+                <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__contact"></div>
+            </div>
+            <div class="blockBusinessCardRight pr-0">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <label class="control-label">Заголовок информации</label>
+                        <div>Информация</div>
+                    </div> 
+                    <div class="col-sm-3">
+                        <label class="control-label">Заголовок информации</label>
+                        <div>Информация</div>
+                    </div> 
+                    <div class="col-sm-3">
+                        <label class="control-label">Заголовок информации</label>
+                        <div>Информация</div>
+                    </div> 
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
 ### Блоки с изменением фона при наведении
 
 `square` - базовый класс оформления блоков

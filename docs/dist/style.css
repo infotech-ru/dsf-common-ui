@@ -17530,6 +17530,62 @@ tbody.collapse.in {
   font-size: 0.75rem;
 }
 
+.blockBusinessCardLeft {
+  flex-grow: 0;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.mobile-view .blockBusinessCardLeft {
+  padding-left: 0;
+  padding-right: 0;
+}
+.blockBusinessCardLeft__none .blockBusinessCardLeft {
+  display: none;
+}
+.blockBusinessCardLeft_image {
+  background-repeat: no-repeat;
+  background-size: 115px;
+  max-height: 115px;
+  height: 115px;
+  width: 115px;
+}
+.blockBusinessCardLeft_image__personal {
+  background-image: url("/images/placeholder_photo.svg");
+}
+.blockBusinessCardLeft_image__contact {
+  background-image: url("/images/placeholder_contact.svg");
+  background-size: 104px;
+  max-height: 104px;
+  height: 104px;
+  width: 104px;
+}
+.blockBusinessCardLeft_image__auto {
+  background-image: url("/images/placeholder_auto.svg");
+}
+.blockBusinessCardLeft_image__corporate {
+  background-image: url("/images/placeholder_corporate.svg");
+}
+.blockBusinessCardLeft_image img {
+  max-width: 100%;
+}
+.blockBusinessCardLeft_image img[src=""] {
+  display: none;
+}
+.blockBusinessCardRight {
+  flex-grow: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+}
+.mobile-view .blockBusinessCardRight {
+  padding-left: 0;
+  padding-right: 0;
+}
+.blockBusinessCardLeft__none .blockBusinessCardRight {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE HELPERS STYLES                                                      */
 /*                                                                            */
