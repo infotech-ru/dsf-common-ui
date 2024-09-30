@@ -44,9 +44,9 @@
 {% include header.html %}
 
 {% if page.url == "/" %}
-  <div class="container pt-20 pb-20">
+  <div class="container pt-20">
   {{ content }}
-  <h3>Последние добавленное</h3>
+  <h1 class="mt-20 mb-10">Последние добавленное</h1>
   <ul>
     {% for post in site.posts %}
       <li>
