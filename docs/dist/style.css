@@ -920,6 +920,127 @@ h6, .h6 {
   font-weight: 700;
 }
 
+.phoneField__orange {
+  background-color: #FFDF9A;
+  display: inline-flex;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 5px 7px;
+}
+.phoneField__blue {
+  align-items: center;
+  background-color: #E4EEF7;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  line-height: 18px;
+  min-height: 36px;
+  padding: 7px 10px;
+  width: 100%;
+}
+
+.commentField {
+  border-radius: 0 10px 10px 10px;
+  background-color: #E4EEF7;
+  display: inline-flex;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 10px;
+}
+
+.colorField {
+  align-items: center;
+  display: inline-flex;
+}
+.colorField__form-control {
+  height: 1.75rem;
+}
+.colorField_formControl {
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  display: inline-flex;
+  height: 24px;
+  padding: 0;
+  overflow: hidden;
+  width: 24px;
+  -webkit-appearance: none;
+}
+.colorField_formControl::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.colorField_formControl::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+.colorField_formControl::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+.colorField:after {
+  color: #333333;
+  content: attr(data-colorField);
+  display: block;
+  padding-left: 5px;
+  font-size: 0.75rem;
+}
+
+.blockBusinessCardLeft {
+  flex-grow: 0;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.mobile-view .blockBusinessCardLeft {
+  padding-left: 0;
+  padding-right: 0;
+}
+.blockBusinessCardLeft__none .blockBusinessCardLeft {
+  display: none;
+}
+.blockBusinessCardLeft_image {
+  background-repeat: no-repeat;
+  background-size: 115px;
+  max-height: 115px;
+  height: 115px;
+  width: 115px;
+}
+.blockBusinessCardLeft_image__personal {
+  background-image: url("/images/placeholder_photo.svg");
+}
+.blockBusinessCardLeft_image__contact {
+  background-image: url("/images/placeholder_contact.svg");
+  background-size: 104px;
+  max-height: 104px;
+  height: 104px;
+  width: 104px;
+}
+.blockBusinessCardLeft_image__auto {
+  background-image: url("/images/placeholder_auto.svg");
+}
+.blockBusinessCardLeft_image__corporate {
+  background-image: url("/images/placeholder_corporate.svg");
+}
+.blockBusinessCardLeft_image img {
+  max-width: 100%;
+}
+.blockBusinessCardLeft_image img[src=""] {
+  display: none;
+}
+.blockBusinessCardRight {
+  flex-grow: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+}
+.mobile-view .blockBusinessCardRight {
+  padding-left: 0;
+  padding-right: 0;
+}
+.blockBusinessCardLeft__none .blockBusinessCardRight {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE BASE STYLES                                                        */
 /*                                                                            */
@@ -17463,127 +17584,6 @@ tbody.collapse.in {
 .border-left-black {
   border-left-color: #000000;
   --border_left_color: #000000;
-}
-
-.phoneField__orange {
-  background-color: #FFDF9A;
-  display: inline-flex;
-  font-size: 13px;
-  line-height: 16px;
-  padding: 5px 7px;
-}
-.phoneField__blue {
-  align-items: center;
-  background-color: #E4EEF7;
-  display: flex;
-  font-size: 14px;
-  justify-content: space-between;
-  line-height: 18px;
-  min-height: 36px;
-  padding: 7px 10px;
-  width: 100%;
-}
-
-.commentField {
-  border-radius: 0 10px 10px 10px;
-  background-color: #E4EEF7;
-  display: inline-flex;
-  font-size: 12px;
-  line-height: 14px;
-  padding: 10px;
-}
-
-.colorField {
-  align-items: center;
-  display: inline-flex;
-}
-.colorField__form-control {
-  height: 1.75rem;
-}
-.colorField_formControl {
-  border: none;
-  border-radius: 24px;
-  cursor: pointer;
-  display: inline-flex;
-  height: 24px;
-  padding: 0;
-  overflow: hidden;
-  width: 24px;
-  -webkit-appearance: none;
-}
-.colorField_formControl::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-.colorField_formControl::-webkit-color-swatch {
-  border: none;
-  border-radius: 50%;
-}
-.colorField_formControl::-moz-color-swatch {
-  border: none;
-  border-radius: 50%;
-}
-.colorField:after {
-  color: #333333;
-  content: attr(data-colorField);
-  display: block;
-  padding-left: 5px;
-  font-size: 0.75rem;
-}
-
-.blockBusinessCardLeft {
-  flex-grow: 0;
-  padding-left: 10px;
-  padding-right: 20px;
-}
-.mobile-view .blockBusinessCardLeft {
-  padding-left: 0;
-  padding-right: 0;
-}
-.blockBusinessCardLeft__none .blockBusinessCardLeft {
-  display: none;
-}
-.blockBusinessCardLeft_image {
-  background-repeat: no-repeat;
-  background-size: 115px;
-  max-height: 115px;
-  height: 115px;
-  width: 115px;
-}
-.blockBusinessCardLeft_image__personal {
-  background-image: url("/images/placeholder_photo.svg");
-}
-.blockBusinessCardLeft_image__contact {
-  background-image: url("/images/placeholder_contact.svg");
-  background-size: 104px;
-  max-height: 104px;
-  height: 104px;
-  width: 104px;
-}
-.blockBusinessCardLeft_image__auto {
-  background-image: url("/images/placeholder_auto.svg");
-}
-.blockBusinessCardLeft_image__corporate {
-  background-image: url("/images/placeholder_corporate.svg");
-}
-.blockBusinessCardLeft_image img {
-  max-width: 100%;
-}
-.blockBusinessCardLeft_image img[src=""] {
-  display: none;
-}
-.blockBusinessCardRight {
-  flex-grow: 1;
-  padding-right: 10px;
-  padding-left: 10px;
-  width: 100%;
-}
-.mobile-view .blockBusinessCardRight {
-  padding-left: 0;
-  padding-right: 0;
-}
-.blockBusinessCardLeft__none .blockBusinessCardRight {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
