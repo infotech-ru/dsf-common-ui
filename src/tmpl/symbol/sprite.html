@@ -34,7 +34,7 @@ embedded above. They may be styled via CSS.
 					<div class="set-ico-modal-name">{{name}}</div>
 					<button class="btn-default js-copyToClipboard" data-clipboard-text="{{name}}">
 						<svg class="svg--icon" width="24" height="24">
-							<use xlink:href="/dist/sprite.symbol.svg#bicolors-copy"></use>
+							<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use>
 						</svg>
 						<span class="btn-text">
 							{{name}}
@@ -72,13 +72,13 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 			<div class="d-flex"> 
 				<button class="btn-default btn-block js-copyToClipboard" data-clipboard-text="{{name}}">
 					<svg class="svg--icon" width="24" height="24">
-						<use xlink:href="/dist/sprite.symbol.svg#bicolors-copy"></use>
+						<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use>
 					</svg>
 					<span class="btn-text">Скопировать имя</span>
 				</button>
 				<button class="btn-icon js-popover-close ml-10" type="button">
 					<svg class="svg--icon svg-danger" width="24" height="24">
-						<use xlink:href="/dist/sprite.symbol.svg#bicolors-close"></use>
+						<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-close"></use>
 					</svg>
 				</button>
 			</div>
@@ -86,7 +86,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 	'>
 		<!-- {{name}} -->
 		<svg class="{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
-			<use xlink:href="/dist/{{{example}}}#{{name}}"></use>
+			<use xlink:href="/dsf-common-ui/dist/{{{example}}}#{{name}}"></use>
 		</svg>
 		</button>
 	</div>
