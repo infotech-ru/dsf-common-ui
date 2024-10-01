@@ -23,7 +23,7 @@ $this->registerJs('DSF.CustomFileUpload();');
   <input type="file" class="form-control fileUpload_input js-customFileUploadInput">
   <label class="fileUpload_label btn-default" for="clientimportform-file">
     <span class="svg--icon">
-      <svg class="bicolors-export" width="24" height="24"><use xlink:href="//dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg>
+      <svg class="bicolors-export" width="24" height="24"><use xlink:href="/dist/sprite.symbol.svg#bicolors-export"></use></svg>
     </span>
     <span class="btn-text">
       <span class="js-fileUploadLabelText fileUpload_labelText">Выбрать файл</span>
@@ -39,7 +39,7 @@ $this->registerJs('DSF.CustomFileUpload();');
     <input type="file" class="form-control fileUpload_input js-customFileUploadInput">
     <label class="fileUpload_label btn-default" for="clientimportform-file">
       <span class="svg--icon">
-        <svg class="bicolors-export" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg>
+        <svg class="bicolors-export" width="24" height="24"><use xlink:href="/dist/sprite.symbol.svg#bicolors-export"></use></svg>
       </span>
       <span class="btn-text">
         <span class="js-fileUploadLabelText fileUpload_labelText">Выбрать файл</span>

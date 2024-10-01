@@ -49,7 +49,7 @@ Popover изначально не попадает в DOM, скрипт по т�
             <a class='dropdown__link' href='#'>
               <span class='dropdown__linkIcon'>
                 <svg class='bicolors-edit' width='24' height='24'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
+                  <use xlink:href='/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
                 </svg>
               </span>
               <span class='dropdown__linkText'>Редактировать</span>
@@ -57,14 +57,14 @@ Popover изначально не попадает в DOM, скрипт по т�
             <a class='dropdown__link' href='#'>
               <span class='dropdown__linkIcon'>
                 <svg class='bicolors-edit' width='24' height='24'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use>
+                  <use xlink:href='/dist/sprite.symbol.svg#bicolors-delete__24vb'></use>
                 </svg>
               </span>
               <span class='dropdown__linkText'>Удалить</span>
             </a>
           ">
           <span class="svg--icon">
-            <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
+            <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
           </span>
   </button>
   <button class="btn-link js-actionMenu"
@@ -73,7 +73,7 @@ Popover изначально не попадает в DOM, скрипт по т�
             <button class='dropdown__link'>
               <span class='dropdown__linkIcon'>
                 <svg class='bicolors-edit' width='24' height='24'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
+                  <use xlink:href='/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
                 </svg>
               </span>
               <span class='dropdown__linkText'>Редактировать</span>
@@ -81,23 +81,23 @@ Popover изначально не попадает в DOM, скрипт по т�
             <button class='dropdown__link'>
               <span class='dropdown__linkIcon'>
                 <svg class='bicolors-plus' width='24' height='24'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use>
+                  <use xlink:href='/dist/sprite.symbol.svg#bicolors-plus__24vb'></use>
                 </svg>
               </span>
               <span class='dropdown__linkText'>Добавить</span>
             </button>
           ">
           <span class="svg--icon">
-            <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
+            <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
           </span>
   </button>
 {% endhighlight %}
 
 <div class="bs-docs-example">
-  <button class="btn-icon mr-10 js-actionMenu" type="button" data-content="<a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='dropdown__linkIconText'>Редактировать</span></a><a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use></svg></span><span class='dropdown__linkIconText'>Удалить</span></a> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
+  <button class="btn-icon mr-10 js-actionMenu" type="button" data-content="<a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='dropdown__linkIconText'>Редактировать</span></a><a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dist/sprite.symbol.svg#bicolors-delete__24vb'></use></svg></span><span class='dropdown__linkIconText'>Удалить</span></a> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
 
 
-  <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='dropdown__link'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='dropdown__linkIconText'>Редактировать</span></button><button class='dropdown__link'><span class='dropdown__linkIcon'><svg class='bicolors-plus' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use></svg></span><span class='dropdown__linkIconText'>Добавить</span></button>"><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
+  <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='dropdown__link'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='dropdown__linkIconText'>Редактировать</span></button><button class='dropdown__link'><span class='dropdown__linkIcon'><svg class='bicolors-plus' width='24' height='24'><use xlink:href='/dist/sprite.symbol.svg#bicolors-plus__24vb'></use></svg></span><span class='dropdown__linkIconText'>Добавить</span></button>"><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
 </div>
 
 ### Многоуровневое меню dropdown. 

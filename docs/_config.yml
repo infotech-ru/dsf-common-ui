@@ -23,9 +23,9 @@ email: bend.r.bender@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The UI elements for DNM, CRM, DFS.
 author: "Infotech"
-baseurl: "/dsf-common-ui" # the subpath of your site, e.g. /blog
-url: "https://infotech-ru.github.io/dsf-common-ui" # the base hostname & protocol for your site, e.g. http://example.com
-canonical_url: "https://infotech-ru.github.io/dsf-common-ui"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://infotech-ru.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+canonical_url: "https://infotech-ru.github.io"
 
 
 # Build settings
@@ -54,6 +54,7 @@ sass:
 highlighter: rouge
 permissions:
   id-token: write # This is required for requesting the JWT
+show_excerpts: true
 excerpt_separator: <!--more-->  
 defaults:
   - scope:
