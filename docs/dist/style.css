@@ -1005,20 +1005,20 @@ h6, .h6 {
   width: 115px;
 }
 .blockBusinessCardLeft_image__personal {
-  background-image: url("/images/placeholder_photo.svg");
+  background-image: url("/dsf-common-ui/images/placeholder_photo.svg");
 }
 .blockBusinessCardLeft_image__contact {
-  background-image: url("/images/placeholder_contact.svg");
+  background-image: url("/dsf-common-ui/images/placeholder_contact.svg");
   background-size: 104px;
   max-height: 104px;
   height: 104px;
   width: 104px;
 }
 .blockBusinessCardLeft_image__auto {
-  background-image: url("/images/placeholder_auto.svg");
+  background-image: url("/dsf-common-ui/images/placeholder_auto.svg");
 }
 .blockBusinessCardLeft_image__corporate {
-  background-image: url("/images/placeholder_corporate.svg");
+  background-image: url("/dsf-common-ui/images/placeholder_corporate.svg");
 }
 .blockBusinessCardLeft_image img {
   max-width: 100%;
@@ -2950,6 +2950,8 @@ h6, .h6 {
 .error-view .footer {
   color: #ffffff;
   margin-top: 0;
+  position: relative;
+  z-index: 1;
 }
 .error-view .footer a {
   color: #0094FF;
@@ -3008,7 +3010,7 @@ h6, .h6 {
 
 .footer___logo {
   background-color: transparent;
-  background-image: url(../images/logo-infotech__dark__ru.svg);
+  background-image: url("/dsf-common-ui/images/logo-infotech__dark__ru.svg");
   background-repeat: no-repeat;
   background-size: 120px 22px;
   display: inline-block;
@@ -3018,23 +3020,23 @@ h6, .h6 {
   width: 120px;
 }
 .lang__ru .footer___logo {
-  background-image: url(../images/logo-infotech__dark__ru.svg);
+  background-image: url("/dsf-common-ui/images/logo-infotech__dark__ru.svg");
 }
 .lang__en .footer___logo {
-  background-image: url(../images/logo-infotech__dark__en.svg);
+  background-image: url("/dsf-common-ui/images/logo-infotech__dark__en.svg");
 }
 .reset-view .footer___logo, .guest-view .footer___logo {
   background-position-y: center;
   margin: 0;
 }
 .reset-view.lang__en .footer___logo, .guest-view.lang__en .footer___logo {
-  background-image: url(../images/logo-infotech__white__en.svg);
+  background-image: url("/dsf-common-ui/images/logo-infotech__white__en.svg");
 }
 .reset-view.lang__ru .footer___logo, .guest-view.lang__ru .footer___logo {
-  background-image: url(../images/logo-infotech__white__ru.svg);
+  background-image: url("/dsf-common-ui/images/logo-infotech__white__ru.svg");
 }
 .mobile-view .footer___logo {
-  background-image: url(../images/logo-infotech__mobile.svg);
+  background-image: url("/dsf-common-ui/images/logo-infotech__mobile.svg");
   background-size: contain;
   height: 16px;
   margin: 0;

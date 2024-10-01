@@ -195,20 +195,20 @@ h6, .h6 { font-size: $font-size-h6; }
               height: 115px;
               width: 115px;
               &__personal{ 
-                  background-image: url('/images/placeholder_photo.svg');
+                  background-image: url($path-images + 'placeholder_photo.svg');
               }
               &__contact{ 
-                  background-image: url('/images/placeholder_contact.svg');
+                  background-image: url($path-images + 'placeholder_contact.svg');
                   background-size: 104px;
                   max-height: 104px;
                   height: 104px;
                   width: 104px;
               }
               &__auto{
-                  background-image: url('/images/placeholder_auto.svg');
+                  background-image: url($path-images + 'placeholder_auto.svg');
               }
               &__corporate{ 
-                  background-image: url('/images/placeholder_corporate.svg');
+                  background-image: url($path-images + 'placeholder_corporate.svg');
               }
               img{ 
                   max-width: 100%;
