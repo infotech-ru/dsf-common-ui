@@ -42,4 +42,12 @@ layout: default
 
 <p>- Исключить использование <code class="language-plaintext highlighter-rouge">!important</code></p>
 
-
+  <h1 class="mt-20 mb-10">Последние добавленное</h1>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+      </li>
+    {% endfor %}
+  </ul>
