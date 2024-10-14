@@ -210,6 +210,9 @@ h6, .h6 { font-size: $font-size-h6; }
               &__corporate{ 
                   background-image: url($path-images + 'placeholder_corporate.svg');
               }
+              &__none{
+                background-image: none;
+              }
               img{ 
                   max-width: 100%;
                   &[src=""]{
