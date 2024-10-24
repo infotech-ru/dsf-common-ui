@@ -1000,8 +1000,9 @@ h6, .h6 {
 .blockBusinessCardLeft_image {
   background-repeat: no-repeat;
   background-size: 115px;
-  max-height: 115px;
   height: 115px;
+  max-height: 115px;
+  position: relative;
   width: 115px;
 }
 .blockBusinessCardLeft_image__personal {
@@ -8852,8 +8853,26 @@ input[type=button].btn-block {
   box-shadow: none;
   outline: 0;
 }
+.btn-download__circle {
+  border-radius: 115px;
+  height: 115px;
+  width: 115px;
+}
+.btn-download__circle .btn-download_inner {
+  border-radius: 100%;
+}
 .btn-download__dragover {
   opacity: 0.4;
+}
+.btn-download__onHover {
+  opacity: 0;
+  z-index: 1;
+}
+.btn-download__onHover:hover {
+  opacity: 1;
+}
+.mobile-view .btn-download__onHover:active {
+  opacity: 1;
 }
 .btn-download .btn-text {
   margin: 0;
@@ -14943,6 +14962,30 @@ tbody.collapse.in {
   left: 100%;
 }
 
+.left-5px {
+  left: 5px;
+}
+
+.mobile-view .left-5px__mobile {
+  left: 5px;
+}
+
+.left-10px {
+  left: 10px;
+}
+
+.mobile-view .left-10px__mobile {
+  left: 10px;
+}
+
+.left-20px {
+  left: 20px;
+}
+
+.mobile-view .left-20px__mobile {
+  left: 20px;
+}
+
 .left-auto {
   left: auto;
 }
@@ -14973,6 +15016,30 @@ tbody.collapse.in {
 
 .mobile-view .right-100p__mobile {
   right: 100%;
+}
+
+.right-5px {
+  right: 5px;
+}
+
+.mobile-view .right-5px__mobile {
+  right: 5px;
+}
+
+.right-10px {
+  right: 10px;
+}
+
+.mobile-view .right-10px__mobile {
+  right: 10px;
+}
+
+.right-20px {
+  right: 20px;
+}
+
+.mobile-view .right-20px__mobile {
+  right: 20px;
 }
 
 .right-auto {
@@ -15007,6 +15074,30 @@ tbody.collapse.in {
   top: 100%;
 }
 
+.top-5px {
+  top: 5px;
+}
+
+.mobile-view .top-5px__mobile {
+  top: 5px;
+}
+
+.top-10px {
+  top: 10px;
+}
+
+.mobile-view .top-10px__mobile {
+  top: 10px;
+}
+
+.top-20px {
+  top: 20px;
+}
+
+.mobile-view .top-20px__mobile {
+  top: 20px;
+}
+
 .top-auto {
   top: auto;
 }
@@ -15037,6 +15128,30 @@ tbody.collapse.in {
 
 .mobile-view .bottom-100p__mobile {
   bottom: 100%;
+}
+
+.bottom-5px {
+  bottom: 5px;
+}
+
+.mobile-view .bottom-5px__mobile {
+  bottom: 5px;
+}
+
+.bottom-10px {
+  bottom: 10px;
+}
+
+.mobile-view .bottom-10px__mobile {
+  bottom: 10px;
+}
+
+.bottom-20px {
+  bottom: 20px;
+}
+
+.mobile-view .bottom-20px__mobile {
+  bottom: 20px;
 }
 
 .bottom-auto {
@@ -16513,56 +16628,56 @@ tbody.collapse.in {
 
 .svg-grey svg,
 .svg-grey.svg--icon svg {
-  --svg-icon-fill: #cccccc;
-  --svg-icon-stroke: #cccccc;
-  --svg-icon-fill_blue: #cccccc;
-  --svg-icon-stroke_blue: #cccccc;
-  --svg-valute-fill: #cccccc;
+  --svg-icon-fill: #BABABA;
+  --svg-icon-stroke: #BABABA;
+  --svg-icon-fill_blue: #BABABA;
+  --svg-icon-stroke_blue: #BABABA;
+  --svg-valute-fill: #BABABA;
 }
 
 .text-grey {
-  color: #cccccc;
-  --text_color: #cccccc;
-  --svg-valute-fill: #cccccc;
+  color: #BABABA;
+  --text_color: #BABABA;
+  --svg-valute-fill: #BABABA;
 }
 
 .textHover-grey:hover, .textHoverTarget:hover .textHover-grey {
-  color: #cccccc;
-  --text_color: #cccccc;
-  --svg-valute-fill: #cccccc;
+  color: #BABABA;
+  --text_color: #BABABA;
+  --svg-valute-fill: #BABABA;
 }
 
 .bg-grey {
-  background-color: #cccccc;
-  --bg_color: #cccccc;
+  background-color: #BABABA;
+  --bg_color: #BABABA;
 }
 .bg-grey.isHover, .isHover .bg-grey {
-  background-color: var(--bg__hover-grey, #cccccc);
+  background-color: var(--bg__hover-grey, #BABABA);
 }
 
 .border-grey {
-  border-color: #cccccc;
-  --border_color: #cccccc;
+  border-color: #BABABA;
+  --border_color: #BABABA;
 }
 
 .border-top-grey {
-  border-top-color: #cccccc;
-  --border_top_color: #cccccc;
+  border-top-color: #BABABA;
+  --border_top_color: #BABABA;
 }
 
 .border-right-grey {
-  border-right-color: #cccccc;
-  --border_right_color: #cccccc;
+  border-right-color: #BABABA;
+  --border_right_color: #BABABA;
 }
 
 .border-bottom-grey {
-  border-bottom-color: #cccccc;
-  --border_bottom_color: #cccccc;
+  border-bottom-color: #BABABA;
+  --border_bottom_color: #BABABA;
 }
 
 .border-left-grey {
-  border-left-color: #cccccc;
-  --border_left_color: #cccccc;
+  border-left-color: #BABABA;
+  --border_left_color: #BABABA;
 }
 
 .svg-grey2 svg,

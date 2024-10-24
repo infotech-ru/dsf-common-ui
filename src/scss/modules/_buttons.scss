@@ -467,7 +467,7 @@ input[type="button"] {
   background: var(--color_white);
   border: 1px dashed var(--color_light-blue);
   box-shadow: none;
-  color:  var(--color_light-blue);
+  color: var(--color_light-blue);
   cursor: pointer;
   display: flex;
   font-size: rem(10);
@@ -491,8 +491,28 @@ input[type="button"] {
     box-shadow: none;
     outline: 0;
   }
+  &__circle{
+    border-radius: 115px;
+    height: 115px;
+    width: 115px;
+    .btn-download_inner{
+      border-radius: 100%;
+    }
+  }
   &__dragover{
     opacity: 0.4;
+  }
+  &__onHover{
+    opacity: 0;
+    z-index: 1;
+    &:hover{
+      opacity: 1;
+    }
+    &:active{
+      .mobile-view &{
+        opacity: 1;
+      }
+    }
   }
   .btn-text{
     margin: 0;

@@ -191,8 +191,9 @@ h6, .h6 { font-size: $font-size-h6; }
           &_image{
               background-repeat: no-repeat;
               background-size: 115px;
-              max-height: 115px;
               height: 115px;
+              max-height: 115px;
+              position: relative;
               width: 115px;
               &__personal{ 
                   background-image: url($path-images + 'placeholder_photo.svg');

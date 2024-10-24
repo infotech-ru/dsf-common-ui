@@ -87,8 +87,8 @@ $svgSizes: 8, 9, 10, 11, 12, 14, 16, 18, 20, 21, 22, 24;
 
 // возможные значения: bottom: (0, 50px, auto, 'auto'). Числовое значение будет процентами (%)
 $posSizes:(
-  left: (0, 50, 100, auto),
-  right: (0, 50, 100, auto),
-  top: (0, 50, 100, auto),
-  bottom: (0, 50, 100, auto)
+  left: (0, 50, 100, 5px, 10px, 20px, auto),
+  right: (0, 50, 100, 5px, 10px, 20px, auto),
+  top: (0, 50, 100, 5px, 10px, 20px, auto),
+  bottom: (0, 50, 100, 5px, 10px, 20px, auto)
 );

@@ -119,6 +119,23 @@ _Использование:_ `btn-link`
     </span>
 </button>
 
+<button class="btn-download btn-download__circle">
+    <span class="btn-download_inner">
+        <span class="svg--icon svg--icon__h21"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+        <span class="btn-text">Добавить фото</span>
+    </span>
+</button>
+<div class="blockBusinessCardLeft">
+    <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__personal">
+      <button class="btn-download btn-download__circle btn-download__onHover">
+          <span class="btn-download_inner">
+              <span class="svg--icon svg--icon__h21"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+              <span class="btn-text">Добавить фото</span>
+          </span>
+      </button>
+    </div>
+</div>
+
 {% highlight html %}
 <button class="btn-download w-100p">
     <span class="btn-download_inner">
@@ -126,4 +143,20 @@ _Использование:_ `btn-link`
         <span class="btn-text">Добавить фото</span>
     </span>
 </button>
+<button class="btn-download btn-download__circle">
+    <span class="btn-download_inner">
+        <span class="svg--icon svg--icon__h21"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+        <span class="btn-text">Добавить фото</span>
+    </span>
+</button>
+<div class="blockBusinessCardLeft">
+    <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__personal">
+      <button class="btn-download btn-download__circle btn-download__onHover p-absolute top-0">
+          <span class="btn-download_inner">
+              <span class="svg--icon svg--icon__h21"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+              <span class="btn-text">Добавить фото</span>
+          </span>
+      </button>
+    </div>
+</div>
 {% endhighlight %}

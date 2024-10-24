@@ -1,0 +1,166 @@
+---
+Title: Контейнеры
+menutitle: Контейнеры
+category: helpers
+anchor: helpers-container
+order: 2
+---
+
+<h3>Свойства контейнера</h3>
+
+<p><code class="language-plaintext highlighter-rouge">d-none</code> - display: none</p>
+
+<p><code class="language-plaintext highlighter-rouge">d-flex</code> - display: flex</p>
+
+<p><code class="language-plaintext highlighter-rouge">d-block</code> - display: block</p>
+
+<p><code class="language-plaintext highlighter-rouge">d-inline-block</code> - display: inline-block</p>
+
+<p><code class="language-plaintext highlighter-rouge">d-inline-flex</code> - display: inline-flex</p>
+
+<p><code class="language-plaintext highlighter-rouge">d-grid</code> - display: grid</p>
+<br>
+<h4>Свойства контейнера для display: flex</h4>
+
+<p><code class="language-plaintext highlighter-rouge">justify-flex-start</code> - justify-content: flex-end</p>
+
+<p><code class="language-plaintext highlighter-rouge">justify-space-between</code> - justify-content: space-between</p>
+
+<p><code class="language-plaintext highlighter-rouge">justify-flex-end</code> - justify-content: flex-end</p>
+
+<p><code class="language-plaintext highlighter-rouge">justify-center</code> - justify-content: center</p>
+
+<p><code class="language-plaintext highlighter-rouge">justify-evenly</code> - justify-content: space-evenly</p>
+
+<p><code class="language-plaintext highlighter-rouge">justify-stretch</code> - justify-content: stretch</p>
+
+<p><code class="language-plaintext highlighter-rouge">align-start</code> - align-items: flex-start</p>
+
+<p><code class="language-plaintext highlighter-rouge">align-center</code> - align-items: center</p>
+
+<p><code class="language-plaintext highlighter-rouge">align-end</code> - align-items: flex-end</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-wrap</code> - flex-wrap: wrap</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-nowrap</code> - flex-wrap: nowrap</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-column</code> - flex-direction: column</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-column-reverse</code> - flex-direction: column-reverse</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-row</code> - flex-direction: row</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-grow-0</code> - flex-grow: 0</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-grow-1</code> - flex-grow: 1</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-shrink-0</code> - flex-shrink: 0</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-shrink-1</code> - flex-shrink: 1</p>
+
+<p><code class="language-plaintext highlighter-rouge">flex-basis-100p</code> - flex-basis: 100%</p>
+
+<p><code class="language-plaintext highlighter-rouge">order-1</code>,
+<code class="language-plaintext highlighter-rouge">order-2</code>,
+<code class="language-plaintext highlighter-rouge">order-3</code>,
+<code class="language-plaintext highlighter-rouge">order-4</code>,
+<code class="language-plaintext highlighter-rouge">order-5</code>,
+<code class="language-plaintext highlighter-rouge">order-6</code>,
+<code class="language-plaintext highlighter-rouge">order-7</code>,
+<code class="language-plaintext highlighter-rouge">order-8</code>,
+<code class="language-plaintext highlighter-rouge">order-9</code>,
+<code class="language-plaintext highlighter-rouge">order-10</code> - устанавливает соответствующие значение order</p>
+
+<h4> Постфикс </code>__mobile</code>, дописанный к этим классам, устанавливают такие значения только для мобильных устройств</h4>
+
+<br>
+<br>
+
+<h3>Свойства позиционирования (position)</h3>
+
+<p><code class="language-plaintext highlighter-rouge">p-relative</code>,
+<code class="language-plaintext highlighter-rouge">p-absolute</code>,
+<code class="language-plaintext highlighter-rouge">p-sticky</code></p>
+<p>Для мобильных устройств к правилу дописывается постфикс <code class="language-plaintext highlighter-rouge">__mobile</code>.</p>
+
+<br>
+<br>
+
+<h3>Top, Right, Bottom, Left</h3>
+
+<p>Классы формируются по схеме: <code class="language-plaintext highlighter-rouge">{направление}-{X}</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">X</code> может принимать следующие значения для сторон (Для процентного значени {X} просто числовое):</p>
+{% for item in site.data.jekyll.posSizes %}
+  <div><span class="fz14">{{ item.name }}</span>: <span class="fz16">{{ item.value }}</span></div>
+{% endfor %}
+<p>Пример: <code class="language-plaintext highlighter-rouge">.left-0</code>, <code class="language-plaintext highlighter-rouge">.right-10px</code>, <code class="language-plaintext highlighter-rouge">.bottom-auto</code></p>
+<h4> Постфикс </code>__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств</h4>
+
+<br>
+<br>
+
+<h3>Классы, устанавливающие высоту (height) контейнера</h3>
+
+<p><code class="language-plaintext highlighter-rouge">h-auto</code> - автоматическая высота</p>
+
+<p><code class="language-plaintext highlighter-rouge">h-100p</code> - значение в 100%</p>
+
+<p><code class="language-plaintext highlighter-rouge">maxh-none</code> - свойство max-height в значение none</p>
+
+<p><code class="language-plaintext highlighter-rouge">maxh-100p</code> - свойство max-height в значение 100%</p>
+
+<p><code class="language-plaintext highlighter-rouge">minh-auto</code> - свойство min-height в значение auto</p>
+
+<p><code class="language-plaintext highlighter-rouge">minh-100p</code> - свойство min-height в значение 100%</p>
+
+<h4>Постфикс </code>__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств</h4>
+
+<br>
+<br>
+
+<h3>Классы, устанавливающие ширину (width) контейнера</h3>
+
+<p><code class="language-plaintext highlighter-rouge">w-auto</code> -  автоматическую ширину</p>
+
+<p><code class="language-plaintext highlighter-rouge">w-100p</code> - значение в 100%</p>
+
+<p><code class="language-plaintext highlighter-rouge">maxw-none</code> - свойство max-width в значение none</p>
+
+<p><code class="language-plaintext highlighter-rouge">maxh-100p</code> - свойство max-height в значение 100%</p>
+
+<p><code class="language-plaintext highlighter-rouge">maxw-100p</code> - свойство max-width в значение 100%</p>
+
+<p><code class="language-plaintext highlighter-rouge">minw-auto</code> - свойство min-width в значение auto</p>
+
+<p><code class="language-plaintext highlighter-rouge">minw-100p</code> - свойство min-width в значение 100%</p>
+
+<h4>Постфикс </code>__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств</h4>
+
+<br>
+<br>
+
+<h3>Классы, устанавливающие поворот контейнера</h3>
+
+<p><code class="language-plaintext highlighter-rouge">rotate90</code>,</p>
+<p><code class="language-plaintext highlighter-rouge">rotate180</code>,</p>
+<p><code class="language-plaintext highlighter-rouge">rotate270</code></p>
+
+<br>
+<br>
+
+<h3>Всомогательные классы для работы с таблицами</h3>
+
+<p><code class="language-plaintext highlighter-rouge">table__layoutAuto</code>,</p>
+<p><code class="language-plaintext highlighter-rouge">table__layoutFixed</code>  - уставливает свойство table-layout в значение auto или fixed</p>
+
+<h4>Постфикс </code>__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств</h4>
+
+<br>
+<br>
+
+<h3>Классы, устанавливающие прозрачность</h3>
+<p><code class="language-plaintext highlighter-rouge">opacity1</code>,</p>
+<p><code class="language-plaintext highlighter-rouge">opacity0</code></p>
+
+<h4>Постфикс </code>__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств</h4>

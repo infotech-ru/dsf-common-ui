@@ -18,7 +18,7 @@ brandnamecolor:
 - name: dark-grey
   value: #333333
 - name: grey
-  value: #cccccc
+  value: #BABABA
 - name: grey2
   value: #dddddd
 - name: grey3
@@ -224,13 +224,13 @@ svgsizes:
 
 posSizes:
 - name: left
-  value: 0, 50, 100, auto
+  value: 0, 50, 100, 5px, 10px, 20px, auto
 - name: right
-  value: 0, 50, 100, auto
+  value: 0, 50, 100, 5px, 10px, 20px, auto
 - name: top
-  value: 0, 50, 100, auto
+  value: 0, 50, 100, 5px, 10px, 20px, auto
 - name: bottom
-  value: 0, 50, 100, auto
+  value: 0, 50, 100, 5px, 10px, 20px, auto
 
 brandHover:
 - name: _outline_dark-green

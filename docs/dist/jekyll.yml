@@ -35,7 +35,7 @@ brandnamecolor {
 }
 
 brandnamecolor {
-  grey: #cccccc;
+  grey: #BABABA;
 }
 
 brandnamecolor {
@@ -415,19 +415,19 @@ svgsizes {
 }
 
 posSizes {
-  left: 0, 50, 100, auto;
+  left: 0, 50, 100, 5px, 10px, 20px, auto;
 }
 
 posSizes {
-  right: 0, 50, 100, auto;
+  right: 0, 50, 100, 5px, 10px, 20px, auto;
 }
 
 posSizes {
-  top: 0, 50, 100, auto;
+  top: 0, 50, 100, 5px, 10px, 20px, auto;
 }
 
 posSizes {
-  bottom: 0, 50, 100, auto;
+  bottom: 0, 50, 100, 5px, 10px, 20px, auto;
 }
 
 brandHover {
