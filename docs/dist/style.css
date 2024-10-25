@@ -13977,6 +13977,16 @@ tbody.collapse.in {
   height: auto;
 }
 
+.img-circleThumb {
+  border-radius: 115px;
+  height: 115px;
+  min-height: 115px;
+  min-width: 115px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 115px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
