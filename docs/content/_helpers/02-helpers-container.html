@@ -88,13 +88,15 @@ order: 2
 
 <h3>Top, Right, Bottom, Left</h3>
 
-<p>Классы формируются по схеме: <code class="language-plaintext highlighter-rouge">{направление}-{X}</code></p>
+<p>Классы формируются по схеме: <code class="language-plaintext highlighter-rouge">{направление}-{X}{Y}</code></p>
 
-<p><code class="language-plaintext highlighter-rouge">X</code> может принимать следующие значения для сторон (Для процентного значени {X} просто числовое):</p>
+<p><code class="language-plaintext highlighter-rouge">X</code> - Цифровое значение</p>
+<p><code class="language-plaintext highlighter-rouge">Y</code> - Единицы измерения 'px' или 'p' ('p' - это проценты %, в списке доступных значений просто числовое значение)</p>
+<p>Вместо {X}{Y} возможно значение 'auto'</p>
 {% for item in site.data.jekyll.posSizes %}
   <div><span class="fz14">{{ item.name }}</span>: <span class="fz16">{{ item.value }}</span></div>
 {% endfor %}
-<p>Пример: <code class="language-plaintext highlighter-rouge">.left-0</code>, <code class="language-plaintext highlighter-rouge">.right-10px</code>, <code class="language-plaintext highlighter-rouge">.bottom-auto</code></p>
+<p>Пример: <code class="language-plaintext highlighter-rouge">.left-0p</code>, <code class="language-plaintext highlighter-rouge">.right-10px</code>, <code class="language-plaintext highlighter-rouge">.bottom-auto</code></p>
 <h4> Постфикс </code>__mobile</code> дописанный к этим классам устанавливают такие значения только для мобильных устройств</h4>
 
 <br>

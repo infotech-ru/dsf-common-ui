@@ -193,6 +193,7 @@ h6, .h6 { font-size: $font-size-h6; }
               background-size: 115px;
               height: 115px;
               max-height: 115px;
+              overflow: hidden;
               position: relative;
               width: 115px;
               &__personal{ 
