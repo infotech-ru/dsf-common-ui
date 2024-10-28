@@ -44,10 +44,10 @@ td {
   }
   text-align: left;
   .table__border &{ 
-    border-bottom-width: var(--width_border-bottom__thick, var(--width_border-bottom, 1px));
+    border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
     border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
     border-bottom-color: var(--border_bottom_color, var(--border_color, _brand-table(table_border)));
-    border-right-width: var(--width_border-right__thick, var(--width_border-right, 1px));
+    border-right-width: var(--width_border-right__modify, var(--width_border-right, 1px));
     border-right-style: var(--style_border_right, var(--style_border, solid));
     border-right-color: var(--border_right_color, var(--border_color, _brand-table(table_border)));
   }
@@ -65,7 +65,7 @@ td {
     //   padding-left: 0;
     // }
     .table__border &{ 
-      border-left-width: var(--width_border-left__thick, var(--width_border-left, 1px));
+      border-left-width: var(--width_border-left__modify, var(--width_border-left, 1px));
       border-left-style: var(--style_border_left, var(--style_border, solid));
       border-left-color: var(--border_left_color, var(--border_color, _brand-table(table_border)));
     }
@@ -124,7 +124,7 @@ thead {
     &:first-child{
       th{ 
         .table__border & {
-          border-top-width: var(--width_border-top__thick, var(--width_border-top, 1px));
+          border-top-width: var(--width_border-top__modify, var(--width_border-top, 1px));
           border-top-style: var(--style_border_top, var(--style_border, solid));
           border-top-color: var(--border_top_color, var(--border_color, _brand-table(table_border)));
         }
@@ -132,7 +132,7 @@ thead {
     }
     &:last-child{ 
       th{
-        border-bottom-width: var(--width_border-bottom__thick, var(--width_border-bottom, 1px));
+        border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
         border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
         border-bottom-color: var(--border_top_color, var(--border_color, _brand-table(thead_border)));
       }
