@@ -409,7 +409,7 @@ tbody tr {
   display: inline-flex;
   height: #{_brand-sizes(collapseTrIcon_size)}px;
   position: relative;
-  top: 2px;
+  // top: 2px;
   width: #{_brand-sizes(collapseTrIcon_size)}px;
   svg{
     height: #{_brand-sizes(collapseTrIcon_size)}px;
@@ -420,6 +420,10 @@ tbody tr {
     border: none;
     display: inline-flex;
     margin-right: #{$value}px;
+  }
+  &_wrapper{
+    align-items: center;
+    display: flex;
   }
   &[title="Expand"] {
     #{--svg-icon-stroke_blue}: _brand-colors(_light-blue);

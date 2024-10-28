@@ -11772,7 +11772,6 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   display: inline-flex;
   height: 14px;
   position: relative;
-  top: 2px;
   width: 14px;
 }
 .collapseTrIcon svg {
@@ -11784,6 +11783,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   border: none;
   display: inline-flex;
   margin-right: 10px;
+}
+.collapseTrIcon_wrapper {
+  align-items: center;
+  display: flex;
 }
 .collapseTrIcon[title=Expand] {
   --svg-icon-stroke_blue: #4A8DC6;
