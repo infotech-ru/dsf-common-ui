@@ -6867,6 +6867,7 @@ h6, .h6 {
 .highcharts-container {
   z-index: 0; /* #1072 */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: var(--color_white);
 }
 .highcharts-root {
   display: block;
