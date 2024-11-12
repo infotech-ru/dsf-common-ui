@@ -171,6 +171,12 @@
     > .dropdown-menu {
       bottom: 100%; // в 4 версии dropdown использовать нельзя
     }
+    &.dropdown-submenu{ 
+      > .dropdown-menu {
+        bottom: 0%;
+        top: auto;
+      }
+    }
   }
 }
 

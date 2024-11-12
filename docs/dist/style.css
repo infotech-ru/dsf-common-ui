@@ -6804,6 +6804,10 @@ h6, .h6 {
 .dropup.show > .dropdown-menu, .dropup.open > .dropdown-menu {
   bottom: 100%;
 }
+.dropup.show.dropdown-submenu > .dropdown-menu, .dropup.open.dropdown-submenu > .dropdown-menu {
+  bottom: 0%;
+  top: auto;
+}
 
 .dropdown-submenu_actionHover:hover > .dropdown-menu, .dropdown-submenu_actionHover:focus > .dropdown-menu {
   display: block;
