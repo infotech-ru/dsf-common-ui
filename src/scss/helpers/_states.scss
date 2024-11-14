@@ -75,11 +75,15 @@ tbody.collapse.in { display: table-row-group; }
 
 .iconModification{
   .svg--icon{ 
-  --limited-stroke-on: inherit;
-  --limited-stroke-off: transparent;
-  --svg-icon-fill: transparent;
-  --svg-icon-stroke: #333;
-  --svg-icon-stroke_blue: #0094ff;
+    --limited-stroke-on: inherit;
+    --limited-stroke-off: transparent;
+    --svg-icon-fill: transparent;
+    --svg-icon-stroke: #333;
+    --svg-icon-stroke_blue: #0094ff;
+    &.active{ 
+      --limited-stroke-on: transparent;
+      --limited-stroke-off: inherit;
+    }
   }
   &.active{ 
     .svg--icon{ 

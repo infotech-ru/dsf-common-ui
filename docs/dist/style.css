@@ -13903,6 +13903,10 @@ tbody.collapse.in {
   --svg-icon-stroke: #333;
   --svg-icon-stroke_blue: #0094ff;
 }
+.iconModification .svg--icon.active {
+  --limited-stroke-on: transparent;
+  --limited-stroke-off: inherit;
+}
 .iconModification.active .svg--icon {
   --limited-stroke-on: transparent;
   --limited-stroke-off: inherit;
