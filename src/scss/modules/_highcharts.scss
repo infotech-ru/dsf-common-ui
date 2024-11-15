@@ -22,6 +22,9 @@
     // touch-action: manipulation;
     // outline: none;
     background-color: var(--color_white);
+    .highchartsWrapper__containerTransparent &{
+      background-color: transparent;
+    }
   }
   &-root {
     display: block;
