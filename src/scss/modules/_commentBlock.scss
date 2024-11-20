@@ -300,7 +300,7 @@
     line-height: rem(14);
     padding: 10px;
     position: relative;
-    min-width: calc(55% - 11px);
+    // min-width: calc(55% - 11px);
     max-width: 100%;
     margin-top: 5px;
     word-wrap: break-word;
@@ -316,6 +316,9 @@
     // }
     &__shadow{
       box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+    }
+    &__wide{
+        min-width: calc(55% - 11px);
     }
     .user-event & {
         border-radius: 0 10px 10px 10px;

@@ -12220,7 +12220,6 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   line-height: 0.875rem;
   padding: 10px;
   position: relative;
-  min-width: calc(55% - 11px);
   max-width: 100%;
   margin-top: 5px;
   word-wrap: break-word;
@@ -12230,6 +12229,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .commentBlock_comments__shadow {
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+.commentBlock_comments__wide {
+  min-width: calc(55% - 11px);
 }
 .user-event .commentBlock_comments {
   border-radius: 0 10px 10px 10px;
