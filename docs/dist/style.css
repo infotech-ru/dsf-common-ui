@@ -11558,24 +11558,10 @@ tfoot td tr:nth-child(1) th:first-child[rowspan="3"] {
   background-color: #00000000;
 }
 
-th.table__clear,
-th.table__clear:first-child,
-td.table__clear:first-child,
-td.table__clear {
-  background-color: #00000000;
-}
-
 .table__light-yellow2 th,
 .table__light-yellow2 th:first-child,
 .table__light-yellow2 td,
 .table__light-yellow2 td:first-child {
-  background-color: #FFF6DF;
-}
-
-th.table__light-yellow2,
-th.table__light-yellow2:first-child,
-td.table__light-yellow2:first-child,
-td.table__light-yellow2 {
   background-color: #FFF6DF;
 }
 
@@ -11586,24 +11572,10 @@ td.table__light-yellow2 {
   background-color: #FCEEEE;
 }
 
-th.table__light-red,
-th.table__light-red:first-child,
-td.table__light-red:first-child,
-td.table__light-red {
-  background-color: #FCEEEE;
-}
-
 .table__red th,
 .table__red th:first-child,
 .table__red td,
 .table__red td:first-child {
-  background-color: #D9534F;
-}
-
-th.table__red,
-th.table__red:first-child,
-td.table__red:first-child,
-td.table__red {
   background-color: #D9534F;
 }
 
@@ -11614,11 +11586,8 @@ td.table__red {
   background-color: #FF9996;
 }
 
-th.table__rose,
-th.table__rose:first-child,
-td.table__rose:first-child,
-td.table__rose {
-  background-color: #FF9996;
+table[class^=bg-] td {
+  background-color: var(--bg_color);
 }
 
 tbody tr[class^=bg-] td, tbody tr[class^=bg-]:nth-of-type(2n+1) td {

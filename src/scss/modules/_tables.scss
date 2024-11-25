@@ -236,6 +236,14 @@ tfoot {
 @include table-row-variant('red', _brand-colors(_red));
 @include table-row-variant('rose', _brand-colors(_rose));
 
+table{
+  &[class^="bg-"] { 
+    td{ 
+      background-color: var(--bg_color);
+    }
+  }
+}
+
 tbody tr {
   &[class^="bg-"] { 
     &,
