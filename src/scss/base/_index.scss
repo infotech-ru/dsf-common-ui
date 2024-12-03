@@ -4,13 +4,13 @@
 /* START THE BASE STYLES                                                      */
 /*                                                                            */
 
-@import "_fonts.scss";
+@forward "_fonts";
 
-@import "_normalize.scss";
+@forward "_normalize";
 
-@import "_base.scss";
+@forward "_base";
 
-@import "_typography";
+@forward "_typography";
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE BASE STYLES                                                        */

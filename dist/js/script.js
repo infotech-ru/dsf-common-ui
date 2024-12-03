@@ -11,14 +11,14 @@ var DSFUI = (function (exports) {
           return validateInput(e.target);
         }).on('reset', 'form', function (e) {
           var $form = $(e.target),
-              $formInputs = $form.find(inputSelector);
+            $formInputs = $form.find(inputSelector);
           $formInputs.removeClass('valid').removeClass('invalid').each(function (index, input) {
             return updateInputLabel(input);
           });
           $form.find('select.initialized').each(function (index, select) {
             var $select = $(select),
-                $visibleInput = $select.siblings('input.select-dropdown'),
-                defaultValue = $select.children('[selected]').val();
+              $visibleInput = $select.siblings('input.select-dropdown'),
+              defaultValue = $select.children('[selected]').val();
             $select.val(defaultValue);
             $visibleInput.val(defaultValue);
           });
@@ -33,7 +33,6 @@ var DSFUI = (function (exports) {
           updateDropdownLabel(e.target);
         });
       }
-
       $(inputSelector).each(function (index, input) {
         return updateInputLabel(input);
       });
@@ -48,46 +47,42 @@ var DSFUI = (function (exports) {
       });
     }
     var inputTypes = ['text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'],
-        inputSelector = inputTypes.map(function (selector) {
-      return "input[type=".concat(selector, "]");
-    }).concat(['textarea']).join(','),
-        dateSelector = 'input[type="date"]',
-        dropdownSelector = 'select.js-select-formFree',
-        allDropdownSelector = '.js-allSelect-formFree select',
-        labelSelector = 'label, i';
-
+      inputSelector = inputTypes.map(function (selector) {
+        return "input[type=".concat(selector, "]");
+      }).concat(['textarea']).join(','),
+      dateSelector = 'input[type="date"]',
+      dropdownSelector = 'select.js-select-formFree',
+      allDropdownSelector = '.js-allSelect-formFree select',
+      labelSelector = 'label, i';
     function getIsValid($input) {
       var maxLength = Number($input.attr('length')) || 0;
       return $input.is(':valid') && (!maxLength || maxLength > value.length);
     }
-
     function updateInputLabel(input) {
       var $this = $(input),
-          $labelAndIcon = $this.siblings(labelSelector),
-          isActive = $this.val().length > 0 || $this.is(':focus') || $this.attr('placeholder') != null;
+        $labelAndIcon = $this.siblings(labelSelector),
+        isActive = $this.val().length > 0 || $this.is(':focus') || $this.attr('placeholder') != null;
       $labelAndIcon.toggleClass('active', isActive);
     }
-
     function validateInput(input) {
       var $this = $(input);
-
       if ($this.hasClass('validate')) {
         var hasValue = $this.val().length > 0,
-            isValid = getIsValid($this);
+          isValid = getIsValid($this);
         $this.toggleClass('valid', hasValue && isValid).toggleClass('invalid', !isValid);
       }
     }
-
     function updateDropdownLabel(select) {
       var $select = $(select),
-          isActive = select.value.length > 0 || $select.find('option:selected:not(.bs-title-option)').length > 0;
+        isActive = select.value.length > 0 || $select.find('option:selected:not(.bs-title-option)').length > 0;
       $select.closest('div').siblings(labelSelector).toggleClass('active', isActive);
-    } // TODO: сбрасывать значение при нажатие удаления значения.
+    }
+
+    // TODO: сбрасывать значение при нажатие удаления значения.
     // $(el).val('default').selectpicker("refresh");
 
-    function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
-    function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { babelHelpers.defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+    function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+    function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { babelHelpers.defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
     function itemActionMenu() {
       $('.js-actionMenu').popover({
         container: 'body',
@@ -109,15 +104,15 @@ var DSFUI = (function (exports) {
     function CopyToClipboard() {
       function fallbackCopyTextToClipboard(text) {
         var textArea = document.createElement("textarea");
-        textArea.value = text; // Avoid scrolling to bottom
+        textArea.value = text;
 
+        // Avoid scrolling to bottom
         textArea.style.top = "0";
         textArea.style.left = "0";
         textArea.style.position = "fixed";
         document.body.appendChild(textArea);
         textArea.focus();
         textArea.select();
-
         try {
           var successful = document.execCommand('копия', 'копировать', 'copy');
           var msg = successful ? 'successful' : 'unsuccessful';
@@ -125,31 +120,25 @@ var DSFUI = (function (exports) {
         } catch (err) {
           console.error('Fallback: Oops, unable to copy', err);
         }
-
         document.body.removeChild(textArea);
       }
-
       var allCopyToClipboard = document.querySelectorAll(".js-copyToClipboard");
-
-      var _loop = function _loop(i) {
+      var _loop = function _loop() {
         var itemCopyToClipboard = allCopyToClipboard[i];
         itemCopyToClipboard.addEventListener('click', function (e) {
           var clipText = itemCopyToClipboard.getAttribute('data-clipboard-text');
-
           if (!navigator.clipboard) {
             fallbackCopyTextToClipboard(clipText);
             return;
           }
-
           navigator.clipboard.writeText(clipText).then(function () {
             console.log('Async: Copying to clipboard was successful!');
             console.log(clipText);
           });
         });
       };
-
       for (var i = 0; i < allCopyToClipboard.length; i++) {
-        _loop(i);
+        _loop();
       }
     }
     function initTreeTable(options) {
@@ -646,10 +635,8 @@ var DSFUI = (function (exports) {
       };
       childrens.forEach(function (children) {
         var iconKey = children.querySelector('.js-icon-box');
-
         if (iconKey) {
           var classes = children.classList;
-
           for (var key in itemsObject) {
             if (itemsObject.hasOwnProperty(key)) {
               if (classes.contains(key)) {
@@ -682,18 +669,18 @@ var DSFUI = (function (exports) {
         return;
       });
       inputField.addEventListener('input', function () {
-        var inputValue = inputField.value.toLowerCase(); // Hide all children initially
-
+        var inputValue = inputField.value.toLowerCase();
+        // Hide all children initially
         childrens.forEach(function (child) {
           return child.style.display = 'none';
-        }); // Filter and display matching children
+        });
 
+        // Filter and display matching children
         for (var key in itemsObject) {
           if (itemsObject[key].some(function (value) {
             return value.includes(inputValue);
           })) {
             var matchingChild = parent.querySelector(".".concat(key));
-
             if (matchingChild) {
               matchingChild.style.display = 'block';
             }
@@ -731,12 +718,10 @@ var DSFUI = (function (exports) {
 
     function AutoresizeTextarea() {
       var tx = document.getElementsByClassName("js-formControl__resize");
-
       for (var i = 0; i < tx.length; i++) {
         tx[i].setAttribute("style", "height:" + tx[i].scrollHeight + "px;overflow-y:hidden;");
         tx[i].addEventListener("input", OnInput, false);
       }
-
       function OnInput() {
         this.style.height = 0;
         this.style.height = this.scrollHeight + "px";

@@ -174,6 +174,13 @@ module.exports = function (grunt) {
                 }
             },
         },
+        watch: {
+            options: {livereload: false, spawn: false},
+            styles: {
+                files: ["./src/scss/**/*.scss"],
+                tasks: ["sass"],
+            },
+        },
         rollup: {
             options: {
                 format: "iife",
@@ -226,9 +233,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-sass");
     grunt.loadNpmTasks("grunt-rollup");
+    grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.registerTask('copy-default', ['copy:svg_sprite__template', 'copy:svg_sprite__symbolSpriteForDocs', 'copy:js', 'copy:sass_var', 'copy:sass_func']);
     grunt.registerTask("default", ["rollup", "svg_sprite", "copy-default", "sass", "copy:jekyll"]);
     // grunt.registerTask("default", ["rollup", "svg_sprite", "copy-default", "sass"]);
     grunt.registerTask("tmp", ["copy:jekyll"]);
+    grunt.registerTask('dev', ['default', 'watch']);
 
 };

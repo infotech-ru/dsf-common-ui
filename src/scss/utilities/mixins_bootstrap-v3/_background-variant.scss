@@ -1,4 +1,4 @@
-// Contextual backgrounds
+@use 'sass:color';
 
 // [converter] $parent hack
 @mixin bg-variant($parent, $color) {
@@ -7,6 +7,6 @@
   }
   a#{$parent}:hover,
   a#{$parent}:focus {
-    background-color: darken($color, 10%);
+    background-color: color.adjust(rgba($color, 1), $lightness: -10%);
   }
 }

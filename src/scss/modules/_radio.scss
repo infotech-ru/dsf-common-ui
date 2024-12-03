@@ -4,6 +4,12 @@
 /* path: dsf-common-ui/src/scss/modules/_radio.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/mixins/svg-icon' as *;
+@use '../utilities/variables/var-bootstrap-v3' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-lineHeights' as *;
 
 .radioCheck{
     padding-left: 0px;
@@ -68,15 +74,15 @@
 }
 
 .radio-item {
-    padding-left: rem(_brand-sizes(radioItem_size) + _brand-sizes(radioItemBorder_size) + _brand-sizes(radioItem_paddingText));
+    padding-left: rem(brandSizes(radioItem_size) + brandSizes(radioItemBorder_size) + brandSizes(radioItem_paddingText));
     position: relative;
     &.checked label.radio,
     label.radio.checked,
     input[type=radio]:checked + label.radio{
         font-weight: bold;
         &:before {
-            background-color: _brand-palette(radioItem-active_bg);
-            border-color: _brand-palette(radioItem-active_border);
+            background-color: brandPalette(radioItem-active_bg);
+            border-color: brandPalette(radioItem-active_border);
         }
         &:after{
             display: block;
@@ -97,50 +103,50 @@
 
         &[disabled] + label.radio,
         .disabled & + label.radio {
-            color: _brand-palette(radioItemDisabled_color);
+            color: brandPalette(radioItemDisabled_color);
             cursor: $cursor-disabled;
             pointer-events: none;
         }
     }
     .dublicate & label.radio,
     &.dublicate label.radio{
-        color: _brand-palette(radioItemDisabled_color);
+        color: brandPalette(radioItemDisabled_color);
         text-decoration: line-through;
     }
     label{
         &.radio {
             cursor: pointer;
             font-weight: normal;
-            height: rem(_size(lihe-height));
-            line-height: rem(_size(lihe-height));
+            height: rem(lineHeight(radioItemLabel));
+            line-height: rem(lineHeight(radioItemLabel));
             margin-bottom: 0;
             padding-top: 0;
             padding-left: 0;
             position: relative;
             &:before {
                 border-radius: 100%;
-                background-color: _brand-palette(radioItem_bg);
-                border: rem(_brand-sizes(radioItemBorder_size)) solid _brand-palette(radioItem_border);
+                background-color: brandPalette(radioItem_bg);
+                border: rem(brandSizes(radioItemBorder_size)) solid brandPalette(radioItem_border);
                 content: " ";
                 display: block;
-                height: rem(_brand-sizes(radioItem_size));
-                left: rem(-(_brand-sizes(radioItem_size) + _brand-sizes(radioItemBorder_size) + _brand-sizes(radioItem_paddingText)));
-                margin-top: rem(-(_brand-sizes(radioItem_size) * 0.5));
+                height: rem(brandSizes(radioItem_size));
+                left: rem(-(brandSizes(radioItem_size) + brandSizes(radioItemBorder_size) + brandSizes(radioItem_paddingText)));
+                margin-top: rem(-(brandSizes(radioItem_size) * 0.5));
                 position: absolute;
                 top: 50%;
-                width: rem(_brand-sizes(radioItem_size));
+                width: rem(brandSizes(radioItem_size));
             }
             &:after{
-                background-color: _brand-palette(radioItem-active_border);
+                background-color: brandPalette(radioItem-active_border);
                 border-radius: 100%;
                 content: " ";
                 display: none;
-                height: rem(_brand-sizes(radioItemDot_size));
-                left: rem(-(_brand-sizes(radioItem_paddingText) + _brand-sizes(radioItemBorder_size) + _brand-sizes(radioItemDot_size) + ((_brand-sizes(radioItem_size) - _brand-sizes(radioItemDot_size)) * 0.5)));
+                height: rem(brandSizes(radioItemDot_size));
+                left: rem(-(brandSizes(radioItem_paddingText) + brandSizes(radioItemBorder_size) + brandSizes(radioItemDot_size) + ((brandSizes(radioItem_size) - brandSizes(radioItemDot_size)) * 0.5)));
                 position: absolute;
                 top: 50%;
-                margin-top: rem(-(_brand-sizes(radioItemDot_size) * 0.5));
-                width: rem(_brand-sizes(radioItemDot_size));
+                margin-top: rem(-(brandSizes(radioItemDot_size) * 0.5));
+                width: rem(brandSizes(radioItemDot_size));
             }
         }
     }

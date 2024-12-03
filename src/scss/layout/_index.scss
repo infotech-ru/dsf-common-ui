@@ -4,17 +4,17 @@
 /* START THE LAYOUT STYLES                                                    */
 /*                                                                            */
 
-@import "_grid";
+@forward "_grid";
 
-@import "_header";
+@forward "_header";
 
-@import "_footer";
+@forward "_footer";
 
-@import "_headerMenu";
+@forward "_headerMenu";
 
-@import "_pageHeader";
+@forward "_pageHeader";
 
-@import "_single";
+@forward "_single";
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE LAYOUT STYLES                                                      */

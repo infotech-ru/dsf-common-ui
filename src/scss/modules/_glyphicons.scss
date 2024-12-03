@@ -4,6 +4,7 @@
 /* path: dsf-common-ui/src/scss/modules/_glyphicon.scss                       */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_fonts' as *;
 
 .glyphicon {
   // display: inline-block;

@@ -3,6 +3,9 @@
 // @param {Number} $depth - depth level (between 1 and 5)
 // @requires {function} top-shadow
 // @requires {function} bottom-shadow
+
+@use '../functions/func_shadows' as *;
+
 @mixin card($depth) {
   @if $depth < 1 {
     box-shadow: none;

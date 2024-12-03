@@ -4,18 +4,21 @@
 /* path: dsf-common-ui/src/scss/modules/_dialog.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-sizes' as *;
 
 .ui-dialog {
   background-clip: padding-box;
   // background-color: #fff;
-  background-color: _brand-colors(_white);
+  background-color: brandColors(_white);
   border: none;
   border-radius: 0px;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
   outline: 0;
   z-index: 1500;
   &-content{
-    background-color: _brand-colors(_white);
+    background-color: brandColors(_white);
   }
   .css-whatsapp-wrapper &{
     display: flex;
@@ -25,12 +28,12 @@
 }
 .ui-widget-header{ 
   align-items: center;
-  background-color: _brand-colors(_white);
+  background-color: brandColors(_white);
   display: flex;
   justify-content: flex-start;
   height: 52px;
   line-height: normal;
-  padding: rem(_brand-sizes(modalSidebar_padding));
+  padding: rem(brandSizes(modalSidebar_padding));
   position: relative;
 }
 .ui-draggable-handle{

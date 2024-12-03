@@ -4,9 +4,9 @@
 /* START THE CONTENT STYLES                                                   */
 /*                                                                            */
 
-@import "_authorization";
+@forward "_authorization";
 
-@import "_errorPage";
+@forward "_errorPage";
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /* END THE CONTENT STYLES                                                     */

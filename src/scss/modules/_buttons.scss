@@ -4,21 +4,30 @@
 /* path: dsf-common-ui/src/scss/modules/_buttons.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use 'sass:map';
+
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-fonts' as *;
+@use '../utilities/variables/var-lineHeights' as *;
+@use '../utilities/mixins_bootstrap-v3/vendor-prefixes' as *;
+
 %btn {
   background-image: none;
   border-style: solid;
   border-color: transparent;
-  border-width: #{_brand-sizes(btn_borderWidth)}px;
-  border-radius: #{_brand-sizes(btn_borderRadius)}px;
+  border-width: #{brandSizes(btn_borderWidth)}px;
+  border-radius: #{brandSizes(btn_borderRadius)}px;
   cursor: pointer;
   display: inline-block;
-  font-size: rem(_fontSizes(btn));
-  font-weight: _fontWeight(btn);
-  line-height: rem(_lineHeight(btn));
+  font-size: rem(fontSizes(btn));
+  font-weight: fontWeight(btn);
+  line-height: rem(lineHeight(btn));
   // height: min-content; не работает в сафари с <input>
   height: auto;
   margin-bottom: 0; // For input.btn
-  padding: 0 #{_brand-sizes(btn_paddingX)}px;
+  padding: 0 #{brandSizes(btn_paddingX)}px;
   text-align: center;
   touch-action: manipulation;
   vertical-align: middle;
@@ -46,8 +55,8 @@
   fieldset[disabled] & {
     // cursor: none;
     cursor: not-allowed;
-    @include opacity(.65);
-    @include box-shadow(none);
+    opacity: .65;
+    box-shadow: none;
   }
 
   .badge {
@@ -90,74 +99,74 @@
 
 @each $btn in default, primary, success, danger, warning, info, 'grey', 'lightGrey' {
   .btn-#{$btn}{
-    @if (_brand-btn(#{$btn}_bg) == _brand-btn(#{$btn}-end_bg)) {
-      background-color: _brand-btn(#{$btn}_bg);
+    @if (brandBtn(#{$btn}_bg) == brandBtn(#{$btn}-end_bg)) {
+      background-color: brandBtn(#{$btn}_bg);
       background-image: none;
     }
     @else{
-      background-color: _brand-btn(#{$btn}_bg);
-      background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
-      background-image: linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
+      background-color: brandBtn(#{$btn}_bg);
+      background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
+      background-image: linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
     }
-    // background-color: _brand-btn(#{$btn}_bg);
-    // background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
-    // background-image: linear-gradient(_brand-btn(#{$btn}_bg) 0%, _brand-btn(#{$btn}-end_bg) 100%);
-    border-color: _brand-btn(#{$btn}_border);
-    color: _brand-btn(#{$btn}_color);
-    @if (_brand-btn(#{$btn}_bg) == _brand-btn(#{$btn}-end_bg)) {
-      #{--btn_bg}: _brand-btn(#{$btn}_bg);
+    // background-color: brandBtn(#{$btn}_bg);
+    // background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
+    // background-image: linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
+    border-color: brandBtn(#{$btn}_border);
+    color: brandBtn(#{$btn}_color);
+    @if (brandBtn(#{$btn}_bg) == brandBtn(#{$btn}-end_bg)) {
+      #{--btn_bg}: brandBtn(#{$btn}_bg);
     }
     @else{ 
-      #{--btn_bg}: _brand-btn(#{$btn}_bg);
-      #{--btn_bgEnd}: _brand-btn(#{$btn}-end_bg);
+      #{--btn_bg}: brandBtn(#{$btn}_bg);
+      #{--btn_bgEnd}: brandBtn(#{$btn}-end_bg);
     }
-    @if (_brand-btn(#{$btn}_bg__hover) == _brand-btn(#{$btn}-end_bg__hover)) {
-      #{--btn_bg__hover}: _brand-btn(#{$btn}_bg__hover);
+    @if (brandBtn(#{$btn}_bg__hover) == brandBtn(#{$btn}-end_bg__hover)) {
+      #{--btn_bg__hover}: brandBtn(#{$btn}_bg__hover);
     }
     @else{
-      #{--btn_bgEnd__hover}: _brand-btn(#{$btn}-end_bg__hover);
-      #{--btn_bg__hover}: _brand-btn(#{$btn}_bg__hover);
+      #{--btn_bgEnd__hover}: brandBtn(#{$btn}-end_bg__hover);
+      #{--btn_bg__hover}: brandBtn(#{$btn}_bg__hover);
     }
-    #{--borderColor__hover}: _brand-btn(#{$btn}_border__hover);
-    #{--btn_svg}: _brand-btn(#{$btn}_svg);
-    #{--btn_svg_blue}: _brand-btn(#{$btn}_svg_blue);
-    #{--btn_svg__hover}: _brand-btn(#{$btn}_svg__hover);
-    #{--btn_svg_blue__hover}: _brand-btn(#{$btn}_svg_blue__hover);
+    #{--borderColor__hover}: brandBtn(#{$btn}_border__hover);
+    #{--btn_svg}: brandBtn(#{$btn}_svg);
+    #{--btn_svg_blue}: brandBtn(#{$btn}_svg_blue);
+    #{--btn_svg__hover}: brandBtn(#{$btn}_svg__hover);
+    #{--btn_svg_blue__hover}: brandBtn(#{$btn}_svg_blue__hover);
     @extend %btn;
     &:hover,
     &:focus-visible,
     &:active,
     &.active,
     &.focus {
-      @if (_brand-btn(#{$btn}_bg__hover) == _brand-btn(#{$btn}-end_bg__hover)) {
-        background-color: _brand-btn(#{$btn}_bg__hover);
+      @if (brandBtn(#{$btn}_bg__hover) == brandBtn(#{$btn}-end_bg__hover)) {
+        background-color: brandBtn(#{$btn}_bg__hover);
         background-image: none;
       }
       @else{
-        background-color: _brand-btn(#{$btn}_bg__hover);
-        background-image: -webkit-linear-gradient(_brand-btn(#{$btn}_bg__hover) 0%, _brand-btn(#{$btn}-end_bg__hover) 100%);
-        background-image: linear-gradient(_brand-btn(#{$btn}_bg__hover) 0%, _brand-btn(#{$btn}-end_bg__hover) 100%);
+        background-color: brandBtn(#{$btn}_bg__hover);
+        background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg__hover) 0%, brandBtn(#{$btn}-end_bg__hover) 100%);
+        background-image: linear-gradient(brandBtn(#{$btn}_bg__hover) 0%, brandBtn(#{$btn}-end_bg__hover) 100%);
       }
       background-position: inherit;
-      border-color: _brand-btn(#{$btn}_border__hover);
-      color: _brand-btn(#{$btn}_color__hover);
+      border-color: brandBtn(#{$btn}_border__hover);
+      color: brandBtn(#{$btn}_color__hover);
       .svg--icon {
         svg {
-          fill: _brand-btn(#{$btn}_svg);
-          #{--svg-icon-fill}: _brand-btn(#{$btn}_svg__hover);
-          #{--svg-icon-stroke}: _brand-btn(#{$btn}_svg__hover);
-          #{--svg-icon-fill_blue}: _brand-btn(#{$btn}_svg_blue__hover);
-          #{--svg-icon-stroke_blue}: _brand-btn(#{$btn}_svg_blue__hover);
+          fill: brandBtn(#{$btn}_svg);
+          #{--svg-icon-fill}: brandBtn(#{$btn}_svg__hover);
+          #{--svg-icon-stroke}: brandBtn(#{$btn}_svg__hover);
+          #{--svg-icon-fill_blue}: brandBtn(#{$btn}_svg_blue__hover);
+          #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_svg_blue__hover);
         }
       }
     }
     .svg--icon{
       svg{
-        fill: _brand-btn(#{$btn}_svg);
-        #{--svg-icon-fill}: _brand-btn(#{$btn}_svg);
-        #{--svg-icon-stroke}: _brand-btn(#{$btn}_svg);
-        #{--svg-icon-fill_blue}: _brand-btn(#{$btn}_svg_blue);
-        #{--svg-icon-stroke_blue}: _brand-btn(#{$btn}_svg_blue);
+        fill: brandBtn(#{$btn}_svg);
+        #{--svg-icon-fill}: brandBtn(#{$btn}_svg);
+        #{--svg-icon-stroke}: brandBtn(#{$btn}_svg);
+        #{--svg-icon-fill_blue}: brandBtn(#{$btn}_svg_blue);
+        #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_svg_blue);
       }
     }
   }
@@ -180,15 +189,15 @@
   .btn-#{$btn}__outline {
     background-color: transparent;
     background-image: none;
-    border-color: _brand-btn(#{$btn}_outline);
-    color: _brand-btn(#{$btn}_outline);
+    border-color: brandBtn(#{$btn}_outline);
+    color: brandBtn(#{$btn}_outline);
     @extend %btn;
     &:hover,
     &:focus-visible,
     &:active,
     &.active,
     &.focus {
-      background-color: _brand-btn(#{$btn}_outline__hover);
+      background-color: brandBtn(#{$btn}_outline__hover);
       background-image: none;
       background-position: inherit;
       color: #fff;
@@ -205,11 +214,11 @@
 
     .svg--icon {
       svg {
-        #{--svg-icon-fill_blue}: _brand-btn(#{$btn}_outline);
-        #{--svg-icon-stroke_blue}: _brand-btn(#{$btn}_outline);
-        #{--svg-icon-fill}: _brand-btn(#{$btn}_outline);
-        #{--svg-icon-stroke}: _brand-btn(#{$btn}_outline);
-        fill: _brand-btn(#{$btn}_outline);
+        #{--svg-icon-fill_blue}: brandBtn(#{$btn}_outline);
+        #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_outline);
+        #{--svg-icon-fill}: brandBtn(#{$btn}_outline);
+        #{--svg-icon-stroke}: brandBtn(#{$btn}_outline);
+        fill: brandBtn(#{$btn}_outline);
       }
     }
   }
@@ -226,24 +235,24 @@ a.btn {
 // .btn-sm,
 // .btn-md,
 // .btn-lg{
-//   font-size: rem(_fontSizes(btn));
-//   line-height: rem(_lineHeight(btn));
-//   padding: 0 #{_brand-sizes(btn_paddingX)}px;
+//   font-size: rem(fontSizes(btn));
+//   line-height: rem(lineHeight(btn));
+//   padding: 0 #{brandSizes(btn_paddingX)}px;
 // }
 
 .btn-xs,
 .btn-small {
   border-radius: 1px;
-  font-size: rem(_fontSizes(btnXs));
-  line-height: rem(_lineHeight(btnXs));
-  padding: #{_brand-sizes(btnXs-paddingY)}px #{_brand-sizes(btnXs-paddingX)}px;
+  font-size: rem(fontSizes(btnXs));
+  line-height: rem(lineHeight(btnXs));
+  padding: #{brandSizes(btnXs-paddingY)}px #{brandSizes(btnXs-paddingX)}px;
 }
 
 .btn-large {
   border-radius: 1px;
-  font-size: rem(_fontSizes(btnLg));
-  line-height: rem(_lineHeight(btnLg));
-  padding: #{_brand-sizes(btnLg-paddingY)}px #{_brand-sizes(btnLg-paddingX)}px;
+  font-size: rem(fontSizes(btnLg));
+  line-height: rem(lineHeight(btnLg));
+  padding: #{brandSizes(btnLg-paddingY)}px #{brandSizes(btnLg-paddingX)}px;
 }
 
 
@@ -252,9 +261,9 @@ a.btn {
   background-image: none;
   border-radius: 0;
   box-shadow: none;
-  color: _brand-palette(link_color);
+  color: brandPalette(link_color);
   cursor: pointer;
-  font-weight: _fontWeight(btn);
+  font-weight: fontWeight(btn);
   @extend %btn;
   &,
   &:hover,
@@ -271,23 +280,23 @@ a.btn {
   }
   &:hover,
   &:focus-visible {
-    color: _brand-palette(linkHover_color);
+    color: brandPalette(linkHover_color);
     text-decoration: none;
   }
   &[disabled],
   fieldset[disabled] & {
     &:hover,
     &:focus-visible {
-      color: _brand-palette(linkDisabled_color);
+      color: brandPalette(linkDisabled_color);
       text-decoration: none;
     }
   }
   .glyphicons-bin{
-    #{--svg-icon-fill}: _brand-colors(_red);
+    #{--svg-icon-fill}: brandColors(_red);
   }
   .svg--icon {
-    #{--svg-icon-fill}: _brand-palette(btnIconSvg_color);
-    #{--svg-icon-stroke}: _brand-palette(btnIconSvg_color);
+    #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
   }
 }
 
@@ -296,29 +305,29 @@ a.btn {
   background-image: none;
   box-shadow: none;
   border: none;
-  color: map-get($brand-namecolors, 'default');
+  color: map.get($brand-namecolors, 'default');
   cursor: pointer;
   display: inline-block;
   outline: none;
   padding: 0;
   text-align: left;
   .glyphicon {
-    color: _brand-palette(btnIconSvg_color);
-    font-size: rem(_brand-sizes(btnIcon_height));
-    height: rem(_brand-sizes(btnIcon_height));
+    color: brandPalette(btnIconSvg_color);
+    font-size: rem(brandSizes(btnIcon_height));
+    height: rem(brandSizes(btnIcon_height));
     top: 0;
     vertical-align: middle;
   }
   .svg--icon {
-    height: rem(_brand-sizes(btnIcon_height));
+    height: rem(brandSizes(btnIcon_height));
     vertical-align: middle;
     svg{
-      height: rem(_brand-sizes(btnIcon_height));
+      height: rem(brandSizes(btnIcon_height));
     }
-    #{--svg-icon-fill}: _brand-palette(btnIconSvg_color);
-    #{--svg-icon-fill_blue}: _brand-palette(btnIconSvg_color);
-    #{--svg-icon-stroke_blue}: _brand-palette(btnIconSvg_color);
-    #{--svg-icon-stroke}: _brand-palette(btnIconSvg_color);
+    #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
   }
   &__h12{
     .glyphicon {
@@ -399,10 +408,10 @@ a.btn {
     fill: none;
   }
   .fill{
-    fill: _brand-palette(btnIconSvg_color);
+    fill: brandPalette(btnIconSvg_color);
   }
   .stroke{
-    stroke: _brand-palette(btnIconSvg_color);
+    stroke: brandPalette(btnIconSvg_color);
   }
   &:hover,
   &:focus {
@@ -415,10 +424,10 @@ a.btn {
   .control-label + & {
     margin-left: 4px;
     position: relative;
-    top: -#{calc(_brand-sizes(controlLabel_mb) * .5)}px;
+    top: -#{calc(brandSizes(controlLabel_mb) * .5)}px;
   }
   .glyphicons-bin{
-    #{--svg-icon-fill}: _brand-colors(_red);
+    #{--svg-icon-fill}: brandColors(_red);
   }
 }
 
@@ -433,7 +442,7 @@ a.btn {
 }
 
 .btn__abs{
-  margin-top: -#{calc((_brand-sizes(btn_borderWidth) + _lineHeight(btn)) * .5)}px;
+  margin-top: -#{calc((brandSizes(btn_borderWidth) + lineHeight(btn)) * .5)}px;
   position: absolute;
   top: 50%;
 }
@@ -522,15 +531,15 @@ input[type="button"] {
     height: rem(20);
     vertical-align: middle;
     width: rem(20);
-    #{--svg-icon-fill}: _brand-palette(btnIconSvg_color);
-    #{--svg-icon-fill_blue}: _brand-palette(btnIconSvg_color);
-    #{--svg-icon-stroke_blue}: _brand-palette(btnIconSvg_color);
-    #{--svg-icon-stroke}: _brand-palette(btnIconSvg_color);
+    #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
   }
   .fill{
-    fill: _brand-palette(btnIconSvg_color);
+    fill: brandPalette(btnIconSvg_color);
   }
   .stroke{
-    stroke: _brand-palette(btnIconSvg_color);
+    stroke: brandPalette(btnIconSvg_color);
   }
 }

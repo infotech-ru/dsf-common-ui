@@ -4,8 +4,11 @@
 /* path: dsf-common-ui/src/scss/modules/_heading.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
+
 .page-title {
-    color: _brand-palette(pageHeader_color);
+    color: brandPalette(pageHeader_color);
     display: flex;
     justify-content: space-between;
     font-size: rem(18);
@@ -14,7 +17,7 @@
     // padding-bottom: 10px;
     line-height: 21px;
     margin-top: 0;
-    text-shadow: 0px 1px 0px #FFFFFF;
+    text-shadow: 0px 1px 0px brandColors(_white);
     height:auto;
     // min-height: 40px;
 
@@ -36,7 +39,7 @@
         padding: 0;
 
         p {
-            text-shadow: 0 1px 0 #fff;
+            text-shadow: 0 1px 0 brandColors(_white);
             margin: 0 {
                 right: 10px;
             }
@@ -47,6 +50,6 @@
         border-radius: 2px;
         padding: 0 4px;
         text-transform: uppercase;
-        color: #fff;
+        color: brandColors(_white);
     }
 }

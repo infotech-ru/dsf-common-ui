@@ -4,10 +4,14 @@
 /* path: dsf-common-ui/src/scss/modules/_unityBlock.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use 'sass:color';
+
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
 
 .unityBlock{
-  background-color: _brand-colors(_white);
-  box-shadow: 0px 1px 0px transparentize(_brand-colors(_black), 0.8);
+  background-color: brandColors(_white);
+  box-shadow: 0px 1px 0px color.scale(rgba(brandColors(_black), 1), $alpha: -80%, $space: rgb);
   padding: 10px;
   &__nobg{
     background-color: transparent;
@@ -29,7 +33,7 @@
       }
     }
     &Title{
-      color: _brand-palette(joinBlockTitle_color);
+      color: brandPalette(joinBlockTitle_color);
       white-space: nowrap;
     }
     &SvgTitle{

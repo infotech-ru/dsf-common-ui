@@ -4,11 +4,17 @@
 /* path: dsf-common-ui/src/scss/modules/_labels.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/functions/func_maps' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-placeholder' as *;
+
 %label{
   align-items: center;
   border-radius: 2px;
-  background-color: var(--label_bgc, _brand-colors(_transparent));
-  color: var(--label_color, _brand-colors(_white));
+  background-color: var(--label_bgc, brandColors(_transparent));
+  color: var(--label_color, brandColors(_white));
   display: inline-flex;
   font-size: rem(10);
   font-weight: 700;
@@ -84,7 +90,7 @@
 a.label {
   &:hover,
   &:focus {
-    color: $label-link-hover-color;
+    color: brandColors(_white);
     text-decoration: none;
     cursor: pointer;
   }

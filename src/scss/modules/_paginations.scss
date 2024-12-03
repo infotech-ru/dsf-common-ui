@@ -4,6 +4,9 @@
 /* path: dsf-common-ui/src/scss/modules/_paginations.scss                     */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-sizes' as *;
 
 .pagination {
   border-radius: 0;
@@ -12,24 +15,24 @@
   list-style-type: none;
   margin: rem(10) 0;
   >li {
-    margin: 0 rem(calc(_brand-sizes(paginationItem_margin) * 0.5));
+    margin: 0 rem(calc(brandSizes(paginationItem_margin) * 0.5));
     // display: inline; // Remove list-style and block-level defaults
     >a,
     >span {
       align-items: center;
       border: none;
-      border-radius: _brand-sizes(paginationItem_borderRadius);
-      background-color: _brand-palette(pagination_bgc);
-      color: _brand-palette(pagination_color);
+      border-radius: brandSizes(paginationItem_borderRadius);
+      background-color: brandPalette(pagination_bgc);
+      color: brandPalette(pagination_color);
       cursor: pointer;
       display: inline-flex;
       font-size: fontSizes(pagination);
       justify-content: center;
-      height: rem(_brand-sizes(paginationItem_height));
-      line-height: rem(_brand-sizes(paginationItem_height));
+      height: rem(brandSizes(paginationItem_height));
+      line-height: rem(brandSizes(paginationItem_height));
       margin: 0;
-      min-width: rem(_brand-sizes(paginationItem_width));
-      padding: 0 rem(_brand-sizes(paginationItem_paddingX));
+      min-width: rem(brandSizes(paginationItem_width));
+      padding: 0 rem(brandSizes(paginationItem_paddingX));
       position: relative;
       // float: left; // Collapse white-space
       // margin-left: -1px;
@@ -37,8 +40,8 @@
 
       &:hover,
       &:focus {
-        background-color: _brand-palette(pagination_bgc);
-        color: _brand-palette(pagination_color);
+        background-color: brandPalette(pagination_bgc);
+        color: brandPalette(pagination_color);
         outline: none;
         z-index: 2;
       }
@@ -57,10 +60,10 @@
   .bicolors-arrow_left_double__24vb,
   .bicolors-arrow_right_double__24vb,
   .bicolors-arrow_right__24vb {
-    #{--svg-icon-fill}: _brand-palette(pagination-svg_color);
-    #{--svg-icon-fill_blue}: _brand-palette(pagination-svg_color);
-    #{--svg-icon-stroke}: _brand-palette(pagination-svg_color);
-    #{--svg-icon-stroke_blue}: _brand-palette(pagination-svg_color);
+    #{--svg-icon-fill}: brandPalette(pagination-svg_color);
+    #{--svg-icon-fill_blue}: brandPalette(pagination-svg_color);
+    #{--svg-icon-stroke}: brandPalette(pagination-svg_color);
+    #{--svg-icon-stroke_blue}: brandPalette(pagination-svg_color);
   }
   >.active>a,
   >.active>span {
@@ -68,9 +71,9 @@
     &,
     &:hover,
     &:focus {
-      background-color: _brand-palette(pagination-active_bgc);
+      background-color: brandPalette(pagination-active_bgc);
       border-color: transparent;
-      color: _brand-palette(pagination-active_color);
+      color: brandPalette(pagination-active_color);
       cursor: default;
       outline: none;
       z-index: 3;
@@ -84,8 +87,8 @@
     >a,
     >a:hover,
     >a:focus {
-      background-color: _brand-palette(pagination-disable_bgc);
-      color: _brand-palette(pagination-disable_color);
+      background-color: brandPalette(pagination-disable_bgc);
+      color: brandPalette(pagination-disable_color);
       cursor: not-allowed;
     }
     .bicolors-arrow_left__24vb,
@@ -93,10 +96,10 @@
     .bicolors-arrow_right_double__24vb,
     .bicolors-arrow_right__24vb {
       // opacity: 0.2;
-      #{--svg-icon-fill}: _brand-palette(pagination-svg-disable_color);
-      #{--svg-icon-fill_blue}: _brand-palette(pagination-svg-disable_color);
-      #{--svg-icon-stroke}: _brand-palette(pagination-svg-disable_color);
-      #{--svg-icon-stroke_blue}: _brand-palette(pagination-svg-disable_color);
+      #{--svg-icon-fill}: brandPalette(pagination-svg-disable_color);
+      #{--svg-icon-fill_blue}: brandPalette(pagination-svg-disable_color);
+      #{--svg-icon-stroke}: brandPalette(pagination-svg-disable_color);
+      #{--svg-icon-stroke_blue}: brandPalette(pagination-svg-disable_color);
     }
   }
   .bicolors-arrow_left__24vb,

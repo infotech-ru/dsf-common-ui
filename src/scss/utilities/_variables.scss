@@ -6,20 +6,18 @@
 //* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ *//
 
 // ------------------------------------------------------ Variables bootstrap //
-@import "mixins/_assert";
-@import "variables/_var-bootstrap-v3";
-@import "variables/_var-bootstrap-v4";
-@import "variables/_var-bootstrapBool";
-@import "variables/_var-bootstrapColors";
-@import "variables/_var-bootstrapGrid";
-@import "variables/_var-bootstrapSizes";
-
+@use "../variables/_var-bootstrap-v3" as *;
+@use "../variables/_var-bootstrap-v4" as *;
+@use "../variables/_var-bootstrapBool" as *;
+@use "../variables/_var-bootstrapColors" as *;
+@use "../variables/_var-bootstrapSizes" as *;
 // ---------------------------------------------------------------- Variables //
-@import "variables/_var-colors";
-@import "variables/_var-fonts";
-@import "variables/_var-paths";
-@import "variables/_var-sizes";
-@import "variables/_var-lineHeights";
-@import "variables/_var-zindex";
+@use "../variables/_var-colors" as *;
+@use "../variables/_var-fonts" as *;
+@use "../variables/_var-paths" as *;
+@use "../variables/_var-sizes" as *;
+@use "../variables/_var-lineHeights" as *;
+@use "../variables/_var-zindex" as *;
+@use "../variables/_var-cursor" as *;
 
-@import "variables/_var-placeholder";
+@use "../variables/_var-placeholder" as *;

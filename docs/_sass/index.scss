@@ -1,13 +1,29 @@
-@import "./src/scss/utilities";
 
-@import "_doc_variables";
+@use  "../../src/scss/utilities/functions" as *;
+@use "../../src/scss/utilities/mixins" as *;
 
-@import "./src/scss/base";
 
-@import "./src/scss/layout";
+@use "../../src/scss/utilities/variables/_var-bootstrap-v3" as *;
+@use "../../src/scss/utilities/variables/_var-bootstrap-v4" as *;
+@use "../../src/scss/utilities/variables/_var-bootstrapBool" as *;
+@use "../../src/scss/utilities/variables/_var-bootstrapColors" as *;
+@use "../../src/scss/utilities/variables/_var-bootstrapSizes" as *;
 
-@import "./src/scss/modules";
+@use "../../src/scss/utilities/variables/_var-colors" as *;
+@use "../../src/scss/utilities/variables/_var-fonts" as *;
+@use "../../src/scss/utilities/variables/_var-paths" as * with(
+  $path-fonts:                        "/dsf-common-ui/dist/" ,
+  $path-images:                       "/dsf-common-ui/images/",
+  $path-svgs:                         "/dsf-common-ui/svg/",
+);
+@use "../../src/scss/utilities/variables/_var-sizes" as *;
+@use "../../src/scss/utilities/variables/_var-lineHeights" as *;
+@use "../../src/scss/utilities/variables/_var-zindex" as *;
+@use "../../src/scss/utilities/variables/_var-cursor" as *;
+@use "../../src/scss/utilities/variables/_var-placeholder" as *;
 
-@import "./src/scss/content";
-
-@import "./src/scss/helpers";
+@forward "../../src/scss/base";
+@forward "../../src/scss/layout";
+@forward "../../src/scss/modules";
+@forward "../../src/scss/content";
+@forward "../../src/scss/helpers";

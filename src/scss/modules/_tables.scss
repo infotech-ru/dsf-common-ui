@@ -4,10 +4,15 @@
 /* path: dsf-common-ui/src/scss/modules/_tables.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_svg-url' as *;
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-lineHeights' as *;
+@use '../utilities/variables/var-zindex' as *;
+@use '../utilities/variables/var-fonts' as *;
+@use '../utilities/mixins/table' as *;
 
-//
-// Tables
-// --------------------------------------------------
 
 .table {
   background-color: transparent;
@@ -24,7 +29,7 @@
 }
 
 caption {
-  color: _brand-table(caption_color);
+  color: brandTable(caption_color);
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: left;
@@ -32,8 +37,8 @@ caption {
 
 th,
 td {
-  line-height: rem(_lineHeight(table));
-  padding: rem(_brand-sizes(table_paddingY)) rem(_brand-sizes(table_paddingX));
+  line-height: rem(lineHeight(table));
+  padding: rem(brandSizes(table_paddingY)) rem(brandSizes(table_paddingX));
   &[class*="col-"] {
     position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
     display: table-cell;
@@ -46,39 +51,39 @@ td {
   .table__border &{ 
     border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
     border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
-    border-bottom-color: var(--border_bottom_color, var(--border_color, _brand-table(table_border)));
+    border-bottom-color: var(--border_bottom_color, var(--border_color, brandTable(table_border)));
     border-right-width: var(--width_border-right__modify, var(--width_border-right, 1px));
     border-right-style: var(--style_border_right, var(--style_border, solid));
-    border-right-color: var(--border_right_color, var(--border_color, _brand-table(table_border)));
+    border-right-color: var(--border_right_color, var(--border_color, brandTable(table_border)));
   }
   .tr__slave &{
     --tdnesting-bgc: 96%;
-    background-color: _brand-table(tbodySlaveTd_bgc);
+    background-color: brandTable(tbodySlaveTd_bgc);
     background-color: hsl(0deg 0% var(--tdnesting-bgc));
   }
   .tr__subSlave &{
-    background-color: _brand-table(tbodySubSlaveTd_bgc);
+    background-color: brandTable(tbodySubSlaveTd_bgc);
   }
   &:first-child{
-    padding-left: #{_brand-sizes(table_paddingXFirst)}px;
+    padding-left: #{brandSizes(table_paddingXFirst)}px;
     // .tr__master &{
     //   padding-left: 0;
     // }
     .table__border &{ 
       border-left-width: var(--width_border-left__modify, var(--width_border-left, 1px));
       border-left-style: var(--style_border_left, var(--style_border, solid));
-      border-left-color: var(--border_left_color, var(--border_color, _brand-table(table_border)));
+      border-left-color: var(--border_left_color, var(--border_color, brandTable(table_border)));
     }
   }
 }
 
 thead { 
   th {
-    background-color: _brand-table(thead_bgc);
-    color: _brand-table(thead_color);
-    font-size: rem(_fontSizes(thead));
+    background-color: brandTable(thead_bgc);
+    color: brandTable(thead_color);
+    font-size: rem(fontSizes(thead));
     font-weight: 700;
-    height: rem(_brand-sizes(tableCell_height));
+    height: rem(brandSizes(tableCell_height));
     // position: sticky;
     vertical-align: middle;
     &:first-child {
@@ -95,7 +100,7 @@ thead {
     .asc{
       display: inline-flex;
       position: relative;
-      padding-left: #{calc(_brand-sizes(tableSortIcon_size) + 5)}px;
+      padding-left: #{calc(brandSizes(tableSortIcon_size) + 5)}px;
       &:before{
         background-size: contain;
         background-repeat: no-repeat;
@@ -103,10 +108,10 @@ thead {
         display: block;
         position: absolute;
         left: 0;
-        margin-top: #{calc(_brand-sizes(tableSortIcon_size) * .5 * -1)}px;
+        margin-top: #{calc(brandSizes(tableSortIcon_size) * .5 * -1)}px;
         top: 50%;
-        height: #{_brand-sizes(tableSortIcon_size)}px;
-        width: #{_brand-sizes(tableSortIcon_size)}px;
+        height: #{brandSizes(tableSortIcon_size)}px;
+        width: #{brandSizes(tableSortIcon_size)}px;
       }
     }
     .desc{
@@ -126,7 +131,7 @@ thead {
         .table__border & {
           border-top-width: var(--width_border-top__modify, var(--width_border-top, 1px));
           border-top-style: var(--style_border_top, var(--style_border, solid));
-          border-top-color: var(--border_top_color, var(--border_color, _brand-table(table_border)));
+          border-top-color: var(--border_top_color, var(--border_color, brandTable(table_border)));
         }
       }
     }
@@ -134,18 +139,18 @@ thead {
       th{
         border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
         border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
-        border-bottom-color: var(--border_top_color, var(--border_color, _brand-table(thead_border)));
+        border-bottom-color: var(--border_top_color, var(--border_color, brandTable(thead_border)));
       }
     }
   }
 }
 tbody td, 
 tbody th { 
-  background-color: _brand-table(tbody_bgc);
-  color: _brand-table(tbody-color);
-  font-size: rem(_fontSizes(tbody));
+  background-color: brandTable(tbody_bgc);
+  color: brandTable(tbody-color);
+  font-size: rem(fontSizes(tbody));
   font-weight: 400;
-  height: rem(_brand-sizes(tableCell_height));
+  height: rem(brandSizes(tableCell_height));
   vertical-align: middle;
   &:first-child {
     text-align: left;
@@ -164,7 +169,7 @@ tbody th {
 tbody {
   .svg--icon{
       svg{
-        fill: _brand-palette(table-color);
+        fill: brandPalette(table-color);
         height: rem(14);
         width: auto;
       }
@@ -173,12 +178,12 @@ tbody {
 tfoot { 
   th,
   td{
-    background-color: _brand-table(tfoot_bgc);
+    background-color: brandTable(tfoot_bgc);
     bottom: 0;
-    color: _brand-table(tfoot_color);
-    font-size: rem(_fontSizes(tfoot));
+    color: brandTable(tfoot_color);
+    font-size: rem(fontSizes(tfoot));
     font-weight: 700;
-    height: rem(_brand-sizes(tableCell_height));
+    height: rem(brandSizes(tableCell_height));
     vertical-align: middle;
     &:first-child {
       left: 0;
@@ -190,12 +195,12 @@ tfoot {
         td,
         th {
           &:first-child {
-            z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+            z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
             &[rowspan="2"] {
-              z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+              z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
             }
             &[rowspan="3"] {
-              z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+              z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
             }
           }
         }
@@ -209,7 +214,7 @@ tfoot {
   & > tbody >{
     tr:nth-of-type(2n+1) {
       td{ 
-        background-color: _brand-table(tdStrip_bgc);
+        background-color: brandTable(tdStrip_bgc);
       }
     }
   }
@@ -219,22 +224,22 @@ tfoot {
   & > tbody >{
     tr:nth-of-type(2n+1) {
       td{ 
-        background-color: _brand-table(tbody_bgc);
+        background-color: brandTable(tbody_bgc);
       }
     }
     tr:nth-of-type(2n) {
       td{ 
-        background-color: _brand-table(tdStrip_bgc);
+        background-color: brandTable(tdStrip_bgc);
       }
     }
   }
 }
 
-@include table-row-variant('clear', _brand-colors(_transparent));
-@include table-row-variant('light-yellow2', _brand-colors(_light-yellow2));
-@include table-row-variant('light-red', _brand-colors(_light-red));
-@include table-row-variant('red', _brand-colors(_red));
-@include table-row-variant('rose', _brand-colors(_rose));
+@include table-row-variant('clear', brandColors(_transparent));
+@include table-row-variant('light-yellow2', brandColors(_light-yellow2));
+@include table-row-variant('light-red', brandColors(_light-red));
+@include table-row-variant('red', brandColors(_red));
+@include table-row-variant('rose', brandColors(_rose));
 
 table{
   &[class^="bg-"] { 
@@ -264,7 +269,7 @@ tbody tr {
 .table-hover, // old name
 .table__hover {
   tr:hover td{
-    background-color: _brand-table(tdHover_bgc);
+    background-color: brandTable(tdHover_bgc);
   }
 }
 
@@ -294,18 +299,18 @@ tbody tr {
     &:first-child{ 
       left: 0;
       position: sticky;
-      z-index: _zindex(tableStickyTbodyTd);
+      z-index: zIndex(tableStickyTbodyTd);
     }
     &.stickyCell{
       left: 0;
       position: sticky;
-      z-index: _zindex(tableStickyTbodyTd);
+      z-index: zIndex(tableStickyTbodyTd);
     }
   }
   thead{
     th{
       position: sticky;
-      z-index: _zindex(tableStickyTheadTh);
+      z-index: zIndex(tableStickyTheadTh);
       &:first-child {
         left: 0;
       }
@@ -315,27 +320,27 @@ tbody tr {
         th {
           top: 0;
           &:first-child {
-            z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+            z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
             &[rowspan="2"] {
-              z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+              z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
             }
             &[rowspan="3"] {
-              z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+              z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
             }
           }
         }
       }
       &:nth-child(2) {
         th {
-          top: rem(_brand-sizes(tableCell_height));
+          top: rem(brandSizes(tableCell_height));
           &:first-child {
-            z-index: _zindex(tableStickyTheadThFirstChild);
+            z-index: zIndex(tableStickyTheadThFirstChild);
           }
         }
       }
       &:nth-child(3) {
         th {
-          top: rem(calc(_brand-sizes(tableCell_height) * 2));
+          top: rem(calc(brandSizes(tableCell_height) * 2));
         }
       }
     }
@@ -348,14 +353,14 @@ tbody tr {
     td,
     th{
       position: sticky;
-      z-index: _zindex(tableStickyTheadTh);
+      z-index: zIndex(tableStickyTheadTh);
       &:first-child {
-        z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+        z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
         &[rowspan="2"] {
-          z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+          z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
         }
         &[rowspan="3"] {
-          z-index: _zindex(tableStickyTheadTrFirstChildThFirstChild);
+          z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
         }
       }
     }
@@ -365,7 +370,7 @@ tbody tr {
       tr{
         &:nth-child(1){
           th, td{
-            bottom: rem(_brand-sizes(tableCell_height));
+            bottom: rem(brandSizes(tableCell_height));
           }
         }
         &:nth-child(2){
@@ -390,24 +395,24 @@ tbody tr {
 .tableHelpIcon{
   bottom: 50%;
   display: inline-flex;
-  height: #{_brand-sizes(tableHelpIcon_size)}px;
-  margin-bottom: #{calc(_brand-sizes(tableHelpIcon_size) * .5 * -1)}px;
-  width: #{_brand-sizes(tableHelpIcon_size)}px;
+  height: #{brandSizes(tableHelpIcon_size)}px;
+  margin-bottom: #{calc(brandSizes(tableHelpIcon_size) * .5 * -1)}px;
+  width: #{brandSizes(tableHelpIcon_size)}px;
   .tableHelpIcon_td &{ 
     position: absolute;
-    right: #{_brand-sizes(table_paddingY)}px;
+    right: #{brandSizes(table_paddingY)}px;
   }
   svg{
-    height: #{_brand-sizes(tableHelpIcon_size)}px;
-    width: #{_brand-sizes(tableHelpIcon_size)}px;
-    #{--svg-icon-fill}: _brand-palette(tableHelpIcon_bgc);
+    height: #{brandSizes(tableHelpIcon_size)}px;
+    width: #{brandSizes(tableHelpIcon_size)}px;
+    #{--svg-icon-fill}: brandPalette(tableHelpIcon_bgc);
   }
   .asc &, .desc &{
     // display: inline-flex;
-    right: #{calc((_brand-sizes(table_paddingY) + _brand-sizes(tableHelpIcon_size)) * -1)}px;
+    right: #{calc((brandSizes(table_paddingY) + brandSizes(tableHelpIcon_size)) * -1)}px;
   }
   &_td {
-    padding-right: #{calc(_brand-sizes(tableHelpIcon_size) + _brand-sizes(table_paddingY) * 1.5)}px;
+    padding-right: #{calc(brandSizes(tableHelpIcon_size) + brandSizes(table_paddingY) * 1.5)}px;
     position: sticky; // улетает иконка в ячейка не шапки
   }
 }
@@ -415,13 +420,13 @@ tbody tr {
 .collapseTrIcon{
   $value: 10;
   display: inline-flex;
-  height: #{_brand-sizes(collapseTrIcon_size)}px;
+  height: #{brandSizes(collapseTrIcon_size)}px;
   position: relative;
   // top: 2px;
-  width: #{_brand-sizes(collapseTrIcon_size)}px;
+  width: #{brandSizes(collapseTrIcon_size)}px;
   svg{
-    height: #{_brand-sizes(collapseTrIcon_size)}px;
-    width: #{_brand-sizes(collapseTrIcon_size)}px;
+    height: #{brandSizes(collapseTrIcon_size)}px;
+    width: #{brandSizes(collapseTrIcon_size)}px;
   }
   &_link{
     background-color: transparent;
@@ -434,13 +439,13 @@ tbody tr {
     display: flex;
   }
   &[title="Expand"] {
-    #{--svg-icon-stroke_blue}: _brand-colors(_light-blue);
-    #{--svg-icon-stroke}: _brand-colors(_light-blue);
+    #{--svg-icon-stroke_blue}: brandColors(_light-blue);
+    #{--svg-icon-stroke}: brandColors(_light-blue);
   }
 
   &[title="Collapse"] {
-    #{--svg-icon-stroke_blue}: _brand-colors(_transparent);
-    #{--svg-icon-stroke}: _brand-colors(_light-blue);
+    #{--svg-icon-stroke_blue}: brandColors(_transparent);
+    #{--svg-icon-stroke}: brandColors(_light-blue);
   }
   .tr__master & {
     margin-left: #{$value}px;
@@ -449,30 +454,30 @@ tbody tr {
 
 .collapseTdIcon{
   display: inline-flex;
-  height: #{_brand-sizes(collapseTdIcon_size)}px;
-  width: #{_brand-sizes(collapseTdIcon_size)}px;
+  height: #{brandSizes(collapseTdIcon_size)}px;
+  width: #{brandSizes(collapseTdIcon_size)}px;
   svg{
-    height: #{_brand-sizes(collapseTdIcon_size)}px;
-    width: #{_brand-sizes(collapseTdIcon_size)}px;
+    height: #{brandSizes(collapseTdIcon_size)}px;
+    width: #{brandSizes(collapseTdIcon_size)}px;
   }
   &_link{
     background-color: transparent;
     border: none;
     bottom: 50%;
     display: block;
-    height: #{_brand-sizes(collapseTdIcon_size)}px;
-    margin-bottom: #{_brand-sizes(collapseTdIcon_size) * 0.5 * -1}px;
+    height: #{brandSizes(collapseTdIcon_size)}px;
+    margin-bottom: #{brandSizes(collapseTdIcon_size) * 0.5 * -1}px;
     position: absolute;
     // top: 50%;
-    // margin-top: #{calc(_brand-sizes(collapseTdIcon_size) * .5 * -1)}px;
-    right: #{_brand-sizes(table_paddingX)}px;
-    width: #{_brand-sizes(collapseTdIcon_size)}px;
+    // margin-top: #{calc(brandSizes(collapseTdIcon_size) * .5 * -1)}px;
+    right: #{brandSizes(table_paddingX)}px;
+    width: #{brandSizes(collapseTdIcon_size)}px;
   }
   &_td{
-    padding-right: #{calc(_brand-sizes(collapseTdIcon_size) + _brand-sizes(table_paddingY) * 1.5)}px;
+    padding-right: #{calc(brandSizes(collapseTdIcon_size) + brandSizes(table_paddingY) * 1.5)}px;
     position: sticky;
     &.tableHelpIcon_td{ 
-      padding-right: #{calc(_brand-sizes(collapseTdIcon_size) + _brand-sizes(tableHelpIcon_size) + _brand-sizes(table_paddingX) * 1.5)}px;
+      padding-right: #{calc(brandSizes(collapseTdIcon_size) + brandSizes(tableHelpIcon_size) + brandSizes(table_paddingX) * 1.5)}px;
     }
   }
 }

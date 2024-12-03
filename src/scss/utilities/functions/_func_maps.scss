@@ -4,24 +4,27 @@
 // @param {list} $list List.
 // @param {integer} $index Index.
 // @return {list} Updated list.
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
 
 @function remove-nth($list, $index) {
   $result: null;
-  @if type-of($index) != number {
+  @if meta.type-of($index) != number {
     @warn "$index: #{quote($index)} is not a number for `remove-nth`.";
   }
   @else if $index == 0 {
     @warn "List index 0 must be a non-zero integer for `remove-nth`.";
   }
-  @else if abs($index) > length($list) {
-    @warn "List index is #{$index} but list is only #{length($list)} item long for `remove-nth`.";
+  @else if abs($index) > list.length($list) {
+    @warn "List index is #{$index} but list is only #{list.length($list)} item long for `remove-nth`.";
   }
   @else {
     $result: ();
-    $index: if($index < 0, length($list) + $index + 1, $index);
-    @for $i from 1 through length($list) {
+    $index: if($index < 0, list.length($list) + $index + 1, $index);
+    @for $i from 1 through list.length($list) {
       @if $i != $index {
-        $result: append($result, nth($list, $i));
+        $result: append($result, list.nth($list, $i));
       }
     }
   }
@@ -38,11 +41,11 @@
 // DEPENDENCIES: @remove-nth
 
 @function val($map, $keys...) {
-  @if nth($keys, 1) == null {
+  @if list.nth($keys, 1) == null {
     $keys: remove-nth($keys, 1);
   }
   @each $key in $keys {
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
   @return $map;
 }
@@ -66,11 +69,11 @@
 //     $medium: map-deep-get($grid-configuration, 'layouts', 'medium');
 
 @function map-deep-get($map, $keys...) {
-  @if type-of($map) != 'map' {
-    @error 'The argument $map: `#{$map}` is of incorrect type: `#{type-of($map)}`. Type of `Map` is required!';
+  @if meta.type-of($map) != 'map' {
+    @error 'The argument $map: `#{$map}` is of incorrect type: `#{meta.type-of($map)}`. Type of `Map` is required!';
   }
   @each $key in $keys {
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
   @return $map;
 }
@@ -88,14 +91,14 @@
 @function map-deep-set($map, $keys.../*, $value */) {
   $map-list: ($map,);
   $result: null;
-  @if length($keys) == 2 {
-    @return map-merge($map, (nth($keys, 1): nth($keys, -1)));
+  @if list.length($keys) == 2 {
+    @return map-merge($map, (list.nth($keys, 1): list.nth($keys, -1)));
   }
-  @for $i from 1 through length($keys) - 2 {
-    $map-list: append($map-list, map-get(nth($map-list, -1), nth($keys, $i)));
+  @for $i from 1 through list.length($keys) - 2 {
+    $map-list: append($map-list, map.get(list.nth($map-list, -1), list.nth($keys, $i)));
   }
-  @for $i from length($map-list) through 1 {
-    $result: map-merge(nth($map-list, $i), (nth($keys, $i): if($i == length($map-list), nth($keys, -1), $result)));
+  @for $i from list.length($map-list) through 1 {
+    $result: map-merge(list.nth($map-list, $i), (list.nth($keys, $i): if($i == list.length($map-list), list.nth($keys, -1), $result)));
   }
   @return $result;
 }
@@ -111,7 +114,7 @@
 @function map-depth($map) {
   $level: 1;
   @each $key, $value in $map {
-    @if type-of($value) == "map" {
+    @if meta.type-of($value) == "map" {
       $level: max(map-depth($value) + 1, $level);
     }
   }
@@ -151,7 +154,7 @@
     @if not map-has-key($map, $key) {
       @return false;
     }
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
   @return true;
 }
@@ -173,7 +176,7 @@
 
 @function to-list($value, $keep: 'both') {
   $keep: if(index('keys' 'values', $keep), $keep, 'both');
-  @if type-of($value) == 'map' {
+  @if meta.type-of($value) == 'map' {
     $keys: ();
     $values: ();
     @each $key, $val in $value {
@@ -188,7 +191,7 @@
       @return zip($keys, $values);
     }
   }
-  @return if(type-of($value) != 'list', ($value,), $value);
+  @return if(meta.type-of($value) != 'list', ($value,), $value);
 }
 
 // ----------------------------------------------------------------- FUNCTION //
@@ -199,7 +202,7 @@
 @function depth($map) {
   $level: 1;
   @each $key, $value in $map {
-    @if type-of($value) == "map" {
+    @if meta.type-of($value) == "map" {
       $level: max(depth($value) + 1, $level);
     }
   }

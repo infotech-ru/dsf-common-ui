@@ -2,6 +2,9 @@
 // поддерживает пропорции вложенного блока ".content"
 // Syntax:
 // .any-class {@include aspect-ratio(16, 9);}
+@use 'sass:map';
+@use 'sass:math';
+@use '../functions/func_helpers-functions' as *;
 
 @mixin aspect-ratio($width, $height) {
   position: relative;
@@ -9,7 +12,7 @@
     display: block;
     content: "";
     width: 100%;
-    padding-top: calc($height / $width * 100%);
+    padding-top: math.div($height, $width) * 100%;
   }
   > .aspect-ratio-content {
     position: absolute;
@@ -27,9 +30,9 @@
 // @include aspect-ratio($ratio or $width, $height);
 @mixin aspect-ratio-height($arglist... /*$width/$ratio, $height*/){
   $map : keywords($arglist);
-  $height: map-get($map, height) or nth-or-null($arglist, 2);
-  $width:  map-get($map, width)  or nth-or-null($arglist, 1);
-  $ratio:  map-get($map, ratio)  or if($width and $height, $width/$height, nth-or-null($arglist, 1)) or 1;
+  $height: map.get($map, height) or nth-or-null($arglist, 2);
+  $width:  map.get($map, width)  or nth-or-null($arglist, 1);
+  $ratio:  map.get($map, ratio)  or if($width and $height, $width/$height, nth-or-null($arglist, 1)) or 1;
   $padding: 1/$ratio * 100%;
   &:before { content: ''; float:left; padding-bottom: $padding; margin-right:-100%; }
   &:after  { content: ''; display:table; clear: both; }

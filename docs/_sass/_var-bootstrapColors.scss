@@ -1,15 +1,17 @@
+@use 'sass:color';
+
 //  -----------------------------------------default color //
 $color-red: red !default;
 $color-blue: blue !default;
-$gray-base: #000 !default;
-$gray-100: lighten($gray-base, 10.0%) !default; // #555
-$gray-600: lighten($gray-base, 60.0%) !default; //
-$gray-800: lighten($gray-base, 80.0%) !default; //
-$gray-900: lighten($gray-base, 90.0%) !default; //
+$gray-base: #000;
+$gray-100: color.scale($gray-base, $lightness: 10.0%) !default; // #555
+$gray-600: color.scale($gray-base, $lightness: 60.0%) !default; //
+$gray-800: color.scale($gray-base, $lightness: 80.0%) !default; //
+$gray-900: color.scale($gray-base, $lightness: 90.0%) !default; //
 $gray:    $gray-600 !default;
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-light:             color.scale($gray-base, $lightness: 46.7%) !default; // #777
 $gray-lighter: $gray-100 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-darker:            color.scale($gray-base, $lightness: 13.5%) !default; // #222
 $gray-dark: $gray-800 !default;
 $white:   #ffffff !default;
 $black:   #000000 !default;

@@ -1,4 +1,11 @@
-@use "sass:math";
+@use 'sass:map';
+@use 'sass:math';
+@use '../mixins_bootstrap-v3/clearfix' as *;
+@use '../mixins_bootstrap-v4/grid' as *;
+@use '../mixins_bootstrap-v4/breakpoints' as *;
+@use '../variables/var-bootstrap-v3' as *;
+@use '../variables/var-bootstrapBool' as *;
+
 // Framework grid generation
 
 @mixin makeGutters($gutters: $grid-gutter-widths) {
@@ -7,9 +14,9 @@
     padding-right: ($gutter * .5);
     padding-left:  ($gutter * .5);
   } @else {
-    @each $breakpoint in map-keys($gutters) {
+    @each $breakpoint in map.keys($gutters) {
       @include media-breakpoint-up($breakpoint) {
-        $gutter: map-get($gutters, $breakpoint);
+        $gutter: map.get($gutters, $breakpoint);
         padding-right: ($gutter * .5);
         padding-left:  ($gutter * .5);
       }
@@ -19,32 +26,32 @@
 
 @mixin makeCol($size, $columns: $grid-columns) {
   @if $enable-grid-flex {
-    flex: 0 0 percentage(calc($size / $columns));
-    max-width: percentage(calc($size / $columns));
+    flex: 0 0 math.percentage(calc($size / $columns));
+    max-width: math.percentage(calc($size / $columns));
   } @else {
     float: left;
-    width: percentage(calc($size / $columns));
+    width: math.percentage(calc($size / $columns));
   }
 }
 
 @mixin makeCol5($size, $columns: $grid-columns) {
   @if $enable-grid-flex {
-    flex: 0 0 percentage(calc($size / $columns + 1 / $columns * .5));
-    max-width: percentage(calc($size / $columns + 1 / $columns * .5));
+    flex: 0 0 math.percentage(calc($size / $columns + 1 / $columns * .5));
+    max-width: math.percentage(calc($size / $columns + 1 / $columns * .5));
   } @else {
     float: left;
-    width: percentage(calc($size / $columns + 1 / $columns * .5));
+    width: math.percentage(calc($size / $columns + 1 / $columns * .5));
   }
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
   @if $enable-col-offset-classes {
-    margin-left: percentage(calc($size / $columns));
+    margin-left: math.percentage(calc($size / $columns));
   }
 }
 @mixin make-col-offset5($size, $columns: $grid-columns) {
   @if $enable-col-offset-classes {
-    margin-left: percentage(calc($size / $columns + 1 / $columns * .5));
+    margin-left: math.percentage(calc($size / $columns + 1 / $columns * .5));
   }
 }
 
@@ -59,7 +66,7 @@
   }
 
   $breakpoint-counter: 0;
-  @each $breakpoint in map-keys($breakpoints) {
+  @each $breakpoint in map.keys($breakpoints) {
 
     $breakpoint-counter: ($breakpoint-counter + 1);
 
@@ -216,8 +223,8 @@
   margin-left: auto;
   margin-right: auto;
   @if $grid-gutter-width-base-equal {
-    padding-right: ((map-get($grid-gutter-widths, 'xs')) * .5);
-    padding-left: ((map-get($grid-gutter-widths, 'xs')) * .5);
+    padding-right: ((map.get($grid-gutter-widths, 'xs')) * .5);
+    padding-left: ((map.get($grid-gutter-widths, 'xs')) * .5);
   }
   @else{
     padding-right: ($grid-gutter-width * .5);
@@ -234,10 +241,10 @@
 }
 
 @mixin makeContainerGrid($max-widths: $container-max-widths, $gutter: $grid-gutter-widths, $breakpoints: $grid-breakpoints){
-  @each $breakpoint in map-keys($breakpoints) {
+  @each $breakpoint in map.keys($breakpoints) {
     $infix: breakpointInfix($breakpoint, $breakpoints);
-    $gutters: map-get($gutter, $infix);
-    $widths: map-get($max-widths, $infix);
+    $gutters: map.get($gutter, $infix);
+    $widths: map.get($max-widths, $infix);
     @if not $grid-gutter-width-base-equal{
       @include media-breakpoint-up($breakpoint, $breakpoints) {
         @if ($gutters == null){
@@ -267,9 +274,9 @@
     @include clearfix();
   }
   @if not $grid-gutter-width-base-equal { // @todo доработать при необходимости разных значений
-    @each $breakpoint in map-keys($gutters) {
+    @each $breakpoint in map.keys($gutters) {
       @include media-breakpoint-up($breakpoint) {
-        $gutter: map-get($gutters, $breakpoint);
+        $gutter: map.get($gutters, $breakpoint);
         margin-right: ($gutter * -.5);
         margin-left:  ($gutter * -.5);
       }

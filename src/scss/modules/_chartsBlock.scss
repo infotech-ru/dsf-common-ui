@@ -1,5 +1,9 @@
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
+
+
 .chartsBlock{
-  border: 1px solid _brand-palette(chartBlock_border);
+  border: 1px solid brandPalette(chartBlock_border);
   padding: 10px;
   &_header{
     align-items: flex-start;
@@ -30,7 +34,7 @@
       }
     }
     &Subtitles{ 
-      color: _brand-colors(_grey);
+      color: brandColors(_grey);
       font-size: rem(12);
       line-height: rem(14);
     }
@@ -52,43 +56,43 @@
   }
 }
 .highcharts-container {
-  #{--chart-blue}:                     _brand-colors(_vibrant-blue);
-  #{--chart-green}:                    _brand-colors(_green);
-  #{--chart-red}:                      _brand-colors(_red);
-  #{--chart-light-blue}:               _brand-colors(_light-blue);
-  #{--chart-orange}:                   _brand-colors(_orange);
-  #{--chart-rose}:                     _brand-colors(_rose);
-  #{--chart-light-yellow2}:            _brand-colors(_light-yellow2);
-  #{--chart-dark-green}:               _brand-colors(_dark-green);
-  #{--chart-grey}:                     _brand-colors(_grey);
-  #{--chart-light-green}:              _brand-colors(_light-green);
-  #{--chart-dark-grey}:                _brand-colors(_dark-grey);
-  #{--chart-black}:                    _brand-colors(_black);
-  #{--chart-dark-red}:                 _brand-colors(_dark-red);
-  #{--chart-dark-orange}:              _brand-colors(_dark-orange);
-  #{--chart-yellow2}:                  _brand-colors(_yellow2);
-  #{--chart-light-blue3}:              _brand-colors(_light-blue3);
-  #{--chart-grey2}:                    _brand-colors(_grey2);
-  #{--chart-grey4}:                    _brand-colors(_grey4);
-  #{--chart-white}:                    _brand-colors(_white);
-  #{--chart-transparent}:              _brand-colors(_transparent);
+  #{--chart-blue}:                     brandColors(_vibrant-blue);
+  #{--chart-green}:                    brandColors(_green);
+  #{--chart-red}:                      brandColors(_red);
+  #{--chart-light-blue}:               brandColors(_light-blue);
+  #{--chart-orange}:                   brandColors(_orange);
+  #{--chart-rose}:                     brandColors(_rose);
+  #{--chart-light-yellow2}:            brandColors(_light-yellow2);
+  #{--chart-dark-green}:               brandColors(_dark-green);
+  #{--chart-grey}:                     brandColors(_grey);
+  #{--chart-light-green}:              brandColors(_light-green);
+  #{--chart-dark-grey}:                brandColors(_dark-grey);
+  #{--chart-black}:                    brandColors(_black);
+  #{--chart-dark-red}:                 brandColors(_dark-red);
+  #{--chart-dark-orange}:              brandColors(_dark-orange);
+  #{--chart-yellow2}:                  brandColors(_yellow2);
+  #{--chart-light-blue3}:              brandColors(_light-blue3);
+  #{--chart-grey2}:                    brandColors(_grey2);
+  #{--chart-grey4}:                    brandColors(_grey4);
+  #{--chart-white}:                    brandColors(_white);
+  #{--chart-transparent}:              brandColors(_transparent);
   
-  #{--chart-label-color}:              _brand-colors(_dark-grey);
+  #{--chart-label-color}:              brandColors(_dark-grey);
 
-  // #{--highcharts-background-color}:    _brand-colors(_transparent); // old  #303030;
-  // #{--highcharts-neutral-color-100}:   _brand-colors(_white); // old  #ffffff;
-  // #{--highcharts-neutral-color-80}:    _brand-colors(_grey2); // old  #d6d6d6;
-  // #{--highcharts-neutral-color-60}:    _brand-colors(_grey); // old  #adadad;
-  // #{--highcharts-neutral-color-40}:    _brand-colors(_grey); // old  #858585;
-  // #{--highcharts-neutral-color-20}:    _brand-colors(_grey4); // old  #5c5c5c;
-  // #{--highcharts-neutral-color-10}:    _brand-colors(_grey4); // old  #474747;
-  // #{--highcharts-neutral-color-5}:     _brand-colors(_dark-grey); // old  #3d3d3d;
-  // #{--highcharts-neutral-color-3}:     _brand-colors(_dark-grey); // old  #393939;
-  // #{--highcharts-highlight-color-100}: _brand-colors(_light-blue3); // old  #7aa7ff;
-  // #{--highcharts-highlight-color-80}:  _brand-colors(_light-blue); // old  #6c90d6;
-  // #{--highcharts-highlight-color-60}:  _brand-colors(_light-blue); // old  #5e79ad;
-  // #{--highcharts-highlight-color-20}:  _brand-colors(_light-blue); // old  #414a5c;
-  // #{--highcharts-highlight-color-10}:  _brand-colors(_grey4); // old  #3a3f47;
-  // #{--highcharts-positive-color}:      _brand-colors(_green); // old #06b535;
-  // #{--highcharts-negative-color}:      _brand-colors(_red); // old #f21313;
+  // #{--highcharts-background-color}:    brandColors(_transparent); // old  #303030;
+  // #{--highcharts-neutral-color-100}:   brandColors(_white); // old  #ffffff;
+  // #{--highcharts-neutral-color-80}:    brandColors(_grey2); // old  #d6d6d6;
+  // #{--highcharts-neutral-color-60}:    brandColors(_grey); // old  #adadad;
+  // #{--highcharts-neutral-color-40}:    brandColors(_grey); // old  #858585;
+  // #{--highcharts-neutral-color-20}:    brandColors(_grey4); // old  #5c5c5c;
+  // #{--highcharts-neutral-color-10}:    brandColors(_grey4); // old  #474747;
+  // #{--highcharts-neutral-color-5}:     brandColors(_dark-grey); // old  #3d3d3d;
+  // #{--highcharts-neutral-color-3}:     brandColors(_dark-grey); // old  #393939;
+  // #{--highcharts-highlight-color-100}: brandColors(_light-blue3); // old  #7aa7ff;
+  // #{--highcharts-highlight-color-80}:  brandColors(_light-blue); // old  #6c90d6;
+  // #{--highcharts-highlight-color-60}:  brandColors(_light-blue); // old  #5e79ad;
+  // #{--highcharts-highlight-color-20}:  brandColors(_light-blue); // old  #414a5c;
+  // #{--highcharts-highlight-color-10}:  brandColors(_grey4); // old  #3a3f47;
+  // #{--highcharts-positive-color}:      brandColors(_green); // old #06b535;
+  // #{--highcharts-negative-color}:      brandColors(_red); // old #f21313;
 }

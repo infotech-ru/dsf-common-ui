@@ -1,21 +1,24 @@
-@use "sass:map";
-@use "sass:meta";
-// @import url(https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic);
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:string';
+@use '../utilities/variables/var-fonts' as *;
+@use '../utilities/variables/var-paths' as *;
 
 @each $fontFamily, $fontStyle in $fontsList {
   $fontStyles: map.keys(map.get($fontsList, $fontFamily));
-  $fontStylesLength: length($fontStyles);
+  $fontStylesLength: list.length($fontStyles);
   @for $j from 1 through $fontStylesLength {
-    $fontStyleName: nth($fontStyles, $j);
-    $fontWeights: map-keys(map.get($fontsList, $fontFamily, $fontStyleName));
-    $fontNames: map-values(map.get($fontsList, $fontFamily, $fontStyleName));
-    $length: length($fontWeights);
+    $fontStyleName: list.nth($fontStyles, $j);
+    $fontWeights: map.keys(map.get($fontsList, $fontFamily, $fontStyleName));
+    $fontNames: map.values(map.get($fontsList, $fontFamily, $fontStyleName));
+    $length: list.length($fontWeights);
     @for $i from 1 through $length {
-        $weight: nth($fontWeights, $i);
-        $name: nth($fontNames, $i);
+        $weight: list.nth($fontWeights, $i);
+        $name: list.nth($fontNames, $i);
         @font-face {
           font-family: $fontFamily;
-          font-style: unquote($fontStyleName);
+          font-style: string.unquote($fontStyleName);
           font-weight: $weight;
           src: url('#{$name}.eot');
           src: local('#{$fontFamily}'), local('#{$fontFamily}-#{$weight}'),

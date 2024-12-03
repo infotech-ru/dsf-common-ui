@@ -5,11 +5,11 @@
 //*                                                                          *//
 //* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ *//
 
-@import "functions/_func_helpers-functions.scss";
-@import "functions/_func_svg-url.scss";
-@import "functions/_func_fonts.scss";
-@import "functions/_func_shadows.scss";
-@import "functions/_func_maps.scss";
-@import "functions/_func_assets.scss";
-@import "functions/_func_to-numbers.scss";
-@import "functions/_func_bootstrap-v4.scss";
+@forward "./functions/_func_helpers-functions";
+@forward "./functions/_func_svg-url";
+@forward "./functions/_func_fonts";
+@forward "./functions/_func_shadows";
+@forward "./functions/_func_maps";
+@forward "./functions/_func_assets";
+@forward "./functions/_func_to-numbers";
+@forward "./functions/_func_bootstrap-v4";

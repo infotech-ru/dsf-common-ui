@@ -4,9 +4,13 @@
 /* path: dsf-common-ui/src/scss/modules/_alerts.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_svg-url' as *;
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-bootstrap-v3' as *;
+@use '../utilities/variables/var-colors' as *;
 
 .error-summary { 
-  color: _brand-alert(danger_bg);
+  color: brandAlert(danger_bg);
 }
 
 .alert {
@@ -38,17 +42,17 @@
   }
   @each $alert in 'default', 'primary', 'success', 'danger', 'warning', 'info' {
     &-#{$alert}{
-      background-color: _brand-alert(#{$alert}_bg);
-      border-color: _brand-alert(#{$alert}_border);
-      color: _brand-alert(#{$alert}_color);
+      background-color: brandAlert(#{$alert}_bg);
+      border-color: brandAlert(#{$alert}_border);
+      color: brandAlert(#{$alert}_color);
       .close{
-        color: _brand-alert(#{$alert}_close);
-        #{--svg-icon-fill}: _brand-alert(#{$alert}_close);
-        #{--svg-icon-stroke}: _brand-alert(#{$alert}_close);
-        #{--svg-icon-stroke_blue}: _brand-alert(#{$alert}_close);
+        color: brandAlert(#{$alert}_close);
+        #{--svg-icon-fill}: brandAlert(#{$alert}_close);
+        #{--svg-icon-stroke}: brandAlert(#{$alert}_close);
+        #{--svg-icon-stroke_blue}: brandAlert(#{$alert}_close);
       }
       h4, .h4{
-        color: _brand-alert(#{$alert}_title);
+        color: brandAlert(#{$alert}_title);
       }
     }
   }

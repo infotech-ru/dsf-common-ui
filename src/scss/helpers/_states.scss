@@ -4,6 +4,10 @@
 /* path: dsf-common-ui/src/scss/helpers/_states.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use 'sass:map';
+@use '../utilities/mixins/transition' as *;
+@use '../utilities/mixins_bootstrap-v3/vendor-prefixes' as *;
+@use '../utilities/variables/var-colors' as *;
 
 .fade {
   // display: none;
@@ -50,8 +54,8 @@ tbody.collapse.in { display: table-row-group; }
   --limited-stroke-on: transparent;
   --limited-stroke-off: inherit;
   --svg-icon-fill: transparent;
-  --svg-icon-stroke: #333;
-  --svg-icon-stroke_blue: #0094ff;
+  --svg-icon-stroke: #{brandColors(_dark-grey)};
+  --svg-icon-stroke_blue: #{brandColors(_vibrant-blue)};
   }
   &.collapsed{
     .svg--icon{ 
@@ -78,8 +82,8 @@ tbody.collapse.in { display: table-row-group; }
     --limited-stroke-on: inherit;
     --limited-stroke-off: transparent;
     --svg-icon-fill: transparent;
-    --svg-icon-stroke: #333;
-    --svg-icon-stroke_blue: #0094ff;
+    --svg-icon-stroke: #{brandColors(_dark-grey)};
+    --svg-icon-stroke_blue: #{brandColors(_vibrant-blue)};
     &.active{ 
       --limited-stroke-on: transparent;
       --limited-stroke-off: inherit;
@@ -102,30 +106,30 @@ tbody.collapse.in { display: table-row-group; }
 
 .favorite__active{
   .svg--icon{
-    #{--favorite-stroke-active}: map-get($brand-namecolors, 'vibrant-blue'); 
-    #{--favorite-fill-active}: map-get($brand-namecolors, 'vibrant-blue'); 
-    #{--favorite-stroke_blue-active}: map-get($brand-namecolors, 'white');
+    #{--favorite-stroke-active}: map.get($brand-namecolors, 'vibrant-blue'); 
+    #{--favorite-fill-active}: map.get($brand-namecolors, 'vibrant-blue'); 
+    #{--favorite-stroke_blue-active}: map.get($brand-namecolors, 'white');
   }
 }
 
 .star__active{
   .svg--icon{
-    #{--star-stroke-active}: map-get($brand-namecolors, 'vibrant-blue');
-    #{--star-fill-active}: map-get($brand-namecolors, 'vibrant-blue');
-    #{--star-stroke_blue-active}: map-get($brand-namecolors, 'vibrant-blue');
+    #{--star-stroke-active}: map.get($brand-namecolors, 'vibrant-blue');
+    #{--star-fill-active}: map.get($brand-namecolors, 'vibrant-blue');
+    #{--star-stroke_blue-active}: map.get($brand-namecolors, 'vibrant-blue');
   }
 }
 
 .active{
   .svg--icon{
-    #{--questions-stroke-active}: map-get($brand-namecolors, 'dark-grey');
-    #{--questions-fill-active}: map-get($brand-namecolors, 'dark-grey');
-    #{--questions-stroke_blue-active}: map-get($brand-namecolors, 'white');
-    #{--questions-fill_blue-active}: map-get($brand-namecolors, 'white');
-    #{--play-stroke}: map-get($brand-namecolors, 'vibrant-blue');
-    #{--play-stroke_blue}: map-get($brand-namecolors, 'vibrant-blue');
-    #{--play-fill-active}: map-get($brand-namecolors, 'vibrant-blue');
-    #{--play-fill_blue-active}: map-get($brand-namecolors, 'vibrant-blue');
+    #{--questions-stroke-active}: map.get($brand-namecolors, 'dark-grey');
+    #{--questions-fill-active}: map.get($brand-namecolors, 'dark-grey');
+    #{--questions-stroke_blue-active}: map.get($brand-namecolors, 'white');
+    #{--questions-fill_blue-active}: map.get($brand-namecolors, 'white');
+    #{--play-stroke}: map.get($brand-namecolors, 'vibrant-blue');
+    #{--play-stroke_blue}: map.get($brand-namecolors, 'vibrant-blue');
+    #{--play-fill-active}: map.get($brand-namecolors, 'vibrant-blue');
+    #{--play-fill_blue-active}: map.get($brand-namecolors, 'vibrant-blue');
   }
 }
 

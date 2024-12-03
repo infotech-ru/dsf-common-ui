@@ -4,12 +4,17 @@
 /* path: dsf-common-ui/src/scss/layout/_footer.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-paths' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-colors' as *;
+
 .footer{
   align-items: center;
-  margin: #{_brand-sizes(footer_marginTop)}px auto 0;
+  margin: #{brandSizes(footer_marginTop)}px auto 0;
   display: flex;
   justify-content: space-between;
-  height: #{_brand-sizes(footer_height)}px;
+  height: #{brandSizes(footer_height)}px;
   padding: 0 15px 0;
   border-radius: 0;
   .reset-view &,
@@ -18,19 +23,19 @@
     padding-bottom: 15px;
   }
   .error-view &{
-    color: _brand-colors(_white);
+    color: brandColors(_white);
     margin-top: 0;
     position: relative;
     z-index: 1;
     a{
-      color: _brand-colors(_vibrant-blue);
+      color: brandColors(_vibrant-blue);
     }
   }
   .mobile-view &{
       align-items: stretch;
       flex-direction: column;
       padding: 0;
-      height: #{_brand-sizes(footer__mobile_height)}px;
+      height: #{brandSizes(footer__mobile_height)}px;
   }
   &__left,
   &__right{
@@ -71,7 +76,7 @@
     margin: 0;
     .reset-view &,
     .guest-view &{
-      color: _brand-colors(_white);
+      color: brandColors(_white);
       font-size: 12px;
     }
     .mobile-view & {
@@ -80,7 +85,7 @@
     a{ 
       .reset-view.mobile-view &,
       .guest-view.mobile-view &{
-        color: _brand-colors(_vibrant-blue);
+        color: brandColors(_vibrant-blue);
       }
     }
     &_right{

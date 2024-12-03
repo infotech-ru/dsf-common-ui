@@ -4,6 +4,10 @@
 /* path: dsf-common-ui/src/scss/layout/_pageHeader.scss                       */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-zindex' as *;
+
 .pageHeader{
   align-items: center;
   display: flex;
@@ -12,7 +16,7 @@
     margin-bottom: 0;
   }
   &__title{
-    color: _brand-palette(pageHeader_color);
+    color: brandPalette(pageHeader_color);
     display: flex;
     justify-content: space-between;
     font-size: rem(18);
@@ -33,9 +37,9 @@
     margin-left: auto;
   }
   &_sticky{
-    background-color: _brand-palette(body_bgc);
+    background-color: brandPalette(body_bgc);
     position: sticky;
     top: 0;
-    z-index: _zindex(pageHeader);
+    z-index: zIndex(pageHeader);
   }
 }

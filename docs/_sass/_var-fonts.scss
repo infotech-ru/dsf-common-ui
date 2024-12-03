@@ -1,6 +1,9 @@
+@use '../functions/func_maps' as *;
+
 // @function _fontsList($keys...) {
 //   @return val($fontsList, $keys...);
 // }
+
 $fontsList: (
   "Roboto": (
     "normal": (
@@ -14,6 +17,9 @@ $fontsList: (
   )
 );
 
+@function fontSizes($keys...) {
+  @return val($fontSizes, $keys...);
+}
 @function _fontSizes($keys...) {
   @return val($fontSizes, $keys...);
 }
@@ -22,6 +28,7 @@ $fontSizes: (
   btn:                                                                       12,
   btnXs:                                                                     10,
   btnLg:                                                                     14,
+  blockquote:                                                                18,
   controlLabel:                                                              11,
   controlLabel__formFree:                                                    12,
   controlLabel_active__formFree:                                             11,
@@ -30,6 +37,13 @@ $fontSizes: (
   inputGroupElem:                                                            12,
   dropdown:                                                                  12,
   dropdownHeader:                                                            11,
+  headingH1:                                                                 36,
+  headingH2:                                                                 18,
+  headingH3:                                                                 16,
+  headingH4:                                                                 12,
+  headingH5:                                                                 14,
+  headingH6:                                                                 12,
+  output:                                                                    14,
   pagination:                                                                12,
   popoverHeader:                                                             14,
   toast:                                                                     12,
@@ -42,6 +56,9 @@ $fontSizes: (
   navTabs:                                                                   13,
 );
 
+@function fontWeight($keys...) {
+  @return val($fontWeight, $keys...);
+}
 @function _fontWeight($keys...) {
   @return val($fontWeight, $keys...);
 }
@@ -49,6 +66,12 @@ $fontWeight: (
   btn:                                                                      400,
   controlLabel:                                                             400,
   formElem:                                                                 400,
+  headings:                                                                 400,
+  headingH1:                                                                400,
+  headingH2:                                                                400,
+  headingH3:                                                                700,
+  headingH4:                                                                700,
+  headingH5:                                                                400,
   inputGroupElem:                                                           400,
   navPills:                                                                 400,
 );

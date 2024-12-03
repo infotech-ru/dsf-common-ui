@@ -4,6 +4,8 @@
 /* path: dsf-common-ui/src/scss/layout/_grid.scss                             */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/variables/var-bootstrap-v3' as *;
+@use '../utilities/mixins/breakpoints' as *;
 
 .container{
   @include makeContainer();

@@ -1,9 +1,11 @@
 @use "sass:map";
 
-@import "_func_maps";
-@import "_var-colors";
-@import "_var-fonts";
-@import "_var-sizes";
+@use  "../../src/scss/utilities/functions" as *;
+@use "../../src/scss/utilities/mixins" as *;
+
+@use "../../src/scss/utilities/variables/_var-colors" as *;
+@use "../../src/scss/utilities/variables/_var-fonts" as *;
+@use "../../src/scss/utilities/variables/_var-sizes" as *;
 
 
 @each $name, $value in $brand-namecolors {

@@ -4,6 +4,14 @@
 /* path: dsf-common-ui/src/scss/modules/_dropdown.scss                        */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_svg-url' as *;
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-placeholder' as *;
+@use '../utilities/variables/var-zindex' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-fonts' as *;
+@use '../utilities/variables/var-sizes' as *;
+
 
 // Dropdown arrow/caret
 .caret {
@@ -12,10 +20,10 @@
   height: 0;
   margin-left: 5px;
   vertical-align: middle;
-  border-top: $caret-width-base dashed;
-  border-top: $caret-width-base solid \9; // IE8
-  border-right: $caret-width-base solid transparent;
-  border-left: $caret-width-base solid transparent;
+  border-top: rem(brandSizes(caretDropdown_size)) dashed;
+  // border-top: rem(brandSizes(caretDropdown_size)) solid \9; // IE8
+  border-right: rem(brandSizes(caretDropdown_size)) solid transparent;
+  border-left: rem(brandSizes(caretDropdown_size)) solid transparent;
 }
 
 // The dropdown wrapper (div)
@@ -34,14 +42,14 @@
 .dropdown-menu {
   @extend %dropdown-menu;
   // float: left;
-  z-index: _zindex(dropdown-menu);
+  z-index: zIndex(dropdown-menu);
   .svg-icon-viewbox24{
     height: 24px;
     width: 24px;
   }
   // Dividers (basically an hr) within the dropdown
   .divider {
-    background-color: _brand-palette(menuDropdown_borderColor);
+    background-color: brandPalette(menuDropdown_borderColor);
     height: 1px;
     margin: 6px 0;
     overflow: hidden;
@@ -129,9 +137,9 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  color: _brand-colors(dropdownHeader_color);
-  font-size: rem(_fontSizes(dropdownHeader));
-  line-height: rem(_fontSizes(dropdownHeader));
+  color: brandColors(dropdownHeader_color);
+  font-size: rem(fontSizes(dropdownHeader));
+  line-height: rem(fontSizes(dropdownHeader));
   // padding: 3px 20px;
   padding: 6px 9px;
   white-space: nowrap; // as with > li > a
@@ -145,7 +153,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: ($zindex-dropdown - 10);
+  z-index: zIndex(dropdownBackdrop);
+  // z-index: ($zindex-dropdown - 10);
 }
 
 // Right aligned dropdowns
@@ -204,7 +213,7 @@
     }
   }
   .dropdown-menu{
-    padding-right: rem(calc(_brand-sizes(dropdownLink_paddingX) * 2));
+    padding-right: rem(calc(brandSizes(dropdownLink_paddingX) * 2));
     > li > a,
     .dropdown__link{
       box-sizing: content-box;

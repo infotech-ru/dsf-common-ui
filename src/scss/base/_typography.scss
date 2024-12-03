@@ -4,14 +4,22 @@
 /* path: dsf-common-ui/src/scss/base/_typography.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use "sass:math";
+@use 'sass:math';
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-fonts' as *;
+@use '../utilities/variables/var-lineHeights' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/mixins_bootstrap-v3/clearfix' as *;
+@use '../utilities/mixins_bootstrap-v3/text-overflow' as *;
+@use '../utilities/variables/var-paths' as *;
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  color: _brand-palette(haeding_color);
+  font-family: Roboto, Arial, 'Helvetica Neue', sans-serif;
+  font-weight: fontWeight(headings);
+  line-height: lineHeight(headings);
+  color: brandPalette(haeding_color);
 
   small,
   .small {
@@ -25,7 +33,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   // margin-top: $line-height-computed;
-  margin-bottom: 10px;
+  margin-bottom: rem(brandSizes(base_marginSize));
   small,
   .small {
     font-size: 65%;
@@ -43,41 +51,42 @@ h6, .h6 {
   }
 }
 
-h1, .h1 { font-size: $font-size-h1; }
+h1, .h1 { 
+  font-size: rem(fontSizes(headingH1));
+}
 h2, .h2 {
-  font-size: rem(18);
-  font-weight: 400;
-  line-height: rem(21);
+  font-size: rem(fontSizes(headingH2));
+  font-weight: fontWeight(headingH2);
+  line-height: rem(lineHeight(headingH2));
 }
 h3, .h3 {
-  font-size: rem(16);
-  font-weight: 700;
-  line-height: rem(18);
+  font-size: rem(fontSizes(headingH3));
+  font-weight: fontWeight(headingH3);
+  line-height: rem(lineHeight(headingH3));
 }
 h4, .h4 {
-  font-size: rem(12);
-  font-weight: 700;
-  line-height: rem(14);
+  font-size: rem(fontSizes(headingH4));
+  font-weight: fontWeight(headingH4);
+  line-height: rem(lineHeight(headingH4));
   text-transform: uppercase;
 }
-h5, .h5 { font-size: $font-size-h5; }
-h6, .h6 { font-size: $font-size-h6; }
+h5, .h5 { font-size: rem(fontSizes(headingH5)); }
+h6, .h6 { font-size: rem(fontSizes(headingH6)); }
 
 .dl-horizontal {
   dd {
     @include clearfix; // Clear the floated `dt` if an empty `dd` is present
   }
-
-  @media (min-width: $dl-horizontal-breakpoint) {
+  @media (min-width: gridBreakpoints(sm)) {
     dt {
       float: left;
-      width: ($dl-horizontal-offset - 20);
+      width: rem(brandSizes(dlHorizontalOffset) - 20);
       clear: left;
       text-align: right;
       @include text-overflow;
     }
     dd {
-      margin-left: $dl-horizontal-offset;
+      margin-left: rem(brandSizes(dlHorizontalOffset));
     }
   }
 }
@@ -110,7 +119,7 @@ h6, .h6 { font-size: $font-size-h6; }
 
 .phoneField{
   &__orange{ 
-    background-color: _brand-colors(_light-orange);
+    background-color: brandColors(_light-orange);
     display: inline-flex;
     font-size: 13px;
     line-height: 16px;
@@ -118,7 +127,7 @@ h6, .h6 { font-size: $font-size-h6; }
   }
   &__blue{
     align-items: center;
-    background-color: _brand-colors(_light-blue2);
+    background-color: brandColors(_light-blue2);
     display: flex;
     font-size: 14px;
     justify-content: space-between;
@@ -131,7 +140,7 @@ h6, .h6 { font-size: $font-size-h6; }
 
 .commentField{
   border-radius:0 10px 10px 10px;
-  background-color: _brand-colors(_light-blue2);
+  background-color: brandColors(_light-blue2);
   display: inline-flex;
   font-size: 12px;
   line-height: 14px;
@@ -142,7 +151,7 @@ h6, .h6 { font-size: $font-size-h6; }
   align-items: center;
   display: inline-flex;
   &__form-control{
-    height: rem(calc(_lineHeight(input) + 2));
+    height: rem(calc(lineHeight(input) + 2));
   }
   &_formControl{
     border: none;
@@ -167,11 +176,11 @@ h6, .h6 { font-size: $font-size-h6; }
     }
   }
   &:after{ 
-    color: _brand-palette(formControl-color);
+    color: brandPalette(formControl-color);
     content: attr(data-colorField); 
     display: block;
     padding-left: 5px;
-    font-size: rem(_fontSizes(formElem));
+    font-size: rem(fontSizes(formElem));
   }
 }
 

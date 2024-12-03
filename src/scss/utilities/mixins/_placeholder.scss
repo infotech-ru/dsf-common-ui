@@ -1,5 +1,7 @@
 // ------------------------------------------------------------------- Mixins //
 // Placeholder
+@use '../functions/func_fonts' as *;
+
 @mixin placeholder2($color: $placeholder-color, $fw: $placeholder-fw, $fz: $placeholder-fz) {
   &::-moz-placeholder {
     color: $color;

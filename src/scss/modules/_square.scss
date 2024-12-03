@@ -4,16 +4,20 @@
 /* path: dsf-common-ui/src/scss/modules/_square.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/functions/func_maps' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-sizes' as *;
 
 .square {
     align-items: center;
-    background-color: _brand-colors(_orange);
-    border: 1px solid _brand-colors(_orange);
+    background-color: brandColors(_orange);
+    border: 1px solid brandColors(_orange);
     // display: block;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: #{_brand-sizes(square_height)}px;
+    min-height: #{brandSizes(square_height)}px;
     height: var(--target-maxHeight, auto);
     padding: 7px 0 9px;
     text-align: center;

@@ -4,6 +4,17 @@
 /* path: dsf-common-ui/src/scss/modules/_commentBlock.scss                    */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use 'sass:color';
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-lineHeights' as *;
+@use '../utilities/variables/var-fonts' as *;
+@use '../utilities/variables/var-placeholder' as *;
+
+@use '../utilities/mixins_bootstrap-v3/clearfix' as *;
+@use '../utilities/mixins/placeholder' as *;
+
 .comment-block {
     &--field {
         margin-top: 15px;
@@ -14,11 +25,11 @@
             max-height: calc(100vh - 410px);
         }
         &--field-blue {
-            background-color: transparentize(_brand-colors(_light-blue), .95);
+            background-color: color.scale(rgba(brandColors(_light-blue), 1), $alpha: -95%, $space: rgb);
             padding: 15px 15px 10px;
         }
         &--field-yellow {
-            background-color: _brand-colors(_light-yellow2);
+            background-color: brandColors(_light-yellow2);
             padding: 10px;
         }
     }
@@ -44,7 +55,7 @@
         }
         .label-arrow {
             height: 8px;
-            fill: _brand-colors(_dark-grey);
+            fill: brandColors(_dark-grey);
             margin: 0 5px;
             width: 9px;
             + .label {
@@ -54,7 +65,7 @@
     }
     &--info-user,
     &--info-date {
-        color: _brand-colors(_grey4);
+        color: brandColors(_grey4);
         display: inline-block;
         font-size: 11px;
         font-weight: 400;
@@ -66,12 +77,12 @@
       svg{
         height: 11px;
         width: 6px;
-        #{--svg-icon-fill}: _brand-colors(_dark-grey);
-        #{--svg-icon-stroke}: _brand-colors(_dark-grey);
+        #{--svg-icon-fill}: brandColors(_dark-grey);
+        #{--svg-icon-stroke}: brandColors(_dark-grey);
       }
     }
     &--comment {
-        color: _brand-colors(_dark-grey);
+        color: brandColors(_dark-grey);
         font-size: rem(12);
         line-height: rem(14);
         padding: 10px;
@@ -82,12 +93,12 @@
         word-wrap: break-word;
         white-space: pre-wrap;
         .user-event & {
-            background-color: _brand-colors(_light-blue2);
+            background-color: brandColors(_light-blue2);
             border-radius: 0 10px 10px 10px;
             // float: left;
         }
         .current-user-comment & {
-            background-color: _brand-colors(_light-blue2);
+            background-color: brandColors(_light-blue2);
             border-radius: 0 10px 10px 10px;
             // float: right;
         }
@@ -98,13 +109,13 @@
 
             svg {
                 height: 14px;
-                fill: _brand-colors(_light-blue);
+                fill: brandColors(_light-blue);
             }
         }
     }
     .input-group {
-        background-color: _brand-colors(_transparent);
-        border-color: _brand-colors(_grey2);
+        background-color: brandColors(_transparent);
+        border-color: brandColors(_grey2);
         border-style: solid;
         border-width: 1px;
         border-radius: rem(0);
@@ -121,7 +132,7 @@
             &:first-child {
                 padding-left: 10px;
             }
-            @include placeholder2(_brand-colors(_dark-grey), 400, 12);
+            @include placeholder2(brandColors(_dark-grey), 400, 12);
             + .input-group-btn .btn {
                 display: flex;
                 height: 30px;
@@ -143,14 +154,14 @@
             }
             &:focus, &:hover {
                 // border: 1px solid #1E6393;
-                border-color: transparentize(_brand-colors(_grey2), .8);
+                border-color: color.scale(rgba(brandColors(_grey2), 1), $alpha: -80%, $space: rgb);
                 border-right: none;
                 outline: none;
                 box-shadow: none;
                 + .input-group-btn .btnsend {
                     // border-color: #1E6393;
                     svg {
-                        fill: _brand-colors(_light-blue);
+                        fill: brandColors(_light-blue);
                     }
                 }
             }
@@ -163,16 +174,16 @@
                 top: 3px;
                 &.loaded {
                     svg {
-                        fill: _brand-colors(_green);
+                        fill: brandColors(_green);
                     }
                 }
             }
             svg {
-                fill: _brand-colors(_dark-grey);
+                fill: brandColors(_dark-grey);
             }
             &:hover {
                 svg {
-                    fill: _brand-colors(_light-blue);
+                    fill: brandColors(_light-blue);
                 }
             }
         }
@@ -189,7 +200,7 @@
             transform: rotate(45deg);
         }
         svg {
-            fill: _brand-colors(_grey2);
+            fill: brandColors(_grey2);
             height: 23px;
             width: 23px;
         }
@@ -200,22 +211,22 @@
   $textareaFormControlPaddingX: 7;
   &_inputGroup {
     align-items: center;
-    background-color: _brand-palette(formControl-bgc);
-    border: 1px solid _brand-palette(formControl-borderColor);
-    border-radius: #{_brand-sizes(borderRadiusFormElem)}px;
+    background-color: brandPalette(formControl-bgc);
+    border: 1px solid brandPalette(formControl-borderColor);
+    border-radius: #{brandSizes(borderRadiusFormElem)}px;
     display: flex;
     justify-content: space-between;
-    height: rem(calc(_lineHeight(input) + 2)); //  + border-top and border-bottom
+    height: rem(calc(lineHeight(input) + 2)); //  + border-top and border-bottom
     position: relative;
     padding-right: 0px;
     &__whatsup{
-        border-color: _brand-colors(grey2);
+        border-color: brandColors(grey2);
     }
     &__bigHeight{
         align-items: flex-start;
         height: auto;
         padding-top: 6px;
-        min-height: rem(calc(_lineHeight(input) * 2 + 2));
+        min-height: rem(calc(lineHeight(input) * 2 + 2));
         // .btn-icon{
             // margin-top: 6px;
         // }
@@ -226,23 +237,23 @@
     border: none;
     box-shadow: none;
     border-radius: 0;
-    color: _brand-palette(formControl-color);
+    color: brandPalette(formControl-color);
     flex-basis: 100%;
-    font-size: rem(_fontSizes(formElem));
-    line-height: rem(calc(_lineHeight(input) + 2));
-    height: rem(calc(_lineHeight(input) + 2));
-    padding: 0 rem(calc((_brand-sizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
+    font-size: rem(fontSizes(formElem));
+    line-height: rem(calc(lineHeight(input) + 2));
+    height: rem(calc(lineHeight(input) + 2));
+    padding: 0 rem(calc((brandSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
     resize: none;
     // resize: vertical;
     overflow: hidden;
-    @include placeholder2(_brand-palette(formControl-placeholder), 400, 12);
+    @include placeholder2(brandPalette(formControl-placeholder), 400, 12);
     .commentBlock_inputGroup__whatsup &{
-      @include placeholder2(_brand-colors(grey), 400, 12);
+      @include placeholder2(brandColors(grey), 400, 12);
     }
     .commentBlock_inputGroup__bigHeight &{
         height: auto;
-        min-height: rem(calc(_lineHeight(input) * 2 + 2));
-        line-height: rem(calc(_fontSizes(formElem) + 2));
+        min-height: rem(calc(lineHeight(input) * 2 + 2));
+        line-height: rem(calc(fontSizes(formElem) + 2));
     }
     &__resizeVert{
         resize: vertical;
@@ -284,7 +295,7 @@
   &_info {
     &User,
     &Date {
-      color: _brand-palette(commentBlockInfo_color);
+      color: brandPalette(commentBlockInfo_color);
       display: inline-block;
       font-size: 11px;
       font-weight: 400;
@@ -293,7 +304,7 @@
     }
   }
   &_comments {
-    color: _brand-palette(commentBlockComments_color);
+    color: brandPalette(commentBlockComments_color);
     display: inline-flex;
     font-size: rem(12);
     flex-direction: column;
@@ -309,10 +320,10 @@
         min-width: auto;
     }
     // &__lightGreen{ 
-    //   background-color: _brand-colors(_light-green);
+    //   background-color: brandColors(_light-green);
     // }
     // &__lightBlue{
-    //   background-color: _brand-colors(_light-blue2);
+    //   background-color: brandColors(_light-blue2);
     // }
     &__shadow{
       box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);

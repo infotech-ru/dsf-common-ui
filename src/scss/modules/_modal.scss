@@ -4,6 +4,13 @@
 /* path: dsf-common-ui/src/scss/modules/_modal.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_svg-url' as *;
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-zindex' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-bootstrap-v3' as *;
+@use '../utilities/variables/var-fonts' as *;
 
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
@@ -25,7 +32,7 @@
   bottom: 0;
   left: 0;
   // z-index: $zindex-modal;
-  z-index: _zindex(modal);
+  z-index: zIndex(modal);
   -webkit-overflow-scrolling: touch;
 
   // Prevent Chrome on Windows from adding a focus outline. For details, see
@@ -53,20 +60,20 @@
   position: relative;
   width: auto;
   margin: 10px;
-  @media (min-width: _grid-breakpoints(sm)) {
+  @media (min-width: gridBreakpoints(sm)) {
     margin: 10px auto;
     width: 640px;
   }
-  @media (min-width: _grid-breakpoints(lg)) {
+  @media (min-width: grid-breakpoints(lg)) {
     margin: 30px auto;
   }
 }
 
 // Actual modal
 .modal-content {
-  background-color: _brand-palette(modal_bgc);
+  background-color: brandPalette(modal_bgc);
   // border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
-  border: 1px solid _brand-palette(modal_borderColor);
+  border: 1px solid brandPalette(modal_borderColor);
   border-radius: 2px;
   box-shadow: 0 3px 9px rgba(0,0,0,.5);
   background-clip: padding-box;
@@ -77,14 +84,14 @@
 
 // Modal background
 .modal-backdrop {
-  background-color: _brand-palette(modalBackdrop_bgc);
+  background-color: brandPalette(modalBackdrop_bgc);
   bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
   // z-index: $zindex-modal-background;
-  z-index: _zindex(modalBackground);
+  z-index: zIndex(modalBackground);
   // Fade for backdrop
   // &.fade { opacity: 0; }
   // &.in { opacity: .5; }
@@ -95,13 +102,13 @@
 .modal-header {
   align-items: center;
   // background-color: rgba(0, 0, 0, 0.03);
-  background-color: _brand-palette(modalHeader_bgc);
-  border-bottom: 1px solid _brand-palette(modalHeader_borderColor);
+  background-color: brandPalette(modalHeader_bgc);
+  border-bottom: 1px solid brandPalette(modalHeader_borderColor);
   box-shadow: inset rgba(0, 0, 0, 0.1) 0 -10px 10px -10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
-  padding: #{_brand-sizes(modal_paddingY)}px 30px #{_brand-sizes(modal_paddingY)}px #{_brand-sizes(modal_paddingX)}px;
+  padding: #{brandSizes(modal_paddingY)}px 30px #{brandSizes(modal_paddingY)}px #{brandSizes(modal_paddingX)}px;
   position: relative;
 
   // @include clearfix;
@@ -137,7 +144,7 @@
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
   position: relative;
-  padding: #{_brand-sizes(modal_paddingY)}px #{_brand-sizes(modal_paddingX)}px;
+  padding: #{brandSizes(modal_paddingY)}px #{brandSizes(modal_paddingX)}px;
   h5{
     font-size: rem(12);
     font-weight: 700;
@@ -145,7 +152,7 @@
     text-transform: uppercase;
   }
   .h2{
-    // color: _brand-colors(_dark-grey);
+    // color: brandColors(_dark-grey);
     font-size: rem(16);
     line-height: 18px;
     margin-top: 0;
@@ -165,13 +172,13 @@
 // Footer (for actions)
 .modal-footer {
   align-items: center;
-  background-color: _brand-palette(modalFooter_bgc);
-  border-top: 1px solid _brand-palette(modalFooter_borderColor);
+  background-color: brandPalette(modalFooter_bgc);
+  border-top: 1px solid brandPalette(modalFooter_borderColor);
   box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px -10px;
   display: flex;
   justify-content: space-between;
   // margin-top: 0;
-  padding: #{_brand-sizes(modal_paddingY)}px #{_brand-sizes(modal_paddingX)}px;
+  padding: #{brandSizes(modal_paddingY)}px #{brandSizes(modal_paddingX)}px;
   text-align: right; // right align buttons
   // @include clearfix; // clear it in case folks use .pull-* classes on buttons
   [class^="btn"]:first-child:last-child{
@@ -201,7 +208,7 @@
   overflow: scroll;
 }
 
-@media (min-width: _grid-breakpoints(md)) {
+@media (min-width: grid-breakpoints(md)) {
   // Используется через SIZE =>  ''
   .modal-responsive{
     min-width: 900px;
@@ -211,7 +218,7 @@
 
 // Используется через SIZE =>  ''
 
-@media (min-width: _grid-breakpoints(xs)) {
+@media (min-width: grid-breakpoints(xs)) {
   .modal-xs { 
     width: 320px;
   }
@@ -221,52 +228,52 @@
 }
 
 .modal-sm { 
-  @media (min-width: _grid-breakpoints(sm)) {
+  @media (min-width: grid-breakpoints(sm)) {
     width: 700px;
   }
 }
 
 .modal-md {
-  @media (min-width: _grid-breakpoints(sm)) {
+  @media (min-width: grid-breakpoints(sm)) {
     width: 90vw;
   }
-  @media (min-width: _grid-breakpoints(md)) {
+  @media (min-width: grid-breakpoints(md)) {
     width: 900px; 
   }
 }
 
 .modal-lg { 
-  @media (min-width: _grid-breakpoints(sm)) {
+  @media (min-width: grid-breakpoints(sm)) {
     width: 90vw;
   }
-  @media (min-width: _grid-breakpoints(lg)) {
+  @media (min-width: grid-breakpoints(lg)) {
     width: 1200px; 
   }
 }
 
 .modal-xl {
-  @media (min-width: _grid-breakpoints(sm)) {
+  @media (min-width: grid-breakpoints(sm)) {
     width: 90vw;
   }
-  @media (min-width: _grid-breakpoints(xl)) {
+  @media (min-width: grid-breakpoints(xl)) {
     width: 1240px;
   }
 }
 
 .modal-xxl {
-  @media (min-width: _grid-breakpoints(sm)) {
+  @media (min-width: grid-breakpoints(sm)) {
     width: 90vw;
   }
-  @media (min-width: _grid-breakpoints(xxl)) {
+  @media (min-width: grid-breakpoints(xxl)) {
     width: 1320px;
   }
 }
 
 .modal-xxxl {
-  @media (min-width: _grid-breakpoints(sm)) {
+  @media (min-width: grid-breakpoints(sm)) {
     width: 90vw;
   }
-  @media (min-width: _grid-breakpoints(xxxl)) {
+  @media (min-width: grid-breakpoints(xxxl)) {
     width: 1400px;
   }
 }

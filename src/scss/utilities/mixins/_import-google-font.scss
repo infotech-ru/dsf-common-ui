@@ -1,3 +1,5 @@
+@use '../functions/func_fonts' as *;
+
 @mixin import-google-font-family($import-ff) {
   @import url('#{function-import-google-font-family($import-ff)}');
 }

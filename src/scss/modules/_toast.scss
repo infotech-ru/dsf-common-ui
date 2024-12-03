@@ -4,23 +4,29 @@
 /* path: dsf-common-ui/src/scss/modules/_toast.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-fonts' as *;
+@use '../utilities/mixins/close' as *;
+
 .toast {
   // Prevents from shrinking in IE11, when in a flex container
   // See https://github.com/twbs/bootstrap/issues/28341
-  flex-basis: rem(_brand-sizes(toast_maxWidth));
-  max-width: rem(_brand-sizes(toast_maxWidth));
-  font-size: rem(_fontSizes(toast));
-  color: _brand-palette(toastBody_color);
-  background-color: _brand-palette(toastBody_bgc);
+  flex-basis: rem(brandSizes(toast_maxWidth));
+  max-width: rem(brandSizes(toast_maxWidth));
+  font-size: rem(fontSizes(toast));
+  color: brandPalette(toastBody_color);
+  background-color: brandPalette(toastBody_bgc);
   background-clip: padding-box;
-  border: 1px solid _brand-palette(toastBody_borderColor);
+  border: 1px solid brandPalette(toastBody_borderColor);
   // box-shadow: $toast-box-shadow;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   opacity: 0;
   // @include border-radius($toast-border-radius);
 
   &:not(:last-child) {
-    margin-bottom: rem(_brand-sizes(toast_paddingX));
+    margin-bottom: rem(brandSizes(toast_paddingX));
   }
 
   &.showing {
@@ -40,11 +46,11 @@
 .toast-header {
   display: flex;
   align-items: center;
-  background-color: _brand-palette(toastHeader_bgc);
+  background-color: brandPalette(toastHeader_bgc);
   background-clip: padding-box;
-  border-bottom: 1px solid _brand-palette(toastHeader_borderColor);
-  color: _brand-palette(toastHeader_color);
-  padding: rem(_brand-sizes(toast_paddingY)) rem(calc(_brand-sizes(toast_paddingX)) + 20) rem(_brand-sizes(toast_paddingY)) rem(_brand-sizes(toast_paddingX));
+  border-bottom: 1px solid brandPalette(toastHeader_borderColor);
+  color: brandPalette(toastHeader_color);
+  padding: rem(brandSizes(toast_paddingY)) rem(calc(brandSizes(toast_paddingX)) + 20) rem(brandSizes(toast_paddingY)) rem(brandSizes(toast_paddingX));
   position: relative;
   min-height: 30px;
   h4{
@@ -57,6 +63,6 @@
 }
 
 .toast-body {
-  background-color: _brand-palette(toastBody_bgc);
-  padding: rem(_brand-sizes(toast_paddingX)); // apply to both vertical and horizontal
+  background-color: brandPalette(toastBody_bgc);
+  padding: rem(brandSizes(toast_paddingX)); // apply to both vertical and horizontal
 }

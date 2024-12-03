@@ -5,7 +5,21 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-@use "sass:math";
+@use 'sass:color';
+@use 'sass:math';
+@use '../utilities/functions/func_svg-url' as *;
+@use '../utilities/functions/func_fonts' as *;
+
+@use '../utilities/variables/var-lineHeights' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-fonts' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-cursor' as *;
+@use '../utilities/variables/var-bootstrap-v3' as *;
+@use '../utilities/mixins/transition' as *;
+@use '../utilities/mixins/placeholder' as *;
+@use '../utilities/mixins_bootstrap-v3/forms' as *;
+@use '../utilities/mixins_bootstrap-v3/grid' as *;
 
 fieldset {
     padding: 0 12px 8px;
@@ -37,35 +51,35 @@ input[type="checkbox"] {
   &[disabled],
   &.disabled,
   fieldset[disabled] & {
-    cursor: $cursor-disabled;
+    cursor: brandCursor(formControlDisabled);
   }
 }
 select.input-sm {
-    line-height: rem(calc(_lineHeight(btn) + 2));
-    height: rem(calc(_lineHeight(btn) + 2));
+    line-height: rem(calc(lineHeight(btn) + 2));
+    height: rem(calc(lineHeight(btn) + 2));
 }
 
 // Adjust output element
 output {
   display: block;
-  padding-top: ($padding-base-vertical + 1);
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $input-color;
+  padding-top: rem(brandSizes(output_paddingY));
+  font-size: rem(fontSizes(output));
+  line-height: lineHeight(output);
+  color: brandPalette(output_color);
 }
 
 .control-label{
   $paddinFromLeft: 3;
     // letter-spacing: .5px;
     display: block;
-    color: _brand-palette(controlLabel_color);
-    font-size: rem(_fontSizes(controlLabel));
-    font-weight: _fontWeight(controlLabel);
+    color: brandPalette(controlLabel_color);
+    font-size: rem(fontSizes(controlLabel));
+    font-weight: fontWeight(controlLabel);
     line-height: 14px; // возможность добавлять иконку
-    margin-bottom: #{_brand-sizes(controlLabel_mb)}px;
+    margin-bottom: #{brandSizes(controlLabel_mb)}px;
     &:after {
       .required & {
-        color: _brand-palette(controlLabelError_color);
+        color: brandPalette(controlLabelError_color);
         content: '*';
         .css-formFree & {
           display: inline-block;
@@ -75,14 +89,14 @@ output {
       }
     }
     .css-formFree & {
-      font-size: rem(_fontSizes(controlLabel__formFree));
+      font-size: rem(fontSizes(controlLabel__formFree));
       left: 0;
       // left: rem($paddinFromLeft * -1);
-      padding-left: rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft));
-      // padding-right: rem(calc(_brand-sizes(formControl_paddingX) + 5));
-      padding-right: calc(#{_brand-sizes(caretSelect_size)}px  + #{_brand-sizes(iconLabel)}px + 10px);
+      padding-left: rem(calc(brandSizes(formControl_paddingX) - $paddinFromLeft));
+      // padding-right: rem(calc(brandSizes(formControl_paddingX) + 5));
+      padding-right: calc(#{brandSizes(caretSelect_size)}px  + #{brandSizes(iconLabel)}px + 10px);
       position: absolute;
-      line-height: rem(calc(_lineHeight(input) + 2));
+      line-height: rem(calc(lineHeight(input) + 2));
       margin-bottom: 0;
       // transition: color .2s ease-out;
       overflow: hidden;
@@ -91,7 +105,7 @@ output {
       transition: top .2s ease-out, font-size .2s ease-out;
       transform: translateX(0) translateY(0);
       transform-origin: 0% 100%;
-      top: rem(_fontSizes(controlLabel_active__formFree));
+      top: rem(fontSizes(controlLabel_active__formFree));
       // z-index: 0; // Если больше 0 - появляется некликабельный участок. Fix: pointer-events: none;
       z-index: 1;
       white-space: nowrap;
@@ -101,15 +115,15 @@ output {
     }
     &.active {
       .css-formFree & {
-        // background-color: _brand-palette(controlLabelActive_bgc);
-        background-color:var(--bg_color, _brand-palette(controlLabelActive_bgc));
-        font-size: rem(_fontSizes(controlLabel_active__formFree));
+        // background-color: brandPalette(controlLabelActive_bgc);
+        background-color:var(--bg_color, brandPalette(controlLabelActive_bgc));
+        font-size: rem(fontSizes(controlLabel_active__formFree));
         left: rem($paddinFromLeft * -1);
-        line-height: rem(_fontSizes(controlLabel_active__formFree));
-        padding-left: rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft));
-        // padding-right: rem(_brand-sizes(formControl_paddingX));
-        padding-right: calc(#{_brand-sizes(iconLabelActive)}px + 5px);
-        transform: translateX(rem(calc(_brand-sizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
+        line-height: rem(fontSizes(controlLabel_active__formFree));
+        padding-left: rem(calc(brandSizes(formControl_paddingX) - $paddinFromLeft));
+        // padding-right: rem(brandSizes(formControl_paddingX));
+        padding-right: calc(#{brandSizes(iconLabelActive)}px + 5px);
+        transform: translateX(rem(calc(brandSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
         top: 2px; // корректировка из-за line-height
         z-index: 1;
       }
@@ -118,7 +132,7 @@ output {
       .css-formFree & {
         left: auto;
         position: relative;
-        padding-right: rem(_brand-sizes(controlLabel_mr));
+        padding-right: rem(brandSizes(controlLabel_mr));
         top: auto;
         transform: none;
       }
@@ -127,26 +141,26 @@ output {
 
 .form-control {
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  // background-color: _brand-palette(formControl-bgc);
-  background-color:var(--bg_color, _brand-palette(formControl-bgc));
-  border-radius: #{_brand-sizes(borderRadiusFormElem)}px;
-  border: 1px solid _brand-palette(formControl-borderColor);
+  // background-color: brandPalette(formControl-bgc);
+  background-color:var(--bg_color, brandPalette(formControl-bgc));
+  border-radius: #{brandSizes(borderRadiusFormElem)}px;
+  border: 1px solid brandPalette(formControl-borderColor);
   // @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
   box-shadow: none;
-  color: _brand-palette(formControl-color);
+  color: brandPalette(formControl-color);
   display: block;
-  height: rem(calc(_lineHeight(input) + 2)); //  + border-top and border-bottom
-  font-size: rem(_fontSizes(formElem));
-  font-weight: _fontWeight(formElem);
-  line-height: rem(_lineHeight(input));
-  padding: 0 rem(_brand-sizes(formControl_paddingX));
+  height: rem(calc(lineHeight(input) + 2)); //  + border-top and border-bottom
+  font-size: rem(fontSizes(formElem));
+  font-weight: fontWeight(formElem);
+  line-height: rem(lineHeight(input));
+  padding: 0 rem(brandSizes(formControl_paddingX));
   width: 100%;
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
   // Customize the `:focus` state to imitate native WebKit styles.
   // Placeholder
   // @include placeholder;
-  @include placeholder2(_brand-palette(formControl-placeholder), 400, 12);
+  @include placeholder2(brandPalette(formControl-placeholder), 400, 12);
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
     background-color: transparent;
@@ -161,13 +175,13 @@ output {
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
-    background-color: $input-bg-disabled;
+    background-color: brandPalette(formControlDisabled-bgc);
     opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
   }
 
   &[disabled],
   fieldset[disabled] & {
-    cursor: $cursor-disabled;
+    cursor: brandCursor(formControlDisabled);
   }
   &:focus{
     border-color: inherit;
@@ -191,26 +205,26 @@ output {
       }
       &::-moz-placeholder {
           .css-formFree &{ 
-              color: _brand-palette(controlLabel_color);
-              font-size: rem(_fontSizes(controlLabel__formFree));
+              color: brandPalette(controlLabel_color);
+              font-size: rem(fontSizes(controlLabel__formFree));
           }
       }
       &:-moz-placeholder {
           .css-formFree &{ 
-              color: _brand-palette(controlLabel_color);
-              font-size: rem(_fontSizes(controlLabel__formFree));
+              color: brandPalette(controlLabel_color);
+              font-size: rem(fontSizes(controlLabel__formFree));
           }
       }
       &:-ms-input-placeholder {
           .css-formFree &{ 
-              color: _brand-palette(controlLabel_color);
-              font-size: rem(_fontSizes(controlLabel__formFree));
+              color: brandPalette(controlLabel_color);
+              font-size: rem(fontSizes(controlLabel__formFree));
           }
       }
       &::-webkit-input-placeholder {
           .css-formFree &{ 
-              color: _brand-palette(controlLabel_color);
-              font-size: rem(_fontSizes(controlLabel__formFree));
+              color: brandPalette(controlLabel_color);
+              font-size: rem(fontSizes(controlLabel__formFree));
           }
       }
     }
@@ -231,26 +245,26 @@ output {
   &__placeholder{
     &::-moz-placeholder {
       .css-formFree & {
-        color: _brand-palette(controlLabel_color);
-        font-size: rem(_fontSizes(controlLabel__formFree));
+        color: brandPalette(controlLabel_color);
+        font-size: rem(fontSizes(controlLabel__formFree));
       }
     }
     &:-moz-placeholder {
       .css-formFree & {
-        color: _brand-palette(controlLabel_color);
-        font-size: rem(_fontSizes(controlLabel__formFree));
+        color: brandPalette(controlLabel_color);
+        font-size: rem(fontSizes(controlLabel__formFree));
       }
     }
     &:-ms-input-placeholder {
       .css-formFree & {
-        color: _brand-palette(controlLabel_color);
-        font-size: rem(_fontSizes(controlLabel__formFree));
+        color: brandPalette(controlLabel_color);
+        font-size: rem(fontSizes(controlLabel__formFree));
       }
     }
     &::-webkit-input-placeholder {
       .css-formFree & {
-        color: _brand-palette(controlLabel_color);
-        font-size: rem(_fontSizes(controlLabel__formFree));
+        color: brandPalette(controlLabel_color);
+        font-size: rem(fontSizes(controlLabel__formFree));
       }
     }
   }
@@ -259,11 +273,11 @@ output {
 
 // Reset height for `textarea`s
 textarea.form-control {
-  border-radius: rem(_brand-sizes(borderRadiusFormElem));
+  border-radius: rem(brandSizes(borderRadiusFormElem));
   height: auto;
-  line-height: rem(calc(_fontSizes(formElem) + 2));
-  min-height: rem(calc(_lineHeight(input) + 2));
-  padding: 6px rem(_brand-sizes(formControl_paddingX)) 2px;
+  line-height: rem(calc(fontSizes(formElem) + 2));
+  min-height: rem(calc(lineHeight(input) + 2));
+  padding: 6px rem(brandSizes(formControl_paddingX)) 2px;
   resize: vertical;
 }
 
@@ -282,7 +296,7 @@ textarea.form-control {
   input[type="datetime-local"],
   input[type="month"] {
     &.form-control {
-      line-height: $input-height-base;
+      line-height: rem(lineHeight(input));
     }
 
   }
@@ -295,10 +309,10 @@ textarea.form-control {
 
 .form-group {
   // margin-bottom: $form-group-margin-bottom;
-  margin-bottom: rem(_brand-sizes(formGroup_mb));
+  margin-bottom: rem(brandSizes(formGroup_mb));
   .css-formFree &{ 
-    margin-bottom: rem(calc(_brand-sizes(formGroup__formFree_mb) - _fontSizes(controlLabel_active__formFree)));
-    padding-top: rem(_fontSizes(controlLabel_active__formFree));
+    margin-bottom: rem(calc(brandSizes(formGroup__formFree_mb) - fontSizes(controlLabel_active__formFree)));
+    padding-top: rem(fontSizes(controlLabel_active__formFree));
     position: relative;
   }
   &__10{
@@ -324,12 +338,12 @@ textarea.form-control {
   &.disabled,
   fieldset[disabled] & {
     label {
-      cursor: $cursor-disabled;
+      cursor: brandCursor(formControlDisabled);
     }
   }
 
   label {
-    min-height: $line-height-computed; // Ensure the input doesn't jump when there is no text
+    min-height: 20px; // Ensure the input doesn't jump when there is no text
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: 400;
@@ -369,7 +383,7 @@ textarea.form-control {
   // These are used directly on <label>s
   &.disabled,
   fieldset[disabled] & {
-    cursor: $cursor-disabled;
+    cursor: brandCursor(formControlDisabled);
   }
 }
 .radio-inline + .radio-inline,
@@ -384,42 +398,42 @@ textarea.form-control {
 // a horizontal form layout.
 
 .form-control-static {
-  color: _brand-palette(formControl-color);
+  color: brandPalette(formControl-color);
   // min-height: ($line-height-computed + $font-size-base);
-  font-size: rem(_fontSizes(formElem));
-  font-weight: _fontWeight(formElem);
+  font-size: rem(fontSizes(formElem));
+  font-weight: fontWeight(formElem);
   min-height: auto;
   // Size it appropriately next to real form controls
-  padding-top: ($padding-base-vertical + 1);
-  padding-bottom: ($padding-base-vertical + 1);
+  padding-top: rem(brandSizes(formControlStatic_paddingY));
+  padding-bottom: rem(brandSizes(formControlStatic_paddingY));
   // Remove default margin from `p`
   margin-bottom: 0;
   padding-right: 0;
   padding-left: 0;
   &__height{
-    height: rem(calc(_lineHeight(input) + 2));
+    height: rem(calc(lineHeight(input) + 2));
   }
   .css-formFree &{ 
-    padding-left: rem(_brand-sizes(formControl_paddingX));
-    padding-right: rem(_brand-sizes(formControl_paddingX));
+    padding-left: rem(brandSizes(formControl_paddingX));
+    padding-right: rem(brandSizes(formControl_paddingX));
   }
 }
 
 // Feedback states
 .has-success {
-  @include form-control-validation(_brand-palette(hasSuccess_color), _brand-palette(hasSuccess_border), _brand-palette(hasSuccess_bgc));
+  @include form-control-validation(brandPalette(hasSuccess_color), brandPalette(hasSuccess_border), brandPalette(hasSuccess_bgc));
 }
 .has-warning {
-  @include form-control-validation(_brand-palette(hasWarning_color), _brand-palette(hasWarning_border), _brand-palette(hasWarning_bgc));
+  @include form-control-validation(brandPalette(hasWarning_color), brandPalette(hasWarning_border), brandPalette(hasWarning_bgc));
 }
 .has-error {
-  @include form-control-validation(_brand-palette(hasDanger_color), _brand-palette(hasDanger_border), _brand-palette(hasDanger_bgc));
+  @include form-control-validation(brandPalette(hasDanger_color), brandPalette(hasDanger_border), brandPalette(hasDanger_bgc));
 }
 
 // Reposition feedback icon if input has visible label above
 .has-feedback label {
   & ~ .form-control-feedback {
-    top: ($line-height-computed + 5); // Height of the `label` and its margin
+    top: 25px; // Height of the `label` and its margin
   }
   &.sr-only ~ .form-control-feedback {
     top: 0;
@@ -437,7 +451,7 @@ textarea.form-control {
   line-height: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: lighten($text-color, 25%); // lighten the text some for contrast
+  color: brandPalette(controlLabelActive_color);
   &:empty { // style.css
       display: none;
   }
@@ -453,7 +467,7 @@ textarea.form-control {
 @mixin form-inline {
 
   // Kick in the inline
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: gridBreakpoints(sm)) {
     // Inline-block all the things for "inline"
     .form-group {
       display: inline-block;
@@ -535,7 +549,7 @@ textarea.form-control {
   .checkbox,
   .radio-inline,
   .checkbox-inline {
-    padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+    padding-top: 7px; // Default padding plus a border
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -543,7 +557,7 @@ textarea.form-control {
   // and other content below items
   .radio,
   .checkbox {
-    min-height: ($line-height-computed + ($padding-base-vertical + 1));
+    min-height: 27px;
   }
 
   // Make form groups behave like rows
@@ -553,9 +567,9 @@ textarea.form-control {
 
   // Reset spacing and right align labels, but scope to media queries so that
   // labels on narrow viewports stack the same as a default form example.
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: gridBreakpoints(sm)) {
     .control-label {
-      padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+      padding-top: 7px; // Default padding plus a border
       margin-bottom: 0;
       text-align: right;
     }
@@ -566,7 +580,7 @@ textarea.form-control {
   // Reposition the icon because it's now within a grid column and columns have
   // `position: relative;` on them. Also accounts for the grid gutter padding.
   .has-feedback .form-control-feedback {
-    right: floor(math.div($grid-gutter-width, 2));
+    right: math.floor(math.div($grid-gutter-width, 2));
   }
 }
 
@@ -576,7 +590,7 @@ textarea.form-control {
   &.btn {
     background-color: transparent;
     background-image: none;
-    border-color: _brand-palette(formControl-borderColor);
+    border-color: brandPalette(formControl-borderColor);
     // .css-formFree & {
     // }
   }
@@ -587,8 +601,8 @@ textarea.form-control {
   flex-direction: column;
   width: 100%;
   &Container{
-    border-radius: #{_brand-sizes(borderRadiusFormElem)}px;
-    border: 1px solid _brand-palette(formControl-borderColor);
+    border-radius: #{brandSizes(borderRadiusFormElem)}px;
+    border: 1px solid brandPalette(formControl-borderColor);
     display: flex;
     min-height: 36px;
     outline: none;
@@ -607,7 +621,7 @@ textarea.form-control {
     height: 21px; // равен высоте .redactor-toolbar + отсуп
     position: absolute;
     top: 31px;
-    right: rem(_brand-sizes(formControl_paddingX));
+    right: rem(brandSizes(formControl_paddingX));
     // width: 56px;
     white-space: nowrap;
     input[type="file"]{
@@ -621,18 +635,18 @@ textarea.form-control {
   }
   &FileListBlock{
     width: 100%;
-    padding-left: rem(_brand-sizes(formControl_paddingX));
+    padding-left: rem(brandSizes(formControl_paddingX));
   }
   &BoxWrapper{
     padding: 5px 77px 0 0;
-    padding-left: rem(_brand-sizes(formControl_paddingX));
+    padding-left: rem(brandSizes(formControl_paddingX));
     min-height: 14px;
     width: 100%;
     word-break: break-word;
     .redactor-toolbar {
       box-shadow: none;
       li a{
-        color: _brand-palette(formControl-color);
+        color: brandPalette(formControl-color);
         font-size: 16px;
         margin-right: 5px;
         padding: 0 3px;
@@ -654,8 +668,8 @@ textarea.form-control {
       margin-bottom: 0;
     }
     .redactor-placeholder::after{
-      color: _brand-palette(controlLabel_color) !important;
-      font-size: rem(_fontSizes(controlLabel__formFree));
+      color: brandPalette(controlLabel_color) !important;
+      font-size: rem(fontSizes(controlLabel__formFree));
       left: 0px;
       top: 10px;
     }
@@ -667,28 +681,28 @@ textarea.form-control {
 }
 
 .labelTooltipIcon{
+    background-color: color.scale(rgba(brandColors(_white), 1), $alpha: -30%, $space: rgb);
     display: inline-block;
-    background-color: transparentize(_brand-colors(_white), .3);
-    height: #{_brand-sizes(iconLabelActive)}px;
+    height: #{brandSizes(iconLabelActive)}px;
     top: 50%;
     right: 0px;
     padding-left: 5px;
-    margin-top: calc(#{_brand-sizes(iconLabelActive)}px * -0.5);
+    margin-top: calc(#{brandSizes(iconLabelActive)}px * -0.5);
     width: 22px;
     svg { 
-        height: #{_brand-sizes(iconLabelActive)}px;
-        width: #{_brand-sizes(iconLabelActive)}px;
+        height: #{brandSizes(iconLabelActive)}px;
+        width: #{brandSizes(iconLabelActive)}px;
     }
     .css-formFree &{
-        width: #{_brand-sizes(iconLabel)}px;
-        height: #{_brand-sizes(iconLabel)}px;
+        width: #{brandSizes(iconLabel)}px;
+        height: #{brandSizes(iconLabel)}px;
         position: absolute;
         top: 50%;
         margin-top: -8px;
         right: 24px;
         svg { 
-            height: #{_brand-sizes(iconLabel)}px;
-            width: #{_brand-sizes(iconLabel)}px;
+            height: #{brandSizes(iconLabel)}px;
+            width: #{brandSizes(iconLabel)}px;
         }
     }
     .css-formFree .checkbox-item label.checkbox &{
@@ -699,16 +713,16 @@ textarea.form-control {
     }
     .control-label.active &{
         .css-formFree &{
-            background-color: transparentize(_brand-colors(_white), .3);
-            height: #{_brand-sizes(iconLabelActive)}px;
+            background-color: color.scale(rgba(brandColors(_white), 1), $alpha: -30%, $space: rgb);
+            height: #{brandSizes(iconLabelActive)}px;
             top: 50%;
             right: 0px;
             padding-left: 5px;
-            margin-top: calc(#{_brand-sizes(iconLabelActive)}px * -0.5);
+            margin-top: calc(#{brandSizes(iconLabelActive)}px * -0.5);
             width: 22px;
             svg { 
-                height: #{_brand-sizes(iconLabelActive)}px;
-                width: #{_brand-sizes(iconLabelActive)}px;
+                height: #{brandSizes(iconLabelActive)}px;
+                width: #{brandSizes(iconLabelActive)}px;
             }
         }
     }

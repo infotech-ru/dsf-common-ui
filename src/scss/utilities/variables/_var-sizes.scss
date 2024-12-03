@@ -1,7 +1,13 @@
-@function _brand-sizes($keys...) {
+@use '../functions/func_maps' as *;
+
+@function brandSizes($keys...) {
+  @return val($brand-sizes, $keys...);
+}
+@function brandSizes($keys...) {
   @return val($brand-sizes, $keys...);
 }
 $brand-sizes: (
+  base_marginSize:                 10,
   borderRadiusFormElem:            1,
   border-radius-base:              4,
   border-radius-large:             6,
@@ -14,6 +20,7 @@ $brand-sizes: (
   btnLg-paddingY:                  0,
   btnIcon_height:                  16,
   caret_size:                      6,
+  caretDropdown_size:              4,
   caretSelect_size:                16,
   carousel-thumbs_size:            64,
   carousel-thumbsBig_size:         108,
@@ -27,11 +34,13 @@ $brand-sizes: (
   controlLabel_mb:                 3,
   controlLabel_mr:                 5,
   dropdownLink_minH:               36,
+  dlHorizontalOffset:              180,
   dropdownLink_paddingX:           10,
   footer_height:                   52,
   footer_marginTop:                10,
   footer__mobile_height:           124,
   formControl_paddingX:            10,
+  formControlStatic_paddingY:      7,
   formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
   formGroup__formFree_mb:          25,
   header_marginBottom:             10,
@@ -39,11 +48,14 @@ $brand-sizes: (
   headerBottom_height:             34,
   iconLabel:                       16,
   iconLabelActive:                 12,
+  inputGroupAddon_paddingX:        12,
+  inputGroupAddon_paddingY:        6,
   modalSidebar_padding:            16,
   modal_paddingX:                  15,
   modal_paddingY:                  10,
   navPills-paddingX:               9,
   navPills-borderWidth:            1,
+  output_paddingY:                 7,
   paginationItem_borderRadius:     1,
   paginationItem_height:           20,
   paginationItem_width:            20,
@@ -92,3 +104,5 @@ $posSizes:(
   top: (0, 50, 100, 5px, 10px, 20px, auto),
   bottom: (0, 50, 100, 5px, 10px, 20px, auto)
 );
+
+$browser-context: 16;

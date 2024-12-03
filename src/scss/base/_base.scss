@@ -5,7 +5,14 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-@use "sass:math";
+@use 'sass:math';
+@use '../utilities/functions/func_fonts' as *;
+@use '../utilities/variables/var-colors' as *;
+@use '../utilities/variables/var-fonts' as *;
+@use '../utilities/variables/var-lineHeights' as *;
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-lineHeights' as *;
+
 :root{
   @each $name, $value in $brand-colors {
     --color#{$name}: #{$value};
@@ -40,11 +47,11 @@ html{
   // scrollbar-width: thin;
 }
 body {
-  background-color: _brand-palette(body_bgc);
-  color: _brand-palette(body_color);
+  background-color: brandPalette(body_bgc);
+  color: brandPalette(body_color);
   font-family: Roboto, Arial, 'Helvetica Neue', sans-serif;
-  font-size: rem(_fontSizes(body));
-  line-height: rem(_lineHeight(body));
+  font-size: rem(fontSizes(body));
+  line-height: rem(lineHeight(body));
   // height: 100vh;  // спорное правило
   min-height: 100vh;  // спорное правило
   text-rendering: optimizeLegibility;
@@ -62,42 +69,42 @@ body {
 }
 
 a {
-  color: _brand-palette(link_color);
-  #{--svg-valute-fill}: _brand-palette(link_color);
+  color: brandPalette(link_color);
+  #{--svg-valute-fill}: brandPalette(link_color);
   text-decoration: none;
   &:hover,
   &:focus-visible {
-    color: _brand-palette(linkHover_color);
-    #{--svg-valute-fill}: _brand-palette(linkHover_color);
+    color: brandPalette(linkHover_color);
+    #{--svg-valute-fill}: brandPalette(linkHover_color);
     outline: none;
     text-decoration: none;
   }
   &.dashed {
-    border-bottom: _brand-palette(link_color) 1px dashed;
+    border-bottom: brandPalette(link_color) 1px dashed;
     text-decoration: none;
     &.empty {
-      border-bottom-color: _brand-palette(linkEmpty_color);
-      color: _brand-palette(linkEmpty_color);
+      border-bottom-color: brandPalette(linkEmpty_color);
+      color: brandPalette(linkEmpty_color);
     }
     &.incomplete {
-      border-bottom-color: _brand-palette(linkIncomplete_color);
-      color: _brand-palette(linkIncomplete_color);
+      border-bottom-color: brandPalette(linkIncomplete_color);
+      color: brandPalette(linkIncomplete_color);
     }
   }
 }
 
 hr {
   border: 0;
-  border-top: 1px solid _brand-palette(hr_border);
+  border-top: 1px solid brandPalette(hr_border);
   margin-top: 10px;
   margin-bottom: 10px;
 
 }
 
 code {
-  background-color: _brand-palette(code_bgc);
-  border-radius: _brand-sizes(border-radius-base);
-  color: _brand-palette(code_color);
+  background-color: brandPalette(code_bgc);
+  border-radius: brandSizes(border-radius-base);
+  color: brandPalette(code_color);
   font-size: 90%;
   padding: 2px 4px;
   pre &{
@@ -111,14 +118,14 @@ code {
 }
 
 pre {
-  background-color: _brand-palette(pre_bgc);
-  border: 1px solid _brand-palette(pre_color);
-  border-radius: _brand-sizes(border-radius-base);
-  color: _brand-palette(pre_color);
+  background-color: brandPalette(pre_bgc);
+  border: 1px solid brandPalette(pre_color);
+  border-radius: brandSizes(border-radius-base);
+  color: brandPalette(pre_color);
   display: block;
-  font-size: rem(calc(_fontSizes(body) - 1));
+  font-size: rem(calc(fontSizes(body) - 1));
   margin: 0 0 10px;
-  line-height: rem(_lineHeight(body));
+  line-height: rem(lineHeight(body));
   padding: 2px 4px;
   word-break: break-all;
   word-wrap: break-word;
@@ -142,16 +149,16 @@ ol {
 mark,
 .mark {
   padding: .2em;
-  background-color: _brand-palette(mark_bgc);
+  background-color: brandPalette(mark_bgc);
 }
 
 dl {
   margin-top: 0; // Remove browser default
-  margin-bottom: $line-height-computed;
+  margin-bottom: rem(brandSizes(base_marginSize));
 }
 dt,
 dd {
-  line-height: $line-height-base;
+  line-height: rem(lineHeight(body));
 }
 dt {
   font-weight: 700;
@@ -161,10 +168,10 @@ dd {
 }
 
 blockquote {
-  padding: math.div($line-height-computed, 2) $line-height-computed;
-  margin: 0 0 $line-height-computed;
-  font-size: $blockquote-font-size;
-  border-left: 5px solid $blockquote-border-color;
+  padding: rem(math.div(brandSizes(base_marginSize), 2)) rem(brandSizes(base_marginSize));
+  margin: 0 0 rem(brandSizes(base_marginSize));
+  font-size: rem(fontSizes(blockquote));
+  border-left: 5px solid brandPalette(blockquote_borderColor);
 
   p,
   ul,
@@ -181,8 +188,8 @@ blockquote {
   .small {
     display: block;
     font-size: 80%; // back to default font-size
-    line-height: $line-height-base;
-    color: $blockquote-small-color;
+    line-height: rem(lineHeight(body));
+    color: brandPalette(blockquote_color);
 
     &:before {
       content: "\2014 \00A0"; // em dash, nbsp

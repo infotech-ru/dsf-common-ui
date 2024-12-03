@@ -4,6 +4,8 @@
 /* path: dsf-common-ui/src/scss/helpers/_animations.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use '../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/var-colors' as *;
 
 .svg--looper {
   position: absolute;
@@ -13,7 +15,7 @@
   z-index: 0;
 
   .error-view &{
-    bottom: -#{_brand-sizes(footer_height)}px;
+    bottom: -#{brandSizes(footer_height)}px;
     top: auto;
   }
 
@@ -26,11 +28,11 @@
   }
 
   &-linearGradientStopStart {
-    stop-color: _brand-colors(_vibrant-blue);
+    stop-color: brandColors(_vibrant-blue);
   }
 
   &-linearGradientStopEnd {
-    stop-color: _brand-colors(_green);
+    stop-color: brandColors(_green);
   }
 }
 
