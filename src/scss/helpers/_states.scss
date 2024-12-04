@@ -5,9 +5,9 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:map';
-@use '../utilities/mixins/transition' as *;
-@use '../utilities/mixins_bootstrap-v3/vendor-prefixes' as *;
-@use '../utilities/variables/var-colors' as *;
+@use './../utilities/mixins/transition' as *;
+@use './../utilities/mixins_bootstrap-v3/vendor-prefixes' as *;
+@use './../utilities/variables/var-colors' as *;
 
 .fade {
   // display: none;

@@ -4,10 +4,10 @@
 /* path: dsf-common-ui/src/scss/layout/_footer.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-paths' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-colors' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-paths' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-colors' as *;
 
 .footer{
   align-items: center;

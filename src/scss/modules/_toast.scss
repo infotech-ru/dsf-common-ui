@@ -4,11 +4,11 @@
 /* path: dsf-common-ui/src/scss/modules/_toast.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-fonts' as *;
-@use '../utilities/mixins/close' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/mixins/close' as *;
 
 .toast {
   // Prevents from shrinking in IE11, when in a flex container

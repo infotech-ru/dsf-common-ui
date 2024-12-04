@@ -4,8 +4,8 @@
 /* path: dsf-common-ui/src/scss/helpers/_animations.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-colors' as *;
 
 .svg--looper {
   position: absolute;

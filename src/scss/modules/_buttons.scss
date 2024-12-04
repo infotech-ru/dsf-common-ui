@@ -6,12 +6,12 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:map';
 
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-fonts' as *;
-@use '../utilities/variables/var-lineHeights' as *;
-@use '../utilities/mixins_bootstrap-v3/vendor-prefixes' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/variables/var-lineHeights' as *;
+@use './../utilities/mixins_bootstrap-v3/vendor-prefixes' as *;
 
 %btn {
   background-image: none;

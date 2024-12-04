@@ -2,8 +2,8 @@
 @use 'sass:map';
 @use 'sass:meta';
 @use 'sass:string';
-@use '../utilities/variables/var-fonts' as *;
-@use '../utilities/variables/var-paths' as *;
+@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/variables/var-paths' as *;
 
 @each $fontFamily, $fontStyle in $fontsList {
   $fontStyles: map.keys(map.get($fontsList, $fontFamily));

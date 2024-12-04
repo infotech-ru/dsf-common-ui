@@ -4,9 +4,9 @@
 /* path: dsf-common-ui/src/scss/modules/_dialog.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-sizes' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-sizes' as *;
 
 .ui-dialog {
   background-clip: padding-box;

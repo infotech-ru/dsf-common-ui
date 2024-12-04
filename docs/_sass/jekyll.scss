@@ -1,11 +1,11 @@
 @use "sass:map";
 
-@use  "../../src/scss/utilities/functions" as *;
-@use "../../src/scss/utilities/mixins" as *;
+@use  "./../../src/scss/utilities/functions" as *;
+@use "./../../src/scss/utilities/mixins" as *;
 
-@use "../../src/scss/utilities/variables/_var-colors" as *;
-@use "../../src/scss/utilities/variables/_var-fonts" as *;
-@use "../../src/scss/utilities/variables/_var-sizes" as *;
+@use "./../../src/scss/utilities/variables/_var-colors" as *;
+@use "./../../src/scss/utilities/variables/_var-fonts" as *;
+@use "./../../src/scss/utilities/variables/_var-sizes" as *;
 
 
 @each $name, $value in $brand-namecolors {

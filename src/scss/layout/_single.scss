@@ -5,7 +5,7 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-@use '../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-sizes' as *;
 
 .mainContainer{
   min-height: calc(100vh - #{brandSizes(headerBottom_height)}px - #{brandSizes(headerTop_height)}px - #{brandSizes(footer_height)}px - #{brandSizes(footer_marginTop)}px - #{brandSizes(header_marginBottom)}px);

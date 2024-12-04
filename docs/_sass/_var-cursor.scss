@@ -1,8 +1,0 @@
-@use '../functions/func_maps' as *;
-
-@function brandCursor($keys...) {
-  @return val($brandCursor, $keys...);
-}
-$brandCursor: (
-  formControlDisabled:                      not-allowed,
-);

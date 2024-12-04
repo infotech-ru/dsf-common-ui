@@ -1,7 +1,7 @@
 @use 'sass:color';
 @use 'sass:math';
-@use '../functions/func_maps' as *;
-@use '../mixins/assert' as *;
+@use './../functions/func_maps' as *;
+@use './../mixins/assert' as *;
 
 $bootstrap-sass-asset-helper: false !default;
 

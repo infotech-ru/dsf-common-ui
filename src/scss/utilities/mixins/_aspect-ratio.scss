@@ -4,7 +4,7 @@
 // .any-class {@include aspect-ratio(16, 9);}
 @use 'sass:map';
 @use 'sass:math';
-@use '../functions/func_helpers-functions' as *;
+@use './../functions/func_helpers-functions' as *;
 
 @mixin aspect-ratio($width, $height) {
   position: relative;

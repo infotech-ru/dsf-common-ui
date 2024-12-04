@@ -4,11 +4,11 @@
 /* path: dsf-common-ui/src/scss/modules/_checkbox.scss                        */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-lineHeights' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-fonts' as *;
-@use '../utilities/variables/var-sizes' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-lineHeights' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/variables/var-sizes' as *;
 
 .checkbox-item {
     line-height: rem(lineHeight(checkbox));

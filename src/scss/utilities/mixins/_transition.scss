@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------- Mixins //
 // Transitions
 @use 'sass:list';
-@use '../variables/var-bootstrapBool' as *;
+@use './../variables/var-bootstrapBool' as *;
 
 @mixin transition($transition...) {
   @if $enable-transitions {

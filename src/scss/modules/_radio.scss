@@ -4,12 +4,12 @@
 /* path: dsf-common-ui/src/scss/modules/_radio.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/mixins/svg-icon' as *;
-@use '../utilities/variables/var-bootstrap-v3' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-lineHeights' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/mixins/svg-icon' as *;
+@use './../utilities/variables/var-bootstrap-v3' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-lineHeights' as *;
 
 .radioCheck{
     padding-left: 0px;

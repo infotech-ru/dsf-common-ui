@@ -4,7 +4,7 @@
 /* path: dsf-common-ui/src/scss/content/_authorization.scss                   */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-colors' as *;
 
 .authorization{
   background-color: brandColors(_white);

@@ -1,11 +1,11 @@
-@use '../functions/func_svg-url' as *;
-@use '../functions/func_fonts' as *;
-@use '../variables/var-bootstrap-v3' as *;
-@use '../variables/var-fonts' as *;
-@use '../variables/var-sizes' as *;
-@use '../variables/var-lineHeights' as *;
-@use '../variables/var-colors' as *;
-@use '../mixins_bootstrap-v3/reset-filter' as *;
+@use './../functions/func_svg-url' as *;
+@use './../functions/func_fonts' as *;
+@use './../variables/var-bootstrap-v3' as *;
+@use './../variables/var-fonts' as *;
+@use './../variables/var-sizes' as *;
+@use './../variables/var-lineHeights' as *;
+@use './../variables/var-colors' as *;
+@use './../mixins_bootstrap-v3/reset-filter' as *;
 
 %scrollVar {
   scrollbar-width: thin;

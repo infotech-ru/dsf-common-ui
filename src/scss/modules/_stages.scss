@@ -5,8 +5,8 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-colors' as *;
 
 .stages{
   align-items: center;

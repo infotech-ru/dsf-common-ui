@@ -1,9 +1,0 @@
-$asset-base-path:                   "" !default;
-
-$path-img:                          $asset-base-path + "/img/" !default;
-$path-images:                       $asset-base-path + "/images/" !default;
-$path-fonts:                        $asset-base-path + "/dist/" !default;
-$path-svgs:                         $asset-base-path + "/svg/" !default;
-$path-icon-svg:                     $asset-base-path + "/icons/svg/" !default;
-$path-dsfui:                        "/dist/" !default;
-$path-sprite:                       $path-dsfui + "sprite.symbol.svg#" !default;

@@ -4,9 +4,9 @@
 /* path: dsf-common-ui/src/scss/modules/_highcharts.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-placeholder' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-placeholder' as *;
 
 .highcharts{
   $this: &;

@@ -6,8 +6,8 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:color';
 
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-colors' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-colors' as *;
 
 .unityBlock{
   background-color: brandColors(_white);

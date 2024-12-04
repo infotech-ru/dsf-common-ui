@@ -4,15 +4,15 @@
 /* path: dsf-common-ui/src/scss/modules/_elem-group.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-bootstrap-v3' as *;
-@use '../utilities/variables/var-lineHeights' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-fonts' as *;
-@use '../utilities/mixins_bootstrap-v3/border-radius' as *;
-@use '../utilities/mixins/transition' as *;
-@use '../modules/buttons' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-bootstrap-v3' as *;
+@use './../utilities/variables/var-lineHeights' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/mixins_bootstrap-v3/border-radius' as *;
+@use './../utilities/mixins/transition' as *;
+@use './buttons' as *;
 
 //
 // Button groups

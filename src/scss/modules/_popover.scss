@@ -5,14 +5,14 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:color';
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/functions/func_bootstrap-v4' as *;
-@use '../utilities/variables/var-bootstrap-v4' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-lineHeights' as *;
-@use '../utilities/variables/var-zindex' as *;
-@use '../utilities/variables/var-fonts' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_bootstrap-v4' as *;
+@use './../utilities/variables/var-bootstrap-v4' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-lineHeights' as *;
+@use './../utilities/variables/var-zindex' as *;
+@use './../utilities/variables/var-fonts' as *;
 
 .popover {
   background-color: brandPalette(popover_bgc);

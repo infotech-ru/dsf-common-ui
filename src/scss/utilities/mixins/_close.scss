@@ -1,4 +1,4 @@
-@use '../functions/func_svg-url' as *;
+@use './../functions/func_svg-url' as *;
 
 @mixin close {
   --close-stroke: #bababa;

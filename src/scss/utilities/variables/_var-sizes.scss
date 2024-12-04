@@ -1,4 +1,4 @@
-@use '../functions/func_maps' as *;
+@use './../functions/func_maps' as *;
 
 @function brandSizes($keys...) {
   @return val($brand-sizes, $keys...);

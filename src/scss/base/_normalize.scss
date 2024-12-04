@@ -5,8 +5,8 @@
 /* base: normalize.css v8 | github.com/necolas/normalize.css                  */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/variables/var-bootstrapColors' as *;
-@use '../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-bootstrapColors' as *;
+@use './../utilities/variables/var-colors' as *;
 /**
  * 1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
  * 2. Change the default font family in all browsers.

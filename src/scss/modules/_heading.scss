@@ -4,8 +4,8 @@
 /* path: dsf-common-ui/src/scss/modules/_heading.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-colors' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-colors' as *;
 
 .page-title {
     color: brandPalette(pageHeader_color);

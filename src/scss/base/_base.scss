@@ -6,12 +6,12 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
 @use 'sass:math';
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-fonts' as *;
-@use '../utilities/variables/var-lineHeights' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-lineHeights' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/variables/var-lineHeights' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-lineHeights' as *;
 
 :root{
   @each $name, $value in $brand-colors {

@@ -9,7 +9,7 @@
 @use "sass:math";
 @use "sass:string";
 @use './func_helpers-functions' as *;
-@use '../variables/var-sizes' as *;
+@use './../variables/var-sizes' as *;
 
 @function font-subset(){
   $subset-cyrillic: '';

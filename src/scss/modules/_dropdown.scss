@@ -4,13 +4,13 @@
 /* path: dsf-common-ui/src/scss/modules/_dropdown.scss                        */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_svg-url' as *;
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-placeholder' as *;
-@use '../utilities/variables/var-zindex' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-fonts' as *;
-@use '../utilities/variables/var-sizes' as *;
+@use './../utilities/functions/func_svg-url' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-placeholder' as *;
+@use './../utilities/variables/var-zindex' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/variables/var-sizes' as *;
 
 
 // Dropdown arrow/caret

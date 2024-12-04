@@ -4,7 +4,7 @@
 /* path: dsf-common-ui/src/scss/modules/_icons.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-sizes' as *;
 
 .svg--icon {
     $this: &;

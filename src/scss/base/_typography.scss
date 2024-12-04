@@ -5,14 +5,14 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:math';
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-fonts' as *;
-@use '../utilities/variables/var-lineHeights' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/mixins_bootstrap-v3/clearfix' as *;
-@use '../utilities/mixins_bootstrap-v3/text-overflow' as *;
-@use '../utilities/variables/var-paths' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/variables/var-lineHeights' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/mixins_bootstrap-v3/clearfix' as *;
+@use './../utilities/mixins_bootstrap-v3/text-overflow' as *;
+@use './../utilities/variables/var-paths' as *;
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {

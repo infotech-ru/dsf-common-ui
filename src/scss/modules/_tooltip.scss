@@ -4,12 +4,12 @@
 /* path: dsf-common-ui/src/scss/modules/_tooltip.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-fonts' as *;
-@use '../utilities/variables/var-lineHeights' as *;
-@use '../utilities/variables/var-zindex' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/variables/var-lineHeights' as *;
+@use './../utilities/variables/var-zindex' as *;
 
 .tooltip {
   display: block;

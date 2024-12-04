@@ -4,11 +4,11 @@
 /* path: dsf-common-ui/src/scss/layout/_headers.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use '../utilities/functions/func_svg-url' as *;
-@use '../utilities/functions/func_fonts' as *;
-@use '../utilities/variables/var-sizes' as *;
-@use '../utilities/variables/var-colors' as *;
-@use '../utilities/variables/var-zindex' as *;
+@use './../utilities/functions/func_svg-url' as *;
+@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-zindex' as *;
 
 .header {
   // background: linear-gradient(180deg, #F9F9F9 0%, #CACACA 100%);

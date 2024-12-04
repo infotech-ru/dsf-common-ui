@@ -2,7 +2,7 @@
 @use "sass:list";
 @use "sass:map";
 @use "sass:string";
-@use '../functions/func_maps' as *;
+@use './../functions/func_maps' as *;
 
 @function brandColors($keys...) {
   @return val($brand-colors, $keys...);
