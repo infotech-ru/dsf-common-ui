@@ -314,6 +314,9 @@ tbody tr {
       &:first-child {
         left: 0;
       }
+      &.tdSticky{
+        z-index: 1003;
+      }
     }
     tr{ 
       &:nth-child(1) { 
@@ -344,6 +347,26 @@ tbody tr {
         }
       }
     }
+  }
+}
+
+.tdSticky{
+    min-width: var(--tdWidth, auto);
+    max-width: var(--tdWidth, auto);
+    left: var(--td-sticky, 0);
+    position: sticky;
+    z-index: 1000;
+    width: var(--tdWidth, auto);
+  &:first-child{
+      --tdWidth: var(--tdWidth_1);
+  }
+  &:nth-child(2){
+      --tdWidth: var(--tdWidth_2);
+      --td-sticky: var(--tdWidth_1);
+  }
+  &:nth-child(3){
+      --tdWidth: var(--tdWidth_3);
+      --td-sticky: calc(var(--tdWidth_1) + var(--tdWidth_2));
   }
 }
 

@@ -11648,6 +11648,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .wrapper__tableSticky thead th:first-child {
   left: 0;
 }
+.table-sticky-head-left_col thead th.tdSticky,
+.wrapper__tableSticky thead th.tdSticky {
+  z-index: 1003;
+}
 .table-sticky-head-left_col thead tr:nth-child(1) th,
 .wrapper__tableSticky thead tr:nth-child(1) th {
   top: 0;
@@ -11675,6 +11679,26 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .table-sticky-head-left_col thead tr:nth-child(3) th,
 .wrapper__tableSticky thead tr:nth-child(3) th {
   top: 5rem;
+}
+
+.tdSticky {
+  min-width: var(--tdWidth, auto);
+  max-width: var(--tdWidth, auto);
+  left: var(--td-sticky, 0);
+  position: sticky;
+  z-index: 1000;
+  width: var(--tdWidth, auto);
+}
+.tdSticky:first-child {
+  --tdWidth: var(--tdWidth_1);
+}
+.tdSticky:nth-child(2) {
+  --tdWidth: var(--tdWidth_2);
+  --td-sticky: var(--tdWidth_1);
+}
+.tdSticky:nth-child(3) {
+  --tdWidth: var(--tdWidth_3);
+  --td-sticky: calc(var(--tdWidth_1) + var(--tdWidth_2));
 }
 
 .table__tfootSticky > tfoot td,

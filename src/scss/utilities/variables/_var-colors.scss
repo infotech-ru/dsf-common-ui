@@ -727,70 +727,79 @@ $brand-palette: (
 );
 
 $state-primary-bg:                        map.get($brand-colors, _blue) !default;
-$state-primary-text:                      map.get($brand-colors, _blue) !default;
+$state-primary-text:                      map.get($brand-colors, _white) !default;
 $state-primary-svg:                       map.get($brand-colors, _blue) !default;
 $state-primary-border:                    color.adjust(rgba($state-primary-bg, 1), $lightness: -5%) !default;
 
 $state-success-bg:                        map.get($brand-colors, _green) !default;
-$state-success-text:                      map.get($brand-colors, _green) !default;
+$state-success-text:                      map.get($brand-colors, _white) !default;
 $state-success-svg:                       map.get($brand-colors, _green) !default;
 $state-success-border:                    color.adjust(rgba($state-success-bg, 1), $lightness: -5%) !default;
 
 $state-info-bg:                           map.get($brand-colors, _light-blue) !default;
-$state-info-text:                         map.get($brand-colors, _light-blue) !default;
+$state-info-text:                         map.get($brand-colors, _white) !default;
 $state-info-svg:                          map.get($brand-colors, _light-blue) !default;
 $state-info-border:                       color.adjust(rgba($state-info-bg, 1), $lightness: -5%) !default;
 
 $state-warning-bg:                        map.get($brand-colors, _orange) !default;
-$state-warning-text:                      map.get($brand-colors, _orange) !default;
+$state-warning-text:                      map.get($brand-colors, _white) !default;
 $state-warning-svg:                       map.get($brand-colors, _orange) !default;
 $state-warning-border:                    color.adjust(rgba($state-warning-bg, 1), $lightness: -5%) !default;
 
 $state-danger-bg:                         map.get($brand-colors, _red) !default;
-$state-danger-text:                       map.get($brand-colors, _red) !default;
+$state-danger-text:                       map.get($brand-colors, _white) !default;
 $state-danger-svg:                        map.get($brand-colors, _red) !default;
 $state-danger-border:                     color.adjust(rgba($state-danger-bg, 1), $lightness: -5%) !default;
 
 $state-dark-bg:                           map.get($brand-colors, _dark-grey) !default;
-$state-dark-text:                         map.get($brand-colors, _dark-grey) !default;
+$state-dark-text:                         map.get($brand-colors, _white) !default;
 $state-dark-svg:                          map.get($brand-colors, _dark-grey) !default;
 $state-dark-border:                       color.adjust(rgba($state-dark-bg, 1), $lightness: -5%) !default;
 
 $state-light-bg:                          map.get($brand-colors, _white) !default;
 
 $state-muted-bg:                          map.get($brand-colors, _grey) !default;
-$state-muted-text:                        map.get($brand-colors, _grey) !default;
+$state-muted-text:                        map.get($brand-colors, _white) !default;
 $state-muted-svg:                         map.get($brand-colors, _grey) !default;
 $state-muted-border:                      color.adjust(rgba($state-muted-bg, 1), $lightness: -5%) !default;
 
-$alert-success-bg:            $state-success-bg !default;
-$alert-success-text:          $state-success-text !default;
-$alert-success-border:        $state-success-border !default;
+// $alert-success-bg:                        map.get($brand-colors, _green) !default;
+// $alert-success-text:                      map.get($brand-colors, _green) !default;
+// $alert-success-border:                    color.adjust(rgba($alert-success-bg, 1), $lightness: -5%) !default;
 
-$alert-info-bg:               $state-info-bg !default;
-$alert-info-text:             $state-info-text !default;
-$alert-info-border:           $state-info-border !default;
+// $alert-info-bg:                           map.get($brand-colors, _light-blue) !default;
+// $alert-info-text:                         map.get($brand-colors, _light-blue) !default;
+// $alert-info-border:                       color.adjust(rgba($alert-info-bg, 1), $lightness: -5%) !default;
 
-$alert-warning-bg:            $state-warning-bg !default;
-$alert-warning-text:          $state-warning-text !default;
-$alert-warning-border:        $state-warning-border !default;
+// $alert-warning-bg:                        map.get($brand-colors, _orange) !default;
+// $alert-warning-text:                      map.get($brand-colors, _orange) !default;
+// $alert-warning-border:                    color.adjust(rgba($alert-warning-bg, 1), $lightness: -5%) !default;
 
-$alert-danger-bg:             $state-danger-bg !default;
-$alert-danger-text:           $state-danger-text !default;
-$alert-danger-border:         $state-danger-border !default;
+// $alert-danger-bg:                         map.get($brand-colors, _red) !default;
+// $alert-danger-text:                       map.get($brand-colors, _red) !default;
+// $alert-danger-border:                     color.adjust(rgba($alert-danger-bg, 1), $lightness: -5%) !default;
 
-$panel-success-text:          $state-success-text !default;
-$panel-success-border:        $state-success-border !default;
-$panel-success-heading-bg:    $state-success-bg !default;
 
-$panel-info-text:             $state-info-text !default;
-$panel-info-border:           $state-info-border !default;
-$panel-info-heading-bg:       $state-info-bg !default;
+$panel-default-text:                      map.get($brand-colors, _dark-grey) !default;
+$panel-default-heading-bg:                map.get($brand-colors, _light-grey2) !default;
+$panel-default-border:                    color.adjust(rgba($panel-default-heading-bg, 1), $lightness: -5%) !default;
 
-$panel-warning-text:          $state-warning-text !default;
-$panel-warning-border:        $state-warning-border !default;
-$panel-warning-heading-bg:    $state-warning-bg !default;
+$panel-primary-text:                      map.get($brand-colors, _white) !default;
+$panel-primary-heading-bg:                map.get($brand-colors, _blue) !default;
+$panel-primary-border:                    color.adjust(rgba($panel-primary-heading-bg, 1), $lightness: -5%) !default;
 
-$panel-danger-text:           $state-danger-text !default;
-$panel-danger-border:         $state-danger-border !default;
-$panel-danger-heading-bg:     $state-danger-bg !default;
+$panel-success-text:                      map.get($brand-colors, _white) !default;
+$panel-success-heading-bg:                map.get($brand-colors, _green) !default;
+$panel-success-border:                    color.adjust(rgba($panel-success-heading-bg, 1), $lightness: -5%) !default;
+
+$panel-info-text:                         map.get($brand-colors, _white) !default;
+$panel-info-heading-bg:                   map.get($brand-colors, _light-blue) !default;
+$panel-info-border:                       color.adjust(rgba($panel-info-heading-bg, 1), $lightness: -5%) !default;
+
+$panel-warning-text:                      map.get($brand-colors, _white) !default;
+$panel-warning-heading-bg:                map.get($brand-colors, _orange) !default;
+$panel-warning-border:                    color.adjust(rgba($panel-warning-heading-bg, 1), $lightness: -5%) !default;
+
+$panel-danger-text:                       map.get($brand-colors, _white) !default;
+$panel-danger-heading-bg:                 map.get($brand-colors, _red) !default;
+$panel-danger-border:                     color.adjust(rgba($panel-warning-heading-bg, 1), $lightness: -5%) !default;
