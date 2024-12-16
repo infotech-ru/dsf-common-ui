@@ -11,7 +11,7 @@
 
   a.list-group-item-#{$state},
   button.list-group-item-#{$state} {
-    color: $color;
+    color: $background;
 
     .list-group-item-heading {
       color: inherit;
@@ -25,7 +25,7 @@
     &.active,
     &.active:hover,
     &.active:focus {
-      color: #fff;
+      color: $background;
       background-color: $color;
       border-color: $color;
     }
