@@ -312,7 +312,7 @@ export function searchIcon() {
         'bicolors-engine': ['мотор', 'двигатель', 'engine', 'minvb'],
         'bicolors-engine__24vb': ['мотор', 'двигатель', 'engine', '24vb'],
         'bicolors-erase': ['erase', 'стёрка', 'стерка', 'стерать', 'wipe', 'delete', 'minvb'],
-        'bicolors-erase': ['erase', 'стёрка', 'стерка', 'стерать', 'wipe', 'delete', '24vb'],
+        'bicolors-erase__24vb': ['erase', 'стёрка', 'стерка', 'стерать', 'wipe', 'delete', '24vb'],
         'bicolors-export': ['экспорт', 'export', 'скачать', 'minvb'],
         'bicolors-export__24vb': ['экспорт', 'export', 'скачать', '24vb'],
         'bicolors-eye': ['глаз', 'око', 'eye', 'minvb'],
