@@ -287,10 +287,18 @@
       }
   }
   .user-event {
-    text-align: left;
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    // text-align: left;
   }
   .current-user-comment {
-    text-align: right;
+    align-items: flex-end;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    // text-align: right;
   }
   &_info {
     &User,

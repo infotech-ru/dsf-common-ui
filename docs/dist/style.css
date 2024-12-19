@@ -12192,10 +12192,16 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   outline: none;
 }
 .commentBlock .user-event {
-  text-align: left;
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
 }
 .commentBlock .current-user-comment {
-  text-align: right;
+  align-items: flex-end;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
 }
 .commentBlock_infoUser, .commentBlock_infoDate {
   color: #333333;
