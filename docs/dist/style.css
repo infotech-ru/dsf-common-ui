@@ -11688,6 +11688,14 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .wrapper__tableSticky thead tr:nth-child(3) th {
   top: 5rem;
 }
+.table-sticky-head-left_col thead tr:nth-child(4) th,
+.wrapper__tableSticky thead tr:nth-child(4) th {
+  top: 7.5rem;
+}
+.table-sticky-head-left_col thead tr:nth-child(5) th,
+.wrapper__tableSticky thead tr:nth-child(5) th {
+  top: 7.5rem;
+}
 
 .tdSticky {
   min-width: var(--tdWidth, auto);
@@ -11712,36 +11720,69 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .table__tfootSticky > tfoot td,
 .table__tfootSticky > tfoot th,
 .table__tfootSticky__2tr > tfoot td,
-.table__tfootSticky__2tr > tfoot th {
+.table__tfootSticky__2tr > tfoot th,
+.table__tfootSticky__3tr > tfoot td,
+.table__tfootSticky__3tr > tfoot th {
   position: sticky;
   z-index: 1001;
 }
 .table__tfootSticky > tfoot td:first-child,
 .table__tfootSticky > tfoot th:first-child,
 .table__tfootSticky__2tr > tfoot td:first-child,
-.table__tfootSticky__2tr > tfoot th:first-child {
+.table__tfootSticky__2tr > tfoot th:first-child,
+.table__tfootSticky__3tr > tfoot td:first-child,
+.table__tfootSticky__3tr > tfoot th:first-child {
   z-index: 1003;
 }
 .table__tfootSticky > tfoot td:first-child[rowspan="2"],
 .table__tfootSticky > tfoot th:first-child[rowspan="2"],
 .table__tfootSticky__2tr > tfoot td:first-child[rowspan="2"],
-.table__tfootSticky__2tr > tfoot th:first-child[rowspan="2"] {
+.table__tfootSticky__2tr > tfoot th:first-child[rowspan="2"],
+.table__tfootSticky__3tr > tfoot td:first-child[rowspan="2"],
+.table__tfootSticky__3tr > tfoot th:first-child[rowspan="2"] {
   z-index: 1003;
 }
 .table__tfootSticky > tfoot td:first-child[rowspan="3"],
 .table__tfootSticky > tfoot th:first-child[rowspan="3"],
 .table__tfootSticky__2tr > tfoot td:first-child[rowspan="3"],
-.table__tfootSticky__2tr > tfoot th:first-child[rowspan="3"] {
+.table__tfootSticky__2tr > tfoot th:first-child[rowspan="3"],
+.table__tfootSticky__3tr > tfoot td:first-child[rowspan="3"],
+.table__tfootSticky__3tr > tfoot th:first-child[rowspan="3"] {
   z-index: 1003;
 }
 .table__tfootSticky__2tr tfoot tr:nth-child(1) th, .table__tfootSticky__2tr tfoot tr:nth-child(1) td,
 .table__tfootSticky__2tr__2tr tfoot tr:nth-child(1) th,
-.table__tfootSticky__2tr__2tr tfoot tr:nth-child(1) td {
+.table__tfootSticky__2tr__2tr tfoot tr:nth-child(1) td,
+.table__tfootSticky__3tr__2tr tfoot tr:nth-child(1) th,
+.table__tfootSticky__3tr__2tr tfoot tr:nth-child(1) td {
   bottom: 2.5rem;
 }
 .table__tfootSticky__2tr tfoot tr:nth-child(2) th, .table__tfootSticky__2tr tfoot tr:nth-child(2) td,
 .table__tfootSticky__2tr__2tr tfoot tr:nth-child(2) th,
-.table__tfootSticky__2tr__2tr tfoot tr:nth-child(2) td {
+.table__tfootSticky__2tr__2tr tfoot tr:nth-child(2) td,
+.table__tfootSticky__3tr__2tr tfoot tr:nth-child(2) th,
+.table__tfootSticky__3tr__2tr tfoot tr:nth-child(2) td {
+  bottom: 0;
+}
+.table__tfootSticky__3tr tfoot tr:nth-child(1) th, .table__tfootSticky__3tr tfoot tr:nth-child(1) td,
+.table__tfootSticky__2tr__3tr tfoot tr:nth-child(1) th,
+.table__tfootSticky__2tr__3tr tfoot tr:nth-child(1) td,
+.table__tfootSticky__3tr__3tr tfoot tr:nth-child(1) th,
+.table__tfootSticky__3tr__3tr tfoot tr:nth-child(1) td {
+  bottom: 5rem;
+}
+.table__tfootSticky__3tr tfoot tr:nth-child(2) th, .table__tfootSticky__3tr tfoot tr:nth-child(2) td,
+.table__tfootSticky__2tr__3tr tfoot tr:nth-child(2) th,
+.table__tfootSticky__2tr__3tr tfoot tr:nth-child(2) td,
+.table__tfootSticky__3tr__3tr tfoot tr:nth-child(2) th,
+.table__tfootSticky__3tr__3tr tfoot tr:nth-child(2) td {
+  bottom: 2.5rem;
+}
+.table__tfootSticky__3tr tfoot tr:nth-child(3) th, .table__tfootSticky__3tr tfoot tr:nth-child(3) td,
+.table__tfootSticky__2tr__3tr tfoot tr:nth-child(3) th,
+.table__tfootSticky__2tr__3tr tfoot tr:nth-child(3) td,
+.table__tfootSticky__3tr__3tr tfoot tr:nth-child(3) th,
+.table__tfootSticky__3tr__3tr tfoot tr:nth-child(3) td {
   bottom: 0;
 }
 

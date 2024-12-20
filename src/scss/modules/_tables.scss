@@ -346,6 +346,16 @@ tbody tr {
           top: rem(calc(brandSizes(tableCell_height) * 2));
         }
       }
+      &:nth-child(4) {
+        th {
+          top: rem(calc(brandSizes(tableCell_height) * 3));
+        }
+      }
+      &:nth-child(5) {
+        th {
+          top: rem(calc(brandSizes(tableCell_height) * 3));
+        }
+      }
     }
   }
 }
@@ -371,7 +381,8 @@ tbody tr {
 }
 
 .table__tfootSticky,
-.table__tfootSticky__2tr{
+.table__tfootSticky__2tr,
+.table__tfootSticky__3tr{
   > tfoot{ 
     td,
     th{
@@ -397,6 +408,27 @@ tbody tr {
           }
         }
         &:nth-child(2){
+          th, td{
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  &__3tr{
+    tfoot{
+      tr{
+        &:nth-child(1){
+          th, td{
+            bottom: rem(calc(brandSizes(tableCell_height) * 2));
+          }
+        }
+        &:nth-child(2){
+          th, td{
+            bottom: rem(brandSizes(tableCell_height));
+          }
+        }
+        &:nth-child(3){
           th, td{
             bottom: 0;
           }
