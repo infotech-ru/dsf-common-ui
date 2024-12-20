@@ -3161,6 +3161,14 @@ h6, .h6 {
 .mobile-view .headerMenu_linkIcon__wrappper {
   display: none;
 }
+.headerMenu_linkIcon__value {
+  border-radius: 2px;
+  bottom: 3px;
+  font-size: 8px;
+  line-height: 8px;
+  padding: 1px 2px;
+  right: 2px;
+}
 .headerMenu__header {
   background-color: #BABABA;
   color: #ffffff;
@@ -13990,6 +13998,27 @@ tbody.collapse.in {
   object-fit: cover;
   overflow: hidden;
   width: 115px;
+}
+
+.thumbs_auto__smallSize {
+  background-image: url("/images/placeholder_auto.svg");
+  background-repeat: no-repeat;
+  background-size: 68px 36px;
+  height: 36px;
+  overflow: hidden;
+  position: relative;
+  max-height: 36px;
+  width: 80px;
+}
+.thumbs_auto__center {
+  background-position: center;
+}
+.thumbs_auto__none {
+  background-image: none;
+}
+.thumbs_auto__none img {
+  max-width: 80px;
+  max-height: 36px;
 }
 
 .sr-only {

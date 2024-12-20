@@ -39,6 +39,32 @@
   overflow: hidden;
   width: 115px;
 }
+
+.thumbs{ 
+  &_auto{ 
+    &__smallSize{
+        background-image: url("/images/placeholder_auto.svg");
+        background-repeat: no-repeat;
+        background-size: 68px 36px;
+        height: 36px;
+        overflow: hidden;
+        position: relative;
+        max-height: 36px;
+        width: 80px;
+    }
+    &__center{
+        background-position: center;
+    }
+    &__none {
+        background-image: none;
+        img{ 
+            max-width: 80px;
+            max-height: 36px;
+        }
+    }
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
