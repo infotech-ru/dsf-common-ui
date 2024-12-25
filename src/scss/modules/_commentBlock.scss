@@ -270,6 +270,9 @@
     top: 6px;
     padding-right: #{$textareaFormControlPaddingX}px;
     right: 0;
+    .commentBlock_inputGroup__bigHeight &{
+        top: 12px;
+    }
   }
   &_btnSend{
       background-color: transparent;
