@@ -11717,12 +11717,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --td-sticky: calc(var(--tdWidth_1) + var(--tdWidth_2));
 }
 
-.table__tfootSticky > tfoot td,
-.table__tfootSticky > tfoot th,
-.table__tfootSticky__2tr > tfoot td,
-.table__tfootSticky__2tr > tfoot th,
-.table__tfootSticky__3tr > tfoot td,
-.table__tfootSticky__3tr > tfoot th {
+.table__tfootSticky > tfoot,
+.table__tfootSticky__2tr > tfoot,
+.table__tfootSticky__3tr > tfoot {
+  bottom: 0;
   position: sticky;
   z-index: 1001;
 }
@@ -11749,41 +11747,6 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .table__tfootSticky__3tr > tfoot td:first-child[rowspan="3"],
 .table__tfootSticky__3tr > tfoot th:first-child[rowspan="3"] {
   z-index: 1003;
-}
-.table__tfootSticky__2tr tfoot tr:nth-child(1) th, .table__tfootSticky__2tr tfoot tr:nth-child(1) td,
-.table__tfootSticky__2tr__2tr tfoot tr:nth-child(1) th,
-.table__tfootSticky__2tr__2tr tfoot tr:nth-child(1) td,
-.table__tfootSticky__3tr__2tr tfoot tr:nth-child(1) th,
-.table__tfootSticky__3tr__2tr tfoot tr:nth-child(1) td {
-  bottom: 2.5rem;
-}
-.table__tfootSticky__2tr tfoot tr:nth-child(2) th, .table__tfootSticky__2tr tfoot tr:nth-child(2) td,
-.table__tfootSticky__2tr__2tr tfoot tr:nth-child(2) th,
-.table__tfootSticky__2tr__2tr tfoot tr:nth-child(2) td,
-.table__tfootSticky__3tr__2tr tfoot tr:nth-child(2) th,
-.table__tfootSticky__3tr__2tr tfoot tr:nth-child(2) td {
-  bottom: 0;
-}
-.table__tfootSticky__3tr tfoot tr:nth-child(1) th, .table__tfootSticky__3tr tfoot tr:nth-child(1) td,
-.table__tfootSticky__2tr__3tr tfoot tr:nth-child(1) th,
-.table__tfootSticky__2tr__3tr tfoot tr:nth-child(1) td,
-.table__tfootSticky__3tr__3tr tfoot tr:nth-child(1) th,
-.table__tfootSticky__3tr__3tr tfoot tr:nth-child(1) td {
-  bottom: 5rem;
-}
-.table__tfootSticky__3tr tfoot tr:nth-child(2) th, .table__tfootSticky__3tr tfoot tr:nth-child(2) td,
-.table__tfootSticky__2tr__3tr tfoot tr:nth-child(2) th,
-.table__tfootSticky__2tr__3tr tfoot tr:nth-child(2) td,
-.table__tfootSticky__3tr__3tr tfoot tr:nth-child(2) th,
-.table__tfootSticky__3tr__3tr tfoot tr:nth-child(2) td {
-  bottom: 2.5rem;
-}
-.table__tfootSticky__3tr tfoot tr:nth-child(3) th, .table__tfootSticky__3tr tfoot tr:nth-child(3) td,
-.table__tfootSticky__2tr__3tr tfoot tr:nth-child(3) th,
-.table__tfootSticky__2tr__3tr tfoot tr:nth-child(3) td,
-.table__tfootSticky__3tr__3tr tfoot tr:nth-child(3) th,
-.table__tfootSticky__3tr__3tr tfoot tr:nth-child(3) td {
-  bottom: 0;
 }
 
 .summary {
