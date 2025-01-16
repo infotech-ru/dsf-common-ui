@@ -298,6 +298,8 @@ var DSFUI = (function (exports) {
         'bicolors-circle_stop__24vb': ['круг', 'circle', 'остановить', 'прекратить', 'стоп', 'stop', '24vb'],
         'bicolors-clear': ['удалить', 'очистить', 'очистить', 'clear', 'minvb'],
         'bicolors-clear__24vb': ['удалить', 'очистить', 'очистить', 'clear', '24vb'],
+        'bicolors-click_map': ['карта', 'click', 'map', 'клик', 'minvb'],
+        'bicolors-click_map__24vb': ['карта', 'click', 'map', 'клик', '24vb'],
         'bicolors-close': ['закрыть', 'close', 'minvb'],
         'bicolors-close__24vb': ['закрыть', 'close', '24vb'],
         'bicolors-code': ['код', 'code', 'minvb'],
