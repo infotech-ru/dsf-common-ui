@@ -675,6 +675,20 @@
     }
   }
 
+  .svg-filled-#{$name},
+  .svg-filled-#{$name}.svg--icon {
+    svg {
+      #{--svg-icon-fill__filled}: $value;
+    }
+  }
+
+  .svg-colorFilled-#{$name},
+  .svg-colorFilled-#{$name}.svg--icon {
+    svg {
+      #{--svg-icon-fill_color__filled}: $value;
+    }
+  }
+
   .text-#{$name}{
     color: #{$value};
     #{--text_color}: #{$value};
