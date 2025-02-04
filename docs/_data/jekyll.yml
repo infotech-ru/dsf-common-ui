@@ -55,6 +55,8 @@ brandnamecolor:
   value: #FFDA7D
 - name: light-green
   value: #DAF0DA
+- name: dark-green
+  value: #467B46
 - name: black
   value: #000000
 

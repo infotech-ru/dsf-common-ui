@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.82 16.94">
-<path d="M.5.5H15.32V3L9.64,9.51v7L6.18,14.56V9.44L.5,3.13Z" stroke="var(--svg-icon-stroke, #333)" fill="var(--svg-icon-fill_color__filled, none)" stroke-linecap="round" stroke-miterlimit="1.5"/>
-<path d="M.9,3.3h14" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="var(--svg-icon-fill__filled, none)"/>
+<path d="M.5.5H15.32V3L9.64,9.51v7L6.18,14.56V9.44L.5,3.13Z" stroke="var(--svg-icon-stroke, var(--infotech_svg-stroke, #333))" fill="var(--infotech_svg-colorFill, none)" stroke-linecap="round" stroke-miterlimit="1.5"/>
+<path d="M.9,3.3h14" stroke="var(--svg-icon-stroke_blue, var(--infotech_svg-colorStroke, #0094ff))" fill="var(--infotech_svg-fill, none)"/>
 </svg>

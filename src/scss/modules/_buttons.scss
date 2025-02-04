@@ -185,7 +185,7 @@
   }
 }
 
-@each $btn in default, primary, success, danger, warning, 'grey' {
+@each $btn in default, primary, success, danger, warning, 'grey', 'darkGreen' {
   .btn-#{$btn}__outline {
     background-color: transparent;
     background-image: none;
@@ -210,8 +210,15 @@
           fill: #ffffff;
         }
       }
+      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_outline__hover);
+      #{--infotech_svg-stroke}: brandBtn(#{$btn}_outline__hover);
+      #{--infotech_svg-fill}: brandBtn(#{$btn}_outline__hover);
+      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_outline__hover);
     }
-
+      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_outline);
+      #{--infotech_svg-stroke}: brandBtn(#{$btn}_outline);
+      #{--infotech_svg-fill}: brandBtn(#{$btn}_outline);
+      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_outline);
     .svg--icon {
       svg {
         #{--svg-icon-fill_blue}: brandBtn(#{$btn}_outline);

@@ -236,6 +236,7 @@ $brand-namecolors: (
   'light-yellow2':                       map.get($brand-colors, _light-yellow2),
   'yellow2':                             map.get($brand-colors, _yellow2),
   'light-green':                         map.get($brand-colors, _light-green),
+  'dark-green':                          map.get($brand-colors, _dark-green),
   'black':                               map.get($brand-colors, _black),
 );
 
@@ -374,6 +375,22 @@ $brand-btn: (
   lightGrey_textShadow:                   map.get($brand-colors, _black),
   lightGrey_outline:                      map.get($brand-colors, _light-grey),
   lightGrey_outline__hover:               map.get($brand-colors, _grey2),
+  
+  darkGreen_bg:                           map.get($brand-colors, _dark-green),
+  darkGreen-end_bg:                       map.get($brand-colors, _dark-green),
+  darkGreen_bg__hover:                    map.get($brand-colors, _green),
+  darkGreen-end_bg__hover:                map.get($brand-colors, _green),
+  darkGreen_border:                       map.get($brand-colors, _green),
+  darkGreen_border__hover:                map.get($brand-colors, _green),
+  darkGreen_color:                        map.get($brand-colors, _white),
+  darkGreen_color__hover:                 map.get($brand-colors, _white),
+  darkGreen_svg:                          map.get($brand-colors, _white),
+  darkGreen_svg__hover:                   map.get($brand-colors, _white),
+  darkGreen_svg_blue:                     map.get($brand-colors, _white),
+  darkGreen_svg_blue__hover:              map.get($brand-colors, _white),
+  darkGreen_textShadow:                   map.get($brand-colors, _black),
+  darkGreen_outline:                      map.get($brand-colors, _dark-green),
+  darkGreen_outline__hover:               map.get($brand-colors, _white),
 );
 
 @function brandLabel($keys...) {

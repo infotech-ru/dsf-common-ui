@@ -675,18 +675,17 @@
     }
   }
 
-  .svg-filled-#{$name},
-  .svg-filled-#{$name}.svg--icon {
-    svg {
-      #{--svg-icon-fill__filled}: $value;
-    }
+  .svg-colorStroke-#{$name} {
+    #{--infotech_svg-colorStroke}: $value;
   }
-
-  .svg-colorFilled-#{$name},
-  .svg-colorFilled-#{$name}.svg--icon {
-    svg {
-      #{--svg-icon-fill_color__filled}: $value;
-    }
+  .svg-stroke-#{$name} {
+    #{--infotech_svg-stroke}: $value;
+  }
+  .svg-filled-#{$name} {
+    #{--infotech_svg-fill}: $value;
+  }
+  .svg-colorFilled-#{$name} {
+    #{--infotech_svg-colorFill}: $value;
   }
 
   .text-#{$name}{

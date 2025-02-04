@@ -111,6 +111,10 @@ brandnamecolor {
 }
 
 brandnamecolor {
+  dark-green: #467B46;
+}
+
+brandnamecolor {
   black: #000000;
 }
 
