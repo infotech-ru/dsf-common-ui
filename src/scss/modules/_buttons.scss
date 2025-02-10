@@ -97,7 +97,7 @@
   }
 }
 
-@each $btn in default, primary, success, danger, warning, info, 'grey', 'lightGrey' {
+@each $btn in default, primary, success, danger, warning {
   .btn-#{$btn}{
     @if (brandBtn(#{$btn}_bg) == brandBtn(#{$btn}-end_bg)) {
       background-color: brandBtn(#{$btn}_bg);
@@ -108,9 +108,6 @@
       background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
       background-image: linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
     }
-    // background-color: brandBtn(#{$btn}_bg);
-    // background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
-    // background-image: linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
     border-color: brandBtn(#{$btn}_border);
     color: brandBtn(#{$btn}_color);
     @if (brandBtn(#{$btn}_bg) == brandBtn(#{$btn}-end_bg)) {
@@ -185,47 +182,47 @@
   }
 }
 
-@each $btn in default, primary, success, danger, warning, 'grey', 'darkGreen' {
+@each $btn in default, primary, success, danger, warning {
   .btn-#{$btn}__outline {
     background-color: transparent;
     background-image: none;
-    border-color: brandBtn(#{$btn}_outline);
-    color: brandBtn(#{$btn}_outline);
+    border-color: brandBtn(#{$btn}_border__outline);
+    color: brandBtn(#{$btn}_color__outline);
     @extend %btn;
     &:hover,
     &:focus-visible,
     &:active,
     &.active,
     &.focus {
-      background-color: brandBtn(#{$btn}_outline__hover);
+      background-color: brandBtn(#{$btn}_border__outline);
       background-image: none;
       background-position: inherit;
-      color: #fff;
+      color: brandBtn(#{$btn}_color__outline__hover);
       .svg--icon {
         svg {
-          #{--svg-icon-fill}: #ffffff;
-          #{--svg-icon-stroke}: #ffffff;
-          #{--svg-icon-fill_blue}: #ffffff;
-          #{--svg-icon-stroke_blue}: #ffffff;
-          fill: #ffffff;
+          #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline__hover);;
+          #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline__hover);;
+          #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline__hover);;
+          #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline__hover);;
+          fill: brandBtn(#{$btn}_color__outline__hover);;
         }
       }
-      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_outline__hover);
-      #{--infotech_svg-stroke}: brandBtn(#{$btn}_outline__hover);
-      #{--infotech_svg-fill}: brandBtn(#{$btn}_outline__hover);
-      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_outline__hover);
+      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline__hover);
+      #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline__hover);
+      #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline__hover);
+      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline__hover);
     }
-      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_outline);
-      #{--infotech_svg-stroke}: brandBtn(#{$btn}_outline);
-      #{--infotech_svg-fill}: brandBtn(#{$btn}_outline);
-      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_outline);
+      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
+      #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
+      #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
+      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
     .svg--icon {
       svg {
-        #{--svg-icon-fill_blue}: brandBtn(#{$btn}_outline);
-        #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_outline);
-        #{--svg-icon-fill}: brandBtn(#{$btn}_outline);
-        #{--svg-icon-stroke}: brandBtn(#{$btn}_outline);
-        fill: brandBtn(#{$btn}_outline);
+        #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
+        #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
+        #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
+        #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
+        fill: brandBtn(#{$btn}_color__outline);
       }
     }
   }
