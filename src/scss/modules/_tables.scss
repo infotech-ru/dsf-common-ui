@@ -308,6 +308,9 @@ tbody tr {
     }
   }
   thead{
+    position: sticky;
+    top: 0;
+    z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
     th{
       position: sticky;
       z-index: zIndex(tableStickyTheadTh);

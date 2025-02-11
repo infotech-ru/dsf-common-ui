@@ -25,10 +25,10 @@ _Использование:_ класс `btn-primary`
 _Использование:_ класс `btn-primary__outline`
 
 {% highlight html %}
-<button class="btn-primary__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-filter"></use></svg></span> <span class="btn-text">Текст кнопки</span></button>
+<button class="btn-primary__outline"><span class="svg--icon"><span class="btn-text">Кнопка btn-primary__outline</span></button>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <button class="btn-primary__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg></span><span class="btn-text">Текст кнопки</span></button>
+  <button class="btn-primary__outline"><span class="svg--icon"><span class="btn-text">Кнопка btn-primary__outline</span></button>
 </div>
 
 
@@ -49,10 +49,10 @@ _Использование:_ класс `btn-success`
 _Использование:_ класс `btn-success__outline`
 
 {% highlight html %}
-<button class="btn-success__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span><span class="btn-text">Скачать</span></button>
+<button class="btn-success__outline"><span class="svg--icon"><span class="btn-text">Кнопка btn-success__outline</span></button>
 {% endhighlight %}
 <div class="bs-docs-example">
-<button class="btn-success__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span><span class="btn-text">Скачать</span></button>
+<button class="btn-success__outline"><span class="svg--icon"><span class="btn-text">Кнопка btn-success__outline</span></button>
 </div>
 
 
@@ -75,10 +75,10 @@ _Использование:_ класс `btn-default`
 _Использование:_ класс `btn-default__outline`
 
 {% highlight html %}
-  <button class="btn-default__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
+  <button class="btn-default__outline"><span class="btn-text">Кнопка btn-default__outline</span></button>
 {% endhighlight %}
 <div class="bs-docs-example">
-<button class="btn-default__outline"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention"></use></svg></span></button>
+<button class="btn-default__outline"><span class="btn-text">Кнопка btn-default__outline</span></button>
 </div>
 
 
@@ -98,10 +98,10 @@ _Использование:_ класс `btn-danger`
 _Использование:_ класс `btn-danger__outline`
 
 {% highlight html %}
-  <button class="btn-danger__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span></button>
+  <button class="btn-danger__outline"><span class="btn-text">btn-danger__outline</span></button>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <button class="btn-danger__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span></button>
+  <button class="btn-danger__outline"><span class="btn-text">btn-danger__outline</span></button>
 </div>
 
 #### Кнопка - предупреждение. Используется для действий, которые требуют особого внимания
@@ -121,8 +121,8 @@ _Использование:_ класс `btn-warning`
 _Использование:_ класс `btn-warning_outline`
 
 {% highlight html %}
-<button class="btn-warning__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span></button>
+<button class="btn-warning__outline"><span class="btn-text">Кнопка btn-warning_outline</span></button>
 {% endhighlight %}
 <div class="bs-docs-example">
-<button class="btn-warning__outline"><span class="btn-text">Текст кнопки</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span></button>
+<button class="btn-warning__outline"><span class="btn-text">Кнопка btn-warning_outline</span></button>
 </div>

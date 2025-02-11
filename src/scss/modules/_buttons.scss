@@ -189,6 +189,10 @@
     border-color: brandBtn(#{$btn}_border__outline);
     color: brandBtn(#{$btn}_color__outline);
     @extend %btn;
+    #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
+    #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
+    #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
+    #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
     &:hover,
     &:focus-visible,
     &:active,
@@ -198,6 +202,10 @@
       background-image: none;
       background-position: inherit;
       color: brandBtn(#{$btn}_color__outline__hover);
+      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline__hover);
+      #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline__hover);
+      #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline__hover);
+      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline__hover);
       .svg--icon {
         svg {
           #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline__hover);;
@@ -207,15 +215,11 @@
           fill: brandBtn(#{$btn}_color__outline__hover);;
         }
       }
-      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline__hover);
-      #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline__hover);
-      #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline__hover);
-      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline__hover);
+      .bicolors-filter,
+      .bicolors-filter__24vb{
+        #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_border__outline);
+      }
     }
-      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
-      #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
-      #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
-      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
     .svg--icon {
       svg {
         #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
@@ -224,6 +228,10 @@
         #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
         fill: brandBtn(#{$btn}_color__outline);
       }
+    }
+    .bicolors-filter,
+    .bicolors-filter__24vb{
+      #{--infotech_svg-colorStroke}: #fff;
     }
   }
 }

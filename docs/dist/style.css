@@ -8409,12 +8409,24 @@ g.highcharts-series,
   --svg-icon-stroke_blue: #333333;
   fill: #333333;
 }
+.btn-default__outline:hover .bicolors-filter,
+.btn-default__outline:hover .bicolors-filter__24vb, .btn-default__outline:focus-visible .bicolors-filter,
+.btn-default__outline:focus-visible .bicolors-filter__24vb, .btn-default__outline:active .bicolors-filter,
+.btn-default__outline:active .bicolors-filter__24vb, .btn-default__outline.active .bicolors-filter,
+.btn-default__outline.active .bicolors-filter__24vb, .btn-default__outline.focus .bicolors-filter,
+.btn-default__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #cccccc;
+}
 .btn-default__outline .svg--icon svg {
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   fill: #333333;
+}
+.btn-default__outline .bicolors-filter,
+.btn-default__outline .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
 }
 
 .btn-primary__outline {
@@ -8444,12 +8456,24 @@ g.highcharts-series,
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
+.btn-primary__outline:hover .bicolors-filter,
+.btn-primary__outline:hover .bicolors-filter__24vb, .btn-primary__outline:focus-visible .bicolors-filter,
+.btn-primary__outline:focus-visible .bicolors-filter__24vb, .btn-primary__outline:active .bicolors-filter,
+.btn-primary__outline:active .bicolors-filter__24vb, .btn-primary__outline.active .bicolors-filter,
+.btn-primary__outline.active .bicolors-filter__24vb, .btn-primary__outline.focus .bicolors-filter,
+.btn-primary__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #1E6393;
+}
 .btn-primary__outline .svg--icon svg {
   --svg-icon-fill_blue: #1E6393;
   --svg-icon-stroke_blue: #1E6393;
   --svg-icon-fill: #1E6393;
   --svg-icon-stroke: #1E6393;
   fill: #1E6393;
+}
+.btn-primary__outline .bicolors-filter,
+.btn-primary__outline .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
 }
 
 .btn-success__outline {
@@ -8479,12 +8503,24 @@ g.highcharts-series,
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
+.btn-success__outline:hover .bicolors-filter,
+.btn-success__outline:hover .bicolors-filter__24vb, .btn-success__outline:focus-visible .bicolors-filter,
+.btn-success__outline:focus-visible .bicolors-filter__24vb, .btn-success__outline:active .bicolors-filter,
+.btn-success__outline:active .bicolors-filter__24vb, .btn-success__outline.active .bicolors-filter,
+.btn-success__outline.active .bicolors-filter__24vb, .btn-success__outline.focus .bicolors-filter,
+.btn-success__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #467B46;
+}
 .btn-success__outline .svg--icon svg {
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
   fill: #467B46;
+}
+.btn-success__outline .bicolors-filter,
+.btn-success__outline .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
 }
 
 .btn-danger__outline {
@@ -8514,12 +8550,24 @@ g.highcharts-series,
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
+.btn-danger__outline:hover .bicolors-filter,
+.btn-danger__outline:hover .bicolors-filter__24vb, .btn-danger__outline:focus-visible .bicolors-filter,
+.btn-danger__outline:focus-visible .bicolors-filter__24vb, .btn-danger__outline:active .bicolors-filter,
+.btn-danger__outline:active .bicolors-filter__24vb, .btn-danger__outline.active .bicolors-filter,
+.btn-danger__outline.active .bicolors-filter__24vb, .btn-danger__outline.focus .bicolors-filter,
+.btn-danger__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #D9534F;
+}
 .btn-danger__outline .svg--icon svg {
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
   fill: #D9534F;
+}
+.btn-danger__outline .bicolors-filter,
+.btn-danger__outline .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
 }
 
 .btn-warning__outline {
@@ -8549,12 +8597,24 @@ g.highcharts-series,
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
 }
+.btn-warning__outline:hover .bicolors-filter,
+.btn-warning__outline:hover .bicolors-filter__24vb, .btn-warning__outline:focus-visible .bicolors-filter,
+.btn-warning__outline:focus-visible .bicolors-filter__24vb, .btn-warning__outline:active .bicolors-filter,
+.btn-warning__outline:active .bicolors-filter__24vb, .btn-warning__outline.active .bicolors-filter,
+.btn-warning__outline.active .bicolors-filter__24vb, .btn-warning__outline.focus .bicolors-filter,
+.btn-warning__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #DE8500;
+}
 .btn-warning__outline .svg--icon svg {
   --svg-icon-fill_blue: #DE8500;
   --svg-icon-stroke_blue: #DE8500;
   --svg-icon-fill: #DE8500;
   --svg-icon-stroke: #DE8500;
   fill: #DE8500;
+}
+.btn-warning__outline .bicolors-filter,
+.btn-warning__outline .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
 }
 
 a.btn.disabled, fieldset[disabled] a.btn {
@@ -9857,7 +9917,7 @@ select.selectpicker {
 .bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:active {
   color: #999;
 }
-.bootstrap-select > .dropdown-toggle.bs-placeholder.btn-primary, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-primary:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-primary:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-primary:active, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-secondary, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-secondary:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-secondary:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-secondary:active, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-success, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-success:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-success:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-success:active, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger:active, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-info, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-info:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-info:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-info:active, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark:active {
+.bootstrap-select > .dropdown-toggle.bs-placeholder.btn-primary, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-primary:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-primary:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-primary:active, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-secondary, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-secondary:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-secondary:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-secondary:active, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-success, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-success:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-success:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-success:active, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger:active, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark:hover, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark:active {
   color: rgba(255, 255, 255, 0.5);
 }
 .bootstrap-select > .dropdown-toggle:focus {
@@ -11564,6 +11624,12 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   left: 0;
   position: sticky;
   z-index: 1000;
+}
+.table-sticky-head-left_col thead,
+.wrapper__tableSticky thead {
+  position: sticky;
+  top: 0;
+  z-index: 1003;
 }
 .table-sticky-head-left_col thead th,
 .wrapper__tableSticky thead th {

@@ -19,7 +19,7 @@ order: 1
         <span class="label label-success ml-10">Доп. элемент</span>
     </div>
     <div class="pageHeader__right">
-        <button class="btn-info">Кнопка действия</button>
+        <button class="btn-primary__outline">Кнопка действия</button>
     </div>
 </div>
 {% endhighlight %}
@@ -33,7 +33,7 @@ order: 1
             <span class="label label-success ml-10">Доп. элемент</span>
         </div>
         <div class="pageHeader__right">
-            <button class="btn-info">Кнопка действия</button>
+            <button class="btn-primary__outline">Кнопка действия</button>
         </div>
     </div>
 </div>
