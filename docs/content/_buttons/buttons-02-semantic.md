@@ -25,10 +25,10 @@ _Использование:_ класс `btn-primary`
 _Использование:_ класс `btn-primary__outline`
 
 {% highlight html %}
-<button class="btn-primary__outline"><span class="svg--icon"><span class="btn-text">Кнопка btn-primary__outline</span></button>
+<button class="btn-primary__outline"><span class="btn-text">Кнопка btn-primary__outline</span></button>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <button class="btn-primary__outline"><span class="svg--icon"><span class="btn-text">Кнопка btn-primary__outline</span></button>
+  <button class="btn-primary__outline"><span class="btn-text">Кнопка btn-primary__outline</span></button>
 </div>
 
 
@@ -49,10 +49,10 @@ _Использование:_ класс `btn-success`
 _Использование:_ класс `btn-success__outline`
 
 {% highlight html %}
-<button class="btn-success__outline"><span class="svg--icon"><span class="btn-text">Кнопка btn-success__outline</span></button>
+<button class="btn-success__outline"><span class="btn-text">Кнопка btn-success__outline</span></button>
 {% endhighlight %}
 <div class="bs-docs-example">
-<button class="btn-success__outline"><span class="svg--icon"><span class="btn-text">Кнопка btn-success__outline</span></button>
+<button class="btn-success__outline"><span class="btn-text">Кнопка btn-success__outline</span></button>
 </div>
 
 
