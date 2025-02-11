@@ -42,10 +42,10 @@ _Использование:_ `btn-icon`
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="">
-  <button class="btn-icon ml-10"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span></button>
+  <button class="btn-icon"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span></button>
   <button class="btn-icon ml-10"><span class="svg--icon"><svg class="bicolors-arrows_reload" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrows_reload"></use></svg></span></button>
-  <button class="btn-icon"><span class="svg--icon svg-danger"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg></span></button>
-  <button class="btn-icon btn-icon_h20"><span class="svg--icon"><svg class="bicolors-plus__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb"></use></svg></span></button>
+  <button class="btn-icon ml-10"><span class="svg--icon svg-danger"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg></span></button>
+  <button class="btn-icon btn-icon_h20 ml-10"><span class="svg--icon"><svg class="bicolors-plus__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb"></use></svg></span></button>
   <button class="btn-default btn-small ml-10">Кнопка btn-small для сравнения</button>
   </div>
 </div>
@@ -55,7 +55,9 @@ _Использование:_ `btn-icon`
 Размер обычной кнопки.
 
 {% highlight html %}
-  <button class="btn-link"><span class="svg--icon"><svg class="bicolors-filter" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-filter"></use></svg></span> Фильтр</button>
+  <button class="btn-link"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">Добавить</span></button>
+  
+  <button class="btn-success__outline"><span class="svg--icon"><svg class="bicolors-filter" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-filter"></use></svg></span></button>
 
   <button class="btn-danger__outline"><span class="svg--icon"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-delete"></use></svg></span><span class="btn-text">Удалить</span></button>
 
@@ -65,8 +67,9 @@ _Использование:_ `btn-icon`
 {% endhighlight %}
 
 <div class="bs-docs-example">
-  <button class="btn-link ml-10"><span class="svg--icon"><svg  class="bicolors-filter" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg></span><span class="btn-text">Фильтр</span></button>
-  <button class="btn-danger__outline"><span class="svg--icon"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg></span><span class="btn-text">Удалить</span></button>
+  <button class="btn-link"><span class="svg--icon"><svg  class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">Добавить</span></button>
+  <button class="btn-success__outline ml-10"><span class="svg--icon"><svg  class="bicolors-filter" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg></span></button>
+  <button class="btn-danger__outline ml-10"><span class="svg--icon"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg></span><span class="btn-text">Удалить</span></button>
   <button class="btn-primary ml-10"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">Добавить</span></button>
   <button class="btn-primary__outline ml-10"><span class="btn-text">Скачать</span><span class="svg--icon"><svg class="bicolors-export" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span></button>
 </div>
@@ -103,7 +106,7 @@ _Использование:_ `btn-icon`
 <div class="bs-docs-example">
   <div class="row">
     <div class="col-4">
-      <p>Кнопка с изменением при наведении</p>
+      <p>Кнопка для закачивания файлов</p>
       <button class="btn-download w-100p">
           <span class="btn-download_inner">
               <span class="svg--icon svg--icon__h21"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
@@ -121,7 +124,7 @@ _Использование:_ `btn-icon`
       </button>
     </div>
   <div class="col-4">
-  <p>Кнопка для закачивания файлов</p>
+      <p>Кнопка с изменением при наведении</p>
     <div class="blockBusinessCardLeft">
         <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__personal">
           <button class="btn-download btn-download__circle btn-download__onHover">
