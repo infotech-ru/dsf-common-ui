@@ -54,8 +54,8 @@ tbody.collapse.in { display: table-row-group; }
   --limited-stroke-on: transparent;
   --limited-stroke-off: inherit;
   --svg-icon-fill: transparent;
-  --svg-icon-stroke: #{brandColors(_dark-grey)};
-  --svg-icon-stroke_blue: #{brandColors(_vibrant-blue)};
+  // --svg-icon-stroke: #{brandColors(_dark-grey)};
+  // --svg-icon-stroke_blue: #{brandColors(_vibrant-blue)};
   }
   &.collapsed{
     .svg--icon{ 

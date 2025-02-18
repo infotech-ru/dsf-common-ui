@@ -48,10 +48,14 @@ collections:
     sort_by: order
   tables:
     sort_by: order
+  posts:
+    output: true
 sass:
   sass_dir: _sass
   style: compressed
 highlighter: rouge
+encoding: "utf-8"
+limit_posts: 5
 permissions:
   id-token: write # This is required for requesting the JWT
 show_excerpts: true
