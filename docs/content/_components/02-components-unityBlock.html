@@ -18,16 +18,12 @@ order: 2
 <div class="unityBlock">
   <div class="unityBlock_header">
       <div class="unityBlock_headerItem">
-          <span class="svg--icon unityBlock_headerSvgTitle"> 
-            <?= Icons::icon('bicolors-car__24vb') ?>
-          </span>
+            <?= Icons::wrapper('bicolors-car__24vb', ['class' => 'svg--icon unityBlock_headerSvgTitle']) ?>
           <h4 class="h4 unityBlock_headerTitle"><?= Yii::t('app', 'Название блока') ?></h4>
       </div>
       <div class="unityBlock_headerItem">
         <button class="btn-icon btn-icon__h20">
-          <span class="svg--icon"> 
-            <?= Icons::icon('bicolors-edit__24vb') ?>
-          </span>
+          <?= Icons::wrapper('bicolors-edit__24vb') ?>
         </button>
       </div>
   </div>
