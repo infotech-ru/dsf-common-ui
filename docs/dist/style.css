@@ -8432,15 +8432,15 @@ g.highcharts-series,
 .btn-primary__outline {
   background-color: transparent;
   background-image: none;
-  border-color: #1E6393;
-  color: #1E6393;
-  --infotech_svg-colorStroke: #1E6393;
-  --infotech_svg-stroke: #1E6393;
-  --infotech_svg-fill: #1E6393;
-  --infotech_svg-colorFill: #1E6393;
+  border-color: #4A8DC6;
+  color: #4A8DC6;
+  --infotech_svg-colorStroke: #4A8DC6;
+  --infotech_svg-stroke: #4A8DC6;
+  --infotech_svg-fill: #4A8DC6;
+  --infotech_svg-colorFill: #4A8DC6;
 }
 .btn-primary__outline:hover, .btn-primary__outline:focus-visible, .btn-primary__outline:active, .btn-primary__outline.active, .btn-primary__outline.focus {
-  background-color: #1E6393;
+  background-color: #4A8DC6;
   background-image: none;
   background-position: inherit;
   color: #ffffff;
@@ -8462,14 +8462,14 @@ g.highcharts-series,
 .btn-primary__outline:active .bicolors-filter__24vb, .btn-primary__outline.active .bicolors-filter,
 .btn-primary__outline.active .bicolors-filter__24vb, .btn-primary__outline.focus .bicolors-filter,
 .btn-primary__outline.focus .bicolors-filter__24vb {
-  --infotech_svg-colorStroke: #1E6393;
+  --infotech_svg-colorStroke: #4A8DC6;
 }
 .btn-primary__outline .svg--icon svg {
-  --svg-icon-fill_blue: #1E6393;
-  --svg-icon-stroke_blue: #1E6393;
-  --svg-icon-fill: #1E6393;
-  --svg-icon-stroke: #1E6393;
-  fill: #1E6393;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  fill: #4A8DC6;
 }
 .btn-primary__outline .bicolors-filter,
 .btn-primary__outline .bicolors-filter__24vb {

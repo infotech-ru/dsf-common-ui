@@ -1,5 +1,5 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.8065 12L19 12C19.5523 12 20 12.4477 20 13L20 18C20 18.5523 19.5523 19 19 19L5 19C4.44771 19 4 18.5523 4 18L4 13C4 12.4477 4.44772 12 5 12L10 12" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M12 4L12 16" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" />
-<path d="M14 14L12 16L10 14" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"  />
+<path d="M13.8065 9L19 9C19.5523 9 20 9.44772 20 10L20 18C20 18.5523 19.5523 19 19 19L5 19C4.44771 19 4 18.5523 4 18L4 10C4 9.44771 4.44772 9 5 9L10 9" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M12 4L12 16" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M14 14L12 16L10 14" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
 </svg>

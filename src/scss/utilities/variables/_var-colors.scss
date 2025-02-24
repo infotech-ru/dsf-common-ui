@@ -278,9 +278,9 @@ $brand-btn: (
   primary_svg_blue:                       map.get($brand-colors, _white),
   primary_svg_blue__hover:                map.get($brand-colors, _white),
   primary_textShadow:                     map.get($brand-colors, _black),
-  primary_color__outline:                 map.get($brand-colors, _blue),
+  primary_color__outline:                 map.get($brand-colors, _light-blue),
   primary_color__outline__hover:          map.get($brand-colors, _white),
-  primary_border__outline:                map.get($brand-colors, _blue),
+  primary_border__outline:                map.get($brand-colors, _light-blue),
 
   danger_bg:                              map.get($brand-colors, _red),
   danger-end_bg:                          map.get($brand-colors, _red),
