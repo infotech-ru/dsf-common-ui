@@ -14,7 +14,7 @@ export function multilevelMenu() {
   $('.multilevelMenu .dropdown-toggle').on('click', function (e) {
     var $el = $(this);
     var $parent = $(this).offsetParent(".dropdown-menu");
-    $(this).parent("li").toggleClass('открыто', 'open');
+    $(this).parent("li").toggleClass('open');
 
     $('.multilevelMenu li.open').not($(this).parents("li")).removeClass("open");
 
@@ -37,7 +37,7 @@ export function CopyToClipboard() {
     textArea.select();
 
     try {
-      var successful = document.execCommand('копия', 'копировать', 'copy');
+      var successful = document.execCommand('copy');
       var msg = successful ? 'successful' : 'unsuccessful';
       console.log('Fallback: Copying text command was ' + msg);
     } catch (err) {

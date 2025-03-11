@@ -12,6 +12,9 @@
   align-items: center;
   display: flex;
   margin-bottom: 10px;
+  .mobile-view &{
+    flex-wrap: wrap;
+  }
   .page-title{
     margin-bottom: 0;
   }

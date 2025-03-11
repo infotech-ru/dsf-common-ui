@@ -96,7 +96,7 @@ var DSFUI = (function (exports) {
       $('.multilevelMenu .dropdown-toggle').on('click', function (e) {
         $(this);
         $(this).offsetParent(".dropdown-menu");
-        $(this).parent("li").toggleClass('открыто', 'open');
+        $(this).parent("li").toggleClass('open');
         $('.multilevelMenu li.open').not($(this).parents("li")).removeClass("open");
         return false;
       });
@@ -114,7 +114,7 @@ var DSFUI = (function (exports) {
         textArea.focus();
         textArea.select();
         try {
-          var successful = document.execCommand('копия', 'копировать', 'copy');
+          var successful = document.execCommand('copy');
           var msg = successful ? 'successful' : 'unsuccessful';
           console.log('Fallback: Copying text command was ' + msg);
         } catch (err) {

@@ -3204,6 +3204,9 @@ h6, .h6 {
   display: flex;
   margin-bottom: 10px;
 }
+.mobile-view .pageHeader {
+  flex-wrap: wrap;
+}
 .pageHeader .page-title {
   margin-bottom: 0;
 }
@@ -13913,6 +13916,7 @@ body[style^=padding-right] .modal-sidebar {
   padding: 30px;
 }
 .authorization__heading .logo {
+  height: 34px;
   justify-content: center;
 }
 .guest-view .authorization {
