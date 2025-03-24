@@ -59,7 +59,6 @@ select.input-sm {
     height: rem(calc(lineHeight(btn) + 2));
 }
 
-// Adjust output element
 output {
   display: block;
   padding-top: rem(brandSizes(output_paddingY));
@@ -126,6 +125,7 @@ output {
         transform: translateX(rem(calc(brandSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
         top: 2px; // корректировка из-за line-height
         z-index: 1;
+        max-width: calc(100% - rem(calc(brandSizes(formControl_paddingX) - $paddinFromLeft)) + rem($paddinFromLeft));
       }
     }
     &__relative{
@@ -271,7 +271,6 @@ output {
   // [converter] extracted textarea& to textarea.form-control
 }
 
-// Reset height for `textarea`s
 textarea.form-control {
   border-radius: rem(brandSizes(borderRadiusFormElem));
   height: auto;
@@ -302,11 +301,6 @@ textarea.form-control {
   }
 }
 
-// Form groups
-//
-// Designed to help with the organization and spacing of vertical forms. For
-// horizontal forms, use the predefined grid classes.
-
 .form-group {
   // margin-bottom: $form-group-margin-bottom;
   margin-bottom: rem(brandSizes(formGroup_mb));
@@ -322,10 +316,6 @@ textarea.form-control {
     }
   }
 }
-
-// Checkboxes and radios
-//
-// Indent the labels to position radios/checkboxes as hanging controls.
 
 .radio,
 .checkbox {
@@ -369,7 +359,6 @@ textarea.form-control {
   margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
 }
 
-// Radios and checkboxes on same line
 .radio-inline,
 .checkbox-inline {
   position: relative;
@@ -391,11 +380,6 @@ textarea.form-control {
   margin-top: 0;
   margin-left: 10px; // space out consecutive inline controls
 }
-
-// Static form control text
-//
-// Apply class to a `p` element to make any string of text align with labels in
-// a horizontal form layout.
 
 .form-control-static {
   color: brandPalette(formControl-color);
@@ -419,7 +403,6 @@ textarea.form-control {
   }
 }
 
-// Feedback states
 .has-success {
   @include form-control-validation(brandPalette(hasSuccess_color), brandPalette(hasSuccess_border), brandPalette(hasSuccess_bgc));
 }
@@ -430,7 +413,6 @@ textarea.form-control {
   @include form-control-validation(brandPalette(hasDanger_color), brandPalette(hasDanger_border), brandPalette(hasDanger_bgc));
 }
 
-// Reposition feedback icon if input has visible label above
 .has-feedback label {
   & ~ .form-control-feedback {
     top: 25px; // Height of the `label` and its margin
@@ -439,11 +421,6 @@ textarea.form-control {
     top: 0;
   }
 }
-
-// Help text
-//
-// Apply to any element you wish to create light text for placement immediately
-// below a form control. Use for general help, formatting, or instructional text.
 
 .help-block {
   display: block; // account for any element using help-block
@@ -461,8 +438,6 @@ textarea.form-control {
       // position: absolute; // большие тексты перекрываются
   }
 }
-
-// Inline forms
 
 @mixin form-inline {
 
@@ -537,8 +512,6 @@ textarea.form-control {
 .form-inline {
   @include form-inline;
 }
-
-// Horizontal forms
 
 .form-horizontal {
 
@@ -719,7 +692,7 @@ textarea.form-control {
             right: 0px;
             padding-left: 5px;
             margin-top: calc(#{brandSizes(iconLabelActive)}px * -0.5);
-            width: 22px;
+            width: calc(#{brandSizes(iconLabelActive)}px + 5px);
             svg { 
                 height: #{brandSizes(iconLabelActive)}px;
                 width: #{brandSizes(iconLabelActive)}px;

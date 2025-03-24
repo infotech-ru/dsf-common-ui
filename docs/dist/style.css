@@ -9351,6 +9351,7 @@ output {
   transform: translateX(0.4375rem) translateY(0);
   top: 2px;
   z-index: 1;
+  max-width: calc(100% - 0.4375rem + 0.1875rem);
 }
 .css-formFree .control-label__relative {
   left: auto;
@@ -9874,7 +9875,7 @@ fieldset[disabled] .checkbox-inline {
   right: 0px;
   padding-left: 5px;
   margin-top: calc(12px * -0.5);
-  width: 22px;
+  width: calc(12px + 5px);
 }
 .css-formFree .control-label.active .labelTooltipIcon svg {
   height: 12px;
