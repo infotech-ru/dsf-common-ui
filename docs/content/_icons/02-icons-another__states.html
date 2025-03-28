@@ -6,14 +6,16 @@ anchor: icons-states
 order: 2
 ---
 
-<h4>Модификация иконки bicolors-plus при использование скрипта collspse.js</h4>
-<p>Использование одной иконки bicolors-plus для cкрипта collapse. И создание эффекта замены на `minus` при расскрытии списка.
-  <br>Для этого используется класс <code class="language-plaintext highlighter-rouge">limited</code>.</p>
+<h4>Модификация иконки bicolors-plus или bicolors-arrow_down при использование скрипта collspse.js</h4>
+<p>Использование одной иконки bicolors-plus или bicolors-arrow_down для cкрипта collapse. И создание эффекта замены на `minus` или bicolors-arrow_up при расскрытии списка.
+  <br>Для иконки bicolors-plus используется класс <code class="language-plaintext highlighter-rouge">limited</code>.</p>
+  <br>Для иконки bicolors-arrow_down используется класс <code class="language-plaintext highlighter-rouge">iconModification</code>.</p>
 {% highlight html %}
   <a class="limited collapsed" role="button" data-toggle="collapse" href="#collapseLimited" aria-expanded="false" aria-controls="collapseLimited">
-    <span class="svg--icon">
-      <?= Icons::icon('bicolors-plus') ?>
-    </span>
+      <?= Icons::wrapper('bicolors-plus') ?>
+  </a>
+  <a class="iconModification collapsed" role="button" data-toggle="collapse" href="#collapseLimited2" aria-expanded="false" aria-controls="collapseLimited2">
+      <?= Icons::wrapper('bicolors-arrow_down') ?>
   </a>
 {% endhighlight %}
 <div class="bs-docs-example">
@@ -26,6 +28,16 @@ order: 2
   </a>
   <div class="collapse mt-10" id="collapseLimited">
     Скрытый блок  
+  </div>
+  <a class="iconModification mt-10 collapsed btn-icon" role="button" data-toggle="collapse" href="#collapseLimited2" aria-expanded="false" aria-controls="collapseLimited2">
+    <span class="svg--icon"> 
+      <svg width="24" height="24">
+        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down"></use>
+      </svg>
+    </span>
+  </a>
+  <div class="collapse mt-10" id="collapseLimited2">
+    Скрытый блок 2
   </div>
 </div>
 

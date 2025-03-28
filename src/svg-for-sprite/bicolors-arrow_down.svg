@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9"><path d="M.5.5l8,8" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5.5l-8,8" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9">
+<path d="M.5.5l8,8" stroke="var(--svg-icon-stroke, #333)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.5.5l-8,8" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.5,8.5l-8-8" stroke="var(--limited-stroke-off, var(--svg-icon-stroke, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M.5,8.5l8-8" stroke="var(--limited-stroke-off, var(--svg-icon-stroke_blue, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
