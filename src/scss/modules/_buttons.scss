@@ -154,6 +154,7 @@
           #{--svg-icon-stroke}: brandBtn(#{$btn}_svg__hover);
           #{--svg-icon-fill_blue}: brandBtn(#{$btn}_svg_blue__hover);
           #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_svg_blue__hover);
+          #{--limited-stroke-off}: _brand-colors(_transparent);
         }
       }
     }
@@ -164,6 +165,7 @@
         #{--svg-icon-stroke}: brandBtn(#{$btn}_svg);
         #{--svg-icon-fill_blue}: brandBtn(#{$btn}_svg_blue);
         #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_svg_blue);
+        #{--limited-stroke-off}: _brand-colors(_transparent);
       }
     }
   }
@@ -208,11 +210,12 @@
       #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline__hover);
       .svg--icon {
         svg {
-          #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline__hover);;
-          #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline__hover);;
-          #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline__hover);;
-          #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline__hover);;
-          fill: brandBtn(#{$btn}_color__outline__hover);;
+          #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline__hover);
+          #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline__hover);
+          #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline__hover);
+          #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline__hover);
+          fill: brandBtn(#{$btn}_color__outline__hover);
+          #{--limited-stroke-off}: _brand-colors(_transparent);
         }
       }
       .bicolors-filter,
@@ -227,6 +230,7 @@
         #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
         #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
         fill: brandBtn(#{$btn}_color__outline);
+        #{--limited-stroke-off}: _brand-colors(_transparent);
       }
     }
     .bicolors-filter,
@@ -340,6 +344,7 @@ a.btn {
     #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
+    #{--limited-stroke-off}: _brand-colors(_transparent);
   }
   &__h12{
     .glyphicon {
@@ -547,6 +552,7 @@ input[type="button"] {
     #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
+    #{--limited-stroke-off}: _brand-colors(_transparent);
   }
   .fill{
     fill: brandPalette(btnIconSvg_color);

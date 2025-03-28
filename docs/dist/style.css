@@ -8229,6 +8229,7 @@ g.highcharts-series,
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-default .svg--icon svg, .btn-group__theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
   fill: #333333;
@@ -8236,6 +8237,7 @@ g.highcharts-series,
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 
 .btn-primary, .btn-group__theme > [class^=btn].active {
@@ -8264,6 +8266,7 @@ g.highcharts-series,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-primary .svg--icon svg, .btn-group__theme > [class^=btn].active .svg--icon svg {
   fill: #ffffff;
@@ -8271,6 +8274,7 @@ g.highcharts-series,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 
 .btn-success {
@@ -8299,6 +8303,7 @@ g.highcharts-series,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-success .svg--icon svg {
   fill: #ffffff;
@@ -8306,6 +8311,7 @@ g.highcharts-series,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 
 .btn-danger {
@@ -8334,6 +8340,7 @@ g.highcharts-series,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-danger .svg--icon svg {
   fill: #ffffff;
@@ -8341,6 +8348,7 @@ g.highcharts-series,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 
 .btn-warning {
@@ -8369,6 +8377,7 @@ g.highcharts-series,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-warning .svg--icon svg {
   fill: #ffffff;
@@ -8376,6 +8385,7 @@ g.highcharts-series,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 
 .btn-default .badge, .btn-group__theme > [class^=btn] .badge, .btn .badge {
@@ -8411,6 +8421,7 @@ g.highcharts-series,
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
   fill: #333333;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-default__outline:hover .bicolors-filter,
 .btn-default__outline:hover .bicolors-filter__24vb, .btn-default__outline:focus-visible .bicolors-filter,
@@ -8426,6 +8437,7 @@ g.highcharts-series,
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   fill: #333333;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-default__outline .bicolors-filter,
 .btn-default__outline .bicolors-filter__24vb {
@@ -8458,6 +8470,7 @@ g.highcharts-series,
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-primary__outline:hover .bicolors-filter,
 .btn-primary__outline:hover .bicolors-filter__24vb, .btn-primary__outline:focus-visible .bicolors-filter,
@@ -8473,6 +8486,7 @@ g.highcharts-series,
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   fill: #4A8DC6;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-primary__outline .bicolors-filter,
 .btn-primary__outline .bicolors-filter__24vb {
@@ -8505,6 +8519,7 @@ g.highcharts-series,
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-success__outline:hover .bicolors-filter,
 .btn-success__outline:hover .bicolors-filter__24vb, .btn-success__outline:focus-visible .bicolors-filter,
@@ -8520,6 +8535,7 @@ g.highcharts-series,
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
   fill: #467B46;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-success__outline .bicolors-filter,
 .btn-success__outline .bicolors-filter__24vb {
@@ -8552,6 +8568,7 @@ g.highcharts-series,
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-danger__outline:hover .bicolors-filter,
 .btn-danger__outline:hover .bicolors-filter__24vb, .btn-danger__outline:focus-visible .bicolors-filter,
@@ -8567,6 +8584,7 @@ g.highcharts-series,
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
   fill: #D9534F;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-danger__outline .bicolors-filter,
 .btn-danger__outline .bicolors-filter__24vb {
@@ -8599,6 +8617,7 @@ g.highcharts-series,
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-warning__outline:hover .bicolors-filter,
 .btn-warning__outline:hover .bicolors-filter__24vb, .btn-warning__outline:focus-visible .bicolors-filter,
@@ -8614,6 +8633,7 @@ g.highcharts-series,
   --svg-icon-fill: #DE8500;
   --svg-icon-stroke: #DE8500;
   fill: #DE8500;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-warning__outline .bicolors-filter,
 .btn-warning__outline .bicolors-filter__24vb {
@@ -8697,6 +8717,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-icon .svg--icon svg {
   height: 1rem;
@@ -8884,6 +8905,7 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
+  --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-download .fill {
   fill: #4A8DC6;
