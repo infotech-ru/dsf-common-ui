@@ -16429,7 +16429,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #777777;
   --svg-icon-stroke_blue: #777777;
   --svg-valute-fill: #777777;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-default {
@@ -16500,7 +16500,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #1E6393;
   --svg-icon-stroke_blue: #1E6393;
   --svg-valute-fill: #1E6393;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-primary {
@@ -16571,7 +16571,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
   --svg-valute-fill: #D9534F;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-danger {
@@ -16642,7 +16642,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #DE8500;
   --svg-icon-stroke_blue: #DE8500;
   --svg-valute-fill: #DE8500;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-warning {
@@ -16713,7 +16713,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #69C26A;
   --svg-icon-stroke_blue: #69C26A;
   --svg-valute-fill: #69C26A;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-success {
@@ -16784,7 +16784,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #E4EEF7;
   --svg-icon-stroke_blue: #E4EEF7;
   --svg-valute-fill: #E4EEF7;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-info {
@@ -16855,7 +16855,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #BABABA;
   --svg-icon-stroke_blue: #BABABA;
   --svg-valute-fill: #BABABA;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-muted {
@@ -16926,7 +16926,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #FFBD41;
   --svg-icon-stroke_blue: #FFBD41;
   --svg-valute-fill: #FFBD41;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-orange {
@@ -16997,7 +16997,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
   --svg-valute-fill: #333333;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-dark-grey {
@@ -17068,7 +17068,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #BABABA;
   --svg-icon-stroke_blue: #BABABA;
   --svg-valute-fill: #BABABA;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-grey {
@@ -17139,7 +17139,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #dddddd;
   --svg-icon-stroke_blue: #dddddd;
   --svg-valute-fill: #dddddd;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-grey2 {
@@ -17210,7 +17210,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #cccccc;
   --svg-icon-stroke_blue: #cccccc;
   --svg-valute-fill: #cccccc;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-grey3 {
@@ -17281,7 +17281,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #777777;
   --svg-icon-stroke_blue: #777777;
   --svg-valute-fill: #777777;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-grey4 {
@@ -17352,7 +17352,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #f9f9f9;
   --svg-icon-stroke_blue: #f9f9f9;
   --svg-valute-fill: #f9f9f9;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-light-grey {
@@ -17423,7 +17423,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #F5F5F5;
   --svg-icon-stroke_blue: #F5F5F5;
   --svg-valute-fill: #F5F5F5;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-light-grey2 {
@@ -17494,7 +17494,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #e5e5e5;
   --svg-icon-stroke_blue: #e5e5e5;
   --svg-valute-fill: #e5e5e5;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-light-grey4 {
@@ -17565,7 +17565,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #FCEEEE;
   --svg-icon-stroke_blue: #FCEEEE;
   --svg-valute-fill: #FCEEEE;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-light-red {
@@ -17636,7 +17636,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #762624;
   --svg-icon-stroke_blue: #762624;
   --svg-valute-fill: #762624;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-dark-red {
@@ -17707,7 +17707,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #FF9996;
   --svg-icon-stroke_blue: #FF9996;
   --svg-valute-fill: #FF9996;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-rose {
@@ -17778,7 +17778,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #00000000;
   --svg-icon-stroke_blue: #00000000;
   --svg-valute-fill: #00000000;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-clear {
@@ -17849,7 +17849,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
   --svg-valute-fill: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-white {
@@ -17920,7 +17920,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
   --svg-valute-fill: #4A8DC6;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-light-blue {
@@ -17991,7 +17991,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #B6D1E8;
   --svg-icon-stroke_blue: #B6D1E8;
   --svg-valute-fill: #B6D1E8;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-light-blue3 {
@@ -18062,7 +18062,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #0094FF;
   --svg-icon-stroke_blue: #0094FF;
   --svg-valute-fill: #0094FF;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-vibrant-blue {
@@ -18133,7 +18133,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #FFFBA0;
   --svg-icon-stroke_blue: #FFFBA0;
   --svg-valute-fill: #FFFBA0;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-light-yellow {
@@ -18204,7 +18204,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #FFF6DF;
   --svg-icon-stroke_blue: #FFF6DF;
   --svg-valute-fill: #FFF6DF;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-light-yellow2 {
@@ -18275,7 +18275,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #FFDA7D;
   --svg-icon-stroke_blue: #FFDA7D;
   --svg-valute-fill: #FFDA7D;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-yellow2 {
@@ -18346,7 +18346,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #DAF0DA;
   --svg-icon-stroke_blue: #DAF0DA;
   --svg-valute-fill: #DAF0DA;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-light-green {
@@ -18417,7 +18417,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
   --svg-valute-fill: #467B46;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-dark-green {
@@ -18488,7 +18488,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #000000;
   --svg-icon-stroke_blue: #000000;
   --svg-valute-fill: #000000;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: inherit;
 }
 
 .svg-colorStroke-black {

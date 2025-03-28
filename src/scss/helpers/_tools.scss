@@ -672,7 +672,7 @@
       #{--svg-icon-fill_blue}: $value;
       #{--svg-icon-stroke_blue}: $value;
       #{--svg-valute-fill}: $value;
-      #{--limited-stroke-off}: _brand-colors(_transparent);
+      #{--limited-stroke-off}: inherit;
     }
   }
 
