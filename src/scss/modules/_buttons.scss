@@ -543,6 +543,7 @@ input[type="button"] {
   &__size128{
     height: rem(128);
     width: rem(128);
+    min-width: rem(128);
   }
   .btn-text{
     margin: 0;
