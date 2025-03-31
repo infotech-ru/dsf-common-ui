@@ -8893,6 +8893,10 @@ input[type=button].btn-block {
 .mobile-view .btn-download__onHover:active {
   opacity: 1;
 }
+.btn-download__size128 {
+  height: 8rem;
+  width: 8rem;
+}
 .btn-download .btn-text {
   margin: 0;
   line-height: 12px;
@@ -8906,6 +8910,9 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   --limited-stroke-off: _brand-colors(_transparent);
+}
+.btn-download .svg--icon svg {
+  height: 1.25rem;
 }
 .btn-download .fill {
   fill: #4A8DC6;
@@ -14216,6 +14223,75 @@ tbody.collapse.in {
 .thumbs_auto__none img {
   max-width: 80px;
   max-height: 36px;
+}
+
+.thumbnail {
+  background-color: var(--color_white);
+  border: 1px solid var(--color_grey2);
+  border-radius: 0;
+  height: 64px;
+  line-height: normal;
+  padding: 4px;
+  width: 64px;
+}
+.thumbnail img {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: auto;
+}
+.thumbnailCaption {
+  color: var(--color_black);
+  font-size: 12px;
+  line-height: 14px;
+  height: 18px;
+  font-weight: normal;
+  padding-top: 4px;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 1;
+}
+.thumbnailCaption + .thumbnailImgWrapper {
+  max-height: calc(100% - 18px);
+  height: calc(100% - 18px);
+}
+.thumbnailImgWrapper {
+  display: block;
+}
+.thumbnailInner {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.thumbnail__bigSize {
+  height: 128px;
+  width: 128px;
+}
+.thumbnail:hover, .thumbnail:focus, .thumbnail.active {
+  border-color: var(--color_dark-grey);
+}
+.thumbnailActions {
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.thumbnailActionsBtn {
+  background-color: var(--color_white);
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.thumbnailActionsBtn__shadow {
+  filter: drop-shadow(0px 3px 9px rgba(0, 0, 0, 0.5));
 }
 
 .sr-only {

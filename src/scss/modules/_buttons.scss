@@ -540,6 +540,10 @@ input[type="button"] {
       }
     }
   }
+  &__size128{
+    height: rem(128);
+    width: rem(128);
+  }
   .btn-text{
     margin: 0;
     line-height: 12px;
@@ -553,6 +557,9 @@ input[type="button"] {
     #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
     #{--limited-stroke-off}: _brand-colors(_transparent);
+    svg{
+      height: rem(20);
+    }
   }
   .fill{
     fill: brandPalette(btnIconSvg_color);

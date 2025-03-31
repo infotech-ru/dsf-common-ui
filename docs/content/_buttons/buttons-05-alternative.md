@@ -105,7 +105,7 @@ _Использование:_ `btn-icon`
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="row">
-    <div class="col-4">
+    <div class="col-3">
       <p>Кнопка для закачивания файлов</p>
       <button class="btn-download w-100p">
           <span class="btn-download_inner">
@@ -114,7 +114,16 @@ _Использование:_ `btn-icon`
           </span>
       </button>
     </div>
-    <div class="col-4">
+    <div class="col-3">
+      <p>Кнопка для закачивания файлов квадратная большая</p>
+      <button class="btn-download btn-download__size128">
+          <span class="btn-download_inner">
+              <span class="svg--icon svg--icon__h20"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+              <span class="btn-text">Добавить фото</span>
+          </span>
+      </button>
+    </div>
+    <div class="col-3">
     <p>Кнопка без изменения при наведении</p>
       <button class="btn-download btn-download__circle">
           <span class="btn-download_inner">
@@ -123,7 +132,7 @@ _Использование:_ `btn-icon`
           </span>
       </button>
     </div>
-  <div class="col-4">
+  <div class="col-3">
       <p>Кнопка с изменением при наведении</p>
     <div class="blockBusinessCardLeft">
         <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__personal">

@@ -48,7 +48,69 @@ order: 8
     </div>
   </div>
 </div>
-
+### Оформление картинок
+Размеры - 64px и 128px(`.thumbnail__bigSize`). 
+.thumbnailActions - блок с кнопками действия. Иконки с размером 20.
+.thumbnailActionsBtn - класс кнопок. .thumbnailActionsBtn__shadow - вариант оформления с тенью
+.thumbnailCaption - блок с текстом, например имя картинки
+.thumbnailImgWrapper - блок обретка картинки `<div>` или `<a>`
+{% highlight html %}
+<div class="thumbnail thumbnail__bigSize">
+    <div class="thumbnailInner">
+        <div class="thumbnailActions">
+            <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                <span class="svg--icon svg--icon__20 svg-primary">
+                    <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
+                </span>
+            <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                <span class="svg--icon svg--icon__20 svg-primary">
+                    <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
+                </span>
+            </a>
+        </div>
+        <div class="thumbnailCaption">Имя картинки</div>
+        <div class="thumbnailImgWrapper"><img src="https://placehold.co/200x200/69C26A/FFFFFF/jpg?text=Infotech+UI%5CnImage+1" alt=""></div>
+    </div>
+</div>
+{% endhighlight %}
+<div class="bs-docs-example">
+    <div class="d-flex gap-10">
+        <div class="thumbnail thumbnail__bigSize">
+            <div class="thumbnailInner">
+                <div class="thumbnailActions">
+                    <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                        <span class="svg--icon svg--icon__20 svg-primary">
+                            <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
+                        </span>
+                    <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                        <span class="svg--icon svg--icon__20 svg-primary">
+                            <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="thumbnailCaption">Имя картинки 1</div>
+                <div class="thumbnailImgWrapper"><img src="https://placehold.co/200x200/69C26A/FFFFFF/jpg?text=Infotech+UI%5CnImage+1" alt=""></div>
+            </div>
+        </div>
+        <div class="thumbnail">
+            <div class="thumbnailInner">
+                <div class="thumbnailActions">
+                    <a class="thumbnailActionsBtn" href="#">
+                        <span class="svg--icon svg--icon__20 svg-primary">
+                            <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
+                        </span>
+                    <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                        <span class="svg--icon svg--icon__20 svg-primary">
+                            <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="thumbnailCaption">Имя картинки 2</div>
+                <div class="thumbnailImgWrapper"><img src="https://placehold.co/200x200/69C26A/FFFFFF/jpg?text=Infotech+UI%5CnImage+1" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
 ### Блок-визитка
 Используется для вывода информации о клиенте или обе его контакте или об автомобиле.
 {% highlight html %}
