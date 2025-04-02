@@ -8849,14 +8849,15 @@ input[type=button].btn-block {
   box-shadow: none;
   color: var(--color_light-blue);
   cursor: pointer;
-  display: flex;
-  font-size: 0.625rem;
+  display: inline-block;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 12px;
+  height: auto;
+  line-height: 1.625rem;
   margin-bottom: 0;
-  height: 64px;
-  padding: 4px;
   outline: none;
+  padding: 3px;
+  vertical-align: middle;
 }
 .btn-download_inner {
   align-items: center;
@@ -8864,18 +8865,31 @@ input[type=button].btn-block {
   display: flex;
   height: 100%;
   justify-content: center;
-  flex-direction: column;
+  padding: 4px 10px;
   width: 100%;
+}
+.btn-download__large .btn-download_inner, .btn-download__square .btn-download_inner, .btn-download__circle .btn-download_inner {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  max-height: none;
 }
 .btn-download:hover, .btn-download:focus {
   background-image: none;
   box-shadow: none;
   outline: 0;
 }
+.btn-download__large {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  height: 4rem;
+  width: 100%;
+}
 .btn-download__circle {
-  border-radius: 115px;
-  height: 115px;
-  width: 115px;
+  border-radius: 7.1875rem;
+  font-size: 0.625rem;
+  height: 7.1875rem;
+  width: 7.1875rem;
 }
 .btn-download__circle .btn-download_inner {
   border-radius: 100%;
@@ -8893,27 +8907,45 @@ input[type=button].btn-block {
 .mobile-view .btn-download__onHover:active {
   opacity: 1;
 }
-.btn-download__size128 {
+.btn-download__square {
+  font-size: 0.625rem;
   height: 8rem;
   width: 8rem;
   min-width: 8rem;
 }
 .btn-download .btn-text {
+  line-height: 0.75rem;
+}
+.btn-download__large .btn-download .btn-text, .btn-download__square .btn-download .btn-text, .btn-download__circle .btn-download .btn-text {
   margin: 0;
-  line-height: 12px;
 }
 .btn-download .svg--icon {
-  height: 1.25rem;
+  height: 0.75rem;
+  width: 0.75rem;
   vertical-align: middle;
-  width: 1.25rem;
   --svg-icon-fill: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   --limited-stroke-off: _brand-colors(_transparent);
 }
-.btn-download .svg--icon svg {
+.btn-download__large .btn-download .svg--icon, .btn-download__square .btn-download .svg--icon {
   height: 1.25rem;
+  width: 1.25rem;
+}
+.btn-download__circle .btn-download .svg--icon {
+  height: 1.3125rem;
+  width: 1.3125rem;
+}
+.btn-download .svg--icon svg {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+.btn-download__large .btn-download .svg--icon svg, .btn-download__square .btn-download .svg--icon svg {
+  height: 1.25rem;
+}
+.btn-download__circle .btn-download .svg--icon svg {
+  height: 1.3125rem;
 }
 .btn-download .fill {
   fill: #4A8DC6;
