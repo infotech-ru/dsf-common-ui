@@ -527,20 +527,28 @@ input[type="button"] {
     box-shadow: none;
     outline: 0;
   }
-  &__large{ 
-    font-size: rem(10);
+  .btn-text{
     line-height: rem(12);
-    height: rem(64);
-    width: 100%;
   }
-  &__circle{
-    border-radius: rem(115);
-    font-size: rem(10);
-    height: rem(115);
-    width: rem(115);
-    .btn-download_inner{
-      border-radius: 100%;
+  .svg--icon {
+    height: rem(12);
+    width: rem(12);
+    vertical-align: middle;
+    #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
+    #{--limited-stroke-off}: _brand-colors(_transparent);
+    svg{
+      height: rem(12);
+      width: rem(12);
     }
+  }
+  .fill{
+    fill: brandPalette(btnIconSvg_color);
+  }
+  .stroke{
+    stroke: brandPalette(btnIconSvg_color);
   }
   &__dragover{
     opacity: 0.4;
@@ -557,54 +565,51 @@ input[type="button"] {
       }
     }
   }
+  &__large &,
+  &__square &,
+  &__circle &{
+    .btn-text{
+      margin: 0;
+    }
+  }
+  &__large &,
+  &__square &{
+    .svg--icon {
+      height: rem(20);
+      width: rem(20);
+      svg{
+        height: rem(20);
+        width: rem(20);
+      }
+    }
+  }
+  &__large{ 
+    font-size: rem(10);
+    line-height: rem(12);
+    height: rem(64);
+    width: 100%;
+  }
+  &__circle{
+    border-radius: rem(115);
+    font-size: rem(10);
+    height: rem(115);
+    width: rem(115);
+    .btn-download_inner{
+      border-radius: 100%;
+    }
+    .svg--icon {
+      height: rem(21);
+      width: rem(21);
+      svg{
+        height: rem(21);
+        width: rem(21);
+      }
+    }
+  }
   &__square{
     font-size: rem(10);
     height: rem(128);
     width: rem(128);
     min-width: rem(128);
-  }
-  .btn-text{
-    line-height: rem(12);
-    .btn-download__large &,
-    .btn-download__square &,
-    .btn-download__circle &{
-      margin: 0;
-    }
-  }
-  .svg--icon {
-    height: rem(12);
-    width: rem(12);
-    vertical-align: middle;
-    #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
-    #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
-    #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
-    #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
-    #{--limited-stroke-off}: _brand-colors(_transparent);
-    .btn-download__large &,
-    .btn-download__square &{
-      height: rem(20);
-      width: rem(20);
-    }
-    .btn-download__circle &{
-      height: rem(21);
-      width: rem(21);
-    }
-    svg{
-      height: rem(12);
-      width: rem(12);
-      .btn-download__large &,
-      .btn-download__square &{
-        height: rem(20);
-      }
-      .btn-download__circle &{
-        height: rem(21);
-      }
-    }
-  }
-  .fill{
-    fill: brandPalette(btnIconSvg_color);
-  }
-  .stroke{
-    stroke: brandPalette(btnIconSvg_color);
   }
 }

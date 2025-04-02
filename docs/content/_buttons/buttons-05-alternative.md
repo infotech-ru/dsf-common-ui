@@ -95,54 +95,55 @@ _Использование:_ `btn-icon`
 
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="row">
-    <div class="col-3">
-      <p>Кнопка для закачивания файлов</p>
-      <button class="btn-download">
-          <span class="btn-download_inner">
-              <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo"></use></svg></span>
-              <span class="btn-text">Добавить фото</span>
-          </span>
-      </button>
-    </div>
-    <div class="col-3">
-      <p>Кнопка для закачивания файлов большая</p>
-      <button class="btn-download btn-download__large">
-          <span class="btn-download_inner">
-              <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
-              <span class="btn-text">Добавить фото</span>
-          </span>
-      </button>
-    </div>
-    <div class="col-3">
-      <p>Кнопка для закачивания файлов квадратная большая</p>
-      <button class="btn-download btn-download__square">
-          <span class="btn-download_inner">
-              <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
-              <span class="btn-text">Добавить фото</span>
-          </span>
-      </button>
-    </div>
-    <div class="col-3">
-    <p>Кнопка без изменения при наведении</p>
-      <button class="btn-download btn-download__circle">
-          <span class="btn-download_inner">
-              <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
-              <span class="btn-text">Добавить фото</span>
-          </span>
-      </button>
-    </div>
-  <div class="col-3">
-      <p>Кнопка с изменением при наведении</p>
-    <div class="blockBusinessCardLeft">
-        <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__personal">
-          <button class="btn-download btn-download__circle btn-download__onHover">
-              <span class="btn-download_inner">
-                  <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
-                  <span class="btn-text">Добавить фото</span>
-              </span>
-          </button>
+    <div class="row">
+        <div class="col-3">
+            <p>Кнопка для закачивания файлов</p>
+            <button class="btn-download">
+                <span class="btn-download_inner">
+                    <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo"></use></svg></span>
+                    <span class="btn-text">Добавить фото</span>
+                </span>
+            </button>
+        </div>
+        <div class="col-3">
+            <p>Кнопка для закачивания файлов большая</p>
+            <button class="btn-download btn-download__large">
+                <span class="btn-download_inner">
+                    <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+                    <span class="btn-text">Добавить фото</span>
+                </span>
+            </button>
+        </div>
+        <div class="col-3">
+            <p>Кнопка для закачивания файлов квадратная большая</p>
+            <button class="btn-download btn-download__square">
+                <span class="btn-download_inner">
+                    <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+                    <span class="btn-text">Добавить фото</span>
+                </span>
+            </button>
+        </div>
+        <div class="col-3">
+            <p>Кнопка круглая без изменения при наведении</p>
+            <button class="btn-download btn-download__circle">
+                <span class="btn-download_inner">
+                    <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+                    <span class="btn-text">Добавить фото</span>
+                </span>
+            </button>
+            <div class="mt-10">
+                <p>Кнопка круглая с изменением при наведении</p>
+                <div class="blockBusinessCardLeft">
+                    <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__personal">
+                        <button class="btn-download btn-download__circle btn-download__onHover">
+                            <span class="btn-download_inner">
+                                <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+                                <span class="btn-text">Добавить фото</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
 </div>
