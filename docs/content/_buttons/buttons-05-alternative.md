@@ -79,7 +79,7 @@ _Использование:_ `btn-icon`
 #### Особые кнопки
 
 {% highlight html %}
-<button class="btn-download"><span class="btn-download_inner"><?= Icons::withText('bicolors-photo', Yii::t('app', 'Добавить фото')) ?></span></button>
+<button class="btn-download"><span class="btn-download_inner"><?= Icons::withText('bicolors-doc', Yii::t('app', 'Добавить файл')) ?></span></button>
 
 <button class="btn-download btn-download__large"><span class="btn-download_inner"><?= Icons::withText('bicolors-photo__24vb', Yii::t('app', 'Добавить фото')) ?></span></button>
 
@@ -96,25 +96,25 @@ _Использование:_ `btn-icon`
 {% endhighlight %}
 <div class="bs-docs-example">
     <div class="row">
-        <div class="col-3">
+        <div class="col-4">
             <p>Кнопка для закачивания файлов</p>
             <button class="btn-download">
                 <span class="btn-download_inner">
-                    <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo"></use></svg></span>
-                    <span class="btn-text">Добавить фото</span>
+                    <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc"></use></svg></span>
+                    <span class="btn-text">Добавить файл</span>
                 </span>
             </button>
+            <div class="mt-20">
+                <p>Кнопка для закачивания файлов большая</p>
+                <button class="btn-download btn-download__large">
+                    <span class="btn-download_inner">
+                        <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+                        <span class="btn-text">Добавить фото</span>
+                    </span>
+                </button>
+            </div>
         </div>
-        <div class="col-3">
-            <p>Кнопка для закачивания файлов большая</p>
-            <button class="btn-download btn-download__large">
-                <span class="btn-download_inner">
-                    <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
-                    <span class="btn-text">Добавить фото</span>
-                </span>
-            </button>
-        </div>
-        <div class="col-3">
+        <div class="col-4">
             <p>Кнопка для закачивания файлов квадратная большая</p>
             <button class="btn-download btn-download__square">
                 <span class="btn-download_inner">
@@ -123,7 +123,7 @@ _Использование:_ `btn-icon`
                 </span>
             </button>
         </div>
-        <div class="col-3">
+        <div class="col-4">
             <p>Кнопка круглая без изменения при наведении</p>
             <button class="btn-download btn-download__circle">
                 <span class="btn-download_inner">

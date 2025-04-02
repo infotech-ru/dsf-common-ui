@@ -565,15 +565,15 @@ input[type="button"] {
       }
     }
   }
-  &__large &,
-  &__square &,
-  &__circle &{
+  &__large,
+  &__square,
+  &__circle {
     .btn-text{
       margin: 0;
     }
   }
-  &__large &,
-  &__square &{
+  &__large,
+  &__square{
     .svg--icon {
       height: rem(20);
       width: rem(20);
