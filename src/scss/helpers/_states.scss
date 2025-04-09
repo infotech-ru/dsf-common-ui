@@ -120,7 +120,7 @@ tbody.collapse.in { display: table-row-group; }
   }
 }
 
-.active{
+.active{ // exm.: .control-label
   .svg--icon{
     #{--questions-stroke-active}: map.get($brand-namecolors, 'dark-grey');
     #{--questions-fill-active}: map.get($brand-namecolors, 'dark-grey');
