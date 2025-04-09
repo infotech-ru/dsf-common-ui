@@ -18,4 +18,9 @@
     position: absolute;
     margin: 0;
   }
+  &_item{
+    .css-formsFreeWrapper{
+      flex-direction: column;
+    }
+  }
 }

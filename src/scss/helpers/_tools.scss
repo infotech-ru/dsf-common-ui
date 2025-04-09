@@ -97,6 +97,7 @@
     & + .thumbnailImgWrapper{
       max-height: calc(100% - 18px);
       height: calc(100% - 18px);
+      overflow: hidden;
     }
   }
   &ImgWrapper{

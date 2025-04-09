@@ -10537,6 +10537,9 @@ select.selectpicker {
   position: absolute;
   margin: 0;
 }
+.fileUpload_item .css-formsFreeWrapper {
+  flex-direction: column;
+}
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
@@ -14292,6 +14295,7 @@ tbody.collapse.in {
 .thumbnailCaption + .thumbnailImgWrapper {
   max-height: calc(100% - 18px);
   height: calc(100% - 18px);
+  overflow: hidden;
 }
 .thumbnailImgWrapper {
   display: block;
