@@ -49,9 +49,9 @@ order: 2
 <p>Использование класса '.svg--icon__notIconModification' c 'svg--icon' отменяет действие у иконки '.active'</p>
 
 {% highlight html %}
-  <span class="">
-      <?= Icons::wrapper('bicolors-favorite') ?>
+  <span class="iconModification">
       <?= Icons::wrapper('bicolors-star') ?>
+      <?= Icons::wrapper('bicolors-favorite') ?>
       <?= Icons::wrapper('bicolors-questions') ?>
       <?= Icons::wrapper('bicolors-play') ?>
       <?= Icons::wrapper('bicolors-minus__24vb') ?>
@@ -62,6 +62,7 @@ order: 2
       <?= Icons::wrapper('bicolors-questions') ?>
       <?= Icons::wrapper('bicolors-play') ?>
       <?= Icons::wrapper('bicolors-minus__24vb') ?>
+      <?= Icons::wrapper('bicolors-plus', ['class' => 'svg--icon svg--icon__notIconModification']) ?>
   </span>
 {% endhighlight %}
 <div class="bs-docs-example">
