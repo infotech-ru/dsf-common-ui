@@ -50,18 +50,24 @@ tbody.collapse.in { display: table-row-group; }
 }
 
 .limited{ // состояния текста
-  .svg--icon{ 
-  --limited-stroke-on: transparent;
-  --limited-stroke-off: inherit;
-  --svg-icon-fill: transparent;
+  // .svg--icon{ 
+  // --limited-stroke-on: transparent;
+  // --limited-stroke-off: inherit;
+  // --svg-icon-fill: transparent;
   // --svg-icon-stroke: #{brandColors(_dark-grey)};
   // --svg-icon-stroke_blue: #{brandColors(_vibrant-blue)};
+  // }
+  .block__show{
+    display: none;
+  }
+  .block__hide{
+    display: inline-block;
   }
   &.collapsed{
-    .svg--icon{ 
-      --limited-stroke-on: inherit;
-      --svg-icon-fill: inherit;
-    }
+    // .svg--icon{ 
+    //   --limited-stroke-on: inherit;
+    //   --svg-icon-fill: inherit;
+    // }
     .block__show{
       display: inline-block;
     }
@@ -69,31 +75,32 @@ tbody.collapse.in { display: table-row-group; }
       display: none;
     }
   }
-  .block__show{
-    display: none;
-  }
-  .block__hide{
-    display: inline-block;
-  }
 }
 
 .iconModification{ // состояния иконок
   .svg--icon{ 
     #{--limited-stroke-on}: inherit;
+    #{--limited-fill-on}: inherit;
     #{--limited-stroke-off}: transparent;
-    #{--svg-icon-fill}: transparent;
-    #{--svg-icon-stroke}: #{brandColors(_dark-grey)};
-    #{--svg-icon-stroke_blue}: #{brandColors(_vibrant-blue)};
+    #{--limited-fill-off}: transparent;
+    // #{--svg-icon-fill}: transparent;
+    // #{--svg-icon-stroke}: #{brandColors(_dark-grey)};
+    // #{--svg-icon-stroke_blue}: #{brandColors(_vibrant-blue)};
     &.active{ 
       #{--limited-stroke-on}: transparent;
+      #{--limited-fill-on}: transparent;
       #{--limited-stroke-off}: inherit;
+      #{--limited-fill-off}: inherit;
     }
   }
   &.collapsed,
   &.active{ 
     .svg--icon{ 
       #{--limited-stroke-on}: transparent;
+      #{--limited-fill-on}: transparent;
       #{--limited-stroke-off}: inherit;
+      #{--limited-fill-off}: inherit;
+      
       #{--favorite-stroke-active}: map.get($brand-namecolors, 'vibrant-blue'); 
       #{--favorite-fill-active}: map.get($brand-namecolors, 'vibrant-blue'); 
       #{--favorite-stroke_blue-active}: map.get($brand-namecolors, 'white');

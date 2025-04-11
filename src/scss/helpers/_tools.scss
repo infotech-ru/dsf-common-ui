@@ -748,7 +748,9 @@
       #{--svg-icon-stroke_blue}: $value;
       #{--svg-valute-fill}: $value;
       #{--limited-stroke-off}: inherit;
-      #{--limited-stroke-on}: transparent;
+      #{--limited-fill-off}: inherit;
+      // #{--favorite-fill-active}: inherit;
+      // #{--limited-stroke-on}: transparent;
     }
   }
 
