@@ -95,6 +95,7 @@ tbody.collapse.in { display: table-row-group; }
         #{--limited-fill-on}: transparent;
         #{--limited-stroke-off}: var(--svg-icon-stroke_blue);
         #{--limited-fill-off}: var(--svg-icon-fill_blue);
+        #{--limited-reverse}: var(--bg_color, #fff);
       }
     }
   }
@@ -106,6 +107,7 @@ tbody.collapse.in { display: table-row-group; }
         #{--limited-fill-on}: transparent;
         #{--limited-stroke-off}: var(--svg-icon-stroke_blue);
         #{--limited-fill-off}: var(--svg-icon-fill_blue);;
+        #{--limited-reverse}: var(--bg_color, #fff);
       }
       
       // #{--favorite-stroke-active}: map.get($brand-namecolors, 'vibrant-blue'); 

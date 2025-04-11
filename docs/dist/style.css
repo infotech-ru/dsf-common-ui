@@ -14146,12 +14146,14 @@ tbody.collapse.in {
   --limited-fill-on: transparent;
   --limited-stroke-off: var(--svg-icon-stroke_blue);
   --limited-fill-off: var(--svg-icon-fill_blue);
+  --limited-reverse: var(--bg_color, #fff);
 }
 .iconModification.collapsed .svg--icon svg, .iconModification.active .svg--icon svg {
   --limited-stroke-on: transparent;
   --limited-fill-on: transparent;
   --limited-stroke-off: var(--svg-icon-stroke_blue);
   --limited-fill-off: var(--svg-icon-fill_blue);
+  --limited-reverse: var(--bg_color, #fff);
 }
 
 .svg--collapseIcon {

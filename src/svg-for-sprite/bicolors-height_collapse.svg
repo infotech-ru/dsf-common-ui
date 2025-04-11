@@ -4,9 +4,9 @@
 <path d="M11.52,5.5l-2,2-2-2" stroke="var(--limited-stroke-on, var(--svg-icon-stroke_blue, #0094ff))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M7.48,13.5l2-2,2,2" stroke="var(--limited-stroke-on, var(--svg-icon-stroke_blue, #0094ff))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <rect x="0.5" y="0.5" width="18" height="18" stroke="var(--limited-stroke-on, var(--svg-icon-stroke, #333))" fill="none" stroke-dasharray="1 1"/>
-<rect x="0.5" y="4.54" width="18" height="10" stroke="var(--limited-stroke-off, var(--svg-icon-stroke, none))" fill="none" stroke-dasharray="1 1"/>
-<path d="M11.48,16.5l-2,2-2-2" stroke="var(--limited-stroke-off, var(--svg-icon-stroke_blue, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.52,18.5v-6" stroke="var(--limited-stroke-off, var(--svg-icon-stroke_blue, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.48.5v6" stroke="var(--limited-stroke-off, var(--svg-icon-stroke_blue, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.52,2.5l2-2,2,2" stroke="var(--limited-stroke-off, var(--svg-icon-stroke_blue, none))" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="0.5" y="4.54" width="18" height="10" stroke="var(--limited-stroke-off, none)" fill="none" stroke-dasharray="1 1"/>
+<path d="M11.48,16.5l-2,2-2-2" stroke="var(--limited-stroke-off, none)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.52,18.5v-6" stroke="var(--limited-stroke-off, none)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.48.5v6" stroke="var(--limited-stroke-off, none)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.52,2.5l2-2,2,2" stroke="var(--limited-stroke-off, none)" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
