@@ -14155,6 +14155,13 @@ tbody.collapse.in {
   --limited-fill-off: var(--svg-icon-fill_blue);
   --limited-reverse: var(--bg_color, #fff);
 }
+.iconModification.collapsed .svg--icon__notIconModification svg, .iconModification.active .svg--icon__notIconModification svg {
+  --limited-stroke-off: transparent;
+  --limited-fill-off: transparent;
+  --limited-stroke-on: var(--svg-icon-stroke_blue);
+  --limited-fill-on: var(--svg-icon-fill_blue);
+  --limited-reverse: inherit;
+}
 
 .svg--collapseIcon {
   transform: rotate(180deg);
@@ -14168,10 +14175,6 @@ tbody.collapse.in {
   --questions-fill-active: #333333;
   --questions-stroke_blue-active: #ffffff;
   --questions-fill_blue-active: #ffffff;
-  --play-stroke: #0094FF;
-  --play-stroke_blue: #0094FF;
-  --play-fill-active: #0094FF;
-  --play-fill_blue-active: #0094FF;
 }
 
 .hoverTarget_parent .hoverTarget_item__block,

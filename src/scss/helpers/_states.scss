@@ -106,10 +106,18 @@ tbody.collapse.in { display: table-row-group; }
         #{--limited-stroke-on}: transparent;
         #{--limited-fill-on}: transparent;
         #{--limited-stroke-off}: var(--svg-icon-stroke_blue);
-        #{--limited-fill-off}: var(--svg-icon-fill_blue);;
+        #{--limited-fill-off}: var(--svg-icon-fill_blue);
         #{--limited-reverse}: var(--bg_color, #fff);
       }
-      
+      &__notIconModification{ 
+        svg{ 
+          #{--limited-stroke-off}: transparent;
+          #{--limited-fill-off}: transparent;
+          #{--limited-stroke-on}: var(--svg-icon-stroke_blue);
+          #{--limited-fill-on}: var(--svg-icon-fill_blue);
+          #{--limited-reverse}: inherit;
+        }
+      }
       // #{--favorite-stroke-active}: map.get($brand-namecolors, 'vibrant-blue'); 
       // #{--favorite-fill-active}: map.get($brand-namecolors, 'vibrant-blue'); 
       // #{--favorite-stroke_blue-active}: map.get($brand-namecolors, 'white');
@@ -134,10 +142,10 @@ tbody.collapse.in { display: table-row-group; }
     #{--questions-fill-active}: map.get($brand-namecolors, 'dark-grey');
     #{--questions-stroke_blue-active}: map.get($brand-namecolors, 'white');
     #{--questions-fill_blue-active}: map.get($brand-namecolors, 'white');
-    #{--play-stroke}: map.get($brand-namecolors, 'vibrant-blue');
-    #{--play-stroke_blue}: map.get($brand-namecolors, 'vibrant-blue');
-    #{--play-fill-active}: map.get($brand-namecolors, 'vibrant-blue');
-    #{--play-fill_blue-active}: map.get($brand-namecolors, 'vibrant-blue');
+    // #{--play-stroke}: map.get($brand-namecolors, 'vibrant-blue');
+    // #{--play-stroke_blue}: map.get($brand-namecolors, 'vibrant-blue');
+    // #{--play-fill-active}: map.get($brand-namecolors, 'vibrant-blue');
+    // #{--play-fill_blue-active}: map.get($brand-namecolors, 'vibrant-blue');
   }
 }
 
