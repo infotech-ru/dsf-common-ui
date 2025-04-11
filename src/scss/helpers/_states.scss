@@ -78,35 +78,41 @@ tbody.collapse.in { display: table-row-group; }
 }
 
 .iconModification{ // состояния иконок
-  .svg--icon{ 
-    #{--limited-stroke-on}: inherit;
-    #{--limited-fill-on}: inherit;
-    #{--limited-stroke-off}: transparent;
-    #{--limited-fill-off}: transparent;
+  .svg--icon{
+    svg{
+      #{--limited-stroke-on}: inherit;
+      #{--limited-fill-on}: inherit;
+      #{--limited-stroke-off}: transparent;
+      #{--limited-fill-off}: transparent;
+    }
     // #{--svg-icon-fill}: transparent;
     // #{--svg-icon-stroke}: #{brandColors(_dark-grey)};
     // #{--svg-icon-stroke_blue}: #{brandColors(_vibrant-blue)};
-    &.active{ 
-      #{--limited-stroke-on}: transparent;
-      #{--limited-fill-on}: transparent;
-      #{--limited-stroke-off}: inherit;
-      #{--limited-fill-off}: inherit;
+    &.active{
+      svg{
+        #{--limited-stroke-on}: transparent;
+        #{--limited-fill-on}: transparent;
+        #{--limited-stroke-off}: inherit;
+        #{--limited-fill-off}: inherit;
+      }
     }
   }
   &.collapsed,
   &.active{ 
     .svg--icon{ 
-      #{--limited-stroke-on}: transparent;
-      #{--limited-fill-on}: transparent;
-      #{--limited-stroke-off}: inherit;
-      #{--limited-fill-off}: inherit;
+      svg{ 
+        #{--limited-stroke-on}: transparent;
+        #{--limited-fill-on}: transparent;
+        #{--limited-stroke-off}: inherit;
+        #{--limited-fill-off}: inherit;
+      }
       
-      #{--favorite-stroke-active}: map.get($brand-namecolors, 'vibrant-blue'); 
-      #{--favorite-fill-active}: map.get($brand-namecolors, 'vibrant-blue'); 
-      #{--favorite-stroke_blue-active}: map.get($brand-namecolors, 'white');
-      #{--star-stroke-active}: map.get($brand-namecolors, 'vibrant-blue');
-      #{--star-fill-active}: map.get($brand-namecolors, 'vibrant-blue');
-      #{--star-stroke_blue-active}: map.get($brand-namecolors, 'vibrant-blue');
+      // #{--favorite-stroke-active}: map.get($brand-namecolors, 'vibrant-blue'); 
+      // #{--favorite-fill-active}: map.get($brand-namecolors, 'vibrant-blue'); 
+      // #{--favorite-stroke_blue-active}: map.get($brand-namecolors, 'white');
+      // #{--star-stroke-active}: map.get($brand-namecolors, 'vibrant-blue');
+      // #{--star-fill-active}: map.get($brand-namecolors, 'vibrant-blue');
+      // #{--star-stroke_blue-active}: map.get($brand-namecolors, 'vibrant-blue');
     }
   }
 }

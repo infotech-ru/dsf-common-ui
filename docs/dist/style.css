@@ -14131,29 +14131,23 @@ tbody.collapse.in {
   display: none;
 }
 
-.iconModification .svg--icon {
+.iconModification .svg--icon svg {
   --limited-stroke-on: inherit;
   --limited-fill-on: inherit;
   --limited-stroke-off: transparent;
   --limited-fill-off: transparent;
 }
-.iconModification .svg--icon.active {
+.iconModification .svg--icon.active svg {
   --limited-stroke-on: transparent;
   --limited-fill-on: transparent;
   --limited-stroke-off: inherit;
   --limited-fill-off: inherit;
 }
-.iconModification.collapsed .svg--icon, .iconModification.active .svg--icon {
+.iconModification.collapsed .svg--icon svg, .iconModification.active .svg--icon svg {
   --limited-stroke-on: transparent;
   --limited-fill-on: transparent;
   --limited-stroke-off: inherit;
   --limited-fill-off: inherit;
-  --favorite-stroke-active: #0094FF;
-  --favorite-fill-active: #0094FF;
-  --favorite-stroke_blue-active: #ffffff;
-  --star-stroke-active: #0094FF;
-  --star-fill-active: #0094FF;
-  --star-stroke_blue-active: #0094FF;
 }
 
 .svg--collapseIcon {
