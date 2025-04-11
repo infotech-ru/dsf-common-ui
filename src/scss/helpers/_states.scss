@@ -50,13 +50,6 @@ tbody.collapse.in { display: table-row-group; }
 }
 
 .limited{ // состояния текста
-  // .svg--icon{ 
-  // --limited-stroke-on: transparent;
-  // --limited-stroke-off: inherit;
-  // --svg-icon-fill: transparent;
-  // --svg-icon-stroke: #{brandColors(_dark-grey)};
-  // --svg-icon-stroke_blue: #{brandColors(_vibrant-blue)};
-  // }
   .block__show{
     display: none;
   }
@@ -64,10 +57,6 @@ tbody.collapse.in { display: table-row-group; }
     display: inline-block;
   }
   &.collapsed{
-    // .svg--icon{ 
-    //   --limited-stroke-on: inherit;
-    //   --svg-icon-fill: inherit;
-    // }
     .block__show{
       display: inline-block;
     }
@@ -118,36 +107,17 @@ tbody.collapse.in { display: table-row-group; }
           #{--limited-reverse}: inherit;
         }
       }
-      // #{--favorite-stroke-active}: map.get($brand-namecolors, 'vibrant-blue'); 
-      // #{--favorite-fill-active}: map.get($brand-namecolors, 'vibrant-blue'); 
-      // #{--favorite-stroke_blue-active}: map.get($brand-namecolors, 'white');
-      // #{--star-stroke-active}: map.get($brand-namecolors, 'vibrant-blue');
-      // #{--star-fill-active}: map.get($brand-namecolors, 'vibrant-blue');
-      // #{--star-stroke_blue-active}: map.get($brand-namecolors, 'vibrant-blue');
     }
   }
 }
 
-.svg--collapseIcon{
-  transform: rotate(180deg);
-  .collapsed &{ 
-    transform: rotate(0deg);
-  }
-}
+// .svg--collapseIcon{
+//   transform: rotate(180deg);
+//   .collapsed &{ 
+//     transform: rotate(0deg);
+//   }
+// }
 
-
-.active{ // exm.: .control-label
-  .svg--icon{
-    #{--questions-stroke-active}: map.get($brand-namecolors, 'dark-grey');
-    #{--questions-fill-active}: map.get($brand-namecolors, 'dark-grey');
-    #{--questions-stroke_blue-active}: map.get($brand-namecolors, 'white');
-    #{--questions-fill_blue-active}: map.get($brand-namecolors, 'white');
-    // #{--play-stroke}: map.get($brand-namecolors, 'vibrant-blue');
-    // #{--play-stroke_blue}: map.get($brand-namecolors, 'vibrant-blue');
-    // #{--play-fill-active}: map.get($brand-namecolors, 'vibrant-blue');
-    // #{--play-fill_blue-active}: map.get($brand-namecolors, 'vibrant-blue');
-  }
-}
 
 .hoverTarget_parent{
   .hoverTarget_item__block,
