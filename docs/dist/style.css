@@ -14136,18 +14136,22 @@ tbody.collapse.in {
   --limited-fill-on: inherit;
   --limited-stroke-off: transparent;
   --limited-fill-off: transparent;
+  --svg-icon-fill: #333333;
+  --svg-icon-fill_blue: #0094FF;
+  --svg-icon-stroke: #333333;
+  --svg-icon-stroke_blue: #0094FF;
 }
 .iconModification .svg--icon.active svg {
   --limited-stroke-on: transparent;
   --limited-fill-on: transparent;
-  --limited-stroke-off: inherit;
-  --limited-fill-off: inherit;
+  --limited-stroke-off: var(--svg-icon-stroke_blue);
+  --limited-fill-off: var(--svg-icon-fill_blue);
 }
 .iconModification.collapsed .svg--icon svg, .iconModification.active .svg--icon svg {
   --limited-stroke-on: transparent;
   --limited-fill-on: transparent;
-  --limited-stroke-off: inherit;
-  --limited-fill-off: inherit;
+  --limited-stroke-off: var(--svg-icon-stroke_blue);
+  --limited-fill-off: var(--svg-icon-fill_blue);
 }
 
 .svg--collapseIcon {

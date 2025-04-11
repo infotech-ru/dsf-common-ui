@@ -84,16 +84,17 @@ tbody.collapse.in { display: table-row-group; }
       #{--limited-fill-on}: inherit;
       #{--limited-stroke-off}: transparent;
       #{--limited-fill-off}: transparent;
+      #{--svg-icon-fill}: #{brandColors(_dark-grey)};
+      #{--svg-icon-fill_blue}: #{brandColors(_vibrant-blue)};
+      #{--svg-icon-stroke}: #{brandColors(_dark-grey)};
+      #{--svg-icon-stroke_blue}: #{brandColors(_vibrant-blue)};
     }
-    // #{--svg-icon-fill}: transparent;
-    // #{--svg-icon-stroke}: #{brandColors(_dark-grey)};
-    // #{--svg-icon-stroke_blue}: #{brandColors(_vibrant-blue)};
     &.active{
       svg{
         #{--limited-stroke-on}: transparent;
         #{--limited-fill-on}: transparent;
-        #{--limited-stroke-off}: inherit;
-        #{--limited-fill-off}: inherit;
+        #{--limited-stroke-off}: var(--svg-icon-stroke_blue);
+        #{--limited-fill-off}: var(--svg-icon-fill_blue);
       }
     }
   }
@@ -103,8 +104,8 @@ tbody.collapse.in { display: table-row-group; }
       svg{ 
         #{--limited-stroke-on}: transparent;
         #{--limited-fill-on}: transparent;
-        #{--limited-stroke-off}: inherit;
-        #{--limited-fill-off}: inherit;
+        #{--limited-stroke-off}: var(--svg-icon-stroke_blue);
+        #{--limited-fill-off}: var(--svg-icon-fill_blue);;
       }
       
       // #{--favorite-stroke-active}: map.get($brand-namecolors, 'vibrant-blue'); 
