@@ -14151,9 +14151,15 @@ tbody.collapse.in {
   --limited-stroke-on: transparent;
   --limited-stroke-off: inherit;
 }
-.iconModification.active .svg--icon {
+.iconModification.collapsed .svg--icon, .iconModification.active .svg--icon {
   --limited-stroke-on: transparent;
   --limited-stroke-off: inherit;
+  --favorite-stroke-active: #0094FF;
+  --favorite-fill-active: #0094FF;
+  --favorite-stroke_blue-active: #ffffff;
+  --star-stroke-active: #0094FF;
+  --star-fill-active: #0094FF;
+  --star-stroke_blue-active: #0094FF;
 }
 
 .svg--collapseIcon {
@@ -14161,18 +14167,6 @@ tbody.collapse.in {
 }
 .collapsed .svg--collapseIcon {
   transform: rotate(0deg);
-}
-
-.favorite__active .svg--icon {
-  --favorite-stroke-active: #0094FF;
-  --favorite-fill-active: #0094FF;
-  --favorite-stroke_blue-active: #ffffff;
-}
-
-.star__active .svg--icon {
-  --star-stroke-active: #0094FF;
-  --star-fill-active: #0094FF;
-  --star-stroke_blue-active: #0094FF;
 }
 
 .active .svg--icon {
