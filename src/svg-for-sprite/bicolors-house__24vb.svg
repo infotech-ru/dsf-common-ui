@@ -1,0 +1,5 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 12.48V20H18V12.48" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M14 20V13H10V20" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M4 12.96L12 4L20 12.96" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+</svg>

@@ -359,6 +359,8 @@ export function searchIcon() {
         'bicolors-height_expand__24vb': ['высота', 'height', 'развернуть', 'показать', 'expand', '24vb'],
         'bicolors-home': ['дом', 'home', 'minvb'],
         'bicolors-home__24vb': ['дом', 'home', '24vb'],
+        'bicolors-house': ['дом', 'home', 'house', 'minvb'],
+        'bicolors-house__24vb': ['дом', 'home', 'house', '24vb'],
         'bicolors-image': ['картинка', 'изображение', 'image', 'minvb'],
         'bicolors-image__24vb': ['картинка', 'изображение', 'image', '24vb'],
         'bicolors-image_car': ['картинка', 'изображение', 'image', 'car', 'автомобиль', 'reg', 'регистрация', 'minvb'],
