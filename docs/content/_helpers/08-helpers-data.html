@@ -8,25 +8,24 @@ order: 8
 
 Установлено оформление для отдельных полей:
 
-### Телефона
+<h3>Телефона</h3>
 
-`phoneField__orange` - оранжевый
+<p><code class="language-plaintext highlighter-rouge">phoneField__orange</code> - оранжевый</p>
+<p><code class="language-plaintext highlighter-rouge">phoneField__blue</code>  -синий</p>
 
-`phoneField__blue`  -синий
+<h3>Комментарий</h3>
 
-### Комментарий
+<p><code class="language-plaintext highlighter-rouge">commentField</code></p>
 
-`commentField`
+<h3>Вывод или выбор цвета</h3>
 
-### Вывод или выбор цвета
+<p><code class="language-plaintext highlighter-rouge">colorField</code> - родитель </p>
 
-`colorField` - родитель 
+<p><code class="language-plaintext highlighter-rouge">colorField__formControl</code> - модификатор с измененной высотой, для встраивание в формы</p>
 
-`colorField__formControl` - модификатор с измененной высотой, для встраивание в формы
+<p><code class="language-plaintext highlighter-rouge">colorField_formControl</code> - цветной кружок - заполненый бекграундом переданным через style="background:..."</p>
 
-`colorField_formControl` - цветной кружок - заполненый бекграундом переданным через style="background:..."
-
-Для вывода hex значения рядом с кругом передаем его через дата-атрибут `data-colorfield`
+<p>Для вывода hex значения рядом с кругом передаем его через дата-атрибут <code class="language-plaintext highlighter-rouge">data-colorfield</code></p>
 
 {% highlight html %}
   <div class="phoneField__orange">+7(910)000-00-00</div>
@@ -48,12 +47,12 @@ order: 8
     </div>
   </div>
 </div>
-### Оформление картинок
-Размеры - 64px и 128px(`.thumbnail__bigSize`). 
-.thumbnailActions - блок с кнопками действия. Иконки с размером 20.
-.thumbnailActionsBtn - класс кнопок. .thumbnailActionsBtn__shadow - вариант оформления с тенью
-.thumbnailCaption - блок с текстом, например имя картинки
-.thumbnailImgWrapper - блок обретка картинки `<div>` или `<a>`
+<h3>Оформление картинок</h3>
+<p>Размеры - 64px и 128px <code class="language-plaintext highlighter-rouge">.thumbnail__bigSize</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">.thumbnailActions</code> - блок с кнопками действия. Иконки с размером 20.</p>
+<p><code class="language-plaintext highlighter-rouge">.thumbnailActionsBtn</code> - класс кнопок. .thumbnailActionsBtn__shadow - вариант оформления с тенью</p>
+<p><code class="language-plaintext highlighter-rouge">.thumbnailCaption</code> - блок с текстом, например имя картинки</p>
+<p><code class="language-plaintext highlighter-rouge">.thumbnailImgWrapper</code> - блок обретка картинки </p>
 {% highlight html %}
 <div class="thumbnail thumbnail__bigSize">
     <div class="thumbnailInner">
@@ -82,6 +81,7 @@ order: 8
                         <span class="svg--icon svg--icon__20 svg-primary">
                             <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
                         </span>
+                    </a>
                     <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
                         <span class="svg--icon svg--icon__20 svg-primary">
                             <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
@@ -99,6 +99,7 @@ order: 8
                         <span class="svg--icon svg--icon__20 svg-primary">
                             <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
                         </span>
+                    </a>
                     <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
                         <span class="svg--icon svg--icon__20 svg-primary">
                             <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
@@ -111,8 +112,8 @@ order: 8
         </div>
     </div>
 </div>
-### Блок-визитка
-Используется для вывода информации о клиенте или обе его контакте или об автомобиле.
+<h3>Блок-визитка</h3>
+<p>Используется для вывода информации о клиенте или обе его контакте или об автомобиле.</p>
 {% highlight html %}
   <div class="d-flex">
     <div class="blockBusinessCardLeft">
@@ -201,16 +202,14 @@ order: 8
     </div>
 </div>
 
-### Блоки с изменением фона при наведении
+<h3>Блоки с изменением фона при наведении</h3>
 
-`square` - базовый класс оформления блоков
+<p><code class="language-plaintext highlighter-rouge">square</code> - базовый класс оформления блоков</p>
+<p><code class="language-plaintext highlighter-rouge">square__shadowOnHover</code> - тень при наведении</p>
+<p><code class="language-plaintext highlighter-rouge">square__borderThick</code> - бордер толщиной 2px</p>
 
-`square__shadowOnHover` - тень при наведении
-
-`square__borderThick` - бордер толщиной 2px
-
-Следующие модификации `square` возможно использовать отдельно: 
-При наличии в блоке класса `isHover`, `active` или при наведение по псевдоклассу будет изменяться фон, бордер и цвет шрифта.
+<p>Следующие модификации `square` возможно использовать отдельно: </p>
+<p>При наличии в блоке класса `isHover`, `active` или при наведение по псевдоклассу будет изменяться фон, бордер и цвет шрифта.</p>
 
 <div class="bs-docs-example">
   <div class="row">

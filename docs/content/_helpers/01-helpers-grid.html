@@ -1,0 +1,44 @@
+---
+Title: Сетка
+menutitle: Сетка
+category: helpers
+anchor: helpers-grid
+order: 1
+---
+
+<p>Для сетки используются классы, где {X} - целое число от 1 до 12 для значений сетки, равное (100% / {X}):</p>
+<p>
+  <code class="language-plaintext highlighter-rouge">col-{X}</code>, 
+  <code class="language-plaintext highlighter-rouge">col-xs-{X}</code>, 
+  <code class="language-plaintext highlighter-rouge">col-sm-{X}</code>, 
+  <code class="language-plaintext highlighter-rouge">col-md-{X}</code>, 
+  <code class="language-plaintext highlighter-rouge">col-lg-{X}</code>, 
+  <code class="language-plaintext highlighter-rouge">col-xl-{X}</code>, 
+  <code class="language-plaintext highlighter-rouge">col-xxl-{X}</code>, 
+  <code class="language-plaintext highlighter-rouge">col-xxxl-{X}</code>,
+где {Y} - целое число от 0 до 11 для промежуточных значений, равное (100% / {Y + 1} / 2):</p>
+<p>
+  <code class="language-plaintext highlighter-rouge">col-{Y}-5</code>, 
+  <code class="language-plaintext highlighter-rouge">col-xs-{Y}-5</code>, 
+  <code class="language-plaintext highlighter-rouge">col-sm-{Y}-5</code>, 
+  <code class="language-plaintext highlighter-rouge">col-md-{Y}-5</code>, 
+  <code class="language-plaintext highlighter-rouge">col-lg-{Y}-5</code>, 
+  <code class="language-plaintext highlighter-rouge">col-xl-{Y}-5</code>, 
+  <code class="language-plaintext highlighter-rouge">col-xxl-{Y}-5</code>, 
+  <code class="language-plaintext highlighter-rouge">col-xxxl-{Y}-5</code>
+</p>
+<p>Брекпоинты - ширина экрана браузеры в px, c которого начинает срабатыванвать правила, настроны следующим образом:</p>
+<p>
+  <code class="language-plaintext highlighter-rouge">xs: 480px</code>, 
+  <code class="language-plaintext highlighter-rouge">sm: 768px</code>, 
+  <code class="language-plaintext highlighter-rouge">md: 992px</code>, 
+  <code class="language-plaintext highlighter-rouge">lg: 1200px</code>, 
+  <code class="language-plaintext highlighter-rouge">xl: 1280px</code>, 
+  <code class="language-plaintext highlighter-rouge">xxl: 1366px</code>, 
+  <code class="language-plaintext highlighter-rouge">xxxl: 1440px</code>
+</p>
+<p>Классы 
+  <code class="language-plaintext highlighter-rouge">col</code>
+  <code class="language-plaintext highlighter-rouge">col-{X}</code>, 
+  <code class="language-plaintext highlighter-rouge">col-{Y}-5</code> - не имеют брекопинта, и применяются для всех экранов.
+</p>
