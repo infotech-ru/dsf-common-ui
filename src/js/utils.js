@@ -329,6 +329,8 @@ export function searchIcon() {
         'bicolors-favorite_full__24vb': ['любимый', 'favorite', 'полный', 'заполненый', 'full', '24vb'],
         'bicolors-filter': ['фильтр', 'filter', 'minvb'],
         'bicolors-filter__24vb': ['фильтр', 'filter', '24vb'],
+        'bicolors-filter_plus': ['фильтр', 'filter', 'плюс', 'plus', 'minvb'],
+        'bicolors-filter_plus__24vb': ['фильтр', 'filter', 'плюс', 'plus', '24vb'],
         'bicolors-folder': ['папка', 'folder', 'minvb'],
         'bicolors-folder__24vb': ['папка', 'folder', '24vb'],
         'bicolors-folder_arrow-in': ['папка', 'folder', 'arrow', 'стрелка', 'minvb'],
