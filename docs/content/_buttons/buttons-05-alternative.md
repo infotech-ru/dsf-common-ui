@@ -69,9 +69,12 @@ _Использование:_ `btn-icon`
 <div class="bs-docs-example">
   <button class="btn-link"><span class="svg--icon"><svg  class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">Добавить</span></button>
   <button class="btn-success__outline ml-10"><span class="svg--icon"><svg  class="bicolors-filter" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg></span></button>
+  <button class="btn-success ml-10"><span class="svg--icon"><svg  class="bicolors-filter" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use></svg></span></button>
   <button class="btn-danger__outline ml-10"><span class="svg--icon"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg></span><span class="btn-text">Удалить</span></button>
   <button class="btn-primary ml-10"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">Добавить</span></button>
   <button class="btn-primary__outline ml-10"><span class="btn-text">Скачать</span><span class="svg--icon"><svg class="bicolors-export" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-export"></use></svg></span></button>
+  <button class="btn-success__outline ml-10"><span class="btn-text">Добавить фильтр</span><span class="svg--icon"><svg class="bicolors-filter_plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter_plus"></use></svg></span></button>
+  <button class="btn-success__danger ml-10"><span class="btn-text">Добавить фильтр</span><span class="svg--icon"><svg class="bicolors-filter_plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter_plus"></use></svg></span></button>
 </div>
 
 
