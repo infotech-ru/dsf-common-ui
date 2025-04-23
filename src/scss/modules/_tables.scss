@@ -312,7 +312,7 @@ tbody tr {
     top: 0;
     z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
     th{
-      position: sticky;
+      // position: sticky; // edge не отображаются border
       z-index: zIndex(tableStickyTheadTh);
       &:first-child {
         left: 0;
