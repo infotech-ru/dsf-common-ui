@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.85 16.94">
-<path d="M.5.5H15.27V3L9.61,9.51v7L6.16,14.56V9.44L.5,3.13Z" fill="none" stroke="var(--infotech_svg-stroke, var(--svg-icon-stroke, #333))" fill="var(--infotech_svg-colorFill, none)" stroke-linecap="round" stroke-miterlimit="1.5"/>
+<path d="M.5.5H15.27V3L9.61,9.51v7L6.16,14.56V9.44L.5,3.13Z" stroke="var(--infotech_svg-stroke, var(--svg-icon-stroke, #333))" fill="var(--infotech_svg-colorFill, none)" stroke-linecap="round" stroke-miterlimit="1.5"/>
 <path d="M.9,3.3h14" stroke="var(--infotech_svg-colorStroke, var(--svg-icon-stroke_blue, #0094ff))" fill="var(--infotech_svg-fill, none)"/>
 <path d="M13.5,11.5l2,2,4-4" fill="none" stroke="var(--infotech_svg-stroke, var(--svg-icon-stroke_blue, #0094ff))"/>
 </svg>
