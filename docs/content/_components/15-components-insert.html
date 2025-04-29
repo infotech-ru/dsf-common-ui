@@ -1,0 +1,28 @@
+---
+Title: Копирование данных
+menutitle: Копирование данных
+category: components
+anchor: components-insert
+order: 14
+---
+
+<p>Для копирования данных подключаем скрипт <code class="language-plaintext highlighter-rouge">copyTextToClipboardNotify()</code> 
+<code class="language-plaintext highlighter-rouge">import {copyTextToClipboardNotify} from "./utils"</code>
+</p>
+<c>В контейнер добавляем иконку 
+    <code class="language-plaintext highlighter-rouge"><div class="css-copy-to-clipboard-icon">
+      <?= Icons::wrapper('bicolors-copy__24vb', ['class' => 'svg--icon svg--icon__20 bg-white svg-primary']) ?>
+    </div></code>, 
+  data-copy с копируемым текстом и классы для скрипта <code class="language-plaintext highlighter-rouge">css-copy-to-clipboard js-copy-to-clipboard</code>
+</p>
+
+
+{% highlight html %}
+  <div class="css-copy-to-clipboard js-copy-to-clipboard" data-copy="Копируемое значение">
+    Какие-либо данные
+    <div class="css-copy-to-clipboard-icon">
+      <?= Icons::wrapper('bicolors-copy__24vb', ['class' => 'svg--icon svg--icon__20 bg-white svg-primary']) ?>
+    </div>
+  </div>
+{% endhighlight %}
+
