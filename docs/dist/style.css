@@ -10028,7 +10028,7 @@ select.selectpicker {
   outline: none;
 }
 .bootstrap-select .form-control {
-  background: transparent;
+  background-color: var(--bg_color, transparent);
 }
 .bootstrap-select .form-control.input-xs {
   height: 22px;

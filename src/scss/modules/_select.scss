@@ -141,7 +141,7 @@ select.selectpicker {
   }
 
   .form-control {
-    background: transparent;
+    background-color: var(--bg_color, transparent);
     &.input-xs{
       height: 22px;
     }
