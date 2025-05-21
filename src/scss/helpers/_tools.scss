@@ -500,11 +500,18 @@
 .cursor__pointer{
   cursor: pointer;
 }
-
 .cursor__default{
   cursor: default;
 }
-
+.cursor__move{
+  cursor: move;
+}
+.cursor__wait{
+  cursor: wait;
+}
+.cursor__zoom-in{
+  cursor: zoom-in;
+}
 .cursor__notAllowed{
   cursor: not-allowed;
 }
@@ -774,7 +781,7 @@
   }
   .textHover-#{$name}{
     &:hover,
-    .textHoverTarget:hover &{ 
+    .textHoverTarget:hover &{
       color: #{$value};
       #{--text_color}: #{$value};
       #{--svg-valute-fill}: #{$value};
@@ -783,9 +790,17 @@
   .bg-#{$name}{
     background-color: #{$value};
     #{--bg_color}: #{$value};
-    &.isHover,
-    .isHover & {
-      background-color: var(--bg__hover-#{$name}, #{$value});
+    // &.isHover,
+    // .isHover & {
+    //   background-color: var(--bg__hover-#{$name}, #{$value});
+    // }
+  }
+  .bgHover-#{$name}{
+    &.bgHoverTarget:hover,
+    .bgHoverTarget:hover &,
+    &[draggable="true"]{
+      background-color: #{$value};
+      #{--bg_color}: #{$value};
     }
   }
   .border-#{$name}{

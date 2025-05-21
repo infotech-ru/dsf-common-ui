@@ -6,8 +6,9 @@ anchor: components-insert
 order: 14
 ---
 
-<p>Для копирования данных подключаем скрипт <code class="language-plaintext highlighter-rouge">copyTextToClipboardNotify()</code> 
-<code class="language-plaintext highlighter-rouge">import {copyTextToClipboardNotify} from "./utils"</code>
+<p>Для копирования данных подключаем скрипт <code class="language-plaintext highlighter-rouge">initCopyDataAttrToClipboardBtns()</code> 
+<code class="language-plaintext highlighter-rouge">import {initCopyDataAttrToClipboardBtns} from "./copyTextToClipboardNotify"</code>
+Через data атрибуты copySuccessMessageText, copySuccessMessageType, copyErrorMessageType, copyErrorMessageType можно изменить тексты и типы сообщений, установленных по умолчанию
 </p>
 <c>В контейнер добавляем иконку 
     <code class="language-plaintext highlighter-rouge"><div class="css-copy-to-clipboard-icon">

@@ -314,6 +314,11 @@ a.btn {
     #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
   }
+  &__minimal{
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 1;
+  }
 }
 
 .btn-icon{

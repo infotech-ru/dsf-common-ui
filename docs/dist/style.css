@@ -8690,6 +8690,11 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
 }
+.btn-link__minimal {
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1;
+}
 
 .btn-icon {
   background-color: transparent;
@@ -16319,6 +16324,18 @@ tbody.collapse.in {
   cursor: default;
 }
 
+.cursor__move {
+  cursor: move;
+}
+
+.cursor__wait {
+  cursor: wait;
+}
+
+.cursor__zoom-in {
+  cursor: zoom-in;
+}
+
 .cursor__notAllowed {
   cursor: not-allowed;
 }
@@ -16555,8 +16572,10 @@ tbody.collapse.in {
   background-color: #777777;
   --bg_color: #777777;
 }
-.bg-default.isHover, .isHover .bg-default {
-  background-color: var(--bg__hover-default, #777777);
+
+.bgHover-default.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-default, .bgHover-default[draggable=true] {
+  background-color: #777777;
+  --bg_color: #777777;
 }
 
 .border-default {
@@ -16625,8 +16644,10 @@ tbody.collapse.in {
   background-color: #1E6393;
   --bg_color: #1E6393;
 }
-.bg-primary.isHover, .isHover .bg-primary {
-  background-color: var(--bg__hover-primary, #1E6393);
+
+.bgHover-primary.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-primary, .bgHover-primary[draggable=true] {
+  background-color: #1E6393;
+  --bg_color: #1E6393;
 }
 
 .border-primary {
@@ -16695,8 +16716,10 @@ tbody.collapse.in {
   background-color: #D9534F;
   --bg_color: #D9534F;
 }
-.bg-danger.isHover, .isHover .bg-danger {
-  background-color: var(--bg__hover-danger, #D9534F);
+
+.bgHover-danger.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-danger, .bgHover-danger[draggable=true] {
+  background-color: #D9534F;
+  --bg_color: #D9534F;
 }
 
 .border-danger {
@@ -16765,8 +16788,10 @@ tbody.collapse.in {
   background-color: #DE8500;
   --bg_color: #DE8500;
 }
-.bg-warning.isHover, .isHover .bg-warning {
-  background-color: var(--bg__hover-warning, #DE8500);
+
+.bgHover-warning.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-warning, .bgHover-warning[draggable=true] {
+  background-color: #DE8500;
+  --bg_color: #DE8500;
 }
 
 .border-warning {
@@ -16835,8 +16860,10 @@ tbody.collapse.in {
   background-color: #69C26A;
   --bg_color: #69C26A;
 }
-.bg-success.isHover, .isHover .bg-success {
-  background-color: var(--bg__hover-success, #69C26A);
+
+.bgHover-success.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-success, .bgHover-success[draggable=true] {
+  background-color: #69C26A;
+  --bg_color: #69C26A;
 }
 
 .border-success {
@@ -16905,8 +16932,10 @@ tbody.collapse.in {
   background-color: #E4EEF7;
   --bg_color: #E4EEF7;
 }
-.bg-info.isHover, .isHover .bg-info {
-  background-color: var(--bg__hover-info, #E4EEF7);
+
+.bgHover-info.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-info, .bgHover-info[draggable=true] {
+  background-color: #E4EEF7;
+  --bg_color: #E4EEF7;
 }
 
 .border-info {
@@ -16975,8 +17004,10 @@ tbody.collapse.in {
   background-color: #BABABA;
   --bg_color: #BABABA;
 }
-.bg-muted.isHover, .isHover .bg-muted {
-  background-color: var(--bg__hover-muted, #BABABA);
+
+.bgHover-muted.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-muted, .bgHover-muted[draggable=true] {
+  background-color: #BABABA;
+  --bg_color: #BABABA;
 }
 
 .border-muted {
@@ -17045,8 +17076,10 @@ tbody.collapse.in {
   background-color: #FFBD41;
   --bg_color: #FFBD41;
 }
-.bg-orange.isHover, .isHover .bg-orange {
-  background-color: var(--bg__hover-orange, #FFBD41);
+
+.bgHover-orange.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-orange, .bgHover-orange[draggable=true] {
+  background-color: #FFBD41;
+  --bg_color: #FFBD41;
 }
 
 .border-orange {
@@ -17115,8 +17148,10 @@ tbody.collapse.in {
   background-color: #333333;
   --bg_color: #333333;
 }
-.bg-dark-grey.isHover, .isHover .bg-dark-grey {
-  background-color: var(--bg__hover-dark-grey, #333333);
+
+.bgHover-dark-grey.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-dark-grey, .bgHover-dark-grey[draggable=true] {
+  background-color: #333333;
+  --bg_color: #333333;
 }
 
 .border-dark-grey {
@@ -17185,8 +17220,10 @@ tbody.collapse.in {
   background-color: #BABABA;
   --bg_color: #BABABA;
 }
-.bg-grey.isHover, .isHover .bg-grey {
-  background-color: var(--bg__hover-grey, #BABABA);
+
+.bgHover-grey.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-grey, .bgHover-grey[draggable=true] {
+  background-color: #BABABA;
+  --bg_color: #BABABA;
 }
 
 .border-grey {
@@ -17255,8 +17292,10 @@ tbody.collapse.in {
   background-color: #dddddd;
   --bg_color: #dddddd;
 }
-.bg-grey2.isHover, .isHover .bg-grey2 {
-  background-color: var(--bg__hover-grey2, #dddddd);
+
+.bgHover-grey2.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-grey2, .bgHover-grey2[draggable=true] {
+  background-color: #dddddd;
+  --bg_color: #dddddd;
 }
 
 .border-grey2 {
@@ -17325,8 +17364,10 @@ tbody.collapse.in {
   background-color: #cccccc;
   --bg_color: #cccccc;
 }
-.bg-grey3.isHover, .isHover .bg-grey3 {
-  background-color: var(--bg__hover-grey3, #cccccc);
+
+.bgHover-grey3.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-grey3, .bgHover-grey3[draggable=true] {
+  background-color: #cccccc;
+  --bg_color: #cccccc;
 }
 
 .border-grey3 {
@@ -17395,8 +17436,10 @@ tbody.collapse.in {
   background-color: #777777;
   --bg_color: #777777;
 }
-.bg-grey4.isHover, .isHover .bg-grey4 {
-  background-color: var(--bg__hover-grey4, #777777);
+
+.bgHover-grey4.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-grey4, .bgHover-grey4[draggable=true] {
+  background-color: #777777;
+  --bg_color: #777777;
 }
 
 .border-grey4 {
@@ -17465,8 +17508,10 @@ tbody.collapse.in {
   background-color: #f9f9f9;
   --bg_color: #f9f9f9;
 }
-.bg-light-grey.isHover, .isHover .bg-light-grey {
-  background-color: var(--bg__hover-light-grey, #f9f9f9);
+
+.bgHover-light-grey.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-grey, .bgHover-light-grey[draggable=true] {
+  background-color: #f9f9f9;
+  --bg_color: #f9f9f9;
 }
 
 .border-light-grey {
@@ -17535,8 +17580,10 @@ tbody.collapse.in {
   background-color: #F5F5F5;
   --bg_color: #F5F5F5;
 }
-.bg-light-grey2.isHover, .isHover .bg-light-grey2 {
-  background-color: var(--bg__hover-light-grey2, #F5F5F5);
+
+.bgHover-light-grey2.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-grey2, .bgHover-light-grey2[draggable=true] {
+  background-color: #F5F5F5;
+  --bg_color: #F5F5F5;
 }
 
 .border-light-grey2 {
@@ -17605,8 +17652,10 @@ tbody.collapse.in {
   background-color: #e5e5e5;
   --bg_color: #e5e5e5;
 }
-.bg-light-grey4.isHover, .isHover .bg-light-grey4 {
-  background-color: var(--bg__hover-light-grey4, #e5e5e5);
+
+.bgHover-light-grey4.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-grey4, .bgHover-light-grey4[draggable=true] {
+  background-color: #e5e5e5;
+  --bg_color: #e5e5e5;
 }
 
 .border-light-grey4 {
@@ -17675,8 +17724,10 @@ tbody.collapse.in {
   background-color: #FCEEEE;
   --bg_color: #FCEEEE;
 }
-.bg-light-red.isHover, .isHover .bg-light-red {
-  background-color: var(--bg__hover-light-red, #FCEEEE);
+
+.bgHover-light-red.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-red, .bgHover-light-red[draggable=true] {
+  background-color: #FCEEEE;
+  --bg_color: #FCEEEE;
 }
 
 .border-light-red {
@@ -17745,8 +17796,10 @@ tbody.collapse.in {
   background-color: #762624;
   --bg_color: #762624;
 }
-.bg-dark-red.isHover, .isHover .bg-dark-red {
-  background-color: var(--bg__hover-dark-red, #762624);
+
+.bgHover-dark-red.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-dark-red, .bgHover-dark-red[draggable=true] {
+  background-color: #762624;
+  --bg_color: #762624;
 }
 
 .border-dark-red {
@@ -17815,8 +17868,10 @@ tbody.collapse.in {
   background-color: #FF9996;
   --bg_color: #FF9996;
 }
-.bg-rose.isHover, .isHover .bg-rose {
-  background-color: var(--bg__hover-rose, #FF9996);
+
+.bgHover-rose.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-rose, .bgHover-rose[draggable=true] {
+  background-color: #FF9996;
+  --bg_color: #FF9996;
 }
 
 .border-rose {
@@ -17885,8 +17940,10 @@ tbody.collapse.in {
   background-color: #00000000;
   --bg_color: #00000000;
 }
-.bg-clear.isHover, .isHover .bg-clear {
-  background-color: var(--bg__hover-clear, #00000000);
+
+.bgHover-clear.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-clear, .bgHover-clear[draggable=true] {
+  background-color: #00000000;
+  --bg_color: #00000000;
 }
 
 .border-clear {
@@ -17955,8 +18012,10 @@ tbody.collapse.in {
   background-color: #ffffff;
   --bg_color: #ffffff;
 }
-.bg-white.isHover, .isHover .bg-white {
-  background-color: var(--bg__hover-white, #ffffff);
+
+.bgHover-white.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-white, .bgHover-white[draggable=true] {
+  background-color: #ffffff;
+  --bg_color: #ffffff;
 }
 
 .border-white {
@@ -18025,8 +18084,10 @@ tbody.collapse.in {
   background-color: #4A8DC6;
   --bg_color: #4A8DC6;
 }
-.bg-light-blue.isHover, .isHover .bg-light-blue {
-  background-color: var(--bg__hover-light-blue, #4A8DC6);
+
+.bgHover-light-blue.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-blue, .bgHover-light-blue[draggable=true] {
+  background-color: #4A8DC6;
+  --bg_color: #4A8DC6;
 }
 
 .border-light-blue {
@@ -18095,8 +18156,10 @@ tbody.collapse.in {
   background-color: #B6D1E8;
   --bg_color: #B6D1E8;
 }
-.bg-light-blue3.isHover, .isHover .bg-light-blue3 {
-  background-color: var(--bg__hover-light-blue3, #B6D1E8);
+
+.bgHover-light-blue3.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-blue3, .bgHover-light-blue3[draggable=true] {
+  background-color: #B6D1E8;
+  --bg_color: #B6D1E8;
 }
 
 .border-light-blue3 {
@@ -18165,8 +18228,10 @@ tbody.collapse.in {
   background-color: #0094FF;
   --bg_color: #0094FF;
 }
-.bg-vibrant-blue.isHover, .isHover .bg-vibrant-blue {
-  background-color: var(--bg__hover-vibrant-blue, #0094FF);
+
+.bgHover-vibrant-blue.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-vibrant-blue, .bgHover-vibrant-blue[draggable=true] {
+  background-color: #0094FF;
+  --bg_color: #0094FF;
 }
 
 .border-vibrant-blue {
@@ -18235,8 +18300,10 @@ tbody.collapse.in {
   background-color: #FFFBA0;
   --bg_color: #FFFBA0;
 }
-.bg-light-yellow.isHover, .isHover .bg-light-yellow {
-  background-color: var(--bg__hover-light-yellow, #FFFBA0);
+
+.bgHover-light-yellow.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-yellow, .bgHover-light-yellow[draggable=true] {
+  background-color: #FFFBA0;
+  --bg_color: #FFFBA0;
 }
 
 .border-light-yellow {
@@ -18305,8 +18372,10 @@ tbody.collapse.in {
   background-color: #FFF6DF;
   --bg_color: #FFF6DF;
 }
-.bg-light-yellow2.isHover, .isHover .bg-light-yellow2 {
-  background-color: var(--bg__hover-light-yellow2, #FFF6DF);
+
+.bgHover-light-yellow2.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-yellow2, .bgHover-light-yellow2[draggable=true] {
+  background-color: #FFF6DF;
+  --bg_color: #FFF6DF;
 }
 
 .border-light-yellow2 {
@@ -18375,8 +18444,10 @@ tbody.collapse.in {
   background-color: #FFDA7D;
   --bg_color: #FFDA7D;
 }
-.bg-yellow2.isHover, .isHover .bg-yellow2 {
-  background-color: var(--bg__hover-yellow2, #FFDA7D);
+
+.bgHover-yellow2.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-yellow2, .bgHover-yellow2[draggable=true] {
+  background-color: #FFDA7D;
+  --bg_color: #FFDA7D;
 }
 
 .border-yellow2 {
@@ -18445,8 +18516,10 @@ tbody.collapse.in {
   background-color: #DAF0DA;
   --bg_color: #DAF0DA;
 }
-.bg-light-green.isHover, .isHover .bg-light-green {
-  background-color: var(--bg__hover-light-green, #DAF0DA);
+
+.bgHover-light-green.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-green, .bgHover-light-green[draggable=true] {
+  background-color: #DAF0DA;
+  --bg_color: #DAF0DA;
 }
 
 .border-light-green {
@@ -18515,8 +18588,10 @@ tbody.collapse.in {
   background-color: #467B46;
   --bg_color: #467B46;
 }
-.bg-dark-green.isHover, .isHover .bg-dark-green {
-  background-color: var(--bg__hover-dark-green, #467B46);
+
+.bgHover-dark-green.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-dark-green, .bgHover-dark-green[draggable=true] {
+  background-color: #467B46;
+  --bg_color: #467B46;
 }
 
 .border-dark-green {
@@ -18585,8 +18660,10 @@ tbody.collapse.in {
   background-color: #000000;
   --bg_color: #000000;
 }
-.bg-black.isHover, .isHover .bg-black {
-  background-color: var(--bg__hover-black, #000000);
+
+.bgHover-black.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-black, .bgHover-black[draggable=true] {
+  background-color: #000000;
+  --bg_color: #000000;
 }
 
 .border-black {
