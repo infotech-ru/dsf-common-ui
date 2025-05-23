@@ -35,19 +35,15 @@
   @include user-select(none);
 
   &:hover,
+  &:focus-visible,
   &:focus,
+  &:active,
+  &:active:focus,
+  &.active,
+  &.active:focus,
   &.focus {
     outline: none;
     text-decoration: none;
-  }
-
-  &:active,
-  &.active {
-    // background-image: none;
-    outline: 0;
-    &:focus{
-      outline: none;
-    }
   }
   
   &.disabled,
@@ -55,7 +51,7 @@
   fieldset[disabled] & {
     // cursor: none;
     cursor: not-allowed;
-    opacity: .65;
+    opacity: brandSizes(disabel_opacity);
     box-shadow: none;
   }
 
@@ -99,21 +95,17 @@
 
 @each $btn in default, primary, success, danger, warning {
   .btn-#{$btn}{
-    @if (brandBtn(#{$btn}_bg) == brandBtn(#{$btn}-end_bg)) {
-      background-color: brandBtn(#{$btn}_bg);
-      background-image: none;
-    }
-    @else{
-      background-color: brandBtn(#{$btn}_bg);
-      background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
-      background-image: linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
-    }
     border-color: brandBtn(#{$btn}_border);
     color: brandBtn(#{$btn}_color);
     @if (brandBtn(#{$btn}_bg) == brandBtn(#{$btn}-end_bg)) {
+      background-color: brandBtn(#{$btn}_bg);
+      background-image: none;
       #{--btn_bg}: brandBtn(#{$btn}_bg);
     }
-    @else{ 
+    @else{
+      background-color: brandBtn(#{$btn}_bg);
+      // background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
+      background-image: linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
       #{--btn_bg}: brandBtn(#{$btn}_bg);
       #{--btn_bgEnd}: brandBtn(#{$btn}-end_bg);
     }
@@ -141,7 +133,7 @@
       }
       @else{
         background-color: brandBtn(#{$btn}_bg__hover);
-        background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg__hover) 0%, brandBtn(#{$btn}-end_bg__hover) 100%);
+        // background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg__hover) 0%, brandBtn(#{$btn}-end_bg__hover) 100%);
         background-image: linear-gradient(brandBtn(#{$btn}_bg__hover) 0%, brandBtn(#{$btn}-end_bg__hover) 100%);
       }
       background-position: inherit;
@@ -155,6 +147,39 @@
           #{--svg-icon-fill_blue}: brandBtn(#{$btn}_svg_blue__hover);
           #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_svg_blue__hover);
           #{--limited-stroke-off}: _brand-colors(_transparent);
+        }
+      }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus-visible,
+      &:active,
+      &:active:focus,
+      &.active,
+      &.active:focus,
+      &.focus {
+        @if (brandBtn(#{$btn}_bg) == brandBtn(#{$btn}-end_bg)) {
+          background-color: brandBtn(#{$btn}_bg);
+          background-image: none;
+        }
+        @else{
+          background-color: brandBtn(#{$btn}_bg);
+          // background-image: -webkit-linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
+          background-image: linear-gradient(brandBtn(#{$btn}_bg) 0%, brandBtn(#{$btn}-end_bg) 100%);
+        }
+        border-color: brandBtn(#{$btn}_border);
+        color: brandBtn(#{$btn}_color);
+        .svg--icon{
+          svg{
+            fill: brandBtn(#{$btn}_svg);
+            #{--svg-icon-fill}: brandBtn(#{$btn}_svg);
+            #{--svg-icon-stroke}: brandBtn(#{$btn}_svg);
+            #{--svg-icon-fill_blue}: brandBtn(#{$btn}_svg_blue);
+            #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_svg_blue);
+            #{--limited-stroke-off}: _brand-colors(_transparent);
+          }
         }
       }
     }
@@ -198,7 +223,9 @@
     &:hover,
     &:focus-visible,
     &:active,
+    &:active:focus,
     &.active,
+    &.active:focus,
     &.focus {
       background-color: brandBtn(#{$btn}_border__outline);
       background-image: none;
@@ -221,6 +248,31 @@
       .bicolors-filter,
       .bicolors-filter__24vb{
         #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_border__outline);
+      }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus-visible,
+      &:active,
+      &:active:focus,
+      &.active,
+      &.active:focus,
+      &.focus {
+        background-color: transparent;
+        border-color: brandBtn(#{$btn}_border__outline);
+        color: brandBtn(#{$btn}_color__outline);
+        .svg--icon {
+          svg {
+            #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
+            #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
+            #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
+            #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
+            fill: brandBtn(#{$btn}_color__outline);
+            #{--limited-stroke-off}: _brand-colors(_transparent);
+          }
+        }
       }
     }
     .svg--icon {
@@ -247,15 +299,6 @@ a.btn {
   }
 }
 
-// .btn,
-// .btn-sm,
-// .btn-md,
-// .btn-lg{
-//   font-size: rem(fontSizes(btn));
-//   line-height: rem(lineHeight(btn));
-//   padding: 0 #{brandSizes(btn_paddingX)}px;
-// }
-
 .btn-xs,
 .btn-small {
   border-radius: 1px;
@@ -271,7 +314,6 @@ a.btn {
   padding: #{brandSizes(btnLg-paddingY)}px #{brandSizes(btnLg-paddingX)}px;
 }
 
-
 .btn-link {
   background-color: transparent;
   background-image: none;
@@ -284,144 +326,284 @@ a.btn {
   &,
   &:hover,
   &:focus,
+  &:focus-visible,
+  &.disabled,
   &[disabled],
   fieldset[disabled] &,
   &.active,
+  &.active:focus,
+  &:active:focus,
   &:active {
     background-color: transparent;
     background-image: none;
     border-color: transparent;
     box-shadow: none;
     outline: none;
-  }
-  &:hover,
-  &:focus-visible {
-    color: brandPalette(linkHover_color);
     text-decoration: none;
   }
-  &[disabled],
-  fieldset[disabled] & {
-    &:hover,
-    &:focus-visible {
-      color: brandPalette(linkDisabled_color);
-      text-decoration: none;
+  &:hover,
+  &:focus-visible,
+  &.active,
+  &.active:focus,
+  &:active:focus,
+  &:active {
+    background-color: transparent;
+    // color: brandPalette(linkHover_color);
+    color: brandPalette(link_color);
+    .svg--icon {
+      svg {
+        #{--svg-icon-fill}: brandPalette(linkHover_color);
+        #{--svg-icon-stroke}: brandPalette(linkHover_color);
+        #{--svg-icon-fill_blue}: brandPalette(linkHover_color);
+        #{--svg-icon-stroke_blue}: brandPalette(linkHover_color);
+        fill: brandPalette(linkHover_color);
+        #{--limited-stroke-off}: _brand-colors(_transparent);
+      }
     }
   }
-  .glyphicons-bin{
-    #{--svg-icon-fill}: brandColors(_red);
+  &.disabled,
+  &[disabled],
+  &:active:focus,
+  &:active,
+  fieldset[disabled] & {
+    // .svg--icon {
+    //   svg {
+    //     #{--svg-icon-fill}: brandBtn(linkDisabled_color);
+    //     #{--svg-icon-stroke}: brandBtn(linkDisabled_color);
+    //     #{--svg-icon-fill_blue}: brandBtn(linkDisabled_color);
+    //     #{--svg-icon-stroke_blue}: brandBtn(linkDisabled_color);
+    //     fill: brandBtn(linkDisabled_color);
+    //     #{--limited-stroke-off}: _brand-colors(_transparent);
+    //   }
+    // }
+    &:hover,
+    &:focus-visible {
+      color: brandPalette(link_color);
+      text-decoration: none;
+      .svg--icon {
+        svg {
+          #{--svg-icon-fill}: brandPalette(link_color);
+          #{--svg-icon-stroke}: brandPalette(link_color);
+          #{--svg-icon-fill_blue}: brandPalette(link_color);
+          #{--svg-icon-stroke_blue}: brandPalette(link_color);
+          fill: brandPalette(link_color);
+          #{--limited-stroke-off}: _brand-colors(_transparent);
+        }
+      }
+    }
   }
+  // .glyphicons-bin{
+  //   #{--svg-icon-fill}: brandColors(_red);
+  // }
   .svg--icon {
-    #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
-    #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
+    svg {
+      #{--svg-icon-fill}: brandPalette(link_color);
+      #{--svg-icon-stroke}: brandPalette(link_color);
+      #{--svg-icon-fill_blue}: brandPalette(link_color);
+      #{--svg-icon-stroke_blue}: brandPalette(link_color);
+      fill: brandPalette(link_color);
+      #{--limited-stroke-off}: _brand-colors(_transparent);
+    }
   }
+  &__minimal{
+    line-height: 1;
+  }
+  &__nopadding,
   &__minimal{
     padding-left: 0;
     padding-right: 0;
-    line-height: 1;
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] &,
+    &.active,
+    &:active{
+      background-color: transparent;
+      color: inherit;
+    }
   }
 }
 
 .btn-icon{
   background-color: transparent;
   background-image: none;
-  box-shadow: none;
   border: none;
+  box-shadow: none;
   color: map.get($brand-namecolors, 'default');
   cursor: pointer;
   display: inline-block;
+  height: rem(brandSizes(btnIcon_height));
+  line-height: rem(brandSizes(btnIcon_height));
   outline: none;
   padding: 0;
   text-align: left;
   .glyphicon {
     color: brandPalette(btnIconSvg_color);
-    font-size: rem(brandSizes(btnIcon_height));
-    height: rem(brandSizes(btnIcon_height));
+    font-size: rem(brandSizes(btnIconSvg_height));
+    height: rem(brandSizes(btnIconSvg_height));
     top: 0;
     vertical-align: middle;
   }
   .svg--icon {
+    align-items: center;
+    background-color: brandPalette(btnIconSvg_bgc);
+    display: inline-flex;
+    justify-content: center;
     height: rem(brandSizes(btnIcon_height));
-    vertical-align: middle;
-    svg{
-      height: rem(brandSizes(btnIcon_height));
-    }
+    // vertical-align: middle;
     #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
     #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
     #{--limited-stroke-off}: _brand-colors(_transparent);
-  }
-  &__h12{
-    .glyphicon {
-      font-size: rem(12);
-      height: rem(12);
+    svg{
+      height: rem(brandSizes(btnIconSvg_height));
     }
-    .svg--icon {
-      height: rem(12);
-      svg{ 
-        height: rem(12);
+    &__24vb{
+      svg{
+        height: rem(brandSizes(btnIcon_height));
       }
     }
   }
-  &__h14{
-    .glyphicon {
-      font-size: rem(14);
-      height: rem(14);
+  // &__h12{
+  //   .glyphicon {
+  //     font-size: rem(12);
+  //     height: rem(12);
+  //   }
+  //   .svg--icon {
+  //     height: rem(12);
+  //     svg{ 
+  //       height: rem(12);
+  //     }
+  //   }
+  // }
+  // &__h14{
+  //   .glyphicon {
+  //     font-size: rem(14);
+  //     height: rem(14);
+  //   }
+  //   .svg--icon {
+  //     height: rem(14);
+  //     svg{ 
+  //       height: rem(14);
+  //     }
+  //   }
+  // }
+  // &__h18{
+  //   .glyphicon {
+  //     font-size: rem(18);
+  //     height: rem(18);
+  //   }
+  //   .svg--icon {
+  //     height: rem(18);
+  //     svg{ 
+  //       height: rem(18);
+  //     }
+  //   }
+  // }
+  // &__h20{
+  //   .glyphicon {
+  //     font-size: rem(20);
+  //     height: rem(20);
+  //   }
+  //   .svg--icon {
+  //     height: rem(20);
+  //     svg{ 
+  //       height: rem(20);
+  //     }
+  //   }
+  // }
+  // &__h22{
+  //   .glyphicon {
+  //     font-size: rem(22);
+  //     height: rem(22);
+  //   }
+  //   .svg--icon {
+  //     height: rem(22);
+  //     svg{ 
+  //       height: rem(22);
+  //     }
+  //   }
+  // }
+  // &__h24{
+  //   .glyphicon {
+  //     font-size: rem(24);
+  //     height: rem(24);
+  //   }
+  //   .svg--icon {
+  //     height: rem(24);
+  //     svg{ 
+  //       height: rem(24);
+  //     }
+  //   }
+  // }
+  &:hover,
+  &:focus-visible{
+    .svg--icon {
+      background-color: brandPalette(btnIconSvgHover_bgc);
+    }
+  }
+  &:hover,
+  &:focus-visible,
+  &.active,
+  &.active:focus,
+  &:active:focus,
+  &:active
+  &:hover,
+  &:focus {
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      // color: #2a6598;
+      outline: 0;
+  }
+  &__form{
+    align-items: center;
+    border-color: transparent;
+    border-top-width: #{brandSizes(btn_borderWidth)}px;
+    border-bottom-width: #{brandSizes(btn_borderWidth)}px;
+    // border-top-width: rem(math.div(calc(lineHeight(btn) - brandSizes(btnIconSvg_height)), 2));
+    // border-bottom-width: rem(math.div(calc(lineHeight(btn) - brandSizes(btnIconSvg_height)), 2));
+    display: inline-flex;
+    height: auto;
+    line-height: rem(lineHeight(btn));
+  }
+  &__danger{
+    &:focus-visible,
+    &:hover{
+      .svg--icon {
+        background-color: brandPalette(btnIconSvgDangerHover_bgc);
+      }
     }
     .svg--icon {
-      height: rem(14);
-      svg{ 
-        height: rem(14);
+      #{--svg-icon-fill}: brandPalette(btnIconSvgDanger_color);
+      #{--svg-icon-fill_blue}: brandPalette(btnIconSvgDanger_color);
+      #{--svg-icon-stroke_blue}: brandPalette(btnIconSvgDanger_color);
+      #{--svg-icon-stroke}: brandPalette(btnIconSvgDanger_color);
+      #{--limited-stroke-off}: _brand-colors(_transparent);
+    }
+  }
+  &__clear{
+    background-color: transparent;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] &{
+    cursor: not-allowed;
+    &:hover,
+    &:focus-visible{
+      .svg--icon {
+        background-color: transparent;
+        opacity: brandSizes(disabel_opacity);
       }
     }
   }
-  &__h18{
-    .glyphicon {
-      font-size: rem(18);
-      height: rem(18);
-    }
-    .svg--icon {
-      height: rem(18);
-      svg{ 
-        height: rem(18);
-      }
-    }
-  }
-  &__h20{
-    .glyphicon {
-      font-size: rem(20);
-      height: rem(20);
-    }
-    .svg--icon {
-      height: rem(20);
-      svg{ 
-        height: rem(20);
-      }
-    }
-  }
-  &__h22{
-    .glyphicon {
-      font-size: rem(22);
-      height: rem(22);
-    }
-    .svg--icon {
-      height: rem(22);
-      svg{ 
-        height: rem(22);
-      }
-    }
-  }
-  &__h24{
-    .glyphicon {
-      font-size: rem(24);
-      height: rem(24);
-    }
-    .svg--icon {
-      height: rem(24);
-      svg{ 
-        height: rem(24);
-      }
-    }
+  .control-label + & {
+    margin-left: 4px;
+    position: relative;
+    top: -#{calc(brandSizes(controlLabel_mb) * .5)}px;
   }
   .nostroke{
     stroke: none;
@@ -435,22 +617,9 @@ a.btn {
   .stroke{
     stroke: brandPalette(btnIconSvg_color);
   }
-  &:hover,
-  &:focus {
-      background-color: transparent;
-      background-image: none;
-      box-shadow: none;
-      // color: #2a6598;
-      outline: 0;
-  }
-  .control-label + & {
-    margin-left: 4px;
-    position: relative;
-    top: -#{calc(brandSizes(controlLabel_mb) * .5)}px;
-  }
-  .glyphicons-bin{
-    #{--svg-icon-fill}: brandColors(_red);
-  }
+  // .glyphicons-bin{
+  //   #{--svg-icon-fill}: brandColors(_red);
+  // }
 }
 
 .btn-block {

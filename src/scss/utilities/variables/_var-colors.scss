@@ -511,6 +511,10 @@ $brand-palette: (
   bootstrapSelect_caret_color:            map.get($brand-colors, _dark-grey),
   bootstrapSelect_divider_color:          map.get($brand-colors, _grey2),
 
+  btnIconSvg_bgc:                         map.get($brand-colors, _light-grey),
+  btnIconSvgHover_bgc:                    map.get($brand-colors, _light-blue2),
+  btnIconSvgDanger_color:                 map.get($brand-colors, _red),
+  btnIconSvgDangerHover_bgc:              map.get($brand-colors, _light-red),
   btnIconSvg_color:                       map.get($brand-colors, _light-blue),
 
   code_bgc:                               map.get($brand-colors, _light-grey2),
@@ -590,7 +594,7 @@ $brand-palette: (
   lighten:                                color.scale(map.get($brand-colors, _red), $lightness: 10%),
   hr_border:                              map.get($brand-colors, _dark-grey),
 
-  link_color:                             map.get($brand-colors, _blue),
+  link_color:                             map.get($brand-colors, _light-blue),
   linkEmpty_color:                        map.get($brand-colors, _dark-grey),
   linkIncomplete_color:                   map.get($brand-colors, _dark-grey),
   linkHover_color:                        map.get($brand-colors, _blue),

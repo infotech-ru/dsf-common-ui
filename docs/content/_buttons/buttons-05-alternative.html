@@ -6,64 +6,82 @@ anchor: buttons-alternative
 rank: 5
 ---
 
-#### Кнопка-ссылка
-
-Внешний вид ссылки, а размеры кнопки.
-
-_Использование:_ `btn-link`
+<h4>Кнопка-ссылка</h4>
+<p>Внешний вид ссылки, а размеры кнопки.</p>
+<p>Использование: <code class="language-plaintext highlighter-rouge">btn-link</code>. Модификация <code class="language-plaintext highlighter-rouge">btn-link__nopadding</code> - убирает паддингы слева и справа.</p>
 
 {% highlight html %}
   <button class="btn-link">btn-link</button>
+  <button class="btn-link" disabled="disable">btn-link</button>
+  <button class="btn-link btn-link__nopadding">btn-link__nopadding</button>
+  <button class="btn-link btn-link__nopadding"><?= Icons::wrapper('bicolors-plus') ?><span class="btn-text"> btn-link__nopadding c иконкой</span></button>
+  <button class="btn-link btn-link__nopadding" disabled="disable"><?= Icons::wrapper('bicolors-plus') ?><span class="btn-text"> btn-link__nopadding c иконкой</span></button>
 {% endhighlight %}
 
 <div class="bs-docs-example">
-  <div class="">
-  <button class="btn-link">btn-link</button>
-
-  <button class="btn-default ml-10">Обычная кнопка для сравнения</button>
-  </div>
+    <div class="d-flex gap-10">
+        <button class="btn-link">btn-link</button>
+        <button class="btn-link" disabled="disable">btn-link</button>
+        <button class="btn-link btn-link__nopadding">btn-link btn-link__nopadding</button>
+        <button class="btn-link btn-link__nopadding"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">btn-link__nopadding c иконкой</span></button>
+        <button class="btn-link btn-link__nopadding" disabled="disable"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">btn-link__nopadding c иконкой</span></button>
+        <button class="btn-default ml-10">Обычная кнопка для сравнения</button>
+        <button class="btn-icon btn-icon__form"><?= Icons::wrapper('bicolors-plus') ?></button>
+    </div>
 </div>
 
-#### Кнопка-иконка
+<h4>Ссылка c иконкой</h4>
+<p>Высота обычной ссылки. Размер иконки как в кнопке-ссылке</p>
 
-Размер кнопки равен размеру иконки.
+{% highlight html %}
+    <button class="btn-link btn-link__minimal"><?= Icons::wrapper('bicolors-plus') ?><span class="btn-text">btn-link__minimal c иконкой</span></button>
+{% endhighlight %}
+<div class="bs-docs-example">
+    <div class="d-flex gap-10"> 
+        <button class="btn-link btn-link__minimal" disabled="disable"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">btn-link__minimal c иконкой</span></button>
+        <a href="#">Обычная ссылка для примера</a>
+    </div>
+</div>
 
-_Использование:_ `btn-icon`
-
-По умолчанию, размер иконок для кнопок = 16px.
+<h4>Кнопка-иконка</h4>
+<p>Размер кнопки равен 20px.</p>
+<p>Использование: <code class="language-plaintext highlighter-rouge">btn-icon</code></p>
+<p>Для встраивания в форму используется модификациия <code class="language-plaintext highlighter-rouge">btn-icon__form</code></p>
+<p>Для кнопок-иконок с семантикой "удалить" используется модификация <code class="language-plaintext highlighter-rouge">btn-icon__danger</code></p>
 
 В кнопке используются <a href="https://infotech-ru.github.io/dsf-common-ui/icons">иконки</a> с родительским контейнером оберткой - тег SPAN с классом "svg--icon" (<span class="svg--icon">):
 
 {% highlight html %}
-  <button class="btn-icon"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-plus"></use></svg></span></button>
-  <button class="btn-icon"><span class="svg--icon"><svg class="bicolors-arrows_reload" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-arrows_reload"></use></svg></span></button>
-  <button class="btn-icon"><span class="svg--icon svg-danger"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-delete"></use></svg></span></button>
-  <button class="btn-icon btn-icon_h20"><span class="svg--icon"><svg class="bicolors-plus__24vb" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-plus__24vb"></use></svg></span></button>
+  <button class="btn-icon"><?= Icons::wrapper('bicolors-plus') ?></button>
+  <button class="btn-icon"><?= Icons::wrapper('bicolors-arrows_reload') ?></button>
+  <button class="btn-icon" disabled="disable"><?= Icons::wrapper('bicolors-arrow_drag') ?></button>
+  <button class="btn-icon"><?= Icons::wrapper('bicolors-arrow_drag__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?></button>
+  <button class="btn-icon btn-icon__danger"><?= Icons::wrapper('bicolors-delete') ?></button>
+  <button class="btn-icon btn-icon__form"><?= Icons::wrapper('bicolors-plus') ?></button>
 {% endhighlight %}
+
 <div class="bs-docs-example">
-  <div class="">
-  <button class="btn-icon"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span></button>
-  <button class="btn-icon ml-10"><span class="svg--icon"><svg class="bicolors-arrows_reload" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrows_reload"></use></svg></span></button>
-  <button class="btn-icon ml-10"><span class="svg--icon svg-danger"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg></span></button>
-  <button class="btn-icon btn-icon_h20 ml-10"><span class="svg--icon"><svg class="bicolors-plus__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb"></use></svg></span></button>
-  <button class="btn-default btn-small ml-10">Кнопка btn-small для сравнения</button>
+  <div class="d-flex gap-10">
+    <button class="btn-icon"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span></button>
+    <button class="btn-icon"><span class="svg--icon"><svg class="bicolors-arrows_reload" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrows_reload"></use></svg></span></button>
+    <button class="btn-icon" disabled="disable"><span class="svg--icon"><svg class="bicolors-arrow_drag" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_drag"></use></svg></span></button>
+    <button class="btn-icon"><span class="svg--icon svg--icon__24vb"><svg class="bicolors-arrow_drag" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_drag__24vb"></use></svg></span></button>
+    <button class="btn-icon"><span class="svg--icon svg-danger"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg></span></button>
+    <button class="btn-icon btn-icon__form"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span></button>
+    <button class="btn-default btn-small">Кнопка btn-small для сравнения</button>
   </div>
 </div>
 
-#### Обычная кнопка c иконкой, с иконкой и текстом
+<h4>Обычная кнопка c иконкой, с иконкой и текстом</h4>
 
 Размер обычной кнопки.
 
 {% highlight html %}
-  <button class="btn-link"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">Добавить</span></button>
-  
-  <button class="btn-success__outline"><span class="svg--icon"><svg class="bicolors-filter" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-filter"></use></svg></span></button>
-
-  <button class="btn-danger__outline"><span class="svg--icon"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-delete"></use></svg></span><span class="btn-text">Удалить</span></button>
-
-  <button class="btn-primary"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">Добавить</span></button>
-
-  <button class="btn-primary__outline"><span class="btn-text">Скачать</span><span class="svg--icon"><svg class="bicolors-export" width="24" height="24"><use xlink:href="sprite.symbol.svg#bicolors-export"></use></svg></span></button>
+  <button class="btn-link"><?= Icons::withText('bicolors-plus', Yii::t('app', 'Добавить')) ?></span></button>
+  <button class="btn-success__outline"><?= Icons::wrapper('bicolors-filter') ?></button>
+  <button class="btn-danger__outline"><?= Icons::withText('bicolors-delete', Yii::t('app', 'Удалить')) ?></span></button>
+  <button class="btn-primary"><?= Icons::withText('bicolors-plus', Yii::t('app', 'Добавить')) ?></span></button>
+  <button class="btn-primary__outline"><span class="btn-text">Скачать</span><?= Icons::wrapper('bicolors-export') ?></button>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -78,8 +96,7 @@ _Использование:_ `btn-icon`
 </div>
 
 
-
-#### Особые кнопки
+<h4>Особые кнопки</h4>
 
 {% highlight html %}
 <button class="btn-download"><span class="btn-download_inner"><?= Icons::withText('bicolors-doc', Yii::t('app', 'Добавить файл')) ?></span></button>

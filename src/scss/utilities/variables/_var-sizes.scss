@@ -1,6 +1,6 @@
 @use './../functions/func_maps' as *;
 
-@function brandSizes($keys...) {
+@function _brand-sizes($keys...) {
   @return val($brand-sizes, $keys...);
 }
 @function brandSizes($keys...) {
@@ -18,7 +18,8 @@ $brand-sizes: (
   btnXs-paddingY:                  0,
   btnLg-paddingX:                  15,
   btnLg-paddingY:                  0,
-  btnIcon_height:                  16,
+  btnIcon_height:                  20,
+  btnIconSvg_height:               14,
   caret_size:                      6,
   caretDropdown_size:              4,
   caretSelect_size:                16,
@@ -35,6 +36,7 @@ $brand-sizes: (
   controlLabel_mr:                 5,
   dropdownLink_minH:               36,
   dlHorizontalOffset:              180,
+  disabel_opacity:                 0.5,
   dropdownLink_paddingX:           10,
   footer_height:                   52,
   footer_marginTop:                10,
