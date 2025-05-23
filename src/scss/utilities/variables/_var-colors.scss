@@ -516,6 +516,11 @@ $brand-palette: (
   btnIconSvgDanger_color:                 map.get($brand-colors, _red),
   btnIconSvgDangerHover_bgc:              map.get($brand-colors, _light-red),
   btnIconSvg_color:                       map.get($brand-colors, _light-blue),
+  btnDownloadSvg_color:                   map.get($brand-colors, _light-blue),
+  btnDownload_borderColor:                map.get($brand-colors, _light-blue),
+  btnDownload_color:                      map.get($brand-colors, _light-blue),
+  btnDownload_bgc:                        map.get($brand-colors, _light-blue2),
+  btnDownloadHover_bgc:                   map.get($brand-colors, _light-blue3),
 
   code_bgc:                               map.get($brand-colors, _light-grey2),
   code_color:                             map.get($brand-colors, _dark-grey),

@@ -216,10 +216,6 @@
     border-color: brandBtn(#{$btn}_border__outline);
     color: brandBtn(#{$btn}_color__outline);
     @extend %btn;
-    #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
-    #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
-    #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
-    #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
     &:hover,
     &:focus-visible,
     &:active,
@@ -231,19 +227,17 @@
       background-image: none;
       background-position: inherit;
       color: brandBtn(#{$btn}_color__outline__hover);
-      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline__hover);
-      #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline__hover);
-      #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline__hover);
-      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline__hover);
-      .svg--icon {
-        svg {
-          #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline__hover);
-          #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline__hover);
-          #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline__hover);
-          #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline__hover);
-          fill: brandBtn(#{$btn}_color__outline__hover);
-          #{--limited-stroke-off}: _brand-colors(_transparent);
-        }
+      .svg--icon svg{
+        #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline__hover);
+        #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline__hover);
+        #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline__hover);
+        #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline__hover);
+        #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline__hover);
+        #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline__hover);
+        #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline__hover);
+        #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline__hover);
+        fill: brandBtn(#{$btn}_color__outline__hover);
+        #{--limited-stroke-off}: _brand-colors(_transparent);
       }
       .bicolors-filter,
       .bicolors-filter__24vb{
@@ -263,27 +257,35 @@
         background-color: transparent;
         border-color: brandBtn(#{$btn}_border__outline);
         color: brandBtn(#{$btn}_color__outline);
-        .svg--icon {
-          svg {
-            #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
-            #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
-            #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
-            #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
-            fill: brandBtn(#{$btn}_color__outline);
-            #{--limited-stroke-off}: _brand-colors(_transparent);
-          }
+        .svg--icon svg{
+          #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
+          #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
+          #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
+          #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
+          #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
+          #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
+          #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
+          #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
+          fill: brandBtn(#{$btn}_color__outline);
+          #{--limited-stroke-off}: _brand-colors(_transparent);
+        }
+        .bicolors-filter,
+        .bicolors-filter__24vb{
+          #{--infotech_svg-colorStroke}: #fff;
         }
       }
     }
-    .svg--icon {
-      svg {
-        #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
-        #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
-        #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
-        #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
-        fill: brandBtn(#{$btn}_color__outline);
-        #{--limited-stroke-off}: _brand-colors(_transparent);
-      }
+    .svg--icon svg{
+      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
+      #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
+      #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
+      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
+      #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
+      #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
+      #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
+      #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
+      fill: brandBtn(#{$btn}_color__outline);
+      #{--limited-stroke-off}: _brand-colors(_transparent);
     }
     .bicolors-filter,
     .bicolors-filter__24vb{
@@ -412,17 +414,6 @@ a.btn {
   &__minimal{
     padding-left: 0;
     padding-right: 0;
-    &:hover,
-    &:focus,
-    &:focus-visible,
-    &.disabled,
-    &[disabled],
-    fieldset[disabled] &,
-    &.active,
-    &:active{
-      background-color: transparent;
-      color: inherit;
-    }
   }
 }
 
@@ -454,10 +445,10 @@ a.btn {
     height: rem(brandSizes(btnIcon_height));
     width: rem(brandSizes(btnIcon_height));
     // vertical-align: middle;
-    #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
-    #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
-    #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
-    #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
+    #{--svg-icon-fill}: brandPalette(btnDownloadSvg_color);
+    #{--svg-icon-fill_blue}: brandPalette(btnDownloadSvg_color);
+    #{--svg-icon-stroke_blue}: brandPalette(btnDownloadSvg_color);
+    #{--svg-icon-stroke}: brandPalette(btnDownloadSvg_color);
     #{--limited-stroke-off}: _brand-colors(_transparent);
     svg{
       height: rem(brandSizes(btnIconSvg_height));
@@ -593,11 +584,11 @@ a.btn {
   &[disabled],
   fieldset[disabled] &{
     cursor: not-allowed;
+    opacity: brandSizes(disabel_opacity);
     &:hover,
     &:focus-visible{
       .svg--icon {
         background-color: transparent;
-        opacity: brandSizes(disabel_opacity);
       }
     }
   }
@@ -665,10 +656,11 @@ input[type="button"] {
 }
 
 .btn-download{
-  background: var(--color_white);
-  border: 1px dashed var(--color_light-blue);
+  background-color: var(--color_white);
+  background-image: none;
+  border: 1px dashed brandPalette(btnDownload_borderColor);
   box-shadow: none;
-  color: var(--color_light-blue);
+  color: brandPalette(btnDownload_color);
   cursor: pointer;
   display: inline-block;
   font-size: rem(12);
@@ -682,7 +674,7 @@ input[type="button"] {
   vertical-align: middle;
   &_inner{
     align-items: center;
-    background: var(--color_light-blue2);
+    background-color: brandPalette(btnDownload_bgc);
     display: flex;
     height: 100%;
     justify-content: center;
@@ -697,10 +689,26 @@ input[type="button"] {
       max-height: none;
     }
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus-visible,
+  &.active,
+  &.active:focus,
+  &:active:focus,
+  &:active
+  &:hover,
+  &:focus {
+      background-image: none;
+      box-shadow: none;
+      outline: 0;
+  }
+  &:hover, 
+  &:focus-visible {
     background-image: none;
     box-shadow: none;
     outline: 0;
+    .btn-download_inner{
+      background-color: brandPalette(btnDownloadHover_bgc);
+    }
   }
   .btn-text{
     line-height: rem(12);
@@ -731,13 +739,14 @@ input[type="button"] {
   &__onHover{
     opacity: 0;
     z-index: 1;
-    &:hover{
-      opacity: 1;
-    }
     &:active{
       .mobile-view &{
         opacity: 1;
       }
+    }
+    &:hover,
+    &:focus-visible{
+      opacity: 1;
     }
   }
   &__large,
@@ -750,11 +759,11 @@ input[type="button"] {
   &__large,
   &__square{
     .svg--icon {
-      height: rem(20);
-      width: rem(20);
+      height: brandSizes(btnDownloadSvg_height);
+      width: brandSizes(btnDownloadSvg_height);
       svg{
-        height: rem(20);
-        width: rem(20);
+        height: brandSizes(btnDownloadSvg_height);
+        width: brandSizes(btnDownloadSvg_height);
       }
     }
   }
@@ -786,5 +795,17 @@ input[type="button"] {
     height: rem(128);
     width: rem(128);
     min-width: rem(128);
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] &{
+    cursor: not-allowed;
+    opacity: brandSizes(disabel_opacity);
+    &:hover,
+    &:focus-visible{
+      .btn-download_inner {
+        background-color: brandPalette(btnDownload_bgc);
+      }
+    }
   }
 }

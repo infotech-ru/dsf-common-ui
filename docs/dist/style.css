@@ -8464,22 +8464,18 @@ g.highcharts-series,
   background-image: none;
   border-color: #cccccc;
   color: #333333;
-  --infotech_svg-colorStroke: #333333;
-  --infotech_svg-stroke: #333333;
-  --infotech_svg-fill: #333333;
-  --infotech_svg-colorFill: #333333;
 }
 .btn-default__outline:hover, .btn-default__outline:focus-visible, .btn-default__outline:active, .btn-default__outline:active:focus, .btn-default__outline.active, .btn-default__outline.active:focus, .btn-default__outline.focus {
   background-color: #cccccc;
   background-image: none;
   background-position: inherit;
   color: #333333;
+}
+.btn-default__outline:hover .svg--icon svg, .btn-default__outline:focus-visible .svg--icon svg, .btn-default__outline:active .svg--icon svg, .btn-default__outline:active:focus .svg--icon svg, .btn-default__outline.active .svg--icon svg, .btn-default__outline.active:focus .svg--icon svg, .btn-default__outline.focus .svg--icon svg {
   --infotech_svg-colorStroke: #333333;
   --infotech_svg-stroke: #333333;
   --infotech_svg-fill: #333333;
   --infotech_svg-colorFill: #333333;
-}
-.btn-default__outline:hover .svg--icon svg, .btn-default__outline:focus-visible .svg--icon svg, .btn-default__outline:active .svg--icon svg, .btn-default__outline:active:focus .svg--icon svg, .btn-default__outline.active .svg--icon svg, .btn-default__outline.active:focus .svg--icon svg, .btn-default__outline.focus .svg--icon svg {
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
@@ -8503,6 +8499,10 @@ g.highcharts-series,
   color: #333333;
 }
 .btn-default__outline.disabled:hover .svg--icon svg, .btn-default__outline.disabled:focus-visible .svg--icon svg, .btn-default__outline.disabled:active .svg--icon svg, .btn-default__outline.disabled:active:focus .svg--icon svg, .btn-default__outline.disabled.active .svg--icon svg, .btn-default__outline.disabled.active:focus .svg--icon svg, .btn-default__outline.disabled.focus .svg--icon svg, .btn-default__outline[disabled]:hover .svg--icon svg, .btn-default__outline[disabled]:focus-visible .svg--icon svg, .btn-default__outline[disabled]:active .svg--icon svg, .btn-default__outline[disabled]:active:focus .svg--icon svg, .btn-default__outline[disabled].active .svg--icon svg, .btn-default__outline[disabled].active:focus .svg--icon svg, .btn-default__outline[disabled].focus .svg--icon svg, fieldset[disabled] .btn-default__outline:hover .svg--icon svg, fieldset[disabled] .btn-default__outline:focus-visible .svg--icon svg, fieldset[disabled] .btn-default__outline:active .svg--icon svg, fieldset[disabled] .btn-default__outline:active:focus .svg--icon svg, fieldset[disabled] .btn-default__outline.active .svg--icon svg, fieldset[disabled] .btn-default__outline.active:focus .svg--icon svg, fieldset[disabled] .btn-default__outline.focus .svg--icon svg {
+  --infotech_svg-colorStroke: #333333;
+  --infotech_svg-stroke: #333333;
+  --infotech_svg-fill: #333333;
+  --infotech_svg-colorFill: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
   --svg-icon-fill: #333333;
@@ -8510,7 +8510,35 @@ g.highcharts-series,
   fill: #333333;
   --limited-stroke-off: _brand-colors(_transparent);
 }
+.btn-default__outline.disabled:hover .bicolors-filter,
+.btn-default__outline.disabled:hover .bicolors-filter__24vb, .btn-default__outline.disabled:focus-visible .bicolors-filter,
+.btn-default__outline.disabled:focus-visible .bicolors-filter__24vb, .btn-default__outline.disabled:active .bicolors-filter,
+.btn-default__outline.disabled:active .bicolors-filter__24vb, .btn-default__outline.disabled:active:focus .bicolors-filter,
+.btn-default__outline.disabled:active:focus .bicolors-filter__24vb, .btn-default__outline.disabled.active .bicolors-filter,
+.btn-default__outline.disabled.active .bicolors-filter__24vb, .btn-default__outline.disabled.active:focus .bicolors-filter,
+.btn-default__outline.disabled.active:focus .bicolors-filter__24vb, .btn-default__outline.disabled.focus .bicolors-filter,
+.btn-default__outline.disabled.focus .bicolors-filter__24vb, .btn-default__outline[disabled]:hover .bicolors-filter,
+.btn-default__outline[disabled]:hover .bicolors-filter__24vb, .btn-default__outline[disabled]:focus-visible .bicolors-filter,
+.btn-default__outline[disabled]:focus-visible .bicolors-filter__24vb, .btn-default__outline[disabled]:active .bicolors-filter,
+.btn-default__outline[disabled]:active .bicolors-filter__24vb, .btn-default__outline[disabled]:active:focus .bicolors-filter,
+.btn-default__outline[disabled]:active:focus .bicolors-filter__24vb, .btn-default__outline[disabled].active .bicolors-filter,
+.btn-default__outline[disabled].active .bicolors-filter__24vb, .btn-default__outline[disabled].active:focus .bicolors-filter,
+.btn-default__outline[disabled].active:focus .bicolors-filter__24vb, .btn-default__outline[disabled].focus .bicolors-filter,
+.btn-default__outline[disabled].focus .bicolors-filter__24vb, fieldset[disabled] .btn-default__outline:hover .bicolors-filter,
+fieldset[disabled] .btn-default__outline:hover .bicolors-filter__24vb, fieldset[disabled] .btn-default__outline:focus-visible .bicolors-filter,
+fieldset[disabled] .btn-default__outline:focus-visible .bicolors-filter__24vb, fieldset[disabled] .btn-default__outline:active .bicolors-filter,
+fieldset[disabled] .btn-default__outline:active .bicolors-filter__24vb, fieldset[disabled] .btn-default__outline:active:focus .bicolors-filter,
+fieldset[disabled] .btn-default__outline:active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-default__outline.active .bicolors-filter,
+fieldset[disabled] .btn-default__outline.active .bicolors-filter__24vb, fieldset[disabled] .btn-default__outline.active:focus .bicolors-filter,
+fieldset[disabled] .btn-default__outline.active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-default__outline.focus .bicolors-filter,
+fieldset[disabled] .btn-default__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
+}
 .btn-default__outline .svg--icon svg {
+  --infotech_svg-colorStroke: #333333;
+  --infotech_svg-stroke: #333333;
+  --infotech_svg-fill: #333333;
+  --infotech_svg-colorFill: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
   --svg-icon-fill: #333333;
@@ -8528,22 +8556,18 @@ g.highcharts-series,
   background-image: none;
   border-color: #4A8DC6;
   color: #4A8DC6;
-  --infotech_svg-colorStroke: #4A8DC6;
-  --infotech_svg-stroke: #4A8DC6;
-  --infotech_svg-fill: #4A8DC6;
-  --infotech_svg-colorFill: #4A8DC6;
 }
 .btn-primary__outline:hover, .btn-primary__outline:focus-visible, .btn-primary__outline:active, .btn-primary__outline:active:focus, .btn-primary__outline.active, .btn-primary__outline.active:focus, .btn-primary__outline.focus {
   background-color: #4A8DC6;
   background-image: none;
   background-position: inherit;
   color: #ffffff;
+}
+.btn-primary__outline:hover .svg--icon svg, .btn-primary__outline:focus-visible .svg--icon svg, .btn-primary__outline:active .svg--icon svg, .btn-primary__outline:active:focus .svg--icon svg, .btn-primary__outline.active .svg--icon svg, .btn-primary__outline.active:focus .svg--icon svg, .btn-primary__outline.focus .svg--icon svg {
   --infotech_svg-colorStroke: #ffffff;
   --infotech_svg-stroke: #ffffff;
   --infotech_svg-fill: #ffffff;
   --infotech_svg-colorFill: #ffffff;
-}
-.btn-primary__outline:hover .svg--icon svg, .btn-primary__outline:focus-visible .svg--icon svg, .btn-primary__outline:active .svg--icon svg, .btn-primary__outline:active:focus .svg--icon svg, .btn-primary__outline.active .svg--icon svg, .btn-primary__outline.active:focus .svg--icon svg, .btn-primary__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8567,6 +8591,10 @@ g.highcharts-series,
   color: #4A8DC6;
 }
 .btn-primary__outline.disabled:hover .svg--icon svg, .btn-primary__outline.disabled:focus-visible .svg--icon svg, .btn-primary__outline.disabled:active .svg--icon svg, .btn-primary__outline.disabled:active:focus .svg--icon svg, .btn-primary__outline.disabled.active .svg--icon svg, .btn-primary__outline.disabled.active:focus .svg--icon svg, .btn-primary__outline.disabled.focus .svg--icon svg, .btn-primary__outline[disabled]:hover .svg--icon svg, .btn-primary__outline[disabled]:focus-visible .svg--icon svg, .btn-primary__outline[disabled]:active .svg--icon svg, .btn-primary__outline[disabled]:active:focus .svg--icon svg, .btn-primary__outline[disabled].active .svg--icon svg, .btn-primary__outline[disabled].active:focus .svg--icon svg, .btn-primary__outline[disabled].focus .svg--icon svg, fieldset[disabled] .btn-primary__outline:hover .svg--icon svg, fieldset[disabled] .btn-primary__outline:focus-visible .svg--icon svg, fieldset[disabled] .btn-primary__outline:active .svg--icon svg, fieldset[disabled] .btn-primary__outline:active:focus .svg--icon svg, fieldset[disabled] .btn-primary__outline.active .svg--icon svg, fieldset[disabled] .btn-primary__outline.active:focus .svg--icon svg, fieldset[disabled] .btn-primary__outline.focus .svg--icon svg {
+  --infotech_svg-colorStroke: #4A8DC6;
+  --infotech_svg-stroke: #4A8DC6;
+  --infotech_svg-fill: #4A8DC6;
+  --infotech_svg-colorFill: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
   --svg-icon-fill: #4A8DC6;
@@ -8574,7 +8602,35 @@ g.highcharts-series,
   fill: #4A8DC6;
   --limited-stroke-off: _brand-colors(_transparent);
 }
+.btn-primary__outline.disabled:hover .bicolors-filter,
+.btn-primary__outline.disabled:hover .bicolors-filter__24vb, .btn-primary__outline.disabled:focus-visible .bicolors-filter,
+.btn-primary__outline.disabled:focus-visible .bicolors-filter__24vb, .btn-primary__outline.disabled:active .bicolors-filter,
+.btn-primary__outline.disabled:active .bicolors-filter__24vb, .btn-primary__outline.disabled:active:focus .bicolors-filter,
+.btn-primary__outline.disabled:active:focus .bicolors-filter__24vb, .btn-primary__outline.disabled.active .bicolors-filter,
+.btn-primary__outline.disabled.active .bicolors-filter__24vb, .btn-primary__outline.disabled.active:focus .bicolors-filter,
+.btn-primary__outline.disabled.active:focus .bicolors-filter__24vb, .btn-primary__outline.disabled.focus .bicolors-filter,
+.btn-primary__outline.disabled.focus .bicolors-filter__24vb, .btn-primary__outline[disabled]:hover .bicolors-filter,
+.btn-primary__outline[disabled]:hover .bicolors-filter__24vb, .btn-primary__outline[disabled]:focus-visible .bicolors-filter,
+.btn-primary__outline[disabled]:focus-visible .bicolors-filter__24vb, .btn-primary__outline[disabled]:active .bicolors-filter,
+.btn-primary__outline[disabled]:active .bicolors-filter__24vb, .btn-primary__outline[disabled]:active:focus .bicolors-filter,
+.btn-primary__outline[disabled]:active:focus .bicolors-filter__24vb, .btn-primary__outline[disabled].active .bicolors-filter,
+.btn-primary__outline[disabled].active .bicolors-filter__24vb, .btn-primary__outline[disabled].active:focus .bicolors-filter,
+.btn-primary__outline[disabled].active:focus .bicolors-filter__24vb, .btn-primary__outline[disabled].focus .bicolors-filter,
+.btn-primary__outline[disabled].focus .bicolors-filter__24vb, fieldset[disabled] .btn-primary__outline:hover .bicolors-filter,
+fieldset[disabled] .btn-primary__outline:hover .bicolors-filter__24vb, fieldset[disabled] .btn-primary__outline:focus-visible .bicolors-filter,
+fieldset[disabled] .btn-primary__outline:focus-visible .bicolors-filter__24vb, fieldset[disabled] .btn-primary__outline:active .bicolors-filter,
+fieldset[disabled] .btn-primary__outline:active .bicolors-filter__24vb, fieldset[disabled] .btn-primary__outline:active:focus .bicolors-filter,
+fieldset[disabled] .btn-primary__outline:active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-primary__outline.active .bicolors-filter,
+fieldset[disabled] .btn-primary__outline.active .bicolors-filter__24vb, fieldset[disabled] .btn-primary__outline.active:focus .bicolors-filter,
+fieldset[disabled] .btn-primary__outline.active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-primary__outline.focus .bicolors-filter,
+fieldset[disabled] .btn-primary__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
+}
 .btn-primary__outline .svg--icon svg {
+  --infotech_svg-colorStroke: #4A8DC6;
+  --infotech_svg-stroke: #4A8DC6;
+  --infotech_svg-fill: #4A8DC6;
+  --infotech_svg-colorFill: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
   --svg-icon-fill: #4A8DC6;
@@ -8592,22 +8648,18 @@ g.highcharts-series,
   background-image: none;
   border-color: #467B46;
   color: #467B46;
-  --infotech_svg-colorStroke: #467B46;
-  --infotech_svg-stroke: #467B46;
-  --infotech_svg-fill: #467B46;
-  --infotech_svg-colorFill: #467B46;
 }
 .btn-success__outline:hover, .btn-success__outline:focus-visible, .btn-success__outline:active, .btn-success__outline:active:focus, .btn-success__outline.active, .btn-success__outline.active:focus, .btn-success__outline.focus {
   background-color: #467B46;
   background-image: none;
   background-position: inherit;
   color: #ffffff;
+}
+.btn-success__outline:hover .svg--icon svg, .btn-success__outline:focus-visible .svg--icon svg, .btn-success__outline:active .svg--icon svg, .btn-success__outline:active:focus .svg--icon svg, .btn-success__outline.active .svg--icon svg, .btn-success__outline.active:focus .svg--icon svg, .btn-success__outline.focus .svg--icon svg {
   --infotech_svg-colorStroke: #ffffff;
   --infotech_svg-stroke: #ffffff;
   --infotech_svg-fill: #ffffff;
   --infotech_svg-colorFill: #ffffff;
-}
-.btn-success__outline:hover .svg--icon svg, .btn-success__outline:focus-visible .svg--icon svg, .btn-success__outline:active .svg--icon svg, .btn-success__outline:active:focus .svg--icon svg, .btn-success__outline.active .svg--icon svg, .btn-success__outline.active:focus .svg--icon svg, .btn-success__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8631,6 +8683,10 @@ g.highcharts-series,
   color: #467B46;
 }
 .btn-success__outline.disabled:hover .svg--icon svg, .btn-success__outline.disabled:focus-visible .svg--icon svg, .btn-success__outline.disabled:active .svg--icon svg, .btn-success__outline.disabled:active:focus .svg--icon svg, .btn-success__outline.disabled.active .svg--icon svg, .btn-success__outline.disabled.active:focus .svg--icon svg, .btn-success__outline.disabled.focus .svg--icon svg, .btn-success__outline[disabled]:hover .svg--icon svg, .btn-success__outline[disabled]:focus-visible .svg--icon svg, .btn-success__outline[disabled]:active .svg--icon svg, .btn-success__outline[disabled]:active:focus .svg--icon svg, .btn-success__outline[disabled].active .svg--icon svg, .btn-success__outline[disabled].active:focus .svg--icon svg, .btn-success__outline[disabled].focus .svg--icon svg, fieldset[disabled] .btn-success__outline:hover .svg--icon svg, fieldset[disabled] .btn-success__outline:focus-visible .svg--icon svg, fieldset[disabled] .btn-success__outline:active .svg--icon svg, fieldset[disabled] .btn-success__outline:active:focus .svg--icon svg, fieldset[disabled] .btn-success__outline.active .svg--icon svg, fieldset[disabled] .btn-success__outline.active:focus .svg--icon svg, fieldset[disabled] .btn-success__outline.focus .svg--icon svg {
+  --infotech_svg-colorStroke: #467B46;
+  --infotech_svg-stroke: #467B46;
+  --infotech_svg-fill: #467B46;
+  --infotech_svg-colorFill: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
   --svg-icon-fill: #467B46;
@@ -8638,7 +8694,35 @@ g.highcharts-series,
   fill: #467B46;
   --limited-stroke-off: _brand-colors(_transparent);
 }
+.btn-success__outline.disabled:hover .bicolors-filter,
+.btn-success__outline.disabled:hover .bicolors-filter__24vb, .btn-success__outline.disabled:focus-visible .bicolors-filter,
+.btn-success__outline.disabled:focus-visible .bicolors-filter__24vb, .btn-success__outline.disabled:active .bicolors-filter,
+.btn-success__outline.disabled:active .bicolors-filter__24vb, .btn-success__outline.disabled:active:focus .bicolors-filter,
+.btn-success__outline.disabled:active:focus .bicolors-filter__24vb, .btn-success__outline.disabled.active .bicolors-filter,
+.btn-success__outline.disabled.active .bicolors-filter__24vb, .btn-success__outline.disabled.active:focus .bicolors-filter,
+.btn-success__outline.disabled.active:focus .bicolors-filter__24vb, .btn-success__outline.disabled.focus .bicolors-filter,
+.btn-success__outline.disabled.focus .bicolors-filter__24vb, .btn-success__outline[disabled]:hover .bicolors-filter,
+.btn-success__outline[disabled]:hover .bicolors-filter__24vb, .btn-success__outline[disabled]:focus-visible .bicolors-filter,
+.btn-success__outline[disabled]:focus-visible .bicolors-filter__24vb, .btn-success__outline[disabled]:active .bicolors-filter,
+.btn-success__outline[disabled]:active .bicolors-filter__24vb, .btn-success__outline[disabled]:active:focus .bicolors-filter,
+.btn-success__outline[disabled]:active:focus .bicolors-filter__24vb, .btn-success__outline[disabled].active .bicolors-filter,
+.btn-success__outline[disabled].active .bicolors-filter__24vb, .btn-success__outline[disabled].active:focus .bicolors-filter,
+.btn-success__outline[disabled].active:focus .bicolors-filter__24vb, .btn-success__outline[disabled].focus .bicolors-filter,
+.btn-success__outline[disabled].focus .bicolors-filter__24vb, fieldset[disabled] .btn-success__outline:hover .bicolors-filter,
+fieldset[disabled] .btn-success__outline:hover .bicolors-filter__24vb, fieldset[disabled] .btn-success__outline:focus-visible .bicolors-filter,
+fieldset[disabled] .btn-success__outline:focus-visible .bicolors-filter__24vb, fieldset[disabled] .btn-success__outline:active .bicolors-filter,
+fieldset[disabled] .btn-success__outline:active .bicolors-filter__24vb, fieldset[disabled] .btn-success__outline:active:focus .bicolors-filter,
+fieldset[disabled] .btn-success__outline:active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-success__outline.active .bicolors-filter,
+fieldset[disabled] .btn-success__outline.active .bicolors-filter__24vb, fieldset[disabled] .btn-success__outline.active:focus .bicolors-filter,
+fieldset[disabled] .btn-success__outline.active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-success__outline.focus .bicolors-filter,
+fieldset[disabled] .btn-success__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
+}
 .btn-success__outline .svg--icon svg {
+  --infotech_svg-colorStroke: #467B46;
+  --infotech_svg-stroke: #467B46;
+  --infotech_svg-fill: #467B46;
+  --infotech_svg-colorFill: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
   --svg-icon-fill: #467B46;
@@ -8656,22 +8740,18 @@ g.highcharts-series,
   background-image: none;
   border-color: #D9534F;
   color: #D9534F;
-  --infotech_svg-colorStroke: #D9534F;
-  --infotech_svg-stroke: #D9534F;
-  --infotech_svg-fill: #D9534F;
-  --infotech_svg-colorFill: #D9534F;
 }
 .btn-danger__outline:hover, .btn-danger__outline:focus-visible, .btn-danger__outline:active, .btn-danger__outline:active:focus, .btn-danger__outline.active, .btn-danger__outline.active:focus, .btn-danger__outline.focus {
   background-color: #D9534F;
   background-image: none;
   background-position: inherit;
   color: #ffffff;
+}
+.btn-danger__outline:hover .svg--icon svg, .btn-danger__outline:focus-visible .svg--icon svg, .btn-danger__outline:active .svg--icon svg, .btn-danger__outline:active:focus .svg--icon svg, .btn-danger__outline.active .svg--icon svg, .btn-danger__outline.active:focus .svg--icon svg, .btn-danger__outline.focus .svg--icon svg {
   --infotech_svg-colorStroke: #ffffff;
   --infotech_svg-stroke: #ffffff;
   --infotech_svg-fill: #ffffff;
   --infotech_svg-colorFill: #ffffff;
-}
-.btn-danger__outline:hover .svg--icon svg, .btn-danger__outline:focus-visible .svg--icon svg, .btn-danger__outline:active .svg--icon svg, .btn-danger__outline:active:focus .svg--icon svg, .btn-danger__outline.active .svg--icon svg, .btn-danger__outline.active:focus .svg--icon svg, .btn-danger__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8695,6 +8775,10 @@ g.highcharts-series,
   color: #D9534F;
 }
 .btn-danger__outline.disabled:hover .svg--icon svg, .btn-danger__outline.disabled:focus-visible .svg--icon svg, .btn-danger__outline.disabled:active .svg--icon svg, .btn-danger__outline.disabled:active:focus .svg--icon svg, .btn-danger__outline.disabled.active .svg--icon svg, .btn-danger__outline.disabled.active:focus .svg--icon svg, .btn-danger__outline.disabled.focus .svg--icon svg, .btn-danger__outline[disabled]:hover .svg--icon svg, .btn-danger__outline[disabled]:focus-visible .svg--icon svg, .btn-danger__outline[disabled]:active .svg--icon svg, .btn-danger__outline[disabled]:active:focus .svg--icon svg, .btn-danger__outline[disabled].active .svg--icon svg, .btn-danger__outline[disabled].active:focus .svg--icon svg, .btn-danger__outline[disabled].focus .svg--icon svg, fieldset[disabled] .btn-danger__outline:hover .svg--icon svg, fieldset[disabled] .btn-danger__outline:focus-visible .svg--icon svg, fieldset[disabled] .btn-danger__outline:active .svg--icon svg, fieldset[disabled] .btn-danger__outline:active:focus .svg--icon svg, fieldset[disabled] .btn-danger__outline.active .svg--icon svg, fieldset[disabled] .btn-danger__outline.active:focus .svg--icon svg, fieldset[disabled] .btn-danger__outline.focus .svg--icon svg {
+  --infotech_svg-colorStroke: #D9534F;
+  --infotech_svg-stroke: #D9534F;
+  --infotech_svg-fill: #D9534F;
+  --infotech_svg-colorFill: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
   --svg-icon-fill: #D9534F;
@@ -8702,7 +8786,35 @@ g.highcharts-series,
   fill: #D9534F;
   --limited-stroke-off: _brand-colors(_transparent);
 }
+.btn-danger__outline.disabled:hover .bicolors-filter,
+.btn-danger__outline.disabled:hover .bicolors-filter__24vb, .btn-danger__outline.disabled:focus-visible .bicolors-filter,
+.btn-danger__outline.disabled:focus-visible .bicolors-filter__24vb, .btn-danger__outline.disabled:active .bicolors-filter,
+.btn-danger__outline.disabled:active .bicolors-filter__24vb, .btn-danger__outline.disabled:active:focus .bicolors-filter,
+.btn-danger__outline.disabled:active:focus .bicolors-filter__24vb, .btn-danger__outline.disabled.active .bicolors-filter,
+.btn-danger__outline.disabled.active .bicolors-filter__24vb, .btn-danger__outline.disabled.active:focus .bicolors-filter,
+.btn-danger__outline.disabled.active:focus .bicolors-filter__24vb, .btn-danger__outline.disabled.focus .bicolors-filter,
+.btn-danger__outline.disabled.focus .bicolors-filter__24vb, .btn-danger__outline[disabled]:hover .bicolors-filter,
+.btn-danger__outline[disabled]:hover .bicolors-filter__24vb, .btn-danger__outline[disabled]:focus-visible .bicolors-filter,
+.btn-danger__outline[disabled]:focus-visible .bicolors-filter__24vb, .btn-danger__outline[disabled]:active .bicolors-filter,
+.btn-danger__outline[disabled]:active .bicolors-filter__24vb, .btn-danger__outline[disabled]:active:focus .bicolors-filter,
+.btn-danger__outline[disabled]:active:focus .bicolors-filter__24vb, .btn-danger__outline[disabled].active .bicolors-filter,
+.btn-danger__outline[disabled].active .bicolors-filter__24vb, .btn-danger__outline[disabled].active:focus .bicolors-filter,
+.btn-danger__outline[disabled].active:focus .bicolors-filter__24vb, .btn-danger__outline[disabled].focus .bicolors-filter,
+.btn-danger__outline[disabled].focus .bicolors-filter__24vb, fieldset[disabled] .btn-danger__outline:hover .bicolors-filter,
+fieldset[disabled] .btn-danger__outline:hover .bicolors-filter__24vb, fieldset[disabled] .btn-danger__outline:focus-visible .bicolors-filter,
+fieldset[disabled] .btn-danger__outline:focus-visible .bicolors-filter__24vb, fieldset[disabled] .btn-danger__outline:active .bicolors-filter,
+fieldset[disabled] .btn-danger__outline:active .bicolors-filter__24vb, fieldset[disabled] .btn-danger__outline:active:focus .bicolors-filter,
+fieldset[disabled] .btn-danger__outline:active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-danger__outline.active .bicolors-filter,
+fieldset[disabled] .btn-danger__outline.active .bicolors-filter__24vb, fieldset[disabled] .btn-danger__outline.active:focus .bicolors-filter,
+fieldset[disabled] .btn-danger__outline.active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-danger__outline.focus .bicolors-filter,
+fieldset[disabled] .btn-danger__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
+}
 .btn-danger__outline .svg--icon svg {
+  --infotech_svg-colorStroke: #D9534F;
+  --infotech_svg-stroke: #D9534F;
+  --infotech_svg-fill: #D9534F;
+  --infotech_svg-colorFill: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
   --svg-icon-fill: #D9534F;
@@ -8720,22 +8832,18 @@ g.highcharts-series,
   background-image: none;
   border-color: #DE8500;
   color: #DE8500;
-  --infotech_svg-colorStroke: #DE8500;
-  --infotech_svg-stroke: #DE8500;
-  --infotech_svg-fill: #DE8500;
-  --infotech_svg-colorFill: #DE8500;
 }
 .btn-warning__outline:hover, .btn-warning__outline:focus-visible, .btn-warning__outline:active, .btn-warning__outline:active:focus, .btn-warning__outline.active, .btn-warning__outline.active:focus, .btn-warning__outline.focus {
   background-color: #DE8500;
   background-image: none;
   background-position: inherit;
   color: #ffffff;
+}
+.btn-warning__outline:hover .svg--icon svg, .btn-warning__outline:focus-visible .svg--icon svg, .btn-warning__outline:active .svg--icon svg, .btn-warning__outline:active:focus .svg--icon svg, .btn-warning__outline.active .svg--icon svg, .btn-warning__outline.active:focus .svg--icon svg, .btn-warning__outline.focus .svg--icon svg {
   --infotech_svg-colorStroke: #ffffff;
   --infotech_svg-stroke: #ffffff;
   --infotech_svg-fill: #ffffff;
   --infotech_svg-colorFill: #ffffff;
-}
-.btn-warning__outline:hover .svg--icon svg, .btn-warning__outline:focus-visible .svg--icon svg, .btn-warning__outline:active .svg--icon svg, .btn-warning__outline:active:focus .svg--icon svg, .btn-warning__outline.active .svg--icon svg, .btn-warning__outline.active:focus .svg--icon svg, .btn-warning__outline.focus .svg--icon svg {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
@@ -8759,6 +8867,10 @@ g.highcharts-series,
   color: #DE8500;
 }
 .btn-warning__outline.disabled:hover .svg--icon svg, .btn-warning__outline.disabled:focus-visible .svg--icon svg, .btn-warning__outline.disabled:active .svg--icon svg, .btn-warning__outline.disabled:active:focus .svg--icon svg, .btn-warning__outline.disabled.active .svg--icon svg, .btn-warning__outline.disabled.active:focus .svg--icon svg, .btn-warning__outline.disabled.focus .svg--icon svg, .btn-warning__outline[disabled]:hover .svg--icon svg, .btn-warning__outline[disabled]:focus-visible .svg--icon svg, .btn-warning__outline[disabled]:active .svg--icon svg, .btn-warning__outline[disabled]:active:focus .svg--icon svg, .btn-warning__outline[disabled].active .svg--icon svg, .btn-warning__outline[disabled].active:focus .svg--icon svg, .btn-warning__outline[disabled].focus .svg--icon svg, fieldset[disabled] .btn-warning__outline:hover .svg--icon svg, fieldset[disabled] .btn-warning__outline:focus-visible .svg--icon svg, fieldset[disabled] .btn-warning__outline:active .svg--icon svg, fieldset[disabled] .btn-warning__outline:active:focus .svg--icon svg, fieldset[disabled] .btn-warning__outline.active .svg--icon svg, fieldset[disabled] .btn-warning__outline.active:focus .svg--icon svg, fieldset[disabled] .btn-warning__outline.focus .svg--icon svg {
+  --infotech_svg-colorStroke: #DE8500;
+  --infotech_svg-stroke: #DE8500;
+  --infotech_svg-fill: #DE8500;
+  --infotech_svg-colorFill: #DE8500;
   --svg-icon-fill_blue: #DE8500;
   --svg-icon-stroke_blue: #DE8500;
   --svg-icon-fill: #DE8500;
@@ -8766,7 +8878,35 @@ g.highcharts-series,
   fill: #DE8500;
   --limited-stroke-off: _brand-colors(_transparent);
 }
+.btn-warning__outline.disabled:hover .bicolors-filter,
+.btn-warning__outline.disabled:hover .bicolors-filter__24vb, .btn-warning__outline.disabled:focus-visible .bicolors-filter,
+.btn-warning__outline.disabled:focus-visible .bicolors-filter__24vb, .btn-warning__outline.disabled:active .bicolors-filter,
+.btn-warning__outline.disabled:active .bicolors-filter__24vb, .btn-warning__outline.disabled:active:focus .bicolors-filter,
+.btn-warning__outline.disabled:active:focus .bicolors-filter__24vb, .btn-warning__outline.disabled.active .bicolors-filter,
+.btn-warning__outline.disabled.active .bicolors-filter__24vb, .btn-warning__outline.disabled.active:focus .bicolors-filter,
+.btn-warning__outline.disabled.active:focus .bicolors-filter__24vb, .btn-warning__outline.disabled.focus .bicolors-filter,
+.btn-warning__outline.disabled.focus .bicolors-filter__24vb, .btn-warning__outline[disabled]:hover .bicolors-filter,
+.btn-warning__outline[disabled]:hover .bicolors-filter__24vb, .btn-warning__outline[disabled]:focus-visible .bicolors-filter,
+.btn-warning__outline[disabled]:focus-visible .bicolors-filter__24vb, .btn-warning__outline[disabled]:active .bicolors-filter,
+.btn-warning__outline[disabled]:active .bicolors-filter__24vb, .btn-warning__outline[disabled]:active:focus .bicolors-filter,
+.btn-warning__outline[disabled]:active:focus .bicolors-filter__24vb, .btn-warning__outline[disabled].active .bicolors-filter,
+.btn-warning__outline[disabled].active .bicolors-filter__24vb, .btn-warning__outline[disabled].active:focus .bicolors-filter,
+.btn-warning__outline[disabled].active:focus .bicolors-filter__24vb, .btn-warning__outline[disabled].focus .bicolors-filter,
+.btn-warning__outline[disabled].focus .bicolors-filter__24vb, fieldset[disabled] .btn-warning__outline:hover .bicolors-filter,
+fieldset[disabled] .btn-warning__outline:hover .bicolors-filter__24vb, fieldset[disabled] .btn-warning__outline:focus-visible .bicolors-filter,
+fieldset[disabled] .btn-warning__outline:focus-visible .bicolors-filter__24vb, fieldset[disabled] .btn-warning__outline:active .bicolors-filter,
+fieldset[disabled] .btn-warning__outline:active .bicolors-filter__24vb, fieldset[disabled] .btn-warning__outline:active:focus .bicolors-filter,
+fieldset[disabled] .btn-warning__outline:active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-warning__outline.active .bicolors-filter,
+fieldset[disabled] .btn-warning__outline.active .bicolors-filter__24vb, fieldset[disabled] .btn-warning__outline.active:focus .bicolors-filter,
+fieldset[disabled] .btn-warning__outline.active:focus .bicolors-filter__24vb, fieldset[disabled] .btn-warning__outline.focus .bicolors-filter,
+fieldset[disabled] .btn-warning__outline.focus .bicolors-filter__24vb {
+  --infotech_svg-colorStroke: #fff;
+}
 .btn-warning__outline .svg--icon svg {
+  --infotech_svg-colorStroke: #DE8500;
+  --infotech_svg-stroke: #DE8500;
+  --infotech_svg-fill: #DE8500;
+  --infotech_svg-colorFill: #DE8500;
   --svg-icon-fill_blue: #DE8500;
   --svg-icon-stroke_blue: #DE8500;
   --svg-icon-fill: #DE8500;
@@ -8854,10 +8994,6 @@ a.btn.disabled, fieldset[disabled] a.btn {
   padding-left: 0;
   padding-right: 0;
 }
-.btn-link__nopadding:hover, .btn-link__nopadding:focus, .btn-link__nopadding:focus-visible, .btn-link__nopadding.disabled, .btn-link__nopadding[disabled], fieldset[disabled] .btn-link__nopadding, .btn-link__nopadding.active, .btn-link__nopadding:active, .btn-link__minimal:hover, .btn-link__minimal:focus, .btn-link__minimal:focus-visible, .btn-link__minimal.disabled, .btn-link__minimal[disabled], fieldset[disabled] .btn-link__minimal, .btn-link__minimal.active, .btn-link__minimal:active {
-  background-color: transparent;
-  color: inherit;
-}
 
 .btn-icon {
   background-color: transparent;
@@ -8932,10 +9068,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 .btn-icon.disabled, .btn-icon[disabled], fieldset[disabled] .btn-icon {
   cursor: not-allowed;
+  opacity: 0.5;
 }
 .btn-icon.disabled:hover .svg--icon, .btn-icon.disabled:focus-visible .svg--icon, .btn-icon[disabled]:hover .svg--icon, .btn-icon[disabled]:focus-visible .svg--icon, fieldset[disabled] .btn-icon:hover .svg--icon, fieldset[disabled] .btn-icon:focus-visible .svg--icon {
   background-color: transparent;
-  opacity: 0.5;
 }
 .control-label + .btn-icon {
   margin-left: 4px;
@@ -8990,10 +9126,11 @@ input[type=button].btn-block {
 }
 
 .btn-download {
-  background: var(--color_white);
-  border: 1px dashed var(--color_light-blue);
+  background-color: var(--color_white);
+  background-image: none;
+  border: 1px dashed #4A8DC6;
   box-shadow: none;
-  color: var(--color_light-blue);
+  color: #4A8DC6;
   cursor: pointer;
   display: inline-block;
   font-size: 0.75rem;
@@ -9007,7 +9144,7 @@ input[type=button].btn-block {
 }
 .btn-download_inner {
   align-items: center;
-  background: var(--color_light-blue2);
+  background-color: #E4EEF7;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -9020,10 +9157,18 @@ input[type=button].btn-block {
   padding: 4px;
   max-height: none;
 }
-.btn-download:hover, .btn-download:focus {
+.btn-download:hover, .btn-download:focus-visible, .btn-download.active, .btn-download.active:focus, .btn-download:active:focus, .btn-download:active .btn-download:hover, .btn-download:focus {
   background-image: none;
   box-shadow: none;
   outline: 0;
+}
+.btn-download:hover, .btn-download:focus-visible {
+  background-image: none;
+  box-shadow: none;
+  outline: 0;
+}
+.btn-download:hover .btn-download_inner, .btn-download:focus-visible .btn-download_inner {
+  background-color: #B6D1E8;
 }
 .btn-download .btn-text {
   line-height: 0.75rem;
@@ -9055,22 +9200,22 @@ input[type=button].btn-block {
   opacity: 0;
   z-index: 1;
 }
-.btn-download__onHover:hover {
+.mobile-view .btn-download__onHover:active {
   opacity: 1;
 }
-.mobile-view .btn-download__onHover:active {
+.btn-download__onHover:hover, .btn-download__onHover:focus-visible {
   opacity: 1;
 }
 .btn-download__large .btn-text, .btn-download__square .btn-text, .btn-download__circle .btn-text {
   margin: 0;
 }
 .btn-download__large .svg--icon, .btn-download__square .svg--icon {
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 20;
+  width: 20;
 }
 .btn-download__large .svg--icon svg, .btn-download__square .svg--icon svg {
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 20;
+  width: 20;
 }
 .btn-download__large {
   font-size: 0.625rem;
@@ -9100,6 +9245,13 @@ input[type=button].btn-block {
   height: 8rem;
   width: 8rem;
   min-width: 8rem;
+}
+.btn-download.disabled, .btn-download[disabled], fieldset[disabled] .btn-download {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.btn-download.disabled:hover .btn-download_inner, .btn-download.disabled:focus-visible .btn-download_inner, .btn-download[disabled]:hover .btn-download_inner, .btn-download[disabled]:focus-visible .btn-download_inner, fieldset[disabled] .btn-download:hover .btn-download_inner, fieldset[disabled] .btn-download:focus-visible .btn-download_inner {
+  background-color: #E4EEF7;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
