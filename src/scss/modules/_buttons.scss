@@ -452,6 +452,7 @@ a.btn {
     display: inline-flex;
     justify-content: center;
     height: rem(brandSizes(btnIcon_height));
+    width: rem(brandSizes(btnIcon_height));
     // vertical-align: middle;
     #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
     #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
