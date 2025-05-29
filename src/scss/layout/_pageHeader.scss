@@ -22,13 +22,16 @@
     color: brandPalette(pageHeader_color);
     display: flex;
     justify-content: space-between;
-    font-size: rem(18);
-    font-weight: 400;
-    line-height: rem(21);
+    font-size: rem(24);
+    font-weight: 700;
+    line-height: rem(28);
     margin: 0;
     .mobile-view &{
       font-size: rem(14);
       line-height: rem(16);
+    }
+    .label{
+      align-self: center;
     }
   }
   &__left{

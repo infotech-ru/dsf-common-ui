@@ -439,7 +439,19 @@ brandHover {
 }
 
 brandHover {
+  _outline_green: 0;
+}
+
+brandHover {
+  _outline_orange: 0;
+}
+
+brandHover {
   _outline_dark-orange: 0;
+}
+
+brandHover {
+  _outline_grey: 0;
 }
 
 brandHover {
@@ -452,10 +464,6 @@ brandHover {
 
 brandHover {
   _outline_red: 0;
-}
-
-brandHover {
-  _outline_green: 0;
 }
 
 brandHover {

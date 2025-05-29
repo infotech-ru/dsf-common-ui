@@ -368,7 +368,7 @@ tbody tr {
     max-width: var(--tdWidth, auto);
     left: var(--td-sticky, 0);
     position: sticky;
-    z-index: 1000;
+    z-index: zIndex(tableStickyTbodyTd);
     width: var(--tdWidth, auto);
   &:first-child{
       --tdWidth: var(--tdWidth_1);

@@ -79,7 +79,7 @@
     &.checked label.radio,
     label.radio.checked,
     input[type=radio]:checked + label.radio{
-        font-weight: bold;
+        font-weight: normal;
         &:before {
             background-color: brandPalette(radioItem-active_bg);
             border-color: brandPalette(radioItem-active_border);
@@ -137,7 +137,7 @@
                 width: rem(brandSizes(radioItem_size));
             }
             &:after{
-                background-color: brandPalette(radioItem-active_border);
+                background-color: brandPalette(radioItemDotActive);
                 border-radius: 100%;
                 content: " ";
                 display: none;

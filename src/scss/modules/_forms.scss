@@ -137,6 +137,12 @@ output {
         transform: none;
       }
     }
+    &__nopadding{
+      .css-formFree & {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
 }
 
 .form-control {

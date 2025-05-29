@@ -237,15 +237,19 @@ posSizes:
 brandHover:
 - name: _outline_dark-green
   value: 0
+- name: _outline_green
+  value: 0
+- name: _outline_orange
+  value: 0
 - name: _outline_dark-orange
+  value: 0
+- name: _outline_grey
   value: 0
 - name: _outline_grey4
   value: 0
 - name: _outline_light-blue
   value: 0
 - name: _outline_red
-  value: 0
-- name: _outline_green
   value: 0
 - name: _light-grey2
   value: 0
