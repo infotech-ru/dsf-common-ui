@@ -93,36 +93,37 @@
             background-color: map-deep-get($brand-hover, $name, 'bgColor');
             border-color: map-deep-get($brand-hover, $name, 'borderColor');
             color: map-deep-get($brand-hover, $name, 'color');
-            #{--svg-icon-fill}: map-deep-get($brand-hover, $name, 'color');
-            #{--svg-icon-stroke}: map-deep-get($brand-hover, $name, 'color');
-            #{--svg-icon-fill_blue}: map-deep-get($brand-hover, $name, 'color');
-            #{--svg-icon-stroke_blue}: map-deep-get($brand-hover, $name, 'color');
-            #{--svg-valute-fill}: map-deep-get($brand-hover, $name, 'color');
+            // #{--svg-icon-fill}: map-deep-get($brand-hover, $name, 'color');
+            // #{--svg-icon-stroke}: map-deep-get($brand-hover, $name, 'color');
+            // #{--svg-icon-fill_blue}: map-deep-get($brand-hover, $name, 'color');
+            // #{--svg-icon-stroke_blue}: map-deep-get($brand-hover, $name, 'color');
+            // #{--svg-valute-fill}: map-deep-get($brand-hover, $name, 'color');
             &.isHover,
             &:hover,
             &.active {
                 background-color: map-deep-get($brand-hover, $name, 'bgColor-hover');
                 border-color: map-deep-get($brand-hover, $name, 'borderColor-hover');
                 color: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-icon-fill}: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-icon-stroke}: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-icon-fill_blue}: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-icon-stroke_blue}: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-valute-fill}: map-deep-get($brand-hover, $name, 'color-hover');
+                // #{--svg-icon-fill}: map-deep-get($brand-hover, $name, 'color-hover');
+                // #{--svg-icon-stroke}: map-deep-get($brand-hover, $name, 'color-hover');
+                // #{--svg-icon-fill_blue}: map-deep-get($brand-hover, $name, 'color-hover');
+                // #{--svg-icon-stroke_blue}: map-deep-get($brand-hover, $name, 'color-hover');
+                // #{--svg-valute-fill}: map-deep-get($brand-hover, $name, 'color-hover');
             }
         }
         &#{$name}__onAction {
             &.isHover,
-            &:hover,
-            &.active {
-                background-color: map-deep-get($brand-hover, $name, 'bgColor-hover');
-                border-color: map-deep-get($brand-hover, $name, 'borderColor-hover');
-                color: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-icon-fill}: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-icon-stroke}: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-icon-fill_blue}: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-icon-stroke_blue}: map-deep-get($brand-hover, $name, 'color-hover');
-                #{--svg-valute-fill}: map-deep-get($brand-hover, $name, 'color-hover');
+            &.active,
+            &.isHover:hover,
+            &.active:hover {
+                background-color: map-deep-get($brand-hover, $name, 'bgColor');
+                border-color: map-deep-get($brand-hover, $name, 'borderColor');
+                color: map-deep-get($brand-hover, $name, 'color');
+                // #{--svg-icon-fill}: map-deep-get($brand-hover, $name, 'color');
+                // #{--svg-icon-stroke}: map-deep-get($brand-hover, $name, 'color');
+                // #{--svg-icon-fill_blue}: map-deep-get($brand-hover, $name, 'color');
+                // #{--svg-icon-stroke_blue}: map-deep-get($brand-hover, $name, 'color');
+                // #{--svg-valute-fill}: map-deep-get($brand-hover, $name, 'color');
             }
         }
     }

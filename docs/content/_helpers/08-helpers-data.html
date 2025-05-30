@@ -206,7 +206,7 @@ order: 8
 
 <p><code class="language-plaintext highlighter-rouge">square</code> - базовый класс оформления блоков</p>
 <p>При наличии в блоке класса `isHover`, `active` или при наведение по псевдоклассу будет изменяться фон также как и при hover</p>
-<p><code class="language-plaintext highlighter-rouge">square_{цвет}__OnAction</code> - цвет фона при наведении, при .actvie или .isHover</p>
+<p><code class="language-plaintext highlighter-rouge">square_{цвет}__onAction</code> - цвет фона при наведении, при .actvie или .isHover</p>
 <p><code class="language-plaintext highlighter-rouge">square__borderThick</code> - бордер толщиной 2px</p>
 <p><code class="language-plaintext highlighter-rouge">square-title</code> - блок с заголовком</p>
 <p><code class="language-plaintext highlighter-rouge">square-text</code> - блок с данными</p>
@@ -221,7 +221,27 @@ order: 8
                 <span class="svg--icon svg--icon__24vb">
                     <svg class="bicolors-conversion__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-conversion__24vb"></use></svg>
                 </span>
-                <span>square_title</span>
+                <span>square_light-grey2 </span>
+            </div>
+            <div class="square-text">
+                <span>1000</span>
+                <span class="svg--icon svg--icon__24vb svg-success">
+                    <svg class="bicolors-chart_graph__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-chart_graph__24vb"></use></svg>
+                </span>
+                <span class="square-text_ValueSmall text-success">+100</span>
+            </div>
+            <div class="square-action">
+                <button class="btn-icon"><span class="svg--icon svg--icon__24vb"><svg class="bicolors-edit" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb"></use></svg></span></button>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 mb-10">
+        <div class="square square_light-grey2 square_light-red__onAction">
+            <div class="square-title">
+                <span class="svg--icon svg--icon__24vb">
+                    <svg class="bicolors-conversion__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-conversion__24vb"></use></svg>
+                </span>
+                <span>square_light-red__onAction</span>
             </div>
             <div class="square-text">
                 <span>1000</span>
