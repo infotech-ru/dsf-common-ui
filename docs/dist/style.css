@@ -3214,9 +3214,9 @@ h6, .h6 {
   color: #333333;
   display: flex;
   justify-content: space-between;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.75rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.3125rem;
   margin: 0;
 }
 .mobile-view .pageHeader__title {
@@ -9053,7 +9053,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   border-top-width: 1px;
   border-bottom-width: 1px;
   display: inline-flex;
-  height: auto;
+  height: 1.75rem;
   line-height: 1.625rem;
 }
 .btn-icon__danger:focus-visible .svg--icon, .btn-icon__danger:hover .svg--icon {

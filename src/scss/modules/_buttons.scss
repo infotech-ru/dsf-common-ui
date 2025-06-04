@@ -559,7 +559,7 @@ a.btn {
     // border-top-width: rem(math.div(calc(lineHeight(btn) - brandSizes(btnIconSvg_height)), 2));
     // border-bottom-width: rem(math.div(calc(lineHeight(btn) - brandSizes(btnIconSvg_height)), 2));
     display: inline-flex;
-    height: auto;
+    height: rem(calc(lineHeight(btn) + 2));
     line-height: rem(lineHeight(btn));
   }
   &__danger{
