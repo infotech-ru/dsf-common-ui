@@ -9154,7 +9154,7 @@ input[type=button].btn-block {
   padding: 4px 10px;
   width: 100%;
 }
-.btn-download__large .btn-download_inner, .btn-download__square .btn-download_inner, .btn-download__circle .btn-download_inner {
+.btn-download__large .btn-download_inner, .btn-download__square .btn-download_inner, .btn-download__bigSquare .btn-download_inner, .btn-download__circle .btn-download_inner {
   display: flex;
   flex-direction: column;
   padding: 4px;
@@ -9209,16 +9209,17 @@ input[type=button].btn-block {
 .btn-download__onHover:hover, .btn-download__onHover:focus-visible {
   opacity: 1;
 }
-.btn-download__large .btn-text, .btn-download__square .btn-text, .btn-download__circle .btn-text {
+.btn-download__large .btn-text, .btn-download__square .btn-text, .btn-download__bigSquare .btn-text, .btn-download__circle .btn-text {
   margin: 0;
+  text-align: center;
 }
-.btn-download__large .svg--icon, .btn-download__square .svg--icon {
-  height: 20;
-  width: 20;
+.btn-download__large .svg--icon, .btn-download__bigSquare .svg--icon, .btn-download__square .svg--icon {
+  height: 1.25rem;
+  width: 1.25rem;
 }
-.btn-download__large .svg--icon svg, .btn-download__square .svg--icon svg {
-  height: 20;
-  width: 20;
+.btn-download__large .svg--icon svg, .btn-download__bigSquare .svg--icon svg, .btn-download__square .svg--icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
 }
 .btn-download__large {
   font-size: 0.625rem;
@@ -9244,6 +9245,12 @@ input[type=button].btn-block {
   width: 1.3125rem;
 }
 .btn-download__square {
+  font-size: 0.625rem;
+  height: 4rem;
+  width: 4rem;
+  min-width: 4rem;
+}
+.btn-download__bigSquare {
   font-size: 0.625rem;
   height: 8rem;
   width: 8rem;

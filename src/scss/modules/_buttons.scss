@@ -682,6 +682,7 @@ input[type="button"] {
     width: 100%;
     .btn-download__large &,
     .btn-download__square &,
+    .btn-download__bigSquare &,
     .btn-download__circle &{
       display: flex;
       flex-direction: column;
@@ -751,19 +752,22 @@ input[type="button"] {
   }
   &__large,
   &__square,
+  &__bigSquare,
   &__circle {
     .btn-text{
       margin: 0;
+      text-align: center;
     }
   }
   &__large,
+  &__bigSquare,
   &__square{
     .svg--icon {
-      height: brandSizes(btnDownloadSvg_height);
-      width: brandSizes(btnDownloadSvg_height);
+      height: rem(brandSizes(btnDownloadSvg_height));
+      width: rem(brandSizes(btnDownloadSvg_height));
       svg{
-        height: brandSizes(btnDownloadSvg_height);
-        width: brandSizes(btnDownloadSvg_height);
+        height: rem(brandSizes(btnDownloadSvg_height));
+        width: rem(brandSizes(btnDownloadSvg_height));
       }
     }
   }
@@ -791,6 +795,12 @@ input[type="button"] {
     }
   }
   &__square{
+    font-size: rem(10);
+    height: rem(64);
+    width: rem(64);
+    min-width: rem(64);
+  }
+  &__bigSquare{
     font-size: rem(10);
     height: rem(128);
     width: rem(128);
