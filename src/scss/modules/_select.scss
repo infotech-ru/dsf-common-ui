@@ -13,8 +13,8 @@
 @use './../utilities/variables/var-placeholder' as *;
 
 
-$color-red-error: rgb(185, 74, 72) !default;
-$color-green-success: #28a745;
+// $color-red-error: rgb(185, 74, 72) !default;
+// $color-green-success: #28a745;
 $color-grey-arrow: rgba(204, 204, 204, 0.2) !default;
 $width-default: 220px !default; // 3 960px-grid columns
 $zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
@@ -116,12 +116,12 @@ select.selectpicker {
   .error & .dropdown-toggle,
   &.is-invalid .dropdown-toggle,
   .was-validated & select:invalid + .dropdown-toggle {
-    border-color: $color-red-error;
+    border-color: brandPalette(hasDanger_borderColor);
   }
 
   &.is-valid .dropdown-toggle,
   .was-validated & select:valid + .dropdown-toggle {
-    border-color: $color-green-success;
+    border-color: brandPalette(hasSuccess_borderColor);
   }
 
   &.fit-width {

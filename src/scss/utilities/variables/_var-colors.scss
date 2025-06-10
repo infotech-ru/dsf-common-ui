@@ -38,8 +38,8 @@ $brand-colors: (
   _yellow2:                                                             #FFDA7D,
   _light-yellow:                                                        #FFFBA0,
   _light-yellow2:                                                       #FFF6DF,
-  _red:                                                                 #D9534F,
   _rose:                                                                #FF9996,
+  _red:                                                                 #D9534F,
   _light-red:                                                           #FCEEEE,
   _dark-red:                                                            #762624,
   _dark-cyan:                                                           #008B8B,
@@ -599,6 +599,7 @@ $brand-palette: (
   formControl-borderColor:                map.get($brand-colors, _grey),
   formControl-bgc:                        map.get($brand-colors, _white),
   formControlDisabled-bgc:                map.get($brand-colors, _light-grey2),
+  formControlDisabled-color:              map.get($brand-colors, _grey),
   formControl-color:                      map.get($brand-colors, _dark-grey),
   formControl-placeholder:                map.get($brand-colors, _dark-grey),
 
