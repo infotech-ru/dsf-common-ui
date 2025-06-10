@@ -210,7 +210,9 @@ select.selectpicker {
       background-image: none;
     }
   }
-
+  .btn-link{
+    border-color: transparent;
+  }
 
   // Set the width of the live search (and any other form control within an inline form)
   // see https://github.com/silviomoreto/bootstrap-select/issues/685

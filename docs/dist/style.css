@@ -10394,6 +10394,9 @@ select.selectpicker {
   background-color: transparent;
   background-image: none;
 }
+.bootstrap-select .btn-link {
+  border-color: transparent;
+}
 .form-inline .bootstrap-select .form-control {
   width: 100%;
 }
