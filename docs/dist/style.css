@@ -10457,6 +10457,7 @@ select.selectpicker {
 .bootstrap-select .bs-caret {
   position: relative;
   height: 16px;
+  min-width: 16px;
   width: 16px;
 }
 .open.bootstrap-select .caret,
@@ -10544,7 +10545,7 @@ select.selectpicker {
 .bootstrap-select.fit-width .dropdown-toggle .filter-option {
   position: static;
   display: inline;
-  padding: 0 15px 0 0;
+  padding: 0 5px 0 0;
 }
 .bootstrap-select.fit-width .dropdown-toggle .filter-option-inner,
 .bootstrap-select.fit-width .dropdown-toggle .filter-option-inner-inner {
