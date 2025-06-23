@@ -140,6 +140,24 @@
   }
 }
 
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image:  var(--background_container);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: blur(5px);
+    }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -312,6 +330,11 @@
 .overflowX-auto                             { overflow-x: auto;}
 .overflowY-auto                             { overflow-y: auto;}
 
+.object-fit-cover                           {object-fit: cover;}
+.object-fit-contain                         {object-fit: contain;}
+.object-fit-fill                            {object-fit: fill;}
+.object-fit-none                            {object-fit: none;}
+
 .text-left                                  { text-align: left; }
 .mobile-view .text-left__mobile             { text-align: left; }
 .text-right                                 { text-align: right; }
@@ -320,6 +343,12 @@
 .mobile-view .text-center__mobile           { text-align: center; }
 .text-justify                               { text-align: justify; }
 .mobile-view .text-justify__mobile          { text-align: justify; }
+
+.text-truncate{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
 .va-middle                                  { vertical-align: middle;}
 .va-top                                     { vertical-align: top;}
@@ -741,9 +770,10 @@
   }
 }
 
-.borderadius-100p{
-  border-radius: 100%;
-}
+.borderadius-4      { border-radius: 4px;}
+.borderadius-6      { border-radius: 6px;}
+.borderadius-10     { border-radius: 10px;}
+.borderadius-100p   { border-radius: 100%;}
 
 @each $name, $value in $brand-namecolors {
   .svg-#{$name},
@@ -823,4 +853,15 @@
     border-left-color: #{$value};
     #{--border_left_color}: #{$value};
   }
+}
+
+
+.zindex-0{
+    z-index: 0;
+}
+.zindex-1{
+    z-index: 1;
+}
+.zindex--1{
+    z-index: -1;
 }
