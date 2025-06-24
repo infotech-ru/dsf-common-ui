@@ -770,10 +770,11 @@
   }
 }
 
-.borderadius-4      { border-radius: 4px;}
-.borderadius-6      { border-radius: 6px;}
-.borderadius-10     { border-radius: 10px;}
-.borderadius-100p   { border-radius: 100%;}
+.borderRadius-0      { border-radius: 0;}
+.borderRadius-4      { border-radius: 4px;}
+.borderRadius-6      { border-radius: 6px;}
+.borderRadius-10     { border-radius: 10px;}
+.borderRadius-100p   { border-radius: 100%;}
 
 @each $name, $value in $brand-namecolors {
   .svg-#{$name},

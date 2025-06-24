@@ -16864,19 +16864,23 @@ tbody.collapse.in {
   --width_border__modify: 3px;
 }
 
-.borderadius-4 {
+.borderRadius-0 {
+  border-radius: 0;
+}
+
+.borderRadius-4 {
   border-radius: 4px;
 }
 
-.borderadius-6 {
+.borderRadius-6 {
   border-radius: 6px;
 }
 
-.borderadius-10 {
+.borderRadius-10 {
   border-radius: 10px;
 }
 
-.borderadius-100p {
+.borderRadius-100p {
   border-radius: 100%;
 }
 
