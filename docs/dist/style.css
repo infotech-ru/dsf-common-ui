@@ -14553,6 +14553,7 @@ tbody.collapse.in {
   margin-left: auto;
   max-width: 100%;
   height: auto;
+  width: 64px;
 }
 .thumbnailCaption {
   color: var(--color_black);
@@ -14582,11 +14583,15 @@ tbody.collapse.in {
   flex-direction: column-reverse;
   justify-content: center;
   height: 100%;
+  overflow: hidden;
   position: relative;
 }
 .thumbnail__bigSize {
   height: 128px;
   min-width: 128px;
+  width: 128px;
+}
+.thumbnail__bigSize img {
   width: 128px;
 }
 .thumbnail:hover, .thumbnail:focus, .thumbnail.active {
@@ -14602,8 +14607,10 @@ tbody.collapse.in {
 }
 .thumbnailActionsBtn {
   background-color: var(--color_white);
+  border: none;
   display: block;
   height: 20px;
+  outline: none;
   width: 20px;
 }
 .thumbnailActionsBtn__shadow {
