@@ -14612,9 +14612,11 @@ tbody.collapse.in {
 .thumbnailActionsBtn {
   background-color: var(--color_white);
   border: none;
+  cursor: pointer;
   display: block;
   height: 20px;
   outline: none;
+  padding: 0;
   width: 20px;
 }
 .thumbnailActionsBtn__shadow {
