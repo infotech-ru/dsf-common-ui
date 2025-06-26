@@ -80,7 +80,7 @@
     margin-left: auto;
     max-width: 100%;
     height: auto;
-    width: 64px;
+    // width: 64px;
   }
   &Caption {
     color: var(--color_black);
@@ -98,11 +98,19 @@
     & + .thumbnailImgWrapper{
       max-height: calc(100% - 18px);
       height: calc(100% - 18px);
-      overflow: hidden;
     }
   }
   &ImgWrapper{
     display: block;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    img{
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      width: 100%;
+    }
   }
   &Inner{
     align-items: center;
@@ -117,9 +125,6 @@
     height: 128px;
     min-width: 128px;
     width: 128px;
-    img{
-      width: 128px;
-    }
   }
   &:hover,
   &:focus,

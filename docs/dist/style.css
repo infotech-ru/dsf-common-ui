@@ -14553,7 +14553,6 @@ tbody.collapse.in {
   margin-left: auto;
   max-width: 100%;
   height: auto;
-  width: 64px;
 }
 .thumbnailCaption {
   color: var(--color_black);
@@ -14572,10 +14571,18 @@ tbody.collapse.in {
 .thumbnailCaption + .thumbnailImgWrapper {
   max-height: calc(100% - 18px);
   height: calc(100% - 18px);
-  overflow: hidden;
 }
 .thumbnailImgWrapper {
   display: block;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.thumbnailImgWrapper img {
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  width: 100%;
 }
 .thumbnailInner {
   align-items: center;
@@ -14589,9 +14596,6 @@ tbody.collapse.in {
 .thumbnail__bigSize {
   height: 128px;
   min-width: 128px;
-  width: 128px;
-}
-.thumbnail__bigSize img {
   width: 128px;
 }
 .thumbnail:hover, .thumbnail:focus, .thumbnail.active {
