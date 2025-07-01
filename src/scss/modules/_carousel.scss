@@ -368,15 +368,24 @@
       width: 50%;
       z-index: 1;
     }
+    &__bottom,
     &__top{
       align-self: flex-start;
       display: flex;
-      top: 0;
+      justify-content: space-between;
+      position: absolute;
       left: 0;
       width: 100%;
       z-index: 1;
     }
-    &__bottomleft,
+    &__bottomLeft,
+    &__bottomRight,
+    &__topRight,
+    &__topLeft{
+      position: relative;
+      z-index: 1;
+    }
+    &__bottomLeft,
     &__topLeft{
       align-self: flex-start;
       left: 5px;
@@ -388,25 +397,18 @@
     }
     &__topLeft,
     &__topRight{
-      position: relative;
       top: 5px;
-      z-index: 1;
-    }
-    &__bottom{
-      align-self:flex-start;
-      display: flex;
-      left: 0;
-      width: 100%;
-      z-index: 1;
     }
     &__bottomleft,
     &__bottomRight{
-      align-self: end;
       bottom: 5px;
       margin-top: auto;
-      position: relative;
-      right: 5px;
-      z-index: 1;
+    }
+    &__top{
+      top: 0;
+    }
+    &__bottom{
+      bottom: 0;
     }
   }
 }

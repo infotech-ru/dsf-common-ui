@@ -13449,15 +13449,20 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 50%;
   z-index: 1;
 }
-.carousel-action__top {
+.carousel-action__bottom, .carousel-action__top {
   align-self: flex-start;
   display: flex;
-  top: 0;
+  justify-content: space-between;
+  position: absolute;
   left: 0;
   width: 100%;
   z-index: 1;
 }
-.carousel-action__bottomleft, .carousel-action__topLeft {
+.carousel-action__bottomLeft, .carousel-action__bottomRight, .carousel-action__topRight, .carousel-action__topLeft {
+  position: relative;
+  z-index: 1;
+}
+.carousel-action__bottomLeft, .carousel-action__topLeft {
   align-self: flex-start;
   left: 5px;
 }
@@ -13466,24 +13471,17 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   right: 5px;
 }
 .carousel-action__topLeft, .carousel-action__topRight {
-  position: relative;
   top: 5px;
-  z-index: 1;
-}
-.carousel-action__bottom {
-  align-self: flex-start;
-  display: flex;
-  left: 0;
-  width: 100%;
-  z-index: 1;
 }
 .carousel-action__bottomleft, .carousel-action__bottomRight {
-  align-self: end;
   bottom: 5px;
   margin-top: auto;
-  position: relative;
-  right: 5px;
-  z-index: 1;
+}
+.carousel-action__top {
+  top: 0;
+}
+.carousel-action__bottom {
+  bottom: 0;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -14611,7 +14609,6 @@ tbody.collapse.in {
   flex-direction: column-reverse;
   justify-content: center;
   height: 100%;
-  overflow: hidden;
   position: relative;
 }
 .thumbnail__bigSize {
