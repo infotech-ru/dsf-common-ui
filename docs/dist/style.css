@@ -13449,19 +13449,40 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   width: 50%;
   z-index: 1;
 }
-.carousel-action__topRight {
+.carousel-action__top {
+  align-self: flex-start;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.carousel-action__bottomleft, .carousel-action__topLeft {
+  align-self: flex-start;
+  left: 5px;
+}
+.carousel-action__bottomRight, .carousel-action__topRight {
   align-self: end;
-  position: relative;
   right: 5px;
+}
+.carousel-action__topLeft, .carousel-action__topRight {
+  position: relative;
   top: 5px;
   z-index: 1;
 }
-.carousel-action__bottomRight {
+.carousel-action__bottom {
+  align-self: flex-start;
+  display: flex;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.carousel-action__bottomleft, .carousel-action__bottomRight {
   align-self: end;
   bottom: 5px;
   margin-top: auto;
-  right: 5px;
   position: relative;
+  right: 5px;
   z-index: 1;
 }
 

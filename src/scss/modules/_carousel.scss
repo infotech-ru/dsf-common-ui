@@ -368,19 +368,44 @@
       width: 50%;
       z-index: 1;
     }
+    &__top{
+      align-self: flex-start;
+      display: flex;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    &__bottomleft,
+    &__topLeft{
+      align-self: flex-start;
+      left: 5px;
+    }
+    &__bottomRight,
     &__topRight{
       align-self: end;
-      position: relative;
       right: 5px;
+    }
+    &__topLeft,
+    &__topRight{
+      position: relative;
       top: 5px;
       z-index: 1;
     }
+    &__bottom{
+      align-self:flex-start;
+      display: flex;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    &__bottomleft,
     &__bottomRight{
       align-self: end;
       bottom: 5px;
       margin-top: auto;
-      right: 5px;
       position: relative;
+      right: 5px;
       z-index: 1;
     }
   }
