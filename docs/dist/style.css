@@ -7953,6 +7953,94 @@ g.highcharts-series,
   display: inline-flex;
   margin: 0;
 }
+.checkbox-item__toggleCheck {
+  background-color: transparent;
+  border: none;
+  height: 1.75rem;
+  padding: 0;
+  width: auto;
+}
+.checkbox-item__toggleCheck label.checkbox {
+  align-items: center;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  display: inline-flex;
+  font-size: 0;
+  height: 1.75rem;
+  outline: none;
+  padding: 0;
+  position: relative;
+  text-indent: 0;
+}
+.checkbox-item__toggleCheck label.checkbox:hover:after, .checkbox-item__toggleCheck label.checkbox:hover:before, .checkbox-item__toggleCheck label.checkbox:focus:after, .checkbox-item__toggleCheck label.checkbox:focus:before {
+  background-image: none;
+}
+.checkbox-item__toggleCheck label.checkbox:after {
+  background-color: #f9f9f9;
+  background-image: none;
+  border-radius: 1px;
+  border: none;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+  content: "";
+  display: block;
+  height: 14px;
+  left: 2px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  transition: left 0.3s ease;
+  top: 7px;
+  width: 16px;
+}
+.checkbox-item__toggleCheck label.checkbox:before {
+  background-color: #dddddd;
+  background-image: none;
+  border-radius: 1px;
+  bottom: auto;
+  border: none;
+  content: "";
+  display: block;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  right: auto;
+  top: 4px;
+  position: absolute;
+  height: 20px;
+  width: 40px;
+}
+.checkbox-item__toggleCheck label.checkbox span {
+  font-size: 12px;
+  padding-left: 45px;
+  text-indent: 0;
+}
+.checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox {
+  background-color: transparent;
+  background-image: none;
+}
+.checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:hover, .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:focus {
+  background-color: transparent;
+  background-image: none;
+}
+.checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:hover:after, .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:focus:after {
+  background-color: #f9f9f9;
+  background-image: none;
+}
+.checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:hover:before, .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:focus:before {
+  background-color: #4A8DC6;
+  background-image: none;
+}
+.checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:after {
+  background-color: #f9f9f9;
+  background-image: none;
+  left: 20px;
+}
+.checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:before {
+  background-color: #4A8DC6;
+  background-image: none;
+}
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */

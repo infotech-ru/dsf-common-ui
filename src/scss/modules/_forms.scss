@@ -150,7 +150,7 @@ output {
   // background-color: brandPalette(formControl-bgc);
   background-color:var(--bg_color, brandPalette(formControl-bgc));
   border-radius: #{brandSizes(borderRadiusFormElem)}px;
-  border: 1px solid brandPalette(formControl-borderColor);
+  border: #{brandSizes(formControl_borderSize)}px solid brandPalette(formControl-borderColor);
   // @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
   box-shadow: none;
   color: brandPalette(formControl-color);

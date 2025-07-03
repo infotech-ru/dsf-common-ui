@@ -42,6 +42,7 @@ $brand-sizes: (
   footer_height:                   52,
   footer_marginTop:                10,
   footer__mobile_height:           124,
+  formControl_borderSize:          1,
   formControl_paddingX:            10,
   formControlStatic_paddingY:      7,
   formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
@@ -85,6 +86,10 @@ $brand-sizes: (
   toast_paddingX:                  8,
   toast_paddingY:                  4,
   toast_maxWidth:                  350,
+  toggleCheckToggle_height:        14,
+  toggleCheckToggle_width:         16,
+  toggleCheck_height:              20,
+  toggleCheck_width:               40,
   tooltipArrow_height:             6,
   tooltipArrow_width:              6,
   tooltip_paddingX:                8,

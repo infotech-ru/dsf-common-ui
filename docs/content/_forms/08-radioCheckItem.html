@@ -6,9 +6,9 @@ anchor: btn-group__radioCheckItem
 order: 8
 ---
 
-<p>Для стилизации под маленький переключатель (false-true) используется следующая структура:</p>
-
+<p>Стилизации под маленький переключатель (false-true):</p>
 <div class="bs-docs-example mb-10">
+    <p>Использование radio</p>
     <div class="form-group d-flex flex-row-reverse justify-flex-end align-center">
         <label class="form-control-static ml-5" for="btn-group__radioCheck">Заголовок переключателя</label>
         <div id="btn-group__radioCheck" class="form-control btn-group btn-group__radioCheck" value="0" data-toggle="buttons">
@@ -72,4 +72,33 @@ php:
         ]
     ) ?>
 
+{% endhighlight %}
+
+<p>Использование checkbox</p>
+<div class="bs-docs-example mb-10">
+    <div class="form-group">
+        <div class="checkbox-item checkbox-item__toggleCheck">
+            <input type="checkbox" id="checkbox-item__toggleCheck_id" class="form-control" name="" value="1">
+            <label class="checkbox" for="checkbox-item__toggleCheck_id">
+                <span>Заголовок переключатели</span>
+            </label>
+        </div>
+    </div>
+</div>
+
+{% highlight html %}
+    yii:
+
+    <?= $form->field($model, '')->checkboxToggle(); ?>
+    
+    html: 
+
+    <div class="form-group">
+        <div class="checkbox-item checkbox-item__toggleCheck">
+            <input type="checkbox" id="checkbox-item__toggleCheck_id" class="form-control" name="" value="1">
+            <label class="checkbox" for="checkbox-item__toggleCheck_id">
+                <span>Заголовок переключатели</span>
+            </label>
+        </div>
+    </div>
 {% endhighlight %}
