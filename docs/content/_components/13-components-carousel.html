@@ -28,8 +28,8 @@ order: 13
 <div id="carouselExampleIndicators" class="carousel slide carousel__aspectRatio16-9" data-ride="carousel">
     <div class="p-relative mb-10">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="" class="img-responsive" alt="">
+        <div class="carousel-item h-100p overflow-hidden p-relative background-container active" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
+          <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
           <div class="carousel-action">
               <div class="carousel-action__topRight">
                   <a class="btn-danger__outline js-delete-photo" href="">
@@ -53,23 +53,19 @@ order: 13
               </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="" class="img-responsive" alt="">
+        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
+          <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
         </div>
-        <div class="carousel-item">
-          <img src="" class="img-responsive" alt="">
+        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
+          <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="svg--icon" aria-hidden="true"> 
-              <?= Icons::icon('bicolors-arrow_left__24vb') ?>
-          </span>
+          <?= Icons::wrapper('bicolors-arrow_left__24vb') ?>
           <span class="sr-only"><?= Yii::t('app', 'Предыдущее') ?></span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="svg--icon" aria-hidden="true"> 
-              <?= Icons::icon('bicolors-arrow_right__24vb') ?>
-          </span>
+          <?= Icons::wrapper('bicolors-arrow_right__24vb') ?>
           <span class="sr-only"><?= Yii::t('app', 'Следующее') ?></span>
       </a>
     </div>
@@ -108,8 +104,8 @@ order: 13
   <div id="carouselExampleIndicators" class="carousel carousel__aspectRatio16-9 slide" data-ride="carousel">
     <div class="p-relative mb-10">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://placehold.co/2100x1600/0094FF/FFFFFF/jpg?text=Infotech+UI\nImage+1" class="img-responsive" alt="">
+        <div class="carousel-item h-100p overflow-hidden p-relative background-container active" style="--background_container: url()">
+          <img src="https://placehold.co/2100x1600/0094FF/FFFFFF/jpg?text=Infotech+UI\nImage+1" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
           <div class="carousel-action">
             <div class="carousel-action__topRight">
                 <a class="btn-danger__outline js-delete-photo" href="">
@@ -133,8 +129,8 @@ order: 13
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="https://placehold.co/2100x1600/69C26A/FFFFFF/jpg?text=Infotech+UI\nImage+2" class="img-responsive" alt="">
+        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url()">
+          <img src="https://placehold.co/2100x1600/69C26A/FFFFFF/jpg?text=Infotech+UI\nImage+2" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
           <div class="carousel-action">
             <div class="carousel-action__topRight">
                 <a class="btn-danger__outline js-delete-photo" href="">
@@ -158,8 +154,8 @@ order: 13
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="https://placehold.co/2100x1600/FFDA7D/FFFFFF/jpg?text=Infotech+UI\nImage+3" class="img-responsive" alt="">
+        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url()">
+          <img src="https://placehold.co/2100x1600/FFDA7D/FFFFFF/jpg?text=Infotech+UI\nImage+3" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
           <div class="carousel-action">
             <div class="carousel-action__topRight">
                 <a class="btn-danger__outline js-delete-photo" href="">
@@ -227,21 +223,21 @@ order: 13
       <div data-target="#carouselExampleIndicators" data-slide-to="0" class="carousel-indicators-item active">
         <div class="carousel-indicators-item_inner">
           <div class="carousel-indicators-item_imgOuter">
-            <img src="https://placehold.co/64/0094FF/FFFFFF/jpg?text=Infotech+UI\nImage+1" class="img-responsive" alt="">
+            <img src="https://placehold.co/64/0094FF/FFFFFF/jpg?text=Infotech+UI\nImage+1" class="" alt="">
           </div>
         </div>
       </div>
       <div data-target="#carouselExampleIndicators" data-slide-to="1" class="carousel-indicators-item">
         <div class="carousel-indicators-item_inner">
           <div class="carousel-indicators-item_imgOuter"> 
-            <img src="https://placehold.co/64/69C26A/FFFFFF/jpg?text=Infotech+UI\nImage+2" class="img-responsive" alt="">
+            <img src="https://placehold.co/64/69C26A/FFFFFF/jpg?text=Infotech+UI\nImage+2" class="" alt="">
           </div>
         </div>
       </div>
       <div data-target="#carouselExampleIndicators" data-slide-to="2" class="carousel-indicators-item">
         <div class="carousel-indicators-item_inner">
           <div class="carousel-indicators-item_imgOuter"> 
-            <img src="https://placehold.co/64/FFDA7D/FFFFFF/jpg?text=Infotech+UI\nImage+3" class="img-responsive" alt="">
+            <img src="https://placehold.co/64/FFDA7D/FFFFFF/jpg?text=Infotech+UI\nImage+3" class="" alt="">
           </div>
         </div>
       </div>
