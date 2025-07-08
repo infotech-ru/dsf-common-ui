@@ -9,6 +9,7 @@ import {
 import {init} from "./init.js";
 import { FormsFree } from "./forms-free.js";
 import { AutoresizeTextarea } from "./autoresizeTextarea.js";
+import { CustomFileUpload } from "./CustomFileUpload";
   
 export function OnLoad() {
   itemActionMenu();
@@ -17,6 +18,7 @@ export function OnLoad() {
   init();
   FormsFree();
   AutoresizeTextarea();
+  CustomFileUpload();
 }
   
 export function iconsInit() { 
@@ -24,4 +26,7 @@ export function iconsInit() {
 }
 export function tablesInit() { 
   initTreeTable();
+}
+export function CustomFileUploadInit() { 
+  CustomFileUpload();
 }

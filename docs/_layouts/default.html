@@ -86,6 +86,13 @@
   });
 </script>
 {% endif %}
+{% if page.url == "/forms.html" %}
+<script type="text/javascript">
+  jQuery(function ($) {
+    DSFUI.CustomFileUploadInit();
+  });
+</script>
+{% endif %}
 <div aria-live="polite" aria-atomic="true" style="position: fixed; bottom: 0; right:0; min-height: 200px;">
   <div style="position: absolute; top: 0; right: 0;">
     <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">

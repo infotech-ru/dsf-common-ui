@@ -1,0 +1,38 @@
+---
+Title: Кнопка-иконка
+menutitle: Кнопка-иконка
+category: buttons
+anchor: btn-icons
+rank: 5
+---
+
+<p>Размер кнопки равен 20px.</p>
+<p>Использование: <code class="language-plaintext highlighter-rouge">btn-icon</code></p>
+<p>Для встраивания в форму используется модификациия <code class="language-plaintext highlighter-rouge">btn-icon__form</code></p>
+<p>Для кнопок-иконок с семантикой "удалить" используется модификация <code class="language-plaintext highlighter-rouge">btn-icon__danger</code></p>
+
+В кнопке используются <a href="https://infotech-ru.github.io/dsf-common-ui/icons">иконки</a> с родительским контейнером оберткой - тег SPAN с классом "svg--icon" (<span class="svg--icon">):
+
+{% highlight html %}
+  <button class="btn-icon"><?= Icons::wrapper('bicolors-plus') ?></button>
+  <button class="btn-icon"><?= Icons::wrapper('bicolors-arrows_reload') ?></button>
+  <button class="btn-icon" disabled="disable"><?= Icons::wrapper('bicolors-arrow_drag') ?></button>
+  <button class="btn-icon"><?= Icons::wrapper('bicolors-arrow_drag__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?></button>
+  <button class="btn-icon btn-icon__danger"><?= Icons::wrapper('bicolors-delete') ?></button>
+  <button class="btn-icon btn-icon__form"><?= Icons::wrapper('bicolors-plus') ?></button>
+{% endhighlight %}
+
+<div class="bs-docs-example">
+  <div class="d-flex gap-10">
+    <div><button class="btn-icon"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span></button></div>
+    <div><button class="btn-icon"><span class="svg--icon"><svg class="bicolors-arrows_reload" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrows_reload"></use></svg></span></button></div>
+    <div><button class="btn-icon" disabled="disable"><span class="svg--icon"><svg class="bicolors-arrow_drag" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_drag"></use></svg></span></button></div>
+    <div><button class="btn-icon"><span class="svg--icon svg--icon__24vb"><svg class="bicolors-arrow_drag" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_drag__24vb"></use></svg></span></button></div>
+    <div><button class="btn-icon"><span class="svg--icon svg-danger"><svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg></span></button></div>
+    <div><button class="btn-default btn-small">Кнопка btn-small для сравнения</button></div>
+  </div>
+  <div class="d-flex gap-10">
+    <div><button class="btn-icon btn-icon__form"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span></button></div>
+    <div><button class="btn-default">Кнопка btn-default для сравнения</button></div>
+  </div>
+</div>

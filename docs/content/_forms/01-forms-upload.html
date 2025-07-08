@@ -6,9 +6,9 @@ anchor: upload
 order: 1
 ---
 
-### Кастомизированное поле загрузки.
-Требуется подключение скрипта `CustomFileUpload` для вывода имени выбранного файла в кнопку.
-Варианты оформления кнопок загрузки 
+<h3>Кастомизированное поле загрузки</h3>
+<p>Требуется подключение скрипта CustomFileUpload для вывода имени выбранного файла в кнопку.</p>
+<p>Варианты оформления <a href="https://infotech-ru.github.io/dsf-common-ui/icons.html#btn-download">кнопок загрузки</a></p>
 
 {% highlight html %}
 use app\helpers\Icons;
@@ -38,14 +38,14 @@ $this->registerJs('DSF.CustomFileUpload();');
     <label class="btn-download btn-download__large" for="getId">
       <span class="btn-download_inner">
         <span class="svg--icon svg--icon__24vb svg--icon__h21">
-          <svg class="bicolors-doc__24vb" width="24" height="24"><use xlink:href="//dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc__24vb"></use></svg>
+          <svg class="bicolors-doc__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc__24vb"></use></svg>
         </span>
         <span class="btn-text"><?= Yii::t('app', 'Добавить файл') ?></span>
       </span>
     </label>
     <div class="d-flex align-center gap-5 pt-5 pb-5 d-none js-fileUploadLabel">
       <span class="svg--icon svg--icon__24vb svg--icon__20 ">
-        <svg class="bicolors-doc__24vb" width="24" height="24"><use xlink:href="//dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc__24vb"></use></svg>
+        <svg class="bicolors-doc__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc__24vb"></use></svg>
       </span>
       <?= Icons::wrapper('bicolors-doc__24vb', ['class' => 'svg--icon svg--icon__20']) ?>
       <div class="js-fileUploadLabelText"></div>

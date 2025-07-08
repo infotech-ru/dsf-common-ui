@@ -758,6 +758,32 @@ var DSFUI = (function (exports) {
       }
     }
 
+    function CustomFileUpload() {
+      var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '.js-customFileUploadInput';
+      var fieldUploadSelectorItems = document.querySelectorAll('.js-customFileUploadItem');
+      var _loop = function _loop() {
+        var fieldUploadSelectorItem = fieldUploadSelectorItems[i];
+        // console.log('input' + i + ':' + fieldUploadSelectorItem);
+        var fieldUploadSelectorInput = fieldUploadSelectorItem.querySelector(selector);
+        // console.log('input'+ i + ':' + fieldUploadSelectorInput);
+        fieldUploadSelectorInput.onchange = function () {
+          // console.log(fieldUploadSelectorInput.files.item(0));
+          if (fieldUploadSelectorItem.querySelector('.js-fileUploadLabel') && fieldUploadSelectorInput.files.item(0).name != '') {
+            fieldUploadSelectorItem.querySelector('.js-fileUploadLabel').classList.remove('d-none');
+          } else {
+            fieldUploadSelectorItem.querySelector('.js-fileUploadLabel').classList.add('d-none');
+          }
+          if (fieldUploadSelectorItem.querySelector('.js-fileUploadLabelText')) {
+            var fileUploadLabelText = fieldUploadSelectorItem.querySelector('.js-fileUploadLabelText');
+            fileUploadLabelText.innerHTML = fieldUploadSelectorInput.files.item(0).name;
+          }
+        };
+      };
+      for (var i = 0; i < fieldUploadSelectorItems.length; i++) {
+        _loop();
+      }
+    }
+
     function OnLoad() {
       itemActionMenu();
       multilevelMenu();
@@ -765,6 +791,7 @@ var DSFUI = (function (exports) {
       init();
       FormsFree();
       AutoresizeTextarea();
+      CustomFileUpload();
     }
     function iconsInit() {
       searchIcon();
@@ -772,7 +799,11 @@ var DSFUI = (function (exports) {
     function tablesInit() {
       initTreeTable();
     }
+    function CustomFileUploadInit() {
+      CustomFileUpload();
+    }
 
+    exports.CustomFileUploadInit = CustomFileUploadInit;
     exports.OnLoad = OnLoad;
     exports.iconsInit = iconsInit;
     exports.tablesInit = tablesInit;
