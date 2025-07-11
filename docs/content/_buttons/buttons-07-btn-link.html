@@ -33,11 +33,13 @@ rank: 7
 <p>Высота обычной ссылки. Размер иконки как в кнопке-ссылке</p>
 
 {% highlight html %}
-    <button class="btn-link btn-link__minimal"><?= Icons::wrapper('bicolors-plus') ?><span class="btn-text">btn-link__minimal c иконкой</span></button>
+    <button class="btn-link btn-link__minimal">btn-link__minimal c иконкой</button>
+    <button class="btn-link btn-link__minimal"><?= Icons::withText('bicolors-plus', Yii::t('app', 'btn-link__minimal c иконкой')) ?></button>
 {% endhighlight %}
 <div class="bs-docs-example">
-    <div class="d-flex gap-10"> 
-        <div><button class="btn-link btn-link__minimal" disabled="disable"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">btn-link__minimal c иконкой</span></button></div>
+    <div class="d-flex gap-10 align-center"> 
+        <div><button class="btn-link btn-link__minimal">btn-link__minimal c иконкой</button></div>
+        <div><button class="btn-link btn-link__minimal"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span><span class="btn-text">btn-link__minimal c иконкой</span></button></div>
         <div><a href="#">Обычная ссылка для примера</a></div>
     </div>
 </div>

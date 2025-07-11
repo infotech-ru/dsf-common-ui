@@ -9921,6 +9921,22 @@ output {
   color: #777777;
   font-size: 0.75rem;
 }
+.css-formFree .form-control.timepicker::-moz-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.css-formFree .form-control.timepicker:-moz-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.css-formFree .form-control.timepicker:-ms-input-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
+.css-formFree .form-control.timepicker::-webkit-input-placeholder {
+  color: #777777;
+  font-size: 0.75rem;
+}
 .css-formFree .form-control::-moz-placeholder {
   font-size: 0;
 }
