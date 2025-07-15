@@ -99,14 +99,12 @@
         }
         .current-user-comment & {
             background-color: brandColors(_light-blue2);
-            border-radius: 0 10px 10px 10px;
+            border-radius: 10px 0 10px 10px;
             // float: right;
         }
-
         .svg--icon {
             height: 14px;
             vertical-align: bottom;
-
             svg {
                 height: 14px;
                 fill: brandColors(_light-blue);
@@ -279,14 +277,17 @@
       background-image: none;
       border: none;
       box-shadow: none;
-      flex-basis: 24px;
+      flex-basis: 20px;
+      height: 20px;
       outline: none;
-      width: 24px;
+      width: 20px;
       &:hover, &:focus, &:active{
         border: none;
         box-shadow: none;
         outline: none;
-        
+      }
+      .svg--icon{
+        background-color: transparent;
       }
   }
   .user-event {

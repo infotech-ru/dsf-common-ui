@@ -12459,7 +12459,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .current-user-comment .comment-block--comment {
   background-color: #E4EEF7;
-  border-radius: 0 10px 10px 10px;
+  border-radius: 10px 0 10px 10px;
 }
 .comment-block--comment .svg--icon {
   height: 14px;
@@ -12680,14 +12680,18 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   background-image: none;
   border: none;
   box-shadow: none;
-  flex-basis: 24px;
+  flex-basis: 20px;
+  height: 20px;
   outline: none;
-  width: 24px;
+  width: 20px;
 }
 .commentBlock_btnSend:hover, .commentBlock_btnSend:focus, .commentBlock_btnSend:active {
   border: none;
   box-shadow: none;
   outline: none;
+}
+.commentBlock_btnSend .svg--icon {
+  background-color: transparent;
 }
 .commentBlock .user-event {
   align-items: flex-start;

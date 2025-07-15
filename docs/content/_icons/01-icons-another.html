@@ -44,14 +44,21 @@ order: 1
     
       Icons::wrapper('ИМЯ_ИКОНКИ') - добавляет обертку span с классом "svg--icon" по умолчанию.
 
-      Icons::withText('ИМЯ_ИКОНКИ', Yii::t('app', 'Текст')),
+      Icons::withText('ИМЯ_ИКОНКИ', Yii::t('app', 'Текст')), - добавляет обертку для иконки и для текста. Используется в кнопках.
+  
   vue:
   <script>
     import Icon from "./Icon.vue";
     components: {Icon}
   </script>
-
   <Icon name="ИМЯ_ИКОНКИ" />
+
+  js:
+  <script> 
+    import { svgIcon } from "./utils";
+    svgIcon("bicolors-close__24vb", {width: 24, height: 24, wrapperClass: 'svg--icon svg--icon__24vb'})
+  </script>
+
 {% endhighlight %}
 <div class="bs-docs-example">
   <svg width="24" height="24">
