@@ -370,6 +370,18 @@ gapsizes {
   20: 0;
 }
 
+gapsizes {
+  30: 0;
+}
+
+gapsizes {
+  40: 0;
+}
+
+gapsizes {
+  50: 0;
+}
+
 svgsizes {
   8: 0;
 }

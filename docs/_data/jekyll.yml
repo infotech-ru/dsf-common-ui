@@ -197,6 +197,12 @@ gapsizes:
   value: 0
 - name: 20
   value: 0
+- name: 30
+  value: 0
+- name: 40
+  value: 0
+- name: 50
+  value: 0
 
 svgsizes:
 - name: 8

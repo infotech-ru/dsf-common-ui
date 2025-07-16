@@ -15731,6 +15731,30 @@ tbody.collapse.in {
   gap: 1.25rem;
 }
 
+.gap-30 {
+  gap: 1.875rem;
+}
+
+.mobile-view .gap-30__mobile {
+  gap: 1.875rem;
+}
+
+.gap-40 {
+  gap: 2.5rem;
+}
+
+.mobile-view .gap-40__mobile {
+  gap: 2.5rem;
+}
+
+.gap-50 {
+  gap: 3.125rem;
+}
+
+.mobile-view .gap-50__mobile {
+  gap: 3.125rem;
+}
+
 .left-0p {
   left: 0%;
 }
