@@ -39,19 +39,19 @@
   &_text{
     display: inline-flex;
     & + .svg--icon{
-      margin-left: 10px;
+      margin-left: 4px;
     }
     .svg--icon + &{
-      margin-left: 10px;
+      margin-left: 4px;
     }
   }
   .svg--icon{
     display: inline-flex;
-    height: 16px;
-    width: 16px;
+    height: 12px;
+    width: 12px;
     svg{
-      height: 16px;
-      width: 16px;
+      height: 12px;
+      width: 12px;
     }
   }
 }

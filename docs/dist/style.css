@@ -9388,19 +9388,19 @@ input[type=button].btn-block {
   display: inline-flex;
 }
 .label_text + .svg--icon {
-  margin-left: 10px;
+  margin-left: 4px;
 }
 .svg--icon + .label_text {
-  margin-left: 10px;
+  margin-left: 4px;
 }
 .label .svg--icon {
   display: inline-flex;
-  height: 16px;
-  width: 16px;
+  height: 12px;
+  width: 12px;
 }
 .label .svg--icon svg {
-  height: 16px;
-  width: 16px;
+  height: 12px;
+  width: 12px;
 }
 
 .label__after:after {
