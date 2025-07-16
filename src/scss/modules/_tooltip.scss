@@ -151,4 +151,10 @@
   .tooltip__wide & {
       max-width: rem(brandSizes(tooltipWide_maxWidth));
   }
+  .tooltip__nonmax & {
+      max-width: none;
+  }
+  .tooltip__textLeft &{
+    text-align: left;
+  }
 }

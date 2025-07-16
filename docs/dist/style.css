@@ -11576,6 +11576,12 @@ select.selectpicker {
 .tooltip__wide .tooltip-inner {
   max-width: 25rem;
 }
+.tooltip__nonmax .tooltip-inner {
+  max-width: none;
+}
+.tooltip__textLeft .tooltip-inner {
+  text-align: left;
+}
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
