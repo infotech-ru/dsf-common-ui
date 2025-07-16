@@ -367,7 +367,10 @@ $grid-breakpoints: (
   lg: 1200px,
   xl: 1280px,
   xxl: 1366px,
-  xxxl: 1440px
+  xxxl: 1440px,
+  hd: 1920px,
+  2k: 2560px,
+  4k: 3840px
 ) !default;
 
 
@@ -380,7 +383,10 @@ $container-max-widths: (
   lg: 1068px,
   xl: 1134px,
   xxl: 1234px,
-  xxxl: 1294px
+  xxxl: 1294px,
+  hd: 1790px,
+  2k: 2430px,
+  4k: 3710px
 ) !default;
 @include assert-ascending($container-max-widths, "$container-max-widths");
 //== Container sizes
