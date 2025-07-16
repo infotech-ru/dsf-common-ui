@@ -457,8 +457,8 @@ $brand-label: (
   @return val($brand-alert, $keys...);
 }
 $brand-alert:(
-  default_bg:                             map.get($brand-colors, _grey2),
-  default_border:                         map.get($brand-colors, _dark-grey),
+  default_bg:                             map.get($brand-colors, _light-grey2),
+  default_border:                         map.get($brand-colors, _grey3),
   default_close:                          map.get($brand-colors, _dark-grey),
   default_color:                          map.get($brand-colors, _dark-grey),
   default_title:                          map.get($brand-colors, _dark-grey),
