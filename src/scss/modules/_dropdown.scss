@@ -43,10 +43,6 @@
   @extend %dropdown-menu;
   // float: left;
   z-index: zIndex(dropdown-menu);
-  .svg-icon-viewbox24{
-    height: 24px;
-    width: 24px;
-  }
   // Dividers (basically an hr) within the dropdown
   .divider {
     background-color: brandPalette(menuDropdown_borderColor);

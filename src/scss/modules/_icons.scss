@@ -24,6 +24,8 @@
     &.svg--icon{ 
       height: #{$svgMod}px;
       width: #{$svgMod}px;
+      --svgIcon_height: #{$svgMod}px;
+      --svgIcon_width: #{$svgMod}px;
       svg{
         height: #{$svgMod}px;
         width: #{$svgMod}px;
@@ -34,20 +36,10 @@
     &,
     &.svg--icon{ 
       height: #{$svgMod}px;
+      --svgIcon_height: #{$svgMod}px;
       svg{
         height: #{$svgMod}px;
       }
     }
-  }
-}
-.svg-icon-viewbox24{
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  height: 24px;
-  width: 24px;
-  svg{
-    max-width: 24px;
-    max-height: 24px;
   }
 }

@@ -170,7 +170,7 @@ tbody {
   .svg--icon{
       svg{
         fill: brandPalette(table-color);
-        height: rem(14);
+        height: var(--svgIcon_height, 14px);
         width: auto;
       }
   }

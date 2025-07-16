@@ -47,11 +47,11 @@
   }
   .svg--icon{
     display: inline-flex;
-    height: 12px;
-    width: 12px;
+    height: var(--svgIcon_height, 12px);
+    width: var(--svgIcon_height, 12px);
     svg{
-      height: 12px;
-      width: 12px;
+      height: var(--svgIcon_height, 12px);
+      width: var(--svgIcon_height, 12px);
     }
   }
 }

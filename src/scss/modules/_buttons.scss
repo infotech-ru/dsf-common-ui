@@ -66,12 +66,12 @@
   }
 
   .svg--icon{
-    height: rem(12);
+    height: var(--svgIcon_height, rem(12));
     // margin-right: 10px;
     position: relative;
     top: 2px;
     svg{
-      height: rem(12);
+      height: var(--svgIcon_height, rem(12));
       max-width:20px;
       width: auto;
     }
@@ -715,8 +715,8 @@ input[type="button"] {
     line-height: rem(12);
   }
   .svg--icon {
-    height: rem(12);
-    width: rem(12);
+    height: var(--svgIcon_height, rem(12));
+    width: var(--svgIcon_height, rem(12));
     vertical-align: middle;
     #{--svg-icon-fill}: brandPalette(btnIconSvg_color);
     #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
@@ -724,8 +724,8 @@ input[type="button"] {
     #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
     #{--limited-stroke-off}: _brand-colors(_transparent);
     svg{
-      height: rem(12);
-      width: rem(12);
+      height: var(--svgIcon_height, rem(12));
+      width: var(--svgIcon_height, rem(12));
     }
   }
   .fill{
@@ -763,11 +763,11 @@ input[type="button"] {
   &__bigSquare,
   &__square{
     .svg--icon {
-      height: rem(brandSizes(btnDownloadSvg_height));
-      width: rem(brandSizes(btnDownloadSvg_height));
+      height: var(--svgIcon_height, rem(brandSizes(btnDownloadSvg_height)));
+      width: var(--svgIcon_height, rem(brandSizes(btnDownloadSvg_height)));
       svg{
-        height: rem(brandSizes(btnDownloadSvg_height));
-        width: rem(brandSizes(btnDownloadSvg_height));
+        height: var(--svgIcon_height, rem(brandSizes(btnDownloadSvg_height)));
+        width: var(--svgIcon_height, rem(brandSizes(btnDownloadSvg_height)));
       }
     }
   }
@@ -786,11 +786,11 @@ input[type="button"] {
       border-radius: 100%;
     }
     .svg--icon {
-      height: rem(21);
-      width: rem(21);
+      height: var(--svgIcon_height, rem(21));
+      width: var(--svgIcon_height, rem(21));
       svg{
-        height: rem(21);
-        width: rem(21);
+        height: var(--svgIcon_height, rem(21));
+        width: var(--svgIcon_height, rem(21));
       }
     }
   }

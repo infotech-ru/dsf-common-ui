@@ -663,8 +663,8 @@
   }
   .svg--icon{
     svg{
-      height: 16px;
-      width: 16px;
+      height: var(--svgIcon_height, 16px);
+      width: var(--svgIcon_height, 16px);
     }
   }
 }
