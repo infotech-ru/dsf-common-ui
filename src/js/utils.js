@@ -653,29 +653,29 @@ export function searchIcon() {
           }
           applyCheckboxFilter();
       });
-       function applyCheckboxFilter() {
+      function applyCheckboxFilter() {
         const isChecked = checkbox.checked;
 
-            childrens.forEach(child => {
-                const classes = child.classList;
+        childrens.forEach(child => {
+            const classes = child.classList;
 
-                let hasMinvb = false;
-                for (const key in itemsObject) {
-                    if (itemsObject.hasOwnProperty(key) && classes.contains(key)) {
-                        if (itemsObject[key].includes('minvb')) {
-                            hasMinvb = true;
-                            break;
-                        }
+            let hasMinvb = false;
+            for (const key in itemsObject) {
+                if (itemsObject.hasOwnProperty(key) && classes.contains(key)) {
+                    if (itemsObject[key].includes('minvb')) {
+                        hasMinvb = true;
+                        break;
                     }
                 }
+            }
 
-                if (!isChecked && hasMinvb) {
-                    child.style.display = 'none'; 
-                } else {
-                    child.style.display = '';
-                }
-            });
-        }
+            if (!isChecked && hasMinvb) {
+                child.style.display = 'none'; 
+            } else {
+                child.style.display = '';
+            }
+        });
+      }
 
         checkbox.addEventListener('change', () => {
             applyCheckboxFilter();
