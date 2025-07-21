@@ -313,6 +313,8 @@ export function searchIcon() {
         'bicolors-email__24vb': ['мыло', 'почта', 'e-mail', 'email', '24vb'],
         'bicolors-email_ok': ['мыло', 'почта', 'e-mail', 'email', 'ok', 'minvb'],
         'bicolors-email_ok__24vb': ['мыло', 'почта', 'e-mail', 'email', 'ok', '24vb'],
+        'bicolors-email_plus__24vb': ['мыло', 'почта', 'e-mail', 'email', 'plus', 'плюс', '24vb'],
+        'bicolors-email_plus': ['мыло', 'почта', 'e-mail', 'email', 'plus', 'плюс', 'minvb'],
         'bicolors-email_progress': ['мыло', 'почта', 'e-mail', 'email', 'продвижение', 'прогресс', 'progress', 'minvb'],
         'bicolors-email_progress__24vb': ['мыло', 'почта', 'e-mail', 'email', 'продвижение', 'прогресс', 'progress', '24vb'],
         'bicolors-email_stop': ['мыло', 'почта', 'e-mail', 'email', 'остановить', 'прекратить', 'стоп', 'stop', 'minvb'],
