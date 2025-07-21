@@ -66,33 +66,33 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 {{#shapes}}
 <div class="set-ico-list-item js-icon-block {{name}}" title="{{name}}">
 	<div class="icon-box">
-	<div class="js-icon-box" title="Ключи:"  data-content='
-		<div class="">
-			<div class="mb-5"><span class="control-label">Имя иконки:</span> {{name}}</div>
-			<div class="d-flex"> 
-				<button class="btn-default btn-block js-copyToClipboard" data-clipboard-text="{{name}}">
-					<svg class="svg--icon" width="24" height="24">
-						<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use>
-					</svg>
-					<span class="btn-text">Скопировать имя</span>
-				</button>
-				<button class="btn-icon js-popover-close ml-10" type="button">
-					<span class="svg--icon svg-danger">
-					<svg class="bicolors-close" width="24" height="24">
-						<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-close"></use>
-					</svg>
-					</span>
-				</button>
+		<div class="js-icon-box" title="Ключи:"  data-content='
+			<div class="">
+				<div class="mb-5"><span class="control-label">Имя иконки:</span> {{name}}</div>
+				<div class="d-flex"> 
+					<button class="btn-default btn-block js-copyToClipboard" data-clipboard-text="{{name}}">
+						<svg class="svg--icon" width="24" height="24">
+							<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use>
+						</svg>
+						<span class="btn-text">Скопировать имя</span>
+					</button>
+					<button class="btn-icon js-popover-close ml-10" type="button">
+						<span class="svg--icon svg-danger">
+						<svg class="bicolors-close" width="24" height="24">
+							<use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-close"></use>
+						</svg>
+						</span>
+					</button>
+				</div>
 			</div>
+		'>
+			<span class="svg--icon">
+				<!-- {{name}} -->
+				<svg class="{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
+					<use xlink:href="/dsf-common-ui/dist/{{{example}}}#{{name}}"></use>
+				</svg>
+			</span>
 		</div>
-	'>
-		<span class="svg--icon">
-			<!-- {{name}} -->
-			<svg class="{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
-				<use xlink:href="/dsf-common-ui/dist/{{{example}}}#{{name}}"></use>
-			</svg>
-		</span>
-		</>
 	</div>
 </div>
 {{/shapes}}			
