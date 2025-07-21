@@ -100,14 +100,20 @@ order: 1
   </span>
 </div>
 
-<div class="row">
-  <div class="col-6">
-    <div class="d-flex js-allSelect-formFree css-formFree"> 
-      <div class="form-group w-100p">
-        <label class="control-label" for="input-field-search-icon">Поиск иконки</label>
-        <input class="form-control" type="text" id="input-field-search-icon">
-      </div>
+<div class="row js-allSelect-formFree css-formFree">
+  <div class="col-4">
+    <div class="form-group w-100p">
+      <label class="control-label" for="input-field-search-icon">Поиск иконки</label>
+      <input class="form-control" type="text" id="input-field-search-icon">
     </div>
   </div>
+    <div class="d-flex"> 
+      <div class="form-group">
+        <div class="checkbox-item"> 
+          <input class="form-control" type="checkbox" id="minvb" checked="checked">
+          <label class="checkbox" for="minvb"><span>Отображать все виды одной иконки</span></label>
+        </div>
+      </div>
+    </div>
 </div>
 {% include sprite.symbol.html %}

@@ -153,6 +153,7 @@ var DSFUI = (function (exports) {
       var inputField = document.getElementById('input-field-search-icon');
       var parent = document.querySelector('.js-icon-container');
       var childrens = parent.querySelectorAll('.js-icon-block');
+      var checkbox = document.getElementById('withOutMinvb');
       var itemsObject = {
         'bicolors-2wd': ['2wd', 'minvb'],
         'bicolors-2wd__24vb': ['2wd', '24vb'],
@@ -726,7 +727,32 @@ var DSFUI = (function (exports) {
             }
           }
         }
+        applyCheckboxFilter();
       });
+      function applyCheckboxFilter() {
+        var isChecked = checkbox.checked;
+        childrens.forEach(function (child) {
+          var classes = child.classList;
+          var hasMinvb = false;
+          for (var key in itemsObject) {
+            if (itemsObject.hasOwnProperty(key) && classes.contains(key)) {
+              if (itemsObject[key].includes('minvb')) {
+                hasMinvb = true;
+                break;
+              }
+            }
+          }
+          if (!isChecked && hasMinvb) {
+            child.style.display = 'none';
+          } else {
+            child.style.display = '';
+          }
+        });
+      }
+      checkbox.addEventListener('change', function () {
+        applyCheckboxFilter();
+      });
+      applyCheckboxFilter();
     }
 
     function init() {
