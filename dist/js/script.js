@@ -154,7 +154,7 @@ var DSFUI = (function (exports) {
       var parent = document.querySelector('.js-icon-container');
       // const customClassInput = document.getElementById('js-customClass'); 
       var childrens = parent.querySelectorAll('.js-icon-block');
-      var checkbox = document.getElementById('withOutMinvb');
+      // const checkbox = document.getElementById('withOutMinvb');
       var itemsObject = {
         'bicolors-2wd': ['2wd', 'minvb'],
         'bicolors-2wd__24vb': ['2wd', '24vb'],
@@ -715,7 +715,6 @@ var DSFUI = (function (exports) {
         childrens.forEach(function (child) {
           return child.style.display = 'none';
         });
-        var hasVisibleItems = false;
         for (var key in itemsObject) {
           if (itemsObject[key].some(function (value) {
             return value.includes(inputValue);
@@ -723,38 +722,41 @@ var DSFUI = (function (exports) {
             var matchingChild = parent.querySelector(".".concat(key));
             if (matchingChild) {
               matchingChild.style.display = 'block';
-              hasVisibleItems = true;
+              // hasVisibleItems = true;
             }
           }
         }
-        applyCheckboxFilter(hasVisibleItems);
+        // applyCheckboxFilter(hasVisibleItems);
       });
-      function applyCheckboxFilter() {
-        var hasVisibleItems = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-        var isChecked = checkbox.checked;
-        childrens.forEach(function (child) {
-          var classes = child.classList;
-          var hasMinvb = false;
-          for (var key in itemsObject) {
-            if (itemsObject.hasOwnProperty(key) && classes.contains(key)) {
-              if (itemsObject[key].includes('minvb')) {
-                hasMinvb = true;
-                break;
-              }
-            }
-          }
-          if (!isChecked && hasMinvb) {
-            child.style.display = 'none'; // Скрываем, если "minvb" есть и чекбокс не активен
-          } else if (hasVisibleItems || !inputField.value.trim()) {
-            child.style.display = ''; // Показываем, если чекбокс активен или нет "minvb"
-          } else {
-            child.style.display = 'none'; // Скрываем, если элемент не прошел фильтр поиска
-          }
-        });
-      }
-      checkbox.addEventListener('change', function () {
-        applyCheckboxFilter();
-      });
+      // function applyCheckboxFilter(hasVisibleItems = true) {
+      //   const isChecked = checkbox.checked;
+
+      //   childrens.forEach(child => {
+      //       const classes = child.classList;
+
+      //       let hasMinvb = false;
+      //       for (const key in itemsObject) {
+      //           if (itemsObject.hasOwnProperty(key) && classes.contains(key)) {
+      //               if (itemsObject[key].includes('minvb')) {
+      //                   hasMinvb = true;
+      //                   break;
+      //               }
+      //           }
+      //       }
+
+      //       if (!isChecked && hasMinvb) {
+      //           child.style.display = 'none'; // Скрываем, если "minvb" есть и чекбокс не активен
+      //       } else if (hasVisibleItems || !inputField.value.trim()) {
+      //           child.style.display = ''; // Показываем, если чекбокс активен или нет "minvb"
+      //       } else {
+      //           child.style.display = 'none'; // Скрываем, если элемент не прошел фильтр поиска
+      //       }
+      //   });
+      // }
+
+      // checkbox.addEventListener('change', () => {
+      //     applyCheckboxFilter();
+      // });
 
       // customClassInput.addEventListener('input', () => {
       //   const customClassValue = customClassInput.value;
@@ -773,7 +775,7 @@ var DSFUI = (function (exports) {
       //   });
       // });
 
-      applyCheckboxFilter(false);
+      // applyCheckboxFilter(false);
     }
 
     function init() {

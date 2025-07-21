@@ -81,7 +81,7 @@ export function searchIcon() {
       const parent = document.querySelector('.js-icon-container');
       // const customClassInput = document.getElementById('js-customClass'); 
       const childrens = parent.querySelectorAll('.js-icon-block');
-      const checkbox = document.getElementById('withOutMinvb');
+      // const checkbox = document.getElementById('withOutMinvb');
       const itemsObject = {
         'bicolors-2wd': ['2wd', 'minvb'],
         'bicolors-2wd__24vb': ['2wd', '24vb'],
@@ -603,6 +603,7 @@ export function searchIcon() {
         'bicolors-yandex__24vb': ['яндекс', 'yandex', '24vb'],
       };
 
+      let hasVisibleItems = false;
       childrens.forEach(children => {
           const iconKey = children.querySelector('.js-icon-box');
           if (iconKey) {
@@ -641,47 +642,46 @@ export function searchIcon() {
       inputField.addEventListener('input', () => {
           const inputValue = inputField.value.toLowerCase();
           childrens.forEach(child => child.style.display = 'none');
-          let hasVisibleItems = false;
           for (const key in itemsObject) {
               if (itemsObject[key].some(value => value.includes(inputValue))) {
                   const matchingChild = parent.querySelector(`.${key}`);
                   if (matchingChild) {
                       matchingChild.style.display = 'block';
-                      hasVisibleItems = true;
+                      // hasVisibleItems = true;
                   }
               }
           }
-          applyCheckboxFilter(hasVisibleItems);
+          // applyCheckboxFilter(hasVisibleItems);
       });
-      function applyCheckboxFilter(hasVisibleItems = true) {
-        const isChecked = checkbox.checked;
+      // function applyCheckboxFilter(hasVisibleItems = true) {
+      //   const isChecked = checkbox.checked;
 
-        childrens.forEach(child => {
-            const classes = child.classList;
+      //   childrens.forEach(child => {
+      //       const classes = child.classList;
 
-            let hasMinvb = false;
-            for (const key in itemsObject) {
-                if (itemsObject.hasOwnProperty(key) && classes.contains(key)) {
-                    if (itemsObject[key].includes('minvb')) {
-                        hasMinvb = true;
-                        break;
-                    }
-                }
-            }
+      //       let hasMinvb = false;
+      //       for (const key in itemsObject) {
+      //           if (itemsObject.hasOwnProperty(key) && classes.contains(key)) {
+      //               if (itemsObject[key].includes('minvb')) {
+      //                   hasMinvb = true;
+      //                   break;
+      //               }
+      //           }
+      //       }
 
-            if (!isChecked && hasMinvb) {
-                child.style.display = 'none'; // Скрываем, если "minvb" есть и чекбокс не активен
-            } else if (hasVisibleItems || !inputField.value.trim()) {
-                child.style.display = ''; // Показываем, если чекбокс активен или нет "minvb"
-            } else {
-                child.style.display = 'none'; // Скрываем, если элемент не прошел фильтр поиска
-            }
-        });
-      }
+      //       if (!isChecked && hasMinvb) {
+      //           child.style.display = 'none'; // Скрываем, если "minvb" есть и чекбокс не активен
+      //       } else if (hasVisibleItems || !inputField.value.trim()) {
+      //           child.style.display = ''; // Показываем, если чекбокс активен или нет "minvb"
+      //       } else {
+      //           child.style.display = 'none'; // Скрываем, если элемент не прошел фильтр поиска
+      //       }
+      //   });
+      // }
 
-      checkbox.addEventListener('change', () => {
-          applyCheckboxFilter();
-      });
+      // checkbox.addEventListener('change', () => {
+      //     applyCheckboxFilter();
+      // });
 
       // customClassInput.addEventListener('input', () => {
       //   const customClassValue = customClassInput.value;
@@ -700,5 +700,5 @@ export function searchIcon() {
       //   });
       // });
 
-      applyCheckboxFilter(false);
+      // applyCheckboxFilter(false);
  }
