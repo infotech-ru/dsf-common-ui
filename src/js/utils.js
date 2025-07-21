@@ -683,22 +683,22 @@ export function searchIcon() {
           applyCheckboxFilter();
       });
 
-      customClassInput.addEventListener('input', () => {
-        const customClassValue = customClassInput.value.trim();
-        const iconBoxes = document.querySelectorAll('.js-icon-box');
+      // customClassInput.addEventListener('input', () => {
+      //   const customClassValue = customClassInput.value;
+      //   const iconBoxes = document.querySelectorAll('.js-icon-box');
 
-        iconBoxes.forEach(iconBox => {
-            const svgIcons = iconBox.querySelectorAll('.svg--icon');
+      //   iconBoxes.forEach(iconBox => {
+      //       const svgIcons = iconBox.querySelectorAll('.svg--icon');
 
-            svgIcons.forEach(svgIconElement => {
+      //       svgIcons.forEach(svgIconElement => {
 
-                // Добавляем новый класс, если введено значение
-                if (customClassValue) {
-                    svgIconElement.classList.add(`${customClassValue} `);
-                }
-            });
-        });
-      });
+      //           // Добавляем новый класс, если введено значение
+      //           if (customClassValue) {
+      //               svgIconElement.classList.add(`${customClassValue} `);
+      //           }
+      //       });
+      //   });
+      // });
 
       applyCheckboxFilter();
  }

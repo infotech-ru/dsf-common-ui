@@ -152,7 +152,7 @@ var DSFUI = (function (exports) {
     function searchIcon() {
       var inputField = document.getElementById('input-field-search-icon');
       var parent = document.querySelector('.js-icon-container');
-      var customClassInput = document.getElementById('js-customClass');
+      document.getElementById('js-customClass');
       var childrens = parent.querySelectorAll('.js-icon-block');
       var checkbox = document.getElementById('withOutMinvb');
       var itemsObject = {
@@ -754,19 +754,24 @@ var DSFUI = (function (exports) {
       checkbox.addEventListener('change', function () {
         applyCheckboxFilter();
       });
-      customClassInput.addEventListener('input', function () {
-        var customClassValue = customClassInput.value.trim();
-        var iconBoxes = document.querySelectorAll('.js-icon-box');
-        iconBoxes.forEach(function (iconBox) {
-          var svgIcons = iconBox.querySelectorAll('.svg--icon');
-          svgIcons.forEach(function (svgIconElement) {
-            // Добавляем новый класс, если введено значение
-            if (customClassValue) {
-              svgIconElement.classList.add("".concat(customClassValue, " "));
-            }
-          });
-        });
-      });
+
+      // customClassInput.addEventListener('input', () => {
+      //   const customClassValue = customClassInput.value;
+      //   const iconBoxes = document.querySelectorAll('.js-icon-box');
+
+      //   iconBoxes.forEach(iconBox => {
+      //       const svgIcons = iconBox.querySelectorAll('.svg--icon');
+
+      //       svgIcons.forEach(svgIconElement => {
+
+      //           // Добавляем новый класс, если введено значение
+      //           if (customClassValue) {
+      //               svgIconElement.classList.add(`${customClassValue} `);
+      //           }
+      //       });
+      //   });
+      // });
+
       applyCheckboxFilter();
     }
 
