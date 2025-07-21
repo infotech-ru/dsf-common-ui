@@ -152,6 +152,7 @@ var DSFUI = (function (exports) {
     function searchIcon() {
       var inputField = document.getElementById('input-field-search-icon');
       var parent = document.querySelector('.js-icon-container');
+      var customClassInput = document.getElementById('js-customClass');
       var childrens = parent.querySelectorAll('.js-icon-block');
       var checkbox = document.getElementById('withOutMinvb');
       var itemsObject = {
@@ -207,7 +208,7 @@ var DSFUI = (function (exports) {
         'bicolors-boards__24vb': ['доски', 'boards', '24vb'],
         'bicolors-boards_vert': ['доска', 'board', 'minvb'],
         'bicolors-boards_vert__24vb': ['доска', 'board', '24vb'],
-        'bicolors-boards_grid': ['доски', 'boards', 'сетка', 'grid', '24vb'],
+        'bicolors-boards_grid': ['доски', 'boards', 'сетка', 'grid', 'minvb'],
         'bicolors-boards_grid__24vb': ['доски', 'boards', 'сетка', 'grid', '24vb'],
         'bicolors-boards_tile': ['доски', 'boards', 'плитка', 'tile', 'minvb'],
         'bicolors-boards_tile__24vb': ['доски', 'boards', 'плитка', 'tile', '24vb'],
@@ -513,7 +514,7 @@ var DSFUI = (function (exports) {
         'bicolors-pin__24vb': ['pin', 'карта', 'map', 'baloon', '24vb'],
         'bicolors-plan': ['план', 'plan', 'minvb'],
         'bicolors-plan__24vb': ['план', 'plan', '24vb'],
-        'bicolors-play': ['начать', 'проиграть', 'play'],
+        'bicolors-play': ['начать', 'проиграть', 'play', 'minvb'],
         'bicolors-play_1_5x': ['начать', 'проиграть', 'play', '1.5x', 'minvb'],
         'bicolors-play_1_5x__24vb': ['начать', 'проиграть', 'play', '1.5x', '24vb'],
         'bicolors-play_2x': ['начать', 'проиграть', 'play', '2x', 'minvb'],
@@ -711,12 +712,9 @@ var DSFUI = (function (exports) {
       });
       inputField.addEventListener('input', function () {
         var inputValue = inputField.value.toLowerCase();
-        // Hide all children initially
         childrens.forEach(function (child) {
           return child.style.display = 'none';
         });
-
-        // Filter and display matching children
         for (var key in itemsObject) {
           if (itemsObject[key].some(function (value) {
             return value.includes(inputValue);
@@ -724,12 +722,14 @@ var DSFUI = (function (exports) {
             var matchingChild = parent.querySelector(".".concat(key));
             if (matchingChild) {
               matchingChild.style.display = 'block';
+              hasVisibleItems = true;
             }
           }
         }
-        applyCheckboxFilter();
+        applyCheckboxFilter(hasVisibleItems);
       });
       function applyCheckboxFilter() {
+        var hasVisibleItems = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
         var isChecked = checkbox.checked;
         childrens.forEach(function (child) {
           var classes = child.classList;
@@ -743,14 +743,29 @@ var DSFUI = (function (exports) {
             }
           }
           if (!isChecked && hasMinvb) {
-            child.style.display = 'none';
+            child.style.display = 'none'; // Скрываем, если "minvb" есть и чекбокс не активен
+          } else if (hasVisibleItems || !inputField.value.trim()) {
+            child.style.display = ''; // Показываем, если чекбокс активен или нет "minvb"
           } else {
-            child.style.display = '';
+            child.style.display = 'none'; // Скрываем, если элемент не прошел фильтр поиска
           }
         });
       }
       checkbox.addEventListener('change', function () {
         applyCheckboxFilter();
+      });
+      customClassInput.addEventListener('input', function () {
+        var customClassValue = customClassInput.value.trim();
+        var iconBoxes = document.querySelectorAll('.js-icon-box');
+        iconBoxes.forEach(function (iconBox) {
+          var svgIcons = iconBox.querySelectorAll('.svg--icon');
+          svgIcons.forEach(function (svgIconElement) {
+            // Добавляем новый класс, если введено значение
+            if (customClassValue) {
+              svgIconElement.classList.add("".concat(customClassValue, " "));
+            }
+          });
+        });
       });
       applyCheckboxFilter();
     }

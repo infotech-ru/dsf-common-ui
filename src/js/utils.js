@@ -79,6 +79,7 @@ export function initTreeTable(options) {
 export function searchIcon() {
       const inputField = document.getElementById('input-field-search-icon');
       const parent = document.querySelector('.js-icon-container');
+      const customClassInput = document.getElementById('js-customClass'); 
       const childrens = parent.querySelectorAll('.js-icon-block');
       const checkbox = document.getElementById('withOutMinvb');
       const itemsObject = {
@@ -134,7 +135,7 @@ export function searchIcon() {
         'bicolors-boards__24vb': ['доски', 'boards', '24vb'],
         'bicolors-boards_vert': ['доска', 'board', 'minvb'],
         'bicolors-boards_vert__24vb': ['доска', 'board', '24vb'],
-        'bicolors-boards_grid': ['доски', 'boards', 'сетка', 'grid', '24vb'],
+        'bicolors-boards_grid': ['доски', 'boards', 'сетка', 'grid', 'minvb',],
         'bicolors-boards_grid__24vb': ['доски', 'boards', 'сетка', 'grid', '24vb'],
         'bicolors-boards_tile': ['доски', 'boards', 'плитка', 'tile', 'minvb'],
         'bicolors-boards_tile__24vb': ['доски', 'boards', 'плитка', 'tile', '24vb'],
@@ -440,7 +441,7 @@ export function searchIcon() {
         'bicolors-pin__24vb': ['pin', 'карта', 'map', 'baloon', '24vb'],
         'bicolors-plan': ['план', 'plan', 'minvb'],
         'bicolors-plan__24vb': ['план', 'plan', '24vb'],
-        'bicolors-play': ['начать', 'проиграть', 'play'],
+        'bicolors-play': ['начать', 'проиграть', 'play', 'minvb'],
         'bicolors-play_1_5x': ['начать', 'проиграть', 'play', '1.5x', 'minvb'],
         'bicolors-play_1_5x__24vb': ['начать', 'проиграть', 'play', '1.5x', '24vb'],
         'bicolors-play_2x': ['начать', 'проиграть', 'play', '2x', 'minvb'],
@@ -639,21 +640,20 @@ export function searchIcon() {
       });
       inputField.addEventListener('input', () => {
           const inputValue = inputField.value.toLowerCase();
-          // Hide all children initially
           childrens.forEach(child => child.style.display = 'none');
 
-          // Filter and display matching children
           for (const key in itemsObject) {
               if (itemsObject[key].some(value => value.includes(inputValue))) {
                   const matchingChild = parent.querySelector(`.${key}`);
                   if (matchingChild) {
                       matchingChild.style.display = 'block';
+                      hasVisibleItems = true;
                   }
               }
           }
-          applyCheckboxFilter();
+          applyCheckboxFilter(hasVisibleItems);
       });
-      function applyCheckboxFilter() {
+      function applyCheckboxFilter(hasVisibleItems = true) {
         const isChecked = checkbox.checked;
 
         childrens.forEach(child => {
@@ -670,16 +670,35 @@ export function searchIcon() {
             }
 
             if (!isChecked && hasMinvb) {
-                child.style.display = 'none'; 
+                child.style.display = 'none'; // Скрываем, если "minvb" есть и чекбокс не активен
+            } else if (hasVisibleItems || !inputField.value.trim()) {
+                child.style.display = ''; // Показываем, если чекбокс активен или нет "minvb"
             } else {
-                child.style.display = '';
+                child.style.display = 'none'; // Скрываем, если элемент не прошел фильтр поиска
             }
         });
       }
 
-        checkbox.addEventListener('change', () => {
-            applyCheckboxFilter();
-        });
+      checkbox.addEventListener('change', () => {
+          applyCheckboxFilter();
+      });
 
-        applyCheckboxFilter();
+      customClassInput.addEventListener('input', () => {
+        const customClassValue = customClassInput.value.trim();
+        const iconBoxes = document.querySelectorAll('.js-icon-box');
+
+        iconBoxes.forEach(iconBox => {
+            const svgIcons = iconBox.querySelectorAll('.svg--icon');
+
+            svgIcons.forEach(svgIconElement => {
+
+                // Добавляем новый класс, если введено значение
+                if (customClassValue) {
+                    svgIconElement.classList.add(`${customClassValue} `);
+                }
+            });
+        });
+      });
+
+      applyCheckboxFilter();
  }
