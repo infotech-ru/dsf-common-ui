@@ -152,7 +152,7 @@ var DSFUI = (function (exports) {
     function searchIcon() {
       var inputField = document.getElementById('input-field-search-icon');
       var parent = document.querySelector('.js-icon-container');
-      document.getElementById('js-customClass');
+      // const customClassInput = document.getElementById('js-customClass'); 
       var childrens = parent.querySelectorAll('.js-icon-block');
       var checkbox = document.getElementById('withOutMinvb');
       var itemsObject = {
@@ -715,6 +715,7 @@ var DSFUI = (function (exports) {
         childrens.forEach(function (child) {
           return child.style.display = 'none';
         });
+        var hasVisibleItems = false;
         for (var key in itemsObject) {
           if (itemsObject[key].some(function (value) {
             return value.includes(inputValue);
@@ -772,7 +773,7 @@ var DSFUI = (function (exports) {
       //   });
       // });
 
-      applyCheckboxFilter();
+      applyCheckboxFilter(false);
     }
 
     function init() {

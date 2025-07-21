@@ -79,7 +79,7 @@ export function initTreeTable(options) {
 export function searchIcon() {
       const inputField = document.getElementById('input-field-search-icon');
       const parent = document.querySelector('.js-icon-container');
-      const customClassInput = document.getElementById('js-customClass'); 
+      // const customClassInput = document.getElementById('js-customClass'); 
       const childrens = parent.querySelectorAll('.js-icon-block');
       const checkbox = document.getElementById('withOutMinvb');
       const itemsObject = {
@@ -641,7 +641,7 @@ export function searchIcon() {
       inputField.addEventListener('input', () => {
           const inputValue = inputField.value.toLowerCase();
           childrens.forEach(child => child.style.display = 'none');
-
+          let hasVisibleItems = false;
           for (const key in itemsObject) {
               if (itemsObject[key].some(value => value.includes(inputValue))) {
                   const matchingChild = parent.querySelector(`.${key}`);
@@ -700,5 +700,5 @@ export function searchIcon() {
       //   });
       // });
 
-      applyCheckboxFilter();
+      applyCheckboxFilter(false);
  }
