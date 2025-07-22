@@ -49,9 +49,15 @@ order: 1
   vue:
   <script>
     import Icon from "./Icon.vue";
+    import IconWrapper from "./IconWrapper.vue";
+    import IconWithText from "./IconWithText.vue";
     components: {Icon}
+    components: {IconWrapper} 
+    components: {IconWithText}
   </script>
   <Icon name="ИМЯ_ИКОНКИ" />
+  <IconWrapper name="ИМЯ_ИКОНКИ" wrapperClass="заменяемый класс обертки"/> - добавляет обертку span с классом "svg--icon" по умолчанию.
+  <IconWithText name="ИМЯ_ИКОНКИ" textKey="Текст кнопки"/> - добавляет обертку для иконки и для текста. Используется в кнопках.
 
   js:
   <script> 
