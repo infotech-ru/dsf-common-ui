@@ -5,21 +5,41 @@ category: components
 anchor: components-labels
 order: 10
 ---
+<h3>Форма лейбла</h3>
+<code class="language-plaintext highlighter-rouge">.label</code> - имеет квадратные очертания
+<code class="language-plaintext highlighter-rouge">.label_chip</code> - более закругленный и больший по размеру
 
-Для <code class="language-plaintext highlighter-rouge">.label</code> доступны следующие цветовые модификаци:
+<h3>Цветовая модификация</h3>
 
 {% highlight html %}
-  {% for item in site.data.jekyll.brandlabel %}
-    <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
-  {% endfor %}
+<div class="mb-10"> 
+   <span class="label label-primary">label-primary</span>
+</div>
+<div class="mb-10"> 
+   <span class="label label-yellow">label-yellow</span>
+</div>
+<div class="mb-10"> 
+   <span class="label label_chip label-primary__outline">label-primary</span>
+</div>
+<div class="mb-10"> 
+   <span class="label label_chip label-yellow__outline">label-yellow</span>
+</div>
 {% endhighlight %}
+
 <div class="bs-docs-example">
-  {% for item in site.data.jekyll.brandlabel %}
-    <span class="label label-{{ item.name }} ml-5 mb-5">label-{{ item.name }}</span>
-  {% endfor %}
+  <div class="d-flex flex-wrap gap-10 mb-10">
+    {% for item in site.data.jekyll.brandlabel %}
+      <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
+    {% endfor %}
+  </div>
+  <div class="d-flex flex-wrap gap-10">
+    {% for item in site.data.jekyll.brandlabel %}
+      <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}__outline</span>
+    {% endfor %}
+  </div>
 </div>
 
-<h3>Семантика использования текста</h3>
+<h3>Семантика цвета при использовании для статусов</h3>
 <p>Для "промежуточных" статусов используется <code class="language-plaintext highlighter-rouge">label-info</code></p>
 <div class="bs-docs-example">
   <div class="mb-5"><span class="label label-grey2">Черновик</span></div>
@@ -37,8 +57,8 @@ order: 10
   <div class="mb-5"><span class="label label-info">Принят </span></div>
 </div>
 
-<h3>Модификации лейблов</h3>
-<p>Модификации текста в лейбле:</p>
+<h3>Модификация лейблов</h3>
+<p>Модификации текста в лейбле и размера лейбла:</p>
 
 {% highlight html %}
     <span class="label label-success fontWeightNormal">fontWeightNormal</span>
@@ -51,7 +71,7 @@ order: 10
     <span class="label label-warning label__big mr-10">label__big</span>
 </div>
 
-<p>Для вывода иконки внутри лейбла:</p>
+<h3>Вывод иконки внутри лейбла:</h3>
 
 {% highlight html %}
       <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon"><?= Icons::icon('bicolors-attention__24vb') ?></span></span>
