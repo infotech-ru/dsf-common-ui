@@ -359,7 +359,7 @@ $brand-btn: (
 }
 $brand-label: (
   'default': (
-    'bg':                                 map.get($brand-colors, _white),
+    'bg':                                 map.get($brand-colors, _light-grey2),
     'color':                              map.get($brand-colors, _dark-grey),
     'svg':                                map.get($brand-colors, _blue),
   ),
