@@ -106,7 +106,7 @@
     #{--svg-icon-fill_blue}: map-deep-get($brand-label, $name, 'svg');
     #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'svg');
   }
-  .label-#{name}__outline{
+  .label-#{$name}__outline{
     #{--label_color}: map-deep-get($brand-label, $name, 'bg');
     #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'bg');
     #{--label_borderColor}: map-deep-get($brand-label, $name, 'bg');

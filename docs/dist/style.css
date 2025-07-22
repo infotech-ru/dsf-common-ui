@@ -10032,7 +10032,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #1E6393;
 }
 
-.label-name__outline {
+.label-default__outline {
   --label_color: #ffffff;
   --svg-valute-fill: #ffffff;
   --label_borderColor: #ffffff;
@@ -10054,7 +10054,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 
-.label-name__outline {
+.label-primary__outline {
   --label_color: #4A8DC6;
   --svg-valute-fill: #4A8DC6;
   --label_borderColor: #4A8DC6;
@@ -10076,7 +10076,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 
-.label-name__outline {
+.label-danger__outline {
   --label_color: #D9534F;
   --svg-valute-fill: #D9534F;
   --label_borderColor: #D9534F;
@@ -10098,7 +10098,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 
-.label-name__outline {
+.label-success__outline {
   --label_color: #69C26A;
   --svg-valute-fill: #69C26A;
   --label_borderColor: #69C26A;
@@ -10120,7 +10120,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #333333;
 }
 
-.label-name__outline {
+.label-warning__outline {
   --label_color: #FFBD41;
   --svg-valute-fill: #FFBD41;
   --label_borderColor: #FFBD41;
@@ -10142,7 +10142,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #4A8DC6;
 }
 
-.label-name__outline {
+.label-info__outline {
   --label_color: #E4EEF7;
   --svg-valute-fill: #E4EEF7;
   --label_borderColor: #E4EEF7;
@@ -10164,7 +10164,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #333333;
 }
 
-.label-name__outline {
+.label-yellow__outline {
   --label_color: #FFDA7D;
   --svg-valute-fill: #FFDA7D;
   --label_borderColor: #FFDA7D;
@@ -10186,7 +10186,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 
-.label-name__outline {
+.label-black__outline {
   --label_color: #000000;
   --svg-valute-fill: #000000;
   --label_borderColor: #000000;
@@ -10208,7 +10208,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 
-.label-name__outline {
+.label-dark-grey__outline {
   --label_color: #333333;
   --svg-valute-fill: #333333;
   --label_borderColor: #333333;
@@ -10230,7 +10230,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #333333;
 }
 
-.label-name__outline {
+.label-grey2__outline {
   --label_color: #dddddd;
   --svg-valute-fill: #dddddd;
   --label_borderColor: #dddddd;
@@ -10252,7 +10252,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 
-.label-name__outline {
+.label-vibrant-blue__outline {
   --label_color: #0094FF;
   --svg-valute-fill: #0094FF;
   --label_borderColor: #0094FF;
@@ -10274,7 +10274,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #DE8500;
 }
 
-.label-name__outline {
+.label-light-yellow2__outline {
   --label_color: #FFF6DF;
   --svg-valute-fill: #FFF6DF;
   --label_borderColor: #FFF6DF;
@@ -10296,7 +10296,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 
-.label-name__outline {
+.label-dark-green__outline {
   --label_color: #467B46;
   --svg-valute-fill: #467B46;
   --label_borderColor: #467B46;
@@ -10318,7 +10318,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #467B46;
 }
 
-.label-name__outline {
+.label-light-green__outline {
   --label_color: #DAF0DA;
   --svg-valute-fill: #DAF0DA;
   --label_borderColor: #DAF0DA;
@@ -10340,7 +10340,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #467B46;
 }
 
-.label-name__outline {
+.label-light-green2__outline {
   --label_color: #B4E1B5;
   --svg-valute-fill: #B4E1B5;
   --label_borderColor: #B4E1B5;
@@ -10362,7 +10362,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #D9534F;
 }
 
-.label-name__outline {
+.label-light-red__outline {
   --label_color: #FCEEEE;
   --svg-valute-fill: #FCEEEE;
   --label_borderColor: #FCEEEE;
@@ -10384,7 +10384,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 
-.label-name__outline {
+.label-rose__outline {
   --label_color: #FF9996;
   --svg-valute-fill: #FF9996;
   --label_borderColor: #FF9996;
@@ -10406,7 +10406,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 
-.label-name__outline {
+.label-grey4__outline {
   --label_color: #777777;
   --svg-valute-fill: #777777;
   --label_borderColor: #777777;
