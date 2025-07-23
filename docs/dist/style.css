@@ -9665,7 +9665,13 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --limited-stroke-off: _brand-colors(_transparent);
 }
 .btn-link__minimal {
+  align-items: center;
+  border-width: 0;
+  display: inline-flex;
   line-height: 1;
+}
+.btn-link__minimal .svg--icon {
+  top: auto;
 }
 .btn-link__nopadding, .btn-link__minimal {
   padding-left: 0;

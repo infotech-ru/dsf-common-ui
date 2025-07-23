@@ -408,7 +408,13 @@ a.btn {
     }
   }
   &__minimal{
+    align-items: center;
+    border-width: 0;
+    display: inline-flex;
     line-height: 1;
+    .svg--icon{
+      top: auto;
+    }
   }
   &__nopadding,
   &__minimal{
