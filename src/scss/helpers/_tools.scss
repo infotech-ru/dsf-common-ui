@@ -563,9 +563,12 @@
   border: 1px solid brandPalette(border);
   --width_border: 1px;
   &-top{
-    border-top: 1px solid brandPalette(border);
     --width_border-top: 1px;
+    border-top-color: brandPalette(border);
+    border-top-style: solid;
+    border-top-width: var(--width_border-top, 1px);
     &__none{
+      --width_border-top:0px;
       border-top: none !important;
       &__mobile{ 
         .mobile-view &{
@@ -609,9 +612,12 @@
     }
   }
   &-right{
-    border-right: 1px solid brandPalette(border);
     --width_border-right: 1px;
+    border-right-color: brandPalette(border);
+    border-right-style: solid;
+    border-right-width: var(--width_border-right, 1px);
     &__none {
+      --width_border-right: 0px;
       border-right: none !important;
       &__mobile{ 
         .mobile-view &{
@@ -655,9 +661,12 @@
     }
   }
   &-bottom{
-    border-bottom: 1px solid brandPalette(border);
     --width_border-bottom: 1px;
+    border-bottom-color: brandPalette(border);
+    border-bottom-style: solid;
+    border-bottom-width: var(--width_border-bottom, 1px);
     &__none {
+      --width_border-bottom: 0px;
       border-bottom: none !important;
       &__mobile{ 
         .mobile-view &{
@@ -701,9 +710,12 @@
     }
   }
   &-left{
-    border-left: 1px solid brandPalette(border);
     --width_border-left: 1px;
+    border-left-color: brandPalette(border);
+    border-left-style: solid;
+    border-left-width: var(--width_border-left, 1px);
     &__none {
+      --width_border-left: 0;
       border-left: none !important;
       &__mobile{ 
         .mobile-view &{
@@ -747,6 +759,7 @@
     }
   }
   &__none{
+    --width_border: 0px;
     border: none !important;
     &__mobile{ 
       .mobile-view &{
