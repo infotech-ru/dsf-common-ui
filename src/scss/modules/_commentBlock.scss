@@ -214,7 +214,7 @@
     border-radius: #{brandSizes(borderRadiusFormElem)}px;
     display: flex;
     justify-content: space-between;
-    height: rem(calc(lineHeight(input) + 2)); //  + border-top and border-bottom
+    // height: rem(calc(lineHeight(input) + 2)); //  + border-top and border-bottom
     position: relative;
     padding-right: 0px;
     &__whatsup{
@@ -238,8 +238,8 @@
     color: brandPalette(formControl-color);
     flex-basis: 100%;
     font-size: rem(fontSizes(formElem));
-    line-height: rem(calc(lineHeight(input) + 2));
-    height: rem(calc(lineHeight(input) + 2));
+    line-height: rem(lineHeight(input));
+    height: rem(lineHeight(input));
     padding: 0 rem(calc((brandSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
     resize: none;
     // resize: vertical;
@@ -265,9 +265,9 @@
   &_actionBlock{
     display: flex;
     position: absolute;
-    top: 6px;
-    padding-right: #{$textareaFormControlPaddingX}px;
-    right: 0;
+    top: 3px;
+    padding-right: 0;
+    right: #{$textareaFormControlPaddingX}px;
     .commentBlock_inputGroup__bigHeight &{
         top: 12px;
     }

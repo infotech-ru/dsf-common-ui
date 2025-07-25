@@ -13425,7 +13425,6 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   border-radius: 1px;
   display: flex;
   justify-content: space-between;
-  height: 1.75rem;
   position: relative;
   padding-right: 0px;
 }
@@ -13443,8 +13442,8 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   color: #333333;
   flex-basis: 100%;
   font-size: 0.75rem;
-  line-height: 1.75rem;
-  height: 1.75rem;
+  line-height: 1.625rem;
+  height: 1.625rem;
   padding: 0 4rem 0 7px;
   resize: none;
   overflow: hidden;
@@ -13509,9 +13508,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .commentBlock_actionBlock {
   display: flex;
   position: absolute;
-  top: 6px;
-  padding-right: 7px;
-  right: 0;
+  top: 3px;
+  padding-right: 0;
+  right: 7px;
 }
 .commentBlock_inputGroup__bigHeight .commentBlock_actionBlock {
   top: 12px;
