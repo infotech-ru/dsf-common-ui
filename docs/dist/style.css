@@ -7351,6 +7351,13 @@ h6, .h6 {
   height: 24px;
   width: 24px;
 }
+.dropdown__linkIcon.svg--icon__24vb svg {
+  height: 24px;
+  width: 24px;
+}
+.dropdown__linkIcon + .btn-text {
+  margin-left: 0;
+}
 
 .show > .dropdown-menu,
 .open > .dropdown-menu {
@@ -14428,6 +14435,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .carousel-action__bottomRight, .carousel-action__topRight {
   align-self: end;
+  margin-left: auto;
   right: 5px;
 }
 .carousel-action__topLeft, .carousel-action__topRight {

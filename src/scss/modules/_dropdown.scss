@@ -96,6 +96,15 @@
   margin-right: 5px;
   height: 24px;
   width: 24px;
+  &.svg--icon__24vb{
+    svg{
+      height: 24px;
+      width: 24px;
+    }
+  }
+  + .btn-text{
+    margin-left: 0;
+  }
 }
 // Open state for the dropdown
 .show,
