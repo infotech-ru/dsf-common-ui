@@ -7355,7 +7355,7 @@ h6, .h6 {
   height: 24px;
   width: 24px;
 }
-.dropdown__linkIcon + .btn-text {
+.dropdown__linkIcon.svg--icon + .btn-text {
   margin-left: 0;
 }
 

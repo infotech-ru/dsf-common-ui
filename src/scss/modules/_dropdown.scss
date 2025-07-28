@@ -102,8 +102,10 @@
       width: 24px;
     }
   }
-  + .btn-text{
-    margin-left: 0;
+  &.svg--icon{
+    + .btn-text{
+      margin-left: 0;
+    }
   }
 }
 // Open state for the dropdown
