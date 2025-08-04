@@ -359,6 +359,8 @@ export function searchIcon() {
         'bicolors-folder_plus__24vb': ['папка', 'folder', 'plus', 'плюс', '24vb'],
         'bicolors-gearbox': ['коробка', 'передача', 'gearbox', 'minvb'],
         'bicolors-gearbox__24vb': ['коробка', 'передача', 'gearbox', '24vb'],
+        'bicolors-gift': ['подарок', 'gift', 'minvb'],
+        'bicolors-gift__24vb': ['подарок', 'gift', '24vb'],
         'bicolors-globe': ['шар', 'глобус', 'земля', 'globe', 'minvb'],
         'bicolors-globe__24vb': ['шар', 'глобус', 'земля', 'globe', '24vb'],
         'bicolors-globe_arrow_right': ['шар', 'глобус', 'земля', 'globe', 'arrow', 'стрелка', 'right', 'право', 'вправо', 'minvb'],
