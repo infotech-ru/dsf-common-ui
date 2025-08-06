@@ -51,7 +51,7 @@
             }
             &:after{
                 background-color: transparent;
-                border-radius: 8px;
+                border-radius: rem(8);
                 content: attr(data-plainImageText);
                 color: var(--color_white);
                 display: inline-block;
@@ -59,7 +59,7 @@
                 height: auto;
                 position: relative;
                 line-height: rem(18);
-                margin-top: -4px;
+                margin-top: rem(-4);
                 text-transform: uppercase;
             }
             .svg--icon{
@@ -67,7 +67,12 @@
                 vertical-align: text-top;
                 --svg-icon-stroke: var(--color_white);
                 --svg-icon-stroke_blue: var(--color_white);
-                @include svg-icon(16px);
+                height: rem(16);
+                width: rem(16);
+                svg{
+                    height: rem(16);
+                    width: rem(16);
+                }
             }
         }
     }
@@ -117,8 +122,8 @@
         &.radio {
             cursor: pointer;
             font-weight: normal;
-            height: rem(lineHeight(radioItemLabel));
-            line-height: rem(lineHeight(radioItemLabel));
+            // min-height: rem(lineHeight(radioItemLabel));
+            line-height: rem(lineHeight(input) + (brandSizes(formControl_borderSize) * 2));
             margin-bottom: 0;
             padding-top: 0;
             padding-left: 0;
@@ -147,6 +152,12 @@
                 top: 50%;
                 margin-top: rem(-(brandSizes(radioItemDot_size) * 0.5));
                 width: rem(brandSizes(radioItemDot_size));
+            }
+            span{
+                display: inline-block;
+                font-weight: 400;
+                line-height: rem(brandSizes(radioItem_size));
+                vertical-align: middle;
             }
         }
     }

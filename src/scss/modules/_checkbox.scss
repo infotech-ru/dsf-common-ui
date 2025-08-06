@@ -48,8 +48,7 @@
         padding-left: rem(calc(brandSizes(checkboxItem_size) / 0.75));
         position: relative;
         text-align: left;
-
-        line-height: 28px;
+        line-height: rem(lineHeight(input) + brandSizes(formControl_borderSize) * 2);
         vertical-align: top;
         &:hover:before {
             border-color: brandPalette(checkboxItem_border);
@@ -60,11 +59,11 @@
             background-size: 74% auto;
             background-position: center center;
             border: 1px solid brandPalette(checkboxItem_border);
-            border-radius: 0px;
+            border-radius: 0;
             content: " ";
             display: inline-block;
             height: rem(brandSizes(checkboxItem_size));
-            left: 0px;
+            left: 0;
             margin-top: rem(-(brandSizes(checkboxItem_size) * 0.5));
             position: absolute;
             top: 50%;
@@ -120,14 +119,14 @@
                 box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
                 content: '';
                 display: block;
-                height: #{brandSizes(toggleCheckToggle_height)}px;
-                left: #{math.div((math.div(brandSizes(toggleCheck_width), 2) - brandSizes(toggleCheckToggle_width)), 2)}px;
+                height: rem(brandSizes(toggleCheckToggle_height));
+                left: rem(math.div((math.div(brandSizes(toggleCheck_width), 2) - brandSizes(toggleCheckToggle_width)), 2));
                 margin: 0;
                 padding: 0;
                 position: absolute;
                 transition: left 0.3s ease;
-                top: #{math.div((lineHeight(input) + (brandSizes(formControl_borderSize) * 2) - brandSizes(toggleCheckToggle_height)), 2)}px;
-                width: #{brandSizes(toggleCheckToggle_width)}px;
+                top: rem(math.div((lineHeight(input) + (brandSizes(formControl_borderSize) * 2) - brandSizes(toggleCheckToggle_height)), 2));
+                width: rem(brandSizes(toggleCheckToggle_width));
             }
             &:before{
                 background-color: brandColors(_grey2);
@@ -142,13 +141,13 @@
                 left: 0;
                 right: auto;
                 // top: 0;
-                top: #{math.div((lineHeight(input) + (brandSizes(formControl_borderSize) * 2) - brandSizes(toggleCheck_height)), 2)}px;
+                top: rem(math.div((lineHeight(input) + (brandSizes(formControl_borderSize) * 2) - brandSizes(toggleCheck_height)), 2));
                 position: absolute;
-                height: #{brandSizes(toggleCheck_height)}px;
-                width: #{brandSizes(toggleCheck_width)}px;
+                height: rem(brandSizes(toggleCheck_height));
+                width: rem(brandSizes(toggleCheck_width));
             }
             span{
-                font-size: 12px;
+                font-size: rem(fontSizes(formElem));
                 padding-left: 45px;
                 text-indent: 0;
             }
@@ -172,7 +171,7 @@
             &:after{
                 background-color: brandColors(_light-grey);
                 background-image: none;
-                left: #{math.div(brandSizes(toggleCheck_width), 2)}px;
+                left: rem(math.div(brandSizes(toggleCheck_width), 2));
             }
             &:before{
                 background-color: brandColors(_light-blue);
