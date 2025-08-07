@@ -506,6 +506,8 @@ var DSFUI = (function (exports) {
         'bicolors-notification__24vb': ['уведомление', 'сообщение', 'bell', 'колокольчик', 'notification', '24vb'],
         'bicolors-options': ['опции', 'варианты', 'options', 'minvb'],
         'bicolors-options__24vb': ['опции', 'варианты', 'options', '24vb'],
+        'bicolors-paragraph': ['paragraph', 'параграф', 'размтека', 'текст', 'редактор', 'minvb'],
+        'bicolors-paragraph__24vb': ['paragraph', 'параграф', 'размтека', 'текст', 'редактор', '24vb'],
         'bicolors-paperclip': ['скрепка', 'прикреплять', 'paperclip', 'minvb'],
         'bicolors-paperclip__24vb': ['скрепка', 'прикреплять', 'paperclip', '24vb'],
         'bicolors-pause': ['пауза', 'pause', 'minvb'],
