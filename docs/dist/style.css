@@ -17677,6 +17677,30 @@ tbody.collapse.in {
   opacity: 0;
 }
 
+.opacity025 {
+  opacity: 0.25;
+}
+
+.mobile-view .opacity025__mobile {
+  opacity: 0.25;
+}
+
+.opacity05 {
+  opacity: 0.5;
+}
+
+.mobile-view .opacity05__mobile {
+  opacity: 0.5;
+}
+
+.opacity075 {
+  opacity: 0.75;
+}
+
+.mobile-view .opacity075__mobile {
+  opacity: 0.75;
+}
+
 .pointer-events__all {
   pointer-events: all;
 }
