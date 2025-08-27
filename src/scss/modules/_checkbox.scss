@@ -10,6 +10,28 @@
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-fonts' as *;
 @use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-dataImages' as *;
+
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: brandPalette(checkboxItem_bgc);
+    border: 1px solid brandPalette(checkboxItem_border);
+    cursor: pointer;
+    position: relative;
+    height: rem(brandSizes(checkboxItem_size));
+    top: -1px;
+    width: rem(brandSizes(checkboxItem_size));
+    &:checked{
+        background-color: brandPalette(checkboxItemActive_bgc);
+        border-color: brandPalette(checkboxItemActive_border);
+        content: url(brandDataImage(checkIcon));
+    }
+    &[disabled]{
+        cursor: not-allowed;
+    }
+}
 
 .checkbox-item {
     line-height: rem(lineHeight(checkbox));
@@ -18,7 +40,7 @@
         position: absolute;
         clip: rect(0, 0, 0, 0);
         &:checked + label.checkbox:before {
-            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIzLjMzIDE4LjY5Ij48cGF0aCBkPSJNMjMuMTgsMy4zN2EuNS41LDAsMCwxLDAsLjdMOC43MSwxOC41NWEuNS41LDAsMCwxLS43MSwwTDQuNzYsMTUuM2wtLjcxLS43MUwuMTUsMTAuNjlhLjUuNSwwLDAsMSwwLS43MUwzLjM5LDYuNzNhLjUuNSwwLDAsMSwuNzEsMEw4LDEwLjY0YS41LjUsMCwwLDAsLjcxLDBMMTkuMjEuMTVhLjUxLjUxLDAsMCwxLC43MSwwWiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==');
+            background-image: url(brandDataImage(checkIcon));
             background-color: brandPalette(checkboxItemActive_bgc);
             border-color: brandPalette(checkboxItemActive_border);
         }
@@ -27,7 +49,7 @@
             border-color: brandPalette(checkboxItem_border);
         }
         &:checked + label.checkbox:hover:before {
-            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIzLjMzIDE4LjY5Ij48cGF0aCBkPSJNMjMuMTgsMy4zN2EuNS41LDAsMCwxLDAsLjdMOC43MSwxOC41NWEuNS41LDAsMCwxLS43MSwwTDQuNzYsMTUuM2wtLjcxLS43MUwuMTUsMTAuNjlhLjUuNSwwLDAsMSwwLS43MUwzLjM5LDYuNzNhLjUuNSwwLDAsMSwuNzEsMEw4LDEwLjY0YS41LjUsMCwwLDAsLjcxLDBMMTkuMjEuMTVhLjUxLjUxLDAsMCwxLC43MSwwWiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==');
+            background-image: url(brandDataImage(checkIcon));
             background-color: brandPalette(checkboxItemHover_bgc);
             border-color: brandPalette(checkboxItemHover_border);
         }

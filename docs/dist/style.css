@@ -8470,6 +8470,26 @@ g.highcharts-series,
 /* path: dsf-common-ui/src/scss/modules/_checkbox.scss                        */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  border: 1px solid #BABABA;
+  cursor: pointer;
+  position: relative;
+  height: 0.75rem;
+  top: -1px;
+  width: 0.75rem;
+}
+input[type=checkbox]:checked {
+  background-color: #4A8DC6;
+  border-color: #1E6393;
+  content: url("data:image/svg+xml;utf8,%3Csvg width=%278%27 height=%276%27 viewBox=%270 0 8 6%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M0.5 2.593L3.10465 5.19766L7.5 0.802307%27 stroke=%27white%27/%3E%3C/svg%3E");
+}
+input[type=checkbox][disabled] {
+  cursor: not-allowed;
+}
+
 .checkbox-item {
   line-height: 1.5rem;
   position: relative;
@@ -8479,7 +8499,7 @@ g.highcharts-series,
   clip: rect(0, 0, 0, 0);
 }
 .checkbox-item input[type=checkbox]:checked + label.checkbox:before {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIzLjMzIDE4LjY5Ij48cGF0aCBkPSJNMjMuMTgsMy4zN2EuNS41LDAsMCwxLDAsLjdMOC43MSwxOC41NWEuNS41LDAsMCwxLS43MSwwTDQuNzYsMTUuM2wtLjcxLS43MUwuMTUsMTAuNjlhLjUuNSwwLDAsMSwwLS43MUwzLjM5LDYuNzNhLjUuNSwwLDAsMSwuNzEsMEw4LDEwLjY0YS41LjUsMCwwLDAsLjcxLDBMMTkuMjEuMTVhLjUxLjUxLDAsMCwxLC43MSwwWiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
+  background-image: url("data:image/svg+xml;utf8,%3Csvg width=%278%27 height=%276%27 viewBox=%270 0 8 6%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M0.5 2.593L3.10465 5.19766L7.5 0.802307%27 stroke=%27white%27/%3E%3C/svg%3E");
   background-color: #4A8DC6;
   border-color: #1E6393;
 }
@@ -8488,7 +8508,7 @@ g.highcharts-series,
   border-color: #BABABA;
 }
 .checkbox-item input[type=checkbox]:checked + label.checkbox:hover:before {
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIzLjMzIDE4LjY5Ij48cGF0aCBkPSJNMjMuMTgsMy4zN2EuNS41LDAsMCwxLDAsLjdMOC43MSwxOC41NWEuNS41LDAsMCwxLS43MSwwTDQuNzYsMTUuM2wtLjcxLS43MUwuMTUsMTAuNjlhLjUuNSwwLDAsMSwwLS43MUwzLjM5LDYuNzNhLjUuNSwwLDAsMSwuNzEsMEw4LDEwLjY0YS41LjUsMCwwLDAsLjcxLDBMMTkuMjEuMTVhLjUxLjUxLDAsMCwxLC43MSwwWiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==");
+  background-image: url("data:image/svg+xml;utf8,%3Csvg width=%278%27 height=%276%27 viewBox=%270 0 8 6%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M0.5 2.593L3.10465 5.19766L7.5 0.802307%27 stroke=%27white%27/%3E%3C/svg%3E");
   background-color: #4A8DC6;
   border-color: #1E6393;
 }
@@ -14716,6 +14736,62 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .modalHeader_itemTitleSvg svg {
   height: 24px;
   width: 24px;
+}
+
+.modal-light-grey2 .modal-content,
+.modal-light-grey2 .note-modal-content {
+  background-color: #F5F5F5;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+}
+.modal-light-grey2 .modal-footer,
+.modal-light-grey2 .note-modal-footer {
+  padding: 10px 1.5rem 1.5rem;
+}
+.modal-light-grey2 .modal-header,
+.modal-light-grey2 .note-modal-header {
+  padding: 1.5rem 1.5rem 10px;
+}
+.modal-light-grey2 .modal-body {
+  padding: 10px 1.5rem 10px;
+}
+.modal-light-grey2 .modal-body:last-child {
+  padding-bottom: 1.5rem;
+}
+.modal-light-grey2 .modal-footer,
+.modal-light-grey2 .note-modal-footer,
+.modal-light-grey2 .modal-header,
+.modal-light-grey2 .note-modal-header {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+.modal-light-grey2 .modal-header-offset-left {
+  padding-left: 0.75rem;
+}
+.modal-light-grey2 .modal-header-offset-right {
+  padding-right: 0.75rem;
+}
+
+.modal-svgClose .modal-header,
+.modal-svgClose .note-modal-header {
+  padding-right: 2.875rem;
+}
+.modal-svgClose .modal-header .close {
+  background-image: none;
+  height: 1rem;
+  margin: 0;
+  position: absolute;
+  right: 1.875rem;
+  text-indent: 0;
+  top: auto;
+  width: 1rem;
+}
+.modal-svgClose.modal-light-grey2 .modal-header,
+.modal-svgClose.modal-light-grey2 .note-modal-header {
+  padding-right: 2.5rem;
+}
+.modal-svgClose.modal-light-grey2 .modal-header .close {
+  right: 1.5rem;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */

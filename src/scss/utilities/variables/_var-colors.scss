@@ -636,6 +636,7 @@ $brand-palette: (
   menuDropdownHeader_color:               map.get($brand-colors, _grey),
   
   modal_bgc:                              map.get($brand-colors, _white),
+  modal-theme2_bgc:                       map.get($brand-colors, _light-grey2),
   modal_borderColor:                      color.scale(rgba(map.get($brand-colors, _black), 1), $alpha: -80%, $space: rgb),
   modalBackdrop_bgc:                      map.get($brand-colors, _black),
   modalFooter_bgc:                        color.scale(rgba(map.get($brand-colors, _black), 1), $alpha: -97%, $space: rgb),

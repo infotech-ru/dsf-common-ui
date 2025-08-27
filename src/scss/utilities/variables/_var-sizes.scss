@@ -1,5 +1,7 @@
 @use './../functions/func_maps' as *;
 
+$base-gutter: 10;
+
 @function _brand-sizes($keys...) {
   @return val($brand-sizes, $keys...);
 }
@@ -7,11 +9,11 @@
   @return val($brand-sizes, $keys...);
 }
 $brand-sizes: (
-  base_marginSize:                 10,
+  base_marginSize:                 $base-gutter,
   borderRadiusFormElem:            1,
   border-radius-base:              4,
   border-radius-large:             6,
-  btn_paddingX:                    10,
+  btn_paddingX:                    $base-gutter,
   btn_borderWidth:                 1,
   btn_borderRadius:                1,
   btnXs-paddingX:                  5,
@@ -38,16 +40,16 @@ $brand-sizes: (
   dropdownLink_minH:               36,
   dlHorizontalOffset:              180,
   disabel_opacity:                 0.5,
-  dropdownLink_paddingX:           10,
+  dropdownLink_paddingX:           $base-gutter,
   footer_height:                   52,
-  footer_marginTop:                10,
+  footer_marginTop:                $base-gutter,
   footer__mobile_height:           124,
   formControl_borderSize:          1,
-  formControl_paddingX:            10,
+  formControl_paddingX:            $base-gutter,
   formControlStatic_paddingY:      7,
   formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
   formGroup__formFree_mb:          25,
-  header_marginBottom:             10,
+  header_marginBottom:             $base-gutter,
   headerTop_height:                44,
   headerBottom_height:             34,
   iconLabel:                       16,
@@ -55,8 +57,11 @@ $brand-sizes: (
   inputGroupAddon_paddingX:        12,
   inputGroupAddon_paddingY:        6,
   modalSidebar_padding:            16,
+  modal-theme2_padding:            24,
+  modal-header-close_size:         16,
   modal_paddingX:                  15,
-  modal_paddingY:                  10,
+  modal_paddingXR:                 30,
+  modal_paddingY:                  $base-gutter,
   navPills-paddingX:               9,
   navPills-borderWidth:            1,
   output_paddingY:                 7,
@@ -64,7 +69,7 @@ $brand-sizes: (
   paginationItem_height:           20,
   paginationItem_width:            20,
   paginationItem_paddingX:         5,
-  paginationItem_margin:           10,
+  paginationItem_margin:           $base-gutter,
   popoverArrow_width:              6,
   popoverArrow_height:             6,
   popover_borderWidth:             1,
