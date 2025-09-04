@@ -43,7 +43,7 @@
     margin-left: auto;
   }
   &_sticky{
-    background-color: brandPalette(body_bgc);
+    // background-color: brandPalette(body_bgc);
     position: sticky;
     top: 0;
     z-index: zIndex(pageHeader);

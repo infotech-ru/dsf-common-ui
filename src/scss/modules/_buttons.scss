@@ -465,79 +465,7 @@ a.btn {
       }
     }
   }
-  // &__h12{
-  //   .glyphicon {
-  //     font-size: rem(12);
-  //     height: rem(12);
-  //   }
-  //   .svg--icon {
-  //     height: rem(12);
-  //     svg{ 
-  //       height: rem(12);
-  //     }
-  //   }
-  // }
-  // &__h14{
-  //   .glyphicon {
-  //     font-size: rem(14);
-  //     height: rem(14);
-  //   }
-  //   .svg--icon {
-  //     height: rem(14);
-  //     svg{ 
-  //       height: rem(14);
-  //     }
-  //   }
-  // }
-  // &__h18{
-  //   .glyphicon {
-  //     font-size: rem(18);
-  //     height: rem(18);
-  //   }
-  //   .svg--icon {
-  //     height: rem(18);
-  //     svg{ 
-  //       height: rem(18);
-  //     }
-  //   }
-  // }
-  // &__h20{
-  //   .glyphicon {
-  //     font-size: rem(20);
-  //     height: rem(20);
-  //   }
-  //   .svg--icon {
-  //     height: rem(20);
-  //     svg{ 
-  //       height: rem(20);
-  //     }
-  //   }
-  // }
-  // &__h22{
-  //   .glyphicon {
-  //     font-size: rem(22);
-  //     height: rem(22);
-  //   }
-  //   .svg--icon {
-  //     height: rem(22);
-  //     svg{ 
-  //       height: rem(22);
-  //     }
-  //   }
-  // }
-  // &__h24{
-  //   .glyphicon {
-  //     font-size: rem(24);
-  //     height: rem(24);
-  //   }
-  //   .svg--icon {
-  //     height: rem(24);
-  //     svg{ 
-  //       height: rem(24);
-  //     }
-  //   }
-  // }
-  &:hover,
+    &:hover,
   &:focus-visible{
     .svg--icon {
       background-color: brandPalette(btnIconSvgHover_bgc);
@@ -615,9 +543,6 @@ a.btn {
   .stroke{
     stroke: brandPalette(btnIconSvg_color);
   }
-  // .glyphicons-bin{
-  //   #{--svg-icon-fill}: brandColors(_red);
-  // }
 }
 
 .btn-block {

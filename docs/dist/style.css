@@ -3801,7 +3801,6 @@ h6, .h6 {
   margin-left: auto;
 }
 .pageHeader_sticky {
-  background-color: #EEEEEE;
   position: sticky;
   top: 0;
   z-index: 1004;
