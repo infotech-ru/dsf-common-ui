@@ -9993,6 +9993,7 @@ input[type=button].btn-block {
   display: inline-flex;
   font-size: 0.625rem;
   font-weight: 700;
+  justify-content: center;
   line-height: 1rem;
   min-height: 1rem;
   padding: 0 0.3125rem 0.05em 0.25rem;
@@ -10078,8 +10079,10 @@ input[type=button].btn-block {
   font-size: 0.4375rem;
   height: 0.5625rem;
   line-height: 0.5625rem;
+  min-width: 0.6875rem;
+  min-height: auto;
   padding: 0.0625rem;
-  width: 0.6875rem;
+  width: auto;
 }
 .btn-icon .label_small {
   bottom: -2px;

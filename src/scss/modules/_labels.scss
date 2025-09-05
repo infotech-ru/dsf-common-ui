@@ -18,6 +18,7 @@
   display: inline-flex;
   font-size: rem(10);
   font-weight: 700;
+  justify-content: center;
   line-height: rem(16);
   min-height: rem(16);
   padding: 0 rem(5) 0.05em rem(4);
@@ -111,8 +112,10 @@
   font-size: rem(7);
   height: rem(9);
   line-height: rem(9);
+  min-width: rem(11);
+  min-height: auto;
   padding: rem(1);
-  width: rem(11);
+  width: auto;
   .btn-icon &{
     bottom: -2px;
     position: absolute;
