@@ -9,6 +9,7 @@ order: 10
 <p> 
   <code class="language-plaintext highlighter-rouge">.label</code> - имеет квадратные очертания
   <code class="language-plaintext highlighter-rouge">.label_chip</code> - более закругленный и больший по размеру
+  <code class="language-plaintext highlighter-rouge">.label_small</code> - маленький по размеру используется для счетчиков в кнопках и подобном.
 </p>
 
 <h3>Цветовая модификация</h3>
@@ -26,6 +27,9 @@ order: 10
 <div class="mb-10"> 
    <span class="label label_chip label-yellow__outline">label-yellow</span>
 </div>
+<div class="mb-10"> 
+   <span class="label_small label-danger">2</span>
+</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -38,6 +42,12 @@ order: 10
     {% for item in site.data.jekyll.brandlabel %}
       <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}__outline</span>
     {% endfor %}
+  </div>
+  <div>
+    <button class="btn-icon p-relative">
+       <span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-eye"></use></svg></span>
+       <span class="label_small label-dnager">2</span>
+    </button>
   </div>
 </div>
 
