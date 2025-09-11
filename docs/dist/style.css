@@ -8844,11 +8844,11 @@ input[type=checkbox][disabled] {
 /* path: dsf-common-ui/src/scss/modules/_buttons.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.btn-link, .nav-btns > li > a,
-.nav-btns .nav-link, .btn-warning__outline, .btn-danger__outline, .btn-success__outline, .btn-primary__outline, .btn-default__outline, .nav-btns > li.active > a,
+.btn-warning__outline, .btn-danger__outline, .btn-success__outline, .btn-primary__outline, .btn-default__outline, .nav-btns > li.active > a,
 .nav-btns > li > a.active,
 .nav-btns .nav-link.active,
-.nav-btns .active .nav-link, .btn-warning, .btn-danger, .btn-success, .btn-primary, .btn-group__theme > [class^=btn].active, .btn-default, .btn-group__theme > [class^=btn], .btn {
+.nav-btns .active .nav-link, .btn-link, .nav-btns > li > a,
+.nav-btns .nav-link, .btn-warning, .btn-danger, .btn-success, .btn-primary, .btn-group__theme > [class^=btn].active, .btn-default, .btn-group__theme > [class^=btn], .btn {
   background-image: none;
   border-style: solid;
   border-color: transparent;
@@ -8871,43 +8871,44 @@ input[type=checkbox][disabled] {
   -ms-user-select: none;
   user-select: none;
 }
-.btn-link:hover, .nav-btns > li > a:hover,
-.nav-btns .nav-link:hover, .btn-warning__outline:hover, .btn-danger__outline:hover, .btn-success__outline:hover, .btn-primary__outline:hover, .btn-default__outline:hover, .btn-warning:hover, .btn-danger:hover, .btn-success:hover, .btn-primary:hover, .btn-default:hover, .btn-group__theme > [class^=btn]:hover, .btn:hover, .btn-link:focus-visible, .nav-btns > li > a:focus-visible,
-.nav-btns .nav-link:focus-visible, .btn-warning__outline:focus-visible, .btn-danger__outline:focus-visible, .btn-success__outline:focus-visible, .btn-primary__outline:focus-visible, .btn-default__outline:focus-visible, .btn-warning:focus-visible, .btn-danger:focus-visible, .btn-success:focus-visible, .btn-primary:focus-visible, .btn-default:focus-visible, .btn-group__theme > [class^=btn]:focus-visible, .btn:focus-visible, .btn-link:focus, .nav-btns > li > a:focus,
-.nav-btns .nav-link:focus, .btn-warning__outline:focus, .btn-danger__outline:focus, .btn-success__outline:focus, .btn-primary__outline:focus, .btn-default__outline:focus, .btn-warning:focus, .btn-danger:focus, .btn-success:focus, .btn-primary:focus, .btn-default:focus, .btn-group__theme > [class^=btn]:focus, .btn:focus, .btn-link:active, .nav-btns > li > a:active,
-.nav-btns .nav-link:active, .btn-warning__outline:active, .btn-danger__outline:active, .btn-success__outline:active, .btn-primary__outline:active, .btn-default__outline:active, .btn-warning:active, .btn-danger:active, .btn-success:active, .btn-primary:active, .btn-default:active, .btn-group__theme > [class^=btn]:active, .btn:active, .active.btn-link, .nav-btns > li > a.active,
-.nav-btns .active.nav-link, .active.btn-warning__outline, .active.btn-danger__outline, .active.btn-success__outline, .active.btn-primary__outline, .active.btn-default__outline, .active.btn-warning, .active.btn-danger, .active.btn-success, .active.btn-primary, .btn-group__theme > .active[class^=btn], .active.btn-default, .active.btn, .focus.btn-link, .nav-btns > li > a.focus,
-.nav-btns .focus.nav-link, .focus.btn-warning__outline, .focus.btn-danger__outline, .focus.btn-success__outline, .focus.btn-primary__outline, .focus.btn-default__outline, .focus.btn-warning, .focus.btn-danger, .focus.btn-success, .focus.btn-primary, .focus.btn-default, .btn-group__theme > .focus[class^=btn], .focus.btn {
+.btn-warning__outline:hover, .btn-danger__outline:hover, .btn-success__outline:hover, .btn-primary__outline:hover, .btn-default__outline:hover, .btn-link:hover, .nav-btns > li > a:hover,
+.nav-btns .nav-link:hover, .btn-warning:hover, .btn-danger:hover, .btn-success:hover, .btn-primary:hover, .btn-default:hover, .btn-group__theme > [class^=btn]:hover, .btn:hover, .btn-warning__outline:focus-visible, .btn-danger__outline:focus-visible, .btn-success__outline:focus-visible, .btn-primary__outline:focus-visible, .btn-default__outline:focus-visible, .btn-link:focus-visible, .nav-btns > li > a:focus-visible,
+.nav-btns .nav-link:focus-visible, .btn-warning:focus-visible, .btn-danger:focus-visible, .btn-success:focus-visible, .btn-primary:focus-visible, .btn-default:focus-visible, .btn-group__theme > [class^=btn]:focus-visible, .btn:focus-visible, .btn-warning__outline:focus, .btn-danger__outline:focus, .btn-success__outline:focus, .btn-primary__outline:focus, .btn-default__outline:focus, .btn-link:focus, .nav-btns > li > a:focus,
+.nav-btns .nav-link:focus, .btn-warning:focus, .btn-danger:focus, .btn-success:focus, .btn-primary:focus, .btn-default:focus, .btn-group__theme > [class^=btn]:focus, .btn:focus, .btn-warning__outline:active, .btn-danger__outline:active, .btn-success__outline:active, .btn-primary__outline:active, .btn-default__outline:active, .btn-link:active, .nav-btns > li > a:active,
+.nav-btns .nav-link:active, .btn-warning:active, .btn-danger:active, .btn-success:active, .btn-primary:active, .btn-default:active, .btn-group__theme > [class^=btn]:active, .btn:active, .active.btn-warning__outline, .active.btn-danger__outline, .active.btn-success__outline, .active.btn-primary__outline, .active.btn-default__outline,
+.nav-btns > li > a.active,
+.nav-btns .active.nav-link, .active.btn-link, .active.btn-warning, .active.btn-danger, .active.btn-success, .active.btn-primary, .btn-group__theme > .active[class^=btn], .active.btn-default, .active.btn, .focus.btn-warning__outline, .focus.btn-danger__outline, .focus.btn-success__outline, .focus.btn-primary__outline, .focus.btn-default__outline, .focus.btn-link, .nav-btns > li > a.focus,
+.nav-btns .focus.nav-link, .focus.btn-warning, .focus.btn-danger, .focus.btn-success, .focus.btn-primary, .focus.btn-default, .btn-group__theme > .focus[class^=btn], .focus.btn {
   outline: none;
   text-decoration: none;
 }
-.disabled.btn-link, .nav-btns > li > a.disabled,
-.nav-btns .disabled.nav-link, .disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group__theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-link, .nav-btns > li > a[disabled],
-.nav-btns [disabled].nav-link, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group__theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-link, fieldset[disabled] .nav-btns > li > a,
+.disabled.btn-warning__outline, .disabled.btn-danger__outline, .disabled.btn-success__outline, .disabled.btn-primary__outline, .disabled.btn-default__outline, .disabled.btn-link, .nav-btns > li > a.disabled,
+.nav-btns .disabled.nav-link, .disabled.btn-warning, .disabled.btn-danger, .disabled.btn-success, .disabled.btn-primary, .disabled.btn-default, .btn-group__theme > .disabled[class^=btn], .disabled.btn, [disabled].btn-warning__outline, [disabled].btn-danger__outline, [disabled].btn-success__outline, [disabled].btn-primary__outline, [disabled].btn-default__outline, [disabled].btn-link, .nav-btns > li > a[disabled],
+.nav-btns [disabled].nav-link, [disabled].btn-warning, [disabled].btn-danger, [disabled].btn-success, [disabled].btn-primary, [disabled].btn-default, .btn-group__theme > [disabled][class^=btn], [disabled].btn, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-link, fieldset[disabled] .nav-btns > li > a,
 fieldset[disabled] .nav-btns .nav-link,
-.nav-btns fieldset[disabled] .nav-link, fieldset[disabled] .btn-warning__outline, fieldset[disabled] .btn-danger__outline, fieldset[disabled] .btn-success__outline, fieldset[disabled] .btn-primary__outline, fieldset[disabled] .btn-default__outline, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group__theme > [class^=btn], fieldset[disabled] .btn {
+.nav-btns fieldset[disabled] .nav-link, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-success, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-default, fieldset[disabled] .btn-group__theme > [class^=btn], fieldset[disabled] .btn {
   cursor: not-allowed;
   opacity: 0.5;
   box-shadow: none;
 }
-.btn-link .badge, .nav-btns > li > a .badge,
-.nav-btns .nav-link .badge, .btn-warning__outline .badge, .btn-danger__outline .badge, .btn-success__outline .badge, .btn-primary__outline .badge, .btn-default__outline .badge, .btn-warning .badge, .btn-danger .badge, .btn-success .badge, .btn-primary .badge, .btn-default .badge, .btn-group__theme > [class^=btn] .badge, .btn .badge {
+.btn-warning__outline .badge, .btn-danger__outline .badge, .btn-success__outline .badge, .btn-primary__outline .badge, .btn-default__outline .badge, .btn-link .badge, .nav-btns > li > a .badge,
+.nav-btns .nav-link .badge, .btn-warning .badge, .btn-danger .badge, .btn-success .badge, .btn-primary .badge, .btn-default .badge, .btn-group__theme > [class^=btn] .badge, .btn .badge {
   font-size: 11px;
   line-height: 13px;
   padding: 0px 5px;
 }
-.btn-link .caret, .nav-btns > li > a .caret,
-.nav-btns .nav-link .caret, .btn-warning__outline .caret, .btn-danger__outline .caret, .btn-success__outline .caret, .btn-primary__outline .caret, .btn-default__outline .caret, .btn-warning .caret, .btn-danger .caret, .btn-success .caret, .btn-primary .caret, .btn-default .caret, .btn-group__theme > [class^=btn] .caret, .btn .caret {
+.btn-warning__outline .caret, .btn-danger__outline .caret, .btn-success__outline .caret, .btn-primary__outline .caret, .btn-default__outline .caret, .btn-link .caret, .nav-btns > li > a .caret,
+.nav-btns .nav-link .caret, .btn-warning .caret, .btn-danger .caret, .btn-success .caret, .btn-primary .caret, .btn-default .caret, .btn-group__theme > [class^=btn] .caret, .btn .caret {
   margin-left: 0;
 }
-.btn-link .svg--icon, .nav-btns > li > a .svg--icon,
-.nav-btns .nav-link .svg--icon, .btn-warning__outline .svg--icon, .btn-danger__outline .svg--icon, .btn-success__outline .svg--icon, .btn-primary__outline .svg--icon, .btn-default__outline .svg--icon, .btn-warning .svg--icon, .btn-danger .svg--icon, .btn-success .svg--icon, .btn-primary .svg--icon, .btn-default .svg--icon, .btn-group__theme > [class^=btn] .svg--icon, .btn .svg--icon {
+.btn-warning__outline .svg--icon, .btn-danger__outline .svg--icon, .btn-success__outline .svg--icon, .btn-primary__outline .svg--icon, .btn-default__outline .svg--icon, .btn-link .svg--icon, .nav-btns > li > a .svg--icon,
+.nav-btns .nav-link .svg--icon, .btn-warning .svg--icon, .btn-danger .svg--icon, .btn-success .svg--icon, .btn-primary .svg--icon, .btn-default .svg--icon, .btn-group__theme > [class^=btn] .svg--icon, .btn .svg--icon {
   height: var(--svgIcon_height, 0.75rem);
   position: relative;
   top: 2px;
 }
-.btn-link .svg--icon svg, .nav-btns > li > a .svg--icon svg,
-.nav-btns .nav-link .svg--icon svg, .btn-warning__outline .svg--icon svg, .btn-danger__outline .svg--icon svg, .btn-success__outline .svg--icon svg, .btn-primary__outline .svg--icon svg, .btn-default__outline .svg--icon svg, .btn-warning .svg--icon svg, .btn-danger .svg--icon svg, .btn-success .svg--icon svg, .btn-primary .svg--icon svg, .btn-default .svg--icon svg, .btn-group__theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
+.btn-warning__outline .svg--icon svg, .btn-danger__outline .svg--icon svg, .btn-success__outline .svg--icon svg, .btn-primary__outline .svg--icon svg, .btn-default__outline .svg--icon svg, .btn-link .svg--icon svg, .nav-btns > li > a .svg--icon svg,
+.nav-btns .nav-link .svg--icon svg, .btn-warning .svg--icon svg, .btn-danger .svg--icon svg, .btn-success .svg--icon svg, .btn-primary .svg--icon svg, .btn-default .svg--icon svg, .btn-group__theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
   height: var(--svgIcon_height, 0.75rem);
   max-width: 20px;
   width: auto;
@@ -8949,7 +8950,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-default.disabled:hover, .btn-group__theme > .disabled[class^=btn]:hover, .disabled.btn:hover, .btn-default.disabled:focus-visible, .btn-group__theme > .disabled[class^=btn]:focus-visible, .disabled.btn:focus-visible, .btn-default.disabled:active, .btn-group__theme > .disabled[class^=btn]:active, .disabled.btn:active, .btn-default.disabled:active:focus, .btn-default.disabled.active, .btn-group__theme > .disabled.active[class^=btn], .disabled.active.btn, .btn-default.disabled.active:focus, .btn-default.disabled.focus, .btn-group__theme > .disabled.focus[class^=btn], .disabled.focus.btn, .btn-default[disabled]:hover, .btn-group__theme > [disabled][class^=btn]:hover, [disabled].btn:hover, .btn-default[disabled]:focus-visible, .btn-group__theme > [disabled][class^=btn]:focus-visible, [disabled].btn:focus-visible, .btn-default[disabled]:active, .btn-group__theme > [disabled][class^=btn]:active, [disabled].btn:active, .btn-default[disabled]:active:focus, .btn-default[disabled].active, .btn-group__theme > [disabled].active[class^=btn], [disabled].active.btn, .btn-default[disabled].active:focus, .btn-default[disabled].focus, .btn-group__theme > [disabled].focus[class^=btn], [disabled].focus.btn, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-group__theme > [class^=btn]:hover, fieldset[disabled] .btn:hover, fieldset[disabled] .btn-default:focus-visible, fieldset[disabled] .btn-group__theme > [class^=btn]:focus-visible, fieldset[disabled] .btn:focus-visible, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-group__theme > [class^=btn]:active, fieldset[disabled] .btn:active, fieldset[disabled] .btn-default:active:focus, fieldset[disabled] .btn-default.active, fieldset[disabled] .btn-group__theme > .active[class^=btn], fieldset[disabled] .active.btn, fieldset[disabled] .btn-default.active:focus, fieldset[disabled] .btn-default.focus, fieldset[disabled] .btn-group__theme > .focus[class^=btn], fieldset[disabled] .focus.btn {
   background-color: #F5F5F5;
@@ -8963,7 +8964,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-default .svg--icon svg, .btn-group__theme > [class^=btn] .svg--icon svg, .btn .svg--icon svg {
   fill: #333333;
@@ -8971,7 +8972,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 
 .btn-primary, .btn-group__theme > [class^=btn].active {
@@ -9000,7 +9001,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-primary.disabled:hover, .btn-primary.disabled:focus-visible, .btn-primary.disabled:active, .btn-primary.disabled:active:focus, .btn-primary.disabled.active, .btn-group__theme > .disabled.active[class^=btn], .btn-primary.disabled.active:focus, .btn-primary.disabled.focus, .btn-primary[disabled]:hover, .btn-primary[disabled]:focus-visible, .btn-primary[disabled]:active, .btn-primary[disabled]:active:focus, .btn-primary[disabled].active, .btn-group__theme > [disabled].active[class^=btn], .btn-primary[disabled].active:focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus-visible, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:active:focus, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-group__theme > .active[class^=btn], fieldset[disabled] .btn-primary.active:focus, fieldset[disabled] .btn-primary.focus {
   background-color: #4A8DC6;
@@ -9014,7 +9015,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-primary .svg--icon svg, .btn-group__theme > [class^=btn].active .svg--icon svg {
   fill: #ffffff;
@@ -9022,7 +9023,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 
 .btn-success {
@@ -9051,7 +9052,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-success.disabled:hover, .btn-success.disabled:focus-visible, .btn-success.disabled:active, .btn-success.disabled:active:focus, .btn-success.disabled.active, .btn-success.disabled.active:focus, .btn-success.disabled.focus, .btn-success[disabled]:hover, .btn-success[disabled]:focus-visible, .btn-success[disabled]:active, .btn-success[disabled]:active:focus, .btn-success[disabled].active, .btn-success[disabled].active:focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus-visible, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success:active:focus, fieldset[disabled] .btn-success.active, fieldset[disabled] .btn-success.active:focus, fieldset[disabled] .btn-success.focus {
   background-color: #69C26A;
@@ -9065,7 +9066,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-success .svg--icon svg {
   fill: #ffffff;
@@ -9073,7 +9074,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 
 .btn-danger {
@@ -9102,7 +9103,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-danger.disabled:hover, .btn-danger.disabled:focus-visible, .btn-danger.disabled:active, .btn-danger.disabled:active:focus, .btn-danger.disabled.active, .btn-danger.disabled.active:focus, .btn-danger.disabled.focus, .btn-danger[disabled]:hover, .btn-danger[disabled]:focus-visible, .btn-danger[disabled]:active, .btn-danger[disabled]:active:focus, .btn-danger[disabled].active, .btn-danger[disabled].active:focus, .btn-danger[disabled].focus, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus-visible, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger:active:focus, fieldset[disabled] .btn-danger.active, fieldset[disabled] .btn-danger.active:focus, fieldset[disabled] .btn-danger.focus {
   background-color: #D9534F;
@@ -9116,7 +9117,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-danger .svg--icon svg {
   fill: #ffffff;
@@ -9124,7 +9125,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 
 .btn-warning {
@@ -9153,7 +9154,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-warning.disabled:hover, .btn-warning.disabled:focus-visible, .btn-warning.disabled:active, .btn-warning.disabled:active:focus, .btn-warning.disabled.active, .btn-warning.disabled.active:focus, .btn-warning.disabled.focus, .btn-warning[disabled]:hover, .btn-warning[disabled]:focus-visible, .btn-warning[disabled]:active, .btn-warning[disabled]:active:focus, .btn-warning[disabled].active, .btn-warning[disabled].active:focus, .btn-warning[disabled].focus, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus-visible, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning:active:focus, fieldset[disabled] .btn-warning.active, fieldset[disabled] .btn-warning.active:focus, fieldset[disabled] .btn-warning.focus {
   background-color: #FFBD41;
@@ -9167,7 +9168,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-warning .svg--icon svg {
   fill: #ffffff;
@@ -9175,7 +9176,101 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
+}
+
+.btn-link, .nav-btns > li > a,
+.nav-btns .nav-link {
+  background-color: transparent;
+  background-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #4A8DC6;
+  cursor: pointer;
+  font-weight: 400;
+}
+.btn-link, .nav-btns > li > a,
+.nav-btns .nav-link, .btn-link:hover, .btn-link:focus, .btn-link:focus-visible, .btn-link.disabled, .btn-link[disabled], fieldset[disabled] .btn-link, .btn-link.active, .btn-link.active:focus, .btn-link:active:focus, .btn-link:active {
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  box-shadow: none;
+  outline: none;
+  text-decoration: none;
+}
+.btn-link:hover, .nav-btns > li > a:hover,
+.nav-btns .nav-link:hover, .btn-link:focus-visible, .nav-btns > li > a:focus-visible,
+.nav-btns .nav-link:focus-visible, .btn-link.active, .nav-btns > li > a.active,
+.nav-btns .active.nav-link, .btn-link.active:focus, .btn-link:active:focus, .btn-link:active, .nav-btns > li > a:active,
+.nav-btns .nav-link:active {
+  background-color: transparent;
+  color: #4A8DC6;
+}
+.btn-link:hover .svg--icon svg, .nav-btns > li > a:hover .svg--icon svg,
+.nav-btns .nav-link:hover .svg--icon svg, .btn-link:focus-visible .svg--icon svg, .nav-btns > li > a:focus-visible .svg--icon svg,
+.nav-btns .nav-link:focus-visible .svg--icon svg, .btn-link.active .svg--icon svg, .nav-btns > li > a.active .svg--icon svg,
+.nav-btns .active.nav-link .svg--icon svg, .btn-link.active:focus .svg--icon svg, .btn-link:active:focus .svg--icon svg, .btn-link:active .svg--icon svg, .nav-btns > li > a:active .svg--icon svg,
+.nav-btns .nav-link:active .svg--icon svg {
+  --svg-icon-fill: #1E6393;
+  --svg-icon-stroke: #1E6393;
+  --svg-icon-fill_blue: #1E6393;
+  --svg-icon-stroke_blue: #1E6393;
+  fill: #1E6393;
+  --limited-stroke-off: #00000000;
+}
+.btn-link.disabled:hover, .nav-btns > li > a.disabled:hover,
+.nav-btns .disabled.nav-link:hover, .btn-link.disabled:focus-visible, .nav-btns > li > a.disabled:focus-visible,
+.nav-btns .disabled.nav-link:focus-visible, .btn-link[disabled]:hover, .nav-btns > li > a[disabled]:hover,
+.nav-btns [disabled].nav-link:hover, .btn-link[disabled]:focus-visible, .nav-btns > li > a[disabled]:focus-visible,
+.nav-btns [disabled].nav-link:focus-visible, .btn-link:active:focus:hover, .btn-link:active:focus:focus-visible, .btn-link:active:hover, .nav-btns > li > a:active:hover,
+.nav-btns .nav-link:active:hover, .btn-link:active:focus-visible, .nav-btns > li > a:active:focus-visible,
+.nav-btns .nav-link:active:focus-visible, fieldset[disabled] .btn-link:hover, fieldset[disabled] .nav-btns > li > a:hover,
+fieldset[disabled] .nav-btns .nav-link:hover,
+.nav-btns fieldset[disabled] .nav-link:hover, fieldset[disabled] .btn-link:focus-visible, fieldset[disabled] .nav-btns > li > a:focus-visible,
+fieldset[disabled] .nav-btns .nav-link:focus-visible,
+.nav-btns fieldset[disabled] .nav-link:focus-visible {
+  color: #4A8DC6;
+  text-decoration: none;
+}
+.btn-link.disabled:hover .svg--icon svg, .nav-btns > li > a.disabled:hover .svg--icon svg,
+.nav-btns .disabled.nav-link:hover .svg--icon svg, .btn-link.disabled:focus-visible .svg--icon svg, .nav-btns > li > a.disabled:focus-visible .svg--icon svg,
+.nav-btns .disabled.nav-link:focus-visible .svg--icon svg, .btn-link[disabled]:hover .svg--icon svg, .nav-btns > li > a[disabled]:hover .svg--icon svg,
+.nav-btns [disabled].nav-link:hover .svg--icon svg, .btn-link[disabled]:focus-visible .svg--icon svg, .nav-btns > li > a[disabled]:focus-visible .svg--icon svg,
+.nav-btns [disabled].nav-link:focus-visible .svg--icon svg, .btn-link:active:focus:hover .svg--icon svg, .btn-link:active:focus:focus-visible .svg--icon svg, .btn-link:active:hover .svg--icon svg, .nav-btns > li > a:active:hover .svg--icon svg,
+.nav-btns .nav-link:active:hover .svg--icon svg, .btn-link:active:focus-visible .svg--icon svg, .nav-btns > li > a:active:focus-visible .svg--icon svg,
+.nav-btns .nav-link:active:focus-visible .svg--icon svg, fieldset[disabled] .btn-link:hover .svg--icon svg, fieldset[disabled] .nav-btns > li > a:hover .svg--icon svg,
+fieldset[disabled] .nav-btns .nav-link:hover .svg--icon svg,
+.nav-btns fieldset[disabled] .nav-link:hover .svg--icon svg, fieldset[disabled] .btn-link:focus-visible .svg--icon svg, fieldset[disabled] .nav-btns > li > a:focus-visible .svg--icon svg,
+fieldset[disabled] .nav-btns .nav-link:focus-visible .svg--icon svg,
+.nav-btns fieldset[disabled] .nav-link:focus-visible .svg--icon svg {
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+  fill: #4A8DC6;
+  --limited-stroke-off: #00000000;
+}
+.btn-link .svg--icon svg, .nav-btns > li > a .svg--icon svg,
+.nav-btns .nav-link .svg--icon svg {
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+  fill: #4A8DC6;
+  --limited-stroke-off: #00000000;
+}
+.btn-link__minimal {
+  align-items: center;
+  border-width: 0;
+  display: inline-flex;
+  line-height: 1;
+}
+.btn-link__minimal .svg--icon {
+  top: auto;
+}
+.btn-link__nopadding, .btn-link__minimal {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .btn-default .badge, .btn-group__theme > [class^=btn] .badge, .btn .badge {
@@ -9222,7 +9317,7 @@ fieldset[disabled] .nav-btns .nav-link,
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
   fill: #333333;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-default__outline:hover .bicolors-filter, .nav-btns > li.active > a:hover .bicolors-filter,
 .nav-btns .active .nav-link:hover .bicolors-filter,
@@ -9311,7 +9406,7 @@ fieldset[disabled] .nav-btns .active .focus.nav-link .svg--icon svg,
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   fill: #333333;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-default__outline.disabled:hover .bicolors-filter, .nav-btns > li.active > a.disabled:hover .bicolors-filter,
 .nav-btns .active .disabled.nav-link:hover .bicolors-filter,
@@ -9408,7 +9503,7 @@ fieldset[disabled] .nav-btns .active .focus.nav-link .bicolors-filter__24vb,
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   fill: #333333;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-default__outline .bicolors-filter, .nav-btns > li.active > a .bicolors-filter,
 .nav-btns > li > a.active .bicolors-filter,
@@ -9444,7 +9539,7 @@ fieldset[disabled] .nav-btns .active .focus.nav-link .bicolors-filter__24vb,
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-primary__outline:hover .bicolors-filter,
 .btn-primary__outline:hover .bicolors-filter__24vb, .btn-primary__outline:focus-visible .bicolors-filter,
@@ -9471,7 +9566,7 @@ fieldset[disabled] .nav-btns .active .focus.nav-link .bicolors-filter__24vb,
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   fill: #4A8DC6;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-primary__outline.disabled:hover .bicolors-filter,
 .btn-primary__outline.disabled:hover .bicolors-filter__24vb, .btn-primary__outline.disabled:focus-visible .bicolors-filter,
@@ -9507,7 +9602,7 @@ fieldset[disabled] .btn-primary__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   fill: #4A8DC6;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-primary__outline .bicolors-filter,
 .btn-primary__outline .bicolors-filter__24vb {
@@ -9536,7 +9631,7 @@ fieldset[disabled] .btn-primary__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-success__outline:hover .bicolors-filter,
 .btn-success__outline:hover .bicolors-filter__24vb, .btn-success__outline:focus-visible .bicolors-filter,
@@ -9563,7 +9658,7 @@ fieldset[disabled] .btn-primary__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
   fill: #467B46;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-success__outline.disabled:hover .bicolors-filter,
 .btn-success__outline.disabled:hover .bicolors-filter__24vb, .btn-success__outline.disabled:focus-visible .bicolors-filter,
@@ -9599,7 +9694,7 @@ fieldset[disabled] .btn-success__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
   fill: #467B46;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-success__outline .bicolors-filter,
 .btn-success__outline .bicolors-filter__24vb {
@@ -9628,7 +9723,7 @@ fieldset[disabled] .btn-success__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-danger__outline:hover .bicolors-filter,
 .btn-danger__outline:hover .bicolors-filter__24vb, .btn-danger__outline:focus-visible .bicolors-filter,
@@ -9655,7 +9750,7 @@ fieldset[disabled] .btn-success__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
   fill: #D9534F;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-danger__outline.disabled:hover .bicolors-filter,
 .btn-danger__outline.disabled:hover .bicolors-filter__24vb, .btn-danger__outline.disabled:focus-visible .bicolors-filter,
@@ -9691,7 +9786,7 @@ fieldset[disabled] .btn-danger__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
   fill: #D9534F;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-danger__outline .bicolors-filter,
 .btn-danger__outline .bicolors-filter__24vb {
@@ -9720,7 +9815,7 @@ fieldset[disabled] .btn-danger__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
   fill: #ffffff;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-warning__outline:hover .bicolors-filter,
 .btn-warning__outline:hover .bicolors-filter__24vb, .btn-warning__outline:focus-visible .bicolors-filter,
@@ -9747,7 +9842,7 @@ fieldset[disabled] .btn-danger__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill: #DE8500;
   --svg-icon-stroke: #DE8500;
   fill: #DE8500;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-warning__outline.disabled:hover .bicolors-filter,
 .btn-warning__outline.disabled:hover .bicolors-filter__24vb, .btn-warning__outline.disabled:focus-visible .bicolors-filter,
@@ -9783,7 +9878,7 @@ fieldset[disabled] .btn-warning__outline.focus .bicolors-filter__24vb {
   --svg-icon-fill: #DE8500;
   --svg-icon-stroke: #DE8500;
   fill: #DE8500;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-warning__outline .bicolors-filter,
 .btn-warning__outline .bicolors-filter__24vb {
@@ -9807,100 +9902,6 @@ a.btn.disabled, fieldset[disabled] a.btn {
   font-size: 0.875rem;
   line-height: 1.875rem;
   padding: 0px 15px;
-}
-
-.btn-link, .nav-btns > li > a,
-.nav-btns .nav-link {
-  background-color: transparent;
-  background-image: none;
-  border-radius: 0;
-  box-shadow: none;
-  color: #4A8DC6;
-  cursor: pointer;
-  font-weight: 400;
-}
-.btn-link, .nav-btns > li > a,
-.nav-btns .nav-link, .btn-link:hover, .btn-link:focus, .btn-link:focus-visible, .btn-link.disabled, .btn-link[disabled], fieldset[disabled] .btn-link, .btn-link.active, .btn-link.active:focus, .btn-link:active:focus, .btn-link:active {
-  background-color: transparent;
-  background-image: none;
-  border-color: transparent;
-  box-shadow: none;
-  outline: none;
-  text-decoration: none;
-}
-.btn-link:hover, .nav-btns > li > a:hover,
-.nav-btns .nav-link:hover, .btn-link:focus-visible, .nav-btns > li > a:focus-visible,
-.nav-btns .nav-link:focus-visible, .btn-link.active, .nav-btns > li > a.active,
-.nav-btns .active.nav-link, .btn-link.active:focus, .btn-link:active:focus, .btn-link:active, .nav-btns > li > a:active,
-.nav-btns .nav-link:active {
-  background-color: transparent;
-  color: #4A8DC6;
-}
-.btn-link:hover .svg--icon svg, .nav-btns > li > a:hover .svg--icon svg,
-.nav-btns .nav-link:hover .svg--icon svg, .btn-link:focus-visible .svg--icon svg, .nav-btns > li > a:focus-visible .svg--icon svg,
-.nav-btns .nav-link:focus-visible .svg--icon svg, .btn-link.active .svg--icon svg, .nav-btns > li > a.active .svg--icon svg,
-.nav-btns .active.nav-link .svg--icon svg, .btn-link.active:focus .svg--icon svg, .btn-link:active:focus .svg--icon svg, .btn-link:active .svg--icon svg, .nav-btns > li > a:active .svg--icon svg,
-.nav-btns .nav-link:active .svg--icon svg {
-  --svg-icon-fill: #1E6393;
-  --svg-icon-stroke: #1E6393;
-  --svg-icon-fill_blue: #1E6393;
-  --svg-icon-stroke_blue: #1E6393;
-  fill: #1E6393;
-  --limited-stroke-off: _brand-colors(_transparent);
-}
-.btn-link.disabled:hover, .nav-btns > li > a.disabled:hover,
-.nav-btns .disabled.nav-link:hover, .btn-link.disabled:focus-visible, .nav-btns > li > a.disabled:focus-visible,
-.nav-btns .disabled.nav-link:focus-visible, .btn-link[disabled]:hover, .nav-btns > li > a[disabled]:hover,
-.nav-btns [disabled].nav-link:hover, .btn-link[disabled]:focus-visible, .nav-btns > li > a[disabled]:focus-visible,
-.nav-btns [disabled].nav-link:focus-visible, .btn-link:active:focus:hover, .btn-link:active:focus:focus-visible, .btn-link:active:hover, .nav-btns > li > a:active:hover,
-.nav-btns .nav-link:active:hover, .btn-link:active:focus-visible, .nav-btns > li > a:active:focus-visible,
-.nav-btns .nav-link:active:focus-visible, fieldset[disabled] .btn-link:hover, fieldset[disabled] .nav-btns > li > a:hover,
-fieldset[disabled] .nav-btns .nav-link:hover,
-.nav-btns fieldset[disabled] .nav-link:hover, fieldset[disabled] .btn-link:focus-visible, fieldset[disabled] .nav-btns > li > a:focus-visible,
-fieldset[disabled] .nav-btns .nav-link:focus-visible,
-.nav-btns fieldset[disabled] .nav-link:focus-visible {
-  color: #4A8DC6;
-  text-decoration: none;
-}
-.btn-link.disabled:hover .svg--icon svg, .nav-btns > li > a.disabled:hover .svg--icon svg,
-.nav-btns .disabled.nav-link:hover .svg--icon svg, .btn-link.disabled:focus-visible .svg--icon svg, .nav-btns > li > a.disabled:focus-visible .svg--icon svg,
-.nav-btns .disabled.nav-link:focus-visible .svg--icon svg, .btn-link[disabled]:hover .svg--icon svg, .nav-btns > li > a[disabled]:hover .svg--icon svg,
-.nav-btns [disabled].nav-link:hover .svg--icon svg, .btn-link[disabled]:focus-visible .svg--icon svg, .nav-btns > li > a[disabled]:focus-visible .svg--icon svg,
-.nav-btns [disabled].nav-link:focus-visible .svg--icon svg, .btn-link:active:focus:hover .svg--icon svg, .btn-link:active:focus:focus-visible .svg--icon svg, .btn-link:active:hover .svg--icon svg, .nav-btns > li > a:active:hover .svg--icon svg,
-.nav-btns .nav-link:active:hover .svg--icon svg, .btn-link:active:focus-visible .svg--icon svg, .nav-btns > li > a:active:focus-visible .svg--icon svg,
-.nav-btns .nav-link:active:focus-visible .svg--icon svg, fieldset[disabled] .btn-link:hover .svg--icon svg, fieldset[disabled] .nav-btns > li > a:hover .svg--icon svg,
-fieldset[disabled] .nav-btns .nav-link:hover .svg--icon svg,
-.nav-btns fieldset[disabled] .nav-link:hover .svg--icon svg, fieldset[disabled] .btn-link:focus-visible .svg--icon svg, fieldset[disabled] .nav-btns > li > a:focus-visible .svg--icon svg,
-fieldset[disabled] .nav-btns .nav-link:focus-visible .svg--icon svg,
-.nav-btns fieldset[disabled] .nav-link:focus-visible .svg--icon svg {
-  --svg-icon-fill: #4A8DC6;
-  --svg-icon-stroke: #4A8DC6;
-  --svg-icon-fill_blue: #4A8DC6;
-  --svg-icon-stroke_blue: #4A8DC6;
-  fill: #4A8DC6;
-  --limited-stroke-off: _brand-colors(_transparent);
-}
-.btn-link .svg--icon svg, .nav-btns > li > a .svg--icon svg,
-.nav-btns .nav-link .svg--icon svg {
-  --svg-icon-fill: #4A8DC6;
-  --svg-icon-stroke: #4A8DC6;
-  --svg-icon-fill_blue: #4A8DC6;
-  --svg-icon-stroke_blue: #4A8DC6;
-  fill: #4A8DC6;
-  --limited-stroke-off: _brand-colors(_transparent);
-}
-.btn-link__minimal {
-  align-items: center;
-  border-width: 0;
-  display: inline-flex;
-  line-height: 1;
-}
-.btn-link__minimal .svg--icon {
-  top: auto;
-}
-.btn-link__nopadding, .btn-link__minimal {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .btn-icon {
@@ -9969,7 +9970,7 @@ fieldset[disabled] .nav-btns .nav-link:focus-visible .svg--icon svg,
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
   --svg-icon-stroke: #D9534F;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-icon__clear {
   background-color: transparent;
@@ -10096,7 +10097,7 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
-  --limited-stroke-off: _brand-colors(_transparent);
+  --limited-stroke-off: #00000000;
 }
 .btn-download .svg--icon svg {
   height: var(--svgIcon_height, 0.75rem);
@@ -14254,6 +14255,13 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   border-color: #4A8DC6;
   background-color: #4A8DC6;
   color: #ffffff;
+}
+
+.nav-btns > li.active > a,
+.nav-btns > li > a.active,
+.nav-btns .nav-link.active,
+.nav-btns .active .nav-link {
+  background-color: #ffffff;
 }
 
 .tab-content {

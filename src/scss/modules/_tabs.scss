@@ -150,6 +150,7 @@
 .nav-btns .active .nav-link {
   @extend .btn-default__outline;
   @extend .btn__shadow;
+  background-color: brandColors(_white);
 }
 
 .tab-content {

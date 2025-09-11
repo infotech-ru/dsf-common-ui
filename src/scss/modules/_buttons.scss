@@ -146,7 +146,7 @@
           #{--svg-icon-stroke}: brandBtn(#{$btn}_svg__hover);
           #{--svg-icon-fill_blue}: brandBtn(#{$btn}_svg_blue__hover);
           #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_svg_blue__hover);
-          #{--limited-stroke-off}: _brand-colors(_transparent);
+          #{--limited-stroke-off}: brandColors(_transparent);
         }
       }
     }
@@ -178,7 +178,7 @@
             #{--svg-icon-stroke}: brandBtn(#{$btn}_svg);
             #{--svg-icon-fill_blue}: brandBtn(#{$btn}_svg_blue);
             #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_svg_blue);
-            #{--limited-stroke-off}: _brand-colors(_transparent);
+            #{--limited-stroke-off}: brandColors(_transparent);
           }
         }
       }
@@ -190,130 +190,10 @@
         #{--svg-icon-stroke}: brandBtn(#{$btn}_svg);
         #{--svg-icon-fill_blue}: brandBtn(#{$btn}_svg_blue);
         #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_svg_blue);
-        #{--limited-stroke-off}: _brand-colors(_transparent);
+        #{--limited-stroke-off}: brandColors(_transparent);
       }
     }
   }
-}
-
-.btn{
-  @extend .btn-default
-}
-
-.btn-default {
-  .badge {
-    background-color: rgba(50, 50, 50, 0.4);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-    color: #FFF;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-  }
-}
-
-@each $btn in default, primary, success, danger, warning {
-  .btn-#{$btn}__outline {
-    background-color: transparent;
-    background-image: none;
-    border-color: brandBtn(#{$btn}_border__outline);
-    color: brandBtn(#{$btn}_color__outline);
-    @extend %btn;
-    &:hover,
-    &:focus-visible,
-    &:active,
-    &:active:focus,
-    &.active,
-    &.active:focus,
-    &.focus {
-      background-color: brandBtn(#{$btn}_border__outline);
-      background-image: none;
-      background-position: inherit;
-      color: brandBtn(#{$btn}_color__outline__hover);
-      .svg--icon svg{
-        #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline__hover);
-        #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline__hover);
-        #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline__hover);
-        #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline__hover);
-        #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline__hover);
-        #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline__hover);
-        #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline__hover);
-        #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline__hover);
-        fill: brandBtn(#{$btn}_color__outline__hover);
-        #{--limited-stroke-off}: _brand-colors(_transparent);
-      }
-      .bicolors-filter,
-      .bicolors-filter__24vb{
-        #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_border__outline);
-      }
-    }
-    &.disabled,
-    &[disabled],
-    fieldset[disabled] & {
-      &:hover,
-      &:focus-visible,
-      &:active,
-      &:active:focus,
-      &.active,
-      &.active:focus,
-      &.focus {
-        background-color: transparent;
-        border-color: brandBtn(#{$btn}_border__outline);
-        color: brandBtn(#{$btn}_color__outline);
-        .svg--icon svg{
-          #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
-          #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
-          #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
-          #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
-          #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
-          #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
-          #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
-          #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
-          fill: brandBtn(#{$btn}_color__outline);
-          #{--limited-stroke-off}: _brand-colors(_transparent);
-        }
-        .bicolors-filter,
-        .bicolors-filter__24vb{
-          #{--infotech_svg-colorStroke}: #fff;
-        }
-      }
-    }
-    .svg--icon svg{
-      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
-      #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
-      #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
-      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
-      #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
-      #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
-      #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
-      #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
-      fill: brandBtn(#{$btn}_color__outline);
-      #{--limited-stroke-off}: _brand-colors(_transparent);
-    }
-    .bicolors-filter,
-    .bicolors-filter__24vb{
-      #{--infotech_svg-colorStroke}: #fff;
-    }
-  }
-}
-
-a.btn {
-  &.disabled,
-  fieldset[disabled] & {
-    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
-  }
-}
-
-.btn-xs,
-.btn-small {
-  border-radius: 1px;
-  font-size: rem(fontSizes(btnXs));
-  line-height: rem(lineHeight(btnXs));
-  padding: #{brandSizes(btnXs-paddingY)}px #{brandSizes(btnXs-paddingX)}px;
-}
-
-.btn-large {
-  border-radius: 1px;
-  font-size: rem(fontSizes(btnLg));
-  line-height: rem(lineHeight(btnLg));
-  padding: #{brandSizes(btnLg-paddingY)}px #{brandSizes(btnLg-paddingX)}px;
 }
 
 .btn-link {
@@ -359,7 +239,7 @@ a.btn {
         #{--svg-icon-fill_blue}: brandPalette(linkHover_color);
         #{--svg-icon-stroke_blue}: brandPalette(linkHover_color);
         fill: brandPalette(linkHover_color);
-        #{--limited-stroke-off}: _brand-colors(_transparent);
+        #{--limited-stroke-off}: brandColors(_transparent);
       }
     }
   }
@@ -368,16 +248,6 @@ a.btn {
   &:active:focus,
   &:active,
   fieldset[disabled] & {
-    // .svg--icon {
-    //   svg {
-    //     #{--svg-icon-fill}: brandBtn(linkDisabled_color);
-    //     #{--svg-icon-stroke}: brandBtn(linkDisabled_color);
-    //     #{--svg-icon-fill_blue}: brandBtn(linkDisabled_color);
-    //     #{--svg-icon-stroke_blue}: brandBtn(linkDisabled_color);
-    //     fill: brandBtn(linkDisabled_color);
-    //     #{--limited-stroke-off}: _brand-colors(_transparent);
-    //   }
-    // }
     &:hover,
     &:focus-visible {
       color: brandPalette(link_color);
@@ -389,14 +259,12 @@ a.btn {
           #{--svg-icon-fill_blue}: brandPalette(link_color);
           #{--svg-icon-stroke_blue}: brandPalette(link_color);
           fill: brandPalette(link_color);
-          #{--limited-stroke-off}: _brand-colors(_transparent);
+          #{--limited-stroke-off}: brandColors(_transparent);
         }
       }
     }
   }
-  // .glyphicons-bin{
-  //   #{--svg-icon-fill}: brandColors(_red);
-  // }
+
   .svg--icon {
     svg {
       #{--svg-icon-fill}: brandPalette(link_color);
@@ -404,7 +272,7 @@ a.btn {
       #{--svg-icon-fill_blue}: brandPalette(link_color);
       #{--svg-icon-stroke_blue}: brandPalette(link_color);
       fill: brandPalette(link_color);
-      #{--limited-stroke-off}: _brand-colors(_transparent);
+      #{--limited-stroke-off}: brandColors(_transparent);
     }
   }
   &__minimal{
@@ -422,6 +290,128 @@ a.btn {
     padding-right: 0;
   }
 }
+
+.btn{
+  @extend .btn-default
+}
+
+.btn-default {
+  .badge {
+    background-color: rgba(50, 50, 50, 0.4);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@each $btn in default, primary, success, danger, warning {
+  .btn-#{$btn}__outline {
+    background-color: transparent;
+    background-image: none;
+    border-color: brandBtn(#{$btn}_border__outline);
+    color: brandBtn(#{$btn}_color__outline);
+    @extend %btn;
+    &:hover,
+    &:focus-visible,
+    &:active,
+    &:active:focus,
+    &.active,
+    &.active:focus,
+    &.focus {
+      background-color: brandBtn(#{$btn}_border__outline);
+      background-image: none;
+      background-position: inherit;
+      color: brandBtn(#{$btn}_color__outline__hover);
+      .svg--icon svg{
+        #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline__hover);
+        #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline__hover);
+        #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline__hover);
+        #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline__hover);
+        #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline__hover);
+        #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline__hover);
+        #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline__hover);
+        #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline__hover);
+        fill: brandBtn(#{$btn}_color__outline__hover);
+        #{--limited-stroke-off}: brandColors(_transparent);
+      }
+      .bicolors-filter,
+      .bicolors-filter__24vb{
+        #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_border__outline);
+      }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus-visible,
+      &:active,
+      &:active:focus,
+      &.active,
+      &.active:focus,
+      &.focus {
+        background-color: transparent;
+        border-color: brandBtn(#{$btn}_border__outline);
+        color: brandBtn(#{$btn}_color__outline);
+        .svg--icon svg{
+          #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
+          #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
+          #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
+          #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
+          #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
+          #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
+          #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
+          #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
+          fill: brandBtn(#{$btn}_color__outline);
+          #{--limited-stroke-off}: brandColors(_transparent);
+        }
+        .bicolors-filter,
+        .bicolors-filter__24vb{
+          #{--infotech_svg-colorStroke}: #fff;
+        }
+      }
+    }
+    .svg--icon svg{
+      #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline);
+      #{--infotech_svg-stroke}: brandBtn(#{$btn}_color__outline);
+      #{--infotech_svg-fill}: brandBtn(#{$btn}_color__outline);
+      #{--infotech_svg-colorFill}: brandBtn(#{$btn}_color__outline);
+      #{--svg-icon-fill_blue}: brandBtn(#{$btn}_color__outline);
+      #{--svg-icon-stroke_blue}: brandBtn(#{$btn}_color__outline);
+      #{--svg-icon-fill}: brandBtn(#{$btn}_color__outline);
+      #{--svg-icon-stroke}: brandBtn(#{$btn}_color__outline);
+      fill: brandBtn(#{$btn}_color__outline);
+      #{--limited-stroke-off}: brandColors(_transparent);
+    }
+    .bicolors-filter,
+    .bicolors-filter__24vb{
+      #{--infotech_svg-colorStroke}: #fff;
+    }
+  }
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+  }
+}
+
+.btn-xs,
+.btn-small {
+  border-radius: 1px;
+  font-size: rem(fontSizes(btnXs));
+  line-height: rem(lineHeight(btnXs));
+  padding: #{brandSizes(btnXs-paddingY)}px #{brandSizes(btnXs-paddingX)}px;
+}
+
+.btn-large {
+  border-radius: 1px;
+  font-size: rem(fontSizes(btnLg));
+  line-height: rem(lineHeight(btnLg));
+  padding: #{brandSizes(btnLg-paddingY)}px #{brandSizes(btnLg-paddingX)}px;
+}
+
+
 
 .btn-icon{
   background-color: transparent;
@@ -508,7 +498,7 @@ a.btn {
       #{--svg-icon-fill_blue}: brandPalette(btnIconSvgDanger_color);
       #{--svg-icon-stroke_blue}: brandPalette(btnIconSvgDanger_color);
       #{--svg-icon-stroke}: brandPalette(btnIconSvgDanger_color);
-      #{--limited-stroke-off}: _brand-colors(_transparent);
+      #{--limited-stroke-off}: brandColors(_transparent);
     }
   }
   &__clear{
@@ -656,7 +646,7 @@ input[type="button"] {
     #{--svg-icon-fill_blue}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke_blue}: brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke}: brandPalette(btnIconSvg_color);
-    #{--limited-stroke-off}: _brand-colors(_transparent);
+    #{--limited-stroke-off}: brandColors(_transparent);
     svg{
       height: var(--svgIcon_height, rem(12));
       width: var(--svgIcon_height, rem(12));
