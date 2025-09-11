@@ -9,9 +9,12 @@
 @use './../utilities/variables/var-lineHeights' as *;
 @use './../utilities/variables/var-fonts' as *;
 @use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-sizes' as *;
+@use './buttons' as *;
 
 .nav-tabs,
-.nav-pills {
+.nav-pills,
+.nav-btns {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -22,11 +25,16 @@
   @extend .nav-tabs;
   flex-direction: column;
 }
-.nav-pills {
+.nav-pills,
+.nav-btns {
   align-items: center;
+}
+.nav-btns {
+  gap: rem(5);
 }
 .nav-tabs>li,
 .nav-pills>li,
+.nav-btns>li,
 .nav-item{
   // padding-right: 5px;
   margin-left: -1px;
@@ -44,7 +52,6 @@
     } 
   }
 }
-
 
 .nav-tabs > li > a,
 .nav-link{ 
@@ -97,6 +104,12 @@
   }
 }
 
+.nav-btns > li > a,
+.nav-btns .nav-link {
+  cursor: pointer;
+  @extend .btn-link;
+}
+
 .nav-tabs > li.active > a,
 .nav-tabs > li > a.active,
 .nav-link.active,
@@ -129,6 +142,14 @@
     background-color: brandPalette(navPills-active_bg);
     color: brandPalette(navPills-active_color);
   }
+}
+
+.nav-btns>li.active>a,
+.nav-btns>li>a.active,
+.nav-btns .nav-link.active,
+.nav-btns .active .nav-link {
+  @extend .btn-default__outline;
+  @extend .btn__shadow;
 }
 
 .tab-content {

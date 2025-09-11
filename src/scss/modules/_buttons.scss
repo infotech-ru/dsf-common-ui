@@ -455,7 +455,7 @@ a.btn {
     #{--svg-icon-fill_blue}: brandPalette(btnDownloadSvg_color);
     #{--svg-icon-stroke_blue}: brandPalette(btnDownloadSvg_color);
     #{--svg-icon-stroke}: brandPalette(btnDownloadSvg_color);
-    #{--limited-stroke-off}: _brand-colors(_transparent);
+    #{--limited-stroke-off}: brandColors(_transparent);
     svg{
       height: rem(brandSizes(btnIconSvg_height));
     }
