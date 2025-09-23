@@ -397,8 +397,8 @@
 }
 
 @each $lineHeightSize in $lineHeightSizeList {
-  .lh#{$lineHeightSize} { line-height: #{$lineHeightSize}px; }
-  .mobile-view .lh#{$lineHeightSize}__mobile { line-height: #{$lineHeightSize}px; }
+  .lh#{$lineHeightSize} { line-height: rem($lineHeightSize) }
+  .mobile-view .lh#{$lineHeightSize}__mobile { line-height: rem($lineHeightSize) }
 }
 
 .p-relative                                 { position: relative; }
