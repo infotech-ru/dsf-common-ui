@@ -3690,6 +3690,16 @@ h6, .h6 {
   --svg-icon-stroke_blue: #1E6393;
   --svg-icon-stroke_green: #1E6393;
 }
+.headerMenu_linkIcon.active .btn-primary__outline {
+  background-color: #4A8DC6;
+}
+.headerMenu_linkIcon.active .btn-primary__outline svg {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+  --svg-icon-stroke_green: #ffffff;
+}
 .headerMenu_linkIcon .headerMenu__link {
   padding: 0 5px;
 }

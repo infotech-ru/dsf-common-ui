@@ -83,6 +83,16 @@
           #{--svg-icon-stroke_green}: brandPalette(menuLinkActive_svg);
         }
       }
+      .btn-primary__outline {
+        background-color: brandPalette(menuLinkActive_bgc);
+        svg{ 
+          #{--svg-icon-fill}: brandPalette(menuLinkActive_color); 
+          #{--svg-icon-fill_blue}: brandPalette(menuLinkActive_color); 
+          #{--svg-icon-stroke}: brandPalette(menuLinkActive_color); 
+          #{--svg-icon-stroke_blue}: brandPalette(menuLinkActive_color);
+          #{--svg-icon-stroke_green}: brandPalette(menuLinkActive_color);
+        }
+      }
     }
     .headerMenu__link{
       padding: 0 5px;
