@@ -43,6 +43,8 @@ brandnamecolor:
   value: #ffffff
 - name: light-blue
   value: #4A8DC6
+- name: light-blue2
+  value: #E4EEF7
 - name: light-blue3
   value: #B6D1E8
 - name: vibrant-blue

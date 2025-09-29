@@ -87,6 +87,10 @@ brandnamecolor {
 }
 
 brandnamecolor {
+  light-blue2: #E4EEF7;
+}
+
+brandnamecolor {
   light-blue3: #B6D1E8;
 }
 

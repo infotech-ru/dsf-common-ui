@@ -19872,6 +19872,78 @@ tbody.collapse.in {
   --border_left_color: #4A8DC6;
 }
 
+.svg-light-blue2 svg,
+.svg-light-blue2.svg--icon svg {
+  --svg-icon-fill: #E4EEF7;
+  --svg-icon-stroke: #E4EEF7;
+  --svg-icon-fill_blue: #E4EEF7;
+  --svg-icon-stroke_blue: #E4EEF7;
+  --svg-valute-fill: #E4EEF7;
+}
+
+.svg-colorStroke-light-blue2 {
+  --infotech_svg-colorStroke: #E4EEF7;
+}
+
+.svg-stroke-light-blue2 {
+  --infotech_svg-stroke: #E4EEF7;
+}
+
+.svg-filled-light-blue2 {
+  --infotech_svg-fill: #E4EEF7;
+}
+
+.svg-colorFilled-light-blue2 {
+  --infotech_svg-colorFill: #E4EEF7;
+}
+
+.text-light-blue2 {
+  color: #E4EEF7;
+  --text_color: #E4EEF7;
+  --svg-valute-fill: #E4EEF7;
+}
+
+.textHover-light-blue2:hover, .textHoverTarget:hover .textHover-light-blue2 {
+  color: #E4EEF7;
+  --text_color: #E4EEF7;
+  --svg-valute-fill: #E4EEF7;
+}
+
+.bg-light-blue2 {
+  background-color: #E4EEF7;
+  --bg_color: #E4EEF7;
+}
+
+.bgHover-light-blue2.bgHoverTarget:hover, .bgHoverTarget:hover .bgHover-light-blue2, .bgHover-light-blue2[draggable=true] {
+  background-color: #E4EEF7;
+  --bg_color: #E4EEF7;
+}
+
+.border-light-blue2 {
+  border-color: #E4EEF7;
+  --border_color: #E4EEF7;
+}
+
+.border-top-light-blue2 {
+  border-top-color: #E4EEF7;
+  --border_top_color: #E4EEF7;
+}
+
+.border-right-light-blue2 {
+  border-right-color: #E4EEF7;
+  --border_right_color: #E4EEF7;
+}
+
+.border-bottom-light-blue2 {
+  border-bottom-color: #E4EEF7;
+  --border_bottom_color: #E4EEF7;
+}
+
+.border-left-light-blue2 {
+  border-left-color: #E4EEF7;
+  --border_left_color: #E4EEF7;
+}
+
 .svg-light-blue3 svg,
 .svg-light-blue3.svg--icon svg {
   --svg-icon-fill: #B6D1E8;
