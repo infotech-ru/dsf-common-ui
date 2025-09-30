@@ -321,6 +321,7 @@
       background-color: brandBtn(#{$btn}_border__outline);
       background-image: none;
       background-position: inherit;
+      border-color: brandBtn(#{$btn}_border__outline);
       color: brandBtn(#{$btn}_color__outline__hover);
       .svg--icon svg{
         #{--infotech_svg-colorStroke}: brandBtn(#{$btn}_color__outline__hover);

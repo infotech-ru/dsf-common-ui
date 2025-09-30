@@ -9309,6 +9309,7 @@ fieldset[disabled] .nav-btns .nav-link:focus-visible .svg--icon svg,
   background-color: #cccccc;
   background-image: none;
   background-position: inherit;
+  border-color: #cccccc;
   color: #333333;
 }
 .btn-default__outline:hover .svg--icon svg, .nav-btns > li.active > a:hover .svg--icon svg,
@@ -9537,6 +9538,7 @@ fieldset[disabled] .nav-btns .active .focus.nav-link .bicolors-filter__24vb,
   background-color: #4A8DC6;
   background-image: none;
   background-position: inherit;
+  border-color: #4A8DC6;
   color: #ffffff;
 }
 .btn-primary__outline:hover .svg--icon svg, .btn-primary__outline:focus-visible .svg--icon svg, .btn-primary__outline:active .svg--icon svg, .btn-primary__outline:active:focus .svg--icon svg, .btn-primary__outline.active .svg--icon svg, .btn-primary__outline.active:focus .svg--icon svg, .btn-primary__outline.focus .svg--icon svg {
@@ -9629,6 +9631,7 @@ fieldset[disabled] .btn-primary__outline.focus .bicolors-filter__24vb {
   background-color: #467B46;
   background-image: none;
   background-position: inherit;
+  border-color: #467B46;
   color: #ffffff;
 }
 .btn-success__outline:hover .svg--icon svg, .btn-success__outline:focus-visible .svg--icon svg, .btn-success__outline:active .svg--icon svg, .btn-success__outline:active:focus .svg--icon svg, .btn-success__outline.active .svg--icon svg, .btn-success__outline.active:focus .svg--icon svg, .btn-success__outline.focus .svg--icon svg {
@@ -9721,6 +9724,7 @@ fieldset[disabled] .btn-success__outline.focus .bicolors-filter__24vb {
   background-color: #D9534F;
   background-image: none;
   background-position: inherit;
+  border-color: #D9534F;
   color: #ffffff;
 }
 .btn-danger__outline:hover .svg--icon svg, .btn-danger__outline:focus-visible .svg--icon svg, .btn-danger__outline:active .svg--icon svg, .btn-danger__outline:active:focus .svg--icon svg, .btn-danger__outline.active .svg--icon svg, .btn-danger__outline.active:focus .svg--icon svg, .btn-danger__outline.focus .svg--icon svg {
@@ -9813,6 +9817,7 @@ fieldset[disabled] .btn-danger__outline.focus .bicolors-filter__24vb {
   background-color: #DE8500;
   background-image: none;
   background-position: inherit;
+  border-color: #DE8500;
   color: #ffffff;
 }
 .btn-warning__outline:hover .svg--icon svg, .btn-warning__outline:focus-visible .svg--icon svg, .btn-warning__outline:active .svg--icon svg, .btn-warning__outline:active:focus .svg--icon svg, .btn-warning__outline.active .svg--icon svg, .btn-warning__outline.active:focus .svg--icon svg, .btn-warning__outline.focus .svg--icon svg {
@@ -13889,7 +13894,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-default {
   background-color: #F5F5F5;
-  border-color: #cccccc;
+  border-color: #F5F5F5;
   color: #333333;
 }
 .alert-default .close {
@@ -13903,7 +13908,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-primary {
   background-color: #4A8DC6;
-  border-color: #1E6393;
+  border-color: #4A8DC6;
   color: #ffffff;
 }
 .alert-primary .close {
@@ -13916,9 +13921,9 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   color: #ffffff;
 }
 .alert-success {
-  background-color: #B4E1B5;
-  border-color: #467B46;
-  color: #333333;
+  background-color: #DAF0DA;
+  border-color: #DAF0DA;
+  color: #467B46;
 }
 .alert-success .close {
   color: #467B46;
@@ -13931,8 +13936,8 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-danger {
   background-color: #FCEEEE;
-  border-color: #D9534F;
-  color: #333333;
+  border-color: #FCEEEE;
+  color: #D9534F;
 }
 .alert-danger .close {
   color: #D9534F;
@@ -13945,8 +13950,8 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 }
 .alert-warning {
   background-color: #FFDF9A;
-  border-color: #D9534F;
-  color: #333333;
+  border-color: #FFDF9A;
+  color: #DE8500;
 }
 .alert-warning .close {
   color: #DE8500;
@@ -13955,18 +13960,18 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   --svg-icon-stroke_blue: #DE8500;
 }
 .alert-warning h4, .alert-warning .h4 {
-  color: #D9534F;
+  color: #DE8500;
 }
 .alert-info {
   background-color: #E4EEF7;
-  border-color: #4A8DC6;
-  color: #333333;
+  border-color: #E4EEF7;
+  color: #4A8DC6;
 }
 .alert-info .close {
-  color: #4A8DC6;
-  --svg-icon-fill: #4A8DC6;
-  --svg-icon-stroke: #4A8DC6;
-  --svg-icon-stroke_blue: #4A8DC6;
+  color: #E4EEF7;
+  --svg-icon-fill: #E4EEF7;
+  --svg-icon-stroke: #E4EEF7;
+  --svg-icon-stroke_blue: #E4EEF7;
 }
 .alert-info h4, .alert-info .h4 {
   color: #4A8DC6;
