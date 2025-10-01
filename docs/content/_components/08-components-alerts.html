@@ -119,29 +119,40 @@ order: 8
 
 <h4> Особый вид уведомлений с иконкой устанавливается доп. классом </h4>
 <br>
-<p><code class="language-plaintext highlighter-rouge">alert__attention</code>, <code class="language-plaintext highlighter-rouge">alert__caution</code></p>
+<p><code class="language-plaintext highlighter-rouge">alert__checked</code>, <code class="language-plaintext highlighter-rouge">alert__attention</code>, <code class="language-plaintext highlighter-rouge">alert__caution</code></p>
 
 {% highlight html %}
-  <div class="alert alert-warning alert__attention mb-20">
-    <div class="h4">Внимание!</div>
+  <div class="alert alert-success alert__checked">
+    <div class="h4 mb-10">Внимание!</div>
+    <div>Тут текст уведлмления alert__checked</div>
+    <a href="">Внесите данные</a>
+  </div>
+  <div class="alert alert-default alert__attention">
+    <div class="h4 mb-10">Внимание!</div>
     <div>Тут текст уведлмления alert__attention</div>
     <a href="">Внесите данные</a>
   </div>
   <div class="alert alert-danger alert__caution">
-      <div class="h4">Внимание!</div>
+      <div class="h4 mb-10">Внимание!</div>
       <div class="">Тут текст уведлмления alert__caution</div>
       <a href="">Внесите данные</a>
   </div>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <div class="alert alert-warning alert__attention">
-      <div class="h4">Внимание!</div>
+  <div class="alert alert-success alert__checked mb-20">
+    <div class="h4 mb-10">Внимание!</div>
+    <div>Тут текст уведлмления alert__checked</div>
+    <a href="">Внесите данные</a>
+  </div>
+
+  <div class="alert alert-default alert__attention mb-20">
+      <div class="h4 mb-10">Внимание!</div>
       <div>Тут текст уведлмления alert__attention</div>
       <a href="">Внесите данные</a>
   </div>
 
     <div class="alert alert-danger alert__caution">
-      <div class="h4">Внимание!</div>
+      <div class="h4 mb-10">Внимание!</div>
       <div class="">Тут текст уведлмления alert__caution</div>
       <a href="">Внесите данные</a>
     </div>
