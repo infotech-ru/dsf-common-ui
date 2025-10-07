@@ -1,9 +1,11 @@
+@use './../variables/_var-bootstrap-v3' as varv3;
+@use './../variables/_var-bootstrapSizes' as varvbootstrapSizes;
 @mixin reset-text() {
-  font-family: $font-family-base;
+  font-family: varv3.$font-family-base;
   // We deliberately do NOT reset font-size or word-wrap.
   font-style: normal;
-  font-weight: $font-weight-normal;
-  line-height: $line-height-base;
+  font-weight: varvbootstrapSizes.$font-weight-normal;
+  line-height: varv3.$line-height-base;
   text-align: left; // Fallback for where `start` is not supported
   text-align: start;
   text-decoration: none;
