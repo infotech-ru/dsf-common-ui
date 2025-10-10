@@ -231,6 +231,7 @@ $brand-namecolors: (
   'success':                             map.get($brand-colors, _green),
   'info':                                map.get($brand-colors, _light-blue2),
   'muted':                               map.get($brand-colors, _grey),
+  'light-orange':                        map.get($brand-colors, _light-orange),
   'orange':                              map.get($brand-colors, _orange),
   'dark-grey':                           map.get($brand-colors, _dark-grey),
   'grey':                                map.get($brand-colors, _grey),
@@ -239,8 +240,9 @@ $brand-namecolors: (
   'grey4':                               map.get($brand-colors, _grey4),
   'light-grey':                          map.get($brand-colors, _light-grey),
   'light-grey2':                         map.get($brand-colors, _light-grey2),
+  'light-grey3':                         map.get($brand-colors, _light-grey3),
   'light-grey4':                         map.get($brand-colors, _light-grey4),
-  'light-red':                           map.get($brand-colors, _light-red),
+  'light-red':                           map.get($brand-colors, _light-red),  
   'dark-red':                            map.get($brand-colors, _dark-red),
   'rose':                                map.get($brand-colors, _rose),
   'clear':                               map.get($brand-colors, _transparent),
@@ -253,7 +255,9 @@ $brand-namecolors: (
   'light-yellow2':                       map.get($brand-colors, _light-yellow2),
   'yellow2':                             map.get($brand-colors, _yellow2),
   'light-green':                         map.get($brand-colors, _light-green),
+  'light-green2':                        map.get($brand-colors, _light-green2),
   'dark-green':                          map.get($brand-colors, _dark-green),
+  'dark-cyan':                           map.get($brand-colors, _dark-cyan),
   'black':                               map.get($brand-colors, _black),
 );
 

@@ -13,6 +13,8 @@ brandnamecolor:
   value: #E4EEF7
 - name: muted
   value: #BABABA
+- name: light-orange
+  value: #FFDF9A
 - name: orange
   value: #FFBD41
 - name: dark-grey
@@ -29,6 +31,8 @@ brandnamecolor:
   value: #f9f9f9
 - name: light-grey2
   value: #F5F5F5
+- name: light-grey3
+  value: #EEEEEE
 - name: light-grey4
   value: #e5e5e5
 - name: light-red
@@ -57,8 +61,12 @@ brandnamecolor:
   value: #FFDA7D
 - name: light-green
   value: #DAF0DA
+- name: light-green2
+  value: #B4E1B5
 - name: dark-green
   value: #467B46
+- name: dark-cyan
+  value: #008B8B
 - name: black
   value: #000000
 
