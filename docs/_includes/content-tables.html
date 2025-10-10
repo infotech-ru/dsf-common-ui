@@ -5,7 +5,7 @@
         {% for doc in site.tables %}
         {% if doc.category == page.category %}
         <li class="nav-item">
-          <a class="nav-link" href="{{site.baseurl}}{{ page.url }}#{{ doc.anchor }}">{{ doc.menutitle }}</a>
+          <a class="nav-link" href="{{site.baseurl}}{{ page.url }}#{{ doc.anchor }}"><span>{{ doc.menutitle }}</span><span class="menusubtitle">{{ doc.menusubtitle }}</span></a>
         </li>
         {% endif %}
         {% endfor %}

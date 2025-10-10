@@ -522,3 +522,7 @@ pre{
   border: 1px solid #ccc;
   display: block;
 }
+.menusubtitle{
+  margin-left: auto;
+  font-size: 11px;
+}

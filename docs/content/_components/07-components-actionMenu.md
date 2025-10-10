@@ -1,6 +1,7 @@
 ---
 Title: Меню (actionMenu с dropdown)
-menutitle: Меню (actionMenu с dropdown)
+menutitle: Меню 
+menusubtitle: actionMenu с dropdown
 category: components
 anchor: components-menu
 order: 7
