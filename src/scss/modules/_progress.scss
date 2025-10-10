@@ -44,6 +44,7 @@
         font-size: rem(12);
         // float: left;
         height: 100%;
+        position: relative;
         line-height: var(--progress_height, brandSizes(progress_height));
         text-align: center;
         width: 0%;

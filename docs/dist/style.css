@@ -15657,6 +15657,7 @@ body[style^=padding-right] .modal-sidebar {
   color: var(--color_white);
   font-size: 0.75rem;
   height: 100%;
+  position: relative;
   line-height: var(--progress_height, 14);
   text-align: center;
   width: 0%;
