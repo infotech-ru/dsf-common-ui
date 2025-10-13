@@ -27,7 +27,7 @@ input[type=checkbox] {
     &:checked{
         background-color: brandPalette(checkboxItemActive_bgc);
         border-color: brandPalette(checkboxItemActive_border);
-        content: url(dataimages.brandDataImage(checkIcon));
+        content: url("#{dataimages.brandDataImage(checkIcon)}");
     }
     &[disabled]{
         cursor: not-allowed;
@@ -41,7 +41,7 @@ input[type=checkbox] {
         position: absolute;
         clip: rect(0, 0, 0, 0);
         &:checked + label.checkbox:before {
-            background-image: url(dataimages.brandDataImage(checkIcon));
+            background-image: url("#{dataimages.brandDataImage(checkIcon)}");
             background-color: brandPalette(checkboxItemActive_bgc);
             border-color: brandPalette(checkboxItemActive_border);
         }
@@ -50,7 +50,7 @@ input[type=checkbox] {
             border-color: brandPalette(checkboxItem_border);
         }
         &:checked + label.checkbox:hover:before {
-            background-image: url(dataimages.brandDataImage(checkIcon));
+            background-image: url("#{dataimages.brandDataImage(checkIcon)}");
             background-color: brandPalette(checkboxItemHover_bgc);
             border-color: brandPalette(checkboxItemHover_border);
         }

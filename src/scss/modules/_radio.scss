@@ -83,7 +83,7 @@
 .radio-item {
     padding-left: rem(brandSizes(radioItem_size) + brandSizes(radioItemBorder_size) + brandSizes(radioItem_paddingText));
     position: relative;
-    --checkboxItemActive_image: url(#{brandDataImage(checkIcon)});
+    --checkboxItemActive_image: url("#{brandDataImage(checkIcon)}");
     &.checked label.radio,
     label.radio.checked,
     input[type=radio]:checked + label.radio{
