@@ -11,7 +11,7 @@
 @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-dataImages' as dataimages;
+@use './../utilities/variables/var-dataImages' as *;
 
 .radioCheck{
     padding-left: 0px;
@@ -83,7 +83,7 @@
 .radio-item {
     padding-left: rem(brandSizes(radioItem_size) + brandSizes(radioItemBorder_size) + brandSizes(radioItem_paddingText));
     position: relative;
-    --checkboxItemActive_image: url(dataimages.brandDataImage(checkIcon));
+    --checkboxItemActive_image: url(#{brandDataImage(checkIcon)});
     &.checked label.radio,
     label.radio.checked,
     input[type=radio]:checked + label.radio{

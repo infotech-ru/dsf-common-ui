@@ -8741,7 +8741,7 @@ input[type=checkbox][disabled] {
 .radio-item {
   padding-left: 1.25rem;
   position: relative;
-  --checkboxItemActive_image: url(dataimages.brandDataImage(checkIcon));
+  --checkboxItemActive_image: url(data:image/svg+xml;utf8,%3Csvg width=%278%27 height=%276%27 viewBox=%270 0 8 6%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M0.5 2.593L3.10465 5.19766L7.5 0.802307%27 stroke=%27white%27/%3E%3C/svg%3E);
 }
 .radio-item.checked label.radio,
 .radio-item label.radio.checked,
