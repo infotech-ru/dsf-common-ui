@@ -4,13 +4,14 @@
 /* path: dsf-common-ui/src/scss/modules/_checkbox.scss                        */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+
 @use 'sass:math';
 @use './../utilities/functions/func_fonts' as *;
 @use './../utilities/variables/var-lineHeights' as *;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-fonts' as *;
 @use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-dataImages' as *;
+@use './../utilities/variables/var-dataImages' as dataimages;
 
 
 input[type=checkbox] {
@@ -26,7 +27,7 @@ input[type=checkbox] {
     &:checked{
         background-color: brandPalette(checkboxItemActive_bgc);
         border-color: brandPalette(checkboxItemActive_border);
-        content: url(brandDataImage(checkIcon));
+        content: url(dataimages.brandDataImage(checkIcon));
     }
     &[disabled]{
         cursor: not-allowed;
@@ -40,7 +41,7 @@ input[type=checkbox] {
         position: absolute;
         clip: rect(0, 0, 0, 0);
         &:checked + label.checkbox:before {
-            background-image: url(brandDataImage(checkIcon));
+            background-image: url(dataimages.brandDataImage(checkIcon));
             background-color: brandPalette(checkboxItemActive_bgc);
             border-color: brandPalette(checkboxItemActive_border);
         }
@@ -49,7 +50,7 @@ input[type=checkbox] {
             border-color: brandPalette(checkboxItem_border);
         }
         &:checked + label.checkbox:hover:before {
-            background-image: url(brandDataImage(checkIcon));
+            background-image: url(dataimages.brandDataImage(checkIcon));
             background-color: brandPalette(checkboxItemHover_bgc);
             border-color: brandPalette(checkboxItemHover_border);
         }
