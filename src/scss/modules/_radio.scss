@@ -83,6 +83,7 @@
 .radio-item {
     padding-left: rem(brandSizes(radioItem_size) + brandSizes(radioItemBorder_size) + brandSizes(radioItem_paddingText));
     position: relative;
+    --checkboxItemActive_image: url(dataimages.brandDataImage(checkIcon));
     &.checked label.radio,
     label.radio.checked,
     input[type=radio]:checked + label.radio{
@@ -158,7 +159,6 @@
                 top: 50%;
                 margin-top: rem(-(brandSizes(radioItemDot_size) * 0.5));
                 width: rem(brandSizes(radioItemDot_size));
-                --checkboxItemActive_image: url(dataimages.brandDataImage(checkIcon));
             }
             span{
                 display: inline-block;

@@ -8741,6 +8741,7 @@ input[type=checkbox][disabled] {
 .radio-item {
   padding-left: 1.25rem;
   position: relative;
+  --checkboxItemActive_image: url(dataimages.brandDataImage(checkIcon));
 }
 .radio-item.checked label.radio,
 .radio-item label.radio.checked,
@@ -8813,7 +8814,6 @@ input[type=checkbox][disabled] {
   top: 50%;
   margin-top: -0.1875rem;
   width: 0.375rem;
-  --checkboxItemActive_image: url(dataimages.brandDataImage(checkIcon));
 }
 .radio-item label.radio span {
   display: inline-block;
