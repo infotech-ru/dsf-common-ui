@@ -12,11 +12,13 @@
 @use './../utilities/variables/var-lineHeights' as *;
 @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-lineHeights' as *;
+@use './../utilities/variables/var-dataImages' as *;
 
 :root{
   @each $name, $value in $brand-colors {
     --color#{$name}: #{$value};
   }
+  --checkboxItemActive_image: url("#{brandDataImage(checkIcon)}");
 }
 // * {
 //   scrollbar-width: thin;
