@@ -380,6 +380,7 @@
     .modal-header .close {
         background-image: none;
         height: rem(brandSizes(modal-header-close_size));
+        line-height: rem(brandSizes(modal-header-close_size));
         margin: 0;
         position: absolute;
         right: rem(brandSizes(modal_paddingXR));

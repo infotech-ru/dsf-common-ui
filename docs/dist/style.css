@@ -13973,10 +13973,10 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   color: #4A8DC6;
 }
 .alert-info .close {
-  color: #E4EEF7;
-  --svg-icon-fill: #E4EEF7;
-  --svg-icon-stroke: #E4EEF7;
-  --svg-icon-stroke_blue: #E4EEF7;
+  color: #4A8DC6;
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
 }
 .alert-info h4, .alert-info .h4 {
   color: #4A8DC6;
@@ -15074,6 +15074,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
 .modal-svgClose .modal-header .close {
   background-image: none;
   height: 1rem;
+  line-height: 1rem;
   margin: 0;
   position: absolute;
   right: 1.875rem;
