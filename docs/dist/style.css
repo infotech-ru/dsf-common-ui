@@ -15655,7 +15655,7 @@ body[style^=padding-right] .modal-sidebar {
   border-radius: var(--progress-border-radius, 0);
   display: flex;
   margin-bottom: 10;
-  height: var(--progress_height, 14);
+  height: var(--progress_height, 0.875rem);
   overflow: hidden;
   width: 100%;
 }
@@ -15667,7 +15667,7 @@ body[style^=padding-right] .modal-sidebar {
   font-size: 0.75rem;
   height: 100%;
   position: relative;
-  line-height: var(--progress_height, 14);
+  line-height: var(--progress_height, 0.875rem);
   text-align: center;
   width: 0%;
   transition: width 0.6s ease;
@@ -15718,7 +15718,7 @@ body[style^=padding-right] .modal-sidebar {
   border-radius: var(--progress-stacked-border-radius, 0);
   display: flex;
   overflow: hidden;
-  height: var(--progress_height, 14);
+  height: var(--progress_height, 0.875rem);
   width: 100%;
 }
 
