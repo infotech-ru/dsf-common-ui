@@ -339,15 +339,15 @@
 .mobile-view .break-word__mobile            { word-break: break-word; }
 
 .overflow-ellipsis                          { overflow: hidden; text-overflow: ellipsis; }
-.overflow-hidden                            { overflow: hidden;}
-.mobile-view .overflow-hidden__mobile       { overflow: hidden;}
-.overflowX-auto                             { overflow-x: auto;}
-.overflowY-auto                             { overflow-y: auto;}
+.overflow-hidden                            { overflow: hidden; }
+.mobile-view .overflow-hidden__mobile       { overflow: hidden; }
+.overflowX-auto                             { overflow-x: auto; }
+.overflowY-auto                             { overflow-y: auto; }
 
-.object-fit-cover                           {object-fit: cover;}
-.object-fit-contain                         {object-fit: contain;}
-.object-fit-fill                            {object-fit: fill;}
-.object-fit-none                            {object-fit: none;}
+.object-fit-cover                           { object-fit: cover; }
+.object-fit-contain                         { object-fit: contain; }
+.object-fit-fill                            { object-fit: fill; }
+.object-fit-none                            { object-fit: none; }
 
 .text-left                                  { text-align: left; }
 .mobile-view .text-left__mobile             { text-align: left; }
@@ -364,9 +364,9 @@
     white-space: nowrap;
 }
 
-.va-middle                                  { vertical-align: middle;}
-.va-top                                     { vertical-align: top;}
-.va-bottom                                  { vertical-align: bottom;}
+.va-middle                                  { vertical-align: middle; }
+.va-top                                     { vertical-align: top; }
+.va-bottom                                  { vertical-align: bottom; }
 
 .transformNone                              { text-transform: none; }
 .mobile-view .transformNone__mobile         { text-transform: none; }
@@ -804,8 +804,10 @@
 }
 
 .borderRadius-0      { border-radius: 0;}
+.borderRadius-2      { border-radius: 2px;}
 .borderRadius-4      { border-radius: 4px;}
 .borderRadius-6      { border-radius: 6px;}
+.borderRadius-8      { border-radius: 8px;}
 .borderRadius-10     { border-radius: 10px;}
 .borderRadius-100p   { border-radius: 100%;}
 

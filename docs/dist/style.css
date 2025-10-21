@@ -18411,12 +18411,20 @@ tbody.collapse.in {
   border-radius: 0;
 }
 
+.borderRadius-2 {
+  border-radius: 2px;
+}
+
 .borderRadius-4 {
   border-radius: 4px;
 }
 
 .borderRadius-6 {
   border-radius: 6px;
+}
+
+.borderRadius-8 {
+  border-radius: 8px;
 }
 
 .borderRadius-10 {
