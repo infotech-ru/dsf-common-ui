@@ -153,6 +153,8 @@ marginsizes:
   value: 0
 - name: 5
   value: 0
+- name: 6
+  value: 0
 - name: 8
   value: 0
 - name: 10
@@ -174,6 +176,8 @@ paddingsizes:
 - name: 0
   value: 0
 - name: 5
+  value: 0
+- name: 6
   value: 0
 - name: 8
   value: 0

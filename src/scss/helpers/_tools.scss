@@ -250,6 +250,8 @@
   .mobile-view .padding-#{$paddingSize}__mobile {
     padding: rem($paddingSize);
   }
+}
+@each $paddingSize in $paddingSizes {
   .pt-#{$paddingSize} {
       padding-top: rem($paddingSize);
   }

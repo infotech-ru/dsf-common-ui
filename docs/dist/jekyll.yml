@@ -291,6 +291,10 @@ marginsizes {
 }
 
 marginsizes {
+  6: 0;
+}
+
+marginsizes {
   8: 0;
 }
 
@@ -328,6 +332,10 @@ paddingsizes {
 
 paddingsizes {
   5: 0;
+}
+
+paddingsizes {
+  6: 0;
 }
 
 paddingsizes {
