@@ -168,10 +168,12 @@
       bottom: 0;
       display: flex;
       gap: #{brandSizes(carousel-thumbs_gap)}px;
+      height: fit-content;
       left: 0;
       position: absolute;
       right: 0;
       top: 0;
+      width: fit-content;
       z-index: zIndex(carouselIndicatorsImage) + 1;
     }
     &__line {
