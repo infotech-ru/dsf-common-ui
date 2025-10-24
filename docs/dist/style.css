@@ -14577,6 +14577,7 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   position: relative;
   width: 100%;
   z-index: 15;
+  --carousel-thumbs_gap: 7px;
 }
 .carousel-indicators__abs {
   position: absolute;
@@ -14584,12 +14585,24 @@ tbody tr:nth-of-type(2n+1) th[class^=bg-] {
   right: 0;
   bottom: 0;
 }
+.carousel-indicators__abs:nth-child(1) {
+  --carousel-indicators__abs-count: 1;
+}
+.carousel-indicators__abs:nth-child(2) {
+  --carousel-indicators__abs-count: 2;
+}
+.carousel-indicators__abs:nth-child(3) {
+  --carousel-indicators__abs-count: 3;
+}
 .carousel-indicators__line img {
   display: none;
 }
 .carousel-indicators_outer {
   position: relative;
   min-height: 71px;
+}
+.carousel-indicators__abs + .carousel-indicators .carousel-indicators_item:first-child {
+  margin-left: calc((var(--thumbnail_width) + var(--carousel-thumbs_gap)) * var(--carousel-indicators__abs-count, 1));
 }
 .carousel-indicators-item {
   border: none;
@@ -16017,6 +16030,7 @@ tbody.collapse.in {
   line-height: normal;
   padding: 4px;
   width: 64px;
+  --thumbnail_width: 64px;
 }
 .thumbnail img {
   margin-right: auto;
@@ -16066,6 +16080,7 @@ tbody.collapse.in {
   height: 128px;
   min-width: 128px;
   width: 128px;
+  --thumbnail_width: 128px;
 }
 .thumbnail:hover, .thumbnail:focus, .thumbnail.active {
   border-color: var(--color_dark-grey);

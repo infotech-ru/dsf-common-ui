@@ -74,6 +74,7 @@
   line-height: normal;
   padding: $thumbnailPadding;
   width: 64px;
+  --thumbnail_width: 64px;
   // @include transition(border .2s ease-in-out);
   img {
     margin-right: auto;
@@ -125,6 +126,7 @@
     height: 128px;
     min-width: 128px;
     width: 128px;
+    --thumbnail_width: 128px;
   }
   &:hover,
   &:focus,

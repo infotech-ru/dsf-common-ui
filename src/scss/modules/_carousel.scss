@@ -123,32 +123,6 @@
       opacity: 1;
       // @include opacity(.9);
     }
-    // &-icon {
-    //   display: inline-block;
-    //   width: $carousel-control-icon-width;
-    //   height: $carousel-control-icon-width;
-    //   background: 50% / 100% 100% no-repeat;
-    // }
-    // .glyphicon-chevron-left,
-    // .glyphicon-chevron-right {
-    //   display: inline-block;
-    //   position: absolute;
-    //   margin-top: -10px;
-    //   top: 50%;
-    //   z-index: 5;
-
-    //   font-size: rem(20);
-    //   height: rem(20);
-    //   width: rem(20);
-    // }
-    // .carousel__theme &{
-    //   align-items: center;
-    //   background-image: none;
-    //   background-color: brandColors(_grey4);
-    //   // display: flex;
-    //   text-align: left;
-    //   width: 66px;
-    // }
     .svg--icon{
       --svg-icon-stroke: var(--color_grey2);
       --svg-icon-stroke_blue: var(--color_grey2);
@@ -179,7 +153,7 @@
     text-align: center;
   }
   &-indicators {
-    gap: 7px;
+    gap: #{brandSizes(carousel-thumbs_gap)}px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -189,11 +163,15 @@
     position: relative;
     width: 100%;
     z-index: zIndex(carouselIndicatorsImage);
+    --carousel-thumbs_gap: #{brandSizes(carousel-thumbs_gap)}px;
     &__abs{
       position: absolute;
       left: 0;
       right: 0;
       bottom: 0;
+      &:nth-child(1) { --carousel-indicators__abs-count: 1; }
+      &:nth-child(2) { --carousel-indicators__abs-count: 2; }
+      &:nth-child(3) { --carousel-indicators__abs-count: 3; }
     }
     &__line {
       img{
@@ -203,6 +181,13 @@
     &_outer{
       position: relative;
       min-height: #{brandSizes(carousel-thumbs_size) + brandSizes(carousel-thumbs_gap)}px;
+    }
+    &_item{
+      &:first-child{ 
+        .carousel-indicators__abs + .carousel-indicators &{
+          margin-left: calc((var(--thumbnail_width) + var(--carousel-thumbs_gap)) * var(--carousel-indicators__abs-count, 1));
+        }
+      }
     }
     &-item {
       border: none;
