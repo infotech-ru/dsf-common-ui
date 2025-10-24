@@ -165,13 +165,14 @@
     z-index: zIndex(carouselIndicatorsImage);
     --carousel-thumbs_gap: #{brandSizes(carousel-thumbs_gap)}px;
     &__abs{
-      position: absolute;
-      left: 0;
-      right: 0;
       bottom: 0;
-      &:nth-child(1) { --carousel-indicators__abs-count: 1; }
-      &:nth-child(2) { --carousel-indicators__abs-count: 2; }
-      &:nth-child(3) { --carousel-indicators__abs-count: 3; }
+      display: flex;
+      gap: #{brandSizes(carousel-thumbs_gap)}px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: zIndex(carouselIndicatorsImage) + 1;
     }
     &__line {
       img{
