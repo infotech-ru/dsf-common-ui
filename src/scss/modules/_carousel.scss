@@ -175,6 +175,9 @@
       top: 0;
       width: fit-content;
       z-index: zIndex(carouselIndicatorsImage) + 1;
+       + .carousel-indicators {
+          min-height: var(--thumbnail_width);
+       }
     }
     &__line {
       img{
