@@ -195,6 +195,12 @@ tfoot {
     font-weight: 700;
     // height: rem(brandSizes(tableCell_height));
     // vertical-align: middle;
+    .table__simple &{
+      background-color: brandColors(_transparent);
+      color: brandTable(tbody-color);
+      font-size: rem(fontSizes(tbody));
+      font-weight: 400;
+    }
     &:first-child {
       left: 0;
       // text-align: left;
@@ -245,14 +251,14 @@ tfoot {
   }
 }
 
-@include table-row-variant('clear', brandColors(_transparent));
-@include table-row-variant('light-yellow2', brandColors(_light-yellow2));
+// @include table-row-variant('clear', brandColors(_transparent));
+// @include table-row-variant('light-yellow2', brandColors(_light-yellow2));
 // @include table-row-variant('light-red', brandColors(_light-red));
 // @include table-row-variant('red', brandColors(_red));
 // @include table-row-variant('rose', brandColors(_rose));
 
 table{
-  &[class^="bg-"] { 
+  &[class*='bg-'] { 
     td{ 
       background-color: var(--bg_color);
     }
@@ -260,7 +266,7 @@ table{
 }
 
 tbody tr {
-  &[class^="bg-"] { 
+  &[class*="bg-"] { 
     &,
     &:nth-of-type(2n+1){ 
       td {
@@ -269,8 +275,8 @@ tbody tr {
     }
   }
   &:nth-of-type(2n+1) {
-    td[class^="bg-"],
-    th[class^="bg-"] {
+    td[class*="bg-"],
+    th[class*="bg-"] {
       background-color: var(--bg_color);
     }
   }

@@ -27,7 +27,7 @@
   display: inline-flex;
   vertical-align: middle; // match .btn alignment given font-size hack above
   // > .btn,
-  > [class^="btn"]{
+  > [class*="btn"]{
     position: relative;
     // float: left;
     // Bring the "active" button to the front
@@ -43,43 +43,26 @@
 // Prevent double borders when buttons are next to each other
 .btn-group {
   // .btn + .btn,
-  [class^="btn"] + [class^="btn"],
+  [class*="btn"] + [class*="btn"],
   // .btn + .btn-group,
-  [class^="btn"] + .btn-group,
+  [class*="btn"] + .btn-group,
   // .btn-group + .btn,
-  .btn-group + [class^="btn"],
+  .btn-group + [class*="btn"],
   .btn-group + .btn-group {
     margin-left: -1px;
   }
 }
 
-// // Optional: Group multiple button groups together for a toolbar
-// .btn-toolbar {
-//   margin-left: -5px; // Offset the first child's margin
-//   @include clearfix;
-//
-//   // .btn,
-//   [class^="btn"],
-//   .btn-group,
-//   .input-group {
-//     float: left;
-//   }
-//   // > .btn,
-//   > [class^="btn"],
-//   > .btn-group,
-//   > .input-group {
-//     margin-left: 5px;
-//   }
-// }
+
 
 // .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-.btn-group > [class^="btn"]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > [class*="btn"]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
 // .btn-group > .btn:first-child {
-.btn-group > [class^="btn"]:first-child {
+.btn-group > [class*="btn"]:first-child {
   margin-left: 0;
   &:not(:last-child):not(.dropdown-toggle) {
     @include border-right-radius(0);
@@ -87,27 +70,10 @@
 }
 // Need .dropdown-toggle since :last-child doesn't apply, given that a .dropdown-menu is used immediately after it
 // .btn-group > .btn:last-child:not(:first-child),
-.btn-group > [class^="btn"]:last-child:not(:first-child),
+.btn-group > [class*="btn"]:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   @include border-left-radius(0);
 }
-
-// Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
-// .btn-group > .btn-group {
-//   float: left;
-// }
-// .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
-//   border-radius: 0;
-// }
-// .btn-group > .btn-group:first-child:not(:last-child) {
-//   > .btn:last-child,
-//   > .dropdown-toggle {
-//     @include border-right-radius(0);
-//   }
-// }
-// .btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
-//   @include border-left-radius(0);
-// }
 
 // On active and open, don't show outline
 .btn-group .dropdown-toggle:active,
@@ -115,16 +81,9 @@
   outline: 0;
 }
 
-
 // Sizing
-//
-// Remix the default button sizing classes into new ones for easier manipulation.
 
-// .btn-group-xs > .btn { @extend .btn-xs; }
-// .btn-group-sm > .btn { @extend .btn-sm; }
-// .btn-group-lg > .btn { @extend .btn-lg; }
-
-.btn-group > [class^="btn"],
+.btn-group > [class*="btn"],
 // .btn-group > .btn,
 .btn-group-sm > .btn, // старые правила очищаем
 .btn-group-lg > .btn {
@@ -145,7 +104,7 @@
 
 // Give the line between buttons some depth
 // .btn-group > .btn + .dropdown-toggle {
-.btn-group > [class^="btn"] + .dropdown-toggle {
+.btn-group > [class*="btn"] + .dropdown-toggle {
   padding-right: 8px;
   padding-left: 8px;
 }
@@ -170,21 +129,21 @@
 
 .btn-group__theme{
   // @extend .btn-group;
-  & > [class^="btn"] {
+  & > [class*="btn"] {
     @extend .btn-default;
   }
-  & > [class^="btn"].active{
+  & > [class*="btn"].active{
     @extend .btn-primary;
   }
 }
 
 .btn-group__opacity{
-  & > [class^="btn"] {
+  & > [class*="btn"] {
     opacity: 0.4;
   }
-  & > [class^="btn"]:hover,
-  & > [class^="btn"]:focus,
-  & > [class^="btn"].active{
+  & > [class*="btn"]:hover,
+  & > [class*="btn"]:focus,
+  & > [class*="btn"].active{
     opacity: 1;
   }
 }
@@ -259,9 +218,7 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-//   > .btn-group,
-//   > .btn-group > [class^="btn"],
-  > [class^="btn"] {
+  > [class*="btn"] {
     position: relative;
     flex: 1 1 auto;
     width: 100%;
@@ -276,7 +233,7 @@
       @include border-top-radius(0);
       @include border-bottom-radius(1px);
     }
-    & + [class^="btn"] {
+    & + [class*="btn"] {
       margin-left: 0;
     }
   }
@@ -284,19 +241,19 @@
 
 .btn-group__equal{
   flex-wrap: wrap;
-  > [class^="btn"] {
+  > [class*="btn"] {
     flex: 1 1 0px;
     min-width: fit-content;
     width: 0;
   }
   &.btn-group__vertical {
-    > [class^="btn"] {
+    > [class*="btn"] {
       width: 100%;
     }
   }
 }
 .btn-group__alignLeft{ 
-    > [class^="btn"] {
+    > [class*="btn"] {
       text-align: left;
     }
 }
@@ -339,9 +296,9 @@
 
 [data-toggle="buttons"] {
   // > .btn,
-  > [class^="btn"],
+  > [class*="btn"],
   // > .btn-group > .btn {
-  > .btn-group > [class^="btn"] {
+  > .btn-group > [class*="btn"] {
     input[type="radio"],
     input[type="checkbox"] {
       position: absolute;
@@ -545,7 +502,7 @@
         --svg-icon-stroke: var(--btn_svg__hover);
       }
     }
-    [class^="btn-"]{ 
+    [class*="btn-"]{ 
       border-color: brandPalette(formControl-color);
       background-color: var(--btn_bg__hover);
       background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);

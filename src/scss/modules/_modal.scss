@@ -191,7 +191,7 @@
     text-align: right; // right align buttons
 
     // @include clearfix; // clear it in case folks use .pull-* classes on buttons
-    [class^="btn"]:first-child:last-child {
+    [class*="btn"]:first-child:last-child {
         margin-left: auto;
     }
 
