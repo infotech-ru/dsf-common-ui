@@ -4,6 +4,7 @@
 /* path: dsf-common-ui/src/scss/modules/_tables.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use 'sass:math';
 @use './../utilities/functions/func_svg-url' as *;
 @use './../utilities/functions/func_fonts' as *;
 @use './../utilities/variables/var-colors' as *;
@@ -37,8 +38,32 @@ caption {
 
 th,
 td {
+  background-color: brandTable(tbody_bgc);
+  color: brandTable(tbody-color);
+  font-weight: 400;
+  font-size: rem(fontSizes(tbody));
   line-height: rem(lineHeight(table));
+  height: rem(brandSizes(tableCell_height));
   padding: rem(brandSizes(table_paddingY)) rem(brandSizes(table_paddingX));
+  vertical-align: middle;
+  &:first-child {
+    padding-left: #{brandSizes(table_paddingXFirst)}px;
+    text-align: left;
+    &.text-right{
+      text-align: right;
+    }
+    &.text-center{
+      text-align: center;
+    }
+    .table__firstChildMinWidth &{
+      min-width: 160px;
+    }
+    .table__border &{ 
+      border-left-width: var(--width_border-left__modify, var(--width_border-left, 1px));
+      border-left-style: var(--style_border_left, var(--style_border, solid));
+      border-left-color: var(--border_left_color, var(--border_color, brandTable(table_border)));
+    }
+  }
   &[class*="col-"] {
     position: static; // Prevent border hiding in Firefox and IE9-11 (see https://github.com/twbs/bootstrap/issues/11623)
     display: table-cell;
@@ -56,6 +81,10 @@ td {
     border-right-style: var(--style_border_right, var(--style_border, solid));
     border-right-color: var(--border_right_color, var(--border_color, brandTable(table_border)));
   }
+  .table__simple &{
+    padding: #{math.div(brandSizes(base_marginSize), 2)}px;
+    height: auto;
+  }
   .tr__slave &{
     --tdnesting-bgc: 96%;
     background-color: brandTable(tbodySlaveTd_bgc);
@@ -64,15 +93,32 @@ td {
   .tr__subSlave &{
     background-color: brandTable(tbodySubSlaveTd_bgc);
   }
-  &:first-child{
-    padding-left: #{brandSizes(table_paddingXFirst)}px;
-    // .tr__master &{
-    //   padding-left: 0;
-    // }
-    .table__border &{ 
-      border-left-width: var(--width_border-left__modify, var(--width_border-left, 1px));
-      border-left-style: var(--style_border_left, var(--style_border, solid));
-      border-left-color: var(--border_left_color, var(--border_color, brandTable(table_border)));
+  .desc,
+  .asc{
+    display: inline-flex;
+    position: relative;
+    padding-left: #{calc(brandSizes(tableSortIcon_size) + 5)}px;
+    &:before{
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      margin-top: #{calc(brandSizes(tableSortIcon_size) * .5 * -1)}px;
+      top: 50%;
+      height: #{brandSizes(tableSortIcon_size)}px;
+      width: #{brandSizes(tableSortIcon_size)}px;
+    }
+  }
+  .desc{
+    &:before{
+      background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6L6 4L4 6" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.04 4.5V20.5" stroke="#333" fill="none" /><path d="M11 18H21" stroke="#0094ff" fill="none" /><path d="M11 12H17" stroke="#0094ff" fill="none" /><path d="M11 6H15" stroke="#0094ff" fill="none" /></svg>');
+    }
+  }
+  .asc{
+    &:before{
+      background-image: svg-url('<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M5.03333 16.6668V3.33346" stroke="#333" fill="none" /><path d="M9.16669 5.00012H12.5" stroke="#0094ff" fill="none" /><path d="M9.16669 10.0001H14.1667" stroke="#0094ff" fill="none" /><path d="M9.16669 15.0001H17.5" stroke="#0094ff" fill="none" /></svg>');
     }
   }
 }
@@ -83,47 +129,27 @@ thead {
     color: brandTable(thead_color);
     font-size: rem(fontSizes(thead));
     font-weight: 700;
-    height: rem(brandSizes(tableCell_height));
+    // height: rem(brandSizes(tableCell_height));
     // position: sticky;
-    vertical-align: middle;
-    &:first-child {
-      // left: 0;
-      text-align: left;
-      &.text-center{
-        text-align: center;
-      }
-      &.text-right{
-        text-align: right;
-      }
+    // vertical-align: middle;
+    .table__simple &{
+      background-color: brandColors(_transparent);
+      color: brandTable(tbody-color);
+      font-size: rem(fontSizes(tbody));
+      font-weight: 400;
+      height: auto;
     }
-    .desc,
-    .asc{
-      display: inline-flex;
-      position: relative;
-      padding-left: #{calc(brandSizes(tableSortIcon_size) + 5)}px;
-      &:before{
-        background-size: contain;
-        background-repeat: no-repeat;
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        margin-top: #{calc(brandSizes(tableSortIcon_size) * .5 * -1)}px;
-        top: 50%;
-        height: #{brandSizes(tableSortIcon_size)}px;
-        width: #{brandSizes(tableSortIcon_size)}px;
-      }
-    }
-    .desc{
-      &:before{
-        background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6L6 4L4 6" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.04 4.5V20.5" stroke="#333" fill="none" /><path d="M11 18H21" stroke="#0094ff" fill="none" /><path d="M11 12H17" stroke="#0094ff" fill="none" /><path d="M11 6H15" stroke="#0094ff" fill="none" /></svg>');
-      }
-    }
-    .asc{
-      &:before{
-        background-image: svg-url('<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M5.03333 16.6668V3.33346" stroke="#333" fill="none" /><path d="M9.16669 5.00012H12.5" stroke="#0094ff" fill="none" /><path d="M9.16669 10.0001H14.1667" stroke="#0094ff" fill="none" /><path d="M9.16669 15.0001H17.5" stroke="#0094ff" fill="none" /></svg>');
-      }
-    }
+    // &:first-child {
+    //   // left: 0;
+    //   text-align: left;
+    //   &.text-center{
+    //     text-align: center;
+    //   }
+    //   &.text-right{
+    //     text-align: right;
+    //   }
+    // }
+    
   }
   tr{
     &:first-child{
@@ -140,31 +166,14 @@ thead {
         border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
         border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
         border-bottom-color: var(--border_top_color, var(--border_color, brandTable(thead_border)));
+        .table__simple &{
+          border-bottom: none;
+        }
       }
     }
   }
 }
-tbody td, 
-tbody th { 
-  background-color: brandTable(tbody_bgc);
-  color: brandTable(tbody-color);
-  font-size: rem(fontSizes(tbody));
-  font-weight: 400;
-  height: rem(brandSizes(tableCell_height));
-  vertical-align: middle;
-  &:first-child {
-    text-align: left;
-    &.text-right{
-      text-align: right;
-    }
-    &.text-center{
-      text-align: center;
-    }
-    .table__firstChildMinWidth &{
-      min-width: 160px;
-    }
-  }
-}
+
 
 tbody {
   .svg--icon{
@@ -175,6 +184,7 @@ tbody {
       }
   }
 }
+
 tfoot { 
   th,
   td{
@@ -183,11 +193,11 @@ tfoot {
     color: brandTable(tfoot_color);
     font-size: rem(fontSizes(tfoot));
     font-weight: 700;
-    height: rem(brandSizes(tableCell_height));
-    vertical-align: middle;
+    // height: rem(brandSizes(tableCell_height));
+    // vertical-align: middle;
     &:first-child {
       left: 0;
-      text-align: left;
+      // text-align: left;
       z-index: 1;
     }
     tr{ 
@@ -237,9 +247,9 @@ tfoot {
 
 @include table-row-variant('clear', brandColors(_transparent));
 @include table-row-variant('light-yellow2', brandColors(_light-yellow2));
-@include table-row-variant('light-red', brandColors(_light-red));
-@include table-row-variant('red', brandColors(_red));
-@include table-row-variant('rose', brandColors(_rose));
+// @include table-row-variant('light-red', brandColors(_light-red));
+// @include table-row-variant('red', brandColors(_red));
+// @include table-row-variant('rose', brandColors(_rose));
 
 table{
   &[class^="bg-"] { 
@@ -403,43 +413,6 @@ tbody tr {
       }
     }
   }
-  // &__2tr{
-  //   tfoot{
-  //     tr{
-  //       &:nth-child(1){
-  //         th, td{
-  //           bottom: rem(brandSizes(tableCell_height));
-  //         }
-  //       }
-  //       &:nth-child(2){
-  //         th, td{
-  //           bottom: 0;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-  // &__3tr{
-  //   tfoot{
-  //     tr{
-  //       &:nth-child(1){
-  //         th, td{
-  //           bottom: rem(calc(brandSizes(tableCell_height) * 2));
-  //         }
-  //       }
-  //       &:nth-child(2){
-  //         th, td{
-  //           bottom: rem(brandSizes(tableCell_height));
-  //         }
-  //       }
-  //       &:nth-child(3){
-  //         th, td{
-  //           bottom: 0;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 .summary{

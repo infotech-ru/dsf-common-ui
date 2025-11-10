@@ -373,6 +373,8 @@
     &__bottomRight,
     &__topRight,
     &__topLeft{
+      display: flex;
+      gap: 5px;
       position: relative;
       z-index: 1;
     }
