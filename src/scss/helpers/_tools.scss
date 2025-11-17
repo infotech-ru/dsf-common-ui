@@ -510,6 +510,8 @@
 .mobile-view .h-auto__mobile      { height: auto; }
 .h-100p                           { height: 100%; }
 .mobile-view .h-100p__mobile      { height: 100%; }
+.h-0                              { height: 0; }
+.mobile-view .h-0__mobile         { height: 0; }
 .maxh-none                        { max-height: none;}
 .mobile-view .maxh-none__mobile   { max-height: none;}
 .maxh-100p                        { max-height: 100%; }
@@ -523,6 +525,8 @@
 .mobile-view .w-auto__mobile      { width: auto; }
 .w-100p                           { width: 100%; }
 .mobile-view .w-100p__mobile      { width: 100%; }
+.w-0                              { width: 0; }
+.mobile-view .w-0__mobile         { width: 0; }
 .minw-100p                        { min-width: 100%; }
 .mobile-view .minw-100p__mobile   { min-width: 100%; }
 .minw-auto                        { min-width: auto; }

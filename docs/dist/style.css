@@ -18125,6 +18125,14 @@ tbody.collapse.in {
   height: 100%;
 }
 
+.h-0 {
+  height: 0;
+}
+
+.mobile-view .h-0__mobile {
+  height: 0;
+}
+
 .maxh-none {
   max-height: none;
 }
@@ -18171,6 +18179,14 @@ tbody.collapse.in {
 
 .mobile-view .w-100p__mobile {
   width: 100%;
+}
+
+.w-0 {
+  width: 0;
+}
+
+.mobile-view .w-0__mobile {
+  width: 0;
 }
 
 .minw-100p {
