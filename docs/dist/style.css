@@ -18197,6 +18197,14 @@ tbody.collapse.in {
   min-width: 100%;
 }
 
+.minw-0 {
+  min-width: 0;
+}
+
+.mobile-view .minw-0__mobile {
+  min-width: 0;
+}
+
 .minw-auto {
   min-width: auto;
 }
