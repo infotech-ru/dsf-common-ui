@@ -48,7 +48,7 @@ layout: default
   {% for post in site.posts %}
     <article class="border-bottom border-grey2 mb-10 pb-10">
       <div class="fz11 text-grey3">{{ post.date | date: "%d.%m.%Y" }}</div>
-      <h3 class="mb-10"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <h3 class="mb-10">{{ post.title }}</h3>
       <div>{{ post.excerpt }}</div>
     </article>
   {% endfor %}

@@ -209,7 +209,7 @@
     #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'svg_blue');
     &.label_chip{
       &:hover, &.active, &:active{
-        #{--label_color}: map-deep-get($brand-label, $name, 'bg');
+        #{--label_color}: map-deep-get($brand-label, $name, 'color_active');
         #{--label_bgc}: map-deep-get($brand-label, $name, 'bg_active');
         #{--label_borderColor}: map-deep-get($brand-label, $name, 'bg');
         #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'color');
