@@ -79,6 +79,9 @@
 }
 
 .label__after{
+  &.control-label{ 
+    margin-bottom: 1px;
+  }
   &:after{
     @extend %label;
     content: attr(data-label-text);
@@ -87,6 +90,9 @@
 }
 
 .label__before{
+  &.control-label{ 
+    margin-bottom: 1px;
+  }
   &:before{
     @extend %label;
     content: attr(data-label-text);
@@ -203,7 +209,7 @@
     #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'svg_blue');
     &.label_chip{
       &:hover, &.active, &:active{
-        #{--label_color}: map-deep-get($brand-label, $name, 'color');
+        #{--label_color}: map-deep-get($brand-label, $name, 'bg');
         #{--label_bgc}: map-deep-get($brand-label, $name, 'bg_active');
         #{--label_borderColor}: map-deep-get($brand-label, $name, 'bg');
         #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'color');

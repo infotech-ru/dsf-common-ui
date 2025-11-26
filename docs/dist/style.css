@@ -10267,11 +10267,17 @@ input[type=button].btn-block {
   --svgIcon_height__24vb: 1.125rem;
 }
 
+.label__after.control-label {
+  margin-bottom: 1px;
+}
 .label__after:after {
   content: attr(data-label-text);
   margin-left: var(--label_margin-left, 0.3125rem);
 }
 
+.label__before.control-label {
+  margin-bottom: 1px;
+}
 .label__before:before {
   content: attr(data-label-text);
   margin-right: var(--label_margin-right, 0.3125rem);
@@ -10379,7 +10385,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #1E6393;
 }
 .label-default.label_chip:hover, .label-default.label_chip.active, .label-default.label_chip:active {
-  --label_color: #333333;
+  --label_color: #F5F5F5;
   --label_bgc: #dddddd;
   --label_borderColor: #F5F5F5;
   --svg-valute-fill: #333333;
@@ -10421,7 +10427,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-primary.label_chip:hover, .label-primary.label_chip.active, .label-primary.label_chip:active {
-  --label_color: #ffffff;
+  --label_color: #4A8DC6;
   --label_bgc: #E4EEF7;
   --label_borderColor: #4A8DC6;
   --svg-valute-fill: #ffffff;
@@ -10463,7 +10469,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-danger.label_chip:hover, .label-danger.label_chip.active, .label-danger.label_chip:active {
-  --label_color: #ffffff;
+  --label_color: #D9534F;
   --label_bgc: #FF9996;
   --label_borderColor: #D9534F;
   --svg-valute-fill: #ffffff;
@@ -10505,7 +10511,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-success.label_chip:hover, .label-success.label_chip.active, .label-success.label_chip:active {
-  --label_color: #ffffff;
+  --label_color: #69C26A;
   --label_bgc: #DAF0DA;
   --label_borderColor: #69C26A;
   --svg-valute-fill: #ffffff;
@@ -10547,7 +10553,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #333333;
 }
 .label-warning.label_chip:hover, .label-warning.label_chip.active, .label-warning.label_chip:active {
-  --label_color: #333333;
+  --label_color: #FFBD41;
   --label_bgc: #FFF741;
   --label_borderColor: #FFBD41;
   --svg-valute-fill: #333333;
@@ -10589,7 +10595,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #4A8DC6;
 }
 .label-info.label_chip:hover, .label-info.label_chip.active, .label-info.label_chip:active {
-  --label_color: #4A8DC6;
+  --label_color: #E4EEF7;
   --label_bgc: #B6D1E8;
   --label_borderColor: #E4EEF7;
   --svg-valute-fill: #4A8DC6;
@@ -10631,7 +10637,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #333333;
 }
 .label-yellow.label_chip:hover, .label-yellow.label_chip.active, .label-yellow.label_chip:active {
-  --label_color: #333333;
+  --label_color: #FFDA7D;
   --label_bgc: #FFF6DF;
   --label_borderColor: #FFDA7D;
   --svg-valute-fill: #333333;
@@ -10673,7 +10679,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-black.label_chip:hover, .label-black.label_chip.active, .label-black.label_chip:active {
-  --label_color: #ffffff;
+  --label_color: #000000;
   --label_bgc: #dddddd;
   --label_borderColor: #000000;
   --svg-valute-fill: #ffffff;
@@ -10715,7 +10721,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-dark-grey.label_chip:hover, .label-dark-grey.label_chip.active, .label-dark-grey.label_chip:active {
-  --label_color: #ffffff;
+  --label_color: #333333;
   --label_bgc: #dddddd;
   --label_borderColor: #333333;
   --svg-valute-fill: #ffffff;
@@ -10757,7 +10763,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #333333;
 }
 .label-grey2.label_chip:hover, .label-grey2.label_chip.active, .label-grey2.label_chip:active {
-  --label_color: #333333;
+  --label_color: #dddddd;
   --label_bgc: #e5e5e5;
   --label_borderColor: #dddddd;
   --svg-valute-fill: #333333;
@@ -10799,7 +10805,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-vibrant-blue.label_chip:hover, .label-vibrant-blue.label_chip.active, .label-vibrant-blue.label_chip:active {
-  --label_color: #ffffff;
+  --label_color: #0094FF;
   --label_bgc: #B6D1E8;
   --label_borderColor: #0094FF;
   --svg-valute-fill: #ffffff;
@@ -10841,7 +10847,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #DE8500;
 }
 .label-light-yellow2.label_chip:hover, .label-light-yellow2.label_chip.active, .label-light-yellow2.label_chip:active {
-  --label_color: #DE8500;
+  --label_color: #FFF6DF;
   --label_bgc: #FFDF9A;
   --label_borderColor: #FFF6DF;
   --svg-valute-fill: #DE8500;
@@ -10883,7 +10889,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-dark-green.label_chip:hover, .label-dark-green.label_chip.active, .label-dark-green.label_chip:active {
-  --label_color: #ffffff;
+  --label_color: #467B46;
   --label_bgc: #DAF0DA;
   --label_borderColor: #467B46;
   --svg-valute-fill: #ffffff;
@@ -10925,7 +10931,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #467B46;
 }
 .label-light-green.label_chip:hover, .label-light-green.label_chip.active, .label-light-green.label_chip:active {
-  --label_color: #467B46;
+  --label_color: #DAF0DA;
   --label_bgc: #F5F5F5;
   --label_borderColor: #DAF0DA;
   --svg-valute-fill: #467B46;
@@ -10967,7 +10973,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #467B46;
 }
 .label-light-green2.label_chip:hover, .label-light-green2.label_chip.active, .label-light-green2.label_chip:active {
-  --label_color: #467B46;
+  --label_color: #B4E1B5;
   --label_bgc: #DAF0DA;
   --label_borderColor: #B4E1B5;
   --svg-valute-fill: #467B46;
@@ -11009,7 +11015,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #D9534F;
 }
 .label-light-red.label_chip:hover, .label-light-red.label_chip.active, .label-light-red.label_chip:active {
-  --label_color: #D9534F;
+  --label_color: #FCEEEE;
   --label_bgc: #F5F5F5;
   --label_borderColor: #FCEEEE;
   --svg-valute-fill: #D9534F;
@@ -11051,7 +11057,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-rose.label_chip:hover, .label-rose.label_chip.active, .label-rose.label_chip:active {
-  --label_color: #ffffff;
+  --label_color: #FF9996;
   --label_bgc: #FCEEEE;
   --label_borderColor: #FF9996;
   --svg-valute-fill: #ffffff;
@@ -11093,7 +11099,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-grey4.label_chip:hover, .label-grey4.label_chip.active, .label-grey4.label_chip:active {
-  --label_color: #ffffff;
+  --label_color: #777777;
   --label_bgc: #dddddd;
   --label_borderColor: #777777;
   --svg-valute-fill: #ffffff;

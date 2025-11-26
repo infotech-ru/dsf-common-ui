@@ -33,8 +33,11 @@ theme: minima
 plugins:
   - jekyll-feed
 collections_dir: content
-permalink: /:categories/:year/:month/:day/:title:output_ext
+source: .
 collections: 
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title:output_ext
   buttons:
     sort_by: rank
   icons:
@@ -49,8 +52,7 @@ collections:
     sort_by: order
   tables:
     sort_by: order
-  posts:
-    output: true
+permalink: /:categories/:year/:month/:day/:title:output_ext
 sass:
   sass_dir: _sass
   style: compressed
