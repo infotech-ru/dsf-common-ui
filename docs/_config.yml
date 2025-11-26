@@ -33,7 +33,8 @@ theme: minima
 plugins:
   - jekyll-feed
 collections_dir: content
-collections:
+permalink: /:categories/:year/:month/:day/:title:output_ext
+collections: 
   buttons:
     sort_by: rank
   icons:

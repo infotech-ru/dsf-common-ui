@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Добавлен блок-визитка"
-date: 2024-09-30 19:00:34 +0300
+date: 2024-09-30
 category: site news
 ---
 

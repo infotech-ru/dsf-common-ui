@@ -2,29 +2,29 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto"), local("Roboto-Regular"), url("/dsf-common-ui/dist/Roboto-Regular.woff2") format("woff2"), url("/dist/Roboto-Regular.woff") format("woff"), url("/dist/Roboto-Regular.ttf") format("truetype");
+  src: local("Roboto"), local("Roboto-Regular"), url("/dsf-common-ui/dist/Roboto-Regular.woff2") format("woff2"), url("/dsf-common-ui/dist/Roboto-Regular.woff") format("woff"), url("/dsf-common-ui/dist/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: local("Roboto"), local("Roboto-Bold"), url("/dsf-common-ui/dist/Roboto-Bold.woff2") format("woff2"), url("/dist/Roboto-Bold.woff") format("woff"), url("/dist/Roboto-Bold.ttf") format("truetype");
+  src: local("Roboto"), local("Roboto-Bold"), url("/dsf-common-ui/dist/Roboto-Bold.woff2") format("woff2"), url("/dsf-common-ui/dist/Roboto-Bold.woff") format("woff"), url("/dsf-common-ui/dist/Roboto-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 400;
-  src: local("Roboto"), local("Roboto-Italic"), url("/dsf-common-ui/dist/Roboto-Italic.woff2") format("woff2"), url("/dist/Roboto-Italic.woff") format("woff"), url("/dist/Roboto-Italic.ttf") format("truetype");
+  src: local("Roboto"), local("Roboto-Italic"), url("/dsf-common-ui/dist/Roboto-Italic.woff2") format("woff2"), url("/dsf-common-ui/dist/Roboto-Italic.woff") format("woff"), url("/dsf-common-ui/dist/Roboto-Italic.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 700;
-  src: local("Roboto"), local("Roboto-BoldItalic"), url("/dsf-common-ui/dist/Roboto-BoldItalic.woff2") format("woff2"), url("/dist/Roboto-BoldItalic.woff") format("woff"), url("/dist/Roboto-BoldItalic.ttf") format("truetype");
+  src: local("Roboto"), local("Roboto-BoldItalic"), url("/dsf-common-ui/dist/Roboto-BoldItalic.woff2") format("woff2"), url("/dsf-common-ui/dist/Roboto-BoldItalic.woff") format("woff"), url("/dsf-common-ui/dist/Roboto-BoldItalic.ttf") format("truetype");
 }
 @font-face {
   font-family: "Glyphicons Regular";
-  src: url("/dist/glyphicons-regular.eot?#iefix") format("embedded-opentype"), url("/dsf-common-ui/dist/glyphicons-regular.woff2") format("woff2"), url("/dist/glyphicons-regular.woff") format("woff"), url("/dist/glyphicons-regular.ttf") format("truetype");
+  src: url("/dsf-common-ui/dist/glyphicons-regular.eot?#iefix") format("embedded-opentype"), url("/dsf-common-ui/dist/glyphicons-regular.woff2") format("woff2"), url("/dsf-common-ui/dist/glyphicons-regular.woff") format("woff"), url("/dsf-common-ui/dist/glyphicons-regular.ttf") format("truetype");
 }
 
 html {
