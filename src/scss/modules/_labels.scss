@@ -16,12 +16,13 @@
   background-color: var(--label_bgc, brandColors(_transparent));
   color: var(--label_color, brandColors(_white));
   display: inline-flex;
-  font-size: rem(10);
+  font-size: var(--label-fontSize, rem(10));
   font-weight: 700;
   justify-content: center;
-  line-height: rem(16);
-  min-height: rem(16);
-  padding: 0 rem(5) 0.05em rem(4);
+  line-height: 1;
+  min-height: var(--labelMinHeight, rem(16));
+  height: fit-content;
+  padding: 0 rem(5) rem(0.5) rem(4);
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -39,21 +40,41 @@
   }
   &_text{
     display: inline-flex;
+    line-height: var(--label-lineHeight, rem(10));
     & + .svg--icon{
-      margin-left: 4px;
+      margin-left: rem(4);
     }
     .svg--icon + &{
-      margin-left: 4px;
+      margin-left: rem(4);
+    }
+    & + &{
+      margin-left: rem(4);
     }
   }
   .svg--icon{
     display: inline-flex;
-    height: var(--svgIcon_height, 12px);
-    width: var(--svgIcon_height, 12px);
+    height: var(--svgIcon_height, rem(12));
+    width: var(--svgIcon_height, rem(12));
     svg{
-      height: var(--svgIcon_height, 12px);
-      width: var(--svgIcon_height, 12px);
+      height: var(--svgIcon_height, rem(12));
+      width: var(--svgIcon_height, rem(12));
     }
+  }
+  .svg--icon__24vb{
+    display: inline-flex;
+    height: var(--svgIcon_height__24vb, rem(15));
+    width: var(--svgIcon_height__24vb, rem(15));
+    svg{
+      height: var(--svgIcon_height__24vb, rem(15));
+      width: var(--svgIcon_height__24vb, rem(15));
+    }
+  }
+  &__big{
+    --label-fontSize: #{rem(12)};
+    --lineHeight: #{rem(12)};
+    --labelMinHeight: #{rem(19)};
+    --svgIcon_height: #{rem(12)};
+    --svgIcon_height__24vb: #{rem(18)};
   }
 }
 
@@ -61,7 +82,7 @@
   &:after{
     @extend %label;
     content: attr(data-label-text);
-    margin-left: var(--label_margin-left, 5px);
+    margin-left: var(--label_margin-left, rem(5));
   }
 }
 
@@ -69,85 +90,150 @@
   &:before{
     @extend %label;
     content: attr(data-label-text);
-    margin-right: var(--label_margin-right, 5px);
+    margin-right: var(--label_margin-right, rem(5));
   }
 }
-.label__big{
-  font-size: rem(12);
-  line-height: rem(19);
-  min-height: rem(19);
-}
+
+
+
 .label_chip{
   align-items: center;
   background-color: var(--label_bgc, brandColors(_transparent));
-  border-radius: rem(12);
+  border-radius: var(--label_chip-borderRadius, rem(10));
+  border-color: var(--label_borderColor, brandColors(_transparent));
   border-style: solid;
   border-width: 1px;
-  border-color: var(--label_borderColor, brandColors(_light-blue));
-  color: var(--label_color, brandColors(_light-blue));
+  color: var(--label_color, brandColors(_dark-grey));
   display: inline-flex;
-  font-size: rem(12);
+  font-size: var(--label_chip-fontSize, rem(10));
   font-weight: 400;
-  padding: 0 rem(7);
-  line-height: rem(21);
-  min-height: rem(21);
+  height: fit-content;
+  line-height: 1;
+  min-height: var(--label_chip-minHeight, rem(20));
+  padding: 0 var(--label_chip-paddingX, rem(6));
   text-transform: none;
   text-align: center;
   white-space: nowrap;
+  --label-lineHeight: rem(14);
+  .svg--icon{
+    display: inline-flex;
+    height: var(--svgIcon_height, rem(9));
+    width: var(--svgIcon_height, rem(9));
+    svg{
+      height: var(--svgIcon_height, rem(9));
+      width: var(--svgIcon_height, rem(9));
+    }
+  }
+  .svg--icon__24vb{
+    display: inline-flex;
+    height: var(--svgIcon_height__24vb, rem(12));
+    width: var(--svgIcon_height__24vb, rem(12));
+    svg{
+      height: var(--svgIcon_height__24vb, rem(12));
+      width: var(--svgIcon_height__24vb, rem(12));
+    }
+  }
+  &__small{
+    --label_chip-borderRadius: #{rem(8)};
+    --label_chip-fontSize: #{rem(10)};
+    --label_chip-minHeight: #{rem(16)};
+    --label_chip-paddingX: #{rem(4)};
+    --label-lineHeight: #{rem(12)};
+    --svgIcon_height: #{rem(9)};
+    --svgIcon_height__24vb: #{rem(12)};
+  }
+  &__big{
+    --label_chip-borderRadius: #{rem(12)};
+    --label_chip-fontSize: #{rem(12)};
+    --label_chip-minHeight: #{rem(26)};
+    --label_chip-paddingX: #{rem(7)};
+    --label-lineHeight: #{rem(16)};
+    --svgIcon_height: #{rem(12)};
+    --svgIcon_height__24vb: #{rem(16)};
+  }
 }
 
 .label_circle {
     align-items: center;
-    border-radius: 24px;
+    background-color: var(--label_bgc, brandColors(_transparent));
+    border-color: var(--label_borderColor, brandColors(_transparent));
+    border-style: solid;
+    border-width: 1px;
+    border-radius: rem(24);
+    color: var(--label_color, brandColors(_dark-grey));
     display: inline-flex;
     justify-content: center;
     padding: 0;
-    height: 24px;
-    line-height: 24px;
-    width: 24px;
+    height: rem(24);
+    line-height: rem(24);
+    width: rem(24);
 }
+
 .label_small{
   @extend %label;
-  border-radius: rem(2);
-  font-size: rem(7);
-  height: rem(9);
-  line-height: rem(9);
+  --label-fontSize: #{rem(7)};
+  --labelMinHeight: auto;
+  // height: rem(9);
   min-width: rem(11);
-  min-height: auto;
+  // min-height: auto;
   padding: rem(1);
-  width: auto;
+  // width: auto;
   .btn-icon &{
-    bottom: -2px;
+    bottom: rem(-2);
     position: absolute;
-    right: -2px;
+    right: rem(-2);
   }
   .headerMenu_linkIcon & {
-    bottom:3px;
+    bottom: rem(3);
     position: absolute;
-    right:2px;
+    right: rem(2);
   }
 }
 
 @each $name, $value in $brand-label {
   .label-#{$name}{
     #{--label_color}: map-deep-get($brand-label, $name, 'color');
-    #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'color');
     #{--label_bgc}: map-deep-get($brand-label, $name, 'bg');
-    #{--label_borderColor}: brandColors(_transparent);
+    #{--label_borderColor}: map-deep-get($brand-label, $name, 'bg');
+    #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'color');
     #{--svg-icon-fill}: map-deep-get($brand-label, $name, 'svg');
     #{--svg-icon-stroke}: map-deep-get($brand-label, $name, 'svg');
-    #{--svg-icon-fill_blue}: map-deep-get($brand-label, $name, 'svg');
-    #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'svg');
+    #{--svg-icon-fill_blue}: map-deep-get($brand-label, $name, 'svg_blue');
+    #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'svg_blue');
+    &.label_chip{
+      &:hover, &.active, &:active{
+        #{--label_color}: map-deep-get($brand-label, $name, 'color');
+        #{--label_bgc}: map-deep-get($brand-label, $name, 'bg_active');
+        #{--label_borderColor}: map-deep-get($brand-label, $name, 'bg');
+        #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'color');
+        #{--svg-icon-fill}: map-deep-get($brand-label, $name, 'svg');
+        #{--svg-icon-stroke}: map-deep-get($brand-label, $name, 'svg');
+        #{--svg-icon-fill_blue}: map-deep-get($brand-label, $name, 'svg_blue');
+        #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'svg_blue');
+      }
+    }
   }
   .label-#{$name}__outline{
     #{--label_color}: map-deep-get($brand-label, $name, 'bg');
-    #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'bg');
     #{--label_borderColor}: map-deep-get($brand-label, $name, 'bg');
     #{--label_bgc}: brandColors(_transparent);
-    #{--svg-icon-fill}: map-deep-get($brand-label, $name, 'bg');
-    #{--svg-icon-stroke}: map-deep-get($brand-label, $name, 'bg');
-    #{--svg-icon-fill_blue}: map-deep-get($brand-label, $name, 'bg');
-    #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'bg');
+    #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'bg');
+    #{--svg-icon-fill}: map-deep-get($brand-label, $name, 'svg-outline');
+    #{--svg-icon-stroke}: map-deep-get($brand-label, $name, 'svg-outline');
+    #{--svg-icon-fill_blue}: map-deep-get($brand-label, $name, 'svg-outline_blue');
+    #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'svg-outline_blue');
+    &.label_chip{
+      &:hover, &.active, &:active{
+        #{--label_color}: map-deep-get($brand-label, $name, 'bg');
+        #{--label_borderColor}: map-deep-get($brand-label, $name, 'bg');
+        #{--label_bgc}: map-deep-get($brand-label, $name, 'bg-outline_active');
+        #{--svg-valute-fill}: map-deep-get($brand-label, $name, 'bg');
+        #{--svg-icon-fill}: map-deep-get($brand-label, $name, 'svg-outline');
+        #{--svg-icon-stroke}: map-deep-get($brand-label, $name, 'svg-outline');
+        #{--svg-icon-fill_blue}: map-deep-get($brand-label, $name, 'svg-outline_blue');
+        #{--svg-icon-stroke_blue}: map-deep-get($brand-label, $name, 'svg-outline_blue');
+      }
+    }
   }
 }
 

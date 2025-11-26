@@ -7,39 +7,40 @@ anchor: components-labels
 order: 10
 ---
 <h3>Форма лейбла</h3>
-<p> 
-  <code class="language-plaintext highlighter-rouge">.label</code> - имеет квадратные очертания
-  <code class="language-plaintext highlighter-rouge">.label_chip</code> - более закругленный и больший по размеру
-  <code class="language-plaintext highlighter-rouge">.label_small</code> - маленький по размеру используется для счетчиков в кнопках и подобном.
-</p>
+<div class="mb-20">
+<p><code class="language-plaintext highlighter-rouge">.label</code> - Имеет квадратные очертания. Используется для указания статуса.</p>
+<p><code class="language-plaintext highlighter-rouge">.label_chip</code> - Чипс более закругленный, имеет состояние hover и active. Позволяют пользователям вводить информацию, делать выбор, фильтровать контент или инициировать действия.</p>
+<p><code class="language-plaintext highlighter-rouge">.label_small</code> - Имеет маленький размер. Используется для счетчиков в кнопках и подобном.</p>
+<p><code class="language-plaintext highlighter-rouge">.label_circle</code>- Круглый. Используется для цифр</p>
+</div>
 
 <h3>Цветовая модификация</h3>
-
 {% highlight html %}
-<div class="mb-10"> 
    <span class="label label-primary">label-primary</span>
-</div>
-<div class="mb-10"> 
-   <span class="label label-yellow">label-yellow</span>
-</div>
-<div class="mb-10"> 
-   <span class="label label_chip label-primary__outline">label-primary</span>
-</div>
-<div class="mb-10"> 
-   <span class="label label_chip label-yellow__outline">label-yellow</span>
-</div>
-<div class="mb-10"> 
+   <span class="label label-primary__outline">label-primary__outline</span>
+   <span class="label label-yellow__outline">label-yellow__outline</span>
+   <span class="label_chip label-primary">label-primary</span>
+   <span class="label_chip label-primary__outline">label-primary__outline</span>
+   <span class="label_chip label-yellow">label-yellow</span>
+   <span class="label_chip label-yellow__outline">label-yellow__outline</span>
    <span class="label_small label-danger">2</span>
-</div>
+   <span class="label_circle label-info">20</span>
 {% endhighlight %}
 
-<div class="bs-docs-example">
-  <div class="d-flex flex-wrap gap-10 mb-10">
+<div class="bs-docs-example mb-20">
+  <h4>Label</h4>
+  <div class="d-flex flex-wrap gap-10 mb-20">
     {% for item in site.data.jekyll.brandlabel %}
       <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
     {% endfor %}
   </div>
+  <h4>Chip</h4>
   <div class="d-flex flex-wrap gap-10">
+    {% for item in site.data.jekyll.brandlabel %}
+      <span class="label_chip label-{{ item.name }}">label-{{ item.name }}</span>
+    {% endfor %}
+  </div>
+  <div class="d-flex flex-wrap gap-10 mb-20">
     {% for item in site.data.jekyll.brandlabel %}
       <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}__outline</span>
     {% endfor %}
@@ -52,55 +53,86 @@ order: 10
   </div>
 </div>
 
-<h3>Семантика цвета при использовании для статусов</h3>
-
+<h3>Семантика цвета при использовании <code class="language-plaintext highlighter-rouge">.label</code> для статусов</h3>
 <p>Для "промежуточных" статусов используется <code class="language-plaintext highlighter-rouge">label-info</code></p>
 
-<div class="bs-docs-example">
-  <div class="mb-5"><span class="label label-grey2">Черновик</span></div>
-  <div class="mb-5"><span class="label label-light-yellow2">Неполные данные</span></div>
-  <div class="mb-5"><span class="label label-light-yellow2">Необходимы исправления</span></div>
-  <div class="mb-5"><span class="label label-light-green2">Исправлен</span></div>
-  <div class="mb-5"><span class="label label-light-green">Признан</span></div>
-  <div class="mb-5"><span class="label label-dark-green">Выполнен</span></div>
-  <div class="mb-5"><span class="label label-light-red">Отклонен</span></div>
-  <div class="mb-5"><span class="label label-grey4">Закрыт</span></div>
-  <div class="mb-5"><span class="label label-info">Запрос</span></div>
-  <div class="mb-5"><span class="label label-info">Новый</span></div>
-  <div class="mb-5"><span class="label label-info">Необходим осмотр</span></div>
-  <div class="mb-5"><span class="label label-info">Обработан</span></div>
-  <div class="mb-5"><span class="label label-info">Принят </span></div>
+<div class="bs-docs-example d-flex gap-10 mb-20">
+  <span class="label label-grey2">Черновик</span>
+  <span class="label label-light-yellow2">Неполные данные</span>
+  <span class="label label-light-yellow2">Необходимы исправления</span>
+  <span class="label label-light-green2">Исправлен</span>
+  <span class="label label-light-green">Признан</span>
+  <span class="label label-dark-green">Выполнен</span>
+  <span class="label label-light-red">Отклонен</span>
+  <span class="label label-grey4">Закрыт</span>
+  <span class="label label-info">Запрос</span>
+  <span class="label label-info">Новый</span>
+  <span class="label label-info">Необходим осмотр</span>
+  <span class="label label-info">Обработан</span>
+  <span class="label label-info">Принят </span>
 </div>
 
-<h3>Модификация лейблов</h3>
+<h3>Модификации лейблов</h3>
 
-<p>Модификации текста в лейбле и размера лейбла:</p>
-
+<h4>Модификации текста</h4>
 {% highlight html %}
     <span class="label label-success fontWeightNormal">fontWeightNormal</span>
     <span class="label label-danger transformNone">transformNone</span>
+    <span class="label label-success fontWeightNormal"><span class="label_text">fontWeightNormal</span><span class="label_text fontWeightBold">Bold</span></span>
+{% endhighlight %}
+<div class="bs-docs-example d-flex gap-10 mb-20">
+    <span class="label label-success fontWeightNormal">fontWeightNormal</span>
+    <span class="label label-danger transformNone">transformNone</span>
+    <span class="label label-success fontWeightNormal"><span class="label_text">fontWeightNormal</span><span class="label_text fontWeightBold">Bold</span></span>
+</div>
+
+<h4>Модификации размера</h4>
+
+<p>Для <code class="language-plaintext highlighter-rouge">.label</code> увеличенный размер - <code class="language-plaintext highlighter-rouge">.label__big</code></p>
+{% highlight html %}
+    <span class="label label-warning">label</span>
     <span class="label label-warning label__big">label__big</span>
 {% endhighlight %}
-<div class="bs-docs-example">
-    <span class="label label-success fontWeightNormal">fontWeightNormal</span>
-    <span class="label label-danger transformNone mr-10">transformNone</span>
-    <span class="label label-warning label__big mr-10">label__big</span>
+<div class="bs-docs-example d-flex gap-10 mb-20">
+    <span class="label label-warning">label</span>
+    <span class="label label-warning label__big">label__big</span>
+</div>
+<p>Для <code class="language-plaintext highlighter-rouge">.label_chip</code> увеличенный размер - <code class="language-plaintext highlighter-rouge">.label_chip__big</code> и уменьшеные размер <code class="language-plaintext highlighter-rouge">.label_chip__small</code></p>
+{% highlight html %}
+    <span class="label_chip label-dark-green">label</span>
+    <span class="label_chip label-dark-green label__big">label__big</span>
+    <span class="label_chip label-dark-green label__small">label__small</span>
+    <span class="label_chip label-dark-green__outline label__big">label__big</span>
+    <span class="label_chip label-dark-green__outline label__small">label__small</span>
+{% endhighlight %}
+<div class="bs-docs-example d-flex gap-10 mb-20">
+    <span class="label_chip label-dark-green">label</span>
+    <span class="label_chip label-dark-green label__big">label__big</span>
+    <span class="label_chip label-dark-green label__small">label__small</span>
+    <span class="label_chip label-dark-green__outline label__big">label__big</span>
+    <span class="label_chip label-dark-green__outline label__small">label__small</span>
 </div>
 
 <h3>Вывод иконки внутри лейбла:</h3>
 
 {% highlight html %}
-      <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon"><?= Icons::icon('bicolors-attention__24vb') ?></span></span>
-      <span class="label label-success"><span class="svg--icon"><?= Icons::icon('bicolors-filter__24vb') ?></span><span class="label_text">label-success</span></span>
+      <span class="label label-success"><span class="svg--icon svg--icon__24vb"><?= Icons::icon('bicolors-filter__24vb') ?></span><span class="label_text">label-success</span></span>
+      <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon svg--icon__24vb"><?= Icons::icon('bicolors-attention__24vb') ?></span></span>
+      <span class="label label-info"><span class="label_text">label-info</span><span class="svg--icon svg--icon"><?= Icons::icon('bicolors-attention') ?></span></span>
 {% endhighlight %}
-<div class="bs-docs-example">
-  <div class="d-flex"> 
-      <span class="label label-danger ml-5"><span class="label_text">label-danger</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
-      <span class="label label-success ml-5"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter__24vb"></use></svg></span><span class="label_text">label-success</span></span>
-  </div>
+<div class="bs-docs-example d-flex gap-10 mb-20">
+      <span class="label label-success"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter__24vb"></use></svg></span><span class="label_text">label-success</span></span>
+      <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
+      <span class="label label-info"><span class="label_text">label-info</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions_full"></use></svg></span></span>
+      <span class="label_chip label-warning"><span class="label_text">label_chip label-warning</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
+      <span class="label_chip label-warning__outline"><span class="label_text">label_chip label-warning__outline</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
+      <span class="label_chip label-danger"><span class="label_text">label_chip label-danger</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use></svg></span></span>
+      <span class="label_chip label-danger__outline"><span class="label_text">label_chip label-danger__outline</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use></svg></span></span>
+      <span class="label_chip label-light-green"><span class="label_text">label_chip label-light-green</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore"></use></svg></span></span>
 </div>
-<p> 
-Для вывода дополнительной информации в виде <code class="language-plaintext highlighter-rouge">label</code>, но без модификации всего контейнера, на котором навешивается класс - используется <code class="language-plaintext highlighter-rouge">label__after</code> или <code class="language-plaintext highlighter-rouge">label__before</code> и необходимый модификатор цвета. <br>
+
+<h3>Ипользование стилей label, через дата-атрибуты</h3>
+<p>Для вывода дополнительной информации в виде <code class="language-plaintext highlighter-rouge">label</code>, но без модификации всего контейнера, на котором навешивается класс - используется <code class="language-plaintext highlighter-rouge">label__after</code> или <code class="language-plaintext highlighter-rouge">label__before</code> и необходимый модификатор цвета. <br>
 Текст дополнительного поля выводится через дата-атрибут <code class="language-plaintext highlighter-rouge">data-label-text</code>. <br>
 Возможно изменения отступа от поля через изменения в style переменной <code class="language-plaintext highlighter-rouge">--label_margin-left</code> или <code class="language-plaintext highlighter-rouge">--label_margin-right</code>
 </p>
