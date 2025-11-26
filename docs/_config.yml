@@ -32,7 +32,6 @@ canonical_url: "https://infotech-ru.github.io/dsf-common-ui"
 theme: minima
 plugins:
   - jekyll-feed
-  - package_version
 collections_dir: content
 collections: 
   posts:
