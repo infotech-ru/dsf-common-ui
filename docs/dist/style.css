@@ -119,34 +119,29 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("roboto-v18-cyrillic_latin-regular.eot");
-  src: local("Roboto"), local("Roboto-400"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-regular.woff2") format("woff2"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-regular.woff") format("woff"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-regular.ttf") format("truetype"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-regular.svg#Roboto") format("svg");
+  src: local("Roboto-Regular"), local("Roboto-400"), url("/dsf-common-ui/dist/Roboto-Regular.woff2") format("woff2"), url("/dsf-common-ui/dist/Roboto-Regular.woff") format("woff"), url("/dsf-common-ui/dist/Roboto-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url("roboto-v18-cyrillic_latin-700.eot");
-  src: local("Roboto"), local("Roboto-700"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-700.woff2") format("woff2"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-700.woff") format("woff"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-700.ttf") format("truetype"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-700.svg#Roboto") format("svg");
+  src: local("Roboto-Bold"), local("Roboto-700"), url("/dsf-common-ui/dist/Roboto-Bold.woff2") format("woff2"), url("/dsf-common-ui/dist/Roboto-Bold.woff") format("woff"), url("/dsf-common-ui/dist/Roboto-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 400;
-  src: url("roboto-v18-cyrillic_latin-italic.eot");
-  src: local("Roboto"), local("Roboto-400"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-italic.woff2") format("woff2"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-italic.woff") format("woff"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-italic.ttf") format("truetype"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-italic.svg#Roboto") format("svg");
+  src: local("Roboto-Italic"), local("Roboto-400"), url("/dsf-common-ui/dist/Roboto-Italic.woff2") format("woff2"), url("/dsf-common-ui/dist/Roboto-Italic.woff") format("woff"), url("/dsf-common-ui/dist/Roboto-Italic.ttf") format("truetype");
 }
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 700;
-  src: url("roboto-v18-cyrillic_latin-700italic.eot");
-  src: local("Roboto"), local("Roboto-700"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-700italic.woff2") format("woff2"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-700italic.woff") format("woff"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-700italic.ttf") format("truetype"), url("/dsf-common-ui/dist/roboto-v18-cyrillic_latin-700italic.svg#Roboto") format("svg");
+  src: local("Roboto-BoldItalic"), local("Roboto-700"), url("/dsf-common-ui/dist/Roboto-BoldItalic.woff2") format("woff2"), url("/dsf-common-ui/dist/Roboto-BoldItalic.woff") format("woff"), url("/dsf-common-ui/dist/Roboto-BoldItalic.ttf") format("truetype");
 }
 @font-face {
   font-family: "Glyphicons Regular";
-  src: url("/dsf-common-ui/dist/glyphicons-regular.eot");
-  src: url("/dsf-common-ui/dist/glyphicons-regular.eot?#iefix") format("embedded-opentype"), url("/dsf-common-ui/dist/glyphicons-regular.woff2") format("woff2"), url("/dsf-common-ui/dist/glyphicons-regular.woff") format("woff"), url("/dsf-common-ui/dist/glyphicons-regular.ttf") format("truetype"), url("/dsf-common-ui/dist/glyphicons-regular.svg#glyphiconsregular") format("svg");
+  src: url("/dsf-common-ui/dist/glyphicons-regular.woff2") format("woff2"), url("/dsf-common-ui/dist/glyphicons-regular.woff") format("woff"), url("/dsf-common-ui/dist/glyphicons-regular.ttf") format("truetype");
 }
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */

@@ -20,12 +20,10 @@
           font-family: $fontFamily;
           font-style: string.unquote($fontStyleName);
           font-weight: $weight;
-          src: url('#{$name}.eot');
-          src: local('#{$fontFamily}'), local('#{$fontFamily}-#{$weight}'),
+          src: local('#{$name}'), local('#{$fontFamily}-#{$weight}'),
           url('#{$path-fonts}#{$name}.woff2') format('woff2'),
           url('#{$path-fonts}#{$name}.woff') format('woff'),
-          url('#{$path-fonts}#{$name}.ttf') format('truetype'),
-          url('#{$path-fonts}#{$name}.svg##{$fontFamily}') format('svg');
+          url('#{$path-fonts}#{$name}.ttf') format('truetype');
         }
     }
   }
@@ -33,10 +31,7 @@
 
 @font-face {
   font-family: 'Glyphicons Regular';
-  src: url('#{$path-fonts}glyphicons-regular.eot');
-  src: url('#{$path-fonts}glyphicons-regular.eot?#iefix') format('embedded-opentype'),
-       url('#{$path-fonts}glyphicons-regular.woff2') format('woff2'),
+  src: url('#{$path-fonts}glyphicons-regular.woff2') format('woff2'),
        url('#{$path-fonts}glyphicons-regular.woff') format('woff'),
-       url('#{$path-fonts}glyphicons-regular.ttf') format('truetype'),
-       url('#{$path-fonts}glyphicons-regular.svg#glyphiconsregular') format('svg');
+       url('#{$path-fonts}glyphicons-regular.ttf') format('truetype');
 }
