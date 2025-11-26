@@ -33,7 +33,6 @@ theme: minima
 plugins:
   - jekyll-feed
 collections_dir: content
-source: .
 collections: 
   posts:
     output: true
