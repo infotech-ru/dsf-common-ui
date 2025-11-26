@@ -57,7 +57,7 @@ sass:
   style: compressed
 highlighter: rouge
 encoding: "utf-8"
-limit_posts: 5
+limit_posts: 3
 permissions:
   id-token: write # This is required for requesting the JWT
 show_excerpts: true

@@ -10261,7 +10261,7 @@ input[type=button].btn-block {
 }
 .label__big {
   --label-fontSize: 0.75rem;
-  --lineHeight: 0.75rem;
+  --label-lineHeight: 0.75rem;
   --labelMinHeight: 1.1875rem;
   --svgIcon_height: 0.75rem;
   --svgIcon_height__24vb: 1.125rem;

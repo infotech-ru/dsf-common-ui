@@ -45,6 +45,7 @@ order: 10
       <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}__outline</span>
     {% endfor %}
   </div>
+  <h4>label_small и label_circle</h4>
   <div class="d-flex flex-wrap gap-10">
     <button class="btn-icon p-relative">
        <span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-eye"></use></svg></span>
@@ -57,7 +58,7 @@ order: 10
 <h3 class="mt-20">Семантика цвета при использовании <code class="language-plaintext highlighter-rouge">.label</code> для статусов</h3>
 <p>Для "промежуточных" статусов используется <code class="language-plaintext highlighter-rouge">label-info</code></p>
 
-<div class="bs-docs-example d-flex gap-10">
+<div class="bs-docs-example d-flex flex-wrap gap-10">
   <span class="label label-grey2">Черновик</span>
   <span class="label label-light-yellow2">Неполные данные</span>
   <span class="label label-light-yellow2">Необходимы исправления</span>
@@ -81,7 +82,7 @@ order: 10
     <span class="label label-danger transformNone">transformNone</span>
     <span class="label label-success fontWeightNormal"><span class="label_text">fontWeightNormal</span><span class="label_text fontWeightBold">Bold</span></span>
 {% endhighlight %}
-<div class="bs-docs-example d-flex gap-10">
+<div class="bs-docs-example d-flex flex-wrap gap-10">
     <span class="label label-success fontWeightNormal">fontWeightNormal</span>
     <span class="label label-danger transformNone">transformNone</span>
     <span class="label label-light-red fontWeightNormal"><span class="label_text">fontWeightNormal</span><span class="label_text fontWeightBold">Bold</span></span>
@@ -95,7 +96,7 @@ order: 10
     <span class="label label-warning">label</span>
     <span class="label label-warning label__big">label__big</span>
 {% endhighlight %}
-<div class="bs-docs-example d-flex align-center gap-10">
+<div class="bs-docs-example d-flex flex-wrap align-center gap-10">
     <span class="label label-warning">label</span>
     <span class="label label-warning label__big">label__big</span>
 </div>
@@ -107,7 +108,7 @@ order: 10
     <span class="label_chip label-dark-green__outline label_chip__big">label_chip__big</span>
     <span class="label_chip label-dark-green__outline label_chip__small">label_chip__small</span>
 {% endhighlight %}
-<div class="bs-docs-example d-flex align-center gap-10">
+<div class="bs-docs-example d-flex flex-wrap align-center gap-10">
     <span class="label_chip label-dark-green">label_chip</span>
     <span class="label_chip label-dark-green label_chip__big">label_chip__big</span>
     <span class="label_chip label-dark-green label_chip__small">label_chip__small</span>
@@ -122,7 +123,7 @@ order: 10
       <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon svg--icon__24vb"><?= Icons::icon('bicolors-attention__24vb') ?></span></span>
       <span class="label label-info"><span class="label_text">label-info</span><span class="svg--icon svg--icon"><?= Icons::icon('bicolors-attention') ?></span></span>
 {% endhighlight %}
-<div class="bs-docs-example d-flex align-center gap-10">
+<div class="bs-docs-example d-flex flex-wrap align-center gap-10">
       <span class="label label-success"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter__24vb"></use></svg></span><span class="label_text">label-success</span></span>
       <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
       <span class="label label-info"><span class="label_text">label-info</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions_full"></use></svg></span></span>
