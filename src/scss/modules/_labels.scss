@@ -22,7 +22,7 @@
   line-height: 1;
   min-height: var(--labelMinHeight, rem(16));
   height: fit-content;
-  padding: 0 rem(5) rem(0.5) rem(4);
+  padding: 0 rem(5) 0 rem(4);
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -104,6 +104,7 @@
   border-style: solid;
   border-width: 1px;
   color: var(--label_color, brandColors(_dark-grey));
+  cursor: pointer;
   display: inline-flex;
   font-size: var(--label_chip-fontSize, rem(10));
   font-weight: 400;
