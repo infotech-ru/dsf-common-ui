@@ -1,0 +1,55 @@
+@use './../utilities/functions/func_fonts' as *;
+
+.lineStages{
+  $lineStagesBgc: var(--color_light-grey);
+  $lineStagesItemBgc: var(--color_white);
+  $lineStagesSuccessBgc: var(--color_light-green);
+  $lineStagesSuccessColor: var(--color_dark-green);
+  $lineStagesDangerBgc: var(--color_rose);
+  $lineStagesDangerColor: var(--color_dark-red);
+  &_wrapper{
+    background-color: $lineStagesBgc;
+    padding: rem(5);
+  }
+  &_name{
+    align-items: center;
+    border-radius: rem(5);
+    background-color: $lineStagesItemBgc;
+    // color: $lineStagesNameColor;
+    display: flex;
+    flex: 1 1 0px;
+    font-size: rem(10);
+    font-weight: 400;
+    justify-content: center;
+    height: rem(16);
+    min-width: fit-content;
+    text-transform: uppercase;
+    width: 0;
+    &__success{
+      background-color: $lineStagesSuccessBgc;
+      color: $lineStagesSuccessColor;
+    }
+    &__danger{
+      background-color: $lineStagesDangerBgc;
+      color: $lineStagesDangerColor;
+    }
+  }
+  &_date{
+    font-size: rem(12);
+    font-weight: 400;
+    flex: 1 1 0px;
+    line-height: rem(14);
+    margin-bottom: rem(5);
+    min-width: fit-content;
+    text-align: center;
+    width: 0;
+  }
+  &_items{
+    align-items: center;
+    display: flex;
+    gap: rem(5);
+    a{
+      text-decoration: none;
+    }
+  }
+}

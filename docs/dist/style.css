@@ -11200,6 +11200,51 @@ a.label:hover, a.label:focus {
   display: inline-flex;
 }
 
+.lineStages_wrapper {
+  background-color: var(--color_light-grey);
+  padding: 0.3125rem;
+}
+.lineStages_name {
+  align-items: center;
+  border-radius: 0.3125rem;
+  background-color: var(--color_white);
+  display: flex;
+  flex: 1 1 0px;
+  font-size: 0.625rem;
+  font-weight: 400;
+  justify-content: center;
+  height: 1rem;
+  min-width: fit-content;
+  text-transform: uppercase;
+  width: 0;
+}
+.lineStages_name__success {
+  background-color: var(--color_light-green);
+  color: var(--color_dark-green);
+}
+.lineStages_name__danger {
+  background-color: var(--color_rose);
+  color: var(--color_dark-red);
+}
+.lineStages_date {
+  font-size: 0.75rem;
+  font-weight: 400;
+  flex: 1 1 0px;
+  line-height: 0.875rem;
+  margin-bottom: 0.3125rem;
+  min-width: fit-content;
+  text-align: center;
+  width: 0;
+}
+.lineStages_items {
+  align-items: center;
+  display: flex;
+  gap: 0.3125rem;
+}
+.lineStages_items a {
+  text-decoration: none;
+}
+
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* HEADING                                                                    */
