@@ -52,14 +52,17 @@
   }
 
   // Links within the dropdown menu
-  > li > a,
-  > li > span {
+  > li > a {
     @extend %dropdown__link;
     @extend %dropdown__linkColors;
     &:hover,
     &:focus {
       @extend %dropdown__linkHover;
     }
+  }
+  > li > span {
+    @extend %dropdown__link;
+    @extend %dropdown__linkColors;
   }
   .active > .dropdown__link,
   .dropdown__link.active,

@@ -58,7 +58,7 @@
 %dropdown__linkColors {
   background-color: transparent;
   border: none;
-  color: brandPalette(dropdown_color);
+  color: var(--text_color, brandPalette(dropdown_color));
   text-decoration: none;
 }
 %dropdown__linkHover {

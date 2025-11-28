@@ -2,9 +2,9 @@
 title: Главная
 layout: default
 ---
+<h1 class="mb-20">Унификация UI и UE</h1>
 
-<h1>Унификация UI и UE</h1>
-
+<div class="unityBlock mb-10">
 <h2>Правила именования классов:</h2>
 
 <p>- Дефис в именах классов используем для префикса. <code class="language-plaintext highlighter-rouge">crm-</code> или в правилах переопределения стилей bootstrap <code class="language-plaintext highlighter-rouge">btn-default</code>.</p>
@@ -41,13 +41,16 @@ layout: default
 
 <p>- Исключить использование <code class="language-plaintext highlighter-rouge">!important</code></p>
 <p>- Для использования в скриптах использовать префикс <code class="language-plaintext highlighter-rouge">js-</code></p>
+</div>
 
-<h2 class="mt-20 mb-10">Последние добавленное в версии {{ site.version }}</h2>
-
-<div>
+<div class="unityBlock">
+  <h2 class="mb-10">Добавленное в последний версии</h2>
   {% for post in site.posts %}
     <article class="border-bottom border-grey2 mb-10 pb-10">
-      <div class="fz11 text-grey3">{{ post.date | date: "%d.%m.%Y" }}</div>
+      <div class="d-flex align-center justify-space-between">
+        <div class="fz11 text-grey3">{{ post.date | date: "%d.%m.%Y" }}</div>
+        <div class="fz11 text-grey3">Версия dsf-common-ui:{{ post.version }}</div>
+      </div>
       <h3 class="mb-10">{{ post.title }}</h3>
       <div>{{ post.excerpt }}</div>
     </article>
