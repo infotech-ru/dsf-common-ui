@@ -16,7 +16,7 @@ use app\helpers\Icons;
 use \yii\bootstrap\ActiveForm;
 $this->registerJs('DSF.CustomFileUpload();');
 <div class="js-customFileUploadItem">
-  <?= $form->field($model, 'file', ['options' => ['class' => 'd-none js-customFileUploadItem']])->fileInput(['class' => 'form-control js-customFileUploadInput', id="<?= $this->getId() ?>"])->label(false); ?>
+  <?= $form->field($model, 'file', ['options' => ['class' => 'd-none']])->fileInput(['class' => 'form-control js-customFileUploadInput', 'id' => $this->getId()])->label(false); ?>
   <label class="btn-download btn-download__large w-100p" for="<?= $this->getId() ?>">
     <span class="btn-download_inner">
       <?= Icons::wrapper('bicolors-doc__24vb', ['class' => 'svg--icon svg--icon__h21']) ?>

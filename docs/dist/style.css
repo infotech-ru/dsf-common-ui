@@ -8521,9 +8521,10 @@ input[type=checkbox][disabled] {
   cursor: not-allowed;
 }
 .checkbox-item label.checkbox {
+  align-items: center;
   cursor: pointer;
   color: #333333;
-  display: inline-block;
+  display: inline-flex;
   font-size: 0.75rem;
   margin: 0;
   padding-left: 1rem;

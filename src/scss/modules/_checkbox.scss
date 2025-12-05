@@ -63,9 +63,11 @@ input[type=checkbox] {
         }
     }
     label.checkbox {
+        align-items: center;
         cursor: pointer;
         color: brandPalette(checkboxItem_color);
-        display: inline-block;
+        // display: inline-block;
+        display: inline-flex;
         font-size: rem(fontSizes(checkbox));
         margin: 0;
         padding-left: rem(calc(brandSizes(checkboxItem_size) / 0.75));
