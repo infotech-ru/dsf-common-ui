@@ -38,7 +38,7 @@ input[type=checkbox] {
     align-items: center;
     display: inline-flex;
     line-height: rem(lineHeight(checkbox));
-    min-height: rem(lineHeight(checkbox));
+    min-height: rem(lineHeight(input) + brandSizes(formControl_borderSize) * 2);
     position: relative;
     input[type=checkbox] {
         position: absolute;
