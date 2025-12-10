@@ -8492,7 +8492,10 @@ input[type=checkbox][disabled] {
 }
 
 .checkbox-item {
+  align-items: center;
+  display: inline-flex;
   line-height: 1.5rem;
+  min-height: 1.5rem;
   position: relative;
 }
 .checkbox-item input[type=checkbox] {

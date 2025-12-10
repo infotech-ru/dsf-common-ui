@@ -35,7 +35,10 @@ input[type=checkbox] {
 }
 
 .checkbox-item {
+    align-items: center;
+    display: inline-flex;
     line-height: rem(lineHeight(checkbox));
+    min-height: rem(lineHeight(checkbox));
     position: relative;
     input[type=checkbox] {
         position: absolute;
