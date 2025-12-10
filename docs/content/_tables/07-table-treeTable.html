@@ -15,7 +15,211 @@ order: 7
 <p>- для расскраски в цветовую схему строке - верхнему родителю  задаем класс - <code class="language-plaintext highlighter-rouge">tr__master</code></p>
 
 <p>- для потомков используем <code class="language-plaintext highlighter-rouge">tr__slave</code> и <code class="language-plaintext highlighter-rouge">tr__subSlave</code></p>
+<a class="btn-primary__outline" role="button" data-toggle="collapse" href="#collapseTreetable" aria-expanded="false" aria-controls="collapseTreetable">
+  Документация с http://ludo.cubicphuse.nl/jquery-treetable/
+</a>
+<div class="collapse" id="collapseTreetable">
+    <table class="table table__border mb-20">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><tt>branchAttr</tt></td>
+            <td><tt>string</tt></td>
+            <td><tt>"ttBranch"</tt></td>
+            <td>Optional data attribute that can be used to force the expander icon to be rendered on a node. This allows us to define a node as a branch node even though it does not have children yet. This translates to a <tt>data-tt-branch</tt> attribute in your HTML.</td>
+          </tr>
+          <tr>
+            <td><tt>clickableNodeNames</tt></td>
+            <td><tt>bool</tt></td>
+            <td><tt>false</tt></td>
+            <td>Set to true to expand branches not only when expander icon is clicked but also when node name is clicked.</td>
+          </tr>
+          <tr>
+            <td><tt>column</tt></td>
+            <td><tt>int</tt></td>
+            <td><tt>0</tt></td>
+            <td>The number of the column in the table that should be displayed as a tree.</td>
+          </tr>
+          <tr>
+            <td><tt>columnElType</tt></td>
+            <td><tt>string</tt></td>
+            <td><tt>"td"</tt></td>
+            <td>The types of cells that should be considered for the tree (<tt>td</tt>, <tt>th</tt> or both).</td>
+          </tr>
+          <tr>
+            <td><tt>expandable</tt></td>
+            <td><tt>bool</tt></td>
+            <td><tt>false</tt></td>
+            <td>Should the tree be expandable? An expandable tree contains buttons to make each branch with children collapsible/expandable.</td>
+          </tr>
+          <tr>
+            <td><tt>expanderTemplate</tt></td>
+            <td><tt>string</tt></td>
+            <td><tt>&lt;a href="#"&gt;&amp;nbsp;&lt;/a&gt;</tt></td>
+            <td>The HTML fragment used for the expander.</td>
+          </tr>
+          <tr>
+            <td><tt>indent</tt></td>
+            <td><tt>int</tt></td>
+            <td><tt>19</tt></td>
+            <td>The number of pixels that each branch should be indented with.</td>
+          </tr>
+          <tr>
+            <td><tt>indenterTemplate</tt></td>
+            <td><tt>string</tt></td>
+            <td><tt>&lt;span class="indenter"&gt;&lt;/span&gt;</tt></td>
+            <td>The HTML fragment used for the indenter.</td>
+          </tr>
+          <tr>
+            <td><tt>initialState</tt></td>
+            <td><tt>string</tt></td>
+            <td><tt>"collapsed"</tt></td>
+            <td>Possible values: <tt>"expanded"</tt> or <tt>"collapsed"</tt>.</td>
+          </tr>
+          <tr>
+            <td><tt>nodeIdAttr</tt></td>
+            <td><tt>string</tt></td>
+            <td><tt>"ttId"</tt></td>
+            <td>Name of the data attribute used to identify node. Translates to <tt>data-tt-id</tt> in your HTML.</td>
+          </tr>
+          <tr>
+            <td><tt>parentIdAttr</tt></td>
+            <td><tt>string</tt></td>
+            <td><tt>"ttParentId"</tt></td>
+            <td>Name of the data attribute used to set parent node. Translates to <tt>data-tt-parent-id</tt> in your HTML.</td>
+          </tr>
+          <tr>
+            <td><tt>stringCollapse</tt></td>
+            <td><tt>string</tt></td>
+            <td><tt>"Collapse"</tt></td>
+            <td>For internationalization.</td>
+          </tr>
+          <tr>
+            <td><tt>stringExpand</tt></td>
+            <td><tt>string</tt></td>
+            <td><tt>"Expand"</tt></td>
+            <td>For internationalization.</td>
+          </tr>
+        </tbody>
+      </table>
+    <table class="table table__border mb-20">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><tt>onInitialized</tt></td>
+            <td><tt>function</tt></td>
+            <td><tt>null</tt></td>
+            <td>Callback function fired when the tree has been initialized.</td>
+          </tr>
+          <tr>
+            <td><tt>onNodeCollapse</tt></td>
+            <td><tt>function</tt></td>
+            <td><tt>null</tt></td>
+            <td>Callback function fired when a branch is collapsed.</td>
+          </tr>
+          <tr>
+            <td><tt>onNodeExpand</tt></td>
+            <td><tt>function</tt></td>
+            <td><tt>null</tt></td>
+            <td>Callback function fired when a branch is expanded.</td>
+          </tr>
+          <tr>
+            <td><tt>onNodeInitialized</tt></td>
+            <td><tt>function</tt></td>
+            <td><tt>null</tt></td>
+            <td>Callback function fired when a node has been initialized.</td>
+          </tr>
+        </tbody>
+      </table>
+    <div class="mb-10">
+        The treetable() function accepts the following arguments:
+        <p>options (optional)</p>
+        <p>A Javascript object of configuration settings as described in the chapter on configuration.</p>
+        <p>force (optional)</p>
+        <p>Pass the boolean true to force reinitialization of the tree.</p>
+    </div>
+    <div class="mb-10">
+        <p>Additional Functions</p>
+        <p>Use the following functions to manipulate the tree programmatically. Calling a function should be done through the treetable() function. For example, to collapse node '42' use $("#tree").treetable("collapseNode", "42").</p>
 
+        <p>collapseAll()</p>
+        <p>Collapse all nodes at once.</p>
+        <p>collapseNode(id)</p>
+        <p>Collapse a single node, identified by id.</p>
+        <p>expandAll()</p>
+        <p>Expand all nodes at once.</p>
+        <p>expandNode(id)</p>
+        <p>Expand a single node, identified by id.</p>
+        <p>loadBranch(node, rows)</p>
+        <p>Load additional rows (HTML <tr>s) into the tree, with parent node. If node is null rows will be added as root nodes.</p>
+        <p>move(nodeId, destinationId)</p>
+        <p>Move node nodeId to new parent with destinationId.</p>
+        <p>node(id)</p>
+        <p>Select a node from the tree. Returns a TreeTable.Node object.</p>
+        <p>removeNode(id)</p>
+        <p>Remove a node and all its descendants from the tree.</p>
+        <p>reveal(id)</p>
+        <p>Reveal a node in the tree.</p>
+        <p>sortBranch(node), sortBranch(node, columnOrFunction)</p>
+        <p>Sort node's children alphabetically. Defaults to sorting on the values in the configured tree column (see settings). Pass an optional column number or sorting function as the second argument columnOrFunction. See the tests for examples of custom sorting functions. Does not recursively sort children of children.</p>
+        <p>unloadBranch(node)</p>
+        <p>Remove nodes/rows (HTML <tr>s) from the tree, with parent node. Note that the parent (node) will not be removed.</p>
+    </div>
+    <div class="mb-10">
+        <p>Complex Tree With Drag and Drop</p>
+        <p>This example uses jQuery UI's Draggable and Droppable components</p>
+        <code class="language-plaintext highlighter-rouge">
+            $("#example-advanced").treetable({ expandable: true });
+
+// Highlight selected row
+$("#example-advanced tbody").on("mousedown", "tr", function() {
+  $(".selected").not(this).removeClass("selected");
+  $(this).toggleClass("selected");
+});
+
+// Drag & Drop Example Code
+$("#example-advanced .file, #example-advanced .folder").draggable({
+  helper: "clone",
+  opacity: .75,
+  refreshPositions: true,
+  revert: "invalid",
+  revertDuration: 300,
+  scroll: true
+});
+
+$("#example-advanced .folder").each(function() {
+  $(this).parents("#example-advanced tr").droppable({
+    accept: ".file, .folder",
+    drop: function(e, ui) {
+      var droppedEl = ui.draggable.parents("tr");
+      $("#example-advanced").treetable("move", droppedEl.data("ttId"), $(this).data("ttId"));
+    },
+    hoverClass: "accept",
+    over: function(e, ui) {
+      var droppedEl = ui.draggable.parents("tr");
+      if(this != droppedEl[0] && !$(this).is(".expanded")) {
+        $("#example-advanced").treetable("expandNode", $(this).data("ttId"));
+      }
+    }
+  });
+});
+        </code>
+    </div>
+</div>
 <div class="bs-docs-example">
   <div class="wrapper__tableSticky" style="max-height: 40vh;">
     <table class="table table__border js-tree-table treetable">
