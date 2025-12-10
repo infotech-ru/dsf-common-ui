@@ -1,6 +1,8 @@
 ---
 Title: Table Дерево
 menutitle: Стрктура дерева
+menusubtitle: js
+menusubtitleclass: label label-yellow
 category: tables
 anchor: table-treeTable
 order: 7
@@ -15,7 +17,7 @@ order: 7
 <p>- для расскраски в цветовую схему строке - верхнему родителю  задаем класс - <code class="language-plaintext highlighter-rouge">tr__master</code></p>
 
 <p>- для потомков используем <code class="language-plaintext highlighter-rouge">tr__slave</code> и <code class="language-plaintext highlighter-rouge">tr__subSlave</code></p>
-<a class="btn-primary__outline" role="button" data-toggle="collapse" href="#collapseTreetable" aria-expanded="false" aria-controls="collapseTreetable">
+<a class="btn-primary__outline mb-10" role="button" data-toggle="collapse" href="#collapseTreetable" aria-expanded="false" aria-controls="collapseTreetable">
   Документация с http://ludo.cubicphuse.nl/jquery-treetable/
 </a>
 <div class="collapse" id="collapseTreetable">
@@ -145,14 +147,14 @@ order: 7
           </tr>
         </tbody>
       </table>
-    <div class="mb-10">
+    <div class="unityBlock mb-10">
         The treetable() function accepts the following arguments:
         <p>options (optional)</p>
         <p>A Javascript object of configuration settings as described in the chapter on configuration.</p>
         <p>force (optional)</p>
         <p>Pass the boolean true to force reinitialization of the tree.</p>
     </div>
-    <div class="mb-10">
+    <div class="unityBlock mb-10">
         <p>Additional Functions</p>
         <p>Use the following functions to manipulate the tree programmatically. Calling a function should be done through the treetable() function. For example, to collapse node '42' use $("#tree").treetable("collapseNode", "42").</p>
 
@@ -179,44 +181,43 @@ order: 7
         <p>unloadBranch(node)</p>
         <p>Remove nodes/rows (HTML <tr>s) from the tree, with parent node. Note that the parent (node) will not be removed.</p>
     </div>
-    <div class="mb-10">
+    <div class="unityBlock">
         <p>Complex Tree With Drag and Drop</p>
         <p>This example uses jQuery UI's Draggable and Droppable components</p>
         <code class="language-plaintext highlighter-rouge">
             $("#example-advanced").treetable({ expandable: true });
+            // Highlight selected row
+            $("#example-advanced tbody").on("mousedown", "tr", function() {
+              $(".selected").not(this).removeClass("selected");
+              $(this).toggleClass("selected");
+            });
 
-// Highlight selected row
-$("#example-advanced tbody").on("mousedown", "tr", function() {
-  $(".selected").not(this).removeClass("selected");
-  $(this).toggleClass("selected");
-});
+            // Drag & Drop Example Code
+            $("#example-advanced .file, #example-advanced .folder").draggable({
+              helper: "clone",
+              opacity: .75,
+              refreshPositions: true,
+              revert: "invalid",
+              revertDuration: 300,
+              scroll: true
+            });
 
-// Drag & Drop Example Code
-$("#example-advanced .file, #example-advanced .folder").draggable({
-  helper: "clone",
-  opacity: .75,
-  refreshPositions: true,
-  revert: "invalid",
-  revertDuration: 300,
-  scroll: true
-});
-
-$("#example-advanced .folder").each(function() {
-  $(this).parents("#example-advanced tr").droppable({
-    accept: ".file, .folder",
-    drop: function(e, ui) {
-      var droppedEl = ui.draggable.parents("tr");
-      $("#example-advanced").treetable("move", droppedEl.data("ttId"), $(this).data("ttId"));
-    },
-    hoverClass: "accept",
-    over: function(e, ui) {
-      var droppedEl = ui.draggable.parents("tr");
-      if(this != droppedEl[0] && !$(this).is(".expanded")) {
-        $("#example-advanced").treetable("expandNode", $(this).data("ttId"));
-      }
-    }
-  });
-});
+            $("#example-advanced .folder").each(function() {
+              $(this).parents("#example-advanced tr").droppable({
+                accept: ".file, .folder",
+                drop: function(e, ui) {
+                  var droppedEl = ui.draggable.parents("tr");
+                  $("#example-advanced").treetable("move", droppedEl.data("ttId"), $(this).data("ttId"));
+                },
+                hoverClass: "accept",
+                over: function(e, ui) {
+                  var droppedEl = ui.draggable.parents("tr");
+                  if(this != droppedEl[0] && !$(this).is(".expanded")) {
+                    $("#example-advanced").treetable("expandNode", $(this).data("ttId"));
+                  }
+                }
+              });
+            });
         </code>
     </div>
 </div>
