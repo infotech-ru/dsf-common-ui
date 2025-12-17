@@ -17893,6 +17893,10 @@ tbody.collapse.in {
   word-break: break-word;
 }
 
+.word-wrap_anywhere {
+  word-wrap: anywhere;
+}
+
 .overflow-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
