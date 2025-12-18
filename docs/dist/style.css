@@ -12039,10 +12039,10 @@ select.selectpicker {
 }
 .bootstrap-select.form-control {
   background-color: var(--bg_color, transparent);
-  margin-bottom: 0;
-  padding: 0;
   border: none;
   height: auto;
+  margin-bottom: 0;
+  padding: 0;
 }
 :not(.input-group) > .bootstrap-select.form-control:not([class*=col-]) {
   width: 100%;
@@ -12062,7 +12062,7 @@ select.selectpicker {
 }
 .bootstrap-select:not(.input-group-btn), .bootstrap-select[class*=col-] {
   float: none;
-  display: inline-block;
+  display: inline-flex;
   margin-left: 0;
 }
 .form-inline .bootstrap-select, .form-horizontal .bootstrap-select, .form-group .bootstrap-select {

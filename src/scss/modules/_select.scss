@@ -148,10 +148,10 @@ select.selectpicker {
   }
   &.form-control {
     background-color: var(--bg_color, transparent);
-    margin-bottom: 0;
-    padding: 0;
     border: none;
     height: auto;
+    margin-bottom: 0;
+    padding: 0;
     :not(.input-group) > &:not([class*="col-"]) {
       width: 100%;
     }
@@ -179,18 +179,11 @@ select.selectpicker {
   &:not(.input-group-btn),
   &[class*="col-"] {
     float: none;
-    display: inline-block;
+    // display: inline-block;
+    display: inline-flex;
     margin-left: 0;
   }
 
-  // Forces the pull to the right, if necessary
-  // &,
-  // &[class*="col-"],
-  // .row &[class*="col-"] {
-  //   &.dropdown-menu-right {
-  //     float: right;
-  //   }
-  // }
 
   .form-inline &,
   .form-horizontal &,
