@@ -11464,31 +11464,31 @@ output {
 .form-control[type=file] {
   border: none;
 }
-.form-control.datepicker {
+.form-control.datetimepicker, .form-control.datepicker {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.5' y='4.16968' width='11' height='9' stroke='%23333333'/%3E%3Cpath d='M2.33331 6.3363H13.6666' stroke='%23333333'/%3E%3Cpath d='M4.66669 2.66968V5.33634' stroke='%23333333'/%3E%3Cpath d='M4 7.66968H5.33333' stroke='%23333333'/%3E%3Cpath d='M4 9.66968H5.33333' stroke='%23333333'/%3E%3Cpath d='M10.6667 7.66968H12' stroke='%23333333'/%3E%3Cpath d='M10.6667 9.66968H12' stroke='%23333333'/%3E%3Cpath d='M4 11.6697H5.33333' stroke='%23333333'/%3E%3Cpath d='M10.6667 11.6697H12' stroke='%23333333'/%3E%3Cpath d='M7.33331 7.66968H8.66665' stroke='%23333333'/%3E%3Cpath d='M7.33331 9.66968H8.66665' stroke='%23333333'/%3E%3Cpath d='M7.33331 11.6697H8.66665' stroke='%23333333'/%3E%3Cpath d='M11.3333 2.66968V5.33634' stroke='%23333333'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: calc(100% - 7px) center;
 }
-.has-error .form-control.datepicker {
+.has-error .form-control.datetimepicker, .has-error .form-control.datepicker {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.5' y='4.16766' width='11' height='9' stroke='%23D9534F'/%3E%3Cpath d='M2.33331 6.33429H13.6666' stroke='%23D9534F'/%3E%3Cpath d='M4.66669 2.66766V5.33433' stroke='%23D9534F'/%3E%3Cpath d='M4 7.66766H5.33333' stroke='%23D9534F'/%3E%3Cpath d='M4 9.66766H5.33333' stroke='%23D9534F'/%3E%3Cpath d='M10.6667 7.66766H12' stroke='%23D9534F'/%3E%3Cpath d='M10.6667 9.66766H12' stroke='%23D9534F'/%3E%3Cpath d='M4 11.6677H5.33333' stroke='%23D9534F'/%3E%3Cpath d='M10.6667 11.6677H12' stroke='%23D9534F'/%3E%3Cpath d='M7.33331 7.66766H8.66665' stroke='%23D9534F'/%3E%3Cpath d='M7.33331 9.66766H8.66665' stroke='%23D9534F'/%3E%3Cpath d='M7.33331 11.6677H8.66665' stroke='%23D9534F'/%3E%3Cpath d='M11.3333 2.66766V5.33433' stroke='%23D9534F'/%3E%3C/svg%3E");
 }
-.form-control.datepicker[disabled], .form-control.datepicker.disabled {
+.form-control.datetimepicker[disabled], .form-control.datetimepicker.disabled, .form-control.datepicker[disabled], .form-control.datepicker.disabled {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.5' y='4.16565' width='11' height='9' stroke='%23777777'/%3E%3Cpath d='M2.33331 6.33228H13.6666' stroke='%23777777'/%3E%3Cpath d='M4.66669 2.66565V5.33232' stroke='%23777777'/%3E%3Cpath d='M4 7.66565H5.33333' stroke='%23777777'/%3E%3Cpath d='M4 9.66565H5.33333' stroke='%23777777'/%3E%3Cpath d='M10.6667 7.66565H12' stroke='%23777777'/%3E%3Cpath d='M10.6667 9.66565H12' stroke='%23777777'/%3E%3Cpath d='M4 11.6656H5.33333' stroke='%23777777'/%3E%3Cpath d='M10.6667 11.6656H12' stroke='%23777777'/%3E%3Cpath d='M7.33331 7.66565H8.66665' stroke='%23777777'/%3E%3Cpath d='M7.33331 9.66565H8.66665' stroke='%23777777'/%3E%3Cpath d='M7.33331 11.6656H8.66665' stroke='%23777777'/%3E%3Cpath d='M11.3333 2.66565V5.33232' stroke='%23777777'/%3E%3C/svg%3E");
 }
-.css-formFree .form-control.datepicker::-moz-placeholder {
+.css-formFree .form-control.datetimepicker::-moz-placeholder, .css-formFree .form-control.datepicker::-moz-placeholder {
   color: #777777;
   font-size: 0.75rem;
 }
-.css-formFree .form-control.datepicker:-moz-placeholder {
+.css-formFree .form-control.datetimepicker:-moz-placeholder, .css-formFree .form-control.datepicker:-moz-placeholder {
   color: #777777;
   font-size: 0.75rem;
 }
-.css-formFree .form-control.datepicker:-ms-input-placeholder {
+.css-formFree .form-control.datetimepicker:-ms-input-placeholder, .css-formFree .form-control.datepicker:-ms-input-placeholder {
   color: #777777;
   font-size: 0.75rem;
 }
-.css-formFree .form-control.datepicker::-webkit-input-placeholder {
+.css-formFree .form-control.datetimepicker::-webkit-input-placeholder, .css-formFree .form-control.datepicker::-webkit-input-placeholder {
   color: #777777;
   font-size: 0.75rem;
 }

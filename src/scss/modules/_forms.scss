@@ -197,6 +197,7 @@ output {
   &[type=file] {
     border: none;
   }
+  &.datetimepicker,
   &.datepicker{
       background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16968" width="11" height="9" stroke="#333333"/><path d="M2.33331 6.3363H13.6666" stroke="#333333"/><path d="M4.66669 2.66968V5.33634" stroke="#333333"/><path d="M4 7.66968H5.33333" stroke="#333333"/><path d="M4 9.66968H5.33333" stroke="#333333"/><path d="M10.6667 7.66968H12" stroke="#333333"/><path d="M10.6667 9.66968H12" stroke="#333333"/><path d="M4 11.6697H5.33333" stroke="#333333"/><path d="M10.6667 11.6697H12" stroke="#333333"/><path d="M7.33331 7.66968H8.66665" stroke="#333333"/><path d="M7.33331 9.66968H8.66665" stroke="#333333"/><path d="M7.33331 11.6697H8.66665" stroke="#333333"/><path d="M11.3333 2.66968V5.33634" stroke="#333333"/></svg>');
       background-repeat: no-repeat;
