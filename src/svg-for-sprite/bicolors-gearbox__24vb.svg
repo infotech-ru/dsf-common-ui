@@ -1,8 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 7H6V9.85714L12.24 12H18V7Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M13 13L13 22" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M13 2L13 6" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M15 19H18V21H15V19Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-<path d="M15 14H18V16H15V14Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-<path d="M15 3H18V5H15V3Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M11 13L11 3L9 3L9 13" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M11 16L11 21L9 21L9 16" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M16 19H18V20H16V19Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M16 9H18V10H16V9Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M14 13H5V16H14V13Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M16 14H18V15H16V14Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
+<path d="M16 4H18V5H16V4Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 </svg>
