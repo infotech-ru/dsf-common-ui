@@ -285,8 +285,6 @@ export function searchIcon() {
         'bicolors-crm__24vb': ['crm', '24vb'],
         'bicolors-crown': ['корона', 'crown', 'minvb'],
         'bicolors-crown__24vb': ['корона', 'crown', '24vb'],
-        'bicolors-cube_arrow': ['куб', 'стрелка', 'cube', 'arrow', 'minvb'],
-        'bicolors-cube_arrow__24vb': ['куб', 'стрелка', 'cube', 'arrow', '24vb'],
         'bicolors-database': ['база', 'бд', 'database', 'minvb'],
         'bicolors-database__24vb': ['база', 'бд', 'database', '24vb'],
         'bicolors-deduplicate': ['клон', 'deduplicate', 'minvb'],
