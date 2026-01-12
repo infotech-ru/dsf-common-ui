@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" href="{% if site.baseurl  %}{{ site.baseurl }}{% endif %}/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="{% if site.baseurl  %}{{ site.baseurl }}{% endif %}/favicon-16x16.png" sizes="16x16">
 {% if page.url == "/icons.html" %}
-  <script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+  <script src="{% if site.baseurl  %}{{ site.baseurl }}{% endif %}/dist/svg4everybody.js"></script>
   <script>svg4everybody();</script>
 {% endif %}
   <meta name="application-name" content="{{ site.author }}">
