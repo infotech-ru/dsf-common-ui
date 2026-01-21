@@ -412,8 +412,6 @@ a.btn {
   padding: #{brandSizes(btnLg-paddingY)}px #{brandSizes(btnLg-paddingX)}px;
 }
 
-
-
 .btn-icon{
   background-color: transparent;
   background-image: none;
@@ -456,16 +454,16 @@ a.btn {
       }
     }
   }
-    &:hover,
-  &:focus-visible{
+  &:hover,
+  &:focus-visible,
+  &.active,
+  &.active:focus{
     .svg--icon {
       background-color: brandPalette(btnIconSvgHover_bgc);
     }
   }
   &:hover,
   &:focus-visible,
-  &.active,
-  &.active:focus,
   &:active:focus,
   &:active
   &:hover,
@@ -488,8 +486,10 @@ a.btn {
     line-height: rem(lineHeight(btn));
   }
   &__danger{
+    &:hover,
     &:focus-visible,
-    &:hover{
+    &.active,
+    &.active:focus{
       .svg--icon {
         background-color: brandPalette(btnIconSvgDangerHover_bgc);
       }
