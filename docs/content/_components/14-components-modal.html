@@ -37,21 +37,29 @@ order: 14
   'size' => 'modal-responsive',
 {% endhighlight %}
 
-
 Класс <code class="language-plaintext highlighter-rouge">modalScrollableBody</code> - Добавление вертикального скрола для modal-body.
 {% highlight html %}
   'size' => 'modalScrollableBody'
 {% endhighlight %}
 
+<h4>Новое оформление модалки</h4>
+{% highlight html %}
+'closeButton' => [
+    'tag' => 'button',
+    'label' => Icons::wrapper('bicolors-close__24vb', ['class' => 'svg--icon svg--icon__24vb svg--icon__16 svg-dark-grey']),
+],
+'size' => 'modal-light-grey2 modal-svgClose'
+{% endhighlight %}
+
 Шапка окна отрисовывается через 'header'. 
 {% highlight html %}
-'header' => '<div class="modalHeader_item">
-              Icons::wrapper('bicolors-checklists__24vb', ['class' => 'svg--icon svg--icon__24vb modalHeader_itemTitleSvg'])
-              <h4 class="modal-title modalHeader_title h4">' . Yii::t('app', 'Название') . '</h4>
+'header' => '<div class="modalHeader_item">' 
+            . Icons::wrapper('bicolors-checklists__24vb', ['class' => 'svg--icon svg--icon__24vb modalHeader_itemTitleSvg'])
+            . '<h4 class="modal-title modalHeader_title h4">' . Yii::t('app', 'Название') . '</h4>
             </div>
-            <div class="modalHeader_item">
-              Icons::withText('bicolors-timeback', Yii::t('app', 'История изменения'))
-            </div>',
+            <div class="modalHeader_item">'
+            . Icons::withText('bicolors-timeback', Yii::t('app', 'История изменения'))
+            . '</div>',
 {% endhighlight %}
 
 Рядом с названиеи могут находится другие элементы - иконки, кнопки, лейблы.
