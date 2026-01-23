@@ -67,6 +67,7 @@ tbody.collapse.in { display: table-row-group; }
 }
 
 .iconModification{ // состояния иконок
+  &.svg--icon,
   .svg--icon{
     svg{
       #{--limited-stroke-on}: inherit;
@@ -110,6 +111,7 @@ tbody.collapse.in { display: table-row-group; }
     }
   }
   &_ver__1{
+    &.svg--icon,
     .svg--icon{
       svg{
         #{--limited-stroke-ver_1}: var(--svg-icon-stroke_blue);
@@ -118,6 +120,7 @@ tbody.collapse.in { display: table-row-group; }
     }
   }
   &_ver__2{
+    &.svg--icon,
     .svg--icon{
       svg{
         #{--limited-stroke-ver_2}: var(--svg-icon-stroke_blue);

@@ -16346,6 +16346,7 @@ tbody.collapse.in {
   display: none;
 }
 
+.iconModification.svg--icon svg,
 .iconModification .svg--icon svg {
   --limited-stroke-on: inherit;
   --limited-fill-on: inherit;
@@ -16356,6 +16357,7 @@ tbody.collapse.in {
   --svg-icon-stroke: #333333;
   --svg-icon-stroke_blue: #0094FF;
 }
+.iconModification.svg--icon.active svg,
 .iconModification .svg--icon.active svg {
   --limited-stroke-on: transparent;
   --limited-fill-on: transparent;
@@ -16377,10 +16379,12 @@ tbody.collapse.in {
   --limited-fill-on: var(--svg-icon-fill_blue);
   --limited-reverse: inherit;
 }
+.iconModification_ver__1.svg--icon svg,
 .iconModification_ver__1 .svg--icon svg {
   --limited-stroke-ver_1: var(--svg-icon-stroke_blue);
   --limited-fill-ver_1: var(--svg-icon-fill_blue);
 }
+.iconModification_ver__2.svg--icon svg,
 .iconModification_ver__2 .svg--icon svg {
   --limited-stroke-ver_2: var(--svg-icon-stroke_blue);
   --limited-fill-ver_2: var(--svg-icon-fill_blue);
