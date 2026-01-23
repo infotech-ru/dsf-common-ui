@@ -6,25 +6,22 @@ anchor: icons-states
 order: 2
 ---
 
-<h4>Модификация иконки bicolors-plus или bicolors-arrow_down при использование скрипта collspse.js</h4>
-<p>Использование одной иконки bicolors-plus или bicolors-arrow_down для cкрипта collapse. И создание эффекта замены на
-  `minus` или bicolors-arrow_up при расскрытии списка.
-  <br>Для иконки bicolors-plus используется класс <code class="language-plaintext highlighter-rouge">limited</code>.
-</p>
+<h4 class="mb-10">Модификация иконки bicolors-plus или bicolors-arrow_down при использование скрипта collspse.js</h4>
+<p>Cоздание эффекта замены на `bicolors-minus` или bicolors-arrow_up при расскрытии списка.</p>
 <br>Для иконки bicolors-arrow_down используется класс <code
   class="language-plaintext highlighter-rouge">svg--collapseIcon</code> у убертки `svg--icon`.</p>
 {% highlight html %}
-<a class="limited collapsed" role="button" data-toggle="collapse" href="#collapseLimited" aria-expanded="false"
+<a class="iconModification collapsed" role="button" data-toggle="collapse" href="#collapseLimited" aria-expanded="false"
   aria-controls="collapseLimited">
   <?= Icons::wrapper('bicolors-plus') ?>
 </a>
-<a class="collapsed" role="button" data-toggle="collapse" href="#collapseLimited2" aria-expanded="false"
+<a class="iconModification collapsed" role="button" data-toggle="collapse" href="#collapseLimited2" aria-expanded="false"
   aria-controls="collapseLimited2">
   <?= Icons::wrapper('bicolors-arrow_down', ['class' => 'svg--collapseIcon']) ?>
 </a>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <a class="limited collapsed btn-icon" role="button" data-toggle="collapse" href="#collapseLimited"
+  <a class="iconModification collapsed btn-icon" role="button" data-toggle="collapse" href="#collapseLimited"
     aria-expanded="false" aria-controls="collapseLimited">
     <span class="svg--icon">
       <svg width="24" height="24">
@@ -32,10 +29,7 @@ order: 2
       </svg>
     </span>
   </a>
-  <div class="collapse mt-10" id="collapseLimited">
-    Скрытый блок
-  </div>
-  <a class="mt-10 collapsed btn-icon" role="button" data-toggle="collapse" href="#collapseLimited2"
+  <a class="iconModification ml-10 collapsed btn-icon" role="button" data-toggle="collapse" href="#collapseLimited2"
     aria-expanded="false" aria-controls="collapseLimited2">
     <span class="svg--icon svg--collapseIcon">
       <svg width="24" height="24">
@@ -43,17 +37,18 @@ order: 2
       </svg>
     </span>
   </a>
+  <div class="collapse mt-10" id="collapseLimited">
+    Скрытый блок 1
+  </div>
   <div class="collapse mt-10" id="collapseLimited2">
     Скрытый блок 2
   </div>
 </div>
 
-<h4>Модификация с заменой на иконку с залитым фоном или заменой на другую</h4>
-<p>Использование иконок <code
-    class="language-plaintext highlighter-rouge">bicolors-favorite, bicolors-star, bicolors-play, bicolors-play_1_5x, bicolors-play_2x, bicolors-play_next, bicolors-height_collapse, bicolors-height_collapse__24vb, bicolors-height_expand, bicolors-height_expand__24vb, bicolors-plus__24vb, bicolors-plus, bicolors-minus__24vb, icolors-arrow_down, bicolors-arrow_down__24vb, bicolors-arrow_up, bicolors-arrow_up__24vb, bicolors-questions, bicolors-questions__24vb</code>
-  для применения с классами родителя <code class="language-plaintext highlighter-rouge">iconModification active</code> и
-  создание эффекта замены на <code
-    class="language-plaintext highlighter-rouge">bicolors-favorite-full, bicolors-star-full...</code>.</p>
+<h4 class="mb-10">Модификация иконки классом "active" с заменой на другую с залитым фоном или иную</h4>
+<p>Использование иконок <code class="language-plaintext highlighter-rouge">bicolors-favorite, bicolors-star, bicolors-play, bicolors-play_1_5x, bicolors-play_2x, bicolors-play_next, bicolors-height_collapse, bicolors-height_collapse__24vb, bicolors-height_expand, bicolors-height_expand__24vb, bicolors-plus__24vb, bicolors-plus, bicolors-minus__24vb, icolors-arrow_down, bicolors-arrow_down__24vb, bicolors-arrow_up, bicolors-arrow_up__24vb, bicolors-questions, bicolors-questions__24vb</code>
+  для создания эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-favorite-full, bicolors-star-full...</code>.</p>
+<p>Для применения у родителей указываем <code class="language-plaintext highlighter-rouge">iconModification</code> и для переключения на другую иконку<code class="language-plaintext highlighter-rouge">active</code></p>
 
 <p>Использование класса '.svg--icon__notIconModification' c 'svg--icon' отменяет действие у иконки '.active'</p>
 
@@ -74,11 +69,13 @@ order: 2
   <?= Icons::wrapper('bicolors-plus', ['class' => 'svg--icon svg--icon__notIconModification']) ?>
 </span>
 {% endhighlight %}
-<div class="bs-docs-example">
-  <div class="d-flex w-100p">
-    <div class="ml-auto">svg--icon__notIconModification</div>
-  </div>
+<h4 class="mb-10">Модификация иконки классом с заменой на другую с залитым фоном или иную через классы родителя</h4>
+p>Для применения у родителей указываем <code class="language-plaintext highlighter-rouge">iconModification_ver_1</code> и <code class="language-plaintext highlighter-rouge">iconModification_ver_2</code>
+<div class="d-flex w-100p">
   <h5 class="mb-10">по-умолчанию</h5>
+  <div class="ml-auto">svg--icon__notIconModification</div>
+</div>
+<div class="bs-docs-example">
   <div class="d-flex w-100p mb-10">
     <div class="d-flex gap-5 mb-10">
       <span class="svg--icon svg--icon__24vb">
@@ -534,8 +531,10 @@ order: 2
       </div>
     </div>
   </div>
-  <div class="iconModification">
-    <h5 class="mb-10">'iconModification'</h5>
+</div>
+<h5 class="mb-10 mt-10">'iconModification'</h5>
+<div class="bs-docs-example">    
+  <div class="iconModification mt-20">
     <div class="d-flex gap-5 mb-10">
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
@@ -988,8 +987,8 @@ order: 2
       </div>
     </div>
   </div>
-  <div class="iconModification active">
-    <h5 class="mb-10">'iconModification active'</h5>
+  <div class="iconModification active mt-20">
+    <h5 class="mb-10 mt-10">'iconModification active'</h5>
     <div class="d-flex gap-5 mb-10">
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
@@ -1439,6 +1438,122 @@ order: 2
             </svg>
           </span>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<h5 class="mb-10 mt-10">без 'iconModification_ver_1'</h5>
+<div class="bs-docs-example">
+  <div class="mt-20">
+    <div class="d-flex gap-5 mb-10">
+      <span class="svg--icon svg--icon__24vb">
+        <svg width="24" height="24">
+          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
+        </svg>
+      </span>
+      <span class="svg--icon">
+        <svg width="24" height="24">
+          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star"></use>
+        </svg>
+      </span>
+    </div>
+    <h5 class="mb-10 mt-10">'iconModification_ver_1'</h5>
+    <div class="iconModification_ver_1 d-flex gap-5 mb-10">
+      <span class="svg--icon svg--icon__24vb">
+        <svg width="24" height="24">
+          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
+        </svg>
+      </span>
+      <span class="svg--icon">
+        <svg width="24" height="24">
+          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="iconModification_ver_1 bg-light-green pt-10 pb-10">
+      <p>c 'bg-light-green'</p>
+      <div class="d-flex gap-5 mb-10">
+        <span class="svg--icon svg--icon__24vb">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
+          </svg>
+        </span>
+        <span class="svg--icon">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star"></use>
+          </svg>
+        </span>
+      </div>
+      <p>c 'bg-light-green' и 'svg-danger'</p>
+      <div class="d-flex gap-5 mb-10">
+        <span class="svg--icon svg-danger svg--icon__24vb">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
+          </svg>
+        </span>
+        <span class="svg--icon svg-danger">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<h5 class="mb-10 mt-10">без 'iconModification_ver_2'</h5>
+<div class="bs-docs-example">
+  <div class="mt-20">
+    <div class="d-flex gap-5 mb-10">
+      <span class="svg--icon svg--icon__24vb">
+        <svg width="24" height="24">
+          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
+        </svg>
+      </span>
+      <span class="svg--icon">
+        <svg width="24" height="24">
+          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star"></use>
+        </svg>
+      </span>
+    </div>
+    <h5 class="mb-10 mt-10">'iconModification_ver_2'</h5>
+    <div class="iconModification_ver_2 d-flex gap-5 mb-10">
+      <span class="svg--icon svg--icon__24vb">
+        <svg width="24" height="24">
+          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
+        </svg>
+      </span>
+      <span class="svg--icon">
+        <svg width="24" height="24">
+          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star"></use>
+        </svg>
+      </span>
+    </div>
+    <div class="iconModification_ver_2 bg-light-green pt-10 pb-10">
+      <p>c 'bg-light-green'</p>
+      <div class="d-flex gap-5 mb-10">
+        <span class="svg--icon svg--icon__24vb">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
+          </svg>
+        </span>
+        <span class="svg--icon">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star"></use>
+          </svg>
+        </span>
+      </div>
+      <p>c 'bg-light-green' и 'svg-danger'</p>
+      <div class="d-flex gap-5 mb-10">
+        <span class="svg--icon svg-danger svg--icon__24vb">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
+          </svg>
+        </span>
+        <span class="svg--icon svg-danger">
+          <svg width="24" height="24">
+            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star"></use>
+          </svg>
+        </span>
       </div>
     </div>
   </div>

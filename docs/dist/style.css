@@ -16377,6 +16377,14 @@ tbody.collapse.in {
   --limited-fill-on: var(--svg-icon-fill_blue);
   --limited-reverse: inherit;
 }
+.iconModification_ver_1 .svg--icon svg {
+  --limited-stroke-ver_1: var(--svg-icon-stroke_blue);
+  --limited-fill-ver_1: var(--svg-icon-fill_blue);
+}
+.iconModification_ver_2 .svg--icon svg {
+  --limited-stroke-ver_2: var(--svg-icon-stroke_blue);
+  --limited-fill-ver_2: var(--svg-icon-fill_blue);
+}
 
 .hoverTarget_parent .hoverTarget_item__block,
 .hoverTarget_parent .hoverTarget_item__inline-block,

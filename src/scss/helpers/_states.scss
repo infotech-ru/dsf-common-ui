@@ -109,6 +109,22 @@ tbody.collapse.in { display: table-row-group; }
       }
     }
   }
+  &_ver_1{
+    .svg--icon{
+      svg{
+        #{--limited-stroke-ver_1}: var(--svg-icon-stroke_blue);
+        #{--limited-fill-ver_1}: var(--svg-icon-fill_blue);
+      }
+    }
+  }
+  &_ver_2{
+    .svg--icon{
+      svg{
+        #{--limited-stroke-ver_2}: var(--svg-icon-stroke_blue);
+        #{--limited-fill-ver_2}: var(--svg-icon-fill_blue);
+      }
+    }
+  }
 }
 
 // .svg--collapseIcon{
