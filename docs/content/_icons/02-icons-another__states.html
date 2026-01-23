@@ -70,7 +70,7 @@ order: 2
 </span>
 {% endhighlight %}
 <h4 class="mb-10">Модификация иконки классом с заменой на другую с залитым фоном или иную через классы родителя</h4>
-<p>Для применения у родителей указываем <code class="language-plaintext highlighter-rouge">iconModification_ver_1</code> и <code class="language-plaintext highlighter-rouge">iconModification_ver_2</code>
+<p>Для применения у родителей указываем <code class="language-plaintext highlighter-rouge">iconModification iconModification_ver__1</code> и <code class="language-plaintext highlighter-rouge">iconModification iconModification_ver__2</code>
 <div class="d-flex w-100p mb-10 mt-10">
   <h5 class="">по-умолчанию</h5>
   <div class="ml-auto">svg--icon__notIconModification</div>
@@ -1442,9 +1442,10 @@ order: 2
     </div>
   </div>
 </div>
-<h5 class="mb-10 mt-10">без 'iconModification_ver_1'</h5>
+<h5 class="mb-10 mt-10">'iconModification_ver__1'</h5>
 <div class="bs-docs-example">
-  <div class="mt-20">
+  <div class="">
+    <h5 class="mb-10">без 'iconModification_ver__1'</h5>
     <div class="d-flex gap-5 mb-10">
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
@@ -1457,8 +1458,8 @@ order: 2
         </svg>
       </span>
     </div>
-    <h5 class="mb-10 mt-10">'iconModification_ver_1'</h5>
-    <div class="iconModification_ver_1 d-flex gap-5 mb-10">
+    <h5 class="mb-10 mt-10">'iconModification_ver__1'</h5>
+    <div class="iconModification iconModification_ver__1 d-flex gap-5 mb-10">
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
           <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
@@ -1470,7 +1471,7 @@ order: 2
         </svg>
       </span>
     </div>
-    <div class="iconModification_ver_1 bg-light-green pt-10 pb-10">
+    <div class="iconModification iconModification_ver__1 bg-light-green pt-10 pb-10">
       <p>c 'bg-light-green'</p>
       <div class="d-flex gap-5 mb-10">
         <span class="svg--icon svg--icon__24vb">
@@ -1500,9 +1501,10 @@ order: 2
     </div>
   </div>
 </div>
-<h5 class="mb-10 mt-10">без 'iconModification_ver_2'</h5>
+<h5 class="mb-10 mt-10">'iconModification_ver__2'</h5>
 <div class="bs-docs-example">
-  <div class="mt-20">
+  <div class="">
+    <h5 class="mb-10">'без iconModification_ver__2'</h5>
     <div class="d-flex gap-5 mb-10">
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
@@ -1515,8 +1517,8 @@ order: 2
         </svg>
       </span>
     </div>
-    <h5 class="mb-10 mt-10">'iconModification_ver_2'</h5>
-    <div class="iconModification_ver_2 d-flex gap-5 mb-10">
+    <h5 class="mb-10 mt-10">'iconModification_ver__2'</h5>
+    <div class="iconModification iconModification_ver__2 d-flex gap-5 mb-10">
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
           <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-star__24vb"></use>
@@ -1528,7 +1530,7 @@ order: 2
         </svg>
       </span>
     </div>
-    <div class="iconModification_ver_2 bg-light-green pt-10 pb-10">
+    <div class="iconModification iconModification_ver__2 bg-light-green pt-10 pb-10">
       <p>c 'bg-light-green'</p>
       <div class="d-flex gap-5 mb-10">
         <span class="svg--icon svg--icon__24vb">
