@@ -70,21 +70,26 @@ order: 13
           <span class="sr-only"><?= Yii::t('app', 'Следующее') ?></span>
       </a>
     </div>
-    <div class="carousel-indicators">
-      <div class="thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0">
-          <div class="thumbnailInner">
-              <div class="thumbnailActions">
-                  <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
-                      <?= Icons::wrapper('bicolors-photo__24vb', ['class' => 'svg--icon svg--icon__20 svg-primary']) ?>
-                  </a>
-                  <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
-                      <?= Icons::wrapper('bicolors-delete__24vb', ['class' => 'svg--icon svg--icon__20 svg-primary']) ?>
-                  </a>
-              </div>
-              <div class="thumbnailCaption">Имя картинки</div>
-              <div class="thumbnailImgWrapper" style="--background_container:<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>"><img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>" alt=""></div>
-          </div>
-      </div>
+    <div class="carousel-indicators_outer">
+        <div class="carousel-indicators__abs">
+            <button class="btn-download btn-download__square"><span class="btn-download_inner"><?= Icons::withText('bicolors-photo__24vb', Yii::t('app', 'Добавить фото')) ?></span></button>
+        </div>
+        <div class="carousel-indicators">
+            <div class="carousel-indicators_item thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0">
+                <div class="thumbnailInner">
+                    <div class="thumbnailActions">
+                        <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                            <?= Icons::wrapper('bicolors-photo__24vb', ['class' => 'svg--icon svg--icon__20 svg-primary']) ?>
+                        </a>
+                        <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                            <?= Icons::wrapper('bicolors-delete__24vb', ['class' => 'svg--icon svg--icon__20 svg-primary']) ?>
+                        </a>
+                    </div>
+                    <div class="thumbnailCaption">Имя картинки</div>
+                    <div class="thumbnailImgWrapper" style="--background_container:<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>"><img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>" alt=""></div>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
 {% endhighlight %}
@@ -181,90 +186,127 @@ order: 13
           <span class="sr-only">Следующее</span>
       </a>
     </div>
-    <div class="carousel-indicators">
-      <div class="thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0" >
-          <div class="thumbnailInner">
-              <div class="thumbnailActions">
-                  <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
-                      <span class="svg--icon svg--icon__20 svg-primary">
-                          <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
-                      </span>
-                  </a>
-                  <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
-                      <span class="svg--icon svg--icon__20 svg-primary">
-                          <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
-                      </span>
-                  </a>
-              </div>
-              <div class="thumbnailCaption">Имя картинки</div>
-              <div class="thumbnailImgWrapper" style="--background_container: https://placehold.co/200x200/69C26A/FFFFFF/jpg?text=Infotech+UI%5CnImage+1">
-                  <img src="https://placehold.co/200x200/69C26A/FFFFFF/jpg?text=Infotech+UI%5CnImage+1">
-              </div>
-          </div>
-      </div>
-      <div class="thumbnail thumbnail__bigSize" data-target="#carouselExampleIndicators" data-slide-to="1" >
-          <div class="thumbnailInner">
-              <div class="thumbnailActions">
-                  <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
-                      <span class="svg--icon svg--icon__20 svg-primary">
-                          <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
-                      </span>
-                  </a>
-                  <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
-                      <span class="svg--icon svg--icon__20 svg-primary">
-                          <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
-                      </span>
-                  </a>
-              </div>
-              <div class="thumbnailCaption">Имя картинки 2</div>
-              <div class="thumbnailImgWrapper" style="--background_container: https://placehold.co/200x200/0094FF/FFFFFF/jpg?text=Infotech+UI%5CnImage+2">
-                  <img src="https://placehold.co/200x200/0094FF/FFFFFF/jpg?text=Infotech+UI%5CnImage+2">
-              </div>
-          </div>
-      </div>
-      <div class="thumbnail thumbnail__bigSize" data-target="#carouselExampleIndicators" data-slide-to="2">
-          <div class="thumbnailInner">
-              <div class="thumbnailActions">
-                  <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
-                      <span class="svg--icon svg--icon__20 svg-primary">
-                          <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
-                      </span>
-                  </a>
-                  <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
-                      <span class="svg--icon svg--icon__20 svg-primary">
-                          <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
-                      </span>
-                  </a>
-              </div>
-              <div class="thumbnailCaption">Имя картинки 3</div>
-              <div class="thumbnailImgWrapper" style="--background_container: https://placehold.co/200x200/FFDA7D/FFFFFF/jpg?text=Infotech+UI%5CnImage+3">
-                  <img src="https://placehold.co/200x200/FFDA7D/FFFFFF/jpg?text=Infotech+UI%5CnImage+3">
-              </div>
-          </div>
-      </div>
+    <div class="carousel-indicators_outer mb-10">
+        <div class="carousel-indicators">
+            <div class="carousel-indicators_item thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0" >
+                <div class="thumbnailInner">
+                    <div class="thumbnailActions">
+                        <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                            <span class="svg--icon svg--icon__20 svg-primary">
+                                <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
+                            </span>
+                        </a>
+                        <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                            <span class="svg--icon svg--icon__20 svg-primary">
+                                <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="thumbnailCaption">Имя картинки</div>
+                    <div class="thumbnailImgWrapper" style="--background_container:/images/placeholderCarouselBig1.jpg">
+                        <img src="/images/placeholderCarouselBig1.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators_item thumbnail thumbnail__bigSize" data-target="#carouselExampleIndicators" data-slide-to="1" >
+                <div class="thumbnailInner">
+                    <div class="thumbnailActions">
+                        <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                            <span class="svg--icon svg--icon__20 svg-primary">
+                                <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
+                            </span>
+                        </a>
+                        <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                            <span class="svg--icon svg--icon__20 svg-primary">
+                                <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="thumbnailCaption">Имя картинки 2</div>
+                    <div class="thumbnailImgWrapper" style="--background_container:/images/placeholderCarouselBig2.jpg">
+                        <img src="/images/placeholderCarouselBig2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators_item thumbnail thumbnail__bigSize" data-target="#carouselExampleIndicators" data-slide-to="2">
+                <div class="thumbnailInner">
+                    <div class="thumbnailActions">
+                        <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                            <span class="svg--icon svg--icon__20 svg-primary">
+                                <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
+                            </span>
+                        </a>
+                        <a class="thumbnailActionsBtn thumbnailActionsBtn__shadow" href="#">
+                            <span class="svg--icon svg--icon__20 svg-primary">
+                                <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="thumbnailCaption">Имя картинки 3</div>
+                    <div class="thumbnailImgWrapper" style="--background_container:/images/placeholderCarouselBig3.jpg">
+                        <img src="/images/placeholderCarouselBig3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="carousel-indicators">
-      <div class="thumbnail active" data-target="#carouselExampleIndicators" data-slide-to="0">
-          <div class="thumbnailInner">
-              <div class="thumbnailImgWrapper" style="--background_container: https://placehold.co/64/0094FF/FFFFFF/jpg?text=Infotech+UI\nImage+1">
-                  <img src="https://placehold.co/64/0094FF/FFFFFF/jpg?text=Infotech+UI\nImage+1">
-              </div>
-          </div>
-      </div>
-      <div class="thumbnail" data-target="#carouselExampleIndicators" data-slide-to="1">
-          <div class="thumbnailInner">
-              <div class="thumbnailImgWrapper" style="--background_container: https://placehold.co/64/69C26A/FFFFFF/jpg?text=Infotech+UI\nImage+2">
-                  <img src="https://placehold.co/64/69C26A/FFFFFF/jpg?text=Infotech+UI\nImage+2">
-              </div>
-          </div>
-      </div>
-      <div class="thumbnail" data-target="#carouselExampleIndicators" data-slide-to="2">
-          <div class="thumbnailInner">
-              <div class="thumbnailImgWrapper" style="--background_container: https://placehold.co/64/FFDA7D/FFFFFF/jpg?text=Infotech+UI\nImage+3">
-                  <img src="https://placehold.co/64/FFDA7D/FFFFFF/jpg?text=Infotech+UI\nImage+3">
-              </div>
-          </div>
-      </div>
+    <div class="carousel-indicators_outer mb-10">
+        <div class="carousel-indicators">
+            <div class="carousel-indicators_item thumbnail active" data-target="#carouselExampleIndicators" data-slide-to="0">
+                <div class="thumbnailInner">
+                    <div class="thumbnailImgWrapper" style="--background_container:/images/placeholderCarousel1.jpg">
+                        <img src="/images/placeholderCarousel1.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="1">
+                <div class="thumbnailInner">
+                    <div class="thumbnailImgWrapper" style="--background_container:/images/placeholderCarousel2.jpg">
+                        <img src="/images/placeholderCarousel2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="2">
+                <div class="thumbnailInner">
+                    <div class="thumbnailImgWrapper" style="--background_container:/images/placeholderCarousel3.jpg">
+                        <img src="/images/placeholderCarousel3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-indicators_outer">
+        <div class="carousel-indicators__abs">
+            <button class="btn-download btn-download__square">
+                <span class="btn-download_inner">
+                    <span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+                    <span class="btn-text">Добавить фото</span>
+                </span>
+            </button>
+        </div>
+        <div class="carousel-indicators">
+            <div class="carousel-indicators_item thumbnail active" data-target="#carouselExampleIndicators" data-slide-to="0">
+                <div class="thumbnailInner">
+                    <div class="thumbnailImgWrapper" style="--background_container:/images/placeholderCarousel1.jpg">
+                        <img src="/images/placeholderCarousel1.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="1">
+                <div class="thumbnailInner">
+                    <div class="thumbnailImgWrapper" style="--background_container:/images/placeholderCarousel2.jpg">
+                        <img src="/images/placeholderCarousel2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="2">
+                <div class="thumbnailInner">
+                    <div class="thumbnailImgWrapper" style="--background_container:/images/placeholderCarousel3.jpg">
+                        <img src="/images/placeholderCarousel3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
 </div>
