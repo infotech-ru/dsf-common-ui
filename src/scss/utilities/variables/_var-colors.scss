@@ -46,7 +46,7 @@ $brand-colors: (
   _light-cyan:                                                          #d2efee,
   _color-eeecd:                                                         #eeecd8,
   _transparent:                                                         string.unquote('#00000000'),
-);
+)!default;
 
 @function brandHover($keys...) {
   @return val($brand-hover, $keys...);
@@ -843,7 +843,7 @@ $brand-palette: (
 
   tooltip_bgc:                            map.get($brand-colors, _black),
   tooltip_color:                          map.get($brand-colors, _white),
-);
+)!default;
 
 $state-primary-bg:                        map.get($brand-colors, _blue) !default;
 $state-primary-text:                      map.get($brand-colors, _white) !default;

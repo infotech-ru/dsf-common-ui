@@ -23,6 +23,7 @@ input[type=checkbox] {
     position: relative;
     height: rem(brandSizes(checkboxItem_size));
     top: -1px;
+    flex-shrink: 0; // в comboTreeItemChlid сжимает при длинном названии
     width: rem(brandSizes(checkboxItem_size));
     &:checked{
         background-color: brandPalette(checkboxItemActive_bgc);

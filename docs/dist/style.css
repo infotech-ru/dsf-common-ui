@@ -8480,6 +8480,7 @@ input[type=checkbox] {
   position: relative;
   height: 0.75rem;
   top: -1px;
+  flex-shrink: 0;
   width: 0.75rem;
 }
 input[type=checkbox]:checked {
