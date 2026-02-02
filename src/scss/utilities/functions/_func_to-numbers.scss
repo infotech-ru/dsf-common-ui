@@ -3,6 +3,7 @@
 @use 'sass:map';
 @use 'sass:string';
 @use 'sass:meta';
+@use 'sass:list';
 
 @function to-numbers($value) {
   @if meta.type-of($value) == 'number' {
@@ -13,12 +14,27 @@
   $result: 0;
   $digits: 0;
   $minus: string.slice($value, 1, 1) == '-';
+  $start-index: 1;
+  
+  @if $minus {
+    $start-index: 2;
+  }
+  
   $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
-  @for $i from if($minus, 2, 1) through string.length($value) {
+  @for $i from $start-index through string.length($value) {
     $character: string.slice($value, $i, $i);
-    @if not (index(map.keys($numbers), $character) or $character == '.') {
-      @return to-length(if($minus, -$result, $result), string.slice($value, $i))
+    
+    $is-digit: map.has-key($numbers, $character);
+    $is-dot: $character == '.';
+    @if not ($is-digit or $is-dot) {
+      $final-result: $result;
+      @if $minus {
+        $final-result: -$result;
+      }
+      @return to-length($final-result, string.slice($value, $i));
     }
+
+
     @if $character == '.' {
       $digits: 1;
     } @else if $digits == 0 {
@@ -28,5 +44,9 @@
       $result: $result + map.get($numbers, $character) / $digits;
     }
   }
-  @return if($minus, -$result, $result);
+  @if $minus {
+    @return -$result;
+  } @else {
+    @return $result;
+  }
 }

@@ -196,13 +196,18 @@
 //         -> (600px 900px 1200px)
 
 @function to-list($value, $keep: 'both') {
-  $keep: if(index(keys values, $keep), $keep, both);
+
+  @if not list.index(('keys', 'values', 'both'), $keep) {
+    $keep: 'both';
+  }
+
   @if meta.type-of($value) == 'map' {
     $keys: ();
     $values: ();
+
     @each $key, $val in $value {
-      $keys: append($keys, $key);
-      $values: append($values, $val);
+      $keys: list.append($keys, $key);
+      $values: list.append($values, $val);
     }
     @if $keep == 'keys' {
       @return $keys;
@@ -212,7 +217,9 @@
       @return zip($keys, $values);
     }
   }
-  @return if(meta.type-of($value) != list, ($value,), $value);
+  @if meta.type-of($value) != 'list' {
+    @return ($value,);
+  }
 }
 
 // ----------------------------------------------------------------- FUNCTION //

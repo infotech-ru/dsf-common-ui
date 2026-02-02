@@ -65,5 +65,9 @@
 // Return null rather than throwing an error if index is outside list range.
 
 @function nth-or-null($list, $index) {
-  @return if(list.length($list) >= $index, list.nth($list, $index), null);
+  @if list.length($list) >= $index and $index > 0 {
+    @return list.nth($list, $index);
+  }
+  
+  @return null;
 }
