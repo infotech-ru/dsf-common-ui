@@ -21,10 +21,12 @@
   }
   @else {
     $result: ();
-    $index: if($index < 0, list.length($list) + $index + 1, $index);
+    @if $index < 0{
+      $index: list.length($list) + $index + 1;
+    }
     @for $i from 1 through list.length($list) {
       @if $i != $index {
-        $result: append($result, list.nth($list, $i));
+        $result: list.append($result, list.nth($list, $i));
       }
     }
   }
@@ -41,12 +43,20 @@
 // DEPENDENCIES: @remove-nth
 
 @function val($map, $keys...) {
-  @if list.nth($keys, 1) == null {
+  // Проверяем, что список не пустой
+  @if list.length($keys) > 0 and list.nth($keys, 1) == null {
     $keys: remove-nth($keys, 1);
   }
+  
+  // Защита от пустого списка после удаления
+  @if list.length($keys) == 0 {
+    @return $map;
+  }
+  
   @each $key in $keys {
     $map: map.get($map, $key);
   }
+  
   @return $map;
 }
 
@@ -92,13 +102,24 @@
   $map-list: ($map,);
   $result: null;
   @if list.length($keys) == 2 {
-    @return map-merge($map, (list.nth($keys, 1): list.nth($keys, -1)));
+    @return map.merge($map, (list.nth($keys, 1): list.nth($keys, -1)));
   }
   @for $i from 1 through list.length($keys) - 2 {
-    $map-list: append($map-list, map.get(list.nth($map-list, -1), list.nth($keys, $i)));
+    $map-list: list.append($map-list, map.get(list.nth($map-list, -1), list.nth($keys, $i)));
   }
   @for $i from list.length($map-list) through 1 {
-    $result: map-merge(list.nth($map-list, $i), (list.nth($keys, $i): if($i == list.length($map-list), list.nth($keys, -1), $result)));
+    $value-to-set: null;
+    
+    @if $i == list.length($map-list) {
+      $value-to-set: list.nth($keys, -1);
+    } @else {
+      $value-to-set: $result;
+    }
+    
+    $result: map.merge(
+      list.nth($map-list, $i), 
+      (list.nth($keys, $i): $value-to-set)
+    );
   }
   @return $result;
 }
@@ -175,7 +196,7 @@
 //         -> (600px 900px 1200px)
 
 @function to-list($value, $keep: 'both') {
-  $keep: if(index('keys' 'values', $keep), $keep, 'both');
+  $keep: if(index(keys values, $keep), $keep, both);
   @if meta.type-of($value) == 'map' {
     $keys: ();
     $values: ();
@@ -191,7 +212,7 @@
       @return zip($keys, $values);
     }
   }
-  @return if(meta.type-of($value) != 'list', ($value,), $value);
+  @return if(meta.type-of($value) != list, ($value,), $value);
 }
 
 // ----------------------------------------------------------------- FUNCTION //
