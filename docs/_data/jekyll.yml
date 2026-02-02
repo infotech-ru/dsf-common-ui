@@ -109,6 +109,8 @@ brandlabel:
   value: 0
 
 fontsizelist:
+- name: 8
+  value: 0
 - name: 10
   value: 0
 - name: 11

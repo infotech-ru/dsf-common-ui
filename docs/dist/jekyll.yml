@@ -211,6 +211,10 @@ brandlabel {
 }
 
 fontsizelist {
+  8: 0;
+}
+
+fontsizelist {
   10: 0;
 }
 

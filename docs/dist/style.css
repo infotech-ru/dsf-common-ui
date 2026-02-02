@@ -18159,6 +18159,14 @@ tbody.collapse.in {
   transform: rotate(180deg);
 }
 
+.fz8 {
+  font-size: 0.5rem;
+}
+
+.mobile-view .fz8__mobile {
+  font-size: 0.5rem;
+}
+
 .fz10 {
   font-size: 0.625rem;
 }
@@ -18373,6 +18381,22 @@ tbody.collapse.in {
 
 .mobile-view .d-grid__mobile {
   display: grid;
+}
+
+.d-table-row {
+  display: table-row;
+}
+
+.mobile-view .d-table-row__mobile {
+  display: table-row;
+}
+
+.d-table-cell {
+  display: table-cell;
+}
+
+.mobile-view .d-table-cell__mobile {
+  display: table-cell;
 }
 
 .justify-flex-start {

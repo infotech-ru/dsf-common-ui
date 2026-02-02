@@ -429,6 +429,10 @@
 .mobile-view .d-inline-block__mobile        { display: inline-block; }
 .d-grid                                     { display: grid; }
 .mobile-view .d-grid__mobile                { display: grid; }
+.d-table-row                                { display: table-row; }
+.mobile-view .d-table-row__mobile           { display: table-row; }
+.d-table-cell                               { display: table-cell; }
+.mobile-view .d-table-cell__mobile          { display: table-cell; }
 
 .justify-flex-start                         { justify-content: flex-start; }
 .mobile-view .justify-flex-start__mobile    { justify-content: flex-start; }
