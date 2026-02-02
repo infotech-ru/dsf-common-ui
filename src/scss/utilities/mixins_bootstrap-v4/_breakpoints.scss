@@ -1,5 +1,6 @@
 @use 'sass:list';
 @use 'sass:map';
+@use 'sass:meta';
 @use './../variables/var-bootstrap-v3' as *;
 
 // Breakpoint viewport sizes and media queries.
@@ -19,8 +20,17 @@
 //    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
 //    md
 @function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map.keys($breakpoints)) {
-  $n: index($breakpoint-names, $name);
-  @return if($n != null and $n < list.length($breakpoint-names), list.nth($breakpoint-names, $n + 1), null);
+  @if $breakpoint-names == null {
+    $breakpoint-names: map.keys($breakpoints);
+  }
+
+  $n: list.index($breakpoint-names, $name);
+
+  @if $n != null and $n < list.length($breakpoint-names) {
+    @return list.nth($breakpoint-names, $n + 1);
+  }
+  
+  @return null;
 }
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
@@ -30,6 +40,22 @@
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
   $min: map.get($breakpoints, $name);
   @return if($min != 0, $min, null);
+}
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  // Проверяем, существует ли брейкпоинт
+  @if not map.has-key($breakpoints, $name) {
+    @warn "Breakpoint `#{$name}` not found in $breakpoints map.";
+    @return null;
+  }
+  
+  $min: map.get($breakpoints, $name);
+  
+  // Возвращаем null для нулевого значения (обычно для xs/mobile)
+  @if $min == 0 {
+    @return null;
+  }
+  
+  @return $min;
 }
 
 // Maximum breakpoint width. Null for the largest (last) breakpoint.
@@ -43,9 +69,17 @@
 //    767.98px
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
   $next: breakpoint-next($name, $breakpoints);
-  @return if($next, breakpoint-min($next, $breakpoints) - .02, null);
+  
+  @if $next {
+    $min-next: breakpoint-min($next, $breakpoints);
+    
+    @if meta.type-of($min-next) == 'number' and $min-next > 0 {
+      @return $min-next - 0.02;
+    }
+  }
+  
+  @return null;
 }
-
 // Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
 // Useful for making responsive utilities.
 //
@@ -54,9 +88,12 @@
 //    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    "-sm"
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+  @if breakpoint-min($name, $breakpoints) == null {
+    @return "";
+  }
+  
+  @return "-#{$name}";
 }
-
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
