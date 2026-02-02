@@ -9,6 +9,7 @@
 @use 'sass:math';
 @use 'sass:string';
 @use 'sass:meta';
+@use 'sass:color';
 @use './func_helpers-functions' as *;
 
 @function escape-svg($string) {
@@ -63,10 +64,15 @@
 
 @function theme-color-level($color-name: "primary", $level: 0) {
   $color: theme-color($color-name);
-  $color-base: if($level > 0, $black, $white);
+  
+  $color-base: $white;
+  @if $level > 0 {
+    $color-base: $black;
+  }
+  
   $level: abs($level);
 
-  @return mix($color-base, $color, $level * $theme-color-interval);
+  @return color.mix($color-base, $color, $level * $theme-color-interval);
 }
 
 // ----------------------------------------------------------------- FUNCTION //
@@ -85,70 +91,101 @@
     @return $value1 + $value2;
   }
 
-  @return if($return-calc == true, calc(#{$value1} + #{$value2}), $value1 + string.unquote(" + ") + $value2);
+  @if $return-calc == true {
+    @return calc(#{$value1} + #{$value2});
+  } @else {
+    @return $value1 + string.unquote(" + ") + $value2;
+  }
+
 }
 
 @function subtract($value1, $value2, $return-calc: true) {
-  @if $value1 == null and $value2 == null {
-    @return null;
-  }
+
+  @if $value1 == null and $value2 == null { @return null; }
 
   @if $value1 == null {
-    @return -$value2;
+    @if meta.type-of($value2) == number {
+      @return -$value2;
+    } @else {
+      @return calc(0 - #{$value2});
+    }
   }
 
   @if $value2 == null {
     @return $value1;
   }
 
-  @if meta.type-of($value1) == number and meta.type-of($value2) == number and math.compatible($value1, $value2) {
-    @return $value1 - $value2;
+  @if meta.type-of($value1) == number and meta.type-of($value2) == number {
+    @if math.compatible($value1, $value2) {
+      @return $value1 - $value2;
+    }
   }
 
   @if meta.type-of($value2) != number {
     $value2: string.unquote("(") + $value2 + string.unquote(")");
   }
-
-  @return if($return-calc == true, calc(#{$value1} - #{$value2}), $value1 + string.unquote(" - ") + $value2);
+  
+  @if $return-calc {
+    @return calc(#{$value1} - #{$value2});
+  }
+  @return $value1 + string.unquote(" - ") + $value2;
+  
 }
 
 @function divide($dividend, $divisor, $precision: 10) {
-  $sign: if($dividend > 0 and $divisor > 0 or $dividend < 0 and $divisor < 0, 1, -1);
-  $dividend: abs($dividend);
-  $divisor: abs($divisor);
+  $sign: 1;
+  @if ($dividend > 0 and $divisor > 0) or ($dividend < 0 and $divisor < 0) {
+    $sign: 1;
+  } @else {
+    $sign: -1;
+  }
+
+
+  $dividend: math.abs($dividend);
+  $divisor: math.abs($divisor);
+
   @if $dividend == 0 {
     @return 0;
   }
+
   @if $divisor == 0 {
     @error "Cannot divide by 0";
   }
+
   $remainder: $dividend;
   $result: 0;
   $factor: 10;
+
   @while ($remainder > 0 and $precision >= 0) {
     $quotient: 0;
+
     @while ($remainder >= $divisor) {
       $remainder: $remainder - $divisor;
       $quotient: $quotient + 1;
     }
+
     $result: $result * 10 + $quotient;
     $factor: $factor * .1;
     $remainder: $remainder * 10;
     $precision: $precision - 1;
+
     @if ($precision < 0 and $remainder >= $divisor * 5) {
       $result: $result + 1;
     }
   }
+
   $result: $result * $factor * $sign;
+
   $dividend-unit: math.unit($dividend);
   $divisor-unit: math.unit($divisor);
+
   $unit-map: (
     "px": 1px,
     "rem": 1rem,
     "em": 1em,
     "%": 1%
   );
-  @if ($dividend-unit != $divisor-unit and map-has-key($unit-map, $dividend-unit)) {
+  @if ($dividend-unit != $divisor-unit and map.has-key($unit-map, $dividend-unit)) {
     $result: $result * map.get($unit-map, $dividend-unit);
   }
   @return $result;
