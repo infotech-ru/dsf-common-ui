@@ -13682,6 +13682,14 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   position: sticky;
   z-index: 1000;
 }
+.table-sticky-head-left_col th.notStickyCell,
+.table-sticky-head-left_col td.notStickyCell,
+.wrapper__tableSticky th.notStickyCell,
+.wrapper__tableSticky td.notStickyCell {
+  left: auto;
+  position: relative;
+  z-index: 0;
+}
 .table-sticky-head-left_col thead,
 .wrapper__tableSticky thead {
   position: sticky;
