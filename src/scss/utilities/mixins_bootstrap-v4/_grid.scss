@@ -54,9 +54,13 @@
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
   $num: divide($size, $columns);
-  margin-left: if($num == 0, 0, math.percentage($num));
+  
+  @if $num == 0 {
+    margin-left: 0;
+  } @else {
+    margin-left: math.percentage($num);
+  }
 }
-
 // Row columns
 //
 // Specify on a parent element(e.g., .row) to force immediate children into NN

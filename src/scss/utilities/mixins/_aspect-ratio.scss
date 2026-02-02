@@ -32,8 +32,31 @@
   $map : keywords($arglist);
   $height: map.get($map, height) or nth-or-null($arglist, 2);
   $width:  map.get($map, width)  or nth-or-null($arglist, 1);
-  $ratio:  map.get($map, ratio)  or if($width and $height, $width/$height, nth-or-null($arglist, 1)) or 1;
-  $padding: 1/$ratio * 100%;
-  &:before { content: ''; float:left; padding-bottom: $padding; margin-right:-100%; }
-  &:after  { content: ''; display:table; clear: both; }
+  
+  $ratio: 1;
+  @if map.get($map, ratio) {
+    $ratio: map.get($map, ratio);
+  } @else if $width and $height {
+    $ratio: math.div($width, $height);
+  } @else {
+    $possible-ratio: nth-or-null($arglist, 1);
+    @if $possible-ratio {
+      $ratio: $possible-ratio;
+    }
+  }
+  
+  $padding: math.div(1, $ratio) * 100%;
+  
+  &:before {
+    content: '';
+    float: left;
+    padding-bottom: $padding;
+    margin-right: -100%;
+  }
+  
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }

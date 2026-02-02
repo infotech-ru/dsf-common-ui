@@ -237,7 +237,11 @@
 }
 
 @function breakpointInfix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}");
+  @if breakpoint-min($name, $breakpoints) == null {
+    @return "";
+  }
+  
+  @return "#{$name}";
 }
 
 @mixin makeContainerGrid($max-widths: $container-max-widths, $gutter: $grid-gutter-widths, $breakpoints: $grid-breakpoints){
