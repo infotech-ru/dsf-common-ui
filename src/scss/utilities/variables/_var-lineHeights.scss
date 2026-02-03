@@ -1,13 +1,3 @@
-@use './../functions/func_maps' as *;
-
-@function lineHeight($keys...) {
-  @return val($lineHeight, $keys...);
-}
-
-@function _lineHeight($keys...) {
-  @return val($lineHeight, $keys...);
-}
-
 $lineHeight: (
   body: 14,
   btn: 26,

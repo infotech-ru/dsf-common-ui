@@ -5,6 +5,7 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-bootstrap-v3' as *;
 @use './../utilities/variables/var-lineHeights' as *;
 @use './../utilities/variables/var-colors' as *;
@@ -87,17 +88,16 @@
 // .btn-group > .btn,
 .btn-group-sm > .btn, // старые правила очищаем
 .btn-group-lg > .btn {
-  // border-radius: #{brandSizes(btn_borderRadius)}px;
-  line-height: rem(lineHeight(btn));
+  line-height: rem(val.lineHeight(btn));
 }
 
 .btn-group > .btn-xs,
 .btn-group > .btn-small {
-  line-height: rem(lineHeight(btnXs));
+  line-height: rem(val.lineHeight(btnXs));
 }
 
 .btn-group > .btn-large {
-  line-height: rem(lineHeight(btnLg));
+  line-height: rem(val.lineHeight(btnLg));
 }
 // Split button dropdowns
 // ----------------------
@@ -150,8 +150,8 @@
 
 .btn-group__radioCheck{
   align-items: center;
-  background-color: brandColors(_grey2);
-  border-color: brandColors(_grey2);
+  background-color: val.brandColors(_grey2);
+  border-color: val.brandColors(_grey2);
   border-radius: 1px;
   display: inline-flex;
   justify-content: space-between;
@@ -161,7 +161,7 @@
   width: 40px;
   &Item{
     align-items: center;
-    background-color: brandColors(_light-blue);
+    background-color: val.brandColors(_light-blue);
     background-image: none;
     border: none;
     border-radius: 1px;
@@ -174,7 +174,7 @@
     text-indent: -9999px;
     width: 20px;
     &:after{
-      background-color: brandColors(_light-grey);
+      background-color: val.brandColors(_light-grey);
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
       display: none;
       content: '';
@@ -183,32 +183,32 @@
     }
     &:focus, &:hover{ 
       background-image: none;
-      background-color: brandColors(_light-blue);
+      background-color: val.brandColors(_light-blue);
       border: none;
       outline: none;
     }
     &.active{
-      background-color: brandColors(_grey2);
+      background-color: val.brandColors(_grey2);
       background-image: none;
       &:after{
         display: block;
       }
       &:focus, &:hover{ 
-        background-color: brandColors(_grey2);
+        background-color: val.brandColors(_grey2);
         background-image: none;
       }
       & + .btn-group__radioCheckItem{
-        background-color: brandColors(_grey2);
+        background-color: val.brandColors(_grey2);
         &:focus, &:hover{ 
-          background-color: brandColors(_grey2);
+          background-color: val.brandColors(_grey2);
         }
       }
     }
     & + .active{
-      background-color: brandColors(_light-blue);
+      background-color: val.brandColors(_light-blue);
       width: 100%;
       &:focus, &:hover{ 
-        background-color: brandColors(_light-blue);
+        background-color: val.brandColors(_light-blue);
       }
     }
   }
@@ -368,14 +368,14 @@
 // Text input groups
 // -------------------------
 .input-group-addon {
-  padding: rem(brandSizes(inputGroupAddon_paddingY)) rem(brandSizes(inputGroupAddon_paddingX));
-  font-size: rem(fontSizes(inputGroupElem));
+  padding: rem(val.brandSizes(inputGroupAddon_paddingY)) rem(val.brandSizes(inputGroupAddon_paddingX));
+  font-size: rem(val.fontSizes(inputGroupElem));
   font-weight: 400;
   line-height: 1;
-  color: brandPalette(inputGroupEl-color);
+  color: val.brandPalette(inputGroupEl-color);
   text-align: center;
-  background-color: brandPalette(inputGroupEl-bgc);
-  border: 1px solid brandPalette(inputGroupEl-borderColor);
+  background-color: val.brandPalette(inputGroupEl-bgc);
+  border: 1px solid val.brandPalette(inputGroupEl-borderColor);
   border-radius: 0;
 
   // Nuke default margins from checkboxes and radios to vertically center within.
@@ -476,7 +476,7 @@
     margin-bottom: 0;
 
     +.form-control {
-      margin-left: #{calc(brandSizes(btn_borderWidth) * -1)}px;
+      margin-left: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
     }
   }
   >.form-control:focus {
@@ -495,7 +495,7 @@
   
   &:focus-within{
     .inputGroup_text{
-      border-color: brandPalette(formControl-color);
+      border-color: val.brandPalette(formControl-color);
       @include transition(border-color ease-in-out .15s);
       svg {
         --svg-icon-fill: var(--btn_svg__hover);
@@ -503,7 +503,7 @@
       }
     }
     [class*="btn-"]{ 
-      border-color: brandPalette(formControl-color);
+      border-color: val.brandPalette(formControl-color);
       background-color: var(--btn_bg__hover);
       background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
       background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
@@ -518,7 +518,7 @@
 
 .form-control-container {
   .css-formFree & {
-    padding-top: rem(fontSizes(controlLabel_active__formFree));
+    padding-top: rem(val.fontSizes(controlLabel_active__formFree));
   }
   .form-control {
     border-top-left-radius: 0;
@@ -553,7 +553,7 @@
         border-left-width: 1px;
       }
       .css-formFree &{
-          padding-top: rem(fontSizes(controlLabel_active__formFree));
+          padding-top: rem(val.fontSizes(controlLabel_active__formFree));
       }
   }
 }
@@ -562,7 +562,7 @@
 .inputGroup_append {
   display: flex;
   .css-formFree & {
-    padding-top: rem(fontSizes(controlLabel_active__formFree));
+    padding-top: rem(val.fontSizes(controlLabel_active__formFree));
   }
   .btn {
     position: relative;
@@ -575,38 +575,38 @@
   .btn+.inputGroup_text,
   .inputGroup_text+.inputGroup_text,
   .inputGroup_text+.btn {
-    margin-left: #{calc(brandSizes(btn_borderWidth) * -1)}px;
+    margin-left: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
   }
 }
 
 .inputGroup_prepend {
-  // margin-right: #{calc(brandSizes(btn_borderWidth) * -1)}px;
+  // margin-right: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
   margin-right: 0;
   .inputGroup_text {
-    border-left: 1px solid brandPalette(inputGroupEl-borderColor);
+    border-left: 1px solid val.brandPalette(inputGroupEl-borderColor);
   }
 }
 
 .inputGroup_append {
-  // margin-left: #{calc(brandSizes(btn_borderWidth) * -1)}px;
+  // margin-left: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
   margin-left: 0;
   .inputGroup_text {
-    border-right: 1px solid brandPalette(inputGroupEl-borderColor);
+    border-right: 1px solid val.brandPalette(inputGroupEl-borderColor);
   }
 }
 
 .inputGroup_text {
   align-items: center;
-  background-color: brandPalette(inputGroupEl-bgc);
-  border-bottom: 1px solid brandPalette(inputGroupEl-borderColor);
-  border-top: 1px solid brandPalette(inputGroupEl-borderColor);
-  color: brandPalette(inputGroupEl-color);
+  background-color: val.brandPalette(inputGroupEl-bgc);
+  border-bottom: 1px solid val.brandPalette(inputGroupEl-borderColor);
+  border-top: 1px solid val.brandPalette(inputGroupEl-borderColor);
+  color: val.brandPalette(inputGroupEl-color);
   display: flex;
-  font-size: rem(fontSizes(inputGroupElem));
-  font-weight: fontWeight(inputGroupElem);
-  line-height: rem(lineHeight(input));
-  min-height: rem(calc(lineHeight(input) + 2));
-  padding: 0 rem(brandSizes(formControl_paddingX));
+  font-size: rem(val.fontSizes(inputGroupElem));
+  font-weight: val.fontWeight(inputGroupElem);
+  line-height: rem(val.lineHeight(input));
+  min-height: rem(calc(val.lineHeight(input) + 2));
+  padding: 0 rem(val.brandSizes(formControl_paddingX));
   margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
   // line-height: $input-line-height;
   text-align: center;

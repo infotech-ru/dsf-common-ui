@@ -5,6 +5,7 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-bootstrap-v3' as *;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-sizes' as *;
@@ -116,12 +117,12 @@ select.selectpicker {
   .error & .dropdown-toggle,
   &.is-invalid .dropdown-toggle,
   .was-validated & select:invalid + .dropdown-toggle {
-    border-color: brandPalette(hasDanger_borderColor);
+    border-color: val.brandPalette(hasDanger_borderColor);
   }
 
   &.is-valid .dropdown-toggle,
   .was-validated & select:valid + .dropdown-toggle {
-    border-color: brandPalette(hasSuccess_borderColor);
+    border-color: val.brandPalette(hasSuccess_borderColor);
   }
 
   &.fit-width {
@@ -195,7 +196,7 @@ select.selectpicker {
   .btn {
     background-color: transparent;
     background-image: none;
-    border-color: brandPalette(formControl-borderColor);
+    border-color: val.brandPalette(formControl-borderColor);
   
     &:active,
     &.active {
@@ -246,10 +247,10 @@ select.selectpicker {
       text-align: left;
       overflow: hidden;
       flex: 0 1 auto; // for IE10
-      padding-right: rem(calc(brandSizes(formControl_paddingX) + 5));
+      padding-right: rem(calc(val.brandSizes(formControl_paddingX) + 5));
       @at-root .bs3#{&} {
         // padding-right: inherit;
-        padding-right: rem(calc(brandSizes(formControl_paddingX) + 5));
+        padding-right: rem(calc(val.brandSizes(formControl_paddingX) + 5));
       }
 
       @at-root .input-group .bs3-has-addon#{&} {
@@ -279,9 +280,9 @@ select.selectpicker {
   }
   .bs-caret{
     position: relative;
-    height: #{brandSizes(caretSelect_size)}px;
-    min-width: #{brandSizes(caretSelect_size)}px;
-    width: #{brandSizes(caretSelect_size)}px;
+    height: #{val.brandSizes(caretSelect_size)}px;
+    min-width: #{val.brandSizes(caretSelect_size)}px;
+    width: #{val.brandSizes(caretSelect_size)}px;
   }
   .caret {
     @extend %selectCaret;
@@ -304,7 +305,7 @@ select.selectpicker {
   // The selectpicker dropdown
   .dropdown-menu {
     min-width: 100%;
-    z-index: zIndex(selectDropdownMenu); // может перекрываться таблицей
+    z-index: val.zIndex(selectDropdownMenu); // может перекрываться таблицей
     box-sizing: border-box;
     @extend %scrollVar;
     > .inner:focus {
@@ -334,7 +335,7 @@ select.selectpicker {
 
       a {
         cursor: pointer;
-        font-size: rem(fontSizes(dropdown));
+        font-size: rem(val.fontSizes(dropdown));
         user-select: none;
 
         &.opt {
@@ -535,7 +536,7 @@ select.selectpicker {
     }
   }
   .dropdown-divider {
-    border-bottom: 1px solid brandPalette(bootstrapSelect_divider_color);
+    border-bottom: 1px solid val.brandPalette(bootstrapSelect_divider_color);
   }
 }
 
@@ -558,10 +559,10 @@ select.selectpicker {
 .bs-searchbox,
 .bs-actionsbox,
 .bs-donebutton {
-  padding-top: rem(brandSizes(dropdownLink_paddingX));
+  padding-top: rem(val.brandSizes(dropdownLink_paddingX));
   padding-bottom: 4px;
-  padding-left: rem(brandSizes(dropdownLink_paddingX));
-  padding-right: rem(brandSizes(dropdownLink_paddingX));
+  padding-left: rem(val.brandSizes(dropdownLink_paddingX));
+  padding-right: rem(val.brandSizes(dropdownLink_paddingX));
 }
 
 .bs-actionsbox {
@@ -588,8 +589,8 @@ select.selectpicker {
 }
 
 .bs-searchbox {
-  padding-top: rem(brandSizes(dropdownLink_paddingX));
-  padding-bottom: rem(brandSizes(dropdownLink_paddingX));
+  padding-top: rem(val.brandSizes(dropdownLink_paddingX));
+  padding-bottom: rem(val.brandSizes(dropdownLink_paddingX));
   & + .bs-actionsbox {
     padding-top: 0px;
   }
@@ -620,7 +621,7 @@ select.selectpicker {
   &DropDownContainer {
     @extend %dropdown-menu;
     min-width: 100%;
-    z-index: zIndex(selectDropdownMenu);
+    z-index: val.zIndex(selectDropdownMenu);
     ul{
       display: flex;
       flex-direction: column;
@@ -653,7 +654,7 @@ select.selectpicker {
   &Item{ 
     &Chlid{
       cursor: pointer;
-      // font-size: rem(fontSizes(dropdown));
+      // font-size: rem(val.fontSizes(dropdown));
       list-style-type: none;
       position: relative;
       @extend %dropdown__link;
@@ -662,7 +663,7 @@ select.selectpicker {
         flex-wrap: wrap;
       }
       .comboTreeItemParent &{
-        padding-left: #{brandSizes(dropdownLink_paddingX) * 2 + brandSizes(comboTreeCheckbox_size)}px;
+        padding-left: #{val.brandSizes(dropdownLink_paddingX) * 2 + val.brandSizes(comboTreeCheckbox_size)}px;
       }
       &:hover,
       &:focus{
@@ -679,34 +680,34 @@ select.selectpicker {
       padding: 0;
       position: relative;
       &Plus{
-        #{--svg-icon-fill}: brandPalette(bootstrapSelect_caret_color);
-        #{--svg-icon-stroke}: brandPalette(bootstrapSelect_caret_color);
-        #{--svg-icon-fill_blue}: brandPalette(bootstrapSelect_caret_color);
-        #{--svg-icon-stroke_blue}: brandPalette(bootstrapSelect_caret_color);
-        height: #{brandSizes(comboTreeCheckbox_size)}px;
-        // left: #{brandSizes(dropdownLink_paddingX)}px;
+        #{--svg-icon-fill}: val.brandPalette(bootstrapSelect_caret_color);
+        #{--svg-icon-stroke}: val.brandPalette(bootstrapSelect_caret_color);
+        #{--svg-icon-fill_blue}: val.brandPalette(bootstrapSelect_caret_color);
+        #{--svg-icon-stroke_blue}: val.brandPalette(bootstrapSelect_caret_color);
+        height: #{val.brandSizes(comboTreeCheckbox_size)}px;
+        // left: #{val.brandSizes(dropdownLink_paddingX)}px;
         left: auto;
-        margin-top: #{brandSizes(comboTreeCheckbox_size) * 0.5 * -1}px;
+        margin-top: #{val.brandSizes(comboTreeCheckbox_size) * 0.5 * -1}px;
         position: absolute;
         order: 3;
-        right: calc(#{brandSizes(dropdownLink_paddingX)}px + 5px);
-        top: rem(brandSizes(dropdownLink_minH) * .5);
-        width: #{brandSizes(comboTreeCheckbox_size)}px;
+        right: calc(#{val.brandSizes(dropdownLink_paddingX)}px + 5px);
+        top: rem(val.brandSizes(dropdownLink_minH) * .5);
+        width: #{val.brandSizes(comboTreeCheckbox_size)}px;
         &.collapsed{
           transform: rotate(180deg);
         }
         .svg--icon,
         svg{
-          height: #{brandSizes(comboTreeCheckbox_size)}px;
-          width: #{brandSizes(comboTreeCheckbox_size)}px;
+          height: #{val.brandSizes(comboTreeCheckbox_size)}px;
+          width: #{val.brandSizes(comboTreeCheckbox_size)}px;
           vertical-align: top;
         }
         & + .comboTreeItemTitle{ 
           @extend %dropdown__link;
           line-height: 1.3em;
           padding-right: 0;
-          // padding-left: #{brandSizes(dropdownLink_paddingX) * 2 + brandSizes(comboTreeCheckbox_size)}px;
-          padding-left: #{brandSizes(dropdownLink_paddingX)}px;
+          // padding-left: #{val.brandSizes(dropdownLink_paddingX) * 2 + brandSizes(comboTreeCheckbox_size)}px;
+          padding-left: #{val.brandSizes(dropdownLink_paddingX)}px;
           // width: auto;
           width: 100%;
           .comboTreeExpanded & {
@@ -715,7 +716,7 @@ select.selectpicker {
         }
       }
       .comboTreeItemChlid{
-        padding-left: #{brandSizes(dropdownLink_paddingX)}px;
+        padding-left: #{val.brandSizes(dropdownLink_paddingX)}px;
       }
       // &GroupTitle{
       //   align-items: center;
@@ -743,7 +744,7 @@ select.selectpicker {
         white-space: normal;
       }
       input[type="checkbox"]{
-        // margin: 0 #{brandSizes(dropdownLink_paddingX)}px 0 0;
+        // margin: 0 #{val.brandSizes(dropdownLink_paddingX)}px 0 0;
         margin: 0 5px 0 0;
       }
       &Span{
@@ -764,8 +765,8 @@ select.selectpicker {
   &Filter{
     display: block;
     float: none;
-    margin: rem(brandSizes(dropdownLink_paddingX));
-    width: calc(100% - #{brandSizes(dropdownLink_paddingX) * 2}px);
+    margin: rem(val.brandSizes(dropdownLink_paddingX));
+    width: calc(100% - #{val.brandSizes(dropdownLink_paddingX) * 2}px);
     .comboTreeExpanded & {
       display: none;
     }
@@ -776,7 +777,7 @@ select.selectpicker {
     text-align: left;
     width: 100%;
     .has-error & {
-        border-color: brandPalette(hasDanger_borderColor);
+        border-color: val.brandPalette(hasDanger_borderColor);
     }
   }
   &ArrowBtn {

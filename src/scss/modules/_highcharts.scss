@@ -5,6 +5,7 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-placeholder' as *;
 
@@ -144,8 +145,8 @@
     }
     text {
       // fill: var(--chart-grey2);
-      // fill: brandPalette(tooltip_color);
-      fill: brandPalette(popover_color);
+      // fill: val.brandPalette(tooltip_color);
+      fill: val.brandPalette(popover_color);
       // font-size: 0.8em;
     }
     // .highcharts-header {
@@ -154,8 +155,8 @@
     &-box {
       // stroke-width: 1px;
       // fill: var(--chart-transparent);
-      // fill: brandPalette(tooltip_bgc);
-      fill: brandPalette(popover_bgc);
+      // fill: val.brandPalette(tooltip_bgc);
+      fill: val.brandPalette(popover_bgc);
       stroke-width: 1;
       stroke:rgba(0, 0, 0, 0.25);
       .highcharts-label-box {
@@ -988,44 +989,44 @@ g.highcharts-series,
   fill: var(--color_vibrant-blue);
 }
 
-.fill-blue                     { fill: brandColors(_vibrant-blue);}
-.fill-green                    { fill: brandColors(_green);}
-.fill-red                      { fill: brandColors(_red);}
-.fill-light-blue               { fill: brandColors(_light-blue);}
-.fill-orange                   { fill: brandColors(_orange);}
-.fill-rose                     { fill: brandColors(_rose);}
-.fill-light-yellow2            { fill: brandColors(_light-yellow2);}
-.fill-dark-green               { fill: brandColors(_dark-green);}
-.fill-grey                     { fill: brandColors(_grey);}
-.fill-light-green              { fill: brandColors(_light-green);}
-.fill-dark-grey                { fill: brandColors(_dark-grey);}
-.fill-black                    { fill: brandColors(_black);}
-.fill-dark-red                 { fill: brandColors(_dark-red);}
-.fill-dark-orange              { fill: brandColors(_dark-orange);}
-.fill-yellow2                  { fill: brandColors(_yellow2);}
-.fill-light-blue3              { fill: brandColors(_light-blue3);}
-.fill-grey2                    { fill: brandColors(_grey2);}
-.fill-grey4                    { fill: brandColors(_grey4);}
-.fill-white                    { fill: brandColors(_white);}
-.fill-transparent              { fill: brandColors(_transparent);}
+.fill-blue                     { fill: val.brandColors(_vibrant-blue);}
+.fill-green                    { fill: val.brandColors(_green);}
+.fill-red                      { fill: val.brandColors(_red);}
+.fill-light-blue               { fill: val.brandColors(_light-blue);}
+.fill-orange                   { fill: val.brandColors(_orange);}
+.fill-rose                     { fill: val.brandColors(_rose);}
+.fill-light-yellow2            { fill: val.brandColors(_light-yellow2);}
+.fill-dark-green               { fill: val.brandColors(_dark-green);}
+.fill-grey                     { fill: val.brandColors(_grey);}
+.fill-light-green              { fill: val.brandColors(_light-green);}
+.fill-dark-grey                { fill: val.brandColors(_dark-grey);}
+.fill-black                    { fill: val.brandColors(_black);}
+.fill-dark-red                 { fill: val.brandColors(_dark-red);}
+.fill-dark-orange              { fill: val.brandColors(_dark-orange);}
+.fill-yellow2                  { fill: val.brandColors(_yellow2);}
+.fill-light-blue3              { fill: val.brandColors(_light-blue3);}
+.fill-grey2                    { fill: val.brandColors(_grey2);}
+.fill-grey4                    { fill: val.brandColors(_grey4);}
+.fill-white                    { fill: val.brandColors(_white);}
+.fill-transparent              { fill: val.brandColors(_transparent);}
 
-.stroke-blue                     { stroke: brandColors(_vibrant-blue);}
-.stroke-green                    { stroke: brandColors(_green);}
-.stroke-red                      { stroke: brandColors(_red);}
-.stroke-light-blue               { stroke: brandColors(_light-blue);}
-.stroke-orange                   { stroke: brandColors(_orange);}
-.stroke-rose                     { stroke: brandColors(_rose);}
-.stroke-light-yellow2            { stroke: brandColors(_light-yellow2);}
-.stroke-dark-green               { stroke: brandColors(_dark-green);}
-.stroke-grey                     { stroke: brandColors(_grey);}
-.stroke-light-green              { stroke: brandColors(_light-green);}
-.stroke-dark-grey                { stroke: brandColors(_dark-grey);}
-.stroke-black                    { stroke: brandColors(_black);}
-.stroke-dark-red                 { stroke: brandColors(_dark-red);}
-.stroke-dark-orange              { stroke: brandColors(_dark-orange);}
-.stroke-yellow2                  { stroke: brandColors(_yellow2);}
-.stroke-light-blue3              { stroke: brandColors(_light-blue3);}
-.stroke-grey2                    { stroke: brandColors(_grey2);}
-.stroke-grey4                    { stroke: brandColors(_grey4);}
-.stroke-white                    { stroke: brandColors(_white);}
-.stroke-transparent              { stroke: brandColors(_transparent);}
+.stroke-blue                     { stroke: val.brandColors(_vibrant-blue);}
+.stroke-green                    { stroke: val.brandColors(_green);}
+.stroke-red                      { stroke: val.brandColors(_red);}
+.stroke-light-blue               { stroke: val.brandColors(_light-blue);}
+.stroke-orange                   { stroke: val.brandColors(_orange);}
+.stroke-rose                     { stroke: val.brandColors(_rose);}
+.stroke-light-yellow2            { stroke: val.brandColors(_light-yellow2);}
+.stroke-dark-green               { stroke: val.brandColors(_dark-green);}
+.stroke-grey                     { stroke: val.brandColors(_grey);}
+.stroke-light-green              { stroke: val.brandColors(_light-green);}
+.stroke-dark-grey                { stroke: val.brandColors(_dark-grey);}
+.stroke-black                    { stroke: val.brandColors(_black);}
+.stroke-dark-red                 { stroke: val.brandColors(_dark-red);}
+.stroke-dark-orange              { stroke: val.brandColors(_dark-orange);}
+.stroke-yellow2                  { stroke: val.brandColors(_yellow2);}
+.stroke-light-blue3              { stroke: val.brandColors(_light-blue3);}
+.stroke-grey2                    { stroke: val.brandColors(_grey2);}
+.stroke-grey4                    { stroke: val.brandColors(_grey4);}
+.stroke-white                    { stroke: val.brandColors(_white);}
+.stroke-transparent              { stroke: val.brandColors(_transparent);}

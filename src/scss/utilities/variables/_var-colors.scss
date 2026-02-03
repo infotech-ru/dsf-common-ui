@@ -2,14 +2,7 @@
 @use "sass:list";
 @use "sass:map";
 @use "sass:string";
-@use './../functions/func_maps' as *;
 
-@function brandColors($keys...) {
-  @return val($brand-colors, $keys...);
-}
-@function _brand-colors($keys...) {
-  @return val($brand-colors, $keys...);
-}
 $brand-colors: (
   _white:                                                               #ffffff,
   _black:                                                               #000000,
@@ -48,12 +41,6 @@ $brand-colors: (
   _transparent:                                                         string.unquote('#00000000'),
 )!default;
 
-@function brandHover($keys...) {
-  @return val($brand-hover, $keys...);
-}
-@function _brand-hover($keys...) {
-  @return val($brand-hover, $keys...);
-}
 $brand-hover: (
   '_outline_dark-green': (
     'borderColor':                        map.get($brand-colors, _dark-green),
@@ -237,12 +224,6 @@ $brand-hover: (
   ),
 );
 
-@function brandNameColors($keys...) {
-  @return val($brand-namecolors, $keys...);
-}
-@function _brand-namecolors($keys...) {
-  @return val($brand-namecolors, $keys...);
-}
 $brand-namecolors: (
   'default':                             map.get($brand-colors, _grey4),
   'primary':                             map.get($brand-colors, _blue),
@@ -281,13 +262,6 @@ $brand-namecolors: (
   'black':                               map.get($brand-colors, _black),
 );
 
-
-@function brandBtn($keys...) {
-  @return val($brand-btn, $keys...);
-}
-@function _brand-btn($keys...) {
-  @return val($brand-btn, $keys...);
-}
 $brand-btn: (
   default_bg:                             map.get($brand-colors, _light-grey2),
   default-end_bg:                         map.get($brand-colors, _light-grey2),
@@ -374,14 +348,8 @@ $brand-btn: (
   success_svg_blue__hover:                map.get($brand-colors, _white),
   success_textShadow:                     map.get($brand-colors, _black),
   
-);
+)!default;;
 
-@function brandLabel($keys...) {
-  @return val($brand-label, $keys...);
-}
-@function _brand-label($keys...) {
-  @return val($brand-label, $keys...);
-}
 $brand-label: (
   'default': (
     'bg':                                 map.get($brand-colors, _light-grey2),
@@ -581,14 +549,8 @@ $brand-label: (
     'svg-outline':                        map.get($brand-colors, _grey4),
     'svg-outline_blue':                   map.get($brand-colors, _grey4),
   ),
-);
+)!default;;
 
-@function brandAlert($keys...) {
-  @return val($brand-alert, $keys...);
-}
-@function _brand-alert($keys...) {
-  @return val($brand-alert, $keys...);
-}
 $brand-alert:(
   default_bg:                             map.get($brand-colors, _light-grey2),
   default_border:                         map.get($brand-colors, _light-grey2),
@@ -620,14 +582,8 @@ $brand-alert:(
   info_close:                             map.get($brand-colors, _light-blue),
   info_color:                             map.get($brand-colors, _light-blue),
   info_title:                             map.get($brand-colors, _light-blue),
-);
+)!default;;
 
-@function brandTable($keys...) {
-  @return val($brand-table, $keys...);
-}
-@function _brand-table($keys...) {
-  @return val($brand-table, $keys...);
-}
 $brand-table: ( 
   caption_color:                          map.get($brand-colors, _dark-grey),
   table_border:                           map.get($brand-colors, _grey2),
@@ -643,14 +599,8 @@ $brand-table: (
   tfoot_color:                            map.get($brand-colors, _dark-grey),
   tdStrip_bgc:                            map.get($brand-colors, _light-grey),
   tdHover_bgc:                            map.get($brand-colors, _light-grey2),
-);
+)!default;;
 
-@function brandPalette($keys...) {
-  @return val($brand-palette, $keys...);
-}
-@function _brand-palette($keys...) {
-  @return val($brand-palette, $keys...);
-}
 $brand-palette: (
   body_bgc:                               map.get($brand-colors, _light-grey3),
   body_color:                             map.get($brand-colors, _dark-grey),

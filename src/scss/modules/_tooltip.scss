@@ -5,6 +5,7 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-fonts' as *;
@@ -13,11 +14,11 @@
 
 .tooltip {
   display: block;
-  font-size: rem(fontSizes(tooltip));
+  font-size: rem(val.fontSizes(tooltip));
   margin: 0;
   letter-spacing: normal;
   line-break: auto;
-  line-height: rem(lineHeight(tooltip));
+  line-height: rem(val.lineHeight(tooltip));
   position: absolute;
   font-style: normal;
   font-weight: 400;
@@ -31,7 +32,7 @@
   word-spacing: normal;
   word-wrap: break-word;
   white-space: normal;
-  z-index: zIndex(tooltip);
+  z-index: val.zIndex(tooltip);
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
   &.fade{
@@ -39,14 +40,14 @@
     z-index: 0;
     &.show {
       display: block;
-      z-index: zIndex(tooltip);
+      z-index: val.zIndex(tooltip);
     }
   }
   &.in,
   &.show {
     // display: block;
     opacity: 1;
-    z-index: zIndex(tooltip);
+    z-index: val.zIndex(tooltip);
   }
   .arrow {
     border-style: solid;
@@ -66,63 +67,63 @@
 }
 
 .bs-tooltip-top {
-  padding: rem(brandSizes(tooltipArrow_height)) 0;
+  padding: rem(val.brandSizes(tooltipArrow_height)) 0;
   .arrow {
     bottom: 0;
     &::before {
-      border-width: rem(brandSizes(tooltipArrow_height)) rem(calc(brandSizes(tooltipArrow_width) * .5)) 0;
-      border-top-color: brandPalette(tooltip_bgc);
-      left: rem(calc(brandSizes(tooltipArrow_width) * -0.5));
-      top: rem(calc(brandSizes(tooltipArrow_width) * -0.5));
+      border-width: rem(val.brandSizes(tooltipArrow_height)) rem(calc(val.brandSizes(tooltipArrow_width) * .5)) 0;
+      border-top-color: val.brandPalette(tooltip_bgc);
+      left: rem(calc(val.brandSizes(tooltipArrow_width) * -0.5));
+      top: rem(calc(val.brandSizes(tooltipArrow_width) * -0.5));
     }
   }
 }
 
 .bs-tooltip-right {
-  padding: 0 rem(brandSizes(tooltipArrow_height));
+  padding: 0 rem(val.brandSizes(tooltipArrow_height));
   .arrow {
     left: 0;
-    width: rem(brandSizes(tooltipArrow_height));
-    height: rem(brandSizes(tooltipArrow_width));
+    width: rem(val.brandSizes(tooltipArrow_height));
+    height: rem(val.brandSizes(tooltipArrow_width));
 
     &::before {
-      border-width: rem(calc(brandSizes(tooltipArrow_width) * .5)) rem(brandSizes(tooltipArrow_height)) rem(calc(brandSizes(tooltipArrow_width) * .5)) 0;
-      border-right-color: brandPalette(tooltip_bgc);
-      right: rem(calc(brandSizes(tooltipArrow_width) * -0.5));
-      top: rem(calc(brandSizes(tooltipArrow_width) * -0.5));
+      border-width: rem(calc(val.brandSizes(tooltipArrow_width) * .5)) rem(val.brandSizes(tooltipArrow_height)) rem(calc(val.brandSizes(tooltipArrow_width) * .5)) 0;
+      border-right-color: val.brandPalette(tooltip_bgc);
+      right: rem(calc(val.brandSizes(tooltipArrow_width) * -0.5));
+      top: rem(calc(val.brandSizes(tooltipArrow_width) * -0.5));
     }
   }
 }
 
 .bs-tooltip-bottom {
-  padding: rem(brandSizes(tooltipArrow_height)) 0;
+  padding: rem(val.brandSizes(tooltipArrow_height)) 0;
 
   .arrow {
     top: 0;
 
     &::before {
-      bottom: rem(calc(brandSizes(tooltipArrow_width) * -0.5));
-      border-width: 0 rem(calc(brandSizes(tooltipArrow_width) * .5)) rem(brandSizes(tooltipArrow_height));
-      border-bottom-color: brandPalette(tooltip_bgc);
-      left: rem(calc(brandSizes(tooltipArrow_width) * -0.5));
+      bottom: rem(calc(val.brandSizes(tooltipArrow_width) * -0.5));
+      border-width: 0 rem(calc(val.brandSizes(tooltipArrow_width) * .5)) rem(val.brandSizes(tooltipArrow_height));
+      border-bottom-color: val.brandPalette(tooltip_bgc);
+      left: rem(calc(val.brandSizes(tooltipArrow_width) * -0.5));
     }
   }
 }
 
 .bs-tooltip-left {
-  padding: 0 rem(brandSizes(tooltipArrow_height));
+  padding: 0 rem(val.brandSizes(tooltipArrow_height));
 
   .arrow {
     right: 0;
-    width: rem(brandSizes(tooltipArrow_height));
-    height: rem(brandSizes(tooltipArrow_width));
+    width: rem(val.brandSizes(tooltipArrow_height));
+    height: rem(val.brandSizes(tooltipArrow_width));
 
     &::before {
       // left: 0;
-      border-width: rem(calc(brandSizes(tooltipArrow_width) * .5)) 0 rem(calc(brandSizes(tooltipArrow_width) * .5)) rem(brandSizes(tooltipArrow_height));
-      border-left-color: brandPalette(tooltip_bgc);
-      left: rem(calc(brandSizes(tooltipArrow_width) * -0.5));
-      top: rem(calc(brandSizes(tooltipArrow_width) * -0.5));
+      border-width: rem(calc(val.brandSizes(tooltipArrow_width) * .5)) 0 rem(calc(val.brandSizes(tooltipArrow_width) * .5)) rem(val.brandSizes(tooltipArrow_height));
+      border-left-color: val.brandPalette(tooltip_bgc);
+      left: rem(calc(val.brandSizes(tooltipArrow_width) * -0.5));
+      top: rem(calc(val.brandSizes(tooltipArrow_width) * -0.5));
     }
   }
 }
@@ -144,13 +145,13 @@
 
 // Wrapper for the tooltip content
 .tooltip-inner {
-  background-color: brandPalette(tooltip_bgc);
-  color: brandPalette(tooltip_color);
-  max-width: rem(brandSizes(tooltip_maxWidth));
-  padding: rem(brandSizes(tooltip_paddingY)) rem(brandSizes(tooltip_paddingX));
+  background-color: val.brandPalette(tooltip_bgc);
+  color: val.brandPalette(tooltip_color);
+  max-width: rem(val.brandSizes(tooltip_maxWidth));
+  padding: rem(val.brandSizes(tooltip_paddingY)) rem(val.brandSizes(tooltip_paddingX));
   text-align: center;
   .tooltip__wide & {
-      max-width: rem(brandSizes(tooltipWide_maxWidth));
+      max-width: rem(val.brandSizes(tooltipWide_maxWidth));
   }
   .tooltip__nonmax & {
       max-width: none;

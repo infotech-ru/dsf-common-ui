@@ -1,13 +1,5 @@
-@use './../functions/func_maps' as *;
-
 $base-gutter: 10;
 
-@function _brand-sizes($keys...) {
-  @return val($brand-sizes, $keys...);
-}
-@function brandSizes($keys...) {
-  @return val($brand-sizes, $keys...);
-}
 $brand-sizes: (
   base_marginSize:                 $base-gutter,
   borderRadiusFormElem:            1,

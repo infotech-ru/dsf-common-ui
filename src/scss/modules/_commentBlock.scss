@@ -6,6 +6,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:color';
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-lineHeights' as *;
@@ -25,11 +26,11 @@
             max-height: calc(100vh - 410px);
         }
         &--field-blue {
-            background-color: color.scale(rgba(brandColors(_light-blue), 1), $alpha: -95%, $space: rgb);
+            background-color: color.scale(rgba(val.brandColors(_light-blue), 1), $alpha: -95%, $space: rgb);
             padding: 15px 15px 10px;
         }
         &--field-yellow {
-            background-color: brandColors(_light-yellow2);
+            background-color: val.brandColors(_light-yellow2);
             padding: 10px;
         }
     }
@@ -55,7 +56,7 @@
         }
         .label-arrow {
             height: 8px;
-            fill: brandColors(_dark-grey);
+            fill: val.brandColors(_dark-grey);
             margin: 0 5px;
             width: 9px;
             + .label {
@@ -65,7 +66,7 @@
     }
     &--info-user,
     &--info-date {
-        color: brandColors(_grey4);
+        color: val.brandColors(_grey4);
         display: inline-block;
         font-size: 11px;
         font-weight: 400;
@@ -77,12 +78,12 @@
       svg{
         height: 11px;
         width: 6px;
-        #{--svg-icon-fill}: brandColors(_dark-grey);
-        #{--svg-icon-stroke}: brandColors(_dark-grey);
+        #{--svg-icon-fill}: val.brandColors(_dark-grey);
+        #{--svg-icon-stroke}: val.brandColors(_dark-grey);
       }
     }
     &--comment {
-        color: brandColors(_dark-grey);
+        color: val.brandColors(_dark-grey);
         font-size: rem(12);
         line-height: rem(14);
         padding: 10px;
@@ -93,12 +94,12 @@
         word-wrap: break-word;
         white-space: pre-wrap;
         .user-event & {
-            background-color: brandColors(_light-blue2);
+            background-color: val.brandColors(_light-blue2);
             border-radius: 0 10px 10px 10px;
             // float: left;
         }
         .current-user-comment & {
-            background-color: brandColors(_light-blue2);
+            background-color: val.brandColors(_light-blue2);
             border-radius: 10px 0 10px 10px;
             // float: right;
         }
@@ -107,13 +108,13 @@
             vertical-align: bottom;
             svg {
                 height: 14px;
-                fill: brandColors(_light-blue);
+                fill: val.brandColors(_light-blue);
             }
         }
     }
     .input-group {
-        background-color: brandColors(_transparent);
-        border-color: brandColors(_grey2);
+        background-color: val.brandColors(_transparent);
+        border-color: val.brandColors(_grey2);
         border-style: solid;
         border-width: 1px;
         border-radius: rem(0);
@@ -130,7 +131,7 @@
             &:first-child {
                 padding-left: 10px;
             }
-            @include placeholder2(brandColors(_dark-grey), 400, 12);
+            @include placeholder2(val.brandColors(_dark-grey), 400, 12);
             + .input-group-btn .btn {
                 display: flex;
                 height: 30px;
@@ -152,14 +153,14 @@
             }
             &:focus, &:hover {
                 // border: 1px solid #1E6393;
-                border-color: color.scale(rgba(brandColors(_grey2), 1), $alpha: -80%, $space: rgb);
+                border-color: color.scale(rgba(val.brandColors(_grey2), 1), $alpha: -80%, $space: rgb);
                 border-right: none;
                 outline: none;
                 box-shadow: none;
                 + .input-group-btn .btnsend {
                     // border-color: #1E6393;
                     svg {
-                        fill: brandColors(_light-blue);
+                        fill: val.brandColors(_light-blue);
                     }
                 }
             }
@@ -172,16 +173,16 @@
                 top: 3px;
                 &.loaded {
                     svg {
-                        fill: brandColors(_green);
+                        fill: val.brandColors(_green);
                     }
                 }
             }
             svg {
-                fill: brandColors(_dark-grey);
+                fill: val.brandColors(_dark-grey);
             }
             &:hover {
                 svg {
-                    fill: brandColors(_light-blue);
+                    fill: val.brandColors(_light-blue);
                 }
             }
         }
@@ -198,7 +199,7 @@
             transform: rotate(45deg);
         }
         svg {
-            fill: brandColors(_grey2);
+            fill: val.brandColors(_grey2);
             height: 23px;
             width: 23px;
         }
@@ -209,22 +210,22 @@
   $textareaFormControlPaddingX: 7;
   &_inputGroup {
     align-items: center;
-    background-color: brandPalette(formControl-bgc);
-    border: 1px solid brandPalette(formControl-borderColor);
-    border-radius: #{brandSizes(borderRadiusFormElem)}px;
+    background-color: val.brandPalette(formControl-bgc);
+    border: 1px solid val.brandPalette(formControl-borderColor);
+    border-radius: #{val.brandSizes(borderRadiusFormElem)}px;
     display: flex;
     justify-content: space-between;
-    // height: rem(calc(lineHeight(input) + 2)); //  + border-top and border-bottom
+    // height: rem(calc(val.lineHeight(input) + 2)); //  + border-top and border-bottom
     position: relative;
     padding-right: 0px;
     &__whatsup{
-        border-color: brandColors(grey2);
+        border-color: val.brandColors(grey2);
     }
     &__bigHeight{
         align-items: flex-start;
         height: auto;
         padding-top: 6px;
-        min-height: rem(calc(lineHeight(input) * 2 + 2));
+        min-height: rem(calc(val.lineHeight(input) * 2 + 2));
         // .btn-icon{
             // margin-top: 6px;
         // }
@@ -235,23 +236,23 @@
     border: none;
     box-shadow: none;
     border-radius: 0;
-    color: brandPalette(formControl-color);
+    color: val.brandPalette(formControl-color);
     flex-basis: 100%;
-    font-size: rem(fontSizes(formElem));
-    line-height: rem(lineHeight(input));
-    height: rem(lineHeight(input));
-    padding: 0 rem(calc((brandSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
+    font-size: rem(val.fontSizes(formElem));
+    line-height: rem(val.lineHeight(input));
+    height: rem(val.lineHeight(input));
+    padding: 0 rem(calc((val.brandSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
     resize: none;
     // resize: vertical;
     overflow: hidden;
-    @include placeholder2(brandPalette(formControl-placeholder), 400, 12);
+    @include placeholder2(val.brandPalette(formControl-placeholder), 400, 12);
     .commentBlock_inputGroup__whatsup &{
-      @include placeholder2(brandColors(grey), 400, 12);
+      @include placeholder2(val.brandColors(grey), 400, 12);
     }
     .commentBlock_inputGroup__bigHeight &{
         height: auto;
-        min-height: rem(calc(lineHeight(input) * 2 + 2));
-        line-height: rem(calc(fontSizes(formElem) + 2));
+        min-height: rem(calc(val.lineHeight(input) * 2 + 2));
+        line-height: rem(calc(val.fontSizes(formElem) + 2));
     }
     &__resizeVert{
         resize: vertical;
@@ -307,7 +308,7 @@
   &_info {
     &User,
     &Date {
-      color: brandPalette(commentBlockInfo_color);
+      color: val.brandPalette(commentBlockInfo_color);
       display: inline-block;
       font-size: 11px;
       font-weight: 400;
@@ -316,7 +317,7 @@
     }
   }
   &_comments {
-    color: brandPalette(commentBlockComments_color);
+    color: val.brandPalette(commentBlockComments_color);
     display: inline-flex;
     font-size: rem(12);
     flex-direction: column;
@@ -332,10 +333,10 @@
         min-width: auto;
     }
     // &__lightGreen{ 
-    //   background-color: brandColors(_light-green);
+    //   background-color: val.brandColors(_light-green);
     // }
     // &__lightBlue{
-    //   background-color: brandColors(_light-blue2);
+    //   background-color: val.brandColors(_light-blue2);
     // }
     &__shadow{
       box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);

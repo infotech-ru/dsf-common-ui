@@ -7,6 +7,7 @@
 
 @use 'sass:math';
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as *;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-fonts' as *;
 @use './../utilities/variables/var-lineHeights' as *;

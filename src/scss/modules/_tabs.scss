@@ -5,6 +5,7 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-lineHeights' as *;
 @use './../utilities/variables/var-fonts' as *;
@@ -57,17 +58,17 @@
 .nav-link{ 
   align-items: center;
   border-radius: 0;
-  background-color: brandPalette(navTabs_bgc);
-  border-color: brandPalette(navTabs_borderColor);
+  background-color: val.brandPalette(navTabs_bgc);
+  border-color: val.brandPalette(navTabs_borderColor);
   border-width: 1px;
   border-style: solid;
-  color: brandPalette(navTabs_color);
+  color: val.brandPalette(navTabs_color);
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
-  font-size: rem(fontSizes(navTabs));
+  font-size: rem(val.fontSizes(navTabs));
   font-weight: 400;
-  height: rem(lineHeight(navTabs));
+  height: rem(val.lineHeight(navTabs));
   margin: 0;
   padding: 0px 15px;
   text-decoration: none;
@@ -75,32 +76,32 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: brandPalette(navTabs_bgc);
-    border-color: brandPalette(navTabs_borderColor);
-    color: brandPalette(navTabs_color);
+    background-color: val.brandPalette(navTabs_bgc);
+    border-color: val.brandPalette(navTabs_borderColor);
+    color: val.brandPalette(navTabs_color);
   }
 }
 
 .nav-pills > li > a,
 .nav-pills .nav-link {
-  border-width: #{brandSizes(navPills-borderWidth)}px;
-  border-color: brandPalette(navPills_border);
+  border-width: #{val.brandSizes(navPills-borderWidth)}px;
+  border-color: val.brandPalette(navPills_border);
   border-style: solid;
   cursor: pointer;
-  background-color: brandPalette(navPills_bg);
-  color: brandPalette(navPills_color);
+  background-color: val.brandPalette(navPills_bg);
+  color: val.brandPalette(navPills_color);
   display: inline-block;
-  font-size: rem(fontSizes(navPills));
-  font-weight: fontWeight(navPills);
-  line-height: rem(lineHeight(navPills));
+  font-size: rem(val.fontSizes(navPills));
+  font-weight: val.fontWeight(navPills);
+  line-height: rem(val.lineHeight(navPills));
   height: min-content;
-  padding: 0 #{brandSizes(navPills-paddingX)}px;
+  padding: 0 #{val.brandSizes(navPills-paddingX)}px;
   &:hover,
   &:focus,
   &:active {
-    background-color: brandPalette(navPills_bg);
-    border-color: brandPalette(navPills_border);
-    color: brandPalette(navPills_color);
+    background-color: val.brandPalette(navPills_bg);
+    border-color: val.brandPalette(navPills_border);
+    color: val.brandPalette(navPills_color);
   }
 }
 
@@ -114,17 +115,17 @@
 .nav-tabs > li > a.active,
 .nav-link.active,
 .active .nav-link{ 
-  background-color: brandPalette(navTabs-active_bgc);
-  border-top-color: brandPalette(navTabs-active_borderColor);
+  background-color: val.brandPalette(navTabs-active_bgc);
+  border-top-color: val.brandPalette(navTabs-active_borderColor);
   border-bottom-color: transparent;
-  color: brandPalette(navTabs-active_color);
+  color: val.brandPalette(navTabs-active_color);
   &:hover,
   &:focus,
   &:active { 
-    background-color: brandPalette(navTabs-active_bgc);
-    border-top-color: brandPalette(navTabs-active_borderColor);
+    background-color: val.brandPalette(navTabs-active_bgc);
+    border-top-color: val.brandPalette(navTabs-active_borderColor);
     border-bottom-color: transparent;
-    color: brandPalette(navTabs-active_color);
+    color: val.brandPalette(navTabs-active_color);
   }
 }
  
@@ -132,15 +133,15 @@
 .nav-pills>li>a.active,
 .nav-pills .nav-link.active,
 .nav-pills .active .nav-link {
-  border-color: brandPalette(navPills-active_border);
-  background-color: brandPalette(navPills-active_bg);
-  color: brandPalette(navPills-active_color);
+  border-color: val.brandPalette(navPills-active_border);
+  background-color: val.brandPalette(navPills-active_bg);
+  color: val.brandPalette(navPills-active_color);
   &:hover,
   &:focus,
   &:active {
-    border-color: brandPalette(navPills-active_border);
-    background-color: brandPalette(navPills-active_bg);
-    color: brandPalette(navPills-active_color);
+    border-color: val.brandPalette(navPills-active_border);
+    background-color: val.brandPalette(navPills-active_bg);
+    color: val.brandPalette(navPills-active_color);
   }
 }
 
@@ -150,7 +151,7 @@
 .nav-btns .active .nav-link {
   @extend .btn-default__outline;
   @extend .btn__shadow;
-  background-color: brandColors(_white);
+  background-color: val.brandColors(_white);
 }
 
 .tab-content {
@@ -166,7 +167,7 @@
 }
 
 .tab-pane{ 
-  background-color: brandPalette(tabsPane-active_bgc);
+  background-color: val.brandPalette(tabsPane-active_bgc);
   border-radius: 0;
   border: none;
   padding: rem(10) rem(10) 0;

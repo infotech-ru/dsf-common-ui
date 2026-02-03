@@ -1,5 +1,3 @@
-@use './../functions/func_maps' as *;
-
 // @function _fontsList($keys...) {
 //   @return val($fontsList, $keys...);
 // }
@@ -17,12 +15,6 @@ $fontsList: (
   )
 )!default;
 
-@function fontSizes($keys...) {
-  @return val($fontSizes, $keys...);
-}
-@function _fontSizes($keys...) {
-  @return val($fontSizes, $keys...);
-}
 $fontSizes: (
   body:                                                                      12,
   btn:                                                                       12,
@@ -56,12 +48,6 @@ $fontSizes: (
   tooltip:                                                                   12,
 )!default;
 
-@function fontWeight($keys...) {
-  @return val($fontWeight, $keys...);
-}
-@function _fontWeight($keys...) {
-  @return val($fontWeight, $keys...);
-}
 $fontWeight: (
   btn:                                                                      400,
   controlLabel:                                                             400,

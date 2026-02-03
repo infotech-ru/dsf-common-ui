@@ -8,6 +8,7 @@
 @use 'sass:math';
 @use './../utilities/functions/func_svg-url' as *;
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-bootstrap-v3' as *;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-sizes' as *;
@@ -23,9 +24,9 @@
 .img-thumbnail {
   padding: calc($grid-gutter-width * 0.5);
   // line-height: $line-height-base;
-  background-color: brandColors(_white);
-  border: 1px solid brandColors(_grey2);
-  border-radius: rem(brandSizes(border-radius-base));
+  background-color: val.brandColors(_white);
+  border: 1px solid val.brandColors(_grey2);
+  border-radius: rem(val.brandSizes(border-radius-base));
   @include transition(all .2s ease-in-out);
   @include img-responsive(inline-block);
 }
@@ -586,11 +587,11 @@
 }
 
 .border{
-  border: 1px solid brandPalette(border);
+  border: 1px solid val.brandPalette(border);
   --width_border: 1px;
   &-top{
     --width_border-top: 1px;
-    border-top-color: brandPalette(border);
+    border-top-color: val.brandPalette(border);
     border-top-style: solid;
     border-top-width: var(--width_border-top, 1px);
     &__none{
@@ -632,14 +633,14 @@
     }
     &__mobile{ 
       .mobile-view &{
-        border-top: 1px solid brandPalette(border);
+        border-top: 1px solid val.brandPalette(border);
         --width_border-top: 1px;
       }
     }
   }
   &-right{
     --width_border-right: 1px;
-    border-right-color: brandPalette(border);
+    border-right-color: val.brandPalette(border);
     border-right-style: solid;
     border-right-width: var(--width_border-right, 1px);
     &__none {
@@ -681,14 +682,14 @@
     }
     &__mobile{ 
       .mobile-view &{
-        border-right: 1px solid brandPalette(border);
+        border-right: 1px solid val.brandPalette(border);
         --width_border-right: 1px;
       }
     }
   }
   &-bottom{
     --width_border-bottom: 1px;
-    border-bottom-color: brandPalette(border);
+    border-bottom-color: val.brandPalette(border);
     border-bottom-style: solid;
     border-bottom-width: var(--width_border-bottom, 1px);
     &__none {
@@ -730,14 +731,14 @@
     }
     &__mobile{ 
       .mobile-view &{
-        border-bottom: 1px solid brandPalette(border);
+        border-bottom: 1px solid val.brandPalette(border);
         --width_border-bottom: 1px;
       }
     }
   }
   &-left{
     --width_border-left: 1px;
-    border-left-color: brandPalette(border);
+    border-left-color: val.brandPalette(border);
     border-left-style: solid;
     border-left-width: var(--width_border-left, 1px);
     &__none {
@@ -779,7 +780,7 @@
     }
     &__mobile{ 
       .mobile-view &{
-        border-left: 1px solid brandPalette(border);
+        border-left: 1px solid val.brandPalette(border);
         --width_border-left: 1px;
       }
     }

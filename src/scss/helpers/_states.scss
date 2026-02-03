@@ -5,6 +5,7 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:map';
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/mixins/transition' as *;
 @use './../utilities/mixins_bootstrap-v3/vendor-prefixes' as *;
 @use './../utilities/variables/var-colors' as *;
@@ -74,10 +75,10 @@ tbody.collapse.in { display: table-row-group; }
       #{--limited-fill-on}: inherit;
       #{--limited-stroke-off}: transparent;
       #{--limited-fill-off}: transparent;
-      #{--svg-icon-fill}: #{brandColors(_dark-grey)};
-      #{--svg-icon-fill_blue}: #{brandColors(_vibrant-blue)};
-      #{--svg-icon-stroke}: #{brandColors(_dark-grey)};
-      #{--svg-icon-stroke_blue}: #{brandColors(_vibrant-blue)};
+      #{--svg-icon-fill}: #{val.brandColors(_dark-grey)};
+      #{--svg-icon-fill_blue}: #{val.brandColors(_vibrant-blue)};
+      #{--svg-icon-stroke}: #{val.brandColors(_dark-grey)};
+      #{--svg-icon-stroke_blue}: #{val.brandColors(_vibrant-blue)};
     }
     &.active{
       svg{

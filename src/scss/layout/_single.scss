@@ -4,22 +4,22 @@
 /* path: dsf-common-ui/src/scss/layout/_single.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-sizes' as *;
 
 .mainContainer{
-  min-height: calc(100vh - #{brandSizes(headerBottom_height)}px - #{brandSizes(headerTop_height)}px - #{brandSizes(footer_height)}px - #{brandSizes(footer_marginTop)}px - #{brandSizes(header_marginBottom)}px);
+  min-height: calc(100vh - #{val.brandSizes(headerBottom_height)}px - #{val.brandSizes(headerTop_height)}px - #{val.brandSizes(footer_height)}px - #{val.brandSizes(footer_marginTop)}px - #{val.brandSizes(header_marginBottom)}px);
   .guest-view & {
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: calc(100vh - #{brandSizes(headerTop_height)}px - #{brandSizes(footer_height)}px);
+    min-height: calc(100vh - #{val.brandSizes(headerTop_height)}px - #{val.brandSizes(footer_height)}px);
   }
   .error-view &{
     display: flex;
     max-height: 100vh;
   }
   .mobile-view &{
-    min-height: calc(100vh - #{brandSizes(headerTop_height)}px - #{brandSizes(footer__mobile_height)}px);
+    min-height: calc(100vh - #{val.brandSizes(headerTop_height)}px - #{val.brandSizes(footer__mobile_height)}px);
   }
 }

@@ -1,0 +1,97 @@
+@use 'sass:color';
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+@use './func_maps' as *;
+@use '../variables/var-colors' as colors;
+@use '../variables/var-cursors' as cursor;
+@use '../variables/var-fonts' as fonts;
+@use '../variables/var-lineHeights' as lineheights; 
+@use '../variables/var-dataImages' as dataimages;
+@use '../variables/var-sizes' as sizes;
+@use '../variables/var-zindex' as zindex; 
+
+@function brandColors($keys...) {
+  @return val(colors.$brand-colors, $keys...);
+}
+@function _brand-colors($keys...) {
+  @return val(colors.$brand-colors, $keys...);
+}
+@function brandHover($keys...) {
+  @return val(colors.$brand-hover, $keys...);
+}
+@function _brand-hover($keys...) {
+  @return val(colors.$brand-hover, $keys...);
+}
+@function brandNameColors($keys...) {
+  @return val(colors.$brand-namecolors, $keys...);
+}
+@function _brand-namecolors($keys...) {
+  @return val(colors.$brand-namecolors, $keys...);
+}
+@function brandBtn($keys...) {
+  @return val(colors.$brand-btn, $keys...);
+}
+@function _brand-btn($keys...) {
+  @return val(colors.$brand-btn, $keys...);
+}
+@function brandLabel($keys...) {
+  @return val(colors.$brand-label, $keys...);
+}
+@function _brand-label($keys...) {
+  @return val(colors.$brand-label, $keys...);
+}
+@function brandAlert($keys...) {
+  @return val(colors.$brand-alert, $keys...);
+}
+@function _brand-alert($keys...) {
+  @return val(colors.$brand-alert, $keys...);
+}
+@function brandTable($keys...) {
+  @return val(colors.$brand-table, $keys...);
+}
+@function _brand-table($keys...) {
+  @return val(colors.$brand-table, $keys...);
+}
+@function brandPalette($keys...) {
+  @return val(colors.$brand-palette, $keys...);
+}
+@function _brand-palette($keys...) {
+  @return val(colors.$brand-palette, $keys...);
+}
+@function brandCursor($keys...) {
+  @return val(cursor.$brandCursor, $keys...);
+}
+@function brandDataImage($keys...) {
+  @return val(dataimages.$brandDataImage, $keys...);
+}
+@function fontSizes($keys...) {
+  @return val(fonts.$fontSizes, $keys...);
+}
+@function _fontSizes($keys...) {
+  @return val(fonts.$fontSizes, $keys...);
+}
+@function fontWeight($keys...) {
+  @return val(fonts.$fontWeight, $keys...);
+}
+@function _fontWeight($keys...) {
+  @return val(fonts.$fontWeight, $keys...);
+}
+@function lineHeight($keys...) {
+  @return val(lineheights.$lineHeight, $keys...);
+}
+@function _lineHeight($keys...) {
+  @return val(lineheights.$lineHeight, $keys...);
+}
+@function _brand-sizes($keys...) {
+  @return val(sizes.$brand-sizes, $keys...);
+}
+@function brandSizes($keys...) {
+  @return val(sizes.$brand-sizes, $keys...);
+}
+@function zIndex($keys...) {
+  @return val(zindex.$zindex, $keys...);
+}
+@function _zindex($keys...) {
+  @return val(zindex.$zindex, $keys...);
+}

@@ -4,6 +4,7 @@
 /* path: dsf-common-ui/src/scss/helpers/_animations.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-colors' as *;
 
@@ -15,7 +16,7 @@
   z-index: 0;
 
   .error-view &{
-    bottom: -#{brandSizes(footer_height)}px;
+    bottom: -#{val.brandSizes(footer_height)}px;
     top: auto;
   }
 
@@ -28,11 +29,11 @@
   }
 
   &-linearGradientStopStart {
-    stop-color: brandColors(_vibrant-blue);
+    stop-color: val.brandColors(_vibrant-blue);
   }
 
   &-linearGradientStopEnd {
-    stop-color: brandColors(_green);
+    stop-color: val.brandColors(_green);
   }
 }
 

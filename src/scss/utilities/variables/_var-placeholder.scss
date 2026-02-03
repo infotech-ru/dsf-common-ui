@@ -1,10 +1,11 @@
 @use './../functions/func_svg-url' as *;
 @use './../functions/func_fonts' as *;
+@use './../functions/func_val' as val;
 @use './../variables/var-bootstrap-v3' as *;
 @use './../variables/var-fonts' as *;
-@use './../variables/var-sizes' as *;
-@use './../variables/var-lineHeights' as *;
-@use './../variables/var-colors' as *;
+@use './../variables/var-sizes' as sizes;
+@use './../variables/var-lineHeights' as lineheights;
+@use './../variables/var-colors' as color;
 @use './../mixins_bootstrap-v3/reset-filter' as *;
 
 %scrollVar {
@@ -12,28 +13,28 @@
   &::-webkit-scrollbar {
     height: 6px;
     width: 6px;
-    background-color: brandColors(_grey4);
+    background-color: val.brandColors(_grey4);
   }
   &::-webkit-scrollbar-button {
     width: 6px;
     height: 6px;
   }
   &::-webkit-scrollbar-track {
-    background-color: brandColors(_light-grey2);
+    background-color: val.brandColors(_light-grey2);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: brandColors(_grey4);
+    background-color: val.brandColors(_grey4);
   }
 }
 
 %dropdown-menu{
-  background-color: brandPalette(dropdown_bgc);
+  background-color: val.brandPalette(dropdown_bgc);
   background-clip: padding-box;
   box-shadow: 0px 6px 36px rgba(0, 0, 0, 0.35);
   border: none;
   border-radius: 0;
   display: none; // none by default, but block on "open" of the menu
-  font-size: rem(fontSizes(dropdown));
+  font-size: rem(val.fontSizes(dropdown));
   list-style: none;
   left: 0;
   margin: 0 0 0; // override default ul
@@ -49,21 +50,21 @@
   clear: both;
   display: inline-flex;
   font-weight: 400;
-  padding: 0px rem(brandSizes(dropdownLink_paddingX));
-  line-height: rem(lineHeight(dropdownLink));
-  min-height: rem(brandSizes(dropdownLink_minH));
+  padding: 0px rem(val.brandSizes(dropdownLink_paddingX));
+  line-height: rem(val.lineHeight(dropdownLink));
+  min-height: rem(val.brandSizes(dropdownLink_minH));
   width: 100%;
   white-space: nowrap; // prevent links from randomly breaking onto new lines
 }
 %dropdown__linkColors {
   background-color: transparent;
   border: none;
-  color: var(--text_color, brandPalette(dropdown_color));
+  color: var(--text_color, val.brandPalette(dropdown_color));
   text-decoration: none;
 }
 %dropdown__linkHover {
-  background-color: brandPalette(dropdownActive_bgc);
-  color: brandPalette(dropdownActive_color);
+  background-color: val.brandPalette(dropdownActive_bgc);
+  color: val.brandPalette(dropdownActive_color);
   text-decoration: none;
   outline: 0;
 }
@@ -80,7 +81,7 @@
   &,
   &:hover,
   &:focus {
-    color: brandPalette(dropdownLinkDisabled_color);
+    color: val.brandPalette(dropdownLinkDisabled_color);
   }
 
   // Nuke hover/focus effects
@@ -95,14 +96,14 @@
 }
 
 %caret {
-  #{--svg-icon-fill}: brandPalette(bootstrapSelect_caret_color);
-  #{--svg-icon-stroke}: brandPalette(bootstrapSelect_caret_color);
-  #{--svg-icon-fill_blue}: brandPalette(bootstrapSelect_caret_color);
-  #{--svg-icon-stroke_blue}: brandPalette(bootstrapSelect_caret_color);
+  #{--svg-icon-fill}: val.brandPalette(bootstrapSelect_caret_color);
+  #{--svg-icon-stroke}: val.brandPalette(bootstrapSelect_caret_color);
+  #{--svg-icon-fill_blue}: val.brandPalette(bootstrapSelect_caret_color);
+  #{--svg-icon-stroke_blue}: val.brandPalette(bootstrapSelect_caret_color);
   &:before,
   &:after {
     border-style: solid;
-    border-color: var(--bg_color, brandPalette(formControl-bgc)) transparent transparent transparent;
+    border-color: var(--bg_color, val.brandPalette(formControl-bgc)) transparent transparent transparent;
     content: '';
     display: block;
     position: absolute;
@@ -111,15 +112,15 @@
     width: 0;
   }
   &:after {
-    border-width: rem(calc(brandSizes(caret_size) - 1));
+    border-width: rem(calc(val.brandSizes(caret_size) - 1));
     border-bottom-width: 0;
     right: 0;
   }
 
   &:before {
-    border-width: rem(brandSizes(caret_size));
+    border-width: rem(val.brandSizes(caret_size));
     border-bottom-width: 0;
-    border-top-color: brandPalette(bootstrapSelect_caret_color);
+    border-top-color: val.brandPalette(bootstrapSelect_caret_color);
     right: -1px;
   }
   @at-root .open#{&},
@@ -146,28 +147,28 @@
 }
 %selectCaret{
   background-repeat: no-repeat;
-  background-size: #{brandSizes(caretSelect_size)}px;
+  background-size: #{val.brandSizes(caretSelect_size)}px;
   background-position: center;
-  background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#{brandPalette(bootstrapSelect_caret_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#{brandPalette(bootstrapSelect_caret_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#{val.brandPalette(bootstrapSelect_caret_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#{val.brandPalette(bootstrapSelect_caret_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   border: none;
   cursor: pointer;
   display: block;
-  height: #{brandSizes(caretSelect_size)}px;
+  height: #{val.brandSizes(caretSelect_size)}px;
   margin: 0;
   left: auto;
   position: absolute;
   right: 0;
   top: auto;
-  width: #{brandSizes(caretSelect_size)}px;
+  width: #{val.brandSizes(caretSelect_size)}px;
   .btn-link &{
-      background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33228L8.00002 10.6656" stroke="#{brandPalette(link_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33228L8.00004 10.6656" stroke="#{brandPalette(link_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33228L8.00002 10.6656" stroke="#{val.brandPalette(link_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33228L8.00004 10.6656" stroke="#{val.brandPalette(link_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   }
   .has-error &{
-      background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33228L8.00002 10.6656" stroke="#{brandPalette(hasDanger_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33228L8.00004 10.6656" stroke="#{brandPalette(hasDanger_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33228L8.00002 10.6656" stroke="#{val.brandPalette(hasDanger_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33228L8.00004 10.6656" stroke="#{val.brandPalette(hasDanger_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   }
   &[disabled],
   &.disabled{
-      background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#{brandPalette(formControlDisabled-color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#{brandPalette(formControlDisabled-color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#{val.brandPalette(formControlDisabled-color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#{val.brandPalette(formControlDisabled-color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   }
   &:after,
   &:before{

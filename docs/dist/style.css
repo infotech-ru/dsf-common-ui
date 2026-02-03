@@ -14513,6 +14513,12 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   color: inherit;
 }
 
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* CHARTSBLOCK                                                                */
+/* path: dsf-common-ui/src/scss/modules/_chartsBlock.scss                     */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .chartsBlock {
   border: 1px solid #dddddd;
   padding: 10px;
@@ -14806,7 +14812,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   color: #4A8DC6;
   cursor: pointer;
   display: inline-flex;
-  font-size: fontSizes(pagination);
+  font-size: 0.75rem;
   justify-content: center;
   height: 1.25rem;
   line-height: 1.25rem;

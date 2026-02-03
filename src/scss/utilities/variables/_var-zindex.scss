@@ -1,11 +1,3 @@
-@use './../functions/func_maps' as *;
-
-@function zIndex($keys...) {
-  @return val($zindex, $keys...);
-}
-@function _zindex($keys...) {
-  @return val($zindex, $keys...);
-}
 $zindex: (
   custom-file--label:                                                      1,
   custom-file--btn:                                                        3,

@@ -7,6 +7,7 @@
 @use 'sass:math';
 @use './../utilities/functions/func_svg-url' as *;
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-zindex' as *;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-sizes' as *;
@@ -33,7 +34,7 @@
     bottom: 0;
     left: 0;
     // z-index: $zindex-modal;
-    z-index: zIndex(modal);
+    z-index: val.zIndex(modal);
     -webkit-overflow-scrolling: touch;
 
     // Prevent Chrome on Windows from adding a focus outline. For details, see
@@ -75,9 +76,9 @@
 
 // Actual modal
 .modal-content {
-    background-color: brandPalette(modal_bgc);
+    background-color: val.brandPalette(modal_bgc);
     // border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
-    border: 1px solid brandPalette(modal_borderColor);
+    border: 1px solid val.brandPalette(modal_borderColor);
     border-radius: 2px;
     box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
     background-clip: padding-box;
@@ -88,14 +89,14 @@
 
 // Modal background
 .modal-backdrop {
-    background-color: brandPalette(modalBackdrop_bgc);
+    background-color: val.brandPalette(modalBackdrop_bgc);
     bottom: 0;
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
     // z-index: $zindex-modal-background;
-    z-index: zIndex(modalBackground);
+    z-index: val.zIndex(modalBackground);
     // Fade for backdrop
     // &.fade { opacity: 0; }
     // &.in { opacity: .5; }
@@ -106,13 +107,13 @@
 .modal-header {
     align-items: center;
     // background-color: rgba(0, 0, 0, 0.03);
-    background-color: brandPalette(modalHeader_bgc);
-    border-bottom: 1px solid brandPalette(modalHeader_borderColor);
+    background-color: val.brandPalette(modalHeader_bgc);
+    border-bottom: 1px solid val.brandPalette(modalHeader_borderColor);
     box-shadow: inset rgba(0, 0, 0, 0.1) 0 -10px 10px -10px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 0;
-    padding: #{brandSizes(modal_paddingY)}px #{brandSizes(modal_paddingXR)}px #{brandSizes(modal_paddingY)}px #{brandSizes(modal_paddingX)}px;
+    padding: #{val.brandSizes(modal_paddingY)}px #{val.brandSizes(modal_paddingXR)}px #{val.brandSizes(modal_paddingY)}px #{val.brandSizes(modal_paddingX)}px;
     position: relative;
 
     // @include clearfix;
@@ -149,7 +150,7 @@
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
     position: relative;
-    padding: #{brandSizes(modal_paddingY)}px #{brandSizes(modal_paddingX)}px;
+    padding: #{val.brandSizes(modal_paddingY)}px #{val.brandSizes(modal_paddingX)}px;
 
     h5 {
         font-size: rem(12);
@@ -181,13 +182,13 @@
 // Footer (for actions)
 .modal-footer {
     align-items: center;
-    background-color: brandPalette(modalFooter_bgc);
-    border-top: 1px solid brandPalette(modalFooter_borderColor);
+    background-color: val.brandPalette(modalFooter_bgc);
+    border-top: 1px solid val.brandPalette(modalFooter_borderColor);
     box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px -10px;
     display: flex;
     justify-content: space-between;
     // margin-top: 0;
-    padding: #{brandSizes(modal_paddingY)}px #{brandSizes(modal_paddingX)}px;
+    padding: #{val.brandSizes(modal_paddingY)}px #{val.brandSizes(modal_paddingX)}px;
     text-align: right; // right align buttons
 
     // @include clearfix; // clear it in case folks use .pull-* classes on buttons
@@ -332,25 +333,25 @@
 
     .modal-content,
     .note-modal-content {
-        background-color: brandPalette(modal-theme2_bgc);
+        background-color: val.brandPalette(modal-theme2_bgc);
         box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.20);
     }
 
     .modal-footer,
     .note-modal-footer {
-        padding: 10px rem(brandSizes(modal-theme2_padding)) rem(brandSizes(modal-theme2_padding));
+        padding: 10px rem(val.brandSizes(modal-theme2_padding)) rem(val.brandSizes(modal-theme2_padding));
     }
 
     .modal-header,
     .note-modal-header {
-        padding: rem(brandSizes(modal-theme2_padding)) rem(brandSizes(modal-theme2_padding)) 10px;
+        padding: rem(val.brandSizes(modal-theme2_padding)) rem(val.brandSizes(modal-theme2_padding)) 10px;
     }
 
     .modal-body {
-        padding: 10px rem(brandSizes(modal-theme2_padding)) 10px;
+        padding: 10px rem(val.brandSizes(modal-theme2_padding)) 10px;
 
         &:last-child {
-            padding-bottom: rem(brandSizes(modal-theme2_padding));
+            padding-bottom: rem(val.brandSizes(modal-theme2_padding));
         }
     }
 
@@ -364,38 +365,38 @@
     }
 
     .modal-header-offset-left {
-        padding-left: rem(math.div(brandSizes(modal-theme2_padding), 2));
+        padding-left: rem(math.div(val.brandSizes(modal-theme2_padding), 2));
     }
 
     .modal-header-offset-right {
-        padding-right: rem(math.div(brandSizes(modal-theme2_padding), 2));
+        padding-right: rem(math.div(val.brandSizes(modal-theme2_padding), 2));
     }
 }
 
 .modal-svgClose {
     .modal-header,
     .note-modal-header {
-        padding-right: rem(brandSizes(modal-header-close_size) + brandSizes(modal_paddingXR));
+        padding-right: rem(val.brandSizes(modal-header-close_size) + val.brandSizes(modal_paddingXR));
     }
     .modal-header .close {
         background-image: none;
-        height: rem(brandSizes(modal-header-close_size));
-        line-height: rem(brandSizes(modal-header-close_size));
+        height: rem(val.brandSizes(modal-header-close_size));
+        line-height: rem(val.brandSizes(modal-header-close_size));
         margin: 0;
         position: absolute;
-        right: rem(brandSizes(modal_paddingXR));
+        right: rem(val.brandSizes(modal_paddingXR));
         text-indent: 0;
         top: auto;
-        width: rem(brandSizes(modal-header-close_size));
+        width: rem(val.brandSizes(modal-header-close_size));
     }
 
     &.modal-light-grey2 {
         .modal-header,
         .note-modal-header {
-            padding-right: rem(brandSizes(modal-header-close_size) + brandSizes(modal-theme2_padding));
+            padding-right: rem(val.brandSizes(modal-header-close_size) + val.brandSizes(modal-theme2_padding));
         }
         .modal-header .close {
-            right: rem(brandSizes(modal-theme2_padding));
+            right: rem(val.brandSizes(modal-theme2_padding));
         }
     }
 }

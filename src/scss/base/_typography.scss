@@ -6,6 +6,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:math';
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-fonts' as *;
 @use './../utilities/variables/var-lineHeights' as *;
@@ -17,9 +18,9 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: Roboto, Arial, 'Helvetica Neue', sans-serif;
-  font-weight: fontWeight(headings);
-  line-height: lineHeight(headings);
-  color: brandPalette(haeding_color);
+  font-weight: val.fontWeight(headings);
+  line-height: val.lineHeight(headings);
+  color: val.brandPalette(haeding_color);
 
   small,
   .small {
@@ -33,7 +34,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   // margin-top: $line-height-computed;
-  margin-bottom: rem(brandSizes(base_marginSize));
+  margin-bottom: rem(val.brandSizes(base_marginSize));
   small,
   .small {
     font-size: 65%;
@@ -52,26 +53,26 @@ h6, .h6 {
 }
 
 h1, .h1 { 
-  font-size: rem(fontSizes(headingH1));
+  font-size: rem(val.fontSizes(headingH1));
 }
 h2, .h2 {
-  font-size: rem(fontSizes(headingH2));
-  font-weight: fontWeight(headingH2);
-  line-height: rem(lineHeight(headingH2));
+  font-size: rem(val.fontSizes(headingH2));
+  font-weight: val.fontWeight(headingH2);
+  line-height: rem(val.lineHeight(headingH2));
 }
 h3, .h3 {
-  font-size: rem(fontSizes(headingH3));
-  font-weight: fontWeight(headingH3);
-  line-height: rem(lineHeight(headingH3));
+  font-size: rem(val.fontSizes(headingH3));
+  font-weight: val.fontWeight(headingH3);
+  line-height: rem(val.lineHeight(headingH3));
 }
 h4, .h4 {
-  font-size: rem(fontSizes(headingH4));
-  font-weight: fontWeight(headingH4);
-  line-height: rem(lineHeight(headingH4));
+  font-size: rem(val.fontSizes(headingH4));
+  font-weight: val.fontWeight(headingH4);
+  line-height: rem(val.lineHeight(headingH4));
   text-transform: uppercase;
 }
-h5, .h5 { font-size: rem(fontSizes(headingH5)); }
-h6, .h6 { font-size: rem(fontSizes(headingH6)); }
+h5, .h5 { font-size: rem(val.fontSizes(headingH5)); }
+h6, .h6 { font-size: rem(val.fontSizes(headingH6)); }
 
 .dl-horizontal {
   dd {
@@ -80,13 +81,13 @@ h6, .h6 { font-size: rem(fontSizes(headingH6)); }
   @media (min-width: gridBreakpoints(sm)) {
     dt {
       float: left;
-      width: rem(brandSizes(dlHorizontalOffset) - 20);
+      width: rem(val.brandSizes(dlHorizontalOffset) - 20);
       clear: left;
       text-align: right;
       @include text-overflow;
     }
     dd {
-      margin-left: rem(brandSizes(dlHorizontalOffset));
+      margin-left: rem(val.brandSizes(dlHorizontalOffset));
     }
   }
 }
@@ -119,7 +120,7 @@ h6, .h6 { font-size: rem(fontSizes(headingH6)); }
 
 .phoneField{
   &__orange{ 
-    background-color: brandColors(_light-orange);
+    background-color: val.brandColors(_light-orange);
     display: inline-flex;
     font-size: 13px;
     line-height: 16px;
@@ -127,7 +128,7 @@ h6, .h6 { font-size: rem(fontSizes(headingH6)); }
   }
   &__blue{
     align-items: center;
-    background-color: brandColors(_light-blue2);
+    background-color: val.brandColors(_light-blue2);
     display: flex;
     font-size: 14px;
     justify-content: space-between;
@@ -140,7 +141,7 @@ h6, .h6 { font-size: rem(fontSizes(headingH6)); }
 
 .commentField{
   border-radius:0 10px 10px 10px;
-  background-color: brandColors(_light-blue2);
+  background-color: val.brandColors(_light-blue2);
   display: inline-flex;
   font-size: 12px;
   line-height: 14px;
@@ -151,7 +152,7 @@ h6, .h6 { font-size: rem(fontSizes(headingH6)); }
   align-items: center;
   display: inline-flex;
   &__form-control{
-    height: rem(calc(lineHeight(input) + 2));
+    height: rem(calc(val.lineHeight(input) + 2));
   }
   &_formControl{
     border: none;
@@ -176,11 +177,11 @@ h6, .h6 { font-size: rem(fontSizes(headingH6)); }
     }
   }
   &:after{ 
-    color: brandPalette(formControl-color);
+    color: val.brandPalette(formControl-color);
     content: attr(data-colorField); 
     display: block;
     padding-left: 5px;
-    font-size: rem(fontSizes(formElem));
+    font-size: rem(val.fontSizes(formElem));
   }
 }
 

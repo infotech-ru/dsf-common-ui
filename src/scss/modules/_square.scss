@@ -5,19 +5,20 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/functions/func_maps' as *;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-sizes' as *;
 
 .square {
     align-items: center;
-    background-color: brandColors(_orange);
-    border: 1px solid brandColors(_orange);
+    background-color: val.brandColors(_orange);
+    border: 1px solid val.brandColors(_orange);
     // display: block;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: #{brandSizes(square_height)}px;
+    min-height: #{val.brandSizes(square_height)}px;
     height: var(--target-maxHeight, auto);
     padding: 7px 0 9px;
     position: relative;

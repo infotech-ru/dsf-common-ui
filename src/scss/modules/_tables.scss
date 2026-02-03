@@ -7,6 +7,7 @@
 @use 'sass:math';
 @use './../utilities/functions/func_svg-url' as *;
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-lineHeights' as *;
@@ -30,7 +31,7 @@
 }
 
 caption {
-  color: brandTable(caption_color);
+  color: val.brandTable(caption_color);
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: left;
@@ -38,16 +39,16 @@ caption {
 
 th,
 td {
-  background-color: brandTable(tbody_bgc);
-  color: brandTable(tbody-color);
+  background-color: val.brandTable(tbody_bgc);
+  color: val.brandTable(tbody-color);
   font-weight: 400;
-  font-size: rem(fontSizes(tbody));
-  line-height: rem(lineHeight(table));
-  height: rem(brandSizes(tableCell_height));
-  padding: rem(brandSizes(table_paddingY)) rem(brandSizes(table_paddingX));
+  font-size: rem(val.fontSizes(tbody));
+  line-height: rem(val.lineHeight(table));
+  height: rem(val.brandSizes(tableCell_height));
+  padding: rem(val.brandSizes(table_paddingY)) rem(val.brandSizes(table_paddingX));
   vertical-align: middle;
   &:first-child {
-    padding-left: #{brandSizes(table_paddingXFirst)}px;
+    padding-left: #{val.brandSizes(table_paddingXFirst)}px;
     text-align: left;
     &.text-right{
       text-align: right;
@@ -61,7 +62,7 @@ td {
     .table__border &{ 
       border-left-width: var(--width_border-left__modify, var(--width_border-left, 1px));
       border-left-style: var(--style_border_left, var(--style_border, solid));
-      border-left-color: var(--border_left_color, var(--border_color, brandTable(table_border)));
+      border-left-color: var(--border_left_color, var(--border_color, val.brandTable(table_border)));
     }
   }
   &[class*="col-"] {
@@ -76,28 +77,28 @@ td {
   .table__border &{ 
     border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
     border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
-    border-bottom-color: var(--border_bottom_color, var(--border_color, brandTable(table_border)));
+    border-bottom-color: var(--border_bottom_color, var(--border_color, val.brandTable(table_border)));
     border-right-width: var(--width_border-right__modify, var(--width_border-right, 1px));
     border-right-style: var(--style_border_right, var(--style_border, solid));
-    border-right-color: var(--border_right_color, var(--border_color, brandTable(table_border)));
+    border-right-color: var(--border_right_color, var(--border_color, val.brandTable(table_border)));
   }
   .table__simple &{
-    padding: #{math.div(brandSizes(base_marginSize), 2)}px;
+    padding: #{math.div(val.brandSizes(base_marginSize), 2)}px;
     height: auto;
   }
   .tr__slave &{
     --tdnesting-bgc: 96%;
-    background-color: brandTable(tbodySlaveTd_bgc);
+    background-color: val.brandTable(tbodySlaveTd_bgc);
     background-color: hsl(0deg 0% var(--tdnesting-bgc));
   }
   .tr__subSlave &{
-    background-color: brandTable(tbodySubSlaveTd_bgc);
+    background-color: val.brandTable(tbodySubSlaveTd_bgc);
   }
   .desc,
   .asc{
     display: inline-flex;
     position: relative;
-    padding-left: #{calc(brandSizes(tableSortIcon_size) + 5)}px;
+    padding-left: #{calc(val.brandSizes(tableSortIcon_size) + 5)}px;
     &:before{
       background-size: contain;
       background-repeat: no-repeat;
@@ -105,10 +106,10 @@ td {
       display: block;
       position: absolute;
       left: 0;
-      margin-top: #{calc(brandSizes(tableSortIcon_size) * .5 * -1)}px;
+      margin-top: #{calc(val.brandSizes(tableSortIcon_size) * .5 * -1)}px;
       top: 50%;
-      height: #{brandSizes(tableSortIcon_size)}px;
-      width: #{brandSizes(tableSortIcon_size)}px;
+      height: #{val.brandSizes(tableSortIcon_size)}px;
+      width: #{val.brandSizes(tableSortIcon_size)}px;
     }
   }
   .desc{
@@ -125,17 +126,17 @@ td {
 
 thead { 
   th {
-    background-color: brandTable(thead_bgc);
-    color: brandTable(thead_color);
-    font-size: rem(fontSizes(thead));
+    background-color: val.brandTable(thead_bgc);
+    color: val.brandTable(thead_color);
+    font-size: rem(val.fontSizes(thead));
     font-weight: 700;
-    // height: rem(brandSizes(tableCell_height));
+    // height: rem(val.brandSizes(tableCell_height));
     // position: sticky;
     // vertical-align: middle;
     .table__simple &{
-      background-color: brandColors(_transparent);
-      color: brandTable(tbody-color);
-      font-size: rem(fontSizes(tbody));
+      background-color: val.brandColors(_transparent);
+      color: val.brandTable(tbody-color);
+      font-size: rem(val.fontSizes(tbody));
       font-weight: 400;
       height: auto;
     }
@@ -157,7 +158,7 @@ thead {
         .table__border & {
           border-top-width: var(--width_border-top__modify, var(--width_border-top, 1px));
           border-top-style: var(--style_border_top, var(--style_border, solid));
-          border-top-color: var(--border_top_color, var(--border_color, brandTable(table_border)));
+          border-top-color: var(--border_top_color, var(--border_color, val.brandTable(table_border)));
         }
       }
     }
@@ -165,7 +166,7 @@ thead {
       th{
         border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
         border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
-        border-bottom-color: var(--border_top_color, var(--border_color, brandTable(thead_border)));
+        border-bottom-color: var(--border_top_color, var(--border_color, val.brandTable(thead_border)));
         .table__simple &{
           border-bottom: none;
         }
@@ -178,7 +179,7 @@ thead {
 tbody {
   .svg--icon{
       svg{
-        fill: brandPalette(table-color);
+        fill: val.brandPalette(table-color);
         height: var(--svgIcon_height, 14px);
         width: auto;
       }
@@ -188,17 +189,17 @@ tbody {
 tfoot { 
   th,
   td{
-    background-color: brandTable(tfoot_bgc);
+    background-color: val.brandTable(tfoot_bgc);
     bottom: 0;
-    color: brandTable(tfoot_color);
-    font-size: rem(fontSizes(tfoot));
+    color: val.brandTable(tfoot_color);
+    font-size: rem(val.fontSizes(tfoot));
     font-weight: 700;
-    // height: rem(brandSizes(tableCell_height));
+    // height: rem(val.brandSizes(tableCell_height));
     // vertical-align: middle;
     .table__simple &{
-      background-color: brandColors(_transparent);
-      color: brandTable(tbody-color);
-      font-size: rem(fontSizes(tbody));
+      background-color: val.brandColors(_transparent);
+      color: val.brandTable(tbody-color);
+      font-size: rem(val.fontSizes(tbody));
       font-weight: 400;
     }
     &:first-child {
@@ -211,12 +212,12 @@ tfoot {
         td,
         th {
           &:first-child {
-            z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+            z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
             &[rowspan="2"] {
-              z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+              z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
             }
             &[rowspan="3"] {
-              z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+              z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
             }
           }
         }
@@ -230,7 +231,7 @@ tfoot {
   & > tbody >{
     tr:nth-of-type(2n+1) {
       td{ 
-        background-color: brandTable(tdStrip_bgc);
+        background-color: val.brandTable(tdStrip_bgc);
       }
     }
   }
@@ -240,22 +241,22 @@ tfoot {
   & > tbody >{
     tr:nth-of-type(2n+1) {
       td{ 
-        background-color: brandTable(tbody_bgc);
+        background-color: val.brandTable(tbody_bgc);
       }
     }
     tr:nth-of-type(2n) {
       td{ 
-        background-color: brandTable(tdStrip_bgc);
+        background-color: val.brandTable(tdStrip_bgc);
       }
     }
   }
 }
 
-// @include table-row-variant('clear', brandColors(_transparent));
-// @include table-row-variant('light-yellow2', brandColors(_light-yellow2));
-// @include table-row-variant('light-red', brandColors(_light-red));
-// @include table-row-variant('red', brandColors(_red));
-// @include table-row-variant('rose', brandColors(_rose));
+// @include table-row-variant('clear', val.brandColors(_transparent));
+// @include table-row-variant('light-yellow2', val.brandColors(_light-yellow2));
+// @include table-row-variant('light-red', val.brandColors(_light-red));
+// @include table-row-variant('red', val.brandColors(_red));
+// @include table-row-variant('rose', val.brandColors(_rose));
 
 table{
   &[class*='bg-'] { 
@@ -285,7 +286,7 @@ tbody tr {
 .table-hover, // old name
 .table__hover {
   tr:hover td{
-    background-color: brandTable(tdHover_bgc);
+    background-color: val.brandTable(tdHover_bgc);
   }
 }
 
@@ -315,12 +316,12 @@ tbody tr {
     &:first-child{ 
       left: 0;
       position: sticky;
-      z-index: zIndex(tableStickyTbodyTd);
+      z-index: val.zIndex(tableStickyTbodyTd);
     }
     &.stickyCell{
       left: 0;
       position: sticky;
-      z-index: zIndex(tableStickyTbodyTd);
+      z-index: val.zIndex(tableStickyTbodyTd);
     }
     &.notStickyCell{
       left: auto;
@@ -331,10 +332,10 @@ tbody tr {
   thead{
     position: sticky;
     top: 0;
-    z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+    z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
     th{
       // position: sticky; // edge не отображаются border
-      z-index: zIndex(tableStickyTheadTh);
+      z-index: val.zIndex(tableStickyTheadTh);
       &:first-child {
         left: 0;
       }
@@ -347,37 +348,37 @@ tbody tr {
         th {
           top: 0;
           &:first-child {
-            z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+            z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
             &[rowspan="2"] {
-              z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+              z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
             }
             &[rowspan="3"] {
-              z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+              z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
             }
           }
         }
       }
       &:nth-child(2) {
         th {
-          top: rem(brandSizes(tableCell_height));
+          top: rem(val.brandSizes(tableCell_height));
           &:first-child {
-            z-index: zIndex(tableStickyTheadThFirstChild);
+            z-index: val.zIndex(tableStickyTheadThFirstChild);
           }
         }
       }
       &:nth-child(3) {
         th {
-          top: rem(calc(brandSizes(tableCell_height) * 2));
+          top: rem(calc(val.brandSizes(tableCell_height) * 2));
         }
       }
       &:nth-child(4) {
         th {
-          top: rem(calc(brandSizes(tableCell_height) * 3));
+          top: rem(calc(val.brandSizes(tableCell_height) * 3));
         }
       }
       &:nth-child(5) {
         th {
-          top: rem(calc(brandSizes(tableCell_height) * 3));
+          top: rem(calc(val.brandSizes(tableCell_height) * 3));
         }
       }
     }
@@ -389,7 +390,7 @@ tbody tr {
     max-width: var(--tdWidth, auto);
     left: var(--td-sticky, 0);
     position: sticky;
-    z-index: zIndex(tableStickyTbodyTd);
+    z-index: val.zIndex(tableStickyTbodyTd);
     width: var(--tdWidth, auto);
   &:first-child{
       --tdWidth: var(--tdWidth_1);
@@ -410,16 +411,16 @@ tbody tr {
   > tfoot{
     bottom: 0;
     position: sticky;
-    z-index: zIndex(tableStickyTheadTh);
+    z-index: val.zIndex(tableStickyTheadTh);
     td,
     th{
       &:first-child {
-        z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+        z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
         &[rowspan="2"] {
-          z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+          z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
         }
         &[rowspan="3"] {
-          z-index: zIndex(tableStickyTheadTrFirstChildThFirstChild);
+          z-index: val.zIndex(tableStickyTheadTrFirstChildThFirstChild);
         }
       }
     }
@@ -438,24 +439,24 @@ tbody tr {
 .tableHelpIcon{
   bottom: 50%;
   display: inline-flex;
-  height: #{brandSizes(tableHelpIcon_size)}px;
-  margin-bottom: #{calc(brandSizes(tableHelpIcon_size) * .5 * -1)}px;
-  width: #{brandSizes(tableHelpIcon_size)}px;
+  height: #{val.brandSizes(tableHelpIcon_size)}px;
+  margin-bottom: #{calc(val.brandSizes(tableHelpIcon_size) * .5 * -1)}px;
+  width: #{val.brandSizes(tableHelpIcon_size)}px;
   .tableHelpIcon_td &{ 
     position: absolute;
-    right: #{brandSizes(table_paddingY)}px;
+    right: #{val.brandSizes(table_paddingY)}px;
   }
   svg{
-    height: #{brandSizes(tableHelpIcon_size)}px;
-    width: #{brandSizes(tableHelpIcon_size)}px;
-    #{--svg-icon-fill}: brandPalette(tableHelpIcon_bgc);
+    height: #{val.brandSizes(tableHelpIcon_size)}px;
+    width: #{val.brandSizes(tableHelpIcon_size)}px;
+    #{--svg-icon-fill}: val.brandPalette(tableHelpIcon_bgc);
   }
   .asc &, .desc &{
     // display: inline-flex;
-    right: #{calc((brandSizes(table_paddingY) + brandSizes(tableHelpIcon_size)) * -1)}px;
+    right: #{calc((val.brandSizes(table_paddingY) + val.brandSizes(tableHelpIcon_size)) * -1)}px;
   }
   &_td {
-    padding-right: #{calc(brandSizes(tableHelpIcon_size) + brandSizes(table_paddingY) * 1.5)}px;
+    padding-right: #{calc(val.brandSizes(tableHelpIcon_size) + val.brandSizes(table_paddingY) * 1.5)}px;
     position: sticky; // улетает иконка в ячейка не шапки
   }
 }
@@ -463,13 +464,13 @@ tbody tr {
 .collapseTrIcon{
   $value: 10;
   display: inline-flex;
-  height: #{brandSizes(collapseTrIcon_size)}px;
+  height: #{val.brandSizes(collapseTrIcon_size)}px;
   position: relative;
   // top: 2px;
-  width: #{brandSizes(collapseTrIcon_size)}px;
+  width: #{val.brandSizes(collapseTrIcon_size)}px;
   svg{
-    height: #{brandSizes(collapseTrIcon_size)}px;
-    width: #{brandSizes(collapseTrIcon_size)}px;
+    height: #{val.brandSizes(collapseTrIcon_size)}px;
+    width: #{val.brandSizes(collapseTrIcon_size)}px;
   }
   &_link{
     background-color: transparent;
@@ -482,13 +483,13 @@ tbody tr {
     display: flex;
   }
   &[title="Expand"] {
-    #{--svg-icon-stroke_blue}: brandColors(_light-blue);
-    #{--svg-icon-stroke}: brandColors(_light-blue);
+    #{--svg-icon-stroke_blue}: val.brandColors(_light-blue);
+    #{--svg-icon-stroke}: val.brandColors(_light-blue);
   }
 
   &[title="Collapse"] {
-    #{--svg-icon-stroke_blue}: brandColors(_transparent);
-    #{--svg-icon-stroke}: brandColors(_light-blue);
+    #{--svg-icon-stroke_blue}: val.brandColors(_transparent);
+    #{--svg-icon-stroke}: val.brandColors(_light-blue);
   }
   .tr__master & {
     margin-left: #{$value}px;
@@ -497,30 +498,30 @@ tbody tr {
 
 .collapseTdIcon{
   display: inline-flex;
-  height: #{brandSizes(collapseTdIcon_size)}px;
-  width: #{brandSizes(collapseTdIcon_size)}px;
+  height: #{val.brandSizes(collapseTdIcon_size)}px;
+  width: #{val.brandSizes(collapseTdIcon_size)}px;
   svg{
-    height: #{brandSizes(collapseTdIcon_size)}px;
-    width: #{brandSizes(collapseTdIcon_size)}px;
+    height: #{val.brandSizes(collapseTdIcon_size)}px;
+    width: #{val.brandSizes(collapseTdIcon_size)}px;
   }
   &_link{
     background-color: transparent;
     border: none;
     bottom: 50%;
     display: block;
-    height: #{brandSizes(collapseTdIcon_size)}px;
-    margin-bottom: #{brandSizes(collapseTdIcon_size) * 0.5 * -1}px;
+    height: #{val.brandSizes(collapseTdIcon_size)}px;
+    margin-bottom: #{val.brandSizes(collapseTdIcon_size) * 0.5 * -1}px;
     position: absolute;
     // top: 50%;
-    // margin-top: #{calc(brandSizes(collapseTdIcon_size) * .5 * -1)}px;
-    right: #{brandSizes(table_paddingX)}px;
-    width: #{brandSizes(collapseTdIcon_size)}px;
+    // margin-top: #{calc(val.brandSizes(collapseTdIcon_size) * .5 * -1)}px;
+    right: #{val.brandSizes(table_paddingX)}px;
+    width: #{val.brandSizes(collapseTdIcon_size)}px;
   }
   &_td{
-    padding-right: #{calc(brandSizes(collapseTdIcon_size) + brandSizes(table_paddingY) * 1.5)}px;
+    padding-right: #{calc(val.brandSizes(collapseTdIcon_size) + val.brandSizes(table_paddingY) * 1.5)}px;
     position: sticky;
     &.tableHelpIcon_td{ 
-      padding-right: #{calc(brandSizes(collapseTdIcon_size) + brandSizes(tableHelpIcon_size) + brandSizes(table_paddingX) * 1.5)}px;
+      padding-right: #{calc(val.brandSizes(collapseTdIcon_size) + val.brandSizes(tableHelpIcon_size) + val.brandSizes(table_paddingX) * 1.5)}px;
     }
   }
 }

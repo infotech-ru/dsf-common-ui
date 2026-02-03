@@ -7,11 +7,12 @@
 @use 'sass:color';
 
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-colors' as *;
 
 .unityBlock{
-  background-color: brandColors(_white);
-  box-shadow: 0px 1px 0px color.scale(rgba(brandColors(_black), 1), $alpha: -80%, $space: rgb);
+  background-color: val.brandColors(_white);
+  box-shadow: 0px 1px 0px color.scale(rgba(val.brandColors(_black), 1), $alpha: -80%, $space: rgb);
   padding: 10px;
   &__nobg{
     background-color: transparent;
@@ -33,7 +34,7 @@
       }
     }
     &Title{
-      color: brandPalette(joinBlockTitle_color);
+      color: val.brandPalette(joinBlockTitle_color);
       white-space: nowrap;
     }
     &SvgTitle{

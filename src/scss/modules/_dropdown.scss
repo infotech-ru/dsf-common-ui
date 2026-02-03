@@ -6,6 +6,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_svg-url' as *;
 @use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-placeholder' as *;
 @use './../utilities/variables/var-zindex' as *;
 @use './../utilities/variables/var-colors' as *;
@@ -20,10 +21,10 @@
   height: 0;
   margin-left: 5px;
   vertical-align: middle;
-  border-top: rem(brandSizes(caretDropdown_size)) dashed;
-  // border-top: rem(brandSizes(caretDropdown_size)) solid \9; // IE8
-  border-right: rem(brandSizes(caretDropdown_size)) solid transparent;
-  border-left: rem(brandSizes(caretDropdown_size)) solid transparent;
+  border-top: rem(val.brandSizes(caretDropdown_size)) dashed;
+  // border-top: rem(val.brandSizes(caretDropdown_size)) solid \9; // IE8
+  border-right: rem(val.brandSizes(caretDropdown_size)) solid transparent;
+  border-left: rem(val.brandSizes(caretDropdown_size)) solid transparent;
 }
 
 // The dropdown wrapper (div)
@@ -42,10 +43,10 @@
 .dropdown-menu {
   @extend %dropdown-menu;
   // float: left;
-  z-index: zIndex(dropdown-menu);
+  z-index: val.zIndex(dropdown-menu);
   // Dividers (basically an hr) within the dropdown
   .divider {
-    background-color: brandPalette(menuDropdown_borderColor);
+    background-color: val.brandPalette(menuDropdown_borderColor);
     height: 1px;
     margin: 6px 0;
     overflow: hidden;
@@ -147,9 +148,9 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  color: brandColors(dropdownHeader_color);
-  font-size: rem(fontSizes(dropdownHeader));
-  line-height: rem(fontSizes(dropdownHeader));
+  color: val.brandColors(dropdownHeader_color);
+  font-size: rem(val.fontSizes(dropdownHeader));
+  line-height: rem(val.fontSizes(dropdownHeader));
   // padding: 3px 20px;
   padding: 6px 9px;
   white-space: nowrap; // as with > li > a
@@ -163,7 +164,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: zIndex(dropdownBackdrop);
+  z-index: val.zIndex(dropdownBackdrop);
   // z-index: ($zindex-dropdown - 10);
 }
 
@@ -223,7 +224,7 @@
     }
   }
   .dropdown-menu{
-    padding-right: rem(calc(brandSizes(dropdownLink_paddingX) * 2));
+    padding-right: rem(calc(val.brandSizes(dropdownLink_paddingX) * 2));
     > li > a,
     .dropdown__link{
       box-sizing: content-box;

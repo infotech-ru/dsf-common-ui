@@ -4,19 +4,19 @@
 /* path: dsf-common-ui/src/scss/modules/_stages.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-
+@use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-colors' as *;
 
 .stages{
   align-items: center;
-  border-radius: #{brandSizes(stages_size)}px;
+  border-radius: #{val.brandSizes(stages_size)}px;
   justify-content: center;
   display: inline-flex;
-  height: #{brandSizes(stages_size)}px;
-  width: #{brandSizes(stages_size)}px;
+  height: #{val.brandSizes(stages_size)}px;
+  width: #{val.brandSizes(stages_size)}px;
   &_listItem {
-    margin-bottom: #{brandSizes(stagesLine_size)}px;
+    margin-bottom: #{val.brandSizes(stagesLine_size)}px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -26,11 +26,11 @@
     &:after{ 
       .stages_listItem &{
         content: '';
-        border-left: 1px dashed brandPalette(stagesList_borderColor);
+        border-left: 1px dashed val.brandPalette(stagesList_borderColor);
         display: block;
-        // height: #{brandSizes(stagesLine_size)}px;
+        // height: #{val.brandSizes(stagesLine_size)}px;
         height: 100%;
-        top: #{brandSizes(stages_size)}px;
+        top: #{val.brandSizes(stages_size)}px;
         position: absolute;
         margin-right: -1px;
         right: 50%;
@@ -49,28 +49,28 @@
     height: 24px;
   }
   &__close{
-    background-color: brandPalette(stagesClose_bgc);
-    border-color: brandPalette(stagesClose_bgc);
-    #{--svg-icon-fill}: brandPalette(stagesClose_svg);
-    #{--svg-icon-fill_blue}: brandPalette(stagesClose_svg);
-    #{--svg-icon-stroke}: brandPalette(stagesClose_svg);
-    #{--svg-icon-stroke_blue}: brandPalette(stagesClose_svg);
+    background-color: val.brandPalette(stagesClose_bgc);
+    border-color: val.brandPalette(stagesClose_bgc);
+    #{--svg-icon-fill}: val.brandPalette(stagesClose_svg);
+    #{--svg-icon-fill_blue}: val.brandPalette(stagesClose_svg);
+    #{--svg-icon-stroke}: val.brandPalette(stagesClose_svg);
+    #{--svg-icon-stroke_blue}: val.brandPalette(stagesClose_svg);
   }
   &__open{
-    background-color: brandPalette(stagesOpen_bgc);
-    border-color: brandPalette(stagesOpen_bgc);
-    #{--svg-icon-fill}: brandPalette(stagesOpen_svg);
-    #{--svg-icon-fill_blue}: brandPalette(stagesOpen_svg);
-    #{--svg-icon-stroke}: brandPalette(stagesOpen_svg);
-    #{--svg-icon-stroke_blue}: brandPalette(stagesOpen_svg);
+    background-color: val.brandPalette(stagesOpen_bgc);
+    border-color: val.brandPalette(stagesOpen_bgc);
+    #{--svg-icon-fill}: val.brandPalette(stagesOpen_svg);
+    #{--svg-icon-fill_blue}: val.brandPalette(stagesOpen_svg);
+    #{--svg-icon-stroke}: val.brandPalette(stagesOpen_svg);
+    #{--svg-icon-stroke_blue}: val.brandPalette(stagesOpen_svg);
   }
   &__default{
-    background-color: brandPalette(stagesDefault_bgc);
-    border-color: brandPalette(stagesDefault_bgc);
-    #{--svg-icon-fill}: brandPalette(stagesDefault_svg);
-    #{--svg-icon-fill_blue}: brandPalette(stagesDefault_svg);
-    #{--svg-icon-stroke}: brandPalette(stagesDefault_svg);
-    #{--svg-icon-stroke_blue}: brandPalette(stagesDefault_svg);
+    background-color: val.brandPalette(stagesDefault_bgc);
+    border-color: val.brandPalette(stagesDefault_bgc);
+    #{--svg-icon-fill}: val.brandPalette(stagesDefault_svg);
+    #{--svg-icon-fill_blue}: val.brandPalette(stagesDefault_svg);
+    #{--svg-icon-stroke}: val.brandPalette(stagesDefault_svg);
+    #{--svg-icon-stroke_blue}: val.brandPalette(stagesDefault_svg);
   }
   &_text{
     align-items: center;
