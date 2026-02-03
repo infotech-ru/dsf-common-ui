@@ -1,4 +1,4 @@
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 
 .lineStages{
   $lineStagesBgc: var(--color_light-grey);
@@ -9,19 +9,19 @@
   $lineStagesDangerColor: var(--color_dark-red);
   &_wrapper{
     background-color: $lineStagesBgc;
-    padding: rem(5);
+    padding: fonts.rem(5);
   }
   &_name{
     align-items: center;
-    border-radius: rem(5);
+    border-radius: fonts.rem(5);
     background-color: $lineStagesItemBgc;
     // color: $lineStagesNameColor;
     display: flex;
     flex: 1 1 0px;
-    font-size: rem(10);
+    font-size: fonts.rem(10);
     font-weight: 400;
     justify-content: center;
-    height: rem(16);
+    height: fonts.rem(16);
     min-width: fit-content;
     text-transform: uppercase;
     width: 0;
@@ -35,11 +35,11 @@
     }
   }
   &_date{
-    font-size: rem(12);
+    font-size: fonts.rem(12);
     font-weight: 400;
     flex: 1 1 0px;
-    line-height: rem(14);
-    margin-bottom: rem(5);
+    line-height: fonts.rem(14);
+    margin-bottom: fonts.rem(5);
     min-width: fit-content;
     text-align: center;
     width: 0;
@@ -47,7 +47,7 @@
   &_items{
     align-items: center;
     display: flex;
-    gap: rem(5);
+    gap: fonts.rem(5);
     a{
       text-decoration: none;
     }

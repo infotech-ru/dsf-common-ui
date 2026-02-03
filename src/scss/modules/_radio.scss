@@ -5,13 +5,13 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/mixins/svg-icon' as *;
-@use './../utilities/variables/var-bootstrap-v3' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-lineHeights' as *;
+// @use './../utilities/mixins/svg-icon' as *;
+// @use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
 
 .radioCheck{
     padding-left: 0px;
@@ -39,11 +39,11 @@
     label{
         &.radio {
             color: var(--color_white);
-            cursor: pointer;
-            font-size: rem(15);
+            cursor: val.brandCursor(radioItemLabel);
+            font-size: fonts.rem(15);
             font-weight: 400;
             height: auto;
-            line-height: rem(18);
+            line-height: fonts.rem(18);
             margin-bottom: 0;
             padding: 0;
             position: relative;
@@ -53,27 +53,27 @@
             }
             &:after{
                 background-color: transparent;
-                border-radius: rem(8);
+                border-radius: fonts.rem(8);
                 content: attr(data-plainImageText);
                 color: var(--color_white);
                 display: inline-block;
-                font-size: rem(15);
+                font-size: fonts.rem(15);
                 height: auto;
                 position: relative;
-                line-height: rem(18);
-                margin-top: rem(-4);
+                line-height: fonts.rem(18);
+                margin-top: fonts.rem(-4);
                 text-transform: uppercase;
             }
             .svg--icon{
-                margin-right: rem(6);
+                margin-right: fonts.rem(6);
                 vertical-align: text-top;
                 --svg-icon-stroke: var(--color_white);
                 --svg-icon-stroke_blue: var(--color_white);
-                height: rem(16);
-                width: rem(16);
+                height: fonts.rem(16);
+                width: fonts.rem(16);
                 svg{
-                    height: rem(16);
-                    width: rem(16);
+                    height: fonts.rem(16);
+                    width: fonts.rem(16);
                 }
             }
         }
@@ -81,7 +81,7 @@
 }
 
 .radio-item {
-    padding-left: rem(val.brandSizes(radioItem_size) + val.brandSizes(radioItemBorder_size) + val.brandSizes(radioItem_paddingText));
+    padding-left: fonts.rem(val.brandSizes(radioItem_size) + val.brandSizes(radioItemBorder_size) + val.brandSizes(radioItem_paddingText));
     position: relative;
     &.checked label.radio,
     label.radio.checked,
@@ -104,14 +104,14 @@
         .disabled & + label.radio:before,
         &[disabled] + label.radio:after,
         .disabled & + label.radio:after {
-            cursor: $cursor-disabled;
+            cursor: val.brandCursor(radioItemDisabled);
             pointer-events: none;
         }
 
         &[disabled] + label.radio,
         .disabled & + label.radio {
             color: val.brandPalette(radioItemDisabled_color);
-            cursor: $cursor-disabled;
+            cursor: val.brandCursor(radioItemDisabled);
             pointer-events: none;
         }
     }
@@ -122,10 +122,10 @@
     }
     label{
         &.radio {
-            cursor: pointer;
+            cursor: val.brandCursor(radioItemLabel);
             font-weight: normal;
-            // min-height: rem(val.lineHeight(radioItemLabel));
-            line-height: rem(val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2));
+            // min-height: fonts.rem(val.lineHeight(radioItemLabel));
+            line-height: fonts.rem(val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2));
             margin-bottom: 0;
             padding-top: 0;
             padding-left: 0;
@@ -133,15 +133,15 @@
             &:before {
                 border-radius: 100%;
                 background-color: val.brandPalette(radioItem_bg);
-                border: rem(val.brandSizes(radioItemBorder_size)) solid val.brandPalette(radioItem_border);
+                border: fonts.rem(val.brandSizes(radioItemBorder_size)) solid val.brandPalette(radioItem_border);
                 content: " ";
                 display: block;
-                height: rem(val.brandSizes(radioItem_size));
-                left: rem(-(val.brandSizes(radioItem_size) + val.brandSizes(radioItemBorder_size) + val.brandSizes(radioItem_paddingText)));
-                margin-top: rem(-(val.brandSizes(radioItem_size) * 0.5));
+                height: fonts.rem(val.brandSizes(radioItem_size));
+                left: fonts.rem(-(val.brandSizes(radioItem_size) + val.brandSizes(radioItemBorder_size) + val.brandSizes(radioItem_paddingText)));
+                margin-top: fonts.rem(-(val.brandSizes(radioItem_size) * 0.5));
                 position: absolute;
                 top: 50%;
-                width: rem(val.brandSizes(radioItem_size));
+                width: fonts.rem(val.brandSizes(radioItem_size));
             }
             &:after{
                 background-color: val.brandPalette(radioItemDotActive);
@@ -152,17 +152,17 @@
                 border-radius: 100%;
                 content: " ";
                 display: none;
-                height: rem(val.brandSizes(radioItemDot_size));
-                left: rem(-(val.brandSizes(radioItem_paddingText) + val.brandSizes(radioItemBorder_size) + val.brandSizes(radioItemDot_size) + ((val.brandSizes(radioItem_size) - val.brandSizes(radioItemDot_size)) * 0.5)));
+                height: fonts.rem(val.brandSizes(radioItemDot_size));
+                left: fonts.rem(-(val.brandSizes(radioItem_paddingText) + val.brandSizes(radioItemBorder_size) + val.brandSizes(radioItemDot_size) + ((val.brandSizes(radioItem_size) - val.brandSizes(radioItemDot_size)) * 0.5)));
                 position: absolute;
                 top: 50%;
-                margin-top: rem(-(val.brandSizes(radioItemDot_size) * 0.5));
-                width: rem(val.brandSizes(radioItemDot_size));
+                margin-top: fonts.rem(-(val.brandSizes(radioItemDot_size) * 0.5));
+                width: fonts.rem(val.brandSizes(radioItemDot_size));
             }
             span{
                 display: inline-block;
                 font-weight: 400;
-                line-height: rem(val.brandSizes(radioItem_size));
+                line-height: fonts.rem(val.brandSizes(radioItem_size));
                 vertical-align: middle;
             }
         }

@@ -1,4 +1,4 @@
-@use "_deprecate" as *;
+@use "_deprecate" as deprecate;
 // Image Mixins
 // - Responsive image
 // - Retina image
@@ -32,5 +32,5 @@
     background-image: url($file-2x);
     background-size: $width-1x $height-1x;
   }
-  @include deprecate("`img-retina()`", "v4.3.0", "v5");
+  @include deprecate.deprecate("`img-retina()`", "v4.3.0", "v5");
 }

@@ -6,29 +6,29 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:list';
 @use 'sass:math';
-@use './../utilities/functions/func_svg-url' as *;
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_svg-url' as svgurl;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-bootstrap-v3' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-placeholder' as *;
-@use './../utilities/mixins_bootstrap-v3/image' as *;
-@use './../utilities/mixins/transition' as *;
+@use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
+@use './../utilities/variables/var-colors' as colors;
+@use './../utilities/variables/var-sizes' as sizes;
+@use './../utilities/variables/var-fonts' as varfonts;
+@use './../utilities/variables/var-placeholder' as placeholder;
+@use './../utilities/mixins_bootstrap-v3/image' as image;
+@use './../utilities/mixins/transition' as transition;
 
 .img-responsive {
-  @include img-responsive;
+  @include image.img-responsive;
 }
 
 .img-thumbnail {
-  padding: calc($grid-gutter-width * 0.5);
+  padding: calc(varbootstrapv3.$grid-gutter-width * 0.5);
   // line-height: $line-height-base;
   background-color: val.brandColors(_white);
   border: 1px solid val.brandColors(_grey2);
-  border-radius: rem(val.brandSizes(border-radius-base));
-  @include transition(all .2s ease-in-out);
-  @include img-responsive(inline-block);
+  border-radius: fonts.rem(val.brandSizes(border-radius-base));
+  @include transition.transition(all .2s ease-in-out);
+  @include image.img-responsive(inline-block);
 }
 
 .img-circleThumb{
@@ -76,7 +76,7 @@
   padding: $thumbnailPadding;
   width: 64px;
   --thumbnail_width: 64px;
-  // @include transition(border .2s ease-in-out);
+  // @include transition.transition(border .2s ease-in-out);
   img {
     margin-right: auto;
     margin-left: auto;
@@ -194,46 +194,46 @@
   text-indent: -9999px;
   &_usa {
     background-color: #fff;
-    background-image: svgToUrl('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12"><path d="M16,0H0V1.33H16Z" fill="#dc4437"/><path d="M16,2.67H0V4H16Z" fill="#dc4437"/><path d="M16,8H0V9.33H16Z" fill="#dc4437"/><path d="M16,10.67H0V12H16Z" fill="#dc4437"/><path d="M16,5.33H0V6.66H16Z" fill="#dc4437"/><path d="M8.62,0H0V6.67H8.62Z" fill="#2a66b7"/><path d="M1.66.4l.28.49L2.58,1l-.46.39.11.54-.57-.26L1.1,1.9l.11-.54L.74,1,1.38.89Z" fill="#fff"/><path d="M4.18.4l.29.49L5.11,1l-.46.39.1.54-.57-.26-.56.26.1-.54L3.26,1,3.9.89Z" fill="#fff"/><path d="M6.71.4,7,.89,7.63,1l-.47.39.11.54-.56-.26-.57.26.11-.54L5.78,1,6.42.89Z" fill="#fff"/><path d="M3,2.4l.29.49L3.88,3l-.46.39.1.54L3,3.64l-.56.26.1-.54L2,3l.64-.08Z" fill="#fff"/><path d="M5.48,2.4l.28.49L6.4,3l-.47.39L6,3.9l-.56-.26-.57.26L5,3.36,4.55,3l.64-.08Z" fill="#fff"/><path d="M1.66,4.52,1.94,5l.64.08-.46.38L2.23,6l-.57-.26L1.1,6l.11-.55L.74,5.09,1.38,5Z" fill="#fff"/><path d="M4.18,4.52,4.47,5l.64.08-.46.38.1.55-.57-.26L3.62,6l.1-.55-.46-.38L3.9,5Z" fill="#fff"/><path d="M6.71,4.52,7,5l.64.08-.47.38L7.27,6l-.56-.26L6.14,6l.11-.55-.47-.38L6.42,5Z" fill="#fff"/></svg>');
+    background-image: svgurl.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12"><path d="M16,0H0V1.33H16Z" fill="#dc4437"/><path d="M16,2.67H0V4H16Z" fill="#dc4437"/><path d="M16,8H0V9.33H16Z" fill="#dc4437"/><path d="M16,10.67H0V12H16Z" fill="#dc4437"/><path d="M16,5.33H0V6.66H16Z" fill="#dc4437"/><path d="M8.62,0H0V6.67H8.62Z" fill="#2a66b7"/><path d="M1.66.4l.28.49L2.58,1l-.46.39.11.54-.57-.26L1.1,1.9l.11-.54L.74,1,1.38.89Z" fill="#fff"/><path d="M4.18.4l.29.49L5.11,1l-.46.39.1.54-.57-.26-.56.26.1-.54L3.26,1,3.9.89Z" fill="#fff"/><path d="M6.71.4,7,.89,7.63,1l-.47.39.11.54-.56-.26-.57.26.11-.54L5.78,1,6.42.89Z" fill="#fff"/><path d="M3,2.4l.29.49L3.88,3l-.46.39.1.54L3,3.64l-.56.26.1-.54L2,3l.64-.08Z" fill="#fff"/><path d="M5.48,2.4l.28.49L6.4,3l-.47.39L6,3.9l-.56-.26-.57.26L5,3.36,4.55,3l.64-.08Z" fill="#fff"/><path d="M1.66,4.52,1.94,5l.64.08-.46.38L2.23,6l-.57-.26L1.1,6l.11-.55L.74,5.09,1.38,5Z" fill="#fff"/><path d="M4.18,4.52,4.47,5l.64.08-.46.38.1.55-.57-.26L3.62,6l.1-.55-.46-.38L3.9,5Z" fill="#fff"/><path d="M6.71,4.52,7,5l.64.08-.47.38L7.27,6l-.56-.26L6.14,6l.11-.55-.47-.38L6.42,5Z" fill="#fff"/></svg>');
   }
   &_ru{
-    background-image: svgToUrl('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 12"><defs><clipPath id="a" transform="translate(0 0)"><rect width="16" height="12" fill="none"/></clipPath></defs><title>ru</title><g clip-path="url(#a)"><path d="M0,0H16V12H0Z" transform="translate(0 0)" fill="#fff" fill-rule="evenodd"/><path d="M0,4H16v8H0Z" transform="translate(0 0)" fill="#0039a6" fill-rule="evenodd"/><path d="M0,8H16v4H0Z" transform="translate(0 0)" fill="#d52b1e" fill-rule="evenodd"/></g></svg>');
+    background-image: svgurl.svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 12"><defs><clipPath id="a" transform="translate(0 0)"><rect width="16" height="12" fill="none"/></clipPath></defs><title>ru</title><g clip-path="url(#a)"><path d="M0,0H16V12H0Z" transform="translate(0 0)" fill="#fff" fill-rule="evenodd"/><path d="M0,4H16v8H0Z" transform="translate(0 0)" fill="#0039a6" fill-rule="evenodd"/><path d="M0,8H16v4H0Z" transform="translate(0 0)" fill="#d52b1e" fill-rule="evenodd"/></g></svg>');
   }
   &_spa{
-    background-image: svgToUrl('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 18"><defs><clipPath id="a"><rect width="24" height="18" fill="none"/></clipPath></defs><title>spa</title><g clip-path="url(#a)"><path d="M0,0H24V18H0Z" fill="#e32332"/><path d="M0,0H24V12.86H0Z" fill="#feeb22"/><path d="M0,0H24V5.14H0Z" fill="#e32332"/></g><rect x="0.5" y="0.5" width="23" height="17" fill="none" stroke="#ddd"/></svg>');
+    background-image: svgurl.svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 18"><defs><clipPath id="a"><rect width="24" height="18" fill="none"/></clipPath></defs><title>spa</title><g clip-path="url(#a)"><path d="M0,0H24V18H0Z" fill="#e32332"/><path d="M0,0H24V12.86H0Z" fill="#feeb22"/><path d="M0,0H24V5.14H0Z" fill="#e32332"/></g><rect x="0.5" y="0.5" width="23" height="17" fill="none" stroke="#ddd"/></svg>');
   }
 }
 
-@each $marginSize in $marginSizes {
+@each $marginSize in sizes.$marginSizes {
   .margin-#{$marginSize} {
-      margin: rem($marginSize);
+      margin: fonts.rem($marginSize);
   }
   .mobile-view .margin-#{$marginSize}__mobile {
-      margin: rem($marginSize);
+      margin: fonts.rem($marginSize);
   }
   .mt-#{$marginSize} {
-      margin-top: rem($marginSize);
+      margin-top: fonts.rem($marginSize);
   }
   .mobile-view .mt-#{$marginSize}__mobile {
-      margin-top: rem($marginSize);
+      margin-top: fonts.rem($marginSize);
   }
   .mr-#{$marginSize} {
-      margin-right: rem($marginSize);
+      margin-right: fonts.rem($marginSize);
   }
   .mobile-view .mr-#{$marginSize}__mobile {
-      margin-right: rem($marginSize);
+      margin-right: fonts.rem($marginSize);
   }
   .mb-#{$marginSize} {
-      margin-bottom: rem($marginSize);
+      margin-bottom: fonts.rem($marginSize);
   }
   .mobile-view .mb-#{$marginSize}__mobile {
-      margin-bottom: rem($marginSize);
+      margin-bottom: fonts.rem($marginSize);
   }
   .ml-#{$marginSize} {
-      margin-left: rem($marginSize);
+      margin-left: fonts.rem($marginSize);
   }
   .mobile-view .ml-#{$marginSize}__mobile {
-      margin-left: rem($marginSize);
+      margin-left: fonts.rem($marginSize);
   }
 }
 .mt-auto{
@@ -249,51 +249,51 @@
   margin-left: auto;
 }
 
-@each $paddingSize in $paddingSizes {
+@each $paddingSize in sizes.$paddingSizes {
   .padding-#{$paddingSize} {
-    padding: rem($paddingSize);
+    padding: fonts.rem($paddingSize);
   }
   .mobile-view .padding-#{$paddingSize}__mobile {
-    padding: rem($paddingSize);
+    padding: fonts.rem($paddingSize);
   }
 }
-@each $paddingSize in $paddingSizes {
+@each $paddingSize in sizes.$paddingSizes {
   .pt-#{$paddingSize} {
-      padding-top: rem($paddingSize);
+      padding-top: fonts.rem($paddingSize);
   }
   .mobile-view .pt-#{$paddingSize}__mobile {
-      padding-top: rem($paddingSize);
+      padding-top: fonts.rem($paddingSize);
   }
   .pr-#{$paddingSize} {
-      padding-right: rem($paddingSize);
+      padding-right: fonts.rem($paddingSize);
   }
   .mobile-view .pr-#{$paddingSize}__mobile {
-      padding-right: rem($paddingSize);
+      padding-right: fonts.rem($paddingSize);
   }
   .pb-#{$paddingSize} {
-      padding-bottom: rem($paddingSize);
+      padding-bottom: fonts.rem($paddingSize);
   }
   .mobile-view .pb-#{$paddingSize}__mobile {
-      padding-bottom: rem($paddingSize);
+      padding-bottom: fonts.rem($paddingSize);
   }
   .pl-#{$paddingSize} {
-      padding-left: rem($paddingSize);
+      padding-left: fonts.rem($paddingSize);
   }
   .mobile-view .pl-#{$paddingSize}__mobile {
-      padding-left: rem($paddingSize);
+      padding-left: fonts.rem($paddingSize);
   }
 }
 
-@each $gapSize in $gapSizes {
+@each $gapSize in sizes.$gapSizes {
   .gap-#{$gapSize} {
-      gap: rem($gapSize);
+      gap: fonts.rem($gapSize);
   }
   .mobile-view .gap-#{$gapSize}__mobile {
-      gap: rem($gapSize);
+      gap: fonts.rem($gapSize);
   }
 }
 
-@each $posName, $posSize in $posSizes {
+@each $posName, $posSize in sizes.$posSizes {
   $length: list.length($posSize);
   @for $value from 1 through $length {
     $mapValue: list.nth($posSize, $value);
@@ -400,14 +400,14 @@
 .transformText__left   { writing-mode: vertical-lr; transform: rotate(0deg); }
 .transformText__right  { writing-mode: vertical-lr; transform: rotate(180deg); }
 
-@each $fontSize in $fontSizeList {
-  .fz#{$fontSize} { font-size: rem($fontSize); }
-  .mobile-view .fz#{$fontSize}__mobile { font-size: rem($fontSize); }
+@each $fontSize in varfonts.$fontSizeList {
+  .fz#{$fontSize} { font-size: fonts.rem($fontSize); }
+  .mobile-view .fz#{$fontSize}__mobile { font-size: fonts.rem($fontSize); }
 }
 
-@each $lineHeightSize in $lineHeightSizeList {
-  .lh#{$lineHeightSize} { line-height: rem($lineHeightSize) }
-  .mobile-view .lh#{$lineHeightSize}__mobile { line-height: rem($lineHeightSize) }
+@each $lineHeightSize in varfonts.$lineHeightSizeList {
+  .lh#{$lineHeightSize} { line-height: fonts.rem($lineHeightSize) }
+  .mobile-view .lh#{$lineHeightSize}__mobile { line-height: fonts.rem($lineHeightSize) }
 }
 
 .p-relative                                 { position: relative; }
@@ -832,7 +832,7 @@
 .borderRadius-10     { border-radius: 10px;}
 .borderRadius-100p   { border-radius: 100%;}
 
-@each $name, $value in $brand-namecolors {
+@each $name, $value in colors.$brand-namecolors {
   .svg-#{$name},
   .svg-#{$name}.svg--icon {
     svg {

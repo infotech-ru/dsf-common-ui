@@ -4,10 +4,10 @@
 /* path: dsf-common-ui/src/scss/modules/_sidebarModal.scss                    */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-colors' as *;
 
 
 .modal-sidebar {
@@ -74,16 +74,16 @@
   &-body {
     background-color: #fff;
     position: relative;
-    padding: 0 rem(val.brandSizes(modalSidebar_padding)) 1px;
+    padding: 0 fonts.rem(val.brandSizes(modalSidebar_padding)) 1px;
     &_inner{
-      margin: 0 rem(calc(val.brandSizes(modalSidebar_padding) * -1));
+      margin: 0 fonts.rem(calc(val.brandSizes(modalSidebar_padding) * -1));
     }
   }
   &-header {
     align-items: center;
     display: flex;
     justify-content: flex-start;
-    padding: rem(val.brandSizes(modalSidebar_padding));
+    padding: fonts.rem(val.brandSizes(modalSidebar_padding));
     // background-color: rgba(0, 0, 0, 0.03);
     position: relative;
     &Title{
@@ -100,7 +100,7 @@
   &-footer {
     display: flex;
     justify-content: space-between;
-    padding: 0 rem(val.brandSizes(modalSidebar_padding)) rem(val.brandSizes(modalSidebar_padding));
+    padding: 0 fonts.rem(val.brandSizes(modalSidebar_padding)) fonts.rem(val.brandSizes(modalSidebar_padding));
     text-align: right;
     // border-top: 1px solid #e5e5e5;
   }

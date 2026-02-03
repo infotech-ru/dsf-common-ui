@@ -9,36 +9,7 @@
 @use 'sass:list';
 @use 'sass:string';
 
-// @function str-replace($string, $search, $replace: '') {
-//   $index: string.index($string, $search);
-//   @if $index {
-//     @return string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
-//   }
-//   @return $string;
-// }
-
 @function str-replace($string, $search, $replace: '') {
-
-  $index: string.index($string, $search);
-
-  @if $index{
-
-    $searchString: $string;
-    $newString: "";
-    $end: "";
-
-    @while $index {
-      $start: string.slice($searchString, 1, $index - 1);
-      $end: string.slice($searchString, $index + string.length($search));
-      $searchString: $end;
-      $index: string.index($searchString, $search);
-      $newString: $newString + $start + $replace;
-    }
-    @return $newString + $end;
-  }
-  @return $string;
-}
-@function symbolreplace($string, $search, $replace: '') {
 
   $index: string.index($string, $search);
 

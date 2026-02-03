@@ -6,8 +6,8 @@
 //*                                                                          *//
 //* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- *//
 
-@use  "_functions" as *;
+@forward "_functions";
 
-@use "_mixins" as *;
+@forward "_mixins";
 
 @forward "_variables";

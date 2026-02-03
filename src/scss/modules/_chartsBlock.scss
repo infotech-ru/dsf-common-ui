@@ -5,9 +5,9 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-colors' as *;
 
 
 .chartsBlock{
@@ -43,8 +43,8 @@
     }
     &Subtitles{ 
       color: val.brandColors(_grey);
-      font-size: rem(12);
-      line-height: rem(14);
+      font-size: fonts.rem(12);
+      line-height: fonts.rem(14);
     }
     h3{
       margin-bottom: 0;

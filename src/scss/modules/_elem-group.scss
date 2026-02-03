@@ -4,16 +4,16 @@
 /* path: dsf-common-ui/src/scss/modules/_elem-group.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-bootstrap-v3' as *;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/mixins_bootstrap-v3/border-radius' as *;
-@use './../utilities/mixins/transition' as *;
-@use './buttons' as *;
+// @use './../utilities/variables/var-bootstrap-v3' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-fonts' as *;
+@use './../utilities/mixins_bootstrap-v3/border-radius' as borderradius;
+@use './../utilities/mixins/transition' as transition;
+@use './buttons' as buttons;
 
 //
 // Button groups
@@ -66,14 +66,14 @@
 .btn-group > [class*="btn"]:first-child {
   margin-left: 0;
   &:not(:last-child):not(.dropdown-toggle) {
-    @include border-right-radius(0);
+    @include borderradius.border-right-radius(0);
   }
 }
 // Need .dropdown-toggle since :last-child doesn't apply, given that a .dropdown-menu is used immediately after it
 // .btn-group > .btn:last-child:not(:first-child),
 .btn-group > [class*="btn"]:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
-  @include border-left-radius(0);
+  @include borderradius.border-left-radius(0);
 }
 
 // On active and open, don't show outline
@@ -88,16 +88,16 @@
 // .btn-group > .btn,
 .btn-group-sm > .btn, // старые правила очищаем
 .btn-group-lg > .btn {
-  line-height: rem(val.lineHeight(btn));
+  line-height: fonts.rem(val.lineHeight(btn));
 }
 
 .btn-group > .btn-xs,
 .btn-group > .btn-small {
-  line-height: rem(val.lineHeight(btnXs));
+  line-height: fonts.rem(val.lineHeight(btnXs));
 }
 
 .btn-group > .btn-large {
-  line-height: rem(val.lineHeight(btnLg));
+  line-height: fonts.rem(val.lineHeight(btnLg));
 }
 // Split button dropdowns
 // ----------------------
@@ -226,12 +226,12 @@
 //     float: none;
 //     max-width: 100%;
     &:first-child:not(:last-child):not(.dropdown-toggle) {
-      @include border-top-radius(1px);
-      @include border-bottom-radius(0);
+      @include borderradius.border-top-radius(1px);
+      @include borderradius.border-bottom-radius(0);
     }
     &:last-child:not(:first-child) {
-      @include border-top-radius(0);
-      @include border-bottom-radius(1px);
+      @include borderradius.border-top-radius(0);
+      @include borderradius.border-bottom-radius(1px);
     }
     & + [class*="btn"] {
       margin-left: 0;
@@ -368,8 +368,8 @@
 // Text input groups
 // -------------------------
 .input-group-addon {
-  padding: rem(val.brandSizes(inputGroupAddon_paddingY)) rem(val.brandSizes(inputGroupAddon_paddingX));
-  font-size: rem(val.fontSizes(inputGroupElem));
+  padding: fonts.rem(val.brandSizes(inputGroupAddon_paddingY)) fonts.rem(val.brandSizes(inputGroupAddon_paddingX));
+  font-size: fonts.rem(val.fontSizes(inputGroupElem));
   font-weight: 400;
   line-height: 1;
   color: val.brandPalette(inputGroupEl-color);
@@ -393,7 +393,7 @@
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-  @include border-right-radius(0);
+  @include borderradius.border-right-radius(0);
 }
 .input-group-addon:first-child {
   border-right: 0;
@@ -405,7 +405,7 @@
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-  @include border-left-radius(0);
+  @include borderradius.border-left-radius(0);
 }
 .input-group-addon:last-child {
   border-left: 0;
@@ -496,7 +496,7 @@
   &:focus-within{
     .inputGroup_text{
       border-color: val.brandPalette(formControl-color);
-      @include transition(border-color ease-in-out .15s);
+      @include transition.transition(border-color ease-in-out .15s);
       svg {
         --svg-icon-fill: var(--btn_svg__hover);
         --svg-icon-stroke: var(--btn_svg__hover);
@@ -507,7 +507,7 @@
       background-color: var(--btn_bg__hover);
       background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
       background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
-      @include transition(border-color ease-in-out .15s);
+      @include transition.transition(border-color ease-in-out .15s);
       svg{ 
         --svg-icon-fill: var(--btn_svg__hover);
         --svg-icon-stroke: var(--btn_svg__hover);
@@ -518,7 +518,7 @@
 
 .form-control-container {
   .css-formFree & {
-    padding-top: rem(val.fontSizes(controlLabel_active__formFree));
+    padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
   }
   .form-control {
     border-top-left-radius: 0;
@@ -553,7 +553,7 @@
         border-left-width: 1px;
       }
       .css-formFree &{
-          padding-top: rem(val.fontSizes(controlLabel_active__formFree));
+          padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
       }
   }
 }
@@ -562,7 +562,7 @@
 .inputGroup_append {
   display: flex;
   .css-formFree & {
-    padding-top: rem(val.fontSizes(controlLabel_active__formFree));
+    padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
   }
   .btn {
     position: relative;
@@ -602,11 +602,11 @@
   border-top: 1px solid val.brandPalette(inputGroupEl-borderColor);
   color: val.brandPalette(inputGroupEl-color);
   display: flex;
-  font-size: rem(val.fontSizes(inputGroupElem));
+  font-size: fonts.rem(val.fontSizes(inputGroupElem));
   font-weight: val.fontWeight(inputGroupElem);
-  line-height: rem(val.lineHeight(input));
-  min-height: rem(calc(val.lineHeight(input) + 2));
-  padding: 0 rem(val.brandSizes(formControl_paddingX));
+  line-height: fonts.rem(val.lineHeight(input));
+  min-height: fonts.rem(calc(val.lineHeight(input) + 2));
+  padding: 0 fonts.rem(val.brandSizes(formControl_paddingX));
   margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
   // line-height: $input-line-height;
   text-align: center;

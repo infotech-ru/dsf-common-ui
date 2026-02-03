@@ -5,15 +5,15 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:math';
-@use './../utilities/functions/func_svg-url' as *;
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_svg-url' as svgurl;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-zindex' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/mixins/table' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
+// @use './../utilities/variables/var-zindex' as *;
+// @use './../utilities/variables/var-fonts' as *;
+// @use './../utilities/mixins/table' as table;
 
 
 .table {
@@ -42,10 +42,10 @@ td {
   background-color: val.brandTable(tbody_bgc);
   color: val.brandTable(tbody-color);
   font-weight: 400;
-  font-size: rem(val.fontSizes(tbody));
-  line-height: rem(val.lineHeight(table));
-  height: rem(val.brandSizes(tableCell_height));
-  padding: rem(val.brandSizes(table_paddingY)) rem(val.brandSizes(table_paddingX));
+  font-size: fonts.rem(val.fontSizes(tbody));
+  line-height: fonts.rem(val.lineHeight(table));
+  height: fonts.rem(val.brandSizes(tableCell_height));
+  padding: fonts.rem(val.brandSizes(table_paddingY)) fonts.rem(val.brandSizes(table_paddingX));
   vertical-align: middle;
   &:first-child {
     padding-left: #{val.brandSizes(table_paddingXFirst)}px;
@@ -114,12 +114,12 @@ td {
   }
   .desc{
     &:before{
-      background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6L6 4L4 6" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.04 4.5V20.5" stroke="#333" fill="none" /><path d="M11 18H21" stroke="#0094ff" fill="none" /><path d="M11 12H17" stroke="#0094ff" fill="none" /><path d="M11 6H15" stroke="#0094ff" fill="none" /></svg>');
+      background-image: svgurl.svg-url('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6L6 4L4 6" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.04 4.5V20.5" stroke="#333" fill="none" /><path d="M11 18H21" stroke="#0094ff" fill="none" /><path d="M11 12H17" stroke="#0094ff" fill="none" /><path d="M11 6H15" stroke="#0094ff" fill="none" /></svg>');
     }
   }
   .asc{
     &:before{
-      background-image: svg-url('<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M5.03333 16.6668V3.33346" stroke="#333" fill="none" /><path d="M9.16669 5.00012H12.5" stroke="#0094ff" fill="none" /><path d="M9.16669 10.0001H14.1667" stroke="#0094ff" fill="none" /><path d="M9.16669 15.0001H17.5" stroke="#0094ff" fill="none" /></svg>');
+      background-image: svgurl.svg-url('<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M5.03333 16.6668V3.33346" stroke="#333" fill="none" /><path d="M9.16669 5.00012H12.5" stroke="#0094ff" fill="none" /><path d="M9.16669 10.0001H14.1667" stroke="#0094ff" fill="none" /><path d="M9.16669 15.0001H17.5" stroke="#0094ff" fill="none" /></svg>');
     }
   }
 }
@@ -128,15 +128,15 @@ thead {
   th {
     background-color: val.brandTable(thead_bgc);
     color: val.brandTable(thead_color);
-    font-size: rem(val.fontSizes(thead));
+    font-size: fonts.rem(val.fontSizes(thead));
     font-weight: 700;
-    // height: rem(val.brandSizes(tableCell_height));
+    // height: fonts.rem(val.brandSizes(tableCell_height));
     // position: sticky;
     // vertical-align: middle;
     .table__simple &{
       background-color: val.brandColors(_transparent);
       color: val.brandTable(tbody-color);
-      font-size: rem(val.fontSizes(tbody));
+      font-size: fonts.rem(val.fontSizes(tbody));
       font-weight: 400;
       height: auto;
     }
@@ -192,14 +192,14 @@ tfoot {
     background-color: val.brandTable(tfoot_bgc);
     bottom: 0;
     color: val.brandTable(tfoot_color);
-    font-size: rem(val.fontSizes(tfoot));
+    font-size: fonts.rem(val.fontSizes(tfoot));
     font-weight: 700;
-    // height: rem(val.brandSizes(tableCell_height));
+    // height: fonts.rem(val.brandSizes(tableCell_height));
     // vertical-align: middle;
     .table__simple &{
       background-color: val.brandColors(_transparent);
       color: val.brandTable(tbody-color);
-      font-size: rem(val.fontSizes(tbody));
+      font-size: fonts.rem(val.fontSizes(tbody));
       font-weight: 400;
     }
     &:first-child {
@@ -360,7 +360,7 @@ tbody tr {
       }
       &:nth-child(2) {
         th {
-          top: rem(val.brandSizes(tableCell_height));
+          top: fonts.rem(val.brandSizes(tableCell_height));
           &:first-child {
             z-index: val.zIndex(tableStickyTheadThFirstChild);
           }
@@ -368,17 +368,17 @@ tbody tr {
       }
       &:nth-child(3) {
         th {
-          top: rem(calc(val.brandSizes(tableCell_height) * 2));
+          top: fonts.rem(calc(val.brandSizes(tableCell_height) * 2));
         }
       }
       &:nth-child(4) {
         th {
-          top: rem(calc(val.brandSizes(tableCell_height) * 3));
+          top: fonts.rem(calc(val.brandSizes(tableCell_height) * 3));
         }
       }
       &:nth-child(5) {
         th {
-          top: rem(calc(val.brandSizes(tableCell_height) * 3));
+          top: fonts.rem(calc(val.brandSizes(tableCell_height) * 3));
         }
       }
     }
@@ -428,7 +428,7 @@ tbody tr {
 }
 
 .summary{
-  font-size: rem(11);
+  font-size: fonts.rem(11);
   text-align: right;
   text-transform: uppercase;
   &:empty{

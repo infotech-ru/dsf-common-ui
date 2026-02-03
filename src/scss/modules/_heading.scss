@@ -4,15 +4,15 @@
 /* path: dsf-common-ui/src/scss/modules/_heading.scss                         */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-colors' as *;
 
 .page-title {
     color: val.brandPalette(pageHeader_color);
     display: flex;
     justify-content: space-between;
-    font-size: rem(18);
+    font-size: fonts.rem(18);
     font-weight: 500;
     // font-size: 18px
     // padding-bottom: 10px;

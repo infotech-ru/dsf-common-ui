@@ -5,15 +5,16 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:math';
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/mixins_bootstrap-v3/clearfix' as *;
-@use './../utilities/mixins_bootstrap-v3/text-overflow' as *;
-@use './../utilities/variables/var-paths' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-fonts' as *;
+// @use './../utilities/variables/var-lineHeights' as lih;
+// @use './../utilities/variables/var-sizes' as *;
+@use '../utilities/variables/_var-bootstrap-v3.scss' as varbootstrapv3;
+@use './../utilities/mixins_bootstrap-v3/clearfix' as clearfix;
+@use './../utilities/mixins_bootstrap-v3/text-overflow' as textoverflow;
+@use './../utilities/variables/var-paths' as paths;
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -34,7 +35,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   // margin-top: $line-height-computed;
-  margin-bottom: rem(val.brandSizes(base_marginSize));
+  margin-bottom: fonts.rem(val.brandSizes(base_marginSize));
   small,
   .small {
     font-size: 65%;
@@ -53,41 +54,41 @@ h6, .h6 {
 }
 
 h1, .h1 { 
-  font-size: rem(val.fontSizes(headingH1));
+  font-size: fonts.rem(val.fontSizes(headingH1));
 }
 h2, .h2 {
-  font-size: rem(val.fontSizes(headingH2));
+  font-size: fonts.rem(val.fontSizes(headingH2));
   font-weight: val.fontWeight(headingH2);
-  line-height: rem(val.lineHeight(headingH2));
+  line-height: fonts.rem(val.lineHeight(headingH2));
 }
 h3, .h3 {
-  font-size: rem(val.fontSizes(headingH3));
+  font-size: fonts.rem(val.fontSizes(headingH3));
   font-weight: val.fontWeight(headingH3);
-  line-height: rem(val.lineHeight(headingH3));
+  line-height: fonts.rem(val.lineHeight(headingH3));
 }
 h4, .h4 {
-  font-size: rem(val.fontSizes(headingH4));
+  font-size: fonts.rem(val.fontSizes(headingH4));
   font-weight: val.fontWeight(headingH4);
-  line-height: rem(val.lineHeight(headingH4));
+  line-height: fonts.rem(val.lineHeight(headingH4));
   text-transform: uppercase;
 }
-h5, .h5 { font-size: rem(val.fontSizes(headingH5)); }
-h6, .h6 { font-size: rem(val.fontSizes(headingH6)); }
+h5, .h5 { font-size: fonts.rem(val.fontSizes(headingH5)); }
+h6, .h6 { font-size: fonts.rem(val.fontSizes(headingH6)); }
 
 .dl-horizontal {
   dd {
-    @include clearfix; // Clear the floated `dt` if an empty `dd` is present
+    @include clearfix.clearfix; // Clear the floated `dt` if an empty `dd` is present
   }
-  @media (min-width: gridBreakpoints(sm)) {
+  @media (min-width: varbootstrapv3.gridBreakpoints(sm)) {
     dt {
       float: left;
-      width: rem(val.brandSizes(dlHorizontalOffset) - 20);
+      width: fonts.rem(val.brandSizes(dlHorizontalOffset) - 20);
       clear: left;
       text-align: right;
-      @include text-overflow;
+      @include textoverflow.text-overflow;
     }
     dd {
-      margin-left: rem(val.brandSizes(dlHorizontalOffset));
+      margin-left: fonts.rem(val.brandSizes(dlHorizontalOffset));
     }
   }
 }
@@ -105,7 +106,7 @@ h6, .h6 { font-size: rem(val.fontSizes(headingH6)); }
     padding-right: 10px;
     &_title{
         color: var(--color_blue);
-        font-size: rem(12);
+        font-size: fonts.rem(12);
         font-weight: 700;
         line-height: 14px;
         // line-height: 36px;
@@ -113,7 +114,7 @@ h6, .h6 { font-size: rem(val.fontSizes(headingH6)); }
     }
     &_optional{
         color: var(--color_vibrant-blue);
-        font-size: rem(14);
+        font-size: fonts.rem(14);
         font-weight: 700;
     }
 }
@@ -152,7 +153,7 @@ h6, .h6 { font-size: rem(val.fontSizes(headingH6)); }
   align-items: center;
   display: inline-flex;
   &__form-control{
-    height: rem(calc(val.lineHeight(input) + 2));
+    height: fonts.rem(calc(val.lineHeight(input) + 2));
   }
   &_formControl{
     border: none;
@@ -181,7 +182,7 @@ h6, .h6 { font-size: rem(val.fontSizes(headingH6)); }
     content: attr(data-colorField); 
     display: block;
     padding-left: 5px;
-    font-size: rem(val.fontSizes(formElem));
+    font-size: fonts.rem(val.fontSizes(formElem));
   }
 }
 
@@ -208,20 +209,20 @@ h6, .h6 { font-size: rem(val.fontSizes(headingH6)); }
               position: relative;
               width: 115px;
               &__personal{ 
-                  background-image: url($path-images + 'placeholder_photo.svg');
+                  background-image: url(paths.$path-images + 'placeholder_photo.svg');
               }
               &__contact{ 
-                  background-image: url($path-images + 'placeholder_contact.svg');
+                  background-image: url(paths.$path-images + 'placeholder_contact.svg');
                   background-size: 104px;
                   max-height: 104px;
                   height: 104px;
                   width: 104px;
               }
               &__auto{
-                  background-image: url($path-images + 'placeholder_auto.svg');
+                  background-image: url(paths.$path-images + 'placeholder_auto.svg');
               }
               &__corporate{ 
-                  background-image: url($path-images + 'placeholder_corporate.svg');
+                  background-image: url(paths.$path-images + 'placeholder_corporate.svg');
               }
               &__none{
                 background-image: none;

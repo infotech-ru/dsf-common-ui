@@ -6,18 +6,18 @@
 //* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ *//
 
 // ------------------------------------------------------ Variables bootstrap //
-@use "./variables/_var-bootstrap-v3" as *;
-@use "./variables/_var-bootstrap-v4" as *;
-@use "./variables/_var-bootstrapBool" as *;
-@use "./variables/_var-bootstrapColors" as *;
-@use "./variables/_var-bootstrapSizes" as *;
+@forward "./variables/_var-bootstrap-v3";
+@forward "./variables/_var-bootstrap-v4";
+@forward "./variables/_var-bootstrapBool";
+@forward "./variables/_var-bootstrapColors";
+@forward "./variables/_var-bootstrapSizes";
 // ---------------------------------------------------------------- Variables //
-@use "./variables/_var-colors" as *;
-@use "./variables/_var-fonts" as *;
-@use "./variables/_var-paths" as *;
-@use "./variables/_var-sizes" as *;
-@use "./variables/_var-lineHeights" as *;
-@use "./variables/_var-zindex" as *;
-@use "./variables/_var-cursors" as *;
+@forward "./variables/_var-colors";
+@forward "./variables/_var-fonts";
+@forward "./variables/_var-paths";
+@forward "./variables/_var-sizes";
+@forward "./variables/_var-lineHeights";
+@forward "./variables/_var-zindex";
+@forward "./variables/_var-cursors";
 
-@use "./variables/_var-placeholder" as *;
+@forward "./variables/_var-placeholder";

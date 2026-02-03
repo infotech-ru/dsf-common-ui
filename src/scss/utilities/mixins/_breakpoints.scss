@@ -1,21 +1,21 @@
 @use 'sass:map';
 @use 'sass:math';
-@use '../mixins_bootstrap-v3/clearfix' as *;
-@use '../mixins_bootstrap-v4/grid' as *;
-@use '../mixins_bootstrap-v4/breakpoints' as *;
-@use '../variables/var-bootstrap-v3' as *;
-@use '../variables/var-bootstrapBool' as *;
+@use '../mixins_bootstrap-v3/clearfix' as clearfix;
+@use '../mixins_bootstrap-v4/grid' as grid;
+@use '../mixins_bootstrap-v4/breakpoints' as breakpoints;
+@use '../variables/var-bootstrap-v3' as varbootstrapv3;
+@use '../variables/var-bootstrapBool' as bootstrapbool;
 
 // Framework grid generation
 
-@mixin makeGutters($gutters: $grid-gutter-widths) {
-  @if $grid-gutter-width-base-equal {
-    $gutter: $grid-gutter-width-base;
+@mixin makeGutters($gutters: varbootstrapv3.$grid-gutter-widths) {
+  @if varbootstrapv3.$grid-gutter-width-base-equal {
+    $gutter: varbootstrapv3.$grid-gutter-width-base;
     padding-right: ($gutter * .5);
     padding-left:  ($gutter * .5);
   } @else {
     @each $breakpoint in map.keys($gutters) {
-      @include media-breakpoint-up($breakpoint) {
+      @include breakpoints.media-breakpoint-up($breakpoint) {
         $gutter: map.get($gutters, $breakpoint);
         padding-right: ($gutter * .5);
         padding-left:  ($gutter * .5);
@@ -24,8 +24,8 @@
   }
 }
 
-@mixin makeCol($size, $columns: $grid-columns) {
-  @if $enable-grid-flex {
+@mixin makeCol($size, $columns: varbootstrapv3.$grid-columns) {
+  @if varbootstrapv3.$enable-grid-flex {
     flex: 0 0 math.percentage(calc($size / $columns));
     max-width: math.percentage(calc($size / $columns));
   } @else {
@@ -34,8 +34,8 @@
   }
 }
 
-@mixin makeCol5($size, $columns: $grid-columns) {
-  @if $enable-grid-flex {
+@mixin makeCol5($size, $columns: varbootstrapv3.$grid-columns) {
+  @if varbootstrapv3.$enable-grid-flex {
     flex: 0 0 math.percentage(calc($size / $columns + 1 / $columns * .5));
     max-width: math.percentage(calc($size / $columns + 1 / $columns * .5));
   } @else {
@@ -44,22 +44,22 @@
   }
 }
 
-@mixin make-col-offset($size, $columns: $grid-columns) {
-  @if $enable-col-offset-classes {
+@mixin make-col-offset($size, $columns: varbootstrapv3.$grid-columns) {
+  @if bootstrapbool.$enable-col-offset-classes {
     margin-left: math.percentage(calc($size / $columns));
   }
 }
-@mixin make-col-offset5($size, $columns: $grid-columns) {
-  @if $enable-col-offset-classes {
+@mixin make-col-offset5($size, $columns: varbootstrapv3.$grid-columns) {
+  @if bootstrapbool.$enable-col-offset-classes {
     margin-left: math.percentage(calc($size / $columns + 1 / $columns * .5));
   }
 }
 
-@mixin makeGridColumns($columns: $grid-columns, $gutters: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
+@mixin makeGridColumns($columns: varbootstrapv3.$grid-columns, $gutters: varbootstrapv3.$grid-gutter-widths, $breakpoints: varbootstrapv3.$grid-breakpoints) {
   %gridColumn {
     position: relative;
     min-height: 1px;
-    @if $enable-grid-flex {
+    @if varbootstrapv3.$enable-grid-flex {
       width: 100%;
     }
     @include makeGutters($gutters);
@@ -117,8 +117,8 @@
       }
     }
 
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
-      @if $enable-grid-flex {
+    @include breakpoints.media-breakpoint-up($breakpoint, $breakpoints) {
+      @if varbootstrapv3.$enable-grid-flex {
         @if $breakpoint == '' {
           .col {
             flex-basis: 0;
@@ -219,38 +219,38 @@
   }
 }
 
-@mixin makeContainer($gutter: $grid-gutter-width-base) {
+@mixin makeContainer($gutter: varbootstrapv3.$grid-gutter-width-base) {
   margin-left: auto;
   margin-right: auto;
-  @if $grid-gutter-width-base-equal {
-    padding-right: ((map.get($grid-gutter-widths, 'xs')) * .5);
-    padding-left: ((map.get($grid-gutter-widths, 'xs')) * .5);
+  @if varbootstrapv3.$grid-gutter-width-base-equal {
+    padding-right: ((map.get(varbootstrapv3.$grid-gutter-widths, 'xs')) * .5);
+    padding-left: ((map.get(varbootstrapv3.$grid-gutter-widths, 'xs')) * .5);
   }
   @else{
-    padding-right: ($grid-gutter-width * .5);
-    padding-left: ($grid-gutter-width * .5);
+    padding-right: (varbootstrapv3.$grid-gutter-width * .5);
+    padding-left: (varbootstrapv3.$grid-gutter-width * .5);
   }
 
-  @if not $enable-grid-flex {
-    @include clearfix();
+  @if not varbootstrapv3.$enable-grid-flex {
+    @include clearfix.clearfix();
   }
 }
 
-@function breakpointInfix($name, $breakpoints: $grid-breakpoints) {
-  @if breakpoint-min($name, $breakpoints) == null {
+@function breakpointInfix($name, $breakpoints: varbootstrapv3.$grid-breakpoints) {
+  @if breakpoints.breakpoint-min($name, $breakpoints) == null {
     @return "";
   }
   
   @return "#{$name}";
 }
 
-@mixin makeContainerGrid($max-widths: $container-max-widths, $gutter: $grid-gutter-widths, $breakpoints: $grid-breakpoints){
+@mixin makeContainerGrid($max-widths: varbootstrapv3.$container-max-widths, $gutter: varbootstrapv3.$grid-gutter-widths, $breakpoints: varbootstrapv3.$grid-breakpoints){
   @each $breakpoint in map.keys($breakpoints) {
     $infix: breakpointInfix($breakpoint, $breakpoints);
     $gutters: map.get($gutter, $infix);
     $widths: map.get($max-widths, $infix);
-    @if not $grid-gutter-width-base-equal{
-      @include media-breakpoint-up($breakpoint, $breakpoints) {
+    @if not varbootstrapv3.$grid-gutter-width-base-equal{
+      @include breakpoints.media-breakpoint-up($breakpoint, $breakpoints) {
         @if ($gutters == null){
           padding-right: $gutters;
           padding-left: $gutters;
@@ -263,23 +263,23 @@
       }
     }
     @else{
-      @include media-breakpoint-up($breakpoint, $breakpoints) {
+      @include breakpoints.media-breakpoint-up($breakpoint, $breakpoints) {
         max-width: $widths;
       }
     }
   }
 }
 
-@mixin makeRow($gutters: $gridGutterWidth) {
-  @if $enable-grid-flex {
+@mixin makeRow($gutters: varbootstrapv3.$gridGutterWidth) {
+  @if varbootstrapv3.$enable-grid-flex {
     display: flex;
     flex-wrap: wrap;
   } @else {
-    @include clearfix();
+    @include clearfix.clearfix();
   }
-  @if not $grid-gutter-width-base-equal { // @todo доработать при необходимости разных значений
+  @if not varbootstrapv3.$grid-gutter-width-base-equal { // @todo доработать при необходимости разных значений
     @each $breakpoint in map.keys($gutters) {
-      @include media-breakpoint-up($breakpoint) {
+      @include breakpoints.media-breakpoint-up($breakpoint) {
         $gutter: map.get($gutters, $breakpoint);
         margin-right: ($gutter * -.5);
         margin-left:  ($gutter * -.5);

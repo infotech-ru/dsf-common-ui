@@ -4,14 +4,14 @@
 /* path: dsf-common-ui/src/scss/modules/_select.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-bootstrap-v3' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-zindex' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-placeholder' as *;
+@use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-zindex' as *;
+// @use './../utilities/variables/var-fonts' as *;
+@use './../utilities/variables/var-placeholder' as placeholder;
 
 
 // $color-red-error: rgb(185, 74, 72) !default;
@@ -70,7 +70,7 @@ select.selectpicker {
       &:hover,
       &:focus,
       &:active {
-        color: $input-color-placeholder;
+        color: varbootstrapv3.$input-color-placeholder;
       }
 
       &.btn-primary,
@@ -247,10 +247,10 @@ select.selectpicker {
       text-align: left;
       overflow: hidden;
       flex: 0 1 auto; // for IE10
-      padding-right: rem(calc(val.brandSizes(formControl_paddingX) + 5));
+      padding-right: fonts.rem(calc(val.brandSizes(formControl_paddingX) + 5));
       @at-root .bs3#{&} {
         // padding-right: inherit;
-        padding-right: rem(calc(val.brandSizes(formControl_paddingX) + 5));
+        padding-right: fonts.rem(calc(val.brandSizes(formControl_paddingX) + 5));
       }
 
       @at-root .input-group .bs3-has-addon#{&} {
@@ -335,7 +335,7 @@ select.selectpicker {
 
       a {
         cursor: pointer;
-        font-size: rem(val.fontSizes(dropdown));
+        font-size: fonts.rem(val.fontSizes(dropdown));
         user-select: none;
 
         &.opt {
@@ -347,7 +347,7 @@ select.selectpicker {
           display: none;
         }
         .text{ 
-          line-height: rem(15);
+          line-height: fonts.rem(15);
           padding: 5px 0;
         }
         span.text {
@@ -559,10 +559,10 @@ select.selectpicker {
 .bs-searchbox,
 .bs-actionsbox,
 .bs-donebutton {
-  padding-top: rem(val.brandSizes(dropdownLink_paddingX));
+  padding-top: fonts.rem(val.brandSizes(dropdownLink_paddingX));
   padding-bottom: 4px;
-  padding-left: rem(val.brandSizes(dropdownLink_paddingX));
-  padding-right: rem(val.brandSizes(dropdownLink_paddingX));
+  padding-left: fonts.rem(val.brandSizes(dropdownLink_paddingX));
+  padding-right: fonts.rem(val.brandSizes(dropdownLink_paddingX));
 }
 
 .bs-actionsbox {
@@ -589,8 +589,8 @@ select.selectpicker {
 }
 
 .bs-searchbox {
-  padding-top: rem(val.brandSizes(dropdownLink_paddingX));
-  padding-bottom: rem(val.brandSizes(dropdownLink_paddingX));
+  padding-top: fonts.rem(val.brandSizes(dropdownLink_paddingX));
+  padding-bottom: fonts.rem(val.brandSizes(dropdownLink_paddingX));
   & + .bs-actionsbox {
     padding-top: 0px;
   }
@@ -600,7 +600,7 @@ select.selectpicker {
     // border-radius: 0;
     float: none;
     margin-bottom: 0;
-    height: rem(26); // fix для высоты поиска
+    height: fonts.rem(26); // fix для высоты поиска
     width: 100%;
   }
 }
@@ -654,7 +654,7 @@ select.selectpicker {
   &Item{ 
     &Chlid{
       cursor: pointer;
-      // font-size: rem(val.fontSizes(dropdown));
+      // font-size: fonts.rem(val.fontSizes(dropdown));
       list-style-type: none;
       position: relative;
       @extend %dropdown__link;
@@ -691,7 +691,7 @@ select.selectpicker {
         position: absolute;
         order: 3;
         right: calc(#{val.brandSizes(dropdownLink_paddingX)}px + 5px);
-        top: rem(val.brandSizes(dropdownLink_minH) * .5);
+        top: fonts.rem(val.brandSizes(dropdownLink_minH) * .5);
         width: #{val.brandSizes(comboTreeCheckbox_size)}px;
         &.collapsed{
           transform: rotate(180deg);
@@ -765,7 +765,7 @@ select.selectpicker {
   &Filter{
     display: block;
     float: none;
-    margin: rem(val.brandSizes(dropdownLink_paddingX));
+    margin: fonts.rem(val.brandSizes(dropdownLink_paddingX));
     width: calc(100% - #{val.brandSizes(dropdownLink_paddingX) * 2}px);
     .comboTreeExpanded & {
       display: none;

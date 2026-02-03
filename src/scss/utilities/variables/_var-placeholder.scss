@@ -1,12 +1,13 @@
-@use './../functions/func_svg-url' as *;
-@use './../functions/func_fonts' as *;
+@use './../functions/func_svg-url' as svgurl;
+@use './../functions/func_fonts' as fonts;
 @use './../functions/func_val' as val;
-@use './../variables/var-bootstrap-v3' as *;
-@use './../variables/var-fonts' as *;
-@use './../variables/var-sizes' as sizes;
-@use './../variables/var-lineHeights' as lineheights;
-@use './../variables/var-colors' as color;
-@use './../mixins_bootstrap-v3/reset-filter' as *;
+@use './../variables/var-bootstrap-v3' as varbootstrapv3;
+// @use './../variables/var-fonts' as varfonts;
+// @use './../variables/var-sizes' as sizes;
+// @use './../variables/var-lineHeights' as lineheights;
+// @use './../variables/var-colors' as color;
+// @use './../variables/var-cursors' as cursor;
+@use './../mixins_bootstrap-v3/reset-filter' as resetfilter;
 
 %scrollVar {
   scrollbar-width: thin;
@@ -34,7 +35,7 @@
   border: none;
   border-radius: 0;
   display: none; // none by default, but block on "open" of the menu
-  font-size: rem(val.fontSizes(dropdown));
+  font-size: fonts.rem(val.fontSizes(dropdown));
   list-style: none;
   left: 0;
   margin: 0 0 0; // override default ul
@@ -50,9 +51,9 @@
   clear: both;
   display: inline-flex;
   font-weight: 400;
-  padding: 0px rem(val.brandSizes(dropdownLink_paddingX));
-  line-height: rem(val.lineHeight(dropdownLink));
-  min-height: rem(val.brandSizes(dropdownLink_minH));
+  padding: 0px fonts.rem(val.brandSizes(dropdownLink_paddingX));
+  line-height: fonts.rem(val.lineHeight(dropdownLink));
+  min-height: fonts.rem(val.brandSizes(dropdownLink_minH));
   width: 100%;
   white-space: nowrap; // prevent links from randomly breaking onto new lines
 }
@@ -88,10 +89,10 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    cursor: $cursor-disabled;
+    cursor: val.brandCursor(dropdownLinkDisable);
     background-color: transparent;
-    background-image: none; // Remove CSS gradient
-    @include reset-filter;
+    background-image: none; // fonts.Remove CSS gradient
+    @include resetfilter.reset-filter;
   }
 }
 
@@ -112,13 +113,13 @@
     width: 0;
   }
   &:after {
-    border-width: rem(calc(val.brandSizes(caret_size) - 1));
+    border-width: fonts.rem(calc(val.brandSizes(caret_size) - 1));
     border-bottom-width: 0;
     right: 0;
   }
 
   &:before {
-    border-width: rem(val.brandSizes(caret_size));
+    border-width: fonts.rem(val.brandSizes(caret_size));
     border-bottom-width: 0;
     border-top-color: val.brandPalette(bootstrapSelect_caret_color);
     right: -1px;
@@ -149,7 +150,7 @@
   background-repeat: no-repeat;
   background-size: #{val.brandSizes(caretSelect_size)}px;
   background-position: center;
-  background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#{val.brandPalette(bootstrapSelect_caret_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#{val.brandPalette(bootstrapSelect_caret_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-image: svgurl.svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#{val.brandPalette(bootstrapSelect_caret_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#{val.brandPalette(bootstrapSelect_caret_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   border: none;
   cursor: pointer;
   display: block;
@@ -161,14 +162,14 @@
   top: auto;
   width: #{val.brandSizes(caretSelect_size)}px;
   .btn-link &{
-      background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33228L8.00002 10.6656" stroke="#{val.brandPalette(link_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33228L8.00004 10.6656" stroke="#{val.brandPalette(link_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-image: svgurl.svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33228L8.00002 10.6656" stroke="#{val.brandPalette(link_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33228L8.00004 10.6656" stroke="#{val.brandPalette(link_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   }
   .has-error &{
-      background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33228L8.00002 10.6656" stroke="#{val.brandPalette(hasDanger_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33228L8.00004 10.6656" stroke="#{val.brandPalette(hasDanger_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-image: svgurl.svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33228L8.00002 10.6656" stroke="#{val.brandPalette(hasDanger_color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33228L8.00004 10.6656" stroke="#{val.brandPalette(hasDanger_color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   }
   &[disabled],
   &.disabled{
-      background-image: svgToUrl('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#{val.brandPalette(formControlDisabled-color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#{val.brandPalette(formControlDisabled-color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-image: svgurl.svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.66669 5.33331L8.00002 10.6666" stroke="#{val.brandPalette(formControlDisabled-color)}" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.3334 5.33331L8.00004 10.6666" stroke="#{val.brandPalette(formControlDisabled-color)}" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   }
   &:after,
   &:before{

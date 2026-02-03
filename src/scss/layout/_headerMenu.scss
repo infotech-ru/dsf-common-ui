@@ -4,10 +4,10 @@
 /* path: dsf-common-ui/src/scss/layout/_menu.scss                             */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-placeholder' as *;
-@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-placeholder' as placeholder;
+// @use './../utilities/variables/var-colors' as *;
 
 .headerMenu{
   align-items: center;
@@ -34,7 +34,7 @@
     align-items: center;
     color: val.brandPalette(menuLink_color);
     display: inline-flex;
-    font-size: rem(13);
+    font-size: fonts.rem(13);
     font-weight: 700;
     height: 100%;
     padding: 0 10px;
@@ -144,7 +144,7 @@
   &__header{
     background-color: val.brandPalette(menuDropdownHeader_color);
     color: val.brandPalette(menuDropdown_bgc);
-    font-size: rem(12);
+    font-size: fonts.rem(12);
     padding: 6px 0px 6px 10px;
     position: relative;
   }
@@ -222,8 +222,8 @@
 //   &__link {
 //     color: val.brandPalette(menuDropdown_color);
 //     display: block;
-//     font-size: rem(13);
-//     line-height: rem(13);
+//     font-size: fonts.rem(13);
+//     line-height: fonts.rem(13);
 //     padding: 5px 20px;
 //     text-decoration: none;
 //     .headerSubMenu__item.active &,

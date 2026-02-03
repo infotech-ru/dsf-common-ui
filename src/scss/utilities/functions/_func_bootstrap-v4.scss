@@ -5,21 +5,23 @@
 // ----------------------------------------------------------------- FUNCTION //
 // See https://codepen.io/kevinweber/pen/dXWoRw
 // Requires the use of quotes around data URIs.
+// DEPENDENCIES: @str-replace from helpers-functions.scss
+
 @use 'sass:map';
 @use 'sass:math';
 @use 'sass:string';
 @use 'sass:meta';
 @use 'sass:color';
-@use './func_helpers-functions' as helper;
+@use './func_helpers-functions' as helpers;
 
 @function escape-svg($string) {
   @if string.index($string, "data:image/svg+xml") {
     @each $char, $encoded in $escaped-characters {
       // Do not escape the url brackets
       @if string.index($string, "url(") == 1 {
-        $string: url("#{str-replace(string.slice($string, 6, -3), $char, $encoded)}");
+        $string: url("#{helpers.str-replace(string.slice($string, 6, -3), $char, $encoded)}");
       } @else {
-        $string: str-replace($string, $char, $encoded);
+        $string: helpers.str-replace($string, $char, $encoded);
       }
     }
   }

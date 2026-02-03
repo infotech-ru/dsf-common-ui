@@ -6,12 +6,12 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
 @use 'sass:math';
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-fonts' as *;
+// @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-dataImages' as dataimages;
 
 
@@ -22,10 +22,10 @@ input[type=checkbox] {
     border: 1px solid val.brandPalette(checkboxItem_border);
     cursor: pointer;
     position: relative;
-    height: rem(val.brandSizes(checkboxItem_size));
+    height: fonts.rem(val.brandSizes(checkboxItem_size));
     top: -1px;
     flex-shrink: 0; // в comboTreeItemChlid сжимает при длинном названии
-    width: rem(val.brandSizes(checkboxItem_size));
+    width: fonts.rem(val.brandSizes(checkboxItem_size));
     &:checked{
         background-color: val.brandPalette(checkboxItemActive_bgc);
         border-color: val.brandPalette(checkboxItemActive_border);
@@ -39,8 +39,8 @@ input[type=checkbox] {
 .checkbox-item {
     align-items: center;
     display: inline-flex;
-    line-height: rem(val.lineHeight(checkbox));
-    min-height: rem(val.lineHeight(input) + val.brandSizes(formControl_borderSize) * 2);
+    line-height: fonts.rem(val.lineHeight(checkbox));
+    min-height: fonts.rem(val.lineHeight(input) + val.brandSizes(formControl_borderSize) * 2);
     position: relative;
     input[type=checkbox] {
         position: absolute;
@@ -73,12 +73,12 @@ input[type=checkbox] {
         color: val.brandPalette(checkboxItem_color);
         // display: inline-block;
         display: inline-flex;
-        font-size: rem(val.fontSizes(checkbox));
+        font-size: fonts.rem(val.fontSizes(checkbox));
         margin: 0;
-        padding-left: rem(calc(val.brandSizes(checkboxItem_size) / 0.75));
+        padding-left: fonts.rem(calc(val.brandSizes(checkboxItem_size) / 0.75));
         position: relative;
         text-align: left;
-        line-height: rem(val.lineHeight(input) + val.brandSizes(formControl_borderSize) * 2);
+        line-height: fonts.rem(val.lineHeight(input) + val.brandSizes(formControl_borderSize) * 2);
         vertical-align: top;
         &:hover:before {
             border-color: val.brandPalette(checkboxItem_border);
@@ -92,17 +92,17 @@ input[type=checkbox] {
             border-radius: 0;
             content: " ";
             display: inline-block;
-            height: rem(val.brandSizes(checkboxItem_size));
+            height: fonts.rem(val.brandSizes(checkboxItem_size));
             left: 0;
-            margin-top: rem(-(val.brandSizes(checkboxItem_size) * 0.5));
+            margin-top: fonts.rem(-(val.brandSizes(checkboxItem_size) * 0.5));
             position: absolute;
             top: 50%;
-            width: rem(val.brandSizes(checkboxItem_size));
+            width: fonts.rem(val.brandSizes(checkboxItem_size));
         }
         span{
             display: inline-block;
             font-weight: 400;
-            line-height: rem(val.brandSizes(checkboxItem_size));
+            line-height: fonts.rem(val.brandSizes(checkboxItem_size));
             vertical-align: middle;
         }
         fieldset[disabled]{
@@ -117,7 +117,7 @@ input[type=checkbox] {
         background-color: transparent;
         border: none;
         // height: 20px;
-        height: rem(val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2));
+        height: fonts.rem(val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2));
         padding: 0;
         width: auto;
         label.checkbox{
@@ -129,7 +129,7 @@ input[type=checkbox] {
             display: inline-flex;
             font-size: 0; // safari fix
             // height: 20px;
-            height: rem(val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2));
+            height: fonts.rem(val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2));
             outline: none;
             padding: 0;
             position: relative;
@@ -149,14 +149,14 @@ input[type=checkbox] {
                 box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
                 content: '';
                 display: block;
-                height: rem(val.brandSizes(toggleCheckToggle_height));
-                left: rem(math.div((math.div(val.brandSizes(toggleCheck_width), 2) - val.brandSizes(toggleCheckToggle_width)), 2));
+                height: fonts.rem(val.brandSizes(toggleCheckToggle_height));
+                left: fonts.rem(math.div((math.div(val.brandSizes(toggleCheck_width), 2) - val.brandSizes(toggleCheckToggle_width)), 2));
                 margin: 0;
                 padding: 0;
                 position: absolute;
                 transition: left 0.3s ease;
-                top: rem(math.div((val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2) - val.brandSizes(toggleCheckToggle_height)), 2));
-                width: rem(val.brandSizes(toggleCheckToggle_width));
+                top: fonts.rem(math.div((val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2) - val.brandSizes(toggleCheckToggle_height)), 2));
+                width: fonts.rem(val.brandSizes(toggleCheckToggle_width));
             }
             &:before{
                 background-color: val.brandColors(_grey2);
@@ -171,13 +171,13 @@ input[type=checkbox] {
                 left: 0;
                 right: auto;
                 // top: 0;
-                top: rem(math.div((val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2) - val.brandSizes(toggleCheck_height)), 2));
+                top: fonts.rem(math.div((val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2) - val.brandSizes(toggleCheck_height)), 2));
                 position: absolute;
-                height: rem(val.brandSizes(toggleCheck_height));
-                width: rem(val.brandSizes(toggleCheck_width));
+                height: fonts.rem(val.brandSizes(toggleCheck_height));
+                width: fonts.rem(val.brandSizes(toggleCheck_width));
             }
             span{
-                font-size: rem(val.fontSizes(formElem));
+                font-size: fonts.rem(val.fontSizes(formElem));
                 padding-left: 45px;
                 text-indent: 0;
             }
@@ -201,7 +201,7 @@ input[type=checkbox] {
             &:after{
                 background-color: val.brandColors(_light-grey);
                 background-image: none;
-                left: rem(math.div(val.brandSizes(toggleCheck_width), 2));
+                left: fonts.rem(math.div(val.brandSizes(toggleCheck_width), 2));
             }
             &:before{
                 background-color: val.brandColors(_light-blue);

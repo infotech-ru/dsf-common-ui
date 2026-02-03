@@ -4,19 +4,19 @@
 /* path: dsf-common-ui/src/scss/modules/_toast.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/mixins/close' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-fonts' as *;
+@use './../utilities/mixins/close' as close;
 
 .toast {
   // Prevents from shrinking in IE11, when in a flex container
   // See https://github.com/twbs/bootstrap/issues/28341
-  flex-basis: rem(val.brandSizes(toast_maxWidth));
-  max-width: rem(val.brandSizes(toast_maxWidth));
-  font-size: rem(val.fontSizes(toast));
+  flex-basis: fonts.rem(val.brandSizes(toast_maxWidth));
+  max-width: fonts.rem(val.brandSizes(toast_maxWidth));
+  font-size: fonts.rem(val.fontSizes(toast));
   color: val.brandPalette(toastBody_color);
   background-color: val.brandPalette(toastBody_bgc);
   background-clip: padding-box;
@@ -27,7 +27,7 @@
   // @include border-radius($toast-border-radius);
 
   &:not(:last-child) {
-    margin-bottom: rem(val.brandSizes(toast_paddingX));
+    margin-bottom: fonts.rem(val.brandSizes(toast_paddingX));
   }
 
   &.showing {
@@ -51,19 +51,19 @@
   background-clip: padding-box;
   border-bottom: 1px solid val.brandPalette(toastHeader_borderColor);
   color: val.brandPalette(toastHeader_color);
-  padding: rem(val.brandSizes(toast_paddingY)) rem(calc(val.brandSizes(toast_paddingX)) + 20) rem(val.brandSizes(toast_paddingY)) rem(val.brandSizes(toast_paddingX));
+  padding: fonts.rem(val.brandSizes(toast_paddingY)) fonts.rem(calc(val.brandSizes(toast_paddingX)) + 20) fonts.rem(val.brandSizes(toast_paddingY)) fonts.rem(val.brandSizes(toast_paddingX));
   position: relative;
   min-height: 30px;
   h4{
   }
   .close{
     --close-stroke: #ffffff;
-    @include close;
+    @include close.close;
     right: 10px;
   }
 }
 
 .toast-body {
   background-color: val.brandPalette(toastBody_bgc);
-  padding: rem(val.brandSizes(toast_paddingX)); // apply to both vertical and horizontal
+  padding: fonts.rem(val.brandSizes(toast_paddingX)); // apply to both vertical and horizontal
 }

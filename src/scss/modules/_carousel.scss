@@ -7,16 +7,16 @@
 
 @use 'sass:color';
 @use "sass:math";
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-bootstrap-v3' as *;
-@use './../utilities/variables/var-bootstrap-v4' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-zindex' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/mixins_bootstrap-v3/clearfix' as *;
-@use './../utilities/mixins/transition' as *;
+// @use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
+@use './../utilities/variables/var-bootstrap-v4' as varbootstrapv4;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-zindex' as *;
+// @use './../utilities/variables/var-fonts' as *;
+@use './../utilities/mixins_bootstrap-v3/clearfix' as clearfix;
+@use './../utilities/mixins/transition' as transition;
 
 .carousel {
   position: relative;
@@ -27,7 +27,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    @include clearfix();
+    @include clearfix.clearfix();
   }
   &-item {
     align-items: center;
@@ -38,7 +38,7 @@
     width: 100%;
     margin-right: -100%;
     backface-visibility: hidden;
-    @include transition($carousel-transition);
+    @include transition.transition(varbootstrapv4.$carousel-transition);
     .carousel__aspectRatio16-9 &{
       aspect-ratio: 16 / 9;
     }
@@ -71,7 +71,7 @@
       .carousel-fade & {
         z-index: 0;
         opacity: 0;
-        @include transition(opacity 0s $carousel-transition-duration);
+        @include transition.transition(opacity 0s varbootstrapv4.$carousel-transition-duration);
       }
     }
     .carousel-fade & {
@@ -113,12 +113,12 @@
     opacity: 1;
     z-index: 1;
     width: #{val.brandSizes(carousel-control_size)}px;
-    @include transition($carousel-control-transition);
+    @include transition.transition(varbootstrapv4.$carousel-control-transition);
 
     // Hover/focus state
     &:hover,
     &:focus {
-      color: $carousel-control-color;
+      color: varbootstrapv4.$carousel-control-color;
       text-decoration: none;
       outline: 0;
       opacity: 1;
@@ -144,13 +144,13 @@
   }
   &-caption {
     position: absolute;
-    right: (100% - $carousel-caption-width) * .5;
+    right: (100% - varbootstrapv4.$carousel-caption-width) * .5;
     bottom: 20px;
-    left: (100% - $carousel-caption-width) * .5;
+    left: (100% - varbootstrapv4.$carousel-caption-width) * .5;
     z-index: 10;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: $carousel-caption-color;
+    color: varbootstrapv4.$carousel-caption-color;
     text-align: center;
   }
   &-indicators {
@@ -202,20 +202,20 @@
       display: inline-flex;
       position: relative;
       margin-bottom: 10px;
-      @include transition($carousel-indicator-transition);
+      @include transition.transition(varbootstrapv4.$carousel-indicator-transition);
       .carousel-indicators__line &{
-        background-color: $carousel-indicator-active-bg;
+        background-color: varbootstrapv4.$carousel-indicator-active-bg;
         background-clip: padding-box;
         box-sizing: content-box;
-        border-top: $carousel-indicator-hit-area-height solid transparent;
-        border-bottom: $carousel-indicator-hit-area-height solid transparent;
+        border-top: varbootstrapv4.$carousel-indicator-hit-area-height solid transparent;
+        border-bottom: varbootstrapv4.$carousel-indicator-hit-area-height solid transparent;
         flex: 0 1 auto;
-        height: $carousel-indicator-height;
-        margin-right: $carousel-indicator-spacer;
-        margin-left: $carousel-indicator-spacer;
+        height: varbootstrapv4.$carousel-indicator-height;
+        margin-right: varbootstrapv4.$carousel-indicator-spacer;
+        margin-left: varbootstrapv4.$carousel-indicator-spacer;
         opacity: .5;
         text-indent: -999px;
-        width: $carousel-indicator-width;
+        width: varbootstrapv4.$carousel-indicator-width;
       }
       .carousel-indicators__bigPreview &{ 
         flex-basis: 0;
@@ -244,9 +244,9 @@
           cursor: pointer;
           display: inline-flex;
           flex-direction: column;
-          font-size: rem(10);
+          font-size: fonts.rem(10);
           height: #{val.brandSizes(carousel-thumbs_size)}px;
-          line-height: rem(12);
+          line-height: fonts.rem(12);
           justify-content: center;
           outline: 1px dashed var(--color_light-blue);
           overflow: hidden;
@@ -307,7 +307,7 @@
           width: 12px; // old
           height: 12px; // old
           margin: 0; // old
-          background-color: $carousel-indicator-active-bg; // old
+          background-color: varbootstrapv4.$carousel-indicator-active-bg; // old
         }
       }
       .checkbox-item{
@@ -316,9 +316,9 @@
         top: 4px;
         z-index: val.zIndex(carouselIndicatorsButton);
         label.checkbox{
-          line-height: rem(val.brandSizes(checkboxItem_size));
-          padding-left: rem(val.brandSizes(checkboxItem_size));
-          width: rem(val.brandSizes(checkboxItem_size));
+          line-height: fonts.rem(val.brandSizes(checkboxItem_size));
+          padding-left: fonts.rem(val.brandSizes(checkboxItem_size));
+          width: fonts.rem(val.brandSizes(checkboxItem_size));
         }
       }
       &:first-child{ 

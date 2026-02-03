@@ -1,4 +1,4 @@
-@use './../variables/_var-bootstrap-v3' as *;
+@use './../variables/_var-bootstrap-v3' as varbootstrapv3;
 
 // Vendor Prefixes
 //
@@ -80,7 +80,7 @@
 }
 
 // CSS3 Content Columns
-@mixin content-columns($column-count, $column-gap: $grid-gutter-width) {
+@mixin content-columns($column-count, $column-gap: varbootstrapv3.$grid-gutter-width) {
   -webkit-column-count: $column-count;
      -moz-column-count: $column-count;
           column-count: $column-count;
@@ -100,7 +100,7 @@
 }
 
 // Placeholder text
-@mixin placeholder($color: $input-color-placeholder) {
+@mixin placeholder($color: varbootstrapv3.$input-color-placeholder) {
   // Firefox
   &::-moz-placeholder {
     color: $color;

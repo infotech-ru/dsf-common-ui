@@ -2,16 +2,17 @@
 @use 'sass:map';
 @use 'sass:meta';
 @use 'sass:string';
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-paths' as *;
+// @use './../utilities/functions/func_val' as val;
+@use './../utilities/variables/var-fonts' as fonts;
+@use './../utilities/variables/var-paths' as path;
 
-@each $fontFamily, $fontStyle in $fontsList {
-  $fontStyles: map.keys(map.get($fontsList, $fontFamily));
+@each $fontFamily, $fontStyle in fonts.$fontsList {
+  $fontStyles: map.keys(map.get(fonts.$fontsList, $fontFamily));
   $fontStylesLength: list.length($fontStyles);
   @for $j from 1 through $fontStylesLength {
     $fontStyleName: list.nth($fontStyles, $j);
-    $fontWeights: map.keys(map.get($fontsList, $fontFamily, $fontStyleName));
-    $fontNames: map.values(map.get($fontsList, $fontFamily, $fontStyleName));
+    $fontWeights: map.keys(map.get(fonts.$fontsList, $fontFamily, $fontStyleName));
+    $fontNames: map.values(map.get(fonts.$fontsList, $fontFamily, $fontStyleName));
     $length: list.length($fontWeights);
     @for $i from 1 through $length {
         $weight: list.nth($fontWeights, $i);
@@ -21,9 +22,9 @@
           font-style: string.unquote($fontStyleName);
           font-weight: $weight;
           src: local('#{$name}'), local('#{$fontFamily}-#{$weight}'),
-          url('#{$path-fonts}#{$name}.woff2') format('woff2'),
-          url('#{$path-fonts}#{$name}.woff') format('woff'),
-          url('#{$path-fonts}#{$name}.ttf') format('truetype');
+          url('#{path.$path-fonts}#{$name}.woff2') format('woff2'),
+          url('#{path.$path-fonts}#{$name}.woff') format('woff'),
+          url('#{path.$path-fonts}#{$name}.ttf') format('truetype');
         }
     }
   }
@@ -31,7 +32,7 @@
 
 @font-face {
   font-family: 'Glyphicons Regular';
-  src: url('#{$path-fonts}glyphicons-regular.woff2') format('woff2'),
-       url('#{$path-fonts}glyphicons-regular.woff') format('woff'),
-       url('#{$path-fonts}glyphicons-regular.ttf') format('truetype');
+  src: url('#{path.$path-fonts}glyphicons-regular.woff2') format('woff2'),
+       url('#{path.$path-fonts}glyphicons-regular.woff') format('woff'),
+       url('#{path.$path-fonts}glyphicons-regular.ttf') format('truetype');
 }

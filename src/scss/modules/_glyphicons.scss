@@ -4,7 +4,7 @@
 /* path: dsf-common-ui/src/scss/modules/_glyphicon.scss                       */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 
 .glyphicon {
   // display: inline-block;
@@ -13,7 +13,7 @@
   font-family: 'Glyphicons Regular';
   font-style: normal;
   font-weight: normal;
-  line-height: rem(12);
+  line-height: fonts.rem(12);
   position: relative;
   top: 1px;
   // vertical-align:top; // уезжает

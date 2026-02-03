@@ -1,7 +1,7 @@
 @use 'sass:color';
 @use 'sass:math';
-@use './../functions/func_maps' as *;
-@use './../mixins/assert' as *;
+@use './../functions/func_maps' as maps;
+@use './../mixins/assert' as assert;
 
 $bootstrap-sass-asset-helper: false !default;
 
@@ -356,12 +356,6 @@ $gridGutterWidth: $grid-gutter-width;
   $gridGutterWidth: $grid-gutter-widths;
 }
 
-@function gridBreakpoints($keys...) {
-  @return val($grid-breakpoints, $keys...);
-}
-@function grid-breakpoints($keys...) {
-  @return val($grid-breakpoints, $keys...);
-}
 
 $grid-breakpoints: (
   '': 0,
@@ -377,8 +371,14 @@ $grid-breakpoints: (
   4k: 3840px
 ) !default;
 
+@function gridBreakpoints($keys...) {
+  @return maps.val($grid-breakpoints, $keys...);
+}
+@function grid-breakpoints($keys...) {
+  @return maps.val($grid-breakpoints, $keys...);
+}
 
-@include assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include assert.assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
 $container-max-widths: (
   xs: 480px,
@@ -392,7 +392,7 @@ $container-max-widths: (
   2k: 2430px,
   4k: 3710px
 ) !default;
-@include assert-ascending($container-max-widths, "$container-max-widths");
+@include assert.assert-ascending($container-max-widths, "$container-max-widths");
 //== Container sizes
 //
 //## Define the maximum width of `.container` for different screen sizes.

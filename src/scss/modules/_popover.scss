@@ -5,15 +5,15 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:color';
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/functions/func_bootstrap-v4' as *;
-@use './../utilities/variables/var-bootstrap-v4' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-zindex' as *;
-@use './../utilities/variables/var-fonts' as *;
+@use './../utilities/functions/func_bootstrap-v4' as funcbootstrapv4;
+@use './../utilities/variables/var-bootstrap-v4' as varbootstrapv4;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
+// @use './../utilities/variables/var-zindex' as *;
+// @use './../utilities/variables/var-fonts' as *;
 
 .popover {
   background-color: val.brandPalette(popover_bgc);
@@ -22,13 +22,13 @@
   border: 1px solid val.brandPalette(popover_borderColor);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   display: block;
-  font-size: rem(val.fontSizes(popover));
+  font-size: fonts.rem(val.fontSizes(popover));
   letter-spacing: normal;
   left: 0;
   line-break: auto;
-  line-height: rem(val.lineHeight(popover));
+  line-height: fonts.rem(val.lineHeight(popover));
   margin: 0;
-  max-width: rem(val.brandSizes(popover_maxWidth));
+  max-width: fonts.rem(val.brandSizes(popover_maxWidth));
   position: absolute;
   font-style: normal;
   font-weight: 400;
@@ -52,8 +52,8 @@
   .arrow {
     position: absolute;
     display: block;
-    width: rem(val.brandSizes(popoverArrow_width));
-    height: rem(val.brandSizes(popoverArrow_height));
+    width: fonts.rem(val.brandSizes(popoverArrow_width));
+    height: fonts.rem(val.brandSizes(popoverArrow_height));
     margin: 0;
     &::before,
     &::after {
@@ -70,7 +70,7 @@
     }
   }
   &.popover__wide{
-    max-width: rem(val.brandSizes(popoverWide_maxWidth));
+    max-width: fonts.rem(val.brandSizes(popoverWide_maxWidth));
   }
   &.popover__nonmax{
     max-width: none;
@@ -78,69 +78,69 @@
 }
 
 .bs-popover-top {
-  margin-bottom: rem(val.brandSizes(popoverArrow_height));
+  margin-bottom: fonts.rem(val.brandSizes(popoverArrow_height));
   &.popoverActionMenu {
     margin-bottom: 0;
   }
   > .arrow {
-    bottom: subtract(calc(-1 * rem(val.brandSizes(popoverArrow_height))), rem(val.brandSizes(popover_borderWidth)));
+    bottom: funcbootstrapv4.subtract(calc(-1 * fonts.rem(val.brandSizes(popoverArrow_height))), fonts.rem(val.brandSizes(popover_borderWidth)));
 
     &::before {
       bottom: 0;
-      border-width: rem(val.brandSizes(popoverArrow_height)) rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
-      border-top-color: $popover-arrow-outer-color;
+      border-width: fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
+      border-top-color: varbootstrapv4.$popover-arrow-outer-color;
     }
 
     &::after {
-      bottom: rem(val.brandSizes(popover_borderWidth));
-      border-width: rem(val.brandSizes(popoverArrow_height)) rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
+      bottom: fonts.rem(val.brandSizes(popover_borderWidth));
+      border-width: fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
       border-top-color: val.brandPalette(popover_bgc);
     }
   }
 }
 
 .bs-popover-right {
-  margin-left: rem(val.brandSizes(popoverArrow_height));
+  margin-left: fonts.rem(val.brandSizes(popoverArrow_height));
   &.popoverActionMenu {
     margin-left: 0;
   }
   > .arrow {
-    left: subtract(calc(-1 * rem(val.brandSizes(popoverArrow_height))), rem(val.brandSizes(popover_borderWidth)));
-    width: rem(val.brandSizes(popoverArrow_height));
-    height: rem(val.brandSizes(popoverArrow_width));
+    left: funcbootstrapv4.subtract(calc(-1 * fonts.rem(val.brandSizes(popoverArrow_height))), fonts.rem(val.brandSizes(popover_borderWidth)));
+    width: fonts.rem(val.brandSizes(popoverArrow_height));
+    height: fonts.rem(val.brandSizes(popoverArrow_width));
     margin: 0 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       left: 0;
-      border-width: rem(calc(val.brandSizes(popoverArrow_width) * .5)) rem(val.brandSizes(popoverArrow_height)) rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
-      border-right-color: $popover-arrow-outer-color;
+      border-width: fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
+      border-right-color: varbootstrapv4.$popover-arrow-outer-color;
     }
 
     &::after {
-      left: rem(val.brandSizes(popover_borderWidth));
-      border-width: rem(calc(val.brandSizes(popoverArrow_width) * .5)) rem(val.brandSizes(popoverArrow_height)) rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
+      left: fonts.rem(val.brandSizes(popover_borderWidth));
+      border-width: fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
       border-right-color: val.brandPalette(popover_bgc);
     }
   }
 }
 
 .bs-popover-bottom {
-  margin-top: rem(val.brandSizes(popoverArrow_height));
+  margin-top: fonts.rem(val.brandSizes(popoverArrow_height));
   &.popoverActionMenu {
     margin-top: 0;
   }
   > .arrow {
-    top: subtract(-1 * rem(val.brandSizes(popoverArrow_height)), rem(val.brandSizes(popover_borderWidth)));
+    top: funcbootstrapv4.subtract(-1 * fonts.rem(val.brandSizes(popoverArrow_height)), fonts.rem(val.brandSizes(popover_borderWidth)));
 
     &::before {
       top: 0;
-      border-width: 0 rem(calc(val.brandSizes(popoverArrow_width) * .5)) rem(val.brandSizes(popoverArrow_height)) rem(calc(val.brandSizes(popoverArrow_width) * .5));
-      border-bottom-color: $popover-arrow-outer-color;
+      border-width: 0 fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5));
+      border-bottom-color: varbootstrapv4.$popover-arrow-outer-color;
     }
 
     &::after {
-      top: rem(val.brandSizes(popover_borderWidth));
-      border-width: 0 rem(calc(val.brandSizes(popoverArrow_width) * .5)) rem(val.brandSizes(popoverArrow_height)) rem(calc(val.brandSizes(popoverArrow_width) * .5));
+      top: fonts.rem(val.brandSizes(popover_borderWidth));
+      border-width: 0 fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5));
       border-bottom-color: val.brandPalette(popover_bgc);
     }
   }
@@ -151,33 +151,33 @@
     top: 0;
     left: 50%;
     display: block;
-    width: rem(val.brandSizes(popoverArrow_width));
-    margin-left: rem(calc(val.brandSizes(popoverArrow_width) * -0.5));
+    width: fonts.rem(val.brandSizes(popoverArrow_width));
+    margin-left: fonts.rem(calc(val.brandSizes(popoverArrow_width) * -0.5));
     content: "";
-    border-bottom: rem(val.brandSizes(popover_borderWidth)) solid val.brandPalette(popoverHeader_bgc);
+    border-bottom: fonts.rem(val.brandSizes(popover_borderWidth)) solid val.brandPalette(popoverHeader_bgc);
   }
 }
 
 .bs-popover-left {
-  margin-right: rem(val.brandSizes(popoverArrow_height));
+  margin-right: fonts.rem(val.brandSizes(popoverArrow_height));
   &.popoverActionMenu {
     margin-right: 0;
   }
   > .arrow {
-    right: subtract(-1 * rem(val.brandSizes(popoverArrow_height)), rem(val.brandSizes(popover_borderWidth)));
-    width: rem(val.brandSizes(popoverArrow_height));
-    height: rem(val.brandSizes(popoverArrow_width));
+    right: funcbootstrapv4.subtract(-1 * fonts.rem(val.brandSizes(popoverArrow_height)), fonts.rem(val.brandSizes(popover_borderWidth)));
+    width: fonts.rem(val.brandSizes(popoverArrow_height));
+    height: fonts.rem(val.brandSizes(popoverArrow_width));
     margin: 0 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       right: 0;
-      border-width: rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0 rem(calc(val.brandSizes(popoverArrow_width) * .5)) rem(val.brandSizes(popoverArrow_height));
-      border-left-color: $popover-arrow-outer-color;
+      border-width: fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0 fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height));
+      border-left-color: varbootstrapv4.$popover-arrow-outer-color;
     }
 
     &::after {
-      right: rem(val.brandSizes(popover_borderWidth));
-      border-width: rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0 rem(calc(val.brandSizes(popoverArrow_width) * .5)) rem(val.brandSizes(popoverArrow_height));
+      right: fonts.rem(val.brandSizes(popover_borderWidth));
+      border-width: fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0 fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height));
       border-left-color: val.brandPalette(popover_bgc);
     }
   }
@@ -205,8 +205,8 @@
   color: val.brandPalette(popoverHeader_color);
   border-bottom: 1px solid val.brandPalette(popoverHeader_borderolor);
   border-radius: 0;
-  font-size: rem(val.fontSizes(popoverHeader));
-  padding: rem(val.brandSizes(popover_paddingY)) rem(val.brandSizes(popover_paddingX));
+  font-size: fonts.rem(val.fontSizes(popoverHeader));
+  padding: fonts.rem(val.brandSizes(popover_paddingY)) fonts.rem(val.brandSizes(popover_paddingX));
   margin: 0;
   &:empty {
     display: none;
@@ -216,7 +216,7 @@
 .popover-body {
   background-color: val.brandPalette(popover_bgc);
   color: val.brandPalette(popover_color);
-  padding: rem(val.brandSizes(popover_paddingY)) rem(val.brandSizes(popover_paddingX));
+  padding: fonts.rem(val.brandSizes(popover_paddingY)) fonts.rem(val.brandSizes(popover_paddingX));
   &:empty {
     display: none;
   }

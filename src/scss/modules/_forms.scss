@@ -7,20 +7,20 @@
 
 @use 'sass:color';
 @use 'sass:math';
-@use './../utilities/functions/func_svg-url' as *;
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_svg-url' as svgurl;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
 
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-cursors' as *;
-@use './../utilities/variables/var-bootstrap-v3' as *;
-@use './../utilities/mixins/transition' as *;
-@use './../utilities/mixins/placeholder' as *;
-@use './../utilities/mixins_bootstrap-v3/forms' as *;
-@use './../utilities/mixins_bootstrap-v3/grid' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-fonts' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-cursors' as *;
+@use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
+@use './../utilities/mixins/transition' as transition;
+@use './../utilities/mixins/placeholder' as placeholder;
+@use './../utilities/mixins_bootstrap-v3/forms' as forms;
+@use './../utilities/mixins_bootstrap-v3/grid' as grid;
 
 fieldset {
     padding: 0 12px 8px;
@@ -56,14 +56,14 @@ input[type="checkbox"] {
   }
 }
 select.input-sm {
-    line-height: rem(calc(val.lineHeight(btn) + 2));
-    height: rem(calc(val.lineHeight(btn) + 2));
+    line-height: fonts.rem(calc(val.lineHeight(btn) + 2));
+    height: fonts.rem(calc(val.lineHeight(btn) + 2));
 }
 
 output {
   display: block;
-  padding-top: rem(val.brandSizes(output_paddingY));
-  font-size: rem(val.fontSizes(output));
+  padding-top: fonts.rem(val.brandSizes(output_paddingY));
+  font-size: fonts.rem(val.fontSizes(output));
   line-height: val.lineHeight(output);
   color: val.brandPalette(output_color);
 }
@@ -73,7 +73,7 @@ output {
     // letter-spacing: .5px;
     display: block;
     color: val.brandPalette(controlLabel_color);
-    font-size: rem(val.fontSizes(controlLabel));
+    font-size: fonts.rem(val.fontSizes(controlLabel));
     font-weight: val.fontWeight(controlLabel);
     line-height: 14px; // возможность добавлять иконку
     margin-bottom: #{val.brandSizes(controlLabel_mb)}px;
@@ -89,14 +89,14 @@ output {
       }
     }
     .css-formFree & {
-      font-size: rem(val.fontSizes(controlLabel__formFree));
+      font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       left: 0;
-      // left: rem($paddinFromLeft * -1);
-      padding-left: rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft));
-      // padding-right: rem(calc(val.brandSizes(formControl_paddingX) + 5));
+      // left: fonts.rem($paddinFromLeft * -1);
+      padding-left: fonts.rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft));
+      // padding-right: fonts.rem(calc(val.brandSizes(formControl_paddingX) + 5));
       padding-right: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.brandSizes(iconLabel)}px + 10px);
       position: absolute;
-      line-height: rem(calc(val.lineHeight(input) + 2));
+      line-height: fonts.rem(calc(val.lineHeight(input) + 2));
       margin-bottom: 0;
       // transition: color .2s ease-out;
       overflow: hidden;
@@ -105,7 +105,7 @@ output {
       transition: top .2s ease-out, font-size .2s ease-out;
       transform: translateX(0) translateY(0);
       transform-origin: 0% 100%;
-      top: rem(val.fontSizes(controlLabel_active__formFree));
+      top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
       // z-index: 0; // Если больше 0 - появляется некликабельный участок. Fix: pointer-events: none;
       z-index: 1;
       white-space: nowrap;
@@ -117,23 +117,23 @@ output {
       .css-formFree & {
         // background-color: val.brandPalette(controlLabelActive_bgc);
         background-color:var(--bg_color, val.brandPalette(controlLabelActive_bgc));
-        font-size: rem(val.fontSizes(controlLabel_active__formFree));
-        left: rem($paddinFromLeft * -1);
-        line-height: rem(val.fontSizes(controlLabel_active__formFree));
-        padding-left: rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft));
-        // padding-right: rem(val.brandSizes(formControl_paddingX));
+        font-size: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+        left: fonts.rem($paddinFromLeft * -1);
+        line-height: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+        padding-left: fonts.rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft));
+        // padding-right: fonts.rem(val.brandSizes(formControl_paddingX));
         padding-right: calc(#{val.brandSizes(iconLabelActive)}px + 5px);
-        transform: translateX(rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
+        transform: translateX(fonts.rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
         top: 2px; // корректировка из-за line-height
         z-index: 1;
-        max-width: calc(100% - rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft)) + rem($paddinFromLeft));
+        max-width: calc(100% - fonts.rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
       }
     }
     &__relative{
       .css-formFree & {
         left: auto;
         position: relative;
-        padding-right: rem(val.brandSizes(controlLabel_mr));
+        padding-right: fonts.rem(val.brandSizes(controlLabel_mr));
         top: auto;
         transform: none;
       }
@@ -156,18 +156,18 @@ output {
   box-shadow: none;
   color: val.brandPalette(formControl-color);
   display: block;
-  height: rem(calc(val.lineHeight(input) + 2)); //  + border-top and border-bottom
-  font-size: rem(val.fontSizes(formElem));
+  height: fonts.rem(calc(val.lineHeight(input) + 2)); //  + border-top and border-bottom
+  font-size: fonts.rem(val.fontSizes(formElem));
   font-weight: val.fontWeight(formElem);
-  line-height: rem(val.lineHeight(input));
-  padding: 0 rem(val.brandSizes(formControl_paddingX));
+  line-height: fonts.rem(val.lineHeight(input));
+  padding: 0 fonts.rem(val.brandSizes(formControl_paddingX));
   width: 100%;
-  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+  @include transition.transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
   // Customize the `:focus` state to imitate native WebKit styles.
   // Placeholder
   // @include placeholder;
-  @include placeholder2(val.brandPalette(formControl-placeholder), 400, 12);
+  @include placeholder.placeholder2(val.brandPalette(formControl-placeholder), 400, 12);
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
     background-color: transparent;
@@ -200,39 +200,39 @@ output {
   }
   &.datetimepicker,
   &.datepicker{
-      background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16968" width="11" height="9" stroke="#333333"/><path d="M2.33331 6.3363H13.6666" stroke="#333333"/><path d="M4.66669 2.66968V5.33634" stroke="#333333"/><path d="M4 7.66968H5.33333" stroke="#333333"/><path d="M4 9.66968H5.33333" stroke="#333333"/><path d="M10.6667 7.66968H12" stroke="#333333"/><path d="M10.6667 9.66968H12" stroke="#333333"/><path d="M4 11.6697H5.33333" stroke="#333333"/><path d="M10.6667 11.6697H12" stroke="#333333"/><path d="M7.33331 7.66968H8.66665" stroke="#333333"/><path d="M7.33331 9.66968H8.66665" stroke="#333333"/><path d="M7.33331 11.6697H8.66665" stroke="#333333"/><path d="M11.3333 2.66968V5.33634" stroke="#333333"/></svg>');
+      background-image: svgurl.svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16968" width="11" height="9" stroke="#333333"/><path d="M2.33331 6.3363H13.6666" stroke="#333333"/><path d="M4.66669 2.66968V5.33634" stroke="#333333"/><path d="M4 7.66968H5.33333" stroke="#333333"/><path d="M4 9.66968H5.33333" stroke="#333333"/><path d="M10.6667 7.66968H12" stroke="#333333"/><path d="M10.6667 9.66968H12" stroke="#333333"/><path d="M4 11.6697H5.33333" stroke="#333333"/><path d="M10.6667 11.6697H12" stroke="#333333"/><path d="M7.33331 7.66968H8.66665" stroke="#333333"/><path d="M7.33331 9.66968H8.66665" stroke="#333333"/><path d="M7.33331 11.6697H8.66665" stroke="#333333"/><path d="M11.3333 2.66968V5.33634" stroke="#333333"/></svg>');
       background-repeat: no-repeat;
       background-size: 16px;
       background-position: calc(100% - 7px) center;
       .has-error &{
-          background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16766" width="11" height="9" stroke="#D9534F"/><path d="M2.33331 6.33429H13.6666" stroke="#D9534F"/><path d="M4.66669 2.66766V5.33433" stroke="#D9534F"/><path d="M4 7.66766H5.33333" stroke="#D9534F"/><path d="M4 9.66766H5.33333" stroke="#D9534F"/><path d="M10.6667 7.66766H12" stroke="#D9534F"/><path d="M10.6667 9.66766H12" stroke="#D9534F"/><path d="M4 11.6677H5.33333" stroke="#D9534F"/><path d="M10.6667 11.6677H12" stroke="#D9534F"/><path d="M7.33331 7.66766H8.66665" stroke="#D9534F"/><path d="M7.33331 9.66766H8.66665" stroke="#D9534F"/><path d="M7.33331 11.6677H8.66665" stroke="#D9534F"/><path d="M11.3333 2.66766V5.33433" stroke="#D9534F"/></svg>');
+          background-image: svgurl.svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16766" width="11" height="9" stroke="#D9534F"/><path d="M2.33331 6.33429H13.6666" stroke="#D9534F"/><path d="M4.66669 2.66766V5.33433" stroke="#D9534F"/><path d="M4 7.66766H5.33333" stroke="#D9534F"/><path d="M4 9.66766H5.33333" stroke="#D9534F"/><path d="M10.6667 7.66766H12" stroke="#D9534F"/><path d="M10.6667 9.66766H12" stroke="#D9534F"/><path d="M4 11.6677H5.33333" stroke="#D9534F"/><path d="M10.6667 11.6677H12" stroke="#D9534F"/><path d="M7.33331 7.66766H8.66665" stroke="#D9534F"/><path d="M7.33331 9.66766H8.66665" stroke="#D9534F"/><path d="M7.33331 11.6677H8.66665" stroke="#D9534F"/><path d="M11.3333 2.66766V5.33433" stroke="#D9534F"/></svg>');
       }
       &[disabled],
       &.disabled{
-          background-image: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16565" width="11" height="9" stroke="#777777"/><path d="M2.33331 6.33228H13.6666" stroke="#777777"/><path d="M4.66669 2.66565V5.33232" stroke="#777777"/><path d="M4 7.66565H5.33333" stroke="#777777"/><path d="M4 9.66565H5.33333" stroke="#777777"/><path d="M10.6667 7.66565H12" stroke="#777777"/><path d="M10.6667 9.66565H12" stroke="#777777"/><path d="M4 11.6656H5.33333" stroke="#777777"/><path d="M10.6667 11.6656H12" stroke="#777777"/><path d="M7.33331 7.66565H8.66665" stroke="#777777"/><path d="M7.33331 9.66565H8.66665" stroke="#777777"/><path d="M7.33331 11.6656H8.66665" stroke="#777777"/><path d="M11.3333 2.66565V5.33232" stroke="#777777"/></svg>');
+          background-image: svgurl.svg-url('<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.16565" width="11" height="9" stroke="#777777"/><path d="M2.33331 6.33228H13.6666" stroke="#777777"/><path d="M4.66669 2.66565V5.33232" stroke="#777777"/><path d="M4 7.66565H5.33333" stroke="#777777"/><path d="M4 9.66565H5.33333" stroke="#777777"/><path d="M10.6667 7.66565H12" stroke="#777777"/><path d="M10.6667 9.66565H12" stroke="#777777"/><path d="M4 11.6656H5.33333" stroke="#777777"/><path d="M10.6667 11.6656H12" stroke="#777777"/><path d="M7.33331 7.66565H8.66665" stroke="#777777"/><path d="M7.33331 9.66565H8.66665" stroke="#777777"/><path d="M7.33331 11.6656H8.66665" stroke="#777777"/><path d="M11.3333 2.66565V5.33232" stroke="#777777"/></svg>');
       }
       &::-moz-placeholder {
           .css-formFree &{ 
               color: val.brandPalette(controlLabel_color);
-              font-size: rem(val.fontSizes(controlLabel__formFree));
+              font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &:-moz-placeholder {
           .css-formFree &{ 
               color: val.brandPalette(controlLabel_color);
-              font-size: rem(val.fontSizes(controlLabel__formFree));
+              font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &:-ms-input-placeholder {
           .css-formFree &{ 
               color: val.brandPalette(controlLabel_color);
-              font-size: rem(val.fontSizes(controlLabel__formFree));
+              font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &::-webkit-input-placeholder {
           .css-formFree &{ 
               color: val.brandPalette(controlLabel_color);
-              font-size: rem(val.fontSizes(controlLabel__formFree));
+              font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
   }
@@ -240,25 +240,25 @@ output {
       &::-moz-placeholder {
           .css-formFree &{ 
               color: val.brandPalette(controlLabel_color);
-              font-size: rem(val.fontSizes(controlLabel__formFree));
+              font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &:-moz-placeholder {
           .css-formFree &{ 
               color: val.brandPalette(controlLabel_color);
-              font-size: rem(val.fontSizes(controlLabel__formFree));
+              font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &:-ms-input-placeholder {
           .css-formFree &{ 
               color: val.brandPalette(controlLabel_color);
-              font-size: rem(val.fontSizes(controlLabel__formFree));
+              font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &::-webkit-input-placeholder {
           .css-formFree &{ 
               color: val.brandPalette(controlLabel_color);
-              font-size: rem(val.fontSizes(controlLabel__formFree));
+              font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
   }
@@ -280,25 +280,25 @@ output {
     &::-moz-placeholder {
       .css-formFree & {
         color: val.brandPalette(controlLabel_color);
-        font-size: rem(val.fontSizes(controlLabel__formFree));
+        font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       }
     }
     &:-moz-placeholder {
       .css-formFree & {
         color: val.brandPalette(controlLabel_color);
-        font-size: rem(val.fontSizes(controlLabel__formFree));
+        font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       }
     }
     &:-ms-input-placeholder {
       .css-formFree & {
         color: val.brandPalette(controlLabel_color);
-        font-size: rem(val.fontSizes(controlLabel__formFree));
+        font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       }
     }
     &::-webkit-input-placeholder {
       .css-formFree & {
         color: val.brandPalette(controlLabel_color);
-        font-size: rem(val.fontSizes(controlLabel__formFree));
+        font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       }
     }
   }
@@ -306,11 +306,11 @@ output {
 }
 
 textarea.form-control {
-  border-radius: rem(val.brandSizes(borderRadiusFormElem));
+  border-radius: fonts.rem(val.brandSizes(borderRadiusFormElem));
   height: auto;
-  line-height: rem(calc(val.fontSizes(formElem) + 2));
-  min-height: rem(calc(val.lineHeight(input) + 2));
-  padding: 6px rem(val.brandSizes(formControl_paddingX)) 2px;
+  line-height: fonts.rem(calc(val.fontSizes(formElem) + 2));
+  min-height: fonts.rem(calc(val.lineHeight(input) + 2));
+  padding: 6px fonts.rem(val.brandSizes(formControl_paddingX)) 2px;
   resize: vertical;
 }
 
@@ -329,7 +329,7 @@ textarea.form-control {
   input[type="datetime-local"],
   input[type="month"] {
     &.form-control {
-      line-height: rem(val.lineHeight(input));
+      line-height: fonts.rem(val.lineHeight(input));
     }
 
   }
@@ -337,23 +337,23 @@ textarea.form-control {
 
 .form-group {
   // margin-bottom: $form-group-margin-bottom;
-  margin-bottom: rem(val.brandSizes(formGroup_mb));
+  margin-bottom: fonts.rem(val.brandSizes(formGroup_mb));
   .css-formFree &{ 
-    margin-bottom: rem(calc(val.brandSizes(formGroup__formFree_mb) - val.fontSizes(controlLabel_active__formFree)));
-    padding-top: rem(val.fontSizes(controlLabel_active__formFree));
+    margin-bottom: fonts.rem(calc(val.brandSizes(formGroup__formFree_mb) - val.fontSizes(controlLabel_active__formFree)));
+    padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
     position: relative;
   }
   &__10{
-    margin-bottom: rem(10);
+    margin-bottom: fonts.rem(10);
     .css-formFree &{ 
-      margin-bottom: rem(10);
+      margin-bottom: fonts.rem(10);
     }
   }
   &__0{
-    margin-bottom: rem(0);
+    margin-bottom: fonts.rem(0);
     padding-top: 0;
     .css-formFree &{ 
-      margin-bottom: rem(0);
+      margin-bottom: fonts.rem(0);
       padding-top: 0;
     }
   }
@@ -426,33 +426,33 @@ textarea.form-control {
 .form-control-static {
   color: val.brandPalette(formControl-color);
   // min-height: ($line-height-computed + $font-size-base);
-  font-size: rem(val.fontSizes(formElem));
+  font-size: fonts.rem(val.fontSizes(formElem));
   font-weight: val.fontWeight(formElem);
   min-height: auto;
   // Size it appropriately next to real form controls
-  padding-top: rem(val.brandSizes(formControlStatic_paddingY));
-  padding-bottom: rem(val.brandSizes(formControlStatic_paddingY));
+  padding-top: fonts.rem(val.brandSizes(formControlStatic_paddingY));
+  padding-bottom: fonts.rem(val.brandSizes(formControlStatic_paddingY));
   // Remove default margin from `p`
   margin-bottom: 0;
   padding-right: 0;
   padding-left: 0;
   &__height{
-    height: rem(calc(val.lineHeight(input) + 2));
+    height: fonts.rem(calc(val.lineHeight(input) + 2));
   }
   .css-formFree &{ 
-    padding-left: rem(val.brandSizes(formControl_paddingX));
-    padding-right: rem(val.brandSizes(formControl_paddingX));
+    padding-left: fonts.rem(val.brandSizes(formControl_paddingX));
+    padding-right: fonts.rem(val.brandSizes(formControl_paddingX));
   }
 }
 
 .has-success {
-  @include form-control-validation(val.brandPalette(hasSuccess_color), val.brandPalette(hasSuccess_border), val.brandPalette(hasSuccess_bgc));
+  @include forms.form-control-validation(val.brandPalette(hasSuccess_color), val.brandPalette(hasSuccess_border), val.brandPalette(hasSuccess_bgc));
 }
 .has-warning {
-  @include form-control-validation(val.brandPalette(hasWarning_color), val.brandPalette(hasWarning_border), val.brandPalette(hasWarning_bgc));
+  @include forms.form-control-validation(val.brandPalette(hasWarning_color), val.brandPalette(hasWarning_border), val.brandPalette(hasWarning_bgc));
 }
 .has-error {
-  @include form-control-validation(val.brandPalette(hasDanger_color), val.brandPalette(hasDanger_border), val.brandPalette(hasDanger_bgc));
+  @include forms.form-control-validation(val.brandPalette(hasDanger_color), val.brandPalette(hasDanger_border), val.brandPalette(hasDanger_bgc));
 }
 
 .has-feedback label {
@@ -484,7 +484,7 @@ textarea.form-control {
 @mixin form-inline {
 
   // Kick in the inline
-  @media (min-width: gridBreakpoints(sm)) {
+  @media (min-width: varbootstrapv3.gridBreakpoints(sm)) {
     // Inline-block all the things for "inline"
     .form-group {
       display: inline-block;
@@ -577,12 +577,12 @@ textarea.form-control {
 
   // Make form groups behave like rows
   .form-group {
-    @include make-row;
+    @include grid.make-row;
   }
 
   // Reset spacing and right align labels, but scope to media queries so that
   // labels on narrow viewports stack the same as a default form example.
-  @media (min-width: gridBreakpoints(sm)) {
+  @media (min-width: varbootstrapv3.gridBreakpoints(sm)) {
     .control-label {
       padding-top: 7px; // Default padding plus a border
       margin-bottom: 0;
@@ -595,7 +595,7 @@ textarea.form-control {
   // Reposition the icon because it's now within a grid column and columns have
   // `position: relative;` on them. Also accounts for the grid gutter padding.
   .has-feedback .form-control-feedback {
-    right: math.floor(math.div($grid-gutter-width, 2));
+    right: math.floor(math.div(varbootstrapv3.$grid-gutter-width, 2));
   }
 }
 
@@ -636,7 +636,7 @@ textarea.form-control {
     height: 21px; // равен высоте .redactor-toolbar + отсуп
     position: absolute;
     top: 31px;
-    right: rem(val.brandSizes(formControl_paddingX));
+    right: fonts.rem(val.brandSizes(formControl_paddingX));
     // width: 56px;
     white-space: nowrap;
     input[type="file"]{
@@ -650,11 +650,11 @@ textarea.form-control {
   }
   &FileListBlock{
     width: 100%;
-    padding-left: rem(val.brandSizes(formControl_paddingX));
+    padding-left: fonts.rem(val.brandSizes(formControl_paddingX));
   }
   &BoxWrapper{
     padding: 5px 77px 0 0;
-    padding-left: rem(val.brandSizes(formControl_paddingX));
+    padding-left: fonts.rem(val.brandSizes(formControl_paddingX));
     min-height: 14px;
     width: 100%;
     word-break: break-word;
@@ -684,7 +684,7 @@ textarea.form-control {
     }
     .redactor-placeholder::after{
       color: val.brandPalette(controlLabel_color) !important;
-      font-size: rem(val.fontSizes(controlLabel__formFree));
+      font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       left: 0px;
       top: 10px;
     }

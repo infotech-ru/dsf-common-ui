@@ -4,20 +4,20 @@
 /* path: dsf-common-ui/src/scss/layout/_grid.scss                             */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/variables/var-bootstrap-v3' as *;
-@use './../utilities/mixins/breakpoints' as *;
+// @use './../utilities/variables/var-bootstrap-v3' as *;
+@use './../utilities/mixins/breakpoints' as breakpoints;
 
 .container{
-  @include makeContainer();
+  @include breakpoints.makeContainer();
 
-  @include makeContainerGrid();
+  @include breakpoints.makeContainerGrid();
   .mobile-view &{
       max-width: none;
   }
 }
 
 .container-fluid {
-  @include makeContainer();
+  @include breakpoints.makeContainer();
   .error-view &{
       padding-left: 0;
       padding-right: 0;
@@ -25,7 +25,7 @@
 }
 
 .row {
-  @include makeRow;
+  @include breakpoints.makeRow;
 }
 
 .row-no-gutters {
@@ -38,4 +38,4 @@
   }
 }
 
-@include makeGridColumns;
+@include breakpoints.makeGridColumns;

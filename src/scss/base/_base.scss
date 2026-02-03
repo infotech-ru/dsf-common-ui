@@ -6,20 +6,19 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 
 @use 'sass:math';
-@use './../utilities/functions/func_fonts' as *;
-@use './../utilities/functions/func_val' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-dataImages' as *;
+@use './../utilities/functions/func_fonts' as fonts;
+@use './../utilities/functions/func_val' as val;
+@use './../utilities/variables/var-colors' as colors;
+// @use './../utilities/variables/var-fonts' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-dataImages' as *;
 
 :root{
-  @each $name, $value in $brand-colors {
+  @each $name, $value in colors.$brand-colors {
     --color#{$name}: #{$value};
   }
-  --checkboxItemActive_image: url("#{brandDataImage(checkIcon)}");
+  --checkboxItemActive_image: url("#{val.brandDataImage(checkIcon)}");
 }
 // * {
 //   scrollbar-width: thin;
@@ -50,11 +49,11 @@ html{
   // scrollbar-width: thin;
 }
 body {
-  background-color: brandPalette(body_bgc);
-  color: brandPalette(body_color);
+  background-color: val.brandPalette(body_bgc);
+  color: val.brandPalette(body_color);
   font-family: Roboto, Arial, 'Helvetica Neue', sans-serif;
-  font-size: rem(fontSizes(body));
-  line-height: rem(lineHeight(body));
+  font-size: fonts.rem(val.fontSizes(body));
+  line-height: fonts.rem(val.lineHeight(body));
   // height: 100vh;  // спорное правило
   min-height: 100vh;  // спорное правило
   text-rendering: optimizeLegibility;
@@ -72,42 +71,42 @@ body {
 }
 
 a {
-  color: brandPalette(link_color);
-  #{--svg-valute-fill}: brandPalette(link_color);
+  color: val.brandPalette(link_color);
+  #{--svg-valute-fill}: val.brandPalette(link_color);
   text-decoration: none;
   &:hover,
   &:focus-visible {
-    color: brandPalette(linkHover_color);
-    #{--svg-valute-fill}: brandPalette(linkHover_color);
+    color: val.brandPalette(linkHover_color);
+    #{--svg-valute-fill}: val.brandPalette(linkHover_color);
     outline: none;
     text-decoration: none;
   }
   &.dashed {
-    border-bottom: brandPalette(link_color) 1px dashed;
+    border-bottom: val.brandPalette(link_color) 1px dashed;
     text-decoration: none;
     &.empty {
-      border-bottom-color: brandPalette(linkEmpty_color);
-      color: brandPalette(linkEmpty_color);
+      border-bottom-color: val.brandPalette(linkEmpty_color);
+      color: val.brandPalette(linkEmpty_color);
     }
     &.incomplete {
-      border-bottom-color: brandPalette(linkIncomplete_color);
-      color: brandPalette(linkIncomplete_color);
+      border-bottom-color: val.brandPalette(linkIncomplete_color);
+      color: val.brandPalette(linkIncomplete_color);
     }
   }
 }
 
 hr {
   border: 0;
-  border-top: 1px solid brandPalette(hr_border);
+  border-top: 1px solid val.brandPalette(hr_border);
   margin-top: 10px;
   margin-bottom: 10px;
 
 }
 
 code {
-  background-color: brandPalette(code_bgc);
-  border-radius: brandSizes(border-radius-base);
-  color: brandPalette(code_color);
+  background-color: val.brandPalette(code_bgc);
+  border-radius: val.brandSizes(border-radius-base);
+  color: val.brandPalette(code_color);
   font-size: 90%;
   padding: 2px 4px;
   pre &{
@@ -121,14 +120,14 @@ code {
 }
 
 pre {
-  background-color: brandPalette(pre_bgc);
-  border: 1px solid brandPalette(pre_color);
-  border-radius: brandSizes(border-radius-base);
-  color: brandPalette(pre_color);
+  background-color: val.brandPalette(pre_bgc);
+  border: 1px solid val.brandPalette(pre_color);
+  border-radius: val.brandSizes(border-radius-base);
+  color: val.brandPalette(pre_color);
   display: block;
-  font-size: rem(calc(fontSizes(body) - 1));
+  font-size: fonts.rem(calc(val.fontSizes(body) - 1));
   margin: 0 0 10px;
-  line-height: rem(lineHeight(body));
+  line-height: fonts.rem(val.lineHeight(body));
   padding: 2px 4px;
   word-break: break-all;
   word-wrap: break-word;
@@ -136,7 +135,7 @@ pre {
 }
 
 p {
-  margin: 0 0 rem(10);
+  margin: 0 0 fonts.rem(10);
 }
 
 ul,
@@ -152,29 +151,29 @@ ol {
 mark,
 .mark {
   padding: .2em;
-  background-color: brandPalette(mark_bgc);
+  background-color: val.brandPalette(mark_bgc);
 }
 
 dl {
-  margin-top: 0; // Remove browser default
-  margin-bottom: rem(brandSizes(base_marginSize));
+  margin-top: 0;
+  margin-bottom: fonts.rem(val.brandSizes(base_marginSize));
 }
 dt,
 dd {
-  line-height: rem(lineHeight(body));
+  line-height: fonts.rem(val.lineHeight(body));
 }
 dt {
   font-weight: 700;
 }
 dd {
-  margin-left: 0; // Undo browser default
+  margin-left: 0;
 }
 
 blockquote {
-  padding: rem(math.div(brandSizes(base_marginSize), 2)) rem(brandSizes(base_marginSize));
-  margin: 0 0 rem(brandSizes(base_marginSize));
-  font-size: rem(fontSizes(blockquote));
-  border-left: 5px solid brandPalette(blockquote_borderColor);
+  padding: fonts.rem(math.div(val.brandSizes(base_marginSize), 2)) fonts.rem(val.brandSizes(base_marginSize));
+  margin: 0 0 fonts.rem(val.brandSizes(base_marginSize));
+  font-size: fonts.rem(val.fontSizes(blockquote));
+  border-left: 5px solid val.brandPalette(blockquote_borderColor);
 
   p,
   ul,
@@ -191,8 +190,8 @@ blockquote {
   .small {
     display: block;
     font-size: 80%; // back to default font-size
-    line-height: rem(lineHeight(body));
-    color: brandPalette(blockquote_color);
+    line-height: fonts.rem(val.lineHeight(body));
+    color: val.brandPalette(blockquote_color);
 
     &:before {
       content: "\2014 \00A0"; // em dash, nbsp

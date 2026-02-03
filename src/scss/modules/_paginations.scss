@@ -4,19 +4,19 @@
 /* path: dsf-common-ui/src/scss/modules/_paginations.scss                     */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-sizes' as *;
 
 .pagination {
   border-radius: 0;
   display: inline-flex;
   padding-left: 0;
   list-style-type: none;
-  margin: rem(10) 0;
+  margin: fonts.rem(10) 0;
   >li {
-    margin: 0 rem(calc(val.brandSizes(paginationItem_margin) * 0.5));
+    margin: 0 fonts.rem(calc(val.brandSizes(paginationItem_margin) * 0.5));
     // display: inline; // Remove list-style and block-level defaults
     >a,
     >span {
@@ -27,13 +27,13 @@
       color: val.brandPalette(pagination_color);
       cursor: pointer;
       display: inline-flex;
-      font-size: rem(val.fontSizes(pagination));
+      font-size: fonts.rem(val.fontSizes(pagination));
       justify-content: center;
-      height: rem(val.brandSizes(paginationItem_height));
-      line-height: rem(val.brandSizes(paginationItem_height));
+      height: fonts.rem(val.brandSizes(paginationItem_height));
+      line-height: fonts.rem(val.brandSizes(paginationItem_height));
       margin: 0;
-      min-width: rem(val.brandSizes(paginationItem_width));
-      padding: 0 rem(val.brandSizes(paginationItem_paddingX));
+      min-width: fonts.rem(val.brandSizes(paginationItem_width));
+      padding: 0 fonts.rem(val.brandSizes(paginationItem_paddingX));
       position: relative;
       // float: left; // Collapse white-space
       // margin-left: -1px;

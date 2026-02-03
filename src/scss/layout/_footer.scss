@@ -4,11 +4,11 @@
 /* path: dsf-common-ui/src/scss/layout/_footer.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+// @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-paths' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-paths' as path;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-colors' as *;
 
 .footer{
   align-items: center;
@@ -99,7 +99,7 @@
 }
 .footer___logo {
   background-color: transparent;
-  background-image: url($path-images + "logo-infotech__dark__ru.svg");
+  background-image: url(path.$path-images + "logo-infotech__dark__ru.svg");
   background-repeat: no-repeat;
   background-size: 120px 22px;
   display: inline-block;
@@ -108,10 +108,10 @@
   vertical-align: middle;
   width: 120px;
   .lang__ru &{
-    background-image: url($path-images + "logo-infotech__dark__ru.svg");
+    background-image: url(path.$path-images + "logo-infotech__dark__ru.svg");
   }
   .lang__en &{
-    background-image: url($path-images + "logo-infotech__dark__en.svg");
+    background-image: url(path.$path-images + "logo-infotech__dark__en.svg");
     // width: 187px;
   }
   .reset-view &,
@@ -121,14 +121,14 @@
   }
   .reset-view.lang__en &,
   .guest-view.lang__en &{
-    background-image: url($path-images + "logo-infotech__white__en.svg");
+    background-image: url(path.$path-images + "logo-infotech__white__en.svg");
   }
   .reset-view.lang__ru &,
   .guest-view.lang__ru &{
-    background-image: url($path-images + "logo-infotech__white__ru.svg");
+    background-image: url(path.$path-images + "logo-infotech__white__ru.svg");
   }
   .mobile-view &{
-    background-image: url($path-images + "logo-infotech__mobile.svg");
+    background-image: url(path.$path-images + "logo-infotech__mobile.svg");
     background-size: contain;
     height: 16px;
     margin: 0;

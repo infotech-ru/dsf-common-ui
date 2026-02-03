@@ -6,13 +6,13 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:map';
 
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/mixins_bootstrap-v3/vendor-prefixes' as *;
+// @use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-colors' as colors;
+// @use './../utilities/variables/var-fonts' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
+@use './../utilities/mixins_bootstrap-v3/vendor-prefixes' as vendorprefixes;
 
 %btn {
   background-image: none;
@@ -22,9 +22,9 @@
   border-radius: #{val.brandSizes(btn_borderRadius)}px;
   cursor: pointer;
   display: inline-block;
-  font-size: rem(val.fontSizes(btn));
+  font-size: fonts.rem(val.fontSizes(btn));
   font-weight: val.fontWeight(btn);
-  line-height: rem(val.lineHeight(btn));
+  line-height: fonts.rem(val.lineHeight(btn));
   // height: min-content; не работает в сафари с <input>
   height: auto;
   margin-bottom: 0; // For input.btn
@@ -33,7 +33,7 @@
   touch-action: manipulation;
   vertical-align: middle;
   white-space: nowrap;
-  @include user-select(none);
+  @include vendorprefixes.user-select(none);
 
   &:hover,
   &:focus-visible,
@@ -67,12 +67,12 @@
   }
 
   .svg--icon{
-    height: var(--svgIcon_height, rem(12));
+    height: var(--svgIcon_height, fonts.rem(12));
     // margin-right: 10px;
     position: relative;
     top: 2px;
     svg{
-      height: var(--svgIcon_height, rem(12));
+      height: var(--svgIcon_height, fonts.rem(12));
       max-width:20px;
       width: auto;
     }
@@ -401,15 +401,15 @@ a.btn {
 .btn-xs,
 .btn-small {
   border-radius: 1px;
-  font-size: rem(val.fontSizes(btnXs));
-  line-height: rem(val.lineHeight(btnXs));
+  font-size: fonts.rem(val.fontSizes(btnXs));
+  line-height: fonts.rem(val.lineHeight(btnXs));
   padding: #{val.brandSizes(btnXs-paddingY)}px #{val.brandSizes(btnXs-paddingX)}px;
 }
 
 .btn-large {
   border-radius: 1px;
-  font-size: rem(val.fontSizes(btnLg));
-  line-height: rem(val.lineHeight(btnLg));
+  font-size: fonts.rem(val.fontSizes(btnLg));
+  line-height: fonts.rem(val.lineHeight(btnLg));
   padding: #{val.brandSizes(btnLg-paddingY)}px #{val.brandSizes(btnLg-paddingX)}px;
 }
 
@@ -418,18 +418,18 @@ a.btn {
   background-image: none;
   border: none;
   box-shadow: none;
-  color: map.get($brand-namecolors, 'default');
+  color: map.get(colors.$brand-namecolors, 'default');
   cursor: pointer;
   display: inline-block;
-  height: rem(val.brandSizes(btnIcon_height));
-  line-height: rem(val.brandSizes(btnIcon_height));
+  height: fonts.rem(val.brandSizes(btnIcon_height));
+  line-height: fonts.rem(val.brandSizes(btnIcon_height));
   outline: none;
   padding: 0;
   text-align: left;
   .glyphicon {
     color: val.brandPalette(btnIconSvg_color);
-    font-size: rem(val.brandSizes(btnIconSvg_height));
-    height: rem(val.brandSizes(btnIconSvg_height));
+    font-size: fonts.rem(val.brandSizes(btnIconSvg_height));
+    height: fonts.rem(val.brandSizes(btnIconSvg_height));
     top: 0;
     vertical-align: middle;
   }
@@ -438,8 +438,8 @@ a.btn {
     background-color: val.brandPalette(btnIconSvg_bgc);
     display: inline-flex;
     justify-content: center;
-    height: rem(val.brandSizes(btnIcon_height));
-    width: rem(val.brandSizes(btnIcon_height));
+    height: fonts.rem(val.brandSizes(btnIcon_height));
+    width: fonts.rem(val.brandSizes(btnIcon_height));
     // vertical-align: middle;
     #{--svg-icon-fill}: val.brandPalette(btnDownloadSvg_color);
     #{--svg-icon-fill_blue}: val.brandPalette(btnDownloadSvg_color);
@@ -447,11 +447,11 @@ a.btn {
     #{--svg-icon-stroke}: val.brandPalette(btnDownloadSvg_color);
     #{--limited-stroke-off}: val.brandColors(_transparent);
     svg{
-      height: rem(val.brandSizes(btnIconSvg_height));
+      height: fonts.rem(val.brandSizes(btnIconSvg_height));
     }
     &__24vb{
       svg{
-        height: rem(val.brandSizes(btnIcon_height));
+        height: fonts.rem(val.brandSizes(btnIcon_height));
       }
     }
   }
@@ -480,11 +480,11 @@ a.btn {
     border-color: transparent;
     border-top-width: #{val.brandSizes(btn_borderWidth)}px;
     border-bottom-width: #{val.brandSizes(btn_borderWidth)}px;
-    // border-top-width: rem(math.div(calc(val.lineHeight(btn) - val.brandSizes(btnIconSvg_height)), 2));
-    // border-bottom-width: rem(math.div(calc(val.lineHeight(btn) - val.brandSizes(btnIconSvg_height)), 2));
+    // border-top-width: fonts.rem(math.div(calc(val.lineHeight(btn) - val.brandSizes(btnIconSvg_height)), 2));
+    // border-bottom-width: fonts.rem(math.div(calc(val.lineHeight(btn) - val.brandSizes(btnIconSvg_height)), 2));
     display: inline-flex;
-    height: rem(calc(val.lineHeight(btn) + 2));
-    line-height: rem(val.lineHeight(btn));
+    height: fonts.rem(calc(val.lineHeight(btn) + 2));
+    line-height: fonts.rem(val.lineHeight(btn));
   }
   &__danger{
     &:hover,
@@ -589,11 +589,11 @@ input[type="button"] {
   color: val.brandPalette(btnDownload_color);
   cursor: pointer;
   display: inline-block;
-  font-size: rem(12);
+  font-size: fonts.rem(12);
   font-weight: 400;
   height: auto;
-  line-height: rem(val.lineHeight(btn));
-  // max-height: rem(val.lineHeight(btn));
+  line-height: fonts.rem(val.lineHeight(btn));
+  // max-height: fonts.rem(val.lineHeight(btn));
   margin-bottom: 0;
   outline: none;
   padding: 3px;
@@ -638,11 +638,11 @@ input[type="button"] {
     }
   }
   .btn-text{
-    line-height: rem(12);
+    line-height: fonts.rem(12);
   }
   .svg--icon {
-    height: var(--svgIcon_height, rem(12));
-    width: var(--svgIcon_height, rem(12));
+    height: var(--svgIcon_height, fonts.rem(12));
+    width: var(--svgIcon_height, fonts.rem(12));
     vertical-align: middle;
     #{--svg-icon-fill}: val.brandPalette(btnIconSvg_color);
     #{--svg-icon-fill_blue}: val.brandPalette(btnIconSvg_color);
@@ -650,8 +650,8 @@ input[type="button"] {
     #{--svg-icon-stroke}: val.brandPalette(btnIconSvg_color);
     #{--limited-stroke-off}: val.brandColors(_transparent);
     svg{
-      height: var(--svgIcon_height, rem(12));
-      width: var(--svgIcon_height, rem(12));
+      height: var(--svgIcon_height, fonts.rem(12));
+      width: var(--svgIcon_height, fonts.rem(12));
     }
   }
   .fill{
@@ -689,48 +689,48 @@ input[type="button"] {
   &__bigSquare,
   &__square{
     .svg--icon {
-      height: var(--svgIcon_height, rem(val.brandSizes(btnDownloadSvg_height)));
-      width: var(--svgIcon_height, rem(val.brandSizes(btnDownloadSvg_height)));
+      height: var(--svgIcon_height, fonts.rem(val.brandSizes(btnDownloadSvg_height)));
+      width: var(--svgIcon_height, fonts.rem(val.brandSizes(btnDownloadSvg_height)));
       svg{
-        height: var(--svgIcon_height, rem(val.brandSizes(btnDownloadSvg_height)));
-        width: var(--svgIcon_height, rem(val.brandSizes(btnDownloadSvg_height)));
+        height: var(--svgIcon_height, fonts.rem(val.brandSizes(btnDownloadSvg_height)));
+        width: var(--svgIcon_height, fonts.rem(val.brandSizes(btnDownloadSvg_height)));
       }
     }
   }
   &__large{ 
-    font-size: rem(10);
-    line-height: rem(12);
-    height: rem(64);
+    font-size: fonts.rem(10);
+    line-height: fonts.rem(12);
+    height: fonts.rem(64);
     width: 100%;
   }
   &__circle{
-    border-radius: rem(115);
-    font-size: rem(10);
-    height: rem(115);
-    width: rem(115);
+    border-radius: fonts.rem(115);
+    font-size: fonts.rem(10);
+    height: fonts.rem(115);
+    width: fonts.rem(115);
     .btn-download_inner{
       border-radius: 100%;
     }
     .svg--icon {
-      height: var(--svgIcon_height, rem(21));
-      width: var(--svgIcon_height, rem(21));
+      height: var(--svgIcon_height, fonts.rem(21));
+      width: var(--svgIcon_height, fonts.rem(21));
       svg{
-        height: var(--svgIcon_height, rem(21));
-        width: var(--svgIcon_height, rem(21));
+        height: var(--svgIcon_height, fonts.rem(21));
+        width: var(--svgIcon_height, fonts.rem(21));
       }
     }
   }
   &__square{
-    font-size: rem(10);
-    height: rem(64);
-    width: rem(64);
-    min-width: rem(64);
+    font-size: fonts.rem(10);
+    height: fonts.rem(64);
+    width: fonts.rem(64);
+    min-width: fonts.rem(64);
   }
   &__bigSquare{
-    font-size: rem(10);
-    height: rem(128);
-    width: rem(128);
-    min-width: rem(128);
+    font-size: fonts.rem(10);
+    height: fonts.rem(128);
+    width: fonts.rem(128);
+    min-width: fonts.rem(128);
   }
   &.disabled,
   &[disabled],

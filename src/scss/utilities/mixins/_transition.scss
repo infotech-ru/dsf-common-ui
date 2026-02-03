@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------- Mixins //
 // Transitions
 @use 'sass:list';
-@use './../variables/var-bootstrapBool' as *;
+@use './../variables/var-bootstrapBool' as bootstrapbool;
 
 @mixin transition($transition...) {
-  @if $enable-transitions {
+  @if bootstrapbool.$enable-transitions {
     @if list.length($transition) == 0 {
       // -webkit-transition: $transition-base;
       //  -o-transition: $transition-base;

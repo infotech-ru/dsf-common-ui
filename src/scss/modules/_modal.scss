@@ -5,14 +5,14 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:math';
-@use './../utilities/functions/func_svg-url' as *;
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_svg-url' as svgurl;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-zindex' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-bootstrap-v3' as *;
-@use './../utilities/variables/var-fonts' as *;
+// @use './../utilities/variables/var-zindex' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
+// @use './../utilities/variables/var-fonts' as *;
 
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
@@ -64,12 +64,12 @@
     width: auto;
     margin: 10px;
 
-    @media (min-width: gridBreakpoints(sm)) {
+    @media (min-width: varbootstrapv3.gridBreakpoints(sm)) {
         margin: 10px auto;
         width: 640px;
     }
 
-    @media (min-width: grid-breakpoints(lg)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(lg)) {
         margin: 30px auto;
     }
 }
@@ -120,7 +120,7 @@
     .close {
         appearance: none;
         background-color: transparent;
-        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.41 9.41"><path d="M1,1,9,9" transform="translate(-0.29 -0.29)" fill="none" stroke="#bababa" stroke-width="2"/><path d="M9,1,1,9" transform="translate(-0.29 -0.29)" fill="none" stroke="#bababa" stroke-width="2"/></svg>');
+        background-image: svgurl.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.41 9.41"><path d="M1,1,9,9" transform="translate(-0.29 -0.29)" fill="none" stroke="#bababa" stroke-width="2"/><path d="M9,1,1,9" transform="translate(-0.29 -0.29)" fill="none" stroke="#bababa" stroke-width="2"/></svg>');
         background-size: 10px;
         background-repeat: no-repeat;
         border: 0;
@@ -153,7 +153,7 @@
     padding: #{val.brandSizes(modal_paddingY)}px #{val.brandSizes(modal_paddingX)}px;
 
     h5 {
-        font-size: rem(12);
+        font-size: fonts.rem(12);
         font-weight: 700;
         margin-top: 0;
         text-transform: uppercase;
@@ -161,7 +161,7 @@
 
     .h2 {
         // color: brandColors(_dark-grey);
-        font-size: rem(16);
+        font-size: fonts.rem(16);
         line-height: 18px;
         margin-top: 0;
         margin-bottom: 10px;
@@ -222,7 +222,7 @@
     overflow: scroll;
 }
 
-@media (min-width: grid-breakpoints(md)) {
+@media (min-width: varbootstrapv3.grid-breakpoints(md)) {
 
     // Используется через SIZE =>  ''
     .modal-responsive {
@@ -233,7 +233,7 @@
 
 // Используется через SIZE =>  ''
 
-@media (min-width: grid-breakpoints(xs)) {
+@media (min-width: varbootstrapv3.grid-breakpoints(xs)) {
     .modal-xs {
         width: 320px;
     }
@@ -244,57 +244,57 @@
 }
 
 .modal-sm {
-    @media (min-width: grid-breakpoints(sm)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
         width: 700px;
     }
 }
 
 .modal-md {
-    @media (min-width: grid-breakpoints(sm)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
         width: 90vw;
     }
 
-    @media (min-width: grid-breakpoints(md)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(md)) {
         width: 900px;
     }
 }
 
 .modal-lg {
-    @media (min-width: grid-breakpoints(sm)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
         width: 90vw;
     }
 
-    @media (min-width: grid-breakpoints(lg)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(lg)) {
         width: 1200px;
     }
 }
 
 .modal-xl {
-    @media (min-width: grid-breakpoints(sm)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
         width: 90vw;
     }
 
-    @media (min-width: grid-breakpoints(xl)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(xl)) {
         width: 1240px;
     }
 }
 
 .modal-xxl {
-    @media (min-width: grid-breakpoints(sm)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
         width: 90vw;
     }
 
-    @media (min-width: grid-breakpoints(xxl)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(xxl)) {
         width: 1320px;
     }
 }
 
 .modal-xxxl {
-    @media (min-width: grid-breakpoints(sm)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
         width: 90vw;
     }
 
-    @media (min-width: grid-breakpoints(xxxl)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(xxxl)) {
         width: 1400px;
     }
 }
@@ -339,19 +339,19 @@
 
     .modal-footer,
     .note-modal-footer {
-        padding: 10px rem(val.brandSizes(modal-theme2_padding)) rem(val.brandSizes(modal-theme2_padding));
+        padding: 10px fonts.rem(val.brandSizes(modal-theme2_padding)) fonts.rem(val.brandSizes(modal-theme2_padding));
     }
 
     .modal-header,
     .note-modal-header {
-        padding: rem(val.brandSizes(modal-theme2_padding)) rem(val.brandSizes(modal-theme2_padding)) 10px;
+        padding: fonts.rem(val.brandSizes(modal-theme2_padding)) fonts.rem(val.brandSizes(modal-theme2_padding)) 10px;
     }
 
     .modal-body {
-        padding: 10px rem(val.brandSizes(modal-theme2_padding)) 10px;
+        padding: 10px fonts.rem(val.brandSizes(modal-theme2_padding)) 10px;
 
         &:last-child {
-            padding-bottom: rem(val.brandSizes(modal-theme2_padding));
+            padding-bottom: fonts.rem(val.brandSizes(modal-theme2_padding));
         }
     }
 
@@ -365,38 +365,38 @@
     }
 
     .modal-header-offset-left {
-        padding-left: rem(math.div(val.brandSizes(modal-theme2_padding), 2));
+        padding-left: fonts.rem(math.div(val.brandSizes(modal-theme2_padding), 2));
     }
 
     .modal-header-offset-right {
-        padding-right: rem(math.div(val.brandSizes(modal-theme2_padding), 2));
+        padding-right: fonts.rem(math.div(val.brandSizes(modal-theme2_padding), 2));
     }
 }
 
 .modal-svgClose {
     .modal-header,
     .note-modal-header {
-        padding-right: rem(val.brandSizes(modal-header-close_size) + val.brandSizes(modal_paddingXR));
+        padding-right: fonts.rem(val.brandSizes(modal-header-close_size) + val.brandSizes(modal_paddingXR));
     }
     .modal-header .close {
         background-image: none;
-        height: rem(val.brandSizes(modal-header-close_size));
-        line-height: rem(val.brandSizes(modal-header-close_size));
+        height: fonts.rem(val.brandSizes(modal-header-close_size));
+        line-height: fonts.rem(val.brandSizes(modal-header-close_size));
         margin: 0;
         position: absolute;
-        right: rem(val.brandSizes(modal_paddingXR));
+        right: fonts.rem(val.brandSizes(modal_paddingXR));
         text-indent: 0;
         top: auto;
-        width: rem(val.brandSizes(modal-header-close_size));
+        width: fonts.rem(val.brandSizes(modal-header-close_size));
     }
 
     &.modal-light-grey2 {
         .modal-header,
         .note-modal-header {
-            padding-right: rem(val.brandSizes(modal-header-close_size) + val.brandSizes(modal-theme2_padding));
+            padding-right: fonts.rem(val.brandSizes(modal-header-close_size) + val.brandSizes(modal-theme2_padding));
         }
         .modal-header .close {
-            right: rem(val.brandSizes(modal-theme2_padding));
+            right: fonts.rem(val.brandSizes(modal-theme2_padding));
         }
     }
 }

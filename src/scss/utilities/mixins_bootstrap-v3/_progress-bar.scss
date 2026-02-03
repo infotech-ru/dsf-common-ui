@@ -1,4 +1,4 @@
-@use 'gradients' as *;
+@use 'gradients' as gradients;
 
 // Progress bars
 
@@ -7,6 +7,6 @@
 
   // Deprecated parent class requirement as of v3.2.0
   .progress-striped & {
-    @include gradient-striped;
+    @include gradients.gradient-striped;
   }
 }

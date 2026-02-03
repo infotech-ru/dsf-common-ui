@@ -4,10 +4,10 @@
 /* path: dsf-common-ui/src/scss/layout/_pageHeader.scss                       */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-zindex' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-zindex' as *;
 
 .pageHeader{
   align-items: center;
@@ -23,13 +23,13 @@
     color: val.brandPalette(pageHeader_color);
     display: flex;
     justify-content: space-between;
-    font-size: rem(18);
+    font-size: fonts.rem(18);
     font-weight: 400;
-    line-height: rem(21);
+    line-height: fonts.rem(21);
     margin: 0;
     .mobile-view &{
-      font-size: rem(14);
-      line-height: rem(16);
+      font-size: fonts.rem(14);
+      line-height: fonts.rem(16);
     }
     .label{
       align-self: center;

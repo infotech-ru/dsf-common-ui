@@ -4,12 +4,12 @@
 //* старая версия формирования сетки                                         *//
 //* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ *//
 @use 'sass:math';
-@use './../variables/var-bootstrap-v3' as *;
+@use './../variables/var-bootstrap-v3' as varbootstrapv3;
 
 // ------------------------------------------------------------------- Mixins //
 @mixin make-grid-columns($i: 1, $j: #{0}-5, $list: ".col-xs-#{$j}, .col-sm-#{$j}, .col-md-#{$j}, .col-lg-#{$j}") {
-  @for $i from (0 + 1) through $grid-columns {
-    @if $i == $grid-columns{
+  @for $i from (0 + 1) through varbootstrapv3.$grid-columns {
+    @if $i == varbootstrapv3.$grid-columns{
       $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
     }
     @else{
@@ -21,15 +21,15 @@
     // Prevent columns from collapsing when empty
     min-height: 1px;
     // Inner gutter via padding
-    padding-right: math.floor(calc($grid-gutter-width / 2));
-    padding-left: math.ceil(calc($grid-gutter-width / 2));
+    padding-right: math.floor(calc(varbootstrapv3.$grid-gutter-width / 2));
+    padding-left: math.ceil(calc(varbootstrapv3.$grid-gutter-width / 2));
   }
 }
 
 // ------------------------------------------------------------------- Mixins //
 @mixin float-grid-columns($class, $i: 1, $j: #{0}-5, $list: ".col-#{$class}-#{$j}") {
-  @for $i from (0 + 1) through $grid-columns {
-    @if $i == $grid-columns{
+  @for $i from (0 + 1) through varbootstrapv3.$grid-columns {
+    @if $i == varbootstrapv3.$grid-columns{
       $list: "#{$list}, .col-#{$class}-#{$i}";
     }
     @else{
@@ -44,28 +44,28 @@
 // ------------------------------------------------------------------- Mixins //
 @mixin calc-grid-column($index, $class, $type) {
   @if ($type == width) and ($index >= 0) {
-    @if $index == $grid-columns{
+    @if $index == varbootstrapv3.$grid-columns{
       .col-#{$class}-#{$index} {
-        width: math.percentage(calc($index / $grid-columns));
+        width: math.percentage(calc($index / varbootstrapv3.$grid-columns));
       }
     }
     @else if $index == 0{
       .col-#{$class}-#{$index}-#{5} {
-        width: math.percentage(calc($index / $grid-columns + ( ( ($index + 1) / $grid-columns - $index / $grid-columns) / 2) ) );
+        width: math.percentage(calc($index / varbootstrapv3.$grid-columns + ( ( ($index + 1) / varbootstrapv3.$grid-columns - $index / varbootstrapv3.$grid-columns) / 2) ) );
       }
     }
     @else{
       .col-#{$class}-#{$index} {
-        width: math.percentage(calc($index / $grid-columns));
+        width: math.percentage(calc($index / varbootstrapv3.$grid-columns));
       }
       .col-#{$class}-#{$index}-#{5} {
-        width: math.percentage(calc($index / $grid-columns + ( ( ($index + 1) / $grid-columns - $index / $grid-columns) / 2) ) );
+        width: math.percentage(calc($index / varbootstrapv3.$grid-columns + ( ( ($index + 1) / varbootstrapv3.$grid-columns - $index / varbootstrapv3.$grid-columns) / 2) ) );
       }
     }
   }
   @if ($type == push) and ($index > 0) {
     .col-#{$class}-push-#{$index} {
-      left: math.percentage(calc($index / $grid-columns));
+      left: math.percentage(calc($index / varbootstrapv3.$grid-columns));
     }
   }
   @if ($type == push) and ($index == 0) {
@@ -75,7 +75,7 @@
   }
   @if ($type == pull) and ($index > 0) {
     .col-#{$class}-pull-#{$index} {
-      right: math.percentage(calc($index / $grid-columns));
+      right: math.percentage(calc($index / varbootstrapv3.$grid-columns));
     }
   }
   @if ($type == pull) and ($index == 0) {
@@ -85,7 +85,7 @@
   }
   @if ($type == offset) {
     .col-#{$class}-offset-#{$index} {
-      margin-left: math.percentage(calc($index / $grid-columns));
+      margin-left: math.percentage(calc($index / varbootstrapv3.$grid-columns));
     }
   }
 }
@@ -101,8 +101,8 @@
 // Create grid for specific class
 @mixin make-grid($class) {
   @include float-grid-columns($class);
-  @include loop-grid-columns($grid-columns, $class, width);
-  @include loop-grid-columns($grid-columns, $class, pull);
-  @include loop-grid-columns($grid-columns, $class, push);
-  @include loop-grid-columns($grid-columns, $class, offset);
+  @include loop-grid-columns(varbootstrapv3.$grid-columns, $class, width);
+  @include loop-grid-columns(varbootstrapv3.$grid-columns, $class, pull);
+  @include loop-grid-columns(varbootstrapv3.$grid-columns, $class, push);
+  @include loop-grid-columns(varbootstrapv3.$grid-columns, $class, offset);
 }

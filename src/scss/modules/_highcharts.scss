@@ -4,10 +4,10 @@
 /* path: dsf-common-ui/src/scss/modules/_highcharts.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-placeholder' as *;
+// @use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-placeholder' as placeholder;
 
 .highcharts{
   $this: &;
@@ -97,7 +97,7 @@
   &-axis-labels {
     fill: var(--chart-grey4);
     cursor: default;
-    font-size: rem(10);
+    font-size: fonts.rem(10);
     // font-size: 0.8em;
   }
   &-grid-line {

@@ -4,11 +4,11 @@
 /* path: dsf-common-ui/src/scss/modules/_square.scss                          */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/functions/func_maps' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/functions/func_maps' as maps;
+@use './../utilities/variables/var-colors' as colors;
+// @use './../utilities/variables/var-sizes' as *;
 
 .square {
     align-items: center;
@@ -40,10 +40,10 @@
     &-title {
         align-items: center;
         display: inline-flex;
-        font-size: rem(13);
+        font-size: fonts.rem(13);
         gap: 5px;
         justify-content: center;
-        line-height: rem(16);
+        line-height: fonts.rem(16);
         overflow: hidden;
         text-align: center;
         text-overflow: ellipsis;
@@ -60,16 +60,16 @@
     &-text {
         align-items: center;
         display: inline-flex;
-        font-size: rem(18);
+        font-size: fonts.rem(18);
         font-weight: 600;
-        gap: rem(5);
+        gap: fonts.rem(5);
         justify-content: center;
-        line-height: rem(24);
+        line-height: fonts.rem(24);
         text-align: center;
         &_ValueSmall{
-            font-size: rem(11);
+            font-size: fonts.rem(11);
             font-weight: normal;
-            line-height: rem(14);
+            line-height: fonts.rem(14);
         }
         .svg--icon__24vb{
             height: 24px;
@@ -82,32 +82,32 @@
     }
 
     &-action{
-        bottom: rem(10);
+        bottom: fonts.rem(10);
         position: absolute;
-        right: rem(10);
+        right: fonts.rem(10);
     }
 
-    @each $name, $value in $brand-hover {
+    @each $name, $value in colors.$brand-hover {
         &#{$name} {
-            background-color: var(--custom-square_bgc, map-deep-get($brand-hover, $name, 'bgColor'));
-            border-color: var(--custom-square_border-color, map-deep-get($brand-hover, $name, 'borderColor'));
-            color: var(--custom-square_color, map-deep-get($brand-hover, $name, 'color'));
-            // #{--svg-icon-fill}: map-deep-get($brand-hover, $name, 'color');
-            // #{--svg-icon-stroke}: map-deep-get($brand-hover, $name, 'color');
-            // #{--svg-icon-fill_blue}: map-deep-get($brand-hover, $name, 'color');
-            // #{--svg-icon-stroke_blue}: map-deep-get($brand-hover, $name, 'color');
-            // #{--svg-valute-fill}: map-deep-get($brand-hover, $name, 'color');
+            background-color: var(--custom-square_bgc, maps.map-deep-get(colors.$brand-hover, $name, 'bgColor'));
+            border-color: var(--custom-square_border-color, maps.map-deep-get(colors.$brand-hover, $name, 'borderColor'));
+            color: var(--custom-square_color, maps.map-deep-get(colors.$brand-hover, $name, 'color'));
+            // #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
+            // #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
+            // #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
+            // #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
+            // #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
             &.isHover,
             &:hover,
             &.active {
-                background-color: var(--custom-square_bgc__hover, map-deep-get($brand-hover, $name, 'bgColor-hover'));
-                border-color: var(--custom-square_border-color__hover, map-deep-get($brand-hover, $name, 'borderColor-hover'));
-                color: var(--custom-square_color__hover, map-deep-get($brand-hover, $name, 'color-hover'))
-                // #{--svg-icon-fill}: map-deep-get($brand-hover, $name, 'color-hover');
-                // #{--svg-icon-stroke}: map-deep-get($brand-hover, $name, 'color-hover');
-                // #{--svg-icon-fill_blue}: map-deep-get($brand-hover, $name, 'color-hover');
-                // #{--svg-icon-stroke_blue}: map-deep-get($brand-hover, $name, 'color-hover');
-                // #{--svg-valute-fill}: map-deep-get($brand-hover, $name, 'color-hover');
+                background-color: var(--custom-square_bgc__hover, maps.map-deep-get(colors.$brand-hover, $name, 'bgColor-hover'));
+                border-color: var(--custom-square_border-color__hover, maps.map-deep-get(colors.$brand-hover, $name, 'borderColor-hover'));
+                color: var(--custom-square_color__hover, maps.map-deep-get(colors.$brand-hover, $name, 'color-hover'))
+                // #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-hover, $name, 'color-hover');
+                // #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-hover, $name, 'color-hover');
+                // #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-hover, $name, 'color-hover');
+                // #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-hover, $name, 'color-hover');
+                // #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-hover, $name, 'color-hover');
             }
         }
         &#{$name}__onAction {
@@ -115,14 +115,14 @@
             &.active,
             &.isHover:hover,
             &.active:hover {
-                background-color: var(--custom-square_bgc__onAction, map-deep-get($brand-hover, $name, 'bgColor'));
-                border-color: var(--custom-square_border-color__onAction, map-deep-get($brand-hover, $name, 'borderColor'));
-                color: var(--custom-square_color__onAction, map-deep-get($brand-hover, $name, 'color'));
-                // #{--svg-icon-fill}: map-deep-get($brand-hover, $name, 'color');
-                // #{--svg-icon-stroke}: map-deep-get($brand-hover, $name, 'color');
-                // #{--svg-icon-fill_blue}: map-deep-get($brand-hover, $name, 'color');
-                // #{--svg-icon-stroke_blue}: map-deep-get($brand-hover, $name, 'color');
-                // #{--svg-valute-fill}: map-deep-get($brand-hover, $name, 'color');
+                background-color: var(--custom-square_bgc__onAction, maps.map-deep-get(colors.$brand-hover, $name, 'bgColor'));
+                border-color: var(--custom-square_border-color__onAction, maps.map-deep-get(colors.$brand-hover, $name, 'borderColor'));
+                color: var(--custom-square_color__onAction, maps.map-deep-get(colors.$brand-hover, $name, 'color'));
+                // #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
+                // #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
+                // #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
+                // #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
+                // #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-hover, $name, 'color');
             }
         }
     }

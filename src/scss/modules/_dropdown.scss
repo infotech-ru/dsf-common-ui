@@ -4,14 +4,14 @@
 /* path: dsf-common-ui/src/scss/modules/_dropdown.scss                        */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_svg-url' as *;
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_svg-url' as svgurl;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-placeholder' as *;
-@use './../utilities/variables/var-zindex' as *;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-placeholder' as varplaceholder;
+// @use './../utilities/variables/var-zindex' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-fonts' as *;
+// @use './../utilities/variables/var-sizes' as *;
 
 
 // Dropdown arrow/caret
@@ -21,10 +21,10 @@
   height: 0;
   margin-left: 5px;
   vertical-align: middle;
-  border-top: rem(val.brandSizes(caretDropdown_size)) dashed;
-  // border-top: rem(val.brandSizes(caretDropdown_size)) solid \9; // IE8
-  border-right: rem(val.brandSizes(caretDropdown_size)) solid transparent;
-  border-left: rem(val.brandSizes(caretDropdown_size)) solid transparent;
+  border-top: fonts.rem(val.brandSizes(caretDropdown_size)) dashed;
+  // border-top: fonts.rem(val.brandSizes(caretDropdown_size)) solid \9; // IE8
+  border-right: fonts.rem(val.brandSizes(caretDropdown_size)) solid transparent;
+  border-left: fonts.rem(val.brandSizes(caretDropdown_size)) solid transparent;
 }
 
 // The dropdown wrapper (div)
@@ -149,8 +149,8 @@
 .dropdown-header {
   display: block;
   color: val.brandColors(dropdownHeader_color);
-  font-size: rem(val.fontSizes(dropdownHeader));
-  line-height: rem(val.fontSizes(dropdownHeader));
+  font-size: fonts.rem(val.fontSizes(dropdownHeader));
+  line-height: fonts.rem(val.fontSizes(dropdownHeader));
   // padding: 3px 20px;
   padding: 6px 9px;
   white-space: nowrap; // as with > li > a
@@ -224,7 +224,7 @@
     }
   }
   .dropdown-menu{
-    padding-right: rem(calc(val.brandSizes(dropdownLink_paddingX) * 2));
+    padding-right: fonts.rem(calc(val.brandSizes(dropdownLink_paddingX) * 2));
     > li > a,
     .dropdown__link{
       box-sizing: content-box;
@@ -245,7 +245,7 @@
       background-repeat: no-repeat;
       background-size: 6px 14px; // #12782
       background-position: right center;
-      background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17"><path d="M.5,16.5l8-8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/><path d="M.5.5l8,8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-image: svgurl.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17"><path d="M.5,16.5l8-8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/><path d="M.5.5l8,8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/></svg>');
       content: '';
       height: 24px;
       margin-left: auto;

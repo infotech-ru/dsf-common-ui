@@ -4,14 +4,13 @@
 /* path: dsf-common-ui/src/scss/modules/_tabs.scss                            */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './buttons' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
+// @use './../utilities/variables/var-fonts' as *;
+// @use './../utilities/variables/var-sizes' as *;
+@use './buttons' as buttons;
 
 .nav-tabs,
 .nav-pills,
@@ -31,7 +30,7 @@
   align-items: center;
 }
 .nav-btns {
-  gap: rem(5);
+  gap: fonts.rem(5);
 }
 .nav-tabs>li,
 .nav-pills>li,
@@ -66,9 +65,9 @@
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
-  font-size: rem(val.fontSizes(navTabs));
+  font-size: fonts.rem(val.fontSizes(navTabs));
   font-weight: 400;
-  height: rem(val.lineHeight(navTabs));
+  height: fonts.rem(val.lineHeight(navTabs));
   margin: 0;
   padding: 0px 15px;
   text-decoration: none;
@@ -91,9 +90,9 @@
   background-color: val.brandPalette(navPills_bg);
   color: val.brandPalette(navPills_color);
   display: inline-block;
-  font-size: rem(val.fontSizes(navPills));
+  font-size: fonts.rem(val.fontSizes(navPills));
   font-weight: val.fontWeight(navPills);
-  line-height: rem(val.lineHeight(navPills));
+  line-height: fonts.rem(val.lineHeight(navPills));
   height: min-content;
   padding: 0 #{val.brandSizes(navPills-paddingX)}px;
   &:hover,
@@ -170,8 +169,8 @@
   background-color: val.brandPalette(tabsPane-active_bgc);
   border-radius: 0;
   border: none;
-  padding: rem(10) rem(10) 0;
+  padding: fonts.rem(10) fonts.rem(10) 0;
   .modal & {
-    padding: rem(10) 0 0;
+    padding: fonts.rem(10) 0 0;
   }
 }

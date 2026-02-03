@@ -5,16 +5,16 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:color';
-@use './../utilities/functions/func_fonts' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-@use './../utilities/variables/var-colors' as *;
-@use './../utilities/variables/var-sizes' as *;
-@use './../utilities/variables/var-lineHeights' as *;
-@use './../utilities/variables/var-fonts' as *;
-@use './../utilities/variables/var-placeholder' as *;
+// @use './../utilities/variables/var-colors' as *;
+// @use './../utilities/variables/var-sizes' as *;
+// @use './../utilities/variables/var-lineHeights' as *;
+// @use './../utilities/variables/var-fonts' as *;
+@use './../utilities/variables/var-placeholder' as varplaceholder;
 
-@use './../utilities/mixins_bootstrap-v3/clearfix' as *;
-@use './../utilities/mixins/placeholder' as *;
+@use './../utilities/mixins_bootstrap-v3/clearfix' as clearfix;
+@use './../utilities/mixins/placeholder' as placeholder;
 
 .comment-block {
     &--field {
@@ -47,7 +47,7 @@
         &:last-child {
             margin-bottom: 0;
         }
-        @include clearfix;
+        @include clearfix.clearfix;
     }
     &--info {
         // margin-bottom: 5px;
@@ -84,8 +84,8 @@
     }
     &--comment {
         color: val.brandColors(_dark-grey);
-        font-size: rem(12);
-        line-height: rem(14);
+        font-size: fonts.rem(12);
+        line-height: fonts.rem(14);
         padding: 10px;
         position: relative;
         min-width: calc(55% - 11px);
@@ -117,7 +117,7 @@
         border-color: val.brandColors(_grey2);
         border-style: solid;
         border-width: 1px;
-        border-radius: rem(0);
+        border-radius: fonts.rem(0);
         textarea.form-control {
             background-color: transparent;
             border: none;
@@ -131,7 +131,7 @@
             &:first-child {
                 padding-left: 10px;
             }
-            @include placeholder2(val.brandColors(_dark-grey), 400, 12);
+            @include placeholder.placeholder2(val.brandColors(_dark-grey), 400, 12);
             + .input-group-btn .btn {
                 display: flex;
                 height: 30px;
@@ -192,7 +192,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-image: none;
-        background-size: rem(22);
+        background-size: fonts.rem(22);
         border: none;
         border-left: none;
         .svg--icon {
@@ -215,7 +215,7 @@
     border-radius: #{val.brandSizes(borderRadiusFormElem)}px;
     display: flex;
     justify-content: space-between;
-    // height: rem(calc(val.lineHeight(input) + 2)); //  + border-top and border-bottom
+    // height: fonts.rem(calc(val.lineHeight(input) + 2)); //  + border-top and border-bottom
     position: relative;
     padding-right: 0px;
     &__whatsup{
@@ -225,7 +225,7 @@
         align-items: flex-start;
         height: auto;
         padding-top: 6px;
-        min-height: rem(calc(val.lineHeight(input) * 2 + 2));
+        min-height: fonts.rem(calc(val.lineHeight(input) * 2 + 2));
         // .btn-icon{
             // margin-top: 6px;
         // }
@@ -238,21 +238,21 @@
     border-radius: 0;
     color: val.brandPalette(formControl-color);
     flex-basis: 100%;
-    font-size: rem(val.fontSizes(formElem));
-    line-height: rem(val.lineHeight(input));
-    height: rem(val.lineHeight(input));
-    padding: 0 rem(calc((val.brandSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
+    font-size: fonts.rem(val.fontSizes(formElem));
+    line-height: fonts.rem(val.lineHeight(input));
+    height: fonts.rem(val.lineHeight(input));
+    padding: 0 fonts.rem(calc((val.brandSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
     resize: none;
     // resize: vertical;
     overflow: hidden;
-    @include placeholder2(val.brandPalette(formControl-placeholder), 400, 12);
+    @include placeholder.placeholder2(val.brandPalette(formControl-placeholder), 400, 12);
     .commentBlock_inputGroup__whatsup &{
-      @include placeholder2(val.brandColors(grey), 400, 12);
+      @include placeholder.placeholder2(val.brandColors(grey), 400, 12);
     }
     .commentBlock_inputGroup__bigHeight &{
         height: auto;
-        min-height: rem(calc(val.lineHeight(input) * 2 + 2));
-        line-height: rem(calc(val.fontSizes(formElem) + 2));
+        min-height: fonts.rem(calc(val.lineHeight(input) * 2 + 2));
+        line-height: fonts.rem(calc(val.fontSizes(formElem) + 2));
     }
     &__resizeVert{
         resize: vertical;
@@ -319,9 +319,9 @@
   &_comments {
     color: val.brandPalette(commentBlockComments_color);
     display: inline-flex;
-    font-size: rem(12);
+    font-size: fonts.rem(12);
     flex-direction: column;
-    line-height: rem(14);
+    line-height: fonts.rem(14);
     padding: 10px;
     position: relative;
     // min-width: calc(55% - 11px);

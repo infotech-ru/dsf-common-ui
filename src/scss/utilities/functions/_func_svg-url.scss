@@ -5,7 +5,7 @@
 // @return {string} Encoded SVG data URL.
 //
 // DEPENDENCIES: @str-replace from helpers-functions.scss
-@use './func_helpers-functions' as helpers;
+@use './func_helpers-functions' as *;
 
 @function svg-url($svg) {
   $svg: str-replace($svg, '"', '\'');
@@ -20,18 +20,6 @@
   @return url("data:image/svg+xml;charset=utf8,#{$svg}");
 }
 
-@function svgToUrl($svg) {
-  $svg: symbolreplace($svg, '"', '\'');
-  $svg: symbolreplace($svg, '%', '%25');
-  $svg: symbolreplace($svg, '<', '%3C');
-  $svg: symbolreplace($svg, '>', '%3E');
-  $svg: symbolreplace($svg, '&', '%26');
-  $svg: symbolreplace($svg, '#', '%23');
-  $svg: symbolreplace($svg, '{', '%7B');
-  $svg: symbolreplace($svg, '}', '%7D');
-  $svg: symbolreplace($svg, ';', '%3B');
-  @return url("data:image/svg+xml;charset=utf8,#{$svg}");
-}
 
 @function sprite($name){
   @return url($path-sprite + $name);

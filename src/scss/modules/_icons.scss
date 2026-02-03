@@ -4,7 +4,7 @@
 /* path: dsf-common-ui/src/scss/modules/_icons.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-@use './../utilities/variables/var-sizes' as *;
+@use './../utilities/variables/var-sizes' as sizes;
 
 .svg--icon {
     $this: &;
@@ -18,7 +18,7 @@
         width: auto;
     }
 }
-@each $svgMod in $svgSizes{
+@each $svgMod in sizes.$svgSizes{
   .svg--icon__#{$svgMod}{
     &,
     &.svg--icon{ 
