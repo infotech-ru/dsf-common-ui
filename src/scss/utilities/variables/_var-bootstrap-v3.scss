@@ -2,6 +2,7 @@
 @use 'sass:math';
 @use './../functions/func_maps' as maps;
 @use './../mixins/assert' as assert;
+@use './../variables/_var-bootstrapColors' as varBootstrapColors;
 
 $bootstrap-sass-asset-helper: false !default;
 
@@ -9,12 +10,12 @@ $bootstrap-sass-asset-helper: false !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              #000 !default;
-$gray-darker:            color.scale($gray-base, $lightness: 13.5%) !default; // #222
-$gray-dark:              color.scale($gray-base, $lightness: 2%) !default;   // #333
-$gray:                   color.scale($gray-base, $lightness: 33.5%) !default; // #555
-$gray-light:             color.scale($gray-base, $lightness: 46.7%) !default; // #777
-$gray-lighter:           color.scale($gray-base, $lightness: 93.5%) !default; // #eee
+// $gray-base:              #000 !default;
+$gray-darker:            color.scale(varBootstrapColors.$gray-base, $lightness: 13.5%) !default; // #222
+$gray-dark:              color.scale(varBootstrapColors.$gray-base, $lightness: 2%) !default;   // #333
+$gray:                   color.scale(varBootstrapColors.$gray-base, $lightness: 33.5%) !default; // #555
+$gray-light:             color.scale(varBootstrapColors.$gray-base, $lightness: 46.7%) !default; // #777
+$gray-lighter:           color.scale(varBootstrapColors.$gray-base, $lightness: 93.5%) !default; // #eee
 
 $brand-primary:         color.adjust(rgba(#428bca, 1), $lightness: -6.5%) !default; // #337ab7
 $brand-success:         #5cb85c !default;
