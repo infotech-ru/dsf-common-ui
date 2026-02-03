@@ -8,8 +8,8 @@
 @use "sass:map";
 @use "sass:math";
 @use "sass:string";
-@use './func_helpers-functions' as *;
-@use './../variables/var-sizes' as *;
+@use './func_helpers-functions' as helper;
+@use './../variables/var-sizes' as sizes;
 
 @function font-subset(){
   $subset-cyrillic: '';

@@ -10,7 +10,7 @@
 @use 'sass:string';
 @use 'sass:meta';
 @use 'sass:color';
-@use './func_helpers-functions' as *;
+@use './func_helpers-functions' as helper;
 
 @function escape-svg($string) {
   @if string.index($string, "data:image/svg+xml") {

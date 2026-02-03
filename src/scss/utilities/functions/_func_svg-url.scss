@@ -5,7 +5,7 @@
 // @return {string} Encoded SVG data URL.
 //
 // DEPENDENCIES: @str-replace from helpers-functions.scss
-@use './func_helpers-functions' as *;
+@use './func_helpers-functions' as helpers;
 
 @function svg-url($svg) {
   $svg: str-replace($svg, '"', '\'');

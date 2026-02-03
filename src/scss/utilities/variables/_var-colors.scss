@@ -348,7 +348,7 @@ $brand-btn: (
   success_svg_blue__hover:                map.get($brand-colors, _white),
   success_textShadow:                     map.get($brand-colors, _black),
   
-)!default;;
+)!default;
 
 $brand-label: (
   'default': (
@@ -549,7 +549,7 @@ $brand-label: (
     'svg-outline':                        map.get($brand-colors, _grey4),
     'svg-outline_blue':                   map.get($brand-colors, _grey4),
   ),
-)!default;;
+)!default;
 
 $brand-alert:(
   default_bg:                             map.get($brand-colors, _light-grey2),
@@ -582,7 +582,7 @@ $brand-alert:(
   info_close:                             map.get($brand-colors, _light-blue),
   info_color:                             map.get($brand-colors, _light-blue),
   info_title:                             map.get($brand-colors, _light-blue),
-)!default;;
+)!default;
 
 $brand-table: ( 
   caption_color:                          map.get($brand-colors, _dark-grey),
@@ -599,7 +599,7 @@ $brand-table: (
   tfoot_color:                            map.get($brand-colors, _dark-grey),
   tdStrip_bgc:                            map.get($brand-colors, _light-grey),
   tdHover_bgc:                            map.get($brand-colors, _light-grey2),
-)!default;;
+)!default;
 
 $brand-palette: (
   body_bgc:                               map.get($brand-colors, _light-grey3),
