@@ -7,9 +7,11 @@
 
 @use "sass:map";
 @use "sass:math";
+@use "sass:list";
 @use "sass:string";
 @use './func_helpers-functions' as helpers;
 @use './../variables/var-sizes' as sizes;
+@use './../variables/var-fonts' as fonts;
 
 @function font-subset(){
   $subset-cyrillic: '';
@@ -68,4 +70,40 @@
     $context: $context * 1px;
   }
   @return math.div($pixels, $context) * 1em;
+}
+
+// ----------------------------------------------------------------- FUNCTION //
+// ИСПОЛЬЗОВАНИЕ ИМЯ ШРИФТА ИЗ ПЕРЕМЕННОЙ $fontsList
+// HOW USE: font-family(); или для конкретного шрифта из переменной, font-family("Monserrat");
+
+@function font-family($font-name: null) {
+  @if $font-name != null and $font-name != "" {
+    @if map.has-key(fonts.$fontsList, $font-name) {
+      @return get-font-stack($font-name);
+    }
+    @warn "Шрифт '#{$font-name}' не найден. Используется основной.";
+  }
+  
+  @return get-default-font-family();
+}
+
+@function get-default-font-family() {
+  $keys: map.keys(fonts.$fontsList);
+  
+  @if list.length($keys) == 0 {
+    @return Roboto, Arial, 'Helvetica Neue', sans-serif;
+  }
+  
+  @if map.has-key(fonts.$fontsList, "Roboto") {
+    @return get-font-stack("Roboto");
+  }
+  
+  @return get-font-stack(list.nth($keys, 1));
+}
+
+@function get-font-stack($name) {
+  @if $name == "Roboto" {
+    @return Roboto, Arial, 'Helvetica Neue', sans-serif;
+  }
+  @return $name, Roboto, Arial, 'Helvetica Neue', sans-serif;
 }

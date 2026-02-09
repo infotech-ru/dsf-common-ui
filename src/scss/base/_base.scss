@@ -51,7 +51,7 @@ html{
 body {
   background-color: val.brandPalette(body_bgc);
   color: val.brandPalette(body_color);
-  font-family: Roboto, Arial, 'Helvetica Neue', sans-serif;
+  font-family: fonts.font-family();
   font-size: fonts.rem(val.fontSizes(body));
   line-height: fonts.rem(val.lineHeight(body));
   // height: 100vh;  // спорное правило
