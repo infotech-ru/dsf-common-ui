@@ -30,4 +30,4 @@ $zindex: (
   popover:                                                                 2000,
   // tooltip: fix for tooltip in modal, because .modal-dialog z-index 1050
   // zindex-tooltip:                                                          1070,
-);
+)!default;
