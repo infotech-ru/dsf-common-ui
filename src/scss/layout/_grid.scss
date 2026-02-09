@@ -8,6 +8,7 @@
 @use './../utilities/mixins/breakpoints' as breakpoints;
 
 .container{
+  width: 100%;
   @include breakpoints.makeContainer();
 
   @include breakpoints.makeContainerGrid();
