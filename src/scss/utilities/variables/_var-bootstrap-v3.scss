@@ -334,7 +334,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 $grid-columns:              12 !default;
 $gutter:                            10px;
 $grid-gutter-width:         10px !default;
-$grid-gutter-width-base:            10px;
+$grid-gutter-width-base:            10px !default;
 $grid-gutter-width-base-equal:      true; // убрать лишние правила при одинковом значении для всех media
 $enable-grid-flex:                  true !default;
 
