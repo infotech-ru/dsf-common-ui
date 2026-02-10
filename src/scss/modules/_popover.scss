@@ -37,7 +37,7 @@
   // text-align: start;
   text-decoration: none;
   text-shadow: none;
-  text-transform: none;
+  text-transform: val.textTransform(popover);
   top: 0;
   // word-break: normal;
   word-spacing: normal;

@@ -27,7 +27,7 @@
   // text-align: start;
   text-decoration: none;
   text-shadow: none;
-  text-transform: none;
+  text-transform: val.textTransform(tooltip);
   // word-break: normal;
   word-spacing: normal;
   word-wrap: break-word;

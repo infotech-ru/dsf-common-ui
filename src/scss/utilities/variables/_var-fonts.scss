@@ -53,13 +53,23 @@ $fontWeight: (
   controlLabel:                                                             400,
   formElem:                                                                 400,
   headings:                                                                 400,
-  headingH1:                                                                400,
   headingH2:                                                                400,
   headingH3:                                                                700,
   headingH4:                                                                700,
-  headingH5:                                                                400,
   inputGroupElem:                                                           400,
   navPills:                                                                 400,
+)!default;
+
+$textTransform: (
+  headings:                                                                 none,
+  headingH4:                                                                uppercase,
+  headerTitle:                                                              uppercase,
+  label:                                                                    uppercase,
+  labelChip:                                                                none,
+  popover:                                                                  none,
+  radioCheckLabel:                                                          uppercase,
+  tableSummary:                                                             uppercase,
+  tooltip:                                                                  none,
 )!default;
 
 $fontSizeList: 8, 10, 11, 12, 13, 14, 16, 18, 20, 24, 48;

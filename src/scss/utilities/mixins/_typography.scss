@@ -1,0 +1,82 @@
+// ------------------------------------------------------------------- Mixins //
+@use "sass:math";
+@use "sass:map";
+@use "sass:string";
+@use '../functions/func_maps' as maps;
+@use '../functions/func_fonts' as funcFonts;
+@use '../variables/var-fonts' as varfonts;
+@use '../variables/var-bootstrap-v3' as varbootstrapv3;
+@use '../variables/var-lineHeights' as lineheights;
+@use '../mixins_bootstrap-v4/breakpoints' as breakpoints;
+
+@mixin responsive-font-size($baseKey) {
+  $font-size: maps.val(varfonts.$fontSizes, $baseKey);
+  
+  @if $font-size {
+    font-size: funcFonts.rem($font-size);
+  }
+  
+  @each $key, $value in varfonts.$fontSizes {
+    @if string.index($key, $baseKey) == 1 and $key != $baseKey {
+      $postfix: string.slice($key, string.length($baseKey) + 1);
+      
+      @if string.index($postfix, '__') == 1 {
+        $breakpoint-name: string.slice($postfix, 3);
+        
+        @if map.has-key(varbootstrapv3.$grid-breakpoints, $breakpoint-name) {
+          @include breakpoints.media-breakpoint-up($breakpoint-name) {
+            font-size: funcFonts.rem($value);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin responsive-font-weight($baseKey) {
+  $font-weight: maps.val(varfonts.$fontWeight, $baseKey);
+  
+  @if $font-weight {
+    font-weight: $font-weight;
+  }
+  
+  @each $key, $value in varfonts.$fontWeight {
+    @if string.index($key, $baseKey) == 1 and $key != $baseKey {
+      $postfix: string.slice($key, string.length($baseKey) + 1);
+      
+      @if string.index($postfix, '__') == 1 {
+        $breakpoint-name: string.slice($postfix, 3);
+        
+        @if map.has-key(varbootstrapv3.$grid-breakpoints, $breakpoint-name) {
+          @include breakpoints.media-breakpoint-up($breakpoint-name) {
+            font-weight: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin responsive-line-height($baseKey) {
+  $line-height: maps.val(lineheights.$lineHeight, $baseKey);
+  
+  @if $line-height {
+    line-height: funcFonts.rem($line-height);
+  }
+  
+  @each $key, $value in lineheights.$lineHeight {
+    @if string.index($key, $baseKey) == 1 and $key != $baseKey {
+      $postfix: string.slice($key, string.length($baseKey) + 1);
+      
+      @if string.index($postfix, '__') == 1 {
+        $breakpoint-name: string.slice($postfix, 3);
+        
+        @if map.has-key(varbootstrapv3.$grid-breakpoints, $breakpoint-name) {
+          @include breakpoints.media-breakpoint-up($breakpoint-name) {
+            line-height: funcFonts.rem($value);
+          }
+        }
+      }
+    }
+  }
+}

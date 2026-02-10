@@ -7,9 +7,6 @@
 @use './../utilities/functions/func_svg-url' as svg-url;
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-sizes' as *;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-zindex' as *;
 
 .header {
   // background: linear-gradient(180deg, #F9F9F9 0%, #CACACA 100%);
@@ -84,7 +81,7 @@
     }
   }
   &__title {
-    text-transform: uppercase;
+    text-transform: val.textTransform(headerTitle);
     font-size: 14px;
     color: #7f8489;
     display: inline-block;

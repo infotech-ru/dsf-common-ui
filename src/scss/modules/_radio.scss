@@ -47,7 +47,7 @@
             margin-bottom: 0;
             padding: 0;
             position: relative;
-            text-transform: uppercase;
+            text-transform: val.textTransform(radioCheckLabel);
             &:before {
                 display: none;
             }
@@ -62,7 +62,7 @@
                 position: relative;
                 line-height: fonts.rem(18);
                 margin-top: fonts.rem(-4);
-                text-transform: uppercase;
+                text-transform: val.textTransform(radioCheckLabel);
             }
             .svg--icon{
                 margin-right: fonts.rem(6);

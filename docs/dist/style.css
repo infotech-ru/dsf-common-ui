@@ -855,10 +855,10 @@ h3, .h3 {
 }
 
 h4, .h4 {
+  text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 0.875rem;
-  text-transform: uppercase;
 }
 
 h5, .h5 {

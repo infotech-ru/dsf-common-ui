@@ -77,6 +77,9 @@
 @function _fontWeight($keys...) {
   @return maps.val(fonts.$fontWeight, $keys...);
 }
+@function textTransform($keys...) {
+  @return maps.val(fonts.$textTransform, $keys...);
+}
 @function lineHeight($keys...) {
   @return maps.val(lineheights.$lineHeight, $keys...);
 }

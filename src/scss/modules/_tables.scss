@@ -430,7 +430,7 @@ tbody tr {
 .summary{
   font-size: fonts.rem(11);
   text-align: right;
-  text-transform: uppercase;
+  text-transform: val.textTransform(tableSummary);
   &:empty{
     display: none;
   }
