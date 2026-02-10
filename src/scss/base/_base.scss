@@ -9,6 +9,7 @@
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-colors' as colors;
+@use './../utilities/mixins/typography' as typography;
 // @use './../utilities/variables/var-fonts' as *;
 // @use './../utilities/variables/var-lineHeights' as *;
 // @use './../utilities/variables/var-sizes' as *;
@@ -52,8 +53,6 @@ body {
   background-color: val.brandPalette(body_bgc);
   color: val.brandPalette(body_color);
   font-family: fonts.font-family();
-  font-size: fonts.rem(val.fontSizes(body));
-  line-height: fonts.rem(val.lineHeight(body));
   // height: 100vh;  // спорное правило
   min-height: 100vh;  // спорное правило
   text-rendering: optimizeLegibility;
@@ -61,6 +60,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: 'liga', 'kern';
+  @include typography.responsive-font-size('body');
+  @include typography.responsive-line-height('body');
   &.guest-view,
   &.reset-view{
     background-image: linear-gradient(90deg, #002D4E 0%, #005492 100%);

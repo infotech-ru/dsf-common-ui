@@ -630,14 +630,14 @@ body {
   background-color: #EEEEEE;
   color: #333333;
   font-family: Roboto, Arial, "Helvetica Neue", sans-serif;
-  font-size: 0.75rem;
-  line-height: 0.875rem;
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga", "kern";
+  font-size: 0.75rem;
+  line-height: 0.875rem;
 }
 body.guest-view, body.reset-view {
   background-image: linear-gradient(90deg, #002D4E 0%, #005492 100%);
@@ -773,6 +773,12 @@ blockquote .small:before {
   content: "— ";
 }
 
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
+/* BASE                                                                       */
+/* path: dsf-common-ui/src/scss/base/_base.scss                               */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* TYPOGRAPHY                                                                 */
