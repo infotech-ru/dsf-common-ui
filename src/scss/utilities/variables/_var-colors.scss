@@ -260,7 +260,7 @@ $brand-namecolors: (
   'dark-green':                          map.get($brand-colors, _dark-green),
   'dark-cyan':                           map.get($brand-colors, _dark-cyan),
   'black':                               map.get($brand-colors, _black),
-);
+)!default;
 
 $brand-btn: (
   default_bg:                             map.get($brand-colors, _light-grey2),
