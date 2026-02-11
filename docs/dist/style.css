@@ -638,6 +638,7 @@ body {
   -moz-font-feature-settings: "liga", "kern";
   font-size: 0.75rem;
   line-height: 0.875rem;
+  letter-spacing: 0px;
 }
 body.guest-view, body.reset-view {
   background-image: linear-gradient(90deg, #002D4E 0%, #005492 100%);
@@ -846,18 +847,21 @@ h6 .small, .h6 small,
 
 h1, .h1 {
   font-size: 2.25rem;
+  letter-spacing: 0px;
 }
 
 h2, .h2 {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.3125rem;
+  letter-spacing: 0px;
 }
 
 h3, .h3 {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.125rem;
+  letter-spacing: 0px;
 }
 
 h4, .h4 {
@@ -865,14 +869,17 @@ h4, .h4 {
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 0.875rem;
+  letter-spacing: 0px;
 }
 
 h5, .h5 {
   font-size: 0.875rem;
+  letter-spacing: 0px;
 }
 
 h6, .h6 {
   font-size: 0.75rem;
+  letter-spacing: 0px;
 }
 
 .dl-horizontal dd:before, .dl-horizontal dd:after {

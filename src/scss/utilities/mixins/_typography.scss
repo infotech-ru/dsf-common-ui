@@ -80,3 +80,27 @@
     }
   }
 }
+
+@mixin responsive-letter-spacing($baseKey) {
+  $letter-spacing: maps.val(varfonts.$letterSpacing, $baseKey);
+  
+  @if $letter-spacing {
+    letter-spacing: #{$letter-spacing}px;
+  }
+  
+  @each $key, $value in varfonts.$letterSpacing {
+    @if string.index($key, $baseKey) == 1 and $key != $baseKey {
+      $postfix: string.slice($key, string.length($baseKey) + 1);
+      
+      @if string.index($postfix, '__') == 1 {
+        $breakpoint-name: string.slice($postfix, 3);
+        
+        @if map.has-key(varbootstrapv3.$grid-breakpoints, $breakpoint-name) {
+          @include breakpoints.media-breakpoint-up($breakpoint-name) {
+            letter-spacing: #{$value}px;
+          }
+        }
+      }
+    }
+  }
+}

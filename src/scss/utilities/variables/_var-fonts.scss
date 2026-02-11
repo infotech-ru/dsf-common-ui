@@ -72,6 +72,16 @@ $textTransform: (
   tooltip:                                                                  none,
 )!default;
 
+$letterSpacing: (
+  body:                                                                     0,
+  headingH1:                                                                0,
+  headingH2:                                                                0,
+  headingH3:                                                                0,
+  headingH4:                                                                0,
+  headingH5:                                                                0,
+  headingH6:                                                                0,
+) !default;
+
 $fontSizeList: 8, 10, 11, 12, 13, 14, 16, 18, 20, 24, 48;
 
 $lineHeightSizeList: 10, 12, 14, 16, 18, 20, 24, 48;
