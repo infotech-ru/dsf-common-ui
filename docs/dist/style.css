@@ -18039,6 +18039,26 @@ tbody.collapse.in {
   overflow-y: auto;
 }
 
+.overflowX-hidden {
+  overflow-x: hidden;
+}
+
+.overflowY-hidden {
+  overflow-y: hidden;
+}
+
+.mobile-view .overflowX-hidden__mobile {
+  overflow-x: hidden;
+}
+
+.overflowY-hidden {
+  overflow-y: hidden;
+}
+
+.mobile-view .overflowY-hidden__mobile {
+  overflow-y: hidden;
+}
+
 .object-fit-cover {
   object-fit: cover;
 }
