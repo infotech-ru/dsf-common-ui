@@ -57,45 +57,45 @@ h6, .h6 {
 
 h1, .h1 { 
   text-transform: val.textTransform(headingH1);
-  @include typography.responsive-font-size('headingH1');
-  @include typography.responsive-font-weight('headingH1');
-  @include typography.responsive-line-height('headingH1');
   @include typography.responsive-letter-spacing('headingH1');
+  @include typography.responsive-font-weight('headingH1');
+  @include typography.responsive-font-size('headingH1');
+  @include typography.responsive-line-height('headingH1');
 }
 h2, .h2 {
   text-transform: val.textTransform(headingH2);
-  @include typography.responsive-font-size('headingH2');
-  @include typography.responsive-font-weight('headingH2');
-  @include typography.responsive-line-height('headingH2');
   @include typography.responsive-letter-spacing('headingH2');
+  @include typography.responsive-font-weight('headingH2');
+  @include typography.responsive-font-size('headingH2');
+  @include typography.responsive-line-height('headingH2');
 }
 h3, .h3 {
   text-transform: val.textTransform(headingH3);
-  @include typography.responsive-font-size('headingH3');
-  @include typography.responsive-font-weight('headingH3');
-  @include typography.responsive-line-height('headingH3');
   @include typography.responsive-letter-spacing('headingH3');
+  @include typography.responsive-font-weight('headingH3');
+  @include typography.responsive-font-size('headingH3');
+  @include typography.responsive-line-height('headingH3');
 }
 h4, .h4 {
   text-transform: val.textTransform(headingH4);
-  @include typography.responsive-font-size('headingH4');
-  @include typography.responsive-font-weight('headingH4');
-  @include typography.responsive-line-height('headingH4');
   @include typography.responsive-letter-spacing('headingH4');
+  @include typography.responsive-font-weight('headingH4');
+  @include typography.responsive-font-size('headingH4');
+  @include typography.responsive-line-height('headingH4');
 }
 h5, .h5 { 
   text-transform: val.textTransform(headingH5);
-  @include typography.responsive-font-size('headingH5');
-  @include typography.responsive-font-weight('headingH5');
-  @include typography.responsive-line-height('headingH5');
   @include typography.responsive-letter-spacing('headingH5');
+  @include typography.responsive-font-weight('headingH5');
+  @include typography.responsive-font-size('headingH5');
+  @include typography.responsive-line-height('headingH5');
 }
 h6, .h6 { 
   text-transform: val.textTransform(headingH6);
-  @include typography.responsive-font-size('headingH6');
-  @include typography.responsive-font-weight('headingH6');
-  @include typography.responsive-line-height('headingH6');
   @include typography.responsive-letter-spacing('headingH6');
+  @include typography.responsive-font-weight('headingH6');
+  @include typography.responsive-font-size('headingH6');
+  @include typography.responsive-line-height('headingH6');
 }
 
 .dl-horizontal {
