@@ -516,31 +516,43 @@
 .mobile-view .h-auto__mobile      { height: auto; }
 .h-100p                           { height: 100%; }
 .mobile-view .h-100p__mobile      { height: 100%; }
+.h-100vh                          { height: 100vh; }
+.mobile-view .h-100vh__mobile     { height: 100vh; }
 .h-0                              { height: 0; }
 .mobile-view .h-0__mobile         { height: 0; }
 .maxh-none                        { max-height: none;}
 .mobile-view .maxh-none__mobile   { max-height: none;}
 .maxh-100p                        { max-height: 100%; }
 .mobile-view .maxh-100p__mobile   { max-height: 100%; }
+.maxh-100vh                       { max-height: 100vh; }
+.mobile-view .maxh-100vh__mobile  { max-height: 100vh; }
 .minh-auto                        { min-height: auto;}
 .mobile-view .minh-auto__mobile   { min-height: auto;}
 .minh-100p                        { min-height: 100%;}
 .mobile-view .minh-100p__mobile   { min-height: 100%;}
+.minh-100vh                       { min-height: 100vh;}
+.mobile-view .minh-100vh__mobile  { min-height: 100vh;}
 
 .w-auto                           { width: auto; }
 .mobile-view .w-auto__mobile      { width: auto; }
 .w-100p                           { width: 100%; }
 .mobile-view .w-100p__mobile      { width: 100%; }
+.w-100vw                          { width: 100vw; }
+.mobile-view .w-100vw__mobile     { width: 100vw; }
 .w-0                              { width: 0; }
 .mobile-view .w-0__mobile         { width: 0; }
 .minw-100p                        { min-width: 100%; }
 .mobile-view .minw-100p__mobile   { min-width: 100%; }
+.minw-100vw                       { min-width: 100vw; }
+.mobile-view .minw-100vw__mobile  { min-width: 100vw; }
 .minw-0                           { min-width: 0; }
 .mobile-view .minw-0__mobile      { min-width: 0; }
 .minw-auto                        { min-width: auto; }
 .mobile-view .minw-auto__mobile   { min-width: auto; }
 .maxw-100p                        { max-width: 100%; }
 .mobile-view .maxw-100p__mobile   { max-width: 100%; }
+.maxw-100vw                       { max-width: 100vw; }
+.mobile-view .maxw-100vw__mobile  { max-width: 100vw; }
 .maxw-0                           { max-width: 0; }
 .mobile-view .maxw-0__mobile      { max-width: 0; }
 .maxw-none                        { max-width: none; }
