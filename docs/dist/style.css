@@ -18351,6 +18351,30 @@ tbody.collapse.in {
   line-height: 1.5rem;
 }
 
+.lh28 {
+  line-height: 1.75rem;
+}
+
+.mobile-view .lh28__mobile {
+  line-height: 1.75rem;
+}
+
+.lh30 {
+  line-height: 1.875rem;
+}
+
+.mobile-view .lh30__mobile {
+  line-height: 1.875rem;
+}
+
+.lh32 {
+  line-height: 2rem;
+}
+
+.mobile-view .lh32__mobile {
+  line-height: 2rem;
+}
+
 .lh48 {
   line-height: 3rem;
 }

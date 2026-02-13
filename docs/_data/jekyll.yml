@@ -147,6 +147,12 @@ lineheightsizelist:
   value: 0
 - name: 24
   value: 0
+- name: 28
+  value: 0
+- name: 30
+  value: 0
+- name: 32
+  value: 0
 - name: 48
   value: 0
 

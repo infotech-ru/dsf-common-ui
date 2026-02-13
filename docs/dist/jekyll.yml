@@ -283,6 +283,18 @@ lineheightsizelist {
 }
 
 lineheightsizelist {
+  28: 0;
+}
+
+lineheightsizelist {
+  30: 0;
+}
+
+lineheightsizelist {
+  32: 0;
+}
+
+lineheightsizelist {
   48: 0;
 }
 
