@@ -427,6 +427,14 @@ tbody tr {
   }
 }
 
+.tdAbsoluteInner{
+  height: 100%;
+  padding: fonts.rem(val.brandSizes(table_paddingY)) fonts.rem(val.brandSizes(table_paddingX));
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
 .summary{
   font-size: fonts.rem(11);
   text-align: right;
