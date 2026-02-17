@@ -42,3 +42,20 @@
   
   @return null;
 }
+
+// Функции для работы с ключами (без изменений)
+@function strip-postfix($key) {
+  $index: string.index($key, "__");
+  @if $index {
+    @return string.slice($key, 1, $index - 1);
+  }
+  @return $key;
+}
+
+@function strip-heading($key) {
+  $index: string.index($key, "heading");
+  @if $index == 1 {
+    $key: string.slice($key, string.length("heading") + 1);
+  }
+  @return $key;
+}

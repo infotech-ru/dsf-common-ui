@@ -4,16 +4,20 @@
 @use "sass:string";
 @use '../functions/func_maps' as maps;
 @use '../functions/func_fonts' as funcFonts;
+@use '../functions/func_helpers-functions' as funcHelper;
 @use '../variables/var-fonts' as varfonts;
 @use '../variables/var-bootstrap-v3' as varbootstrapv3;
 @use '../variables/var-lineHeights' as lineheights;
 @use '../mixins_bootstrap-v4/breakpoints' as breakpoints;
 
+
 @mixin responsive-font-size($baseKey) {
   $font-size: maps.val(varfonts.$fontSizes, $baseKey);
   
   @if $font-size {
-    font-size: funcFonts.rem($font-size);
+    & {
+      font-size: funcFonts.rem($font-size);
+    }
   }
   
   @each $key, $value in varfonts.$fontSizes {
@@ -33,11 +37,45 @@
   }
 }
 
+@mixin responsive-font-size-vaiables($baseKey) {
+  $font-size: maps.val(varfonts.$fontSizes, $baseKey);
+  
+  @if $font-size {
+    @if string.index($baseKey, "heading") {
+      $clean: funcHelper.strip-heading($baseKey);      
+      & {
+        --fontSize_#{$clean}: #{$font-size};
+      }
+    }
+  }
+  
+  @each $key, $value in varfonts.$fontSizes {
+    @if string.index($key, $baseKey) == 1 and $key != $baseKey {
+      $postfix: string.slice($key, string.length($baseKey) + 1);
+      
+      @if string.index($postfix, '__') == 1 {
+        $breakpoint-name: string.slice($postfix, 3);
+        
+        @if map.has-key(varbootstrapv3.$grid-breakpoints, $breakpoint-name) {
+          @include breakpoints.media-breakpoint-up($breakpoint-name) {
+            @if string.index($baseKey, "heading") {
+              $clean: funcHelper.strip-heading($baseKey);
+              --fontnSize_#{$clean}: #{$value};
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @mixin responsive-font-weight($baseKey) {
   $font-weight: maps.val(varfonts.$fontWeight, $baseKey);
   
   @if $font-weight {
-    font-weight: $font-weight;
+    & {
+      font-weight: $font-weight;
+    }
   }
   
   @each $key, $value in varfonts.$fontWeight {
@@ -61,7 +99,9 @@
   $line-height: maps.val(lineheights.$lineHeight, $baseKey);
   
   @if $line-height {
-    line-height: funcFonts.rem($line-height);
+    & {
+      line-height: funcFonts.rem($line-height);
+    }
   }
   
   @each $key, $value in lineheights.$lineHeight {
@@ -80,12 +120,45 @@
     }
   }
 }
+@mixin responsive-line-height-variables($baseKey) {
+  $line-height: maps.val(lineheights.$lineHeight, $baseKey);
+  
+  @if $line-height {
+    @if string.index($baseKey, "heading") {
+      $clean: funcHelper.strip-heading($baseKey);
+      & {
+        --lineHeight_#{$clean}: #{$line-height};
+      }
+    }
+  }
+  
+  @each $key, $value in lineheights.$lineHeight {
+    @if string.index($key, $baseKey) == 1 and $key != $baseKey {
+      $postfix: string.slice($key, string.length($baseKey) + 1);
+      
+      @if string.index($postfix, '__') == 1 {
+        $breakpoint-name: string.slice($postfix, 3);
+        
+        @if map.has-key(varbootstrapv3.$grid-breakpoints, $breakpoint-name) {
+          @include breakpoints.media-breakpoint-up($breakpoint-name) {
+            @if string.index($baseKey, "heading") {
+              $clean: funcHelper.strip-heading($baseKey);
+              --lineHeight_#{$clean}: #{$value};
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @mixin responsive-letter-spacing($baseKey) {
   $letter-spacing: maps.val(varfonts.$letterSpacing, $baseKey);
   
   @if $letter-spacing {
-    letter-spacing: #{$letter-spacing}px;
+    & {
+      letter-spacing: #{$letter-spacing}px;
+    }
   }
   
   @each $key, $value in varfonts.$letterSpacing {

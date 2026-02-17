@@ -636,8 +636,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga", "kern";
+}
+body {
   letter-spacing: 0px;
+}
+body {
   font-size: 0.75rem;
+}
+body {
   line-height: 0.875rem;
 }
 body.guest-view, body.reset-view {
@@ -847,39 +853,92 @@ h6 .small, .h6 small,
 
 h1, .h1 {
   letter-spacing: 0px;
+}
+h1, .h1 {
   font-size: 2.25rem;
+}
+h1, .h1 {
+  --fontSize_H1: 36;
 }
 
 h2, .h2 {
   letter-spacing: 0px;
+}
+h2, .h2 {
   font-weight: 400;
+}
+h2, .h2 {
   font-size: 1.125rem;
+}
+h2, .h2 {
   line-height: 1.3125rem;
+}
+h2, .h2 {
+  --fontSize_H2: 18;
+}
+h2, .h2 {
+  --lineHeight_H2: 21;
 }
 
 h3, .h3 {
   letter-spacing: 0px;
+}
+h3, .h3 {
   font-weight: 700;
+}
+h3, .h3 {
   font-size: 1rem;
+}
+h3, .h3 {
   line-height: 1.125rem;
+}
+h3, .h3 {
+  --fontSize_H3: 16;
+}
+h3, .h3 {
+  --lineHeight_H3: 18;
 }
 
 h4, .h4 {
   text-transform: uppercase;
+}
+h4, .h4 {
   letter-spacing: 0px;
+}
+h4, .h4 {
   font-weight: 700;
+}
+h4, .h4 {
   font-size: 0.75rem;
+}
+h4, .h4 {
   line-height: 0.875rem;
+}
+h4, .h4 {
+  --fontSize_H4: 12;
+}
+h4, .h4 {
+  --lineHeight_H4: 14;
 }
 
 h5, .h5 {
   letter-spacing: 0px;
+}
+h5, .h5 {
   font-size: 0.875rem;
+}
+h5, .h5 {
+  --fontSize_H5: 14;
 }
 
 h6, .h6 {
   letter-spacing: 0px;
+}
+h6, .h6 {
   font-size: 0.75rem;
+}
+h6, .h6 {
+  --fontSize_H6: 12;
 }
 
 .dl-horizontal dd:before, .dl-horizontal dd:after {

@@ -61,6 +61,8 @@ h1, .h1 {
   @include typography.responsive-font-weight('headingH1');
   @include typography.responsive-font-size('headingH1');
   @include typography.responsive-line-height('headingH1');
+  @include typography.responsive-font-size-vaiables('headingH1');
+  @include typography.responsive-line-height-variables('headingH1');
 }
 h2, .h2 {
   text-transform: val.textTransform(headingH2);
@@ -68,6 +70,8 @@ h2, .h2 {
   @include typography.responsive-font-weight('headingH2');
   @include typography.responsive-font-size('headingH2');
   @include typography.responsive-line-height('headingH2');
+  @include typography.responsive-font-size-vaiables('headingH2');
+  @include typography.responsive-line-height-variables('headingH2');
 }
 h3, .h3 {
   text-transform: val.textTransform(headingH3);
@@ -75,6 +79,8 @@ h3, .h3 {
   @include typography.responsive-font-weight('headingH3');
   @include typography.responsive-font-size('headingH3');
   @include typography.responsive-line-height('headingH3');
+  @include typography.responsive-font-size-vaiables('headingH3');
+  @include typography.responsive-line-height-variables('headingH3');
 }
 h4, .h4 {
   text-transform: val.textTransform(headingH4);
@@ -82,6 +88,8 @@ h4, .h4 {
   @include typography.responsive-font-weight('headingH4');
   @include typography.responsive-font-size('headingH4');
   @include typography.responsive-line-height('headingH4');
+  @include typography.responsive-font-size-vaiables('headingH4');
+  @include typography.responsive-line-height-variables('headingH4');
 }
 h5, .h5 { 
   text-transform: val.textTransform(headingH5);
@@ -89,6 +97,8 @@ h5, .h5 {
   @include typography.responsive-font-weight('headingH5');
   @include typography.responsive-font-size('headingH5');
   @include typography.responsive-line-height('headingH5');
+  @include typography.responsive-font-size-vaiables('headingH5');
+  @include typography.responsive-line-height-variables('headingH5');
 }
 h6, .h6 { 
   text-transform: val.textTransform(headingH6);
@@ -96,6 +106,8 @@ h6, .h6 {
   @include typography.responsive-font-weight('headingH6');
   @include typography.responsive-font-size('headingH6');
   @include typography.responsive-line-height('headingH6');
+  @include typography.responsive-font-size-vaiables('headingH6');
+  @include typography.responsive-line-height-variables('headingH6');
 }
 
 .dl-horizontal {

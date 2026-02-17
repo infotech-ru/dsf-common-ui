@@ -63,6 +63,8 @@ body {
   @include typography.responsive-letter-spacing('body');
   @include typography.responsive-font-size('body');
   @include typography.responsive-line-height('body');
+  @include typography.responsive-font-size-vaiables('body');
+  @include typography.responsive-line-height-variables('body');
   &.guest-view,
   &.reset-view{
     background-image: linear-gradient(90deg, #002D4E 0%, #005492 100%);
