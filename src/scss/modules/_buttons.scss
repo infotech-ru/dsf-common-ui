@@ -503,8 +503,52 @@ a.btn {
       #{--limited-stroke-off}: val.brandColors(_transparent);
     }
   }
+  &__danger{
+    &:hover,
+    &:focus-visible,
+    &.active,
+    &.active:focus{
+      .svg--icon {
+        background-color: val.brandPalette(btnIconSvgDangerHover_bgc);
+      }
+    }
+    .svg--icon {
+      #{--svg-icon-fill}: val.brandPalette(btnIconSvgDanger_color);
+      #{--svg-icon-fill_blue}: val.brandPalette(btnIconSvgDanger_color);
+      #{--svg-icon-stroke_blue}: val.brandPalette(btnIconSvgDanger_color);
+      #{--svg-icon-stroke}: val.brandPalette(btnIconSvgDanger_color);
+      #{--limited-stroke-off}: val.brandColors(_transparent);
+    }
+  }
+  &__success{
+    &:hover,
+    &:focus-visible,
+    &.active,
+    &.active:focus{
+      .svg--icon {
+        background-color: val.brandPalette(btnIconSvgSuccessHover_bgc);
+      }
+    }
+    .svg--icon {
+      #{--svg-icon-fill}: val.brandPalette(btnIconSvgSuccess_color);
+      #{--svg-icon-fill_blue}: val.brandPalette(btnIconSvgSuccess_color);
+      #{--svg-icon-stroke_blue}: val.brandPalette(btnIconSvgSuccess_color);
+      #{--svg-icon-stroke}: val.brandPalette(btnIconSvgSuccess_color);
+      #{--limited-stroke-off}: val.brandColors(_transparent);
+    }
+  }
   &__clear{
-    background-color: transparent;
+    .svg--icon {
+      background-color: transparent;
+    }
+    &:hover,
+    &:focus-visible,
+    &.active,
+    &.active:focus{
+      .svg--icon {
+        background-color: val.brandPalette(btnIconSvgHover_bgc);
+      }
+    }
   }
   &.disabled,
   &[disabled],

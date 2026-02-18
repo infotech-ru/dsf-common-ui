@@ -617,6 +617,8 @@ $brand-palette: map.merge((
   btnIconSvgHover_bgc:                    map.get($brand-colors, _light-blue2),
   btnIconSvgDanger_color:                 map.get($brand-colors, _red),
   btnIconSvgDangerHover_bgc:              map.get($brand-colors, _light-red),
+  btnIconSvgSuccess_color:                map.get($brand-colors, _green),
+  btnIconSvgSuccessHover_bgc:             map.get($brand-colors, _light-green),
   btnIconSvg_color:                       map.get($brand-colors, _light-blue),
   btnDownloadSvg_color:                   map.get($brand-colors, _light-blue),
   btnDownload_borderColor:                map.get($brand-colors, _light-blue),
