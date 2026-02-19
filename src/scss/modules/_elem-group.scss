@@ -502,16 +502,21 @@
         --svg-icon-stroke: var(--btn_svg__hover);
       }
     }
-    [class*="btn-"]{ 
+    [class*="btn-"]:not(.bootstrap-select [class*="btn-"]){ 
       border-color: val.brandPalette(formControl-color);
       background-color: var(--btn_bg__hover);
-      background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
+      // background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
       background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
       @include transition.transition(border-color ease-in-out .15s);
       svg{ 
         --svg-icon-fill: var(--btn_svg__hover);
         --svg-icon-stroke: var(--btn_svg__hover);
       }
+    }
+    .form-control,
+    .bootstrap-select [class*="btn-"]{
+      border-color: val.brandPalette(formControl-color);
+      @include transition.transition(border-color ease-in-out .15s);
     }
   }
 }
@@ -530,7 +535,7 @@
   }
   & + .form-control-container {
     .form-control {
-      border-left-width: 1px;
+      border-left-width: 0px;
     }
   }
   &:first-child {

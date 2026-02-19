@@ -13003,16 +13003,20 @@ select.selectpicker {
   --svg-icon-fill: var(--btn_svg__hover);
   --svg-icon-stroke: var(--btn_svg__hover);
 }
-.inputGroup:focus-within [class*=btn-] {
+.inputGroup:focus-within [class*=btn-]:not(.bootstrap-select [class*=btn-]) {
   border-color: #333333;
   background-color: var(--btn_bg__hover);
-  background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
   background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
   transition: border-color ease-in-out 0.15s;
 }
-.inputGroup:focus-within [class*=btn-] svg {
+.inputGroup:focus-within [class*=btn-]:not(.bootstrap-select [class*=btn-]) svg {
   --svg-icon-fill: var(--btn_svg__hover);
   --svg-icon-stroke: var(--btn_svg__hover);
+}
+.inputGroup:focus-within .form-control,
+.inputGroup:focus-within .bootstrap-select [class*=btn-] {
+  border-color: #333333;
+  transition: border-color ease-in-out 0.15s;
 }
 
 .css-formFree .form-control-container {
@@ -13027,7 +13031,7 @@ select.selectpicker {
   border-right-width: 0;
 }
 .form-control-container + .form-control-container .form-control {
-  border-left-width: 1px;
+  border-left-width: 0px;
 }
 .form-control-container:first-child .form-control {
   border-left-width: 1px;

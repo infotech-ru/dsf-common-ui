@@ -8,15 +8,25 @@ order: 3
 ---
 
 <h3>Для всплывающих контейнеров используются скрипт <a href="https://getbootstrap.com/docs/4.6/components/tooltips/">tooltip.js</a> и его расширенный вариант - <a href="https://getbootstrap.com/docs/4.6/components/popovers/">popover.js</a></h3>
-<p>
-  Класс для увеличения максимальной ширины popover <code class="language-plaintext highlighter-rouge">.popover__wide</code> <br>
-  Класс для убирания максимальной ширины popover <code class="language-plaintext highlighter-rouge">.popover__nonmax</code>
-</p>
+<p>Класс для увеличения максимальной ширины popover <code class="language-plaintext highlighter-rouge">.popover__wide</code></p>
+<p>Класс для убирания максимальной ширины popover <code class="language-plaintext highlighter-rouge">.popover__nonmax</code></p>
+<p>Класс для увеличения максимальной ширины tooltip <code class="language-plaintext highlighter-rouge">.tooltip__wide</code></p>
+<p>Класс для убирания максимальной ширины tooltip <code class="language-plaintext highlighter-rouge">.tooltip__nonmax</code></p>
+<p>Класс для выравнивания содержимого по левому краю в tooltip <code class="language-plaintext highlighter-rouge">.tooltip__textLeft</code></p>
 
 <div class="bs-docs-example">
-<button type="button" class="btn-primary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
-  Tooltip with HTML
-</button>
+  <button type="button" class="btn-primary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+    Tooltip with HTML
+  </button>
+  JS:
+  popover({
+      options: {
+          placement: 'auto',
+          sanitize: false,
+          customClass: 'popover__nonmax',
+      },
+      clickBody: true,
+  })
 </div>
 
 <div class="bs-docs-example">
