@@ -335,7 +335,7 @@ $grid-columns:              12 !default;
 $gutter:                            10px;
 $grid-gutter-width:         10px !default;
 $grid-gutter-width-base:            10px !default;
-$grid-gutter-width-base-equal:      true; // убрать лишние правила при одинковом значении для всех media
+$grid-gutter-width-base-equal:      true !default; // убрать лишние правила при одинковом значении для всех media
 $enable-grid-flex:                  true !default;
 
 $grid-float-breakpoint:     $screen-sm-min !default;
