@@ -11497,7 +11497,7 @@ output {
   top: auto;
   transform: none;
 }
-.css-formFree .control-label__nopadding, .css-formFree .control-label__nopadding.actvie {
+.css-formFree .control-label__nopadding, .css-formFree .control-label__nopadding.active {
   padding-left: 0;
   padding-right: 0;
 }
