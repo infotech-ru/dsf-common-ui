@@ -214,6 +214,8 @@ var DSFUI = (function (exports) {
         'bicolors-arrows_undo__24vb': ['arrows', 'отмена', 'отменить', 'undo', '24vb'],
         'bicolors-attention': ['внимание', 'треугольник', 'информация', 'восклицательный', 'знак', 'attention', 'warning', 'minvb'],
         'bicolors-attention__24vb': ['внимание', 'треугольник', 'информация', 'восклицательный', 'знак', 'attention', 'warning', '24vb'],
+        'bicolors-attention_reload': ['внимание', 'треугольник', 'информация', 'восклицательный', 'знак', 'attention', 'warning', 'arrows', 'перезагрузка', 'стрелка', 'перезагрузить', 'reload', 'обновить', 'minvb'],
+        'bicolors-attention_reload__24vb': ['внимание', 'треугольник', 'информация', 'восклицательный', 'знак', 'attention', 'warning', 'arrows', 'перезагрузка', 'стрелка', 'перезагрузить', 'reload', 'обновить', '24vb'],
         'bicolors-boards': ['доски', 'boards', 'minvb'],
         'bicolors-boards__24vb': ['доски', 'boards', '24vb'],
         'bicolors-boards_vert': ['доска', 'board', 'minvb'],
