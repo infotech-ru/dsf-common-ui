@@ -11490,14 +11490,14 @@ output {
   z-index: 1;
   max-width: calc(100% - 0.4375rem + 0.1875rem);
 }
-.css-formFree .control-label__relative {
+.css-formFree .control-label__relative, .css-formFree .control-label__relative.active {
   left: auto;
   position: relative;
   padding-right: 0.3125rem;
   top: auto;
   transform: none;
 }
-.css-formFree .control-label__nopadding {
+.css-formFree .control-label__nopadding, .css-formFree .control-label__nopadding.actvie {
   padding-left: 0;
   padding-right: 0;
 }

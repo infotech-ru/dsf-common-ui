@@ -69,7 +69,7 @@ output {
 }
 
 .control-label{
-  $paddinFromLeft: 3;
+    $paddinFromLeft: 3;
     // letter-spacing: .5px;
     display: block;
     color: val.brandPalette(controlLabel_color);
@@ -130,18 +130,24 @@ output {
       }
     }
     &__relative{
-      .css-formFree & {
-        left: auto;
-        position: relative;
-        padding-right: fonts.rem(val.brandSizes(controlLabel_mr));
-        top: auto;
-        transform: none;
+      &,
+      &.active{
+        .css-formFree & {
+          left: auto;
+          position: relative;
+          padding-right: fonts.rem(val.brandSizes(controlLabel_mr));
+          top: auto;
+          transform: none;
+        }
       }
     }
     &__nopadding{
-      .css-formFree & {
-        padding-left: 0;
-        padding-right: 0;
+      &,
+      &.actvie{ 
+        .css-formFree & {
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
     }
 }
