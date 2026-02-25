@@ -220,29 +220,29 @@ module.exports = function (grunt) {
                 files: {
                     "dist/js/vendor-other.js": [
                         "src/js/popper.js", // for tooltip & popover
-                        // "src/js/util.js", // v3
-                        "src/js/transition.js", // v3
-                        // "src/js/alert.js", // v3
-                        "src/js/button.js", // v3
-                        // "src/js/carousel.js", // v3
-                        // "src/js/collapse.js", // v3
-                        "src/js/modal.js", // v3
+                        // "src/js/bootstrap/util.js", // v3
+                        "src/js/bootstrap/transition.js", // v3
+                        // "src/js/bootstrap/alert.js", // v3
+                        "src/js/bootstrap/button.js", // v3
+                        // "src/js/bootstrap/carousel.js", // v3
+                        // "src/js/bootstrap/collapse.js", // v3
+                        "src/js/bootstrap/modal.js", // v3
                         "assets/js/bootstrap-modal-enforceFocus-patch.js", // for v3
-                        "src/js/dropdown.js", // v3
-                        // "src/js/tooltip.js", // v3
-                        // "src/js/popover.js", // v3
-                        // "src/js/scrollspy.js", // v3
-                        "src/js/tab.js", // v3
-                        "src/js/affix.js", // v3
-                        "src/js/util.js", // v4
-                        "src/js/alert.js", // v4
-                        "src/js/collapse.js", // v4
-                        "src/js/carousel.js", // v4
-                        // "src/js/dropdown.js", // v4
-                        // "src/js/tab.js", // v4 li.active a -> a.active
-                        "src/js/tooltip.js", // v4
-                        "src/js/popover.js", // v4
-                        "src/js/bootstrap-select.min.js",
+                        "src/js/bootstrap/dropdown.js", // v3
+                        // "src/js/bootstrap/tooltip.js", // v3
+                        // "src/js/bootstrap/popover.js", // v3
+                        // "src/js/bootstrap/scrollspy.js", // v3
+                        "src/js/bootstrap/tab.js", // v3
+                        "src/js/bootstrap/affix.js", // v3
+                        "src/js/bootstrap/util.js", // v4
+                        "src/js/bootstrap/alert.js", // v4
+                        "src/js/bootstrap/collapse.js", // v4
+                        "src/js/bootstrap/carousel.js", // v4
+                        // "src/js/bootstrap/dropdown.js", // v4
+                        // "src/js/bootstrap/tab.js", // v4 li.active a -> a.active
+                        "src/js/bootstrap/tooltip.js", // v4
+                        "src/js/bootstrap/popover.js", // v4
+                        "src/js/bootstrap-select/dist/bootstrap-select.min.js",
                     ],
                 },
             }
