@@ -535,17 +535,25 @@
   }
   & + .form-control-container {
     .form-control {
-      border-left-width: 0px;
+      border-left-width: 1px;
     }
   }
   &:first-child {
     .form-control {
       border-left-width: 1px;
     }
+    .bootstrap-select .btn{
+      border-right: 0px;
+    }
   }
   &:last-child {
     .form-control {
       border-right-width: 1px;
+    }
+  }
+  &:not(:first-child):not(:last-child){
+    .bootstrap-select .btn{
+      border-right: 0px;
     }
   }
   &__border{ 

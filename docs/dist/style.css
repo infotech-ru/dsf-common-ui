@@ -13031,13 +13031,19 @@ select.selectpicker {
   border-right-width: 0;
 }
 .form-control-container + .form-control-container .form-control {
-  border-left-width: 0px;
+  border-left-width: 1px;
 }
 .form-control-container:first-child .form-control {
   border-left-width: 1px;
 }
+.form-control-container:first-child .bootstrap-select .btn {
+  border-right: 0px;
+}
 .form-control-container:last-child .form-control {
   border-right-width: 1px;
+}
+.form-control-container:not(:first-child):not(:last-child) .bootstrap-select .btn {
+  border-right: 0px;
 }
 .form-control-container__border {
   position: relative;
