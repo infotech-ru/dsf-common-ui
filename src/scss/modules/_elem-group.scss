@@ -623,10 +623,15 @@
   input[type="checkbox"] {
     margin-top: 0;
   }
+  .svg--icon__24vb{
+    --svgIcon_height: 16px;
+  }
   .svg--icon{
+    height: var(--svgIcon_height, 11px);
+    width: var(--svgIcon_height, 11px);
     svg{
-      height: var(--svgIcon_height, 16px);
-      width: var(--svgIcon_height, 16px);
+      height: var(--svgIcon_height, 11px);
+      width: var(--svgIcon_height, 11px);
     }
   }
 }

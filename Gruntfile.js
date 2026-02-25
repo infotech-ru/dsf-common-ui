@@ -2,11 +2,11 @@ const sass = require('sass');
 const tilde_importer = require("grunt-sass-tilde-importer");
 const {babel} = require("@rollup/plugin-babel");
 const resolve = require("@rollup/plugin-node-resolve").default;
-const uglify = require("@lopatnov/rollup-plugin-uglify");
 const nodeGlobals = require("rollup-plugin-node-globals");
 const commonjs = require("@rollup/plugin-commonjs");
 const replace = require("@rollup/plugin-replace");
 const env = process.env.NODE_ENV || "development";
+const {terser} = require("rollup-plugin-terser");
 
 module.exports = function (grunt) {
     grunt.initConfig({
@@ -196,7 +196,7 @@ module.exports = function (grunt) {
                         preventAssignment: true,
                         "process.env.NODE_ENV": JSON.stringify(env)
                     }),
-                    (env === "production" && uglify()),
+                    (env === "production" && terser({mangle: false})),
                 ],
             },
             default: {
@@ -208,14 +208,54 @@ module.exports = function (grunt) {
                 }
             }
         },
+        terser: {
+            vendor_js: {
+                options: {
+                    output: {
+                        comments: false,
+                    },
+                    mangle: false,
+                    sourceMap: true
+                },
+                files: {
+                    "dist/js/vendor-other.js": [
+                        "src/js/popper.js", // for tooltip & popover
+                        // "src/js/util.js", // v3
+                        "src/js/transition.js", // v3
+                        // "src/js/alert.js", // v3
+                        "src/js/button.js", // v3
+                        // "src/js/carousel.js", // v3
+                        // "src/js/collapse.js", // v3
+                        "src/js/modal.js", // v3
+                        "assets/js/bootstrap-modal-enforceFocus-patch.js", // for v3
+                        "src/js/dropdown.js", // v3
+                        // "src/js/tooltip.js", // v3
+                        // "src/js/popover.js", // v3
+                        // "src/js/scrollspy.js", // v3
+                        "src/js/tab.js", // v3
+                        "src/js/affix.js", // v3
+                        "src/js/util.js", // v4
+                        "src/js/alert.js", // v4
+                        "src/js/collapse.js", // v4
+                        "src/js/carousel.js", // v4
+                        // "src/js/dropdown.js", // v4
+                        // "src/js/tab.js", // v4 li.active a -> a.active
+                        "src/js/tooltip.js", // v4
+                        "src/js/popover.js", // v4
+                        "src/js/bootstrap-select.min.js",
+                    ],
+                },
+            }
+        },
     });
     grunt.loadNpmTasks("grunt-svg-sprite");
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-sass");
     grunt.loadNpmTasks("grunt-rollup");
     grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks("grunt-terser");
     grunt.registerTask('copy-default', ['copy:svg_sprite__template', 'copy:svg_sprite__symbolSpriteForDocs', 'copy:js']);
-    grunt.registerTask("default", ["rollup", "svg_sprite", "copy-default", "sass", "copy:jekyll"]);
+    grunt.registerTask("default", ["terser", "rollup", "svg_sprite", "copy-default", "sass", "copy:jekyll"]);
     // grunt.registerTask("default", ["rollup", "svg_sprite", "copy-default", "sass"]);
     grunt.registerTask("tmp", ["copy:jekyll"]);
     grunt.registerTask('dev', ['default', 'watch']);
