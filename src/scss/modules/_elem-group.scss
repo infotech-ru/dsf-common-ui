@@ -606,6 +606,11 @@
   .inputGroup_text {
     border-right: 1px solid val.brandPalette(inputGroupEl-borderColor);
   }
+  & + .form-control-container {
+    .bootstrap-select .btn{
+      border-left: 0px;
+    }
+  }
 }
 
 .inputGroup_text {

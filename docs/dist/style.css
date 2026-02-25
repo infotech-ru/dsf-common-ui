@@ -10026,6 +10026,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --svg-icon-stroke_blue: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   --limited-stroke-off: #00000000;
+  --btn_svg__hover: #4A8DC6;
 }
 .btn-icon .svg--icon svg {
   height: 0.875rem;
@@ -10070,6 +10071,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --svg-icon-stroke_blue: #D9534F;
   --svg-icon-stroke: #D9534F;
   --limited-stroke-off: #00000000;
+  --btn_svg__hover: #D9534F;
 }
 .btn-icon__success:hover .svg--icon, .btn-icon__success:focus-visible .svg--icon, .btn-icon__success.active .svg--icon, .btn-icon__success.active:focus .svg--icon {
   background-color: #DAF0DA;
@@ -10080,6 +10082,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --svg-icon-stroke_blue: #69C26A;
   --svg-icon-stroke: #69C26A;
   --limited-stroke-off: #00000000;
+  --btn_svg__hover: #69C26A;
 }
 .btn-icon__clear .svg--icon {
   background-color: transparent;
@@ -13099,6 +13102,9 @@ select.selectpicker {
 }
 .inputGroup_append .inputGroup_text {
   border-right: 1px solid #BABABA;
+}
+.inputGroup_append + .form-control-container .bootstrap-select .btn {
+  border-left: 0px;
 }
 
 .inputGroup_text {
