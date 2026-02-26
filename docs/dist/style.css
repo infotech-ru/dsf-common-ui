@@ -13096,15 +13096,15 @@ select.selectpicker {
 .inputGroup_prepend .inputGroup_text {
   border-left: 1px solid #BABABA;
 }
+.inputGroup_prepend + .form-control-container .bootstrap-select .btn {
+  border-left: 0px;
+}
 
 .inputGroup_append {
   margin-left: 0;
 }
 .inputGroup_append .inputGroup_text {
   border-right: 1px solid #BABABA;
-}
-.inputGroup_append + .form-control-container .bootstrap-select .btn {
-  border-left: 0px;
 }
 
 .inputGroup_text {

@@ -86,7 +86,7 @@ export function searchIcon() {
         'bicolors-2wd': ['2wd', 'minvb'],
         'bicolors-2wd__24vb': ['2wd', '24vb'],
         'bicolors-ai-stars': ['звезда', 'звезды', 'stars', 'ai', 'ии', 'искусственный', 'minvb'],
-        'bicolors-ai-stars__2vb': ['звезда', 'звезды', 'stars', 'ai', 'ии', 'искусственный', '24vb'],
+        'bicolors-ai-stars__24vb': ['звезда', 'звезды', 'stars', 'ai', 'ии', 'искусственный', '24vb'],
         'bicolors-archive_in': ['archive', 'архив', 'in', 'minvb'],
         'bicolors-archive_in__24vb': ['archive', 'архив', 'in', '24vb'],
         'bicolors-archive_out': ['archive', 'архив', 'out', 'minvb'],
