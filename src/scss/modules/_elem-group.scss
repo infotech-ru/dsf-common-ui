@@ -494,7 +494,9 @@
   }
   
   &:focus-within{
-    .inputGroup_text{
+    .inputGroup_text,
+    .inputGroup_outer,
+    .inputGroup_inner{
       border-color: val.brandPalette(formControl-color);
       @include transition.transition(border-color ease-in-out .15s);
       svg {
@@ -584,10 +586,12 @@
       z-index: 3;
     }
   }
-  .btn+.btn,
-  .btn+.inputGroup_text,
-  .inputGroup_text+.inputGroup_text,
-  .inputGroup_text+.btn {
+  .btn + .btn,
+  .btn + .inputGroup_text,
+  .btn + .inputGroup_inner,
+  .inputGroup_text + .inputGroup_text,
+  .inputGroup_inner + .inputGroup_inner,
+  .inputGroup_inner + .btn {
     margin-left: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
   }
 }
@@ -595,7 +599,8 @@
 .inputGroup_prepend {
   // margin-right: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
   margin-right: 0;
-  .inputGroup_text {
+  .inputGroup_text,
+  .inputGroup_inner {
     border-left: 1px solid val.brandPalette(inputGroupEl-borderColor);
   }
   & + .form-control-container {
@@ -603,17 +608,25 @@
       border-left: 0px;
     }
   }
+  .inputGroup_outer{
+    border-right: 1px solid val.brandPalette(inputGroupEl-borderColor);  
+  }
 }
 
 .inputGroup_append {
   // margin-left: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
   margin-left: 0;
-  .inputGroup_text {
+  .inputGroup_text,
+  .inputGroup_inner {
     border-right: 1px solid val.brandPalette(inputGroupEl-borderColor);
+  }
+  .inputGroup_outer {
+    border-left: 1px solid val.brandPalette(inputGroupEl-borderColor);
   }
 }
 
-.inputGroup_text {
+.inputGroup_text,
+.inputGroup_inner {
   align-items: center;
   background-color: val.brandPalette(inputGroupEl-bgc);
   border-bottom: 1px solid val.brandPalette(inputGroupEl-borderColor);
@@ -625,13 +638,10 @@
   line-height: fonts.rem(val.lineHeight(input));
   min-height: fonts.rem(calc(val.lineHeight(input) + 2));
   padding: 0 fonts.rem(val.brandSizes(formControl_paddingX));
-  margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
-  // line-height: $input-line-height;
+  margin-bottom: 0;
   text-align: center;
   white-space: nowrap;
-  // @include border-radius($input-border-radius);
 
-  // Nuke default margins from checkboxes and radios to vertically center within.
   input[type="radio"],
   input[type="checkbox"] {
     margin-top: 0;
@@ -648,21 +658,42 @@
     }
   }
 }
+.inputGroup_outer {
+  align-items: center;
+  // background-color: val.brandPalette(inputGroupEl-bgc);
+  display: flex;
+  line-height: fonts.rem(val.lineHeight(input));
+  margin-bottom: 0; 
+  min-height: fonts.rem(calc(val.lineHeight(input) + 2));
+  padding: 0 fonts.rem(val.brandSizes(formControl_paddingX));
+  text-align: center;
+  white-space: nowrap;
 
-.inputGroup_prepend>.btn,
-.inputGroup_prepend>.inputGroup_text,
-.inputGroup_append:last-child>.btn:not(:last-child):not(.dropdown-toggle),
-.inputGroup_append:last-child>.inputGroup_text:not(:last-child) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-top: 0;
+  }
+}
+
+.inputGroup_prepend > .btn,
+.inputGroup_prepend > .inputGroup_text,
+.inputGroup_prepend > .inputGroup_inner,
+.inputGroup_append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.inputGroup_append:last-child > .inputGroup_text:not(:last-child),
+.inputGroup_append:last-child > .inputGroup_inner:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.inputGroup_append>.btn,
-.inputGroup_append>.inputGroup_text,
-.inputGroup_prepend:not(:first-child)>.btn,
-.inputGroup_prepend:not(:first-child)>.inputGroup_text,
-.inputGroup_prepend:first-child>.btn:not(:first-child),
-.inputGroup_prepend:first-child>.inputGroup_text:not(:first-child) {
+.inputGroup_append > .btn,
+.inputGroup_append > .inputGroup_text,
+.inputGroup_append > .inputGroup_inner,
+.inputGroup_prepend:not(:first-child) > .btn,
+.inputGroup_prepend:not(:first-child) > .inputGroup_text,
+.inputGroup_prepend:not(:first-child) > .inputGroup_inner,
+.inputGroup_prepend:first-child > .btn:not(:first-child),
+.inputGroup_prepend:first-child > .inputGroup_text:not(:first-child),
+.inputGroup_prepend:first-child > .inputGroup_inner:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }

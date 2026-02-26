@@ -26,7 +26,7 @@ order: 4
                 <input type="text" class="form-control" id="formsGroup_10">
             </div>
             <div class="inputGroup_append">
-                <span class="inputGroup_text">
+                <span class="inputGroup_inner">
                     <?= Icons::wrapper('bicolors-questions__24vb', ['class' => 'svg--icon svg--icon__24vb']]) ?>
                 </span>
             </div>
@@ -48,8 +48,8 @@ order: 4
                 <input type="text" class="form-control" id="formsGroup_30">
             </div>
             <div class="inputGroup_append">
-                <span class="inputGroup_text">
-                    <button class="btn-icon btn-icon__danger" type="button">
+                <span class="inputGroup_outer">
+                    <button class="btn-icon btn-icon__form btn-icon__danger" type="button">
                         <?= Icons::wrapper('bicolors-delete']) ?>
                     </button>
                 </span>
@@ -65,7 +65,7 @@ order: 4
             <input type="text" class="form-control" id="formsGroup_40">
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <span class="svg--icon">
                     <svg width="24" height="24">
                         <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions"></use>
@@ -95,8 +95,8 @@ order: 4
             <input type="text" class="form-control" id="formsGroup_60">
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
-                <button class="btn-icon btn-icon__danger" type="button">
+            <span class="inputGroup_outer">
+                <button class="btn-icon btn-icon__form btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
                             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use>
@@ -125,7 +125,7 @@ order: 4
     <div class="js-allSelect-formFree css-formFree">
         <div class="inputGroup">
             <div class="inputGroup_prepend">
-                <span class="inputGroup_text">
+                <span class="inputGroup_inner">
                     <?= Icons::wrapper('bicolors-questions__24vb', ['class' => 'svg--icon svg--icon__24vb']]) ?>
                 </span>
             </div>
@@ -145,6 +145,19 @@ order: 4
                 <input type="text" class="form-control" id="formsGroup_80">
             </div>
         </div>
+        <div class="inputGroup">
+            <div class="inputGroup_prepend">
+                <span class="inputGroup_outer">
+                    <button class="btn-icon btn-icon__form" type="button">
+                        <?= Icons::wrapper('bicolors-search']) ?>
+                    </button>
+                </span>
+            </div>
+            <div class="form-control-container">
+                <label class="control-label" for="formsGroup_80">Группировка инпута с кнопкой слева</label>
+                <input type="text" class="form-control" id="formsGroup_80">
+            </div>
+        </div>
     </div>
     {% endhighlight %}
 </div>
@@ -152,7 +165,7 @@ order: 4
 <div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
     <div class="inputGroup mb-10">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <span class="svg--icon svg--icon__24vb">
                     <svg width="24" height="24">
                         <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions__24vb"></use>
@@ -182,8 +195,8 @@ order: 4
     </div>
     <div class="inputGroup">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text">
-                <button class="btn-icon" type="button">
+            <span class="inputGroup_outer">
+                <button class="btn-icon btn-icon__form" type="button">
                     <span class="svg--icon svg--icon__24vb">
                         <svg width="24" height="24">
                             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrows_reload__24vb"></use>
@@ -277,7 +290,7 @@ order: 4
     {% highlight html %}
     <div class="inputGroup">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text bg-light-grey">Заголовок группы</span>
+            <span class="inputGroup_inner bg-light-grey">Заголовок группы</span>
         </div>
         <div class="form-control-container">
             <input type="text" class="form-control form-control__placeholder" id="" placeholder="От">
@@ -298,7 +311,7 @@ order: 4
 <div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
     <div class="inputGroup">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text bg-light-grey">Заголовок группы</span>
+            <span class="inputGroup_inner bg-light-grey">Заголовок группы</span>
         </div>
         <div class="form-control-container">
             <input type="text" class="form-control form-control__placeholder" id="" placeholder="От">
@@ -349,7 +362,7 @@ order: 4
             </select>
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon btn-icon__danger" type="button">
                     <?= Icons::wrapper('bicolors-delete']) ?>
                 </button>
@@ -394,7 +407,7 @@ order: 4
             </select>
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
@@ -407,7 +420,7 @@ order: 4
     </div>
     <div class="inputGroup mb-10">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
@@ -435,7 +448,7 @@ order: 4
     </div>
     <div class="inputGroup mb-10">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text bg-light-grey">Заголовок группы</span>
+            <span class="inputGroup_inner bg-light-grey">Заголовок группы</span>
         </div>
         <div class="form-control-container">
             <label class="control-label" for="formGroup140">Группировка селектов с одним заголовком</label>
@@ -453,7 +466,7 @@ order: 4
             </select>
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
@@ -466,7 +479,7 @@ order: 4
     </div>
     <div class="inputGroup mb-10">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text bg-light-grey">Заголовок группы</span>
+            <span class="inputGroup_inner bg-light-grey">Заголовок группы</span>
         </div>
         <div class="form-control-container">
             <label class="control-label" for="formGroup1500">Лейбл селекта</label>
@@ -481,7 +494,7 @@ order: 4
             <input type="text" class="form-control" id="formGroup1501">
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
@@ -494,7 +507,7 @@ order: 4
     </div>
     <div class="inputGroup mb-10">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text bg-light-grey">Заголовок группы</span>
+            <span class="inputGroup_inner bg-light-grey">Заголовок группы</span>
         </div>
         <div class="form-control-container">
             <label class="control-label" for="formsGroup_160">Заголовок инпута</label>
@@ -509,7 +522,7 @@ order: 4
             </select>
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
@@ -533,7 +546,7 @@ order: 4
             </select>
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
@@ -558,7 +571,7 @@ order: 4
             <input type="text" class="form-control" id="formGroup_200">
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
@@ -579,7 +592,7 @@ order: 4
             <input type="text" class="form-control" id="formGroup_220">
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
@@ -602,7 +615,7 @@ order: 4
     </div>
     <div class="inputGroup mb-10">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text bg-light-grey">Заголовок группы</span>
+            <span class="inputGroup_inner bg-light-grey">Заголовок группы</span>
         </div>
         <div class="form-control-container">
             <label class="control-label" for="formGroup_223">Инпут с заголовком</label>
@@ -615,7 +628,7 @@ order: 4
     </div>
     <div class="inputGroup mb-10">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_text bg-light-grey">Заголовок группы</span>
+            <span class="inputGroup_inner bg-light-grey">Заголовок группы</span>
         </div>
         <div class="form-control-container">
             <label class="control-label" for="formGroup_230">Инпут с заголовком</label>
@@ -626,7 +639,7 @@ order: 4
             <input type="text" class="form-control" id="formGroup_240">
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_text">
+            <span class="inputGroup_inner">
                 <button class="btn-icon btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
