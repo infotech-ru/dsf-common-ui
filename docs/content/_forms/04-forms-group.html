@@ -6,6 +6,14 @@ category: forms
 anchor: formsGroup
 order: 4
 ---
+<p>Класс обертка - inputGroup</p>
+<p>Класс-контейнер для элементов формы - селектов, инпутов - form-control-container. Каждрый инпут, селект в своем контейнере form-control-container</p>
+<p>Класс-контейнер для элементов спереди - inputGroup_prepend</p>
+<p>Класс-контейнер для элементов сзади - inputGroup_append</p>
+<p>Класс для визульного отображении вне полей в классах-контейнерах (inputGroup_prepend, inputGroup_append) -  inputGroup_outer</p>
+<p>Класс для визульного отображении внутри полей в классах-контейнерах (inputGroup_prepend, inputGroup_append) -  inputGroup_inner</p>
+<p>Для кнопок-иконок (btn-icon) вне полей (inputGroup_outer) добавляется класс-модификатор - btn-icon__form</p>
+
 <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collapseCode1" role="button" aria-expanded="false" aria-controls="collapseCode1">
     <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary"> 
       <svg width="24" height="24">
@@ -33,7 +41,7 @@ order: 4
         </div>
         <div class="inputGroup">
             <div class="form-control-container">
-                <label class="control-label" for="formsGroup_20">Группировка инпута с кнопкой справа</label>
+                <label class="control-label" for="formsGroup_20">Группировка инпута с кнопкой-иконкой справа</label>
                 <input type="text" class="form-control" id="formsGroup_20">
             </div>
             <div class="inputGroup_append">
@@ -91,7 +99,7 @@ order: 4
     </div>
     <div class="inputGroup">
         <div class="form-control-container">
-            <label class="control-label" for="formsGroup_60">Группировка инпута с кнопкой справа</label>
+            <label class="control-label" for="formsGroup_60">Группировка инпута с кнопкой-иконкой справа</label>
             <input type="text" class="form-control" id="formsGroup_60">
         </div>
         <div class="inputGroup_append">
@@ -141,7 +149,7 @@ order: 4
                 </button>
             </div>
             <div class="form-control-container">
-                <label class="control-label" for="formsGroup_80">Группировка инпута с кнопкой слева</label>
+                <label class="control-label" for="formsGroup_80">Группировка инпута с кнопкой-иконкой слева</label>
                 <input type="text" class="form-control" id="formsGroup_80">
             </div>
         </div>
@@ -206,7 +214,7 @@ order: 4
             </span>
         </div>
         <div class="form-control-container">
-            <label class="control-label" for="formsGroup_101">Группировка инпута с кнопкой слева внутри</label>
+            <label class="control-label" for="formsGroup_101">Группировка инпута с кнопкой-иконкой слева внутри</label>
             <input type="text" class="form-control" id="formsGroup_101">
         </div>
     </div>
@@ -407,8 +415,8 @@ order: 4
             </select>
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_inner">
-                <button class="btn-icon btn-icon__danger" type="button">
+            <span class="inputGroup_outer">
+                <button class="btn-icon btn-icon__form btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
                             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use>
@@ -420,8 +428,8 @@ order: 4
     </div>
     <div class="inputGroup mb-10">
         <div class="inputGroup_prepend">
-            <span class="inputGroup_inner">
-                <button class="btn-icon" type="button">
+            <span class="inputGroup_outer">
+                <button class="btn-icon btn-icon__form" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
                             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use>
@@ -466,8 +474,8 @@ order: 4
             </select>
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_inner">
-                <button class="btn-icon btn-icon__danger" type="button">
+            <span class="inputGroup_outer">
+                <button class="btn-icon btn-icon__form btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
                             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use>
@@ -522,8 +530,8 @@ order: 4
             </select>
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_inner">
-                <button class="btn-icon btn-icon__danger" type="button">
+            <span class="inputGroup_outer">
+                <button class="btn-icon btn-icon__form btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
                             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use>
@@ -546,8 +554,8 @@ order: 4
             </select>
         </div>
         <div class="inputGroup_append">
-            <span class="inputGroup_inner">
-                <button class="btn-icon btn-icon__danger" type="button">
+            <span class="inputGroup_outer">
+                <button class="btn-icon btn-icon__form btn-icon__danger" type="button">
                     <span class="svg--icon">
                         <svg width="24" height="24">
                             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use>

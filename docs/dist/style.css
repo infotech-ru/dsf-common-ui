@@ -8989,7 +8989,7 @@ fieldset[disabled] .nav-btns .nav-link,
 .nav-btns .nav-link .svg--icon, .btn-warning .svg--icon, .btn-danger .svg--icon, .btn-success .svg--icon, .btn-primary .svg--icon, .btn-default .svg--icon, .btn-group__theme > [class*=btn] .svg--icon, .btn .svg--icon {
   height: var(--svgIcon_height, 0.75rem);
   position: relative;
-  top: 2px;
+  top: 1px;
 }
 .btn-warning__outline .svg--icon svg, .btn-danger__outline .svg--icon svg, .btn-success__outline .svg--icon svg, .btn-primary__outline .svg--icon svg, .btn-default__outline .svg--icon svg, .btn-link .svg--icon svg, .nav-btns > li > a .svg--icon svg,
 .nav-btns .nav-link .svg--icon svg, .btn-warning .svg--icon svg, .btn-danger .svg--icon svg, .btn-success .svg--icon svg, .btn-primary .svg--icon svg, .btn-default .svg--icon svg, .btn-group__theme > [class*=btn] .svg--icon svg, .btn .svg--icon svg {
