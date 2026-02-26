@@ -9,7 +9,8 @@ import {
 import {init} from "./init.js";
 import { FormsFree } from "./forms-free.js";
 import { AutoresizeTextarea } from "./autoresizeTextarea.js";
-import { CustomFileUpload } from "./CustomFileUpload";
+import { CustomFileUpload } from "./CustomFileUpload.js";
+import { initCopyDataAttrToClipboardBtns } from "./copyTextToClipboardNotify.js";
   
 export function OnLoad() {
   itemActionMenu();
@@ -19,6 +20,7 @@ export function OnLoad() {
   FormsFree();
   AutoresizeTextarea();
   CustomFileUpload();
+  initCopyDataAttrToClipboardBtns();
 }
   
 export function iconsInit() { 

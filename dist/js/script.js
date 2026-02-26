@@ -1,10 +1,10 @@
 var DSFUI = (function (exports) {
     'use strict';
 
-    var isListeningDocument = false;
+    var isListeningDocument$1 = false;
     function FormsFree() {
-      if (!isListeningDocument) {
-        isListeningDocument = true;
+      if (!isListeningDocument$1) {
+        isListeningDocument$1 = true;
         $(document).on('focus blur change', inputSelector, function (e) {
           return updateInputLabel(e.target);
         }).on('blur change', inputSelector, function (e) {
@@ -895,6 +895,121 @@ var DSFUI = (function (exports) {
       }
     }
 
+    var isListeningDocument = false;
+    function initCopyDataAttrToClipboardBtns() {
+      if (!isListeningDocument) {
+        isListeningDocument = true;
+        $("body").on("click", ".js-copy-to-clipboard", function (e) {
+          var modalElement = e.target.closest(".modal");
+          var copySuccessMessageText = e.target.dataset.copySuccessMessageText || "Скопировано";
+          var copySuccessMessageType = e.target.dataset.copySuccessMessageType || "success";
+          var copyErrorMessageType = e.target.dataset.copyErrorMessageType || "danger";
+          var copyErrorMessageText = e.target.dataset.copyErrorMessageText || "Ошибка";
+          var modalForm = null;
+          if (!modalElement) {
+            modalForm = document.body;
+            // console.log('Кликнутый элемент находится в открытом модальном окне');
+          } else {
+            modalForm = this;
+            // console.log('Клик был вне модального окна');
+          }
+          var text = $(this).data("copy");
+          Promise.resolve(text).then(function (text) {
+            return copyToClipboard(text, modalForm);
+          }).then(function () {
+            showNotification(copySuccessMessageText, {
+              type: copySuccessMessageType
+            });
+          })["catch"](function (error) {
+            console.error("Error while copying text: ", error);
+            showNotification(copyErrorMessageText, {
+              type: copyErrorMessageType
+            });
+          });
+          return false;
+        });
+      }
+    }
+
+    /**
+     * Копирует текст в буфер обмена
+     * @param {string} text - Текст для копирования
+     */
+    function copyToClipboard(text, modalForm) {
+      return new Promise(function (resolve, reject) {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(function () {
+            return resolve();
+          })["catch"](function (error) {
+            return reject(error);
+          });
+        } else {
+          try {
+            fallbackCopyToClipboard(text, modalForm);
+            resolve();
+          } catch (err) {
+            reject(err);
+          }
+        }
+      });
+    }
+
+    /**
+     * Fallback-функция для копирования текста в старых браузерах
+     * @param {string} text - Текст для копирования
+     */
+    function fallbackCopyToClipboard(text, modalForm) {
+      var textArea = document.createElement("textarea");
+      textArea.value = text;
+      Object.assign(textArea.style, {
+        position: "fixed",
+        top: "0",
+        left: "0",
+        width: "2em",
+        height: "2em",
+        padding: "0",
+        border: "none",
+        outline: "none",
+        boxShadow: "none",
+        background: "transparent"
+      });
+      modalForm.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        var successful = document.execCommand("copy");
+        console.log("Fallback: Copying text command was ".concat(successful ? "successful" : "unsuccessful"));
+      } catch (err) {
+        console.error("Fallback: Oops, unable to copy", err);
+        throw err;
+      } finally {
+        modalForm.removeChild(textArea);
+      }
+    }
+
+    /**
+     * Показывает уведомление
+     * @param {string} message - Сообщение для отображения
+     * @param {Object} [options] - Дополнительные настройки уведомления.
+     * @param {string} [options.type='success'] - Тип уведомления, определяющий его стиль.
+     */
+    function showNotification(message) {
+      var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+        _ref$type = _ref.type,
+        type = _ref$type === void 0 ? "success" : _ref$type;
+      if (typeof $.notify === "function") {
+        $.notify({
+          message: message
+        }, {
+          type: type,
+          z_index: 9999,
+          delay: 2000
+        });
+      } else {
+        console.warn("jQuery Notify is not available. Notification skipped.");
+      }
+    }
+
     function OnLoad() {
       itemActionMenu();
       multilevelMenu();
@@ -903,6 +1018,7 @@ var DSFUI = (function (exports) {
       FormsFree();
       AutoresizeTextarea();
       CustomFileUpload();
+      initCopyDataAttrToClipboardBtns();
     }
     function iconsInit() {
       searchIcon();
