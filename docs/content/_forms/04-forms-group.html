@@ -303,7 +303,6 @@ order: 4
     </span>
 </a>
 <div class="collapse" id="collapseCode31">
-    {% highlight html %}
     <div class="text-right">
         <button class="btn-icon js-copy-to-clipboard" type="button" data-copy="<?= $form->field($model, 'createdAtFrom', 
                 ['options' => ['class' => 'form-control-container']])
@@ -328,6 +327,7 @@ order: 4
             ->label(false) 
         ?>"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use></svg></span></button>
     </div>
+    {% highlight html %}
     <div class="inputGroup mb-10">
         <?= $form->field($model, 'createdAtFrom', 
                 ['options' => ['class' => 'form-control-container']])
