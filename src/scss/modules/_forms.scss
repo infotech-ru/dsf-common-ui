@@ -490,7 +490,7 @@ textarea.form-control {
 @mixin form-inline {
 
   // Kick in the inline
-  @media (min-width: varbootstrapv3.gridBreakpoints(sm)) {
+  @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
     // Inline-block all the things for "inline"
     .form-group {
       display: inline-block;
@@ -588,7 +588,7 @@ textarea.form-control {
 
   // Reset spacing and right align labels, but scope to media queries so that
   // labels on narrow viewports stack the same as a default form example.
-  @media (min-width: varbootstrapv3.gridBreakpoints(sm)) {
+  @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
     .control-label {
       padding-top: 7px; // Default padding plus a border
       margin-bottom: 0;

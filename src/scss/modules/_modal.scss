@@ -8,11 +8,7 @@
 @use './../utilities/functions/func_svg-url' as svgurl;
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-zindex' as *;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
-// @use './../utilities/variables/var-fonts' as *;
 
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
@@ -64,7 +60,7 @@
     width: auto;
     margin: 10px;
 
-    @media (min-width: varbootstrapv3.gridBreakpoints(sm)) {
+    @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
         margin: 10px auto;
         width: 640px;
     }

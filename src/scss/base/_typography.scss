@@ -114,7 +114,7 @@ h6, .h6 {
   dd {
     @include clearfix.clearfix; // Clear the floated `dt` if an empty `dd` is present
   }
-  @media (min-width: varbootstrapv3.gridBreakpoints(sm)) {
+  @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
     dt {
       float: left;
       width: fonts.rem(val.brandSizes(dlHorizontalOffset) - 20);
