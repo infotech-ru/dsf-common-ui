@@ -14070,7 +14070,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .unityBlock {
   background-color: #ffffff;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  padding: 0.625rem;
+  z-index: unset;
 }
 .unityBlock__nobg {
   background-color: transparent;
@@ -14082,7 +14083,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .unityBlock_headerItem {
   align-items: center;
@@ -14097,13 +14098,13 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   white-space: nowrap;
 }
 .unityBlock_headerSvgTitle {
-  height: 24px;
-  width: 24px;
-  margin-right: 5px;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.3125rem;
 }
 .unityBlock_headerSvgTitle svg {
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
