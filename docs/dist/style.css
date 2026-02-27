@@ -13826,6 +13826,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   max-height: 50vh;
   margin-bottom: 20px;
   overflow: auto;
+  z-index: unset;
 }
 .table-sticky-head-left_col th:first-child,
 .table-sticky-head-left_col td:first-child,

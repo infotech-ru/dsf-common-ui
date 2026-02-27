@@ -8,13 +8,6 @@
 @use './../utilities/functions/func_svg-url' as svgurl;
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-sizes' as *;
-// @use './../utilities/variables/var-lineHeights' as *;
-// @use './../utilities/variables/var-zindex' as *;
-// @use './../utilities/variables/var-fonts' as *;
-// @use './../utilities/mixins/table' as table;
-
 
 .table {
   background-color: transparent;
@@ -311,6 +304,7 @@ tbody tr {
   max-height: 50vh;
   margin-bottom: 20px;
   overflow: auto;
+  z-index: val.zIndex(wrapper__tableSticky);
   th,
   td {
     &:first-child{ 
