@@ -524,11 +524,11 @@ pre{
 
 .js-copy-to-clipboard{
   position: relative;
+  cursor: pointer;
 }
 .js-copy-to-clipboard:after{
   content: 'Copy';
   display: block;
-  cursor: pointer;
   bottom: auto;
   top: -80%;
   position: absolute;

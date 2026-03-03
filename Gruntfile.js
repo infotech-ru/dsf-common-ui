@@ -242,6 +242,7 @@ module.exports = function (grunt) {
                         // "src/js/bootstrap/tab.js", // v4 li.active a -> a.active
                         "src/js/bootstrap/tooltip.js", // v4
                         "src/js/bootstrap/popover.js", // v4
+                        "src/js/bootstrap/toast.js", // v4
                         "src/js/bootstrap-select/dist/bootstrap-select.min.js",
                     ],
                 },
