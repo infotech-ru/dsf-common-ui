@@ -112,6 +112,11 @@ output {
       > span{
         pointer-events: all;
       }
+      .inputGroup &{
+        .form-group &{
+          top: fonts.rem((val.fontSizes(controlLabel_active__formFree) - 2) * -1);
+        }
+      }
     }
     &.active {
       .css-formFree & {
@@ -127,6 +132,13 @@ output {
         top: 2px; // корректировка из-за line-height
         z-index: 1;
         max-width: calc(100% - fonts.rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
+      }
+      .inputGroup &{
+        .form-group &{
+          .css-formFree & {
+            top: 0;
+          }
+        }
       }
     }
     &__relative{

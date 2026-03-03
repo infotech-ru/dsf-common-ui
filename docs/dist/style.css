@@ -11482,6 +11482,9 @@ output {
 .css-formFree .control-label > span {
   pointer-events: all;
 }
+.form-group .inputGroup .css-formFree .control-label {
+  top: -0.5625rem;
+}
 .css-formFree .control-label.active {
   background-color: var(--bg_color, #ffffff);
   font-size: 0.6875rem;
@@ -11493,6 +11496,9 @@ output {
   top: 2px;
   z-index: 1;
   max-width: calc(100% - 0.4375rem + 0.1875rem);
+}
+.css-formFree .form-group .inputGroup .control-label.active {
+  top: 0;
 }
 .css-formFree .control-label__relative, .css-formFree .control-label__relative.active {
   left: auto;
