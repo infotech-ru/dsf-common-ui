@@ -856,6 +856,10 @@ var DSFUI = (function (exports) {
       });
       $('.selectpicker').selectpicker();
       $('.js-copy-to-clipboard').click(function (e) {
+        var copyText = this.getAttribute('data-copy');
+        navigator.clipboard.writeText(copyText).then(function () {
+          console.log('Async: Copying to clipboard was successful!');
+        });
         this.classList.add('text-success');
         setInterval(this.classList.remove('text-success'), 3000);
         $('#liveToast2').toast('show');
