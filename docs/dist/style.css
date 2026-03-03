@@ -11671,11 +11671,11 @@ textarea.form-control {
 }
 .form-group__0 {
   margin-bottom: 0rem;
-  padding-top: 0;
+  padding-top: 0rem;
 }
 .css-formFree .form-group__0 {
   margin-bottom: 0rem;
-  padding-top: 0;
+  padding-top: 0rem;
 }
 
 .radio,
@@ -13030,6 +13030,9 @@ select.selectpicker {
 .css-formFree .form-control-container {
   padding-top: 0.6875rem;
 }
+.css-formFree .form-group .form-control-container {
+  padding-top: 0;
+}
 .form-control-container .form-control {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -13074,6 +13077,10 @@ select.selectpicker {
 .css-formFree .inputGroup_prepend,
 .css-formFree .inputGroup_append {
   padding-top: 0.6875rem;
+}
+.css-formFree .form-group .inputGroup_prepend,
+.css-formFree .form-group .inputGroup_append {
+  padding-top: 0;
 }
 .inputGroup_prepend [class*=btn-],
 .inputGroup_append [class*=btn-] {

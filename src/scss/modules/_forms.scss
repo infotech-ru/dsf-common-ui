@@ -357,10 +357,10 @@ textarea.form-control {
   }
   &__0{
     margin-bottom: fonts.rem(0);
-    padding-top: 0;
+    padding-top: fonts.rem(0);
     .css-formFree &{ 
       margin-bottom: fonts.rem(0);
-      padding-top: 0;
+      padding-top: fonts.rem(0);
     }
   }
 }

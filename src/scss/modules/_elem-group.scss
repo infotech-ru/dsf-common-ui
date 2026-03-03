@@ -527,6 +527,11 @@
   .css-formFree & {
     padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
   }
+  .form-group &{
+    .css-formFree & {
+      padding-top: 0;
+    }
+  }
   .form-control {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -578,6 +583,11 @@
   display: flex;
   .css-formFree & {
     padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+  }
+  .form-group &{
+    .css-formFree & {
+      padding-top: 0;
+    }
   }
   [class*="btn-"] {
     position: relative;
