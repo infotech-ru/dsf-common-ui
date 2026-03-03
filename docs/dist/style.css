@@ -13049,7 +13049,7 @@ select.selectpicker {
 .form-control-container:last-child .form-control {
   border-right-width: 1px;
 }
-.form-control-container:not(:first-child):not(:last-child) .bootstrap-select .btn {
+.form-control-container:not(:first-child):not(:last-child) .bootstrap-select [class*=btn-] {
   border-right: 0px;
 }
 .form-control-container__border {
@@ -13074,27 +13074,27 @@ select.selectpicker {
 .css-formFree .inputGroup_append {
   padding-top: 0.6875rem;
 }
-.inputGroup_prepend .btn,
-.inputGroup_append .btn {
+.inputGroup_prepend [class*=btn-],
+.inputGroup_append [class*=btn-] {
   position: relative;
   z-index: 2;
 }
-.inputGroup_prepend .btn:focus,
-.inputGroup_append .btn:focus {
+.inputGroup_prepend [class*=btn-]:focus,
+.inputGroup_append [class*=btn-]:focus {
   z-index: 3;
 }
-.inputGroup_prepend .btn + .btn,
-.inputGroup_prepend .btn + .inputGroup_text,
-.inputGroup_prepend .btn + .inputGroup_inner,
+.inputGroup_prepend [class*=btn-] + [class*=btn-],
+.inputGroup_prepend [class*=btn-] + .inputGroup_text,
+.inputGroup_prepend [class*=btn-] + .inputGroup_inner,
 .inputGroup_prepend .inputGroup_text + .inputGroup_text,
 .inputGroup_prepend .inputGroup_inner + .inputGroup_inner,
-.inputGroup_prepend .inputGroup_inner + .btn,
-.inputGroup_append .btn + .btn,
-.inputGroup_append .btn + .inputGroup_text,
-.inputGroup_append .btn + .inputGroup_inner,
+.inputGroup_prepend .inputGroup_inner + [class*=btn-],
+.inputGroup_append [class*=btn-] + [class*=btn-],
+.inputGroup_append [class*=btn-] + .inputGroup_text,
+.inputGroup_append [class*=btn-] + .inputGroup_inner,
 .inputGroup_append .inputGroup_text + .inputGroup_text,
 .inputGroup_append .inputGroup_inner + .inputGroup_inner,
-.inputGroup_append .inputGroup_inner + .btn {
+.inputGroup_append .inputGroup_inner + [class*=btn-] {
   margin-left: -1px;
 }
 
@@ -13105,7 +13105,7 @@ select.selectpicker {
 .inputGroup_prepend .inputGroup_inner {
   border-left: 1px solid #BABABA;
 }
-.inputGroup_prepend + .form-control-container .bootstrap-select .btn {
+.inputGroup_prepend + .form-control-container .bootstrap-select [class*=btn-] {
   border-left: 0px;
 }
 .inputGroup_prepend .inputGroup_outer {
@@ -13121,6 +13121,9 @@ select.selectpicker {
 }
 .inputGroup_append .inputGroup_outer {
   border-left: 1px solid #BABABA;
+}
+.inputGroup_append [class*=btn-] + .inputGroup_outer {
+  border-left: none;
 }
 
 .inputGroup_text,
@@ -13176,23 +13179,23 @@ select.selectpicker {
   margin-top: 0;
 }
 
-.inputGroup_prepend > .btn,
+.inputGroup_prepend > [class*=btn-],
 .inputGroup_prepend > .inputGroup_text,
 .inputGroup_prepend > .inputGroup_inner,
-.inputGroup_append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.inputGroup_append:last-child > [class*=btn-]:not(:last-child):not(.dropdown-toggle),
 .inputGroup_append:last-child > .inputGroup_text:not(:last-child),
 .inputGroup_append:last-child > .inputGroup_inner:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.inputGroup_append > .btn,
+.inputGroup_append > [class*=btn-],
 .inputGroup_append > .inputGroup_text,
 .inputGroup_append > .inputGroup_inner,
-.inputGroup_prepend:not(:first-child) > .btn,
+.inputGroup_prepend:not(:first-child) > [class*=btn-],
 .inputGroup_prepend:not(:first-child) > .inputGroup_text,
 .inputGroup_prepend:not(:first-child) > .inputGroup_inner,
-.inputGroup_prepend:first-child > .btn:not(:first-child),
+.inputGroup_prepend:first-child > [class*=btn-]:not(:first-child),
 .inputGroup_prepend:first-child > .inputGroup_text:not(:first-child),
 .inputGroup_prepend:first-child > .inputGroup_inner:not(:first-child) {
   border-top-left-radius: 0;

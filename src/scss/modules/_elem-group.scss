@@ -554,7 +554,7 @@
     }
   }
   &:not(:first-child):not(:last-child){
-    .bootstrap-select .btn{
+    .bootstrap-select [class*="btn-"]{
       border-right: 0px;
     }
   }
@@ -579,19 +579,19 @@
   .css-formFree & {
     padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
   }
-  .btn {
+  [class*="btn-"] {
     position: relative;
     z-index: 2;
     &:focus {
       z-index: 3;
     }
   }
-  .btn + .btn,
-  .btn + .inputGroup_text,
-  .btn + .inputGroup_inner,
+  [class*="btn-"] + [class*="btn-"],
+  [class*="btn-"] + .inputGroup_text,
+  [class*="btn-"] + .inputGroup_inner,
   .inputGroup_text + .inputGroup_text,
   .inputGroup_inner + .inputGroup_inner,
-  .inputGroup_inner + .btn {
+  .inputGroup_inner + [class*="btn-"] {
     margin-left: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
   }
 }
@@ -604,7 +604,7 @@
     border-left: 1px solid val.brandPalette(inputGroupEl-borderColor);
   }
   & + .form-control-container {
-    .bootstrap-select .btn{
+    .bootstrap-select [class*="btn-"]{
       border-left: 0px;
     }
   }
@@ -622,6 +622,9 @@
   }
   .inputGroup_outer {
     border-left: 1px solid val.brandPalette(inputGroupEl-borderColor);
+  }
+  [class*="btn-"] +  .inputGroup_outer {
+    border-left: none;
   }
 }
 
@@ -675,23 +678,23 @@
   }
 }
 
-.inputGroup_prepend > .btn,
+.inputGroup_prepend > [class*="btn-"],
 .inputGroup_prepend > .inputGroup_text,
 .inputGroup_prepend > .inputGroup_inner,
-.inputGroup_append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.inputGroup_append:last-child > [class*="btn-"]:not(:last-child):not(.dropdown-toggle),
 .inputGroup_append:last-child > .inputGroup_text:not(:last-child),
 .inputGroup_append:last-child > .inputGroup_inner:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.inputGroup_append > .btn,
+.inputGroup_append > [class*="btn-"],
 .inputGroup_append > .inputGroup_text,
 .inputGroup_append > .inputGroup_inner,
-.inputGroup_prepend:not(:first-child) > .btn,
+.inputGroup_prepend:not(:first-child) > [class*="btn-"],
 .inputGroup_prepend:not(:first-child) > .inputGroup_text,
 .inputGroup_prepend:not(:first-child) > .inputGroup_inner,
-.inputGroup_prepend:first-child > .btn:not(:first-child),
+.inputGroup_prepend:first-child > [class*="btn-"]:not(:first-child),
 .inputGroup_prepend:first-child > .inputGroup_text:not(:first-child),
 .inputGroup_prepend:first-child > .inputGroup_inner:not(:first-child) {
   border-top-left-radius: 0;
