@@ -3856,6 +3856,7 @@ h6, .h6 {
   display: flex;
   justify-content: space-between;
   font-size: 1.125rem;
+  flex-shrink: 0;
   font-weight: 400;
   line-height: 1.3125rem;
   margin: 0;

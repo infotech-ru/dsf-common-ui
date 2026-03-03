@@ -24,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     font-size: fonts.rem(18);
+    flex-shrink: 0;
     font-weight: 400;
     line-height: fonts.rem(21);
     margin: 0;
