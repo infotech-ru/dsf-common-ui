@@ -857,7 +857,7 @@ var DSFUI = (function (exports) {
       $('.selectpicker').selectpicker();
       $('.js-copy-to-clipboard').click(function (e) {
         this.classList.add('text-success');
-        setTimeout(this.classList.remove('text-success'), 3000);
+        setInterval(this.classList.remove('text-success'), 3000);
         $('#liveToast2').toast('show');
       });
     }
