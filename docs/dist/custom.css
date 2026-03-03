@@ -528,15 +528,17 @@ pre{
 .js-copy-to-clipboard:after{
   content: 'Copy';
   display: block;
-  bottom: 0.125rem;
+  cursor: pointer;
+  bottom: auto;
+  top: -80%;
   position: absolute;
-  right: -0.125rem;
+  right: -16px;
   align-items: center;
   border-radius: 0.125rem;
   background-color: var(--label_bgc, #E4EEF7);
-  color: var(--label_color, #fff);
+  color: var(--label_color, #4A8DC6);
   display: inline-flex;
-  font-size: var(--label-fontSize, 0.625rem);
+  font-size: var(--label-fontSize, 8px);
   font-weight: 700;
   justify-content: center;
   line-height: 1;
@@ -544,6 +546,7 @@ pre{
   height: fit-content;
   padding: 0 0.3125rem 0 0.25rem;
   text-align: center;
+  opacity: 0.5;
   text-transform: uppercase;
   white-space: nowrap;
 }

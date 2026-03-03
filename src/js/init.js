@@ -23,4 +23,12 @@ export function init(){
     $('#js-toast').toast('show');
   })
   $('.selectpicker').selectpicker();
+  $('.js-copy-to-clipboard').click(function (e) {
+    var copyText = this.getAttribute('data-copy');
+    navigator.clipboard.writeText(copyText).then(function () {
+      console.log('Async: Copying to clipboard was successful!');
+    });
+    this.classList.add('text-success');
+    $('.toast').toast('show');
+  });
 }
