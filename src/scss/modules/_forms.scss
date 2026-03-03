@@ -112,9 +112,11 @@ output {
       > span{
         pointer-events: all;
       }
-      .inputGroup &{
-        .form-group &{
-          top: fonts.rem((val.fontSizes(controlLabel_active__formFree) - 2) * -1);
+    }
+    .inputGroup &{
+      .form-group &{
+        .css-formFree & {
+          top: 0;
         }
       }
     }
@@ -136,7 +138,7 @@ output {
       .inputGroup &{
         .form-group &{
           .css-formFree & {
-            top: 0;
+            top: fonts.rem((val.fontSizes(controlLabel_active__formFree) - 2) * -1);
           }
         }
       }
