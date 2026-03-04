@@ -554,3 +554,6 @@ pre{
   background-color: #DAF0DA;
   color: #467B46;
 }
+.js-copy-to-clipboard.btn-icon:after{
+  display: none;
+}
