@@ -24,10 +24,11 @@ export function init(){
   })
   $('.selectpicker').selectpicker();
   $('.js-copy-to-clipboard').click(function (e) {
-    var $this = $(this);  
-    $this.addClass('text-success');
+    var $this = $(this);
+    const successClass = $btn.hasClass('btn-icon') ? 'btn-icon__success' : 'text-success';
+    $this.addClass(successClass);
     setTimeout(function(){
-      $this.removeClass('text-success');
+      $this.removeClass(successClass);
 
     }, 3000);
     $('#liveToast2').toast('show');

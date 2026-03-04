@@ -17,8 +17,21 @@ export function initCopyDataAttrToClipboardBtns() {
                 modalForm = this;
                 // console.log('Клик был вне модального окна');
             }
-            let text = $(this).data("copy");
-            Promise.resolve(text)
+            
+            let textPromise;
+            const templateId = $(this).data("template-id");
+            if (templateId) {
+                const template = document.getElementById(templateId);
+                if (template) {
+                    textPromise = Promise.resolve(template.innerHTML);
+                } else {
+                    textPromise = Promise.reject(new Error(`Template with id "${templateId}" not found`));
+                }
+            } else {
+                textPromise = Promise.resolve($(this).data("copy"));
+            }
+
+            textPromise
                 .then((text) => {
                     return copyToClipboard(text, modalForm);
                 })

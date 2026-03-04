@@ -857,9 +857,10 @@ var DSFUI = (function (exports) {
       $('.selectpicker').selectpicker();
       $('.js-copy-to-clipboard').click(function (e) {
         var $this = $(this);
-        $this.addClass('text-success');
+        var successClass = $btn.hasClass('btn-icon') ? 'btn-icon__success' : 'text-success';
+        $this.addClass(successClass);
         setTimeout(function () {
-          $this.removeClass('text-success');
+          $this.removeClass(successClass);
         }, 3000);
         $('#liveToast2').toast('show');
       });
@@ -921,8 +922,19 @@ var DSFUI = (function (exports) {
             modalForm = this;
             // console.log('Клик был вне модального окна');
           }
-          var text = $(this).data("copy");
-          Promise.resolve(text).then(function (text) {
+          var textPromise;
+          var templateId = $(this).data("template-id");
+          if (templateId) {
+            var template = document.getElementById(templateId);
+            if (template) {
+              textPromise = Promise.resolve(template.innerHTML);
+            } else {
+              textPromise = Promise.reject(new Error("Template with id \"".concat(templateId, "\" not found")));
+            }
+          } else {
+            textPromise = Promise.resolve($(this).data("copy"));
+          }
+          textPromise.then(function (text) {
             return copyToClipboard(text, modalForm);
           }).then(function () {
             showNotification(copySuccessMessageText, {
