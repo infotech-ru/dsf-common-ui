@@ -306,33 +306,34 @@ order: 4
     <div class="text-right">
         <button class="btn-icon js-copy-to-clipboard" type="button" data-template-id="copy-inputGroup"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use></svg></span></button>
     </div>
-<template id="copy-inputGroup">
-    <div class="inputGroup mb-10">
-        <?= $form->field($model, 'createdAtFrom', 
-                ['options' => ['class' => 'form-control-container']])
-            ->widget(DatePicker::class,
-                [
-                    'options' => [
-                        'class' => 'form-control form-control__placeholder', 
-                        'placeholder' => Yii::t('app', 'От')
-                    ],
-                ])
-            ->label(Yii::t('app', 'Создано')) 
-        ?>
-        <?= $form->field($model, 'createdAtTo', 
-                ['options' => ['class' => 'form-control-container']])
-            ->widget(DatePicker::class,
-                [
-                    'options' => [
-                        'class' => 'form-control form-control__placeholder', 
-                        'placeholder' => Yii::t('app', 'До')
-                    ],
-                ])
-            ->label(false) 
-        ?>
-    </div>    
-</template>
+    
     {% highlight html %}
+    <template id="copy-inputGroup">
+        <div class="inputGroup mb-10">
+            <?= $form->field($model, 'createdAtFrom', 
+                    ['options' => ['class' => 'form-control-container']])
+                ->widget(DatePicker::class,
+                    [
+                        'options' => [
+                            'class' => 'form-control form-control__placeholder', 
+                            'placeholder' => Yii::t('app', 'От')
+                        ],
+                    ])
+                ->label(Yii::t('app', 'Создано')) 
+            ?>
+            <?= $form->field($model, 'createdAtTo', 
+                    ['options' => ['class' => 'form-control-container']])
+                ->widget(DatePicker::class,
+                    [
+                        'options' => [
+                            'class' => 'form-control form-control__placeholder', 
+                            'placeholder' => Yii::t('app', 'До')
+                        ],
+                    ])
+                ->label(false) 
+            ?>
+        </div>    
+    </template>
     <div class="inputGroup mb-10">
         <?= $form->field($model, 'createdAtFrom', 
                 ['options' => ['class' => 'form-control-container']])

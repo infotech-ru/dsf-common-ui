@@ -927,7 +927,7 @@ var DSFUI = (function (exports) {
           if (templateId) {
             var template = document.getElementById(templateId);
             if (template) {
-              textPromise = Promise.resolve(template.textContent);
+              textPromise = Promise.resolve(template.innerHTML);
             } else {
               textPromise = Promise.reject(new Error("Template with id \"".concat(templateId, "\" not found")));
             }

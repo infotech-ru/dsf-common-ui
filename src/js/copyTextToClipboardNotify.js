@@ -23,7 +23,7 @@ export function initCopyDataAttrToClipboardBtns() {
             if (templateId) {
                 const template = document.getElementById(templateId);
                 if (template) {
-                    textPromise = Promise.resolve(template.textContent);
+                    textPromise = Promise.resolve(template.innerHTML);
                 } else {
                     textPromise = Promise.reject(new Error(`Template with id "${templateId}" not found`));
                 }
