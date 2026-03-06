@@ -44,7 +44,7 @@
         background-color: val.brandPalette(pagination_bgc);
         color: val.brandPalette(pagination_color);
         outline: none;
-        z-index: 2;
+        z-index: val.zIndex(pagination);
       }
     }
 
@@ -77,7 +77,7 @@
       color: val.brandPalette(pagination-active_color);
       cursor: default;
       outline: none;
-      z-index: 3;
+      z-index: val.zIndex(pagination_active);
     }
   }
 
