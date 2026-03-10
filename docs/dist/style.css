@@ -14034,6 +14034,9 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   display: inline-flex;
   margin-right: 10px;
 }
+.collapseTrIcon_link:empty {
+  margin-right: 0;
+}
 .collapseTrIcon_wrapper {
   align-items: center;
   display: flex;
@@ -14996,7 +14999,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .pagination > li > span {
   align-items: center;
   border: none;
-  border-radius: 1;
+  border-radius: 0.0625rem;
   background-color: #00000000;
   color: #4A8DC6;
   cursor: pointer;

@@ -479,6 +479,9 @@ tbody tr {
     border: none;
     display: inline-flex;
     margin-right: #{$value}px;
+    &:empty{
+      margin-right: 0;
+    }
   }
   &_wrapper{
     align-items: center;

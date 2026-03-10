@@ -22,7 +22,7 @@
     >span {
       align-items: center;
       border: none;
-      border-radius: val.brandSizes(paginationItem_borderRadius);
+      border-radius: fonts.rem(val.brandSizes(paginationItem_borderRadius));
       background-color: val.brandPalette(pagination_bgc);
       color: val.brandPalette(pagination_color);
       cursor: pointer;
