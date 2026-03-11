@@ -15955,13 +15955,9 @@ body[style^=padding-right] .modal-sidebar {
   text-align: center;
   text-overflow: ellipsis;
 }
-.square-title .svg--icon__24vb {
-  height: 24px;
-  width: 24px;
-}
-.square-title .svg--icon__24vb svg {
-  height: 24px;
-  width: 24px;
+.square-title .svg--icon__24vb, .square-title .svg--icon__24vb svg {
+  height: var(--svgIcon_height, 24px);
+  width: var(--svgIcon_width, 24px);
 }
 .square-text {
   align-items: center;
@@ -15978,13 +15974,9 @@ body[style^=padding-right] .modal-sidebar {
   font-weight: normal;
   line-height: 0.875rem;
 }
-.square-text .svg--icon__24vb {
-  height: 24px;
-  width: 24px;
-}
-.square-text .svg--icon__24vb svg {
-  height: 24px;
-  width: 24px;
+.square-text .svg--icon__24vb, .square-text .svg--icon__24vb svg {
+  height: var(--svgIcon_height, 24px);
+  width: var(--svgIcon_width, 24px);
 }
 .square-action {
   bottom: 0.625rem;
