@@ -14826,6 +14826,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .nav-tabs-vertical .nav-item {
   padding-right: 0;
   padding-bottom: 5px;
+  margin-left: 0;
 }
 .nav-tabs > li:first-child, .nav-tabs-vertical > li:first-child,
 .nav-pills > li:first-child,
