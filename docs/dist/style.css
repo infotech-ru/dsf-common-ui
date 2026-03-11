@@ -15824,7 +15824,9 @@ body[style^=padding-right] .modal-sidebar {
   align-items: center;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   padding: 1rem;
+  padding-right: 1.9375rem;
   position: relative;
 }
 .modal-sidebar-headerTitle {
@@ -15851,21 +15853,21 @@ body[style^=padding-right] .modal-sidebar {
   background-repeat: no-repeat;
   border: 0;
   cursor: pointer;
-  height: 15px;
+  height: 0.9375rem;
   padding: 0;
-  margin-top: -7.5px;
+  margin-top: -0.46875rem;
   opacity: 1;
   position: absolute;
-  right: 15px;
+  right: 0.9375rem;
   top: 50%;
-  width: 15px;
+  width: 0.9375rem;
   z-index: 1;
   --svg-close-fill: #333;
   --svg-close-stroke: #333;
 }
 .modal-sidebar-close svg {
-  height: 15px;
-  width: 15px;
+  height: 0.9375rem;
+  width: 0.9375rem;
 }
 
 .modal-sidebar-open {
