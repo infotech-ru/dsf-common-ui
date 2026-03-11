@@ -15825,6 +15825,7 @@ body[style^=padding-right] .modal-sidebar {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  gap: 0.625rem;
   padding: 1rem;
   padding-right: 1.9375rem;
   position: relative;

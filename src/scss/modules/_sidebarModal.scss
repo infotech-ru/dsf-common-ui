@@ -84,6 +84,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    gap: fonts.rem(val.brandSizes(base_marginSize));
     padding: fonts.rem(val.brandSizes(modalSidebar_padding));
     padding-right: fonts.rem(val.brandSizes(modalSidebar_padding) + val.brandSizes(modalSidebar_close_size));
     position: relative;
