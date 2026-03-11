@@ -307,10 +307,10 @@ order: 4
         <button class="btn-icon js-copy-to-clipboard" type="button" data-template-id="copy-inputGroup"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-copy"></use></svg></span></button>
     </div>
     
-    {% highlight html %}
     <template id="copy-inputGroup">
-        <div class="inputGroup mb-10">
-            <?= $form->field($model, 'createdAtFrom', 
+        <?= Html::tag(
+            'div', 
+            $form->field($model, 'createdAtFrom', 
                     ['options' => ['class' => 'form-control-container']])
                 ->widget(DatePicker::class,
                     [
@@ -320,8 +320,7 @@ order: 4
                         ],
                     ])
                 ->label(Yii::t('app', 'Создано')) 
-            ?>
-            <?= $form->field($model, 'createdAtTo', 
+            . $form->field($model, 'createdAtTo', 
                     ['options' => ['class' => 'form-control-container']])
                 ->widget(DatePicker::class,
                     [
@@ -330,10 +329,11 @@ order: 4
                             'placeholder' => Yii::t('app', 'До')
                         ],
                     ])
-                ->label(false) 
-            ?>
-        </div>    
+                ->label(false),
+            ['class' => 'inputGroup mb-10']
+        )?>
     </template>
+    {% highlight html %}
     <div class="inputGroup mb-10">
         <?= $form->field($model, 'createdAtFrom', 
                 ['options' => ['class' => 'form-control-container']])
