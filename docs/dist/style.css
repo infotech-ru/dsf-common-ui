@@ -8687,6 +8687,7 @@ input[type=checkbox][disabled] {
 .checkbox-item__toggleCheck label.checkbox:before {
   background-color: #dddddd;
   background-image: none;
+  border-radius: 1.3125rem;
   bottom: auto;
   border: none;
   content: "";

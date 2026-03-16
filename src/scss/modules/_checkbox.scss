@@ -156,7 +156,7 @@ input[type=checkbox] {
             &:before{
                 background-color: val.brandColors(_grey2);
                 background-image: none;
-                // border-radius: fonts.rem(val.brandSizes(toggleCheck_borderRadius));
+                border-radius: fonts.rem(val.brandSizes(toggleCheck_borderRadius));
                 bottom: auto;
                 border: none;
                 content: '';
