@@ -14065,7 +14065,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-top-style: var(--style_border_bottom, var(--style_border, solid));
   border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
 }
-.gridRow__grandMaster .svg--icon svg {
+.gridRow__grandMaster .svg--icon.collapseIcon_expand svg,
+.gridRow__grandMaster .svg--icon.collapseIcon_collapse svg {
   --svg-icon-stroke: #333333;
   --svg-icon-stroke_blue: #333333;
 }
@@ -14075,7 +14076,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .gridRow__master .gridCell:first-child {
   padding-left: 0;
 }
-.gridRow__master .svg--icon svg {
+.gridRow__master .svg--icon.collapseIcon_expand svg,
+.gridRow__master .svg--icon.collapseIcon_collapse svg {
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
 }

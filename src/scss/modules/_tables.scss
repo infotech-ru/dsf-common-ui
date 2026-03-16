@@ -509,7 +509,8 @@ tbody tr {
                 border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
             }
         }
-        .svg--icon svg{
+        .svg--icon.collapseIcon_expand svg,
+        .svg--icon.collapseIcon_collapse svg{
             --svg-icon-stroke: #{val.brandColors(_dark-grey)};
             --svg-icon-stroke_blue: #{val.brandColors(_dark-grey)};
         }
@@ -521,7 +522,8 @@ tbody tr {
                 padding-left: 0;
             }
         }
-        .svg--icon svg{
+        .svg--icon.collapseIcon_expand svg,
+        .svg--icon.collapseIcon_collapse svg{
             --svg-icon-stroke: #{val.brandColors(_light-blue)};
             --svg-icon-stroke_blue: #{val.brandColors(_light-blue)};
         }
