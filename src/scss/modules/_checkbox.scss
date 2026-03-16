@@ -174,7 +174,7 @@ input[type=checkbox] {
             }
             span{
                 font-size: fonts.rem(val.fontSizes(formElem));
-                padding-left: 45px;
+                padding-left: fonts.rem(val.brandSizes(toggleCheck_width) + (val.brandSizes(base_marginSize) * .5));
                 text-indent: 0;
             }
         }

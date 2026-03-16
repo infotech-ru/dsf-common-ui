@@ -8704,7 +8704,7 @@ input[type=checkbox][disabled] {
 }
 .checkbox-item__toggleCheck label.checkbox span {
   font-size: 0.75rem;
-  padding-left: 45px;
+  padding-left: 2.5625rem;
   text-indent: 0;
 }
 .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox {
@@ -12742,8 +12742,8 @@ select.selectpicker {
 .btn-group__radioCheck {
   align-items: center;
   background-color: #dddddd;
-  border-color: #dddddd;
   border-radius: 1.3125rem;
+  border: none;
   display: inline-flex;
   justify-content: space-between;
   height: 1.125rem;
@@ -12765,6 +12765,12 @@ select.selectpicker {
   padding: 0.125rem;
   text-indent: -9999px;
   width: 1.125rem;
+}
+.btn-group__radioCheckItem:first-child {
+  padding-right: 0;
+}
+.btn-group__radioCheckItem:last-child {
+  padding-left: 0;
 }
 .btn-group__radioCheckItem:after {
   background-color: #ffffff;

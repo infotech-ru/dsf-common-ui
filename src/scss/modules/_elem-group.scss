@@ -124,8 +124,9 @@
 .btn-group__radioCheck{
   align-items: center;
   background-color: val.brandPalette(toggleCheckNonActive_color);
-  border-color: val.brandPalette(toggleCheckNonActive_color);
+  // border-color: val.brandPalette(toggleCheckNonActive_color);
   border-radius: fonts.rem(val.brandSizes(toggleCheck_borderRadius));
+  border: none;
   display: inline-flex;
   justify-content: space-between;
   height: fonts.rem(val.brandSizes(toggleCheck_height));
@@ -147,6 +148,12 @@
     padding: fonts.rem(math.div((math.div(val.brandSizes(toggleCheck_width), 2) - val.brandSizes(toggleCheckToggle_width)), 2));
     text-indent: -9999px;
     width: fonts.rem(val.brandSizes(toggleCheck_width) * .5);
+    &:first-child{
+      padding-right: 0;
+    }
+    &:last-child{
+      padding-left: 0;
+    }
     &:after{
       background-color: val.brandPalette(toggleChecktoggle_bgc);
       border-radius: fonts.rem(val.brandSizes(toggleCheckToggle_borderRadius));
