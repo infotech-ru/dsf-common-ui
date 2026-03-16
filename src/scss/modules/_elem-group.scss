@@ -4,30 +4,19 @@
 /* path: dsf-common-ui/src/scss/modules/_elem-group.scss                      */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+@use 'sass:math';
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-bootstrap-v3' as *;
-// @use './../utilities/variables/var-lineHeights' as *;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-sizes' as *;
-// @use './../utilities/variables/var-fonts' as *;
 @use './../utilities/mixins_bootstrap-v3/border-radius' as borderradius;
 @use './../utilities/mixins/transition' as transition;
 @use './buttons' as buttons;
 
-//
-// Button groups
-// --------------------------------------------------
 
-
-// .btn-group,
-// .btn-group-vertical {
 .btn-group{
   position: relative;
   // display: inline-block;
   display: inline-flex;
   vertical-align: middle; // match .btn alignment given font-size hack above
-  // > .btn,
   > [class*="btn"]{
     position: relative;
     // float: left;
@@ -43,11 +32,8 @@
 
 // Prevent double borders when buttons are next to each other
 .btn-group {
-  // .btn + .btn,
   [class*="btn"] + [class*="btn"],
-  // .btn + .btn-group,
   [class*="btn"] + .btn-group,
-  // .btn-group + .btn,
   .btn-group + [class*="btn"],
   .btn-group + .btn-group {
     margin-left: -1px;
@@ -56,13 +42,11 @@
 
 
 
-// .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
 .btn-group > [class*="btn"]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
-// .btn-group > .btn:first-child {
 .btn-group > [class*="btn"]:first-child {
   margin-left: 0;
   &:not(:last-child):not(.dropdown-toggle) {
@@ -70,7 +54,6 @@
   }
 }
 // Need .dropdown-toggle since :last-child doesn't apply, given that a .dropdown-menu is used immediately after it
-// .btn-group > .btn:last-child:not(:first-child),
 .btn-group > [class*="btn"]:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   @include borderradius.border-left-radius(0);
@@ -85,7 +68,6 @@
 // Sizing
 
 .btn-group > [class*="btn"],
-// .btn-group > .btn,
 .btn-group-sm > .btn, // старые правила очищаем
 .btn-group-lg > .btn {
   line-height: fonts.rem(val.lineHeight(btn));
@@ -99,20 +81,12 @@
 .btn-group > .btn-large {
   line-height: fonts.rem(val.lineHeight(btnLg));
 }
-// Split button dropdowns
-// ----------------------
 
 // Give the line between buttons some depth
-// .btn-group > .btn + .dropdown-toggle {
 .btn-group > [class*="btn"] + .dropdown-toggle {
   padding-right: 8px;
   padding-left: 8px;
 }
-
-// .btn-group > .btn-lg + .dropdown-toggle {
-//   padding-right: 12px;
-//   padding-left: 12px;
-// }
 
 // The clickable button for toggling the menu
 // Remove the gradient and set the same inset shadow as the :active state
@@ -128,7 +102,6 @@
 
 
 .btn-group__theme{
-  // @extend .btn-group;
   & > [class*="btn"] {
     @extend .btn-default;
   }
@@ -150,45 +123,45 @@
 
 .btn-group__radioCheck{
   align-items: center;
-  background-color: val.brandColors(_grey2);
-  border-color: val.brandColors(_grey2);
-  border-radius: 1px;
+  background-color: val.brandPalette(toggleCheckNonActive_color);
+  border-color: val.brandPalette(toggleCheckNonActive_color);
+  border-radius: fonts.rem(val.brandSizes(toggleCheck_borderRadius));
   display: inline-flex;
   justify-content: space-between;
-  height: 18px;
+  height: fonts.rem(val.brandSizes(toggleCheck_height));
   padding: 0;
   position: relative;
-  width: 40px;
+  width: fonts.rem(val.brandSizes(toggleCheck_width));
   &Item{
     align-items: center;
-    background-color: val.brandColors(_light-blue);
+    background-color: val.brandPalette(toggleCheckActive_color);
     background-image: none;
     border: none;
-    border-radius: 1px;
+    border-radius: fonts.rem(val.brandSizes(toggleCheck_borderRadius));
     display: inline-flex;
-    flex: 0 0 20px;
+    flex: 0 0 fonts.rem(val.brandSizes(toggleCheck_width) * .5);
     font-size: 0; // safari fix
-    height: 18px;
+    height: fonts.rem(val.brandSizes(toggleCheckToggle_height));
     outline: none;
-    padding: 2px;
+    padding: fonts.rem(math.div((math.div(val.brandSizes(toggleCheck_width), 2) - val.brandSizes(toggleCheckToggle_width)), 2));
     text-indent: -9999px;
-    width: 20px;
+    width: fonts.rem(val.brandSizes(toggleCheck_width) * .5);
     &:after{
-      background-color: val.brandColors(_light-grey);
+      background-color: val.brandPalette(toggleChecktoggke_bgc);
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
       display: none;
       content: '';
-      height: 14px;
-      width: 16px;
+      height: fonts.rem(val.brandSizes(toggleCheckToggle_height));
+      width: fonts.rem(val.brandSizes(toggleCheckToggle_width));
     }
     &:focus, &:hover{ 
       background-image: none;
-      background-color: val.brandColors(_light-blue);
+      background-color: val.brandPalette(toggleCheckActive_color);
       border: none;
       outline: none;
     }
     &.active{
-      background-color: val.brandColors(_grey2);
+      background-color: val.brandPalette(toggleCheckNonActive_color);
       background-image: none;
       &:after{
         display: block;
@@ -198,17 +171,16 @@
         background-image: none;
       }
       & + .btn-group__radioCheckItem{
-        background-color: val.brandColors(_grey2);
-        &:focus, &:hover{ 
-          background-color: val.brandColors(_grey2);
+        &, &:focus, &:hover{ 
+          background-color: val.brandPalette(toggleCheckNonActive_color);
         }
       }
     }
     & + .active{
-      background-color: val.brandColors(_light-blue);
+      background-color: val.brandPalette(toggleCheckActive_color);
       width: 100%;
       &:focus, &:hover{ 
-        background-color: val.brandColors(_light-blue);
+        background-color: val.brandPalette(toggleCheckActive_color);
       }
     }
   }

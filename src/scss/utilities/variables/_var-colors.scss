@@ -795,6 +795,10 @@ $brand-palette: map.merge((
   toastHeader_bgc:                        map.get($brand-colors, _light-orange),
   toastHeader_borderColor:                map.get($brand-colors, _white),
   toastHeader_color:                      map.get($brand-colors, _dark-grey),
+  
+  toggleCheckNonActive_color:             map.get($brand-colors, _light-grey),
+  toggleCheckActive_color:                map.get($brand-colors, _light-blue),
+  toggleChecktoggke_bgc:                  map.get($brand-colors, _white),
 
   tooltip_bgc:                            map.get($brand-colors, _black),
   tooltip_color:                          map.get($brand-colors, _white),
