@@ -141,13 +141,14 @@
     display: inline-flex;
     flex: 0 0 fonts.rem(val.brandSizes(toggleCheck_width) * .5);
     font-size: 0; // safari fix
-    height: fonts.rem(val.brandSizes(toggleCheckToggle_height));
+    height: fonts.rem(val.brandSizes(toggleCheck_height));
+    // height: fonts.rem(val.brandSizes(toggleCheckToggle_height));
     outline: none;
     padding: fonts.rem(math.div((math.div(val.brandSizes(toggleCheck_width), 2) - val.brandSizes(toggleCheckToggle_width)), 2));
     text-indent: -9999px;
     width: fonts.rem(val.brandSizes(toggleCheck_width) * .5);
     &:after{
-      background-color: val.brandPalette(toggleChecktoggke_bgc);
+      background-color: val.brandPalette(toggleChecktoggle_bgc);
       border-radius: fonts.rem(val.brandSizes(toggleCheckToggle_borderRadius));
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
       display: none;
@@ -277,6 +278,7 @@
       position: absolute;
       clip: rect(0, 0, 0, 0);
       pointer-events: none;
+      margin: 0;
     }
   }
 }

@@ -8576,6 +8576,7 @@ input[type=checkbox][disabled] {
 .checkbox-item input[type=checkbox] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
+  margin: 0;
 }
 .checkbox-item input[type=checkbox]:checked + label.checkbox:before {
   background-image: url("data:image/svg+xml;utf8,%3Csvg width=%278%27 height=%276%27 viewBox=%270 0 8 6%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M0.5 2.593L3.10465 5.19766L7.5 0.802307%27 stroke=%27white%27/%3E%3C/svg%3E");
@@ -8715,7 +8716,7 @@ input[type=checkbox][disabled] {
   background-image: none;
 }
 .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:hover:after, .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:focus:after {
-  background-color: #dddddd;
+  background-color: #ffffff;
   background-image: none;
 }
 .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:hover:before, .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:focus:before {
@@ -8723,7 +8724,7 @@ input[type=checkbox][disabled] {
   background-image: none;
 }
 .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:after {
-  background-color: #dddddd;
+  background-color: #ffffff;
   background-image: none;
   left: 1.125rem;
 }
@@ -12759,7 +12760,7 @@ select.selectpicker {
   display: inline-flex;
   flex: 0 0 1.125rem;
   font-size: 0;
-  height: 0.875rem;
+  height: 1.125rem;
   outline: none;
   padding: 0.125rem;
   text-indent: -9999px;
@@ -12851,6 +12852,7 @@ select.selectpicker {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
+  margin: 0;
 }
 
 .input-group {

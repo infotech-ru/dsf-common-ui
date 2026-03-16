@@ -786,7 +786,7 @@ $brand-palette: map.merge((
   tableHelpIcon_bgc:                      map.get($brand-colors, _dark-grey),
   table-table-striped-bg-odd:             map.get($brand-colors, _white),
   table-table-striped-bg-even:            map.get($brand-colors, _light-grey),
-
+  
   tabsPane-active_bgc:                    map.get($brand-colors, _white),
 
   toastBody_bgc:                          map.get($brand-colors, _white),
@@ -798,7 +798,7 @@ $brand-palette: map.merge((
   
   toggleCheckNonActive_color:             map.get($brand-colors, _grey2),
   toggleCheckActive_color:                map.get($brand-colors, _light-blue),
-  toggleChecktoggke_bgc:                  map.get($brand-colors, _white),
+  toggleChecktoggle_bgc:                  map.get($brand-colors, _white),
 
   tooltip_bgc:                            map.get($brand-colors, _black),
   tooltip_color:                          map.get($brand-colors, _white),
