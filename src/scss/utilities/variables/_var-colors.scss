@@ -796,7 +796,7 @@ $brand-palette: map.merge((
   toastHeader_borderColor:                map.get($brand-colors, _white),
   toastHeader_color:                      map.get($brand-colors, _dark-grey),
   
-  toggleCheckNonActive_color:             map.get($brand-colors, _light-grey),
+  toggleCheckNonActive_color:             map.get($brand-colors, _grey2),
   toggleCheckActive_color:                map.get($brand-colors, _light-blue),
   toggleChecktoggke_bgc:                  map.get($brand-colors, _white),
 

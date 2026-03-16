@@ -154,7 +154,7 @@ input[type=checkbox] {
                 width: fonts.rem(val.brandSizes(toggleCheckToggle_width));
             }
             &:before{
-                background-color: val.brandColors(_grey2);
+                background-color: val.brandPalette(toggleCheckNonActive_color);
                 background-image: none;
                 border-radius: fonts.rem(val.brandSizes(toggleCheck_borderRadius));
                 bottom: auto;

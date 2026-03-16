@@ -8715,7 +8715,7 @@ input[type=checkbox][disabled] {
   background-image: none;
 }
 .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:hover:after, .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:focus:after {
-  background-color: #f9f9f9;
+  background-color: #dddddd;
   background-image: none;
 }
 .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:hover:before, .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:focus:before {
@@ -8723,7 +8723,7 @@ input[type=checkbox][disabled] {
   background-image: none;
 }
 .checkbox-item__toggleCheck input[type=checkbox]:checked + label.checkbox:after {
-  background-color: #f9f9f9;
+  background-color: #dddddd;
   background-image: none;
   left: 1.125rem;
 }
@@ -12740,8 +12740,8 @@ select.selectpicker {
 
 .btn-group__radioCheck {
   align-items: center;
-  background-color: #f9f9f9;
-  border-color: #f9f9f9;
+  background-color: #dddddd;
+  border-color: #dddddd;
   border-radius: 1.3125rem;
   display: inline-flex;
   justify-content: space-between;
@@ -12767,6 +12767,7 @@ select.selectpicker {
 }
 .btn-group__radioCheckItem:after {
   background-color: #ffffff;
+  border-radius: 1.25rem;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
   display: none;
   content: "";
@@ -12780,7 +12781,7 @@ select.selectpicker {
   outline: none;
 }
 .btn-group__radioCheckItem.active {
-  background-color: #f9f9f9;
+  background-color: #dddddd;
   background-image: none;
 }
 .btn-group__radioCheckItem.active:after {
@@ -12791,7 +12792,7 @@ select.selectpicker {
   background-image: none;
 }
 .btn-group__radioCheckItem.active + .btn-group__radioCheckItem, .btn-group__radioCheckItem.active + .btn-group__radioCheckItem:focus, .btn-group__radioCheckItem.active + .btn-group__radioCheckItem:hover {
-  background-color: #f9f9f9;
+  background-color: #dddddd;
 }
 .btn-group__radioCheckItem + .active {
   background-color: #4A8DC6;
