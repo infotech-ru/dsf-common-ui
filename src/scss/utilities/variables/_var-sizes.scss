@@ -1,18 +1,18 @@
-$base-gutter:                      10!default;
-$base-padding:                     10!default;
+@use './var_baseValue' as baseValue;
 
 $brand-sizes: (
-  base_marginSize:                 $base-gutter,
-  base_paddingSize:                $base-padding,
+  base_marginSize:                 baseValue.$base-gutter,
+  base_paddingSize:                baseValue.$base-padding,
   border-radius-base:              4,
   border-radius-large:             6,
   caret_size:                      6,
   caretDropdown_size:              4,
   caretSelect_size:                16,
+
   disabel_opacity:                 0.5,
   dlHorizontalOffset:              180,
   dropdownLink_minH:               36,
-  dropdownLink_paddingX:           $base-padding,
+  dropdownLink_paddingX:           baseValue.$base-padding,
   navPills-paddingX:               9,
   navPills-borderWidth:            1,
   output_paddingY:                 7,
@@ -23,9 +23,9 @@ $brand-sizes: (
 
 $layout-sizes:(
   footer_height:                   52,
-  footer_marginTop:                $base-padding,
+  footer_marginTop:                baseValue.$base-padding,
   footer__mobile_height:           124,
-  header_marginBottom:             $base-padding,
+  header_marginBottom:             baseValue.$base-padding,
   headerTop_height:                44,
   headerBottom_height:             34,
 )!default;
@@ -38,8 +38,8 @@ $stages-sizes:(
 $table-sizes:(
   collapseTrIcon_size:             16,
   collapseTdIcon_size:             14,
-  collapseTrIcon_margin:           $base-padding,
-  table_paddingXFirst:             $base-padding,
+  collapseTrIcon_margin:           baseValue.$base-padding,
+  table_paddingXFirst:             baseValue.$base-padding,
   table_paddingX:                  6,
   table_paddingY:                  5,
   table_lineHeigth:                14,
@@ -54,7 +54,7 @@ $forms-sizes:(
   controlLabel_mb:                 3,
   controlLabel_mr:                 5,
   formControl_borderSize:          1,
-  formControl_paddingX:            $base-padding,
+  formControl_paddingX:            baseValue.$base-padding,
   formControlStatic_paddingY:      7,
   formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
   formGroup__formFree_mb:          25,
@@ -85,7 +85,7 @@ $radio-sizes:(
 )!default;
 
 $btn-sizes: (
-  btn_paddingX:                    $base-padding,
+  btn_paddingX:                    baseValue.$base-padding,
   btn_borderWidth:                 1,
   btn_borderRadius:                1,
   btnXs-paddingX:                  5,
@@ -113,7 +113,7 @@ $modal-sizes: (
   modal-header-close_size:         16,
   modal_paddingX:                  15,
   modal_paddingXR:                 30,
-  modal_paddingY:                  $base-padding,
+  modal_paddingY:                  baseValue.$base-padding,
 )!default;
 
 $pagination-sizes: (
@@ -121,11 +121,11 @@ $pagination-sizes: (
   paginationItem_height:           20,
   paginationItem_width:            20,
   paginationItem_paddingX:         5,
-  paginationItem_margin:           $base-padding,
+  paginationItem_margin:           baseValue.$base-padding,
 )!default;
 
 $progress-sizes: (
-  progress_mb:                     $base-padding,
+  progress_mb:                     baseValue.$base-padding,
   progress_height:                 14,
 )!default;
 
@@ -166,5 +166,3 @@ $posSizes:(
   top: (0, 50, 100, 5px, 10px, 20px, auto),
   bottom: (0, 50, 100, 5px, 10px, 20px, auto)
 );
-
-$browser-context: 16;

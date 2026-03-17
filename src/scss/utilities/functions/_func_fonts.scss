@@ -12,6 +12,7 @@
 @use './func_helpers-functions' as helpers;
 @use './../variables/var-sizes' as sizes;
 @use './../variables/var-fonts' as fonts;
+@use './../variables/var_baseValue' as baseValue;
 
 @function font-subset(){
   $subset-cyrillic: '';
@@ -62,7 +63,7 @@
   @return (math.div($pixels, $context) * 1rem);
 }
 
-@function em($pixels, $context: $browser-context) {
+@function em($pixels, $context: baseValue.$browser-context) {
   @if (math.is-unitless($pixels)) {
     $pixels: $pixels * 1px;
   }
