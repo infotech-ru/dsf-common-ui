@@ -12,7 +12,7 @@
 @use './func_helpers-functions' as helpers;
 @use './../variables/var-sizes' as sizes;
 @use './../variables/var-fonts' as fonts;
-@use './../variables/var_baseValue' as baseValue;
+@use './../variables/var-baseValue' as baseValue;
 
 @function font-subset(){
   $subset-cyrillic: '';

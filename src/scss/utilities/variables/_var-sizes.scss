@@ -1,4 +1,4 @@
-@use './var_baseValue' as baseValue;
+@use './_var-baseValue' as baseValue;
 
 $brand-sizes: (
   base_marginSize:                 baseValue.$base-gutter,
