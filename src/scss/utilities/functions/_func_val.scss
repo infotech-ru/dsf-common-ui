@@ -92,6 +92,51 @@
 @function brandSizes($keys...) {
   @return maps.val(sizes.$brand-sizes, $keys...);
 }
+@function tooltipSizes($keys...) {
+  @return maps.val(sizes.$tooltip-sizes, $keys...);
+}
+@function popoverSizes($keys...) {
+  @return maps.val(sizes.$popover-sizes, $keys...);
+}
+@function toastSizes($keys...) {
+  @return maps.val(sizes.$toast-sizes, $keys...);
+}
+@function progressSizes($keys...) {
+  @return maps.val(sizes.$progress-sizes, $keys...);
+}
+@function paginationSizes($keys...) {
+  @return maps.val(sizes.$pagination-sizes, $keys...);
+}
+@function modalSizes($keys...) {
+  @return maps.val(sizes.$modal-sizes, $keys...);
+}
+@function toggleCheckSizes($keys...) {
+  @return maps.val(sizes.$toggleCheck-sizes, $keys...);
+}
+@function btnSizes($keys...) {
+  @return maps.val(sizes.$btn-sizes, $keys...);
+}
+@function radioSizes($keys...) {
+  @return maps.val(sizes.$radio-sizes, $keys...);
+}
+@function checkboxSizes($keys...) {
+  @return maps.val(sizes.$checkbox-sizes, $keys...);
+}
+@function carouselSizes($keys...) {
+  @return maps.val(sizes.$carousel-sizes, $keys...);
+}
+@function formsSizes($keys...) {
+  @return maps.val(sizes.$forms-sizes, $keys...);
+}
+@function tableSizes($keys...) {
+  @return maps.val(sizes.$table-sizes, $keys...);
+}
+@function stagesSizes($keys...) {
+  @return maps.val(sizes.$stages-sizes, $keys...);
+}
+@function layoutSizes($keys...) {
+  @return maps.val(sizes.$layout-sizes, $keys...);
+}
 @function zIndex($keys...) {
   @return maps.val(zindex.$zindex, $keys...);
 }

@@ -28,7 +28,7 @@
   line-break: auto;
   line-height: fonts.rem(val.lineHeight(popover));
   margin: 0;
-  max-width: fonts.rem(val.brandSizes(popover_maxWidth));
+  max-width: fonts.rem(val.popoverSizes(popover_maxWidth));
   position: absolute;
   font-style: normal;
   font-weight: 400;
@@ -52,8 +52,8 @@
   .arrow {
     position: absolute;
     display: block;
-    width: fonts.rem(val.brandSizes(popoverArrow_width));
-    height: fonts.rem(val.brandSizes(popoverArrow_height));
+    width: fonts.rem(val.popoverSizes(popoverArrow_width));
+    height: fonts.rem(val.popoverSizes(popoverArrow_height));
     margin: 0;
     &::before,
     &::after {
@@ -70,7 +70,7 @@
     }
   }
   &.popover__wide{
-    max-width: fonts.rem(val.brandSizes(popoverWide_maxWidth));
+    max-width: fonts.rem(val.popoverSizes(popoverWide_maxWidth));
   }
   &.popover__nonmax{
     max-width: none;
@@ -78,69 +78,69 @@
 }
 
 .bs-popover-top {
-  margin-bottom: fonts.rem(val.brandSizes(popoverArrow_height));
+  margin-bottom: fonts.rem(val.popoverSizes(popoverArrow_height));
   &.popoverActionMenu {
     margin-bottom: 0;
   }
   > .arrow {
-    bottom: funcbootstrapv4.subtract(calc(-1 * fonts.rem(val.brandSizes(popoverArrow_height))), fonts.rem(val.brandSizes(popover_borderWidth)));
+    bottom: funcbootstrapv4.subtract(calc(-1 * fonts.rem(val.popoverSizes(popoverArrow_height))), fonts.rem(val.popoverSizes(popover_borderWidth)));
 
     &::before {
       bottom: 0;
-      border-width: fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
+      border-width: fonts.rem(val.popoverSizes(popoverArrow_height)) fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) 0;
       border-top-color: varbootstrapv4.$popover-arrow-outer-color;
     }
 
     &::after {
-      bottom: fonts.rem(val.brandSizes(popover_borderWidth));
-      border-width: fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
+      bottom: fonts.rem(val.popoverSizes(popover_borderWidth));
+      border-width: fonts.rem(val.popoverSizes(popoverArrow_height)) fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) 0;
       border-top-color: val.brandPalette(popover_bgc);
     }
   }
 }
 
 .bs-popover-right {
-  margin-left: fonts.rem(val.brandSizes(popoverArrow_height));
+  margin-left: fonts.rem(val.popoverSizes(popoverArrow_height));
   &.popoverActionMenu {
     margin-left: 0;
   }
   > .arrow {
-    left: funcbootstrapv4.subtract(calc(-1 * fonts.rem(val.brandSizes(popoverArrow_height))), fonts.rem(val.brandSizes(popover_borderWidth)));
-    width: fonts.rem(val.brandSizes(popoverArrow_height));
-    height: fonts.rem(val.brandSizes(popoverArrow_width));
+    left: funcbootstrapv4.subtract(calc(-1 * fonts.rem(val.popoverSizes(popoverArrow_height))), fonts.rem(val.popoverSizes(popover_borderWidth)));
+    width: fonts.rem(val.popoverSizes(popoverArrow_height));
+    height: fonts.rem(val.popoverSizes(popoverArrow_width));
     margin: 0 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       left: 0;
-      border-width: fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
+      border-width: fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) fonts.rem(val.popoverSizes(popoverArrow_height)) fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) 0;
       border-right-color: varbootstrapv4.$popover-arrow-outer-color;
     }
 
     &::after {
-      left: fonts.rem(val.brandSizes(popover_borderWidth));
-      border-width: fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0;
+      left: fonts.rem(val.popoverSizes(popover_borderWidth));
+      border-width: fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) fonts.rem(val.popoverSizes(popoverArrow_height)) fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) 0;
       border-right-color: val.brandPalette(popover_bgc);
     }
   }
 }
 
 .bs-popover-bottom {
-  margin-top: fonts.rem(val.brandSizes(popoverArrow_height));
+  margin-top: fonts.rem(val.popoverSizes(popoverArrow_height));
   &.popoverActionMenu {
     margin-top: 0;
   }
   > .arrow {
-    top: funcbootstrapv4.subtract(-1 * fonts.rem(val.brandSizes(popoverArrow_height)), fonts.rem(val.brandSizes(popover_borderWidth)));
+    top: funcbootstrapv4.subtract(-1 * fonts.rem(val.popoverSizes(popoverArrow_height)), fonts.rem(val.popoverSizes(popover_borderWidth)));
 
     &::before {
       top: 0;
-      border-width: 0 fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5));
+      border-width: 0 fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) fonts.rem(val.popoverSizes(popoverArrow_height)) fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5));
       border-bottom-color: varbootstrapv4.$popover-arrow-outer-color;
     }
 
     &::after {
-      top: fonts.rem(val.brandSizes(popover_borderWidth));
-      border-width: 0 fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height)) fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5));
+      top: fonts.rem(val.popoverSizes(popover_borderWidth));
+      border-width: 0 fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) fonts.rem(val.popoverSizes(popoverArrow_height)) fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5));
       border-bottom-color: val.brandPalette(popover_bgc);
     }
   }
@@ -151,33 +151,33 @@
     top: 0;
     left: 50%;
     display: block;
-    width: fonts.rem(val.brandSizes(popoverArrow_width));
-    margin-left: fonts.rem(calc(val.brandSizes(popoverArrow_width) * -0.5));
+    width: fonts.rem(val.popoverSizes(popoverArrow_width));
+    margin-left: fonts.rem(calc(val.popoverSizes(popoverArrow_width) * -0.5));
     content: "";
-    border-bottom: fonts.rem(val.brandSizes(popover_borderWidth)) solid val.brandPalette(popoverHeader_bgc);
+    border-bottom: fonts.rem(val.popoverSizes(popover_borderWidth)) solid val.brandPalette(popoverHeader_bgc);
   }
 }
 
 .bs-popover-left {
-  margin-right: fonts.rem(val.brandSizes(popoverArrow_height));
+  margin-right: fonts.rem(val.popoverSizes(popoverArrow_height));
   &.popoverActionMenu {
     margin-right: 0;
   }
   > .arrow {
-    right: funcbootstrapv4.subtract(-1 * fonts.rem(val.brandSizes(popoverArrow_height)), fonts.rem(val.brandSizes(popover_borderWidth)));
-    width: fonts.rem(val.brandSizes(popoverArrow_height));
-    height: fonts.rem(val.brandSizes(popoverArrow_width));
+    right: funcbootstrapv4.subtract(-1 * fonts.rem(val.popoverSizes(popoverArrow_height)), fonts.rem(val.popoverSizes(popover_borderWidth)));
+    width: fonts.rem(val.popoverSizes(popoverArrow_height));
+    height: fonts.rem(val.popoverSizes(popoverArrow_width));
     margin: 0 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       right: 0;
-      border-width: fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0 fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height));
+      border-width: fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) 0 fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) fonts.rem(val.popoverSizes(popoverArrow_height));
       border-left-color: varbootstrapv4.$popover-arrow-outer-color;
     }
 
     &::after {
-      right: fonts.rem(val.brandSizes(popover_borderWidth));
-      border-width: fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) 0 fonts.rem(calc(val.brandSizes(popoverArrow_width) * .5)) fonts.rem(val.brandSizes(popoverArrow_height));
+      right: fonts.rem(val.popoverSizes(popover_borderWidth));
+      border-width: fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) 0 fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) fonts.rem(val.popoverSizes(popoverArrow_height));
       border-left-color: val.brandPalette(popover_bgc);
     }
   }
@@ -206,7 +206,7 @@
   border-bottom: 1px solid val.brandPalette(popoverHeader_borderolor);
   border-radius: 0;
   font-size: fonts.rem(val.fontSizes(popoverHeader));
-  padding: fonts.rem(val.brandSizes(popover_paddingY)) fonts.rem(val.brandSizes(popover_paddingX));
+  padding: fonts.rem(val.popoverSizes(popover_paddingY)) fonts.rem(val.popoverSizes(popover_paddingX));
   margin: 0;
   &:empty {
     display: none;
@@ -216,7 +216,7 @@
 .popover-body {
   background-color: val.brandPalette(popover_bgc);
   color: val.brandPalette(popover_color);
-  padding: fonts.rem(val.brandSizes(popover_paddingY)) fonts.rem(val.brandSizes(popover_paddingX));
+  padding: fonts.rem(val.popoverSizes(popover_paddingY)) fonts.rem(val.popoverSizes(popover_paddingX));
   &:empty {
     display: none;
   }

@@ -14185,6 +14185,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .unityBlock {
   background-color: #ffffff;
+  border-radius: 0px;
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
   padding: 0.625rem;
   z-index: unset;

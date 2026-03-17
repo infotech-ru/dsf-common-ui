@@ -12,7 +12,7 @@
   // background: linear-gradient(180deg, #F9F9F9 0%, #CACACA 100%);
   box-shadow: none;
   border-radius: 0px;
-  margin: 0 0 #{val.brandSizes(header_marginBottom)}px;
+  margin: 0 0 #{val.layoutSizes(header_marginBottom)}px;
   padding: 0;
   position: relative;
   filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.25));
@@ -34,7 +34,7 @@
     background-color: val.brandPalette(headerTop_bgc);
     display: flex;
     justify-content: space-between;
-    height: #{val.brandSizes(headerTop_height)}px;
+    height: #{val.layoutSizes(headerTop_height)}px;
     padding: 0 0 0 15px;
     .mobile-view &{
       padding-right: 5px;
@@ -45,7 +45,7 @@
   }
   &__bottom{
     background-color: val.brandPalette(headerBottom_bgc);
-    height: #{val.brandSizes(headerBottom_height)}px;
+    height: #{val.layoutSizes(headerBottom_height)}px;
     &.collapse {
       background-color: #ffffff;
       background-attachment: fixed;
@@ -54,7 +54,7 @@
       flex-grow: 0;
       flex-shrink: 0;
       position: absolute;
-      top: #{val.brandSizes(headerTop_height)}px;
+      top: #{val.layoutSizes(headerTop_height)}px;
       left: 0;
       padding: 0px;
       height: 0;
@@ -86,7 +86,7 @@
     color: #7f8489;
     display: inline-block;
     margin: 0 0 0 24px;
-    line-height: #{val.brandSizes(headerTop_height)}px;
+    line-height: #{val.layoutSizes(headerTop_height)}px;
   }
   &__block{
     align-items: center;
@@ -275,7 +275,7 @@
     min-width: 150px;
   }
   img {
-    max-height: #{val.brandSizes(headerBottom_height)}px;
+    max-height: #{val.layoutSizes(headerBottom_height)}px;
     .mobile-view &{
       max-height:30px;
       max-width: 150px;

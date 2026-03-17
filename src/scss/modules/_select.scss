@@ -247,10 +247,10 @@ select.selectpicker {
       text-align: left;
       overflow: hidden;
       flex: 0 1 auto; // for IE10
-      padding-right: fonts.rem(calc(val.brandSizes(formControl_paddingX) + 5));
+      padding-right: fonts.rem(calc(val.formsSizes(formControl_paddingX) + 5));
       @at-root .bs3#{&} {
         // padding-right: inherit;
-        padding-right: fonts.rem(calc(val.brandSizes(formControl_paddingX) + 5));
+        padding-right: fonts.rem(calc(val.formsSizes(formControl_paddingX) + 5));
       }
 
       @at-root .input-group .bs3-has-addon#{&} {
@@ -663,7 +663,7 @@ select.selectpicker {
         flex-wrap: wrap;
       }
       .comboTreeItemParent &{
-        padding-left: #{val.brandSizes(dropdownLink_paddingX) * 2 + val.brandSizes(comboTreeCheckbox_size)}px;
+        padding-left: #{val.brandSizes(dropdownLink_paddingX) * 2 + val.checkboxSizes(comboTreeCheckbox_size)}px;
       }
       &:hover,
       &:focus{
@@ -684,29 +684,29 @@ select.selectpicker {
         #{--svg-icon-stroke}: val.brandPalette(bootstrapSelect_caret_color);
         #{--svg-icon-fill_blue}: val.brandPalette(bootstrapSelect_caret_color);
         #{--svg-icon-stroke_blue}: val.brandPalette(bootstrapSelect_caret_color);
-        height: #{val.brandSizes(comboTreeCheckbox_size)}px;
+        height: #{val.checkboxSizes(comboTreeCheckbox_size)}px;
         // left: #{val.brandSizes(dropdownLink_paddingX)}px;
         left: auto;
-        margin-top: #{val.brandSizes(comboTreeCheckbox_size) * 0.5 * -1}px;
+        margin-top: #{val.checkboxSizes(comboTreeCheckbox_size) * 0.5 * -1}px;
         position: absolute;
         order: 3;
         right: calc(#{val.brandSizes(dropdownLink_paddingX)}px + 5px);
         top: fonts.rem(val.brandSizes(dropdownLink_minH) * .5);
-        width: #{val.brandSizes(comboTreeCheckbox_size)}px;
+        width: #{val.checkboxSizes(comboTreeCheckbox_size)}px;
         &.collapsed{
           transform: rotate(180deg);
         }
         .svg--icon,
         svg{
-          height: #{val.brandSizes(comboTreeCheckbox_size)}px;
-          width: #{val.brandSizes(comboTreeCheckbox_size)}px;
+          height: #{val.checkboxSizes(comboTreeCheckbox_size)}px;
+          width: #{val.checkboxSizes(comboTreeCheckbox_size)}px;
           vertical-align: top;
         }
         & + .comboTreeItemTitle{ 
           @extend %dropdown__link;
           line-height: 1.3em;
           padding-right: 0;
-          // padding-left: #{val.brandSizes(dropdownLink_paddingX) * 2 + brandSizes(comboTreeCheckbox_size)}px;
+          // padding-left: #{val.brandSizes(dropdownLink_paddingX) * 2 + checkboxSizes(comboTreeCheckbox_size)}px;
           padding-left: #{val.brandSizes(dropdownLink_paddingX)}px;
           // width: auto;
           width: 100%;

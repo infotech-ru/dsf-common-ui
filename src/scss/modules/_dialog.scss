@@ -34,7 +34,7 @@
   justify-content: flex-start;
   height: 52px;
   line-height: normal;
-  padding: fonts.rem(val.brandSizes(modalSidebar_padding));
+  padding: fonts.rem(val.modalSizes(modalSidebar_padding));
   position: relative;
 }
 .ui-draggable-handle{

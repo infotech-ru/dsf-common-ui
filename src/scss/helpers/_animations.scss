@@ -16,7 +16,7 @@
   z-index: 0;
 
   .error-view &{
-    bottom: -#{val.brandSizes(footer_height)}px;
+    bottom: -#{val.layoutSizes(footer_height)}px;
     top: auto;
   }
 

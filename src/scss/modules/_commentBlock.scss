@@ -212,7 +212,7 @@
     align-items: center;
     background-color: val.brandPalette(formControl-bgc);
     border: 1px solid val.brandPalette(formControl-borderColor);
-    border-radius: #{val.brandSizes(borderRadiusFormElem)}px;
+    border-radius: #{val.formsSizes(borderRadiusFormElem)}px;
     display: flex;
     justify-content: space-between;
     // height: fonts.rem(calc(val.lineHeight(input) + 2)); //  + border-top and border-bottom
@@ -241,7 +241,7 @@
     font-size: fonts.rem(val.fontSizes(formElem));
     line-height: fonts.rem(val.lineHeight(input));
     height: fonts.rem(val.lineHeight(input));
-    padding: 0 fonts.rem(calc((val.brandSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
+    padding: 0 fonts.rem(calc((val.btnSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
     resize: none;
     // resize: vertical;
     overflow: hidden;

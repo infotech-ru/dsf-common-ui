@@ -103,8 +103,8 @@
     bottom: auto;
     display: flex;
     justify-content: center;
-    height: #{val.brandSizes(carousel-control_size)}px;
-    margin-top: #{calc(val.brandSizes(carousel-control_size) / 2 * -1)}px;
+    height: #{val.carouselSizes(carousel-control_size)}px;
+    margin-top: #{calc(val.carouselSizes(carousel-control_size) / 2 * -1)}px;
     outline: 0;
     padding: 5px;
     position: absolute;
@@ -112,7 +112,7 @@
     top: 50%;
     opacity: 1;
     z-index: 1;
-    width: #{val.brandSizes(carousel-control_size)}px;
+    width: #{val.carouselSizes(carousel-control_size)}px;
     @include transition.transition(varbootstrapv4.$carousel-control-transition);
 
     // Hover/focus state
@@ -154,7 +154,7 @@
     text-align: center;
   }
   &-indicators {
-    gap: #{val.brandSizes(carousel-thumbs_gap)}px;
+    gap: #{val.carouselSizes(carousel-thumbs_gap)}px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -164,11 +164,11 @@
     position: relative;
     width: 100%;
     z-index: val.zIndex(carouselIndicatorsImage);
-    --carousel-thumbs_gap: #{val.brandSizes(carousel-thumbs_gap)}px;
+    --carousel-thumbs_gap: #{val.carouselSizes(carousel-thumbs_gap)}px;
     &__abs{
       bottom: 0;
       display: flex;
-      gap: #{val.brandSizes(carousel-thumbs_gap)}px;
+      gap: #{val.carouselSizes(carousel-thumbs_gap)}px;
       height: fit-content;
       left: 0;
       position: absolute;
@@ -187,7 +187,7 @@
     }
     &_outer{
       position: relative;
-      min-height: #{val.brandSizes(carousel-thumbs_size) + val.brandSizes(carousel-thumbs_gap)}px;
+      min-height: #{val.carouselSizes(carousel-thumbs_size) + val.carouselSizes(carousel-thumbs_gap)}px;
     }
     &_item{
       &:first-child{ 
@@ -230,8 +230,8 @@
         justify-content: center;
         outline: 1px solid var(--color_grey2);
         overflow: hidden;
-        height: #{val.brandSizes(carousel-thumbs_size)}px;
-        width: #{val.brandSizes(carousel-thumbs_size)}px;
+        height: #{val.carouselSizes(carousel-thumbs_size)}px;
+        width: #{val.carouselSizes(carousel-thumbs_size)}px;
         .carousel-indicators__bigPreview &{
           height: auto;
           width: 100%;
@@ -245,13 +245,13 @@
           display: inline-flex;
           flex-direction: column;
           font-size: fonts.rem(10);
-          height: #{val.brandSizes(carousel-thumbs_size)}px;
+          height: #{val.carouselSizes(carousel-thumbs_size)}px;
           line-height: fonts.rem(12);
           justify-content: center;
           outline: 1px dashed var(--color_light-blue);
           overflow: hidden;
           text-align: center;
-          width: #{val.brandSizes(carousel-thumbs_size)}px;
+          width: #{val.carouselSizes(carousel-thumbs_size)}px;
           &Outer{
             position: absolute;
             left: 0;
@@ -271,7 +271,7 @@
           height: 100%;
           width: 100%;
           .carousel-indicators__bigPreview &{
-            max-height: #{val.brandSizes(carousel-thumbsBig_size)}px;
+            max-height: #{val.carouselSizes(carousel-thumbsBig_size)}px;
             width: auto;
             z-index: 1;
           }
@@ -283,7 +283,7 @@
           background-size: cover;
           display: flex;
           justify-content: center;
-          max-height: #{val.brandSizes(carousel-thumbsBig_size)}px;
+          max-height: #{val.carouselSizes(carousel-thumbsBig_size)}px;
           height: 100%;
           position: relative;
           width: 100%;
@@ -316,14 +316,14 @@
         top: 4px;
         z-index: val.zIndex(carouselIndicatorsButton);
         label.checkbox{
-          line-height: fonts.rem(val.brandSizes(checkboxItem_size));
-          padding-left: fonts.rem(val.brandSizes(checkboxItem_size));
-          width: fonts.rem(val.brandSizes(checkboxItem_size));
+          line-height: fonts.rem(val.checkboxSizes(checkboxItem_size));
+          padding-left: fonts.rem(val.checkboxSizes(checkboxItem_size));
+          width: fonts.rem(val.checkboxSizes(checkboxItem_size));
         }
       }
       &:first-child{ 
         .carousel-indicators_outer &{
-          margin-left: #{val.brandSizes(carousel-thumbs_size) + val.brandSizes(carousel-thumbs_gap)}px;
+          margin-left: #{val.carouselSizes(carousel-thumbs_size) + val.carouselSizes(carousel-thumbs_gap)}px;
         }
       }
     }

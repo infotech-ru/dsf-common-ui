@@ -18,8 +18,8 @@
   background-image: none;
   border-style: solid;
   border-color: transparent;
-  border-width: #{val.brandSizes(btn_borderWidth)}px;
-  border-radius: #{val.brandSizes(btn_borderRadius)}px;
+  border-width: #{val.btnSizes(btn_borderWidth)}px;
+  border-radius: #{val.btnSizes(btn_borderRadius)}px;
   cursor: pointer;
   display: inline-block;
   font-size: fonts.rem(val.fontSizes(btn));
@@ -28,7 +28,7 @@
   // height: min-content; не работает в сафари с <input>
   height: auto;
   margin-bottom: 0; // For input.btn
-  padding: 0 #{val.brandSizes(btn_paddingX)}px;
+  padding: 0 #{val.btnSizes(btn_paddingX)}px;
   text-align: center;
   touch-action: manipulation;
   vertical-align: middle;
@@ -403,14 +403,14 @@ a.btn {
   border-radius: 1px;
   font-size: fonts.rem(val.fontSizes(btnXs));
   line-height: fonts.rem(val.lineHeight(btnXs));
-  padding: #{val.brandSizes(btnXs-paddingY)}px #{val.brandSizes(btnXs-paddingX)}px;
+  padding: #{val.btnSizes(btnXs-paddingY)}px #{val.btnSizes(btnXs-paddingX)}px;
 }
 
 .btn-large {
   border-radius: 1px;
   font-size: fonts.rem(val.fontSizes(btnLg));
   line-height: fonts.rem(val.lineHeight(btnLg));
-  padding: #{val.brandSizes(btnLg-paddingY)}px #{val.brandSizes(btnLg-paddingX)}px;
+  padding: #{val.btnSizes(btnLg-paddingY)}px #{val.btnSizes(btnLg-paddingX)}px;
 }
 
 .btn-icon{
@@ -421,15 +421,15 @@ a.btn {
   color: map.get(colors.$brand-namecolors, 'default');
   cursor: pointer;
   display: inline-block;
-  height: fonts.rem(val.brandSizes(btnIcon_height));
-  line-height: fonts.rem(val.brandSizes(btnIcon_height));
+  height: fonts.rem(val.btnSizes(btnIcon_height));
+  line-height: fonts.rem(val.btnSizes(btnIcon_height));
   outline: none;
   padding: 0;
   text-align: left;
   .glyphicon {
     color: val.brandPalette(btnIconSvg_color);
-    font-size: fonts.rem(val.brandSizes(btnIconSvg_height));
-    height: fonts.rem(val.brandSizes(btnIconSvg_height));
+    font-size: fonts.rem(val.btnSizes(btnIconSvg_height));
+    height: fonts.rem(val.btnSizes(btnIconSvg_height));
     top: 0;
     vertical-align: middle;
   }
@@ -438,8 +438,8 @@ a.btn {
     background-color: val.brandPalette(btnIconSvg_bgc);
     display: inline-flex;
     justify-content: center;
-    height: fonts.rem(val.brandSizes(btnIcon_height));
-    width: fonts.rem(val.brandSizes(btnIcon_height));
+    height: fonts.rem(val.btnSizes(btnIcon_height));
+    width: fonts.rem(val.btnSizes(btnIcon_height));
     // vertical-align: middle;
     #{--svg-icon-fill}: val.brandPalette(btnDownloadSvg_color);
     #{--svg-icon-fill_blue}: val.brandPalette(btnDownloadSvg_color);
@@ -448,11 +448,11 @@ a.btn {
     #{--limited-stroke-off}: val.brandColors(_transparent);
     #{--btn_svg__hover}: val.brandPalette(btnDownloadSvg_color);
     svg{
-      height: fonts.rem(val.brandSizes(btnIconSvg_height));
+      height: fonts.rem(val.btnSizes(btnIconSvg_height));
     }
     &__24vb{
       svg{
-        height: fonts.rem(val.brandSizes(btnIcon_height));
+        height: fonts.rem(val.btnSizes(btnIcon_height));
       }
     }
   }
@@ -479,10 +479,10 @@ a.btn {
   &__form{
     align-items: center;
     border-color: transparent;
-    border-top-width: #{val.brandSizes(btn_borderWidth)}px;
-    border-bottom-width: #{val.brandSizes(btn_borderWidth)}px;
-    // border-top-width: fonts.rem(math.div(calc(val.lineHeight(btn) - val.brandSizes(btnIconSvg_height)), 2));
-    // border-bottom-width: fonts.rem(math.div(calc(val.lineHeight(btn) - val.brandSizes(btnIconSvg_height)), 2));
+    border-top-width: #{val.btnSizes(btn_borderWidth)}px;
+    border-bottom-width: #{val.btnSizes(btn_borderWidth)}px;
+    // border-top-width: fonts.rem(math.div(calc(val.lineHeight(btn) - val.btnSizes(btnIconSvg_height)), 2));
+    // border-bottom-width: fonts.rem(math.div(calc(val.lineHeight(btn) - val.btnSizes(btnIconSvg_height)), 2));
     display: inline-flex;
     height: fonts.rem(calc(val.lineHeight(btn) + 2));
     line-height: fonts.rem(val.lineHeight(btn));
@@ -568,7 +568,7 @@ a.btn {
   .control-label + & {
     margin-left: 4px;
     position: relative;
-    top: -#{calc(val.brandSizes(controlLabel_mb) * .5)}px;
+    top: -#{calc(val.formsSizes(controlLabel_mb) * .5)}px;
   }
   .nostroke{
     stroke: none;
@@ -595,7 +595,7 @@ a.btn {
 }
 
 .btn__abs{
-  margin-top: -#{calc((val.brandSizes(btn_borderWidth) + val.lineHeight(btn)) * .5)}px;
+  margin-top: -#{calc((val.btnSizes(btn_borderWidth) + val.lineHeight(btn)) * .5)}px;
   position: absolute;
   top: 50%;
 }
@@ -651,7 +651,7 @@ input[type="button"] {
     display: flex;
     height: 100%;
     justify-content: center;
-    padding: 4px #{val.brandSizes(btn_paddingX)}px;
+    padding: 4px #{val.btnSizes(btn_paddingX)}px;
     width: 100%;
     .btn-download__large &,
     .btn-download__square &,
@@ -736,11 +736,11 @@ input[type="button"] {
   &__bigSquare,
   &__square{
     .svg--icon {
-      height: var(--svgIcon_height, fonts.rem(val.brandSizes(btnDownloadSvg_height)));
-      width: var(--svgIcon_height, fonts.rem(val.brandSizes(btnDownloadSvg_height)));
+      height: var(--svgIcon_height, fonts.rem(val.btnSizes(btnDownloadSvg_height)));
+      width: var(--svgIcon_height, fonts.rem(val.btnSizes(btnDownloadSvg_height)));
       svg{
-        height: var(--svgIcon_height, fonts.rem(val.brandSizes(btnDownloadSvg_height)));
-        width: var(--svgIcon_height, fonts.rem(val.brandSizes(btnDownloadSvg_height)));
+        height: var(--svgIcon_height, fonts.rem(val.btnSizes(btnDownloadSvg_height)));
+        width: var(--svgIcon_height, fonts.rem(val.btnSizes(btnDownloadSvg_height)));
       }
     }
   }

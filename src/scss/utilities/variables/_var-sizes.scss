@@ -1,11 +1,90 @@
 $base-gutter:                      10!default;
+$base-padding:                     10!default;
 
 $brand-sizes: (
   base_marginSize:                 $base-gutter,
-  borderRadiusFormElem:            1,
+  base_paddingSize:                $base-padding,
   border-radius-base:              4,
   border-radius-large:             6,
-  btn_paddingX:                    $base-gutter,
+  caret_size:                      6,
+  caretDropdown_size:              4,
+  caretSelect_size:                16,
+  disabel_opacity:                 0.5,
+  dlHorizontalOffset:              180,
+  dropdownLink_minH:               36,
+  dropdownLink_paddingX:           $base-padding,
+  navPills-paddingX:               9,
+  navPills-borderWidth:            1,
+  output_paddingY:                 7,
+  square_height:                   64,
+  unityBlock_bRadius:              0, 
+)!default;
+
+$layout-sizes:(
+  footer_height:                   52,
+  footer_marginTop:                $base-padding,
+  footer__mobile_height:           124,
+  header_marginBottom:             $base-padding,
+  headerTop_height:                44,
+  headerBottom_height:             34,
+)!default;
+
+$stages-sizes:(
+  stages_size:                     34,
+  stagesLine_size:                 20,
+)!default;
+
+$table-sizes:(
+  collapseTrIcon_size:             16,
+  collapseTdIcon_size:             14,
+  collapseTrIcon_margin:           $base-padding,
+  table_paddingXFirst:             $base-padding,
+  table_paddingX:                  6,
+  table_paddingY:                  5,
+  table_lineHeigth:                14,
+  tableCell_height:                40,
+  tableCellMaster_height:          26,
+  tableHelpIcon_size:              8,
+  tableSortIcon_size:              20,
+)!default;
+
+$forms-sizes:(
+  borderRadiusFormElem:            1,
+  controlLabel_mb:                 3,
+  controlLabel_mr:                 5,
+  formControl_borderSize:          1,
+  formControl_paddingX:            $base-padding,
+  formControlStatic_paddingY:      7,
+  formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
+  formGroup__formFree_mb:          25,
+  iconLabel:                       16,
+  iconLabelActive:                 12,
+  inputGroupAddon_paddingX:        12,
+  inputGroupAddon_paddingY:        6,
+)!default;
+
+$carousel-sizes:(
+  carousel-thumbs_size:            64,
+  carousel-thumbsBig_size:         108,
+  carousel-thumbs_gap:             7,
+  carousel-control_size:           26,
+)!default;
+
+$checkbox-sizes:(
+  comboTreeCheckbox_size:          16,
+  checkboxItem_size:               12,
+  checkboxItemBig_size:            24,
+)!default;
+
+$radio-sizes:(
+  radioItem_size:                  14,
+  radioItem_paddingText:           5,
+  radioItemBorder_size:            1,
+  radioItemDot_size:               6,
+)!default;
+
+$btn-sizes: (
+  btn_paddingX:                    $base-padding,
   btn_borderWidth:                 1,
   btn_borderRadius:                1,
   btnXs-paddingX:                  5,
@@ -15,55 +94,47 @@ $brand-sizes: (
   btnIcon_height:                  20,
   btnIconSvg_height:               14,
   btnDownloadSvg_height:           20,
-  caret_size:                      6,
-  caretDropdown_size:              4,
-  caretSelect_size:                16,
-  carousel-thumbs_size:            64,
-  carousel-thumbsBig_size:         108,
-  carousel-thumbs_gap:             7,
-  carousel-control_size:           26,
-  checkboxItem_size:               12,
-  checkboxItemBig_size:            24,
-  collapseTrIcon_size:             16,
-  collapseTdIcon_size:             14,
-  collapseTrIcon_margin:           $base-gutter,
-  comboTreeCheckbox_size:          16,
-  controlLabel_mb:                 3,
-  controlLabel_mr:                 5,
-  dropdownLink_minH:               36,
-  dlHorizontalOffset:              180,
-  disabel_opacity:                 0.5,
-  dropdownLink_paddingX:           $base-gutter,
-  footer_height:                   52,
-  footer_marginTop:                $base-gutter,
-  footer__mobile_height:           124,
-  formControl_borderSize:          1,
-  formControl_paddingX:            $base-gutter,
-  formControlStatic_paddingY:      7,
-  formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
-  formGroup__formFree_mb:          25,
-  header_marginBottom:             $base-gutter,
-  headerTop_height:                44,
-  headerBottom_height:             34,
-  iconLabel:                       16,
-  iconLabelActive:                 12,
-  inputGroupAddon_paddingX:        12,
-  inputGroupAddon_paddingY:        6,
+)!default;
+
+$toggleCheck-sizes:(
+  toggleCheckToggle_borderRadius:  20,
+  toggleCheckToggle_height:        14,
+  toggleCheckToggle_width:         14,
+  toggleCheck_borderRadius:        21,
+  toggleCheck_height:              18,
+  toggleCheck_width:               36,
+)!default;
+
+$modal-sizes: (
   modalSidebar_padding:            16,
   modalSidebar_close_size:         15,
   modal-theme2_padding:            24,
   modal-header-close_size:         16,
   modal_paddingX:                  15,
   modal_paddingXR:                 30,
-  modal_paddingY:                  $base-gutter,
-  navPills-paddingX:               9,
-  navPills-borderWidth:            1,
-  output_paddingY:                 7,
+  modal_paddingY:                  $base-padding,
+)!default;
+
+$pagination-sizes: (
   paginationItem_borderRadius:     1,
   paginationItem_height:           20,
   paginationItem_width:            20,
   paginationItem_paddingX:         5,
-  paginationItem_margin:           $base-gutter,
+  paginationItem_margin:           $base-padding,
+)!default;
+
+$progress-sizes: (
+  progress_mb:                     $base-padding,
+  progress_height:                 14,
+)!default;
+
+$toast-sizes: (
+  toast_paddingX:                  8,
+  toast_paddingY:                  4,
+  toast_maxWidth:                  350,
+)!default;
+
+$popover-sizes: (
   popoverArrow_width:              6,
   popoverArrow_height:             6,
   popover_borderWidth:             1,
@@ -71,38 +142,15 @@ $brand-sizes: (
   popover_paddingY:                8,
   popover_maxWidth:                276,
   popoverWide_maxWidth:            400,
-  progress_mb:                     $base-gutter,
-  progress_height:                 14,
-  radioItem_size:                  14,
-  radioItem_paddingText:           5,
-  radioItemBorder_size:            1,
-  radioItemDot_size:               6,
-  square_height:                   64,
-  table_paddingXFirst:             $base-gutter,
-  table_paddingX:                  6,
-  table_paddingY:                  5,
-  table_lineHeigth:                14,
-  tableCell_height:                40,
-  tableCellMaster_height:          26,
-  tableHelpIcon_size:              8,
-  tableSortIcon_size:              20,
-  toast_paddingX:                  8,
-  toast_paddingY:                  4,
-  toast_maxWidth:                  350,
-  toggleCheckToggle_borderRadius:  20,
-  toggleCheckToggle_height:        14,
-  toggleCheckToggle_width:         14,
-  toggleCheck_borderRadius:        21,
-  toggleCheck_height:              18,
-  toggleCheck_width:               36,
+)!default;
+
+$tooltip-sizes: (
   tooltipArrow_height:             6,
   tooltipArrow_width:              6,
   tooltip_paddingX:                8,
   tooltip_paddingY:                4,
   tooltip_maxWidth:                200,
   tooltipWide_maxWidth:            400,
-  stages_size:                     34,
-  stagesLine_size:                 20,
 )!default;
 
 $marginSizes: 0, 5, 6, 7, 8, 10, 15, 20, 25, 30, 40, 50;

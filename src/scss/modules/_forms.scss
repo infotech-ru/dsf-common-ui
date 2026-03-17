@@ -76,7 +76,7 @@ output {
     font-size: fonts.rem(val.fontSizes(controlLabel));
     font-weight: val.fontWeight(controlLabel);
     line-height: 14px; // возможность добавлять иконку
-    margin-bottom: #{val.brandSizes(controlLabel_mb)}px;
+    margin-bottom: #{val.formsSizes(controlLabel_mb)}px;
     &:after {
       .required & {
         color: val.brandPalette(controlLabelError_color);
@@ -92,9 +92,9 @@ output {
       font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       left: 0;
       // left: fonts.rem($paddinFromLeft * -1);
-      padding-left: fonts.rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft));
-      // padding-right: fonts.rem(calc(val.brandSizes(formControl_paddingX) + 5));
-      padding-right: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.brandSizes(iconLabel)}px + 10px);
+      padding-left: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
+      // padding-right: fonts.rem(calc(val.formsSizes(formControl_paddingX) + 5));
+      padding-right: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
       position: absolute;
       line-height: fonts.rem(calc(val.lineHeight(input) + 2));
       margin-bottom: 0;
@@ -127,13 +127,13 @@ output {
         font-size: fonts.rem(val.fontSizes(controlLabel_active__formFree));
         left: fonts.rem($paddinFromLeft * -1);
         line-height: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-        padding-left: fonts.rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft));
-        // padding-right: fonts.rem(val.brandSizes(formControl_paddingX));
-        padding-right: calc(#{val.brandSizes(iconLabelActive)}px + 5px);
-        transform: translateX(fonts.rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
+        padding-left: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
+        // padding-right: fonts.rem(val.formsSizes(formControl_paddingX));
+        padding-right: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
+        transform: translateX(fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
         top: 2px; // корректировка из-за line-height
         z-index: 1;
-        max-width: calc(100% - fonts.rem(calc(val.brandSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
+        max-width: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
       }
       .inputGroup &{
         .form-group &{
@@ -149,7 +149,7 @@ output {
         .css-formFree & {
           left: auto;
           position: relative;
-          padding-right: fonts.rem(val.brandSizes(controlLabel_mr));
+          padding-right: fonts.rem(val.formsSizes(controlLabel_mr));
           top: auto;
           transform: none;
         }
@@ -170,9 +170,8 @@ output {
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   // background-color: val.brandPalette(formControl-bgc);
   background-color:var(--bg_color, val.brandPalette(formControl-bgc));
-  border-radius: #{val.brandSizes(borderRadiusFormElem)}px;
-  border: #{val.brandSizes(formControl_borderSize)}px solid val.brandPalette(formControl-borderColor);
-  // @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
+  border-radius: #{val.formsSizes(borderRadiusFormElem)}px;
+  border: #{val.formsSizes(formControl_borderSize)}px solid val.brandPalette(formControl-borderColor);
   box-shadow: none;
   color: val.brandPalette(formControl-color);
   display: block;
@@ -180,7 +179,7 @@ output {
   font-size: fonts.rem(val.fontSizes(formElem));
   font-weight: val.fontWeight(formElem);
   line-height: fonts.rem(val.lineHeight(input));
-  padding: 0 fonts.rem(val.brandSizes(formControl_paddingX));
+  padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   width: 100%;
   @include transition.transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
@@ -326,11 +325,11 @@ output {
 }
 
 textarea.form-control {
-  border-radius: fonts.rem(val.brandSizes(borderRadiusFormElem));
+  border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
   height: auto;
   line-height: fonts.rem(calc(val.fontSizes(formElem) + 2));
   min-height: fonts.rem(calc(val.lineHeight(input) + 2));
-  padding: 6px fonts.rem(val.brandSizes(formControl_paddingX)) 2px;
+  padding: 6px fonts.rem(val.formsSizes(formControl_paddingX)) 2px;
   resize: vertical;
 }
 
@@ -357,9 +356,9 @@ textarea.form-control {
 
 .form-group {
   // margin-bottom: $form-group-margin-bottom;
-  margin-bottom: fonts.rem(val.brandSizes(formGroup_mb));
+  margin-bottom: fonts.rem(val.formsSizes(formGroup_mb));
   .css-formFree &{ 
-    margin-bottom: fonts.rem(calc(val.brandSizes(formGroup__formFree_mb) - val.fontSizes(controlLabel_active__formFree)));
+    margin-bottom: fonts.rem(calc(val.formsSizes(formGroup__formFree_mb) - val.fontSizes(controlLabel_active__formFree)));
     padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
     position: relative;
   }
@@ -450,8 +449,8 @@ textarea.form-control {
   font-weight: val.fontWeight(formElem);
   min-height: auto;
   // Size it appropriately next to real form controls
-  padding-top: fonts.rem(val.brandSizes(formControlStatic_paddingY));
-  padding-bottom: fonts.rem(val.brandSizes(formControlStatic_paddingY));
+  padding-top: fonts.rem(val.formsSizes(formControlStatic_paddingY));
+  padding-bottom: fonts.rem(val.formsSizes(formControlStatic_paddingY));
   // Remove default margin from `p`
   margin-bottom: 0;
   padding-right: 0;
@@ -460,8 +459,8 @@ textarea.form-control {
     height: fonts.rem(calc(val.lineHeight(input) + 2));
   }
   .css-formFree &{ 
-    padding-left: fonts.rem(val.brandSizes(formControl_paddingX));
-    padding-right: fonts.rem(val.brandSizes(formControl_paddingX));
+    padding-left: fonts.rem(val.formsSizes(formControl_paddingX));
+    padding-right: fonts.rem(val.formsSizes(formControl_paddingX));
   }
 }
 
@@ -636,7 +635,7 @@ textarea.form-control {
   flex-direction: column;
   width: 100%;
   &Container{
-    border-radius: #{val.brandSizes(borderRadiusFormElem)}px;
+    border-radius: #{val.formsSizes(borderRadiusFormElem)}px;
     border: 1px solid val.brandPalette(formControl-borderColor);
     display: flex;
     min-height: 36px;
@@ -656,7 +655,7 @@ textarea.form-control {
     height: 21px; // равен высоте .redactor-toolbar + отсуп
     position: absolute;
     top: 31px;
-    right: fonts.rem(val.brandSizes(formControl_paddingX));
+    right: fonts.rem(val.formsSizes(formControl_paddingX));
     // width: 56px;
     white-space: nowrap;
     input[type="file"]{
@@ -670,11 +669,11 @@ textarea.form-control {
   }
   &FileListBlock{
     width: 100%;
-    padding-left: fonts.rem(val.brandSizes(formControl_paddingX));
+    padding-left: fonts.rem(val.formsSizes(formControl_paddingX));
   }
   &BoxWrapper{
     padding: 5px 77px 0 0;
-    padding-left: fonts.rem(val.brandSizes(formControl_paddingX));
+    padding-left: fonts.rem(val.formsSizes(formControl_paddingX));
     min-height: 14px;
     width: 100%;
     word-break: break-word;
@@ -718,26 +717,26 @@ textarea.form-control {
 .labelTooltipIcon{
     background-color: color.scale(rgba(val.brandColors(_white), 1), $alpha: -30%, $space: rgb);
     display: inline-block;
-    height: #{val.brandSizes(iconLabelActive)}px;
+    height: #{val.formsSizes(iconLabelActive)}px;
     top: 50%;
     right: 0px;
     padding-left: 5px;
-    margin-top: calc(#{val.brandSizes(iconLabelActive)}px * -0.5);
+    margin-top: calc(#{val.formsSizes(iconLabelActive)}px * -0.5);
     width: 22px;
     svg { 
-        height: #{val.brandSizes(iconLabelActive)}px;
-        width: #{val.brandSizes(iconLabelActive)}px;
+        height: #{val.formsSizes(iconLabelActive)}px;
+        width: #{val.formsSizes(iconLabelActive)}px;
     }
     .css-formFree &{
-        width: #{val.brandSizes(iconLabel)}px;
-        height: #{val.brandSizes(iconLabel)}px;
+        width: #{val.formsSizes(iconLabel)}px;
+        height: #{val.formsSizes(iconLabel)}px;
         position: absolute;
         top: 50%;
         margin-top: -8px;
         right: 24px;
         svg { 
-            height: #{val.brandSizes(iconLabel)}px;
-            width: #{val.brandSizes(iconLabel)}px;
+            height: #{val.formsSizes(iconLabel)}px;
+            width: #{val.formsSizes(iconLabel)}px;
         }
     }
     .css-formFree .checkbox-item label.checkbox &{
@@ -749,15 +748,15 @@ textarea.form-control {
     .control-label.active &{
         .css-formFree &{
             background-color: color.scale(rgba(val.brandColors(_white), 1), $alpha: -30%, $space: rgb);
-            height: #{val.brandSizes(iconLabelActive)}px;
+            height: #{val.formsSizes(iconLabelActive)}px;
             top: 50%;
             right: 0px;
             padding-left: 5px;
-            margin-top: calc(#{val.brandSizes(iconLabelActive)}px * -0.5);
-            width: calc(#{val.brandSizes(iconLabelActive)}px + 5px);
+            margin-top: calc(#{val.formsSizes(iconLabelActive)}px * -0.5);
+            width: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
             svg { 
-                height: #{val.brandSizes(iconLabelActive)}px;
-                width: #{val.brandSizes(iconLabelActive)}px;
+                height: #{val.formsSizes(iconLabelActive)}px;
+                width: #{val.formsSizes(iconLabelActive)}px;
             }
         }
     }

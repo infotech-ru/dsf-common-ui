@@ -11,7 +11,9 @@
 
 .unityBlock{
   background-color: val.brandColors(_white);
+  border-radius: #{val.brandSizes(unityBlock_bRadius)}px;
   box-shadow: 0px 1px 0px color.scale(rgba(val.brandColors(_black), 1), $alpha: -80%, $space: rgb);
+
   padding: fonts.rem(10);
   z-index: val.zIndex(unityBlock);
   &__nobg{

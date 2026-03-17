@@ -10,13 +10,13 @@
 
 .stages{
   align-items: center;
-  border-radius: #{val.brandSizes(stages_size)}px;
+  border-radius: #{val.stagesSizes(stages_size)}px;
   justify-content: center;
   display: inline-flex;
-  height: #{val.brandSizes(stages_size)}px;
-  width: #{val.brandSizes(stages_size)}px;
+  height: #{val.stagesSizes(stages_size)}px;
+  width: #{val.stagesSizes(stages_size)}px;
   &_listItem {
-    margin-bottom: #{val.brandSizes(stagesLine_size)}px;
+    margin-bottom: #{val.stagesSizes(stagesLine_size)}px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -28,9 +28,9 @@
         content: '';
         border-left: 1px dashed val.brandPalette(stagesList_borderColor);
         display: block;
-        // height: #{val.brandSizes(stagesLine_size)}px;
+        // height: #{val.stagesSizes(stagesLine_size)}px;
         height: 100%;
-        top: #{val.brandSizes(stages_size)}px;
+        top: #{val.stagesSizes(stages_size)}px;
         position: absolute;
         margin-right: -1px;
         right: 50%;

@@ -74,9 +74,9 @@
   &-body {
     background-color: #fff;
     position: relative;
-    padding: 0 fonts.rem(val.brandSizes(modalSidebar_padding)) 1px;
+    padding: 0 fonts.rem(val.modalSizes(modalSidebar_padding)) 1px;
     &_inner{
-      margin: 0 fonts.rem(calc(val.brandSizes(modalSidebar_padding) * -1));
+      margin: 0 fonts.rem(calc(val.modalSizes(modalSidebar_padding) * -1));
     }
   }
   &-header {
@@ -84,9 +84,9 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: fonts.rem(val.brandSizes(base_marginSize));
-    padding: fonts.rem(val.brandSizes(modalSidebar_padding));
-    padding-right: fonts.rem(val.brandSizes(modalSidebar_padding) + val.brandSizes(modalSidebar_close_size));
+    gap: fonts.rem(val.brandSizes(base_paddingSize));
+    padding: fonts.rem(val.modalSizes(modalSidebar_padding));
+    padding-right: fonts.rem(val.modalSizes(modalSidebar_padding) + val.modalSizes(modalSidebar_close_size));
     position: relative;
     &Title{
       margin: 0;
@@ -102,7 +102,7 @@
   &-footer {
     display: flex;
     justify-content: space-between;
-    padding: 0 fonts.rem(val.brandSizes(modalSidebar_padding)) fonts.rem(val.brandSizes(modalSidebar_padding));
+    padding: 0 fonts.rem(val.modalSizes(modalSidebar_padding)) fonts.rem(val.modalSizes(modalSidebar_padding));
     text-align: right;
   }
   &-close{
@@ -113,20 +113,20 @@
     background-repeat: no-repeat;
     border: 0;
     cursor: pointer;
-    height: fonts.rem(val.brandSizes(modalSidebar_close_size));
+    height: fonts.rem(val.modalSizes(modalSidebar_close_size));
     padding: 0;
-    margin-top: fonts.rem(val.brandSizes(modalSidebar_close_size) * -0.5);
+    margin-top: fonts.rem(val.modalSizes(modalSidebar_close_size) * -0.5);
     opacity: 1;
     position: absolute;
-    right: fonts.rem(val.brandSizes(modalSidebar_close_size));
+    right: fonts.rem(val.modalSizes(modalSidebar_close_size));
     top: 50%;
-    width: fonts.rem(val.brandSizes(modalSidebar_close_size));
+    width: fonts.rem(val.modalSizes(modalSidebar_close_size));
     z-index: 1;
     --svg-close-fill: #333;
     --svg-close-stroke: #333;
     svg{
-      height: fonts.rem(val.brandSizes(modalSidebar_close_size));
-      width: fonts.rem(val.brandSizes(modalSidebar_close_size));
+      height: fonts.rem(val.modalSizes(modalSidebar_close_size));
+      width: fonts.rem(val.modalSizes(modalSidebar_close_size));
     }
   }
 }

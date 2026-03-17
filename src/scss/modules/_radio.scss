@@ -81,7 +81,7 @@
 }
 
 .radio-item {
-    padding-left: fonts.rem(val.brandSizes(radioItem_size) + val.brandSizes(radioItemBorder_size) + val.brandSizes(radioItem_paddingText));
+    padding-left: fonts.rem(val.radioSizes(radioItem_size) + val.radioSizes(radioItemBorder_size) + val.radioSizes(radioItem_paddingText));
     position: relative;
     &.checked label.radio,
     label.radio.checked,
@@ -125,7 +125,7 @@
             cursor: val.brandCursor(radioItemLabel);
             font-weight: normal;
             // min-height: fonts.rem(val.lineHeight(radioItemLabel));
-            line-height: fonts.rem(val.lineHeight(input) + (val.brandSizes(formControl_borderSize) * 2));
+            line-height: fonts.rem(val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2));
             margin-bottom: 0;
             padding-top: 0;
             padding-left: 0;
@@ -133,15 +133,15 @@
             &:before {
                 border-radius: 100%;
                 background-color: val.brandPalette(radioItem_bg);
-                border: fonts.rem(val.brandSizes(radioItemBorder_size)) solid val.brandPalette(radioItem_border);
+                border: fonts.rem(val.radioSizes(radioItemBorder_size)) solid val.brandPalette(radioItem_border);
                 content: " ";
                 display: block;
-                height: fonts.rem(val.brandSizes(radioItem_size));
-                left: fonts.rem(-(val.brandSizes(radioItem_size) + val.brandSizes(radioItemBorder_size) + val.brandSizes(radioItem_paddingText)));
-                margin-top: fonts.rem(-(val.brandSizes(radioItem_size) * 0.5));
+                height: fonts.rem(val.radioSizes(radioItem_size));
+                left: fonts.rem(-(val.radioSizes(radioItem_size) + val.radioSizes(radioItemBorder_size) + val.radioSizes(radioItem_paddingText)));
+                margin-top: fonts.rem(-(val.radioSizes(radioItem_size) * 0.5));
                 position: absolute;
                 top: 50%;
-                width: fonts.rem(val.brandSizes(radioItem_size));
+                width: fonts.rem(val.radioSizes(radioItem_size));
             }
             &:after{
                 background-color: val.brandPalette(radioItemDotActive);
@@ -152,17 +152,17 @@
                 border-radius: 100%;
                 content: " ";
                 display: none;
-                height: fonts.rem(val.brandSizes(radioItemDot_size));
-                left: fonts.rem(-(val.brandSizes(radioItem_paddingText) + val.brandSizes(radioItemBorder_size) + val.brandSizes(radioItemDot_size) + ((val.brandSizes(radioItem_size) - val.brandSizes(radioItemDot_size)) * 0.5)));
+                height: fonts.rem(val.radioSizes(radioItemDot_size));
+                left: fonts.rem(-(val.radioSizes(radioItem_paddingText) + val.radioSizes(radioItemBorder_size) + val.radioSizes(radioItemDot_size) + ((val.radioSizes(radioItem_size) - val.radioSizes(radioItemDot_size)) * 0.5)));
                 position: absolute;
                 top: 50%;
-                margin-top: fonts.rem(-(val.brandSizes(radioItemDot_size) * 0.5));
-                width: fonts.rem(val.brandSizes(radioItemDot_size));
+                margin-top: fonts.rem(-(val.radioSizes(radioItemDot_size) * 0.5));
+                width: fonts.rem(val.radioSizes(radioItemDot_size));
             }
             span{
                 display: inline-block;
                 font-weight: 400;
-                line-height: fonts.rem(val.brandSizes(radioItem_size));
+                line-height: fonts.rem(val.radioSizes(radioItem_size));
                 vertical-align: middle;
             }
         }

@@ -124,15 +124,14 @@
 .btn-group__radioCheck{
   align-items: center;
   background-color: val.brandPalette(toggleCheckNonActive_color);
-  // border-color: val.brandPalette(toggleCheckNonActive_color);
-  border-radius: fonts.rem(val.brandSizes(toggleCheck_borderRadius));
+  border-radius: fonts.rem(val.toggleCheckSizes(toggleCheck_borderRadius));
   border: none;
   display: inline-flex;
   justify-content: space-between;
-  height: fonts.rem(val.brandSizes(toggleCheck_height));
+  height: fonts.rem(val.toggleCheckSizes(toggleCheck_height));
   padding: 0;
   position: relative;
-  width: fonts.rem(val.brandSizes(toggleCheck_width));
+  width: fonts.rem(val.toggleCheckSizes(toggleCheck_width));
   &.disabled,
   &[disabled]{
       cursor: not-allowed;
@@ -143,16 +142,15 @@
     background-color: val.brandPalette(toggleCheckActive_color);
     background-image: none;
     border: none;
-    border-radius: fonts.rem(val.brandSizes(toggleCheck_borderRadius));
+    border-radius: fonts.rem(val.toggleCheckSizes(toggleCheck_borderRadius));
     display: inline-flex;
-    flex: 0 0 fonts.rem(val.brandSizes(toggleCheck_width) * .5);
+    flex: 0 0 fonts.rem(val.toggleCheckSizes(toggleCheck_width) * .5);
     font-size: 0; // safari fix
-    height: fonts.rem(val.brandSizes(toggleCheck_height));
-    // height: fonts.rem(val.brandSizes(toggleCheckToggle_height));
+    height: fonts.rem(val.toggleCheckSizes(toggleCheck_height));
     outline: none;
-    padding: fonts.rem(math.div((math.div(val.brandSizes(toggleCheck_width), 2) - val.brandSizes(toggleCheckToggle_width)), 2));
+    padding: fonts.rem(math.div((math.div(val.toggleCheckSizes(toggleCheck_width), 2) - val.toggleCheckSizes(toggleCheckToggle_width)), 2));
     text-indent: -9999px;
-    width: fonts.rem(val.brandSizes(toggleCheck_width) * .5);
+    width: fonts.rem(val.toggleCheckSizes(toggleCheck_width) * .5);
     &:first-child{
       padding-right: 0;
     }
@@ -161,12 +159,12 @@
     }
     &:after{
       background-color: val.brandPalette(toggleChecktoggle_bgc);
-      border-radius: fonts.rem(val.brandSizes(toggleCheckToggle_borderRadius));
+      border-radius: fonts.rem(val.toggleCheckSizes(toggleCheckToggle_borderRadius));
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
       display: none;
       content: '';
-      height: fonts.rem(val.brandSizes(toggleCheckToggle_height));
-      width: fonts.rem(val.brandSizes(toggleCheckToggle_width));
+      height: fonts.rem(val.toggleCheckSizes(toggleCheckToggle_height));
+      width: fonts.rem(val.toggleCheckSizes(toggleCheckToggle_width));
     }
     &:focus, &:hover{ 
       background-image: none;
@@ -355,7 +353,7 @@
 // Text input groups
 // -------------------------
 .input-group-addon {
-  padding: fonts.rem(val.brandSizes(inputGroupAddon_paddingY)) fonts.rem(val.brandSizes(inputGroupAddon_paddingX));
+  padding: fonts.rem(val.formsSizes(inputGroupAddon_paddingY)) fonts.rem(val.formsSizes(inputGroupAddon_paddingX));
   font-size: fonts.rem(val.fontSizes(inputGroupElem));
   font-weight: 400;
   line-height: 1;
@@ -463,7 +461,7 @@
     margin-bottom: 0;
 
     +.form-control {
-      margin-left: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
+      margin-left: #{calc(val.btnSizes(btn_borderWidth) * -1)}px;
     }
   }
   >.form-control:focus {
@@ -589,12 +587,12 @@
   .inputGroup_text + .inputGroup_text,
   .inputGroup_inner + .inputGroup_inner,
   .inputGroup_inner + [class*="btn-"] {
-    margin-left: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
+    margin-left: #{calc(val.btnSizes(btn_borderWidth) * -1)}px;
   }
 }
 
 .inputGroup_prepend {
-  // margin-right: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
+  // margin-right: #{calc(val.btnSizes(btn_borderWidth) * -1)}px;
   margin-right: 0;
   .inputGroup_text,
   .inputGroup_inner {
@@ -611,7 +609,7 @@
 }
 
 .inputGroup_append {
-  // margin-left: #{calc(val.brandSizes(btn_borderWidth) * -1)}px;
+  // margin-left: #{calc(val.btnSizes(btn_borderWidth) * -1)}px;
   margin-left: 0;
   .inputGroup_text,
   .inputGroup_inner {
@@ -637,7 +635,7 @@
   font-weight: val.fontWeight(inputGroupElem);
   line-height: fonts.rem(val.lineHeight(input));
   min-height: fonts.rem(calc(val.lineHeight(input) + 2));
-  padding: 0 fonts.rem(val.brandSizes(formControl_paddingX));
+  padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   margin-bottom: 0;
   text-align: center;
   white-space: nowrap;
@@ -665,7 +663,7 @@
   line-height: fonts.rem(val.lineHeight(input));
   margin-bottom: 0; 
   min-height: fonts.rem(calc(val.lineHeight(input) + 2));
-  padding: 0 fonts.rem(val.brandSizes(formControl_paddingX));
+  padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   text-align: center;
   white-space: nowrap;
 
