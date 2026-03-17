@@ -133,6 +133,11 @@
   padding: 0;
   position: relative;
   width: fonts.rem(val.brandSizes(toggleCheck_width));
+  &.disabled,
+  &[disabled]{
+      cursor: not-allowed;
+      opacity: .6;
+  }
   &Item{
     align-items: center;
     background-color: val.brandPalette(toggleCheckActive_color);

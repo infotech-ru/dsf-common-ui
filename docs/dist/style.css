@@ -8732,6 +8732,9 @@ input[type=checkbox][disabled] {
   background-color: #4A8DC6;
   background-image: none;
 }
+.checkbox-item__toggleCheck input[type=checkbox][disabled] {
+  opacity: 0.6;
+}
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
@@ -12750,6 +12753,10 @@ select.selectpicker {
   padding: 0;
   position: relative;
   width: 2.25rem;
+}
+.btn-group__radioCheck.disabled, .btn-group__radioCheck[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 .btn-group__radioCheckItem {
   align-items: center;
