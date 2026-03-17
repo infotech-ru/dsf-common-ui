@@ -2,7 +2,12 @@ var DSFUI = (function (exports) {
     'use strict';
 
     var isListeningDocument$1 = false;
-    function FormsFree() {
+    function FormsFree(context) {
+      if (document.readyState !== 'complete') {
+        window.addEventListener('load', function () {
+          FormsFree();
+        });
+      }
       if (!isListeningDocument$1) {
         isListeningDocument$1 = true;
         $(document).on('focus blur change', inputSelector, function (e) {
@@ -29,40 +34,50 @@ var DSFUI = (function (exports) {
           $("label[for=\"".concat(e.target.id, "\"]")).removeClass('active');
         }).on('changed.bs.select', dropdownSelector, function (e) {
           updateDropdownLabel(e.target);
-        }).on('changed.bs.select', allDropdownSelector, function (e) {
-          updateDropdownLabel(e.target);
         });
+        // .on('change', comboTreeSelector, e => {
+        //     updateComboTreeLabel(e.target);
+        // });
       }
-      $(inputSelector).each(function (index, input) {
+      $(inputSelector, context).each(function (index, input) {
         return updateInputLabel(input);
       });
-      $(dateSelector).each(function (index, input) {
+      $(dateSelector, context).each(function (index, input) {
         return input.type = 'text';
       });
-      $(dropdownSelector).each(function (index, select) {
+      $(dropdownSelector, context).each(function (index, select) {
         return updateDropdownLabel(select);
       });
-      $(allDropdownSelector).each(function (index, select) {
-        return updateDropdownLabel(select);
-      });
+
+      // $(comboTreeSelector, context).each((index, select) => updateComboTreeLabel(select));
     }
     var inputTypes = ['text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'],
       inputSelector = inputTypes.map(function (selector) {
         return "input[type=".concat(selector, "]");
-      }).concat(['textarea']).join(','),
+      }).concat(['textarea:not(.js-summernote)']).join(','),
       dateSelector = 'input[type="date"]',
-      dropdownSelector = 'select.js-select-formFree',
-      allDropdownSelector = '.js-allSelect-formFree select',
+      dropdownSelector = 'select.js-select-formFree, .js-allSelect-formFree select',
       labelSelector = 'label, i';
+    // const comboTreeSelector = 'select.js-comboTree-select';
+
     function getIsValid($input) {
       var maxLength = Number($input.attr('length')) || 0;
-      return $input.is(':valid') && (!maxLength || maxLength > value.length);
+      return $input.is(':valid') && (!maxLength || maxLength > $input.val().length);
     }
     function updateInputLabel(input) {
-      var $this = $(input),
-        $labelAndIcon = $this.siblings(labelSelector),
-        isActive = $this.val().length > 0 || $this.is(':focus') || $this.attr('placeholder') != null;
+      var $this = $(input);
+      var $labelAndIcon;
+      if (!$this.hasClass('comboTreeInputBox')) {
+        $labelAndIcon = $this.siblings(labelSelector).length > 0 ? $this.siblings(labelSelector) : $this.parent('.js-formsFreeWrapper').siblings(labelSelector);
+      } else {
+        $labelAndIcon = $this.closest('.form-group').children(labelSelector);
+      }
+      var isActive = $this.val().length > 0 || $this.is(':focus') || $this.attr('placeholder') != null,
+        $labelTwitterTypeahead = $this.parents('.twitter-typeahead').siblings(labelSelector);
       $labelAndIcon.toggleClass('active', isActive);
+      $labelTwitterTypeahead.toggleClass('active', isActive);
+      $this.hasClass('comboTreeInputBox');
+      // && console.log($labelAndIcon, isActive);
     }
     function validateInput(input) {
       var $this = $(input);
@@ -74,12 +89,20 @@ var DSFUI = (function (exports) {
     }
     function updateDropdownLabel(select) {
       var $select = $(select),
-        isActive = select.value.length > 0 || $select.find('option:selected:not(.bs-title-option)').length > 0;
-      $select.closest('div').siblings(labelSelector).toggleClass('active', isActive);
+        isActive = select.value.length > 0 || $select.find('option:selected:not(.bs-title-option)').length > 0 || select.value !== '',
+        $labelAndIcon = $select.closest('div').siblings(labelSelector).length > 0 ? $select.closest('div').siblings(labelSelector) : $select.closest('div').parent('.js-formsFreeWrapper').siblings(labelSelector);
+      $labelAndIcon.toggleClass('active', isActive);
     }
 
-    // TODO: сбрасывать значение при нажатие удаления значения.
-    // $(el).val('default').selectpicker("refresh");
+    // function updateComboTreeLabel(select) {
+    // const escapedSelectValue = CSS.escape(select.value);
+    // const isActive = select.value !== ''
+    //     || $(select).find('option[value="' + escapedSelectValue + '"]').length > 0; // ComboTree не помечает выбранным option с пустым значением (prompt) при инициализации
+    // const $labelAndIcon = $(select).siblings(labelSelector).length > 0
+    //     ? $(select).siblings(labelSelector)
+    //     : $(select).parent('.js-formsFreeWrapper').siblings(labelSelector);
+    // $labelAndIcon.toggleClass('active', isActive);
+    // }
 
     function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
     function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { babelHelpers.defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
