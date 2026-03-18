@@ -8,6 +8,8 @@ $brand-sizes: (
   caret_size:                      6,
   caretDropdown_size:              4,
   caretSelect_size:                16,
+  
+  chartBlock_padding:              baseValue.$base-gutter,
 
   disabel_opacity:                 0.5,
   dlHorizontalOffset:              180,
@@ -18,7 +20,7 @@ $brand-sizes: (
   output_paddingY:                 7,
   square_height:                   64,
   unityBlock_bRadius:              0,
-  unityBlock_padding:              baseValue.$base-padding,
+  unityBlock_padding:              baseValue.$base-gutter,
   unityBlockHeader_mb:             baseValue.$base-padding,
 )!default;
 

@@ -225,9 +225,10 @@ h6, .h6 {
   &BusinessCard{
       &Left{
           flex-grow:0;
-          padding-left: 10px;
-          padding-right: 20px;
+          // padding-left: 10px;
+          padding-right: fonts.rem(calc(val.brandSizes(base_marginSize) * .5));
           flex-basis: 145px;
+          --blockBusinessCardLeftImage: 145px;
           .mobile-view & {
               padding-left: 0;
               padding-right: 0;
@@ -237,21 +238,23 @@ h6, .h6 {
           }
           &_image{
               background-repeat: no-repeat;
-              background-size: 115px;
-              height: 115px;
-              max-height: 115px;
+              background-size: contain;
+              // background-size: var(--blockBusinessCardLeftImage);
+              height: var(--blockBusinessCardLeftImage);
+              max-height: var(--blockBusinessCardLeftImage);
               overflow: hidden;
               position: relative;
-              width: 115px;
+              width: var(--blockBusinessCardLeftImage);
               &__personal{ 
                   background-image: url(paths.$path-images + 'placeholder_photo.svg');
               }
               &__contact{ 
                   background-image: url(paths.$path-images + 'placeholder_contact.svg');
-                  background-size: 104px;
-                  max-height: 104px;
-                  height: 104px;
-                  width: 104px;
+                  --blockBusinessCardLeftImage: 104px;
+                  // background-size: 104px;
+                  // max-height: 104px;
+                  // height: 104px;
+                  // width: 104px;
               }
               &__auto{
                   background-image: url(paths.$path-images + 'placeholder_auto.svg');
@@ -269,11 +272,14 @@ h6, .h6 {
                   }
               }
           }
+          &__wide{
+            --blockBusinessCardLeftImage: 250px;
+          }
       }
       &Right{
           flex-grow:1;
-          padding-right: 10px;
-          padding-left: 10px;
+          // padding-right: 10px;
+          padding-left: fonts.rem(calc(val.brandSizes(base_marginSize) * .5));
           width: 100%;
           .mobile-view & {
               padding-left: 0;

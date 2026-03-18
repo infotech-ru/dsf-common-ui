@@ -159,8 +159,10 @@ output {
       }
     }
     &-static{
+      color: val.brandPalette(controlLabel_color);
       font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
-      line-height: fonts.rem(calc(val.lineHeight(input) + 2));
+      font-weight: val.fontWeight(controlLabel);
+      line-height: fonts.rem(val.lineHeight(body));
       padding: 0;
       margin: 0;
     }

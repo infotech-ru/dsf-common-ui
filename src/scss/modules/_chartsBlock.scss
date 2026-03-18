@@ -7,12 +7,11 @@
 
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-colors' as *;
 
 
 .chartsBlock{
   border: 1px solid val.brandPalette(chartBlock_border);
-  padding: 10px;
+  padding: fonts.rem(val.brandSizes(chartBlock_padding));
   &_header{
     align-items: flex-start;
     display: flex;
@@ -25,17 +24,13 @@
       align-items: center;
       display: flex;
       .svg--icon{
-        height: 24px;
-        width: 24px;
-        svg{
+        &, svg{
           height: 24px;
           width: 24px;
         }
       }
       .svg--iconAction{
-        height: var(--svgIcon_height, 16px);
-        width: var(--svgIcon_height, 16px);
-        svg{
+        &, svg{
           height: var(--svgIcon_height, 16px);
           width: var(--svgIcon_height, 16px);
         }

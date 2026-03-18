@@ -1063,9 +1063,9 @@ h6, .h6 {
 
 .blockBusinessCardLeft {
   flex-grow: 0;
-  padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 0.3125rem;
   flex-basis: 145px;
+  --blockBusinessCardLeftImage: 145px;
 }
 .mobile-view .blockBusinessCardLeft {
   padding-left: 0;
@@ -1076,22 +1076,19 @@ h6, .h6 {
 }
 .blockBusinessCardLeft_image {
   background-repeat: no-repeat;
-  background-size: 115px;
-  height: 115px;
-  max-height: 115px;
+  background-size: contain;
+  height: var(--blockBusinessCardLeftImage);
+  max-height: var(--blockBusinessCardLeftImage);
   overflow: hidden;
   position: relative;
-  width: 115px;
+  width: var(--blockBusinessCardLeftImage);
 }
 .blockBusinessCardLeft_image__personal {
   background-image: url("/dsf-common-ui/images/placeholder_photo.svg");
 }
 .blockBusinessCardLeft_image__contact {
   background-image: url("/dsf-common-ui/images/placeholder_contact.svg");
-  background-size: 104px;
-  max-height: 104px;
-  height: 104px;
-  width: 104px;
+  --blockBusinessCardLeftImage: 104px;
 }
 .blockBusinessCardLeft_image__auto {
   background-image: url("/dsf-common-ui/images/placeholder_auto.svg");
@@ -1108,10 +1105,12 @@ h6, .h6 {
 .blockBusinessCardLeft_image img[src=""] {
   display: none;
 }
+.blockBusinessCardLeft__wide {
+  --blockBusinessCardLeftImage: 250px;
+}
 .blockBusinessCardRight {
   flex-grow: 1;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 0.3125rem;
   width: 100%;
 }
 .mobile-view .blockBusinessCardRight {
@@ -11525,8 +11524,10 @@ output {
   padding-right: 0;
 }
 .control-label-static {
+  color: #777777;
   font-size: 0.75rem;
-  line-height: 1.75rem;
+  font-weight: 400;
+  line-height: 0.875rem;
   padding: 0;
   margin: 0;
 }
@@ -14880,7 +14881,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .chartsBlock {
   border: 1px solid #dddddd;
-  padding: 10px;
+  padding: 0.625rem;
 }
 .chartsBlock_header {
   align-items: flex-start;
@@ -14892,19 +14893,11 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   align-items: center;
   display: flex;
 }
-.chartsBlock_headerItem .svg--icon {
+.chartsBlock_headerItem .svg--icon, .chartsBlock_headerItem .svg--icon svg {
   height: 24px;
   width: 24px;
 }
-.chartsBlock_headerItem .svg--icon svg {
-  height: 24px;
-  width: 24px;
-}
-.chartsBlock_headerItem .svg--iconAction {
-  height: var(--svgIcon_height, 16px);
-  width: var(--svgIcon_height, 16px);
-}
-.chartsBlock_headerItem .svg--iconAction svg {
+.chartsBlock_headerItem .svg--iconAction, .chartsBlock_headerItem .svg--iconAction svg {
   height: var(--svgIcon_height, 16px);
   width: var(--svgIcon_height, 16px);
 }
@@ -18398,6 +18391,10 @@ tbody.collapse.in {
 
 .mobile-view .overflowY-hidden__mobile {
   overflow-y: hidden;
+}
+
+.boxShadow__none {
+  box-shadow: none;
 }
 
 .object-fit-cover {
