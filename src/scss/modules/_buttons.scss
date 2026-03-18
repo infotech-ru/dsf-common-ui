@@ -407,7 +407,7 @@ a.btn {
 }
 
 .btn-large {
-  border-radius: 1px;
+  border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
   font-size: fonts.rem(val.fontSizes(btnLg));
   line-height: fonts.rem(val.lineHeight(btnLg));
   padding: #{val.btnSizes(btnLg-paddingY)}px #{val.btnSizes(btnLg-paddingX)}px;

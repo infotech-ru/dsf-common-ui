@@ -8951,7 +8951,7 @@ input[type=checkbox][disabled] {
   border-style: solid;
   border-color: transparent;
   border-width: 1px;
-  border-radius: 4px;
+  border-radius: 1px;
   cursor: pointer;
   display: inline-block;
   font-size: 0.75rem;
@@ -10001,7 +10001,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn-large {
-  border-radius: 1px;
+  border-radius: 0.0625rem;
   font-size: 0.875rem;
   line-height: 1.875rem;
   padding: 0px 15px;
@@ -11417,7 +11417,7 @@ a.label:hover, a.label:focus {
 fieldset {
   padding: 0 12px 8px;
   border: 1px solid #C0C0C0;
-  border-radius: 0.25rem;
+  border-radius: 0.0625rem;
 }
 
 legend {
@@ -11534,7 +11534,7 @@ output {
 .form-control {
   background-image: none;
   background-color: var(--bg_color, #ffffff);
-  border-radius: 0.25rem;
+  border-radius: 0.0625rem;
   border: 1px solid #BABABA;
   box-shadow: none;
   color: #333333;
@@ -11664,7 +11664,7 @@ output {
 }
 
 textarea.form-control {
-  border-radius: 0.25rem;
+  border-radius: 0.0625rem;
   height: auto;
   line-height: 0.875rem;
   min-height: 1.75rem;
@@ -11953,7 +11953,7 @@ fieldset[disabled] .checkbox-inline {
   width: 100%;
 }
 .redactorBlockContainer {
-  border-radius: 0.25rem;
+  border-radius: 0.0625rem;
   border: 1px solid #BABABA;
   display: flex;
   min-height: 36px;
@@ -12842,16 +12842,16 @@ select.selectpicker {
   width: 100%;
 }
 .btn-group__vertical > [class*=btn]:first-child:not(:last-child):not(.dropdown-toggle) {
-  border-top-left-radius: 1px;
-  border-top-right-radius: 1px;
+  border-top-left-radius: 0.0625rem;
+  border-top-right-radius: 0.0625rem;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 .btn-group__vertical > [class*=btn]:last-child:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-right-radius: 1px;
-  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 0.0625rem;
+  border-bottom-left-radius: 0.0625rem;
 }
 .btn-group__vertical > [class*=btn] + [class*=btn] {
   margin-left: 0;
@@ -13084,24 +13084,24 @@ select.selectpicker {
 }
 .form-control-container:first-child .form-control {
   border-left-width: 1px;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.0625rem;
+  border-bottom-left-radius: 0.0625rem;
 }
 .form-control-container:first-child .bootstrap-select .btn {
   border-right: 0px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.0625rem;
+  border-bottom-left-radius: 0.0625rem;
 }
 .form-control-container:last-child .form-control {
   border-right-width: 1px;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.0625rem;
+  border-bottom-right-radius: 0.0625rem;
 }
 .form-control-container:last-child .bootstrap-select .btn {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.0625rem;
+  border-bottom-right-radius: 0.0625rem;
 }
 .form-control-container:not(:first-child):not(:last-child) .form-control {
   border-bottom-left-radius: 0;
@@ -13183,8 +13183,8 @@ select.selectpicker {
 }
 .inputGroup_prepend .inputGroup_text:first-child,
 .inputGroup_prepend .inputGroup_inner:first-child {
-  border-bottom-left-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.0625rem;
+  border-top-left-radius: 0.0625rem;
 }
 
 .inputGroup_append {
@@ -13201,8 +13201,8 @@ select.selectpicker {
   border-left: none;
 }
 .inputGroup_append .inputGroup_inner:last-child {
-  border-bottom-right-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.0625rem;
+  border-top-right-radius: 0.0625rem;
 }
 
 .inputGroup_text,
@@ -14487,7 +14487,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   align-items: center;
   background-color: #ffffff;
   border: 1px solid #BABABA;
-  border-radius: 4px;
+  border-radius: 1px;
   display: flex;
   justify-content: space-between;
   position: relative;
