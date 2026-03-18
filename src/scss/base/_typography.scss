@@ -227,7 +227,7 @@ h6, .h6 {
           flex-grow:0;
           // padding-left: 10px;
           padding-right: fonts.rem(calc(val.brandSizes(base_marginSize) * .5));
-          flex-basis: 145px;
+          flex-basis: var(--blockBusinessCardLeftImage);
           --blockBusinessCardLeftImage: 145px;
           .mobile-view & {
               padding-left: 0;
