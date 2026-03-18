@@ -176,11 +176,6 @@ thead {
           border-bottom: none;
         }
       }
-      td{
-        .table__list &{
-          border-bottom: none;
-        }
-      }
     }
   }
 }
@@ -258,6 +253,16 @@ tfoot {
       td{ 
         background-color: val.brandTable(tdStrip_bgc);
       }
+    }
+  }
+}
+
+.table__list {
+  tr{ 
+    &:last-child{
+      td{
+          border-bottom: none;
+        }
     }
   }
 }

@@ -13829,9 +13829,6 @@ thead tr:last-child th {
 .table__simple thead tr:last-child th {
   border-bottom: none;
 }
-.table__list thead tr:last-child td {
-  border-bottom: none;
-}
 
 tbody .svg--icon svg {
   fill: #333333;
@@ -13887,6 +13884,10 @@ tfoot td tr:nth-child(1) th:first-child[rowspan="3"] {
 }
 .table__stripedReverse > tbody > tr:nth-of-type(2n) td {
   background-color: #f9f9f9;
+}
+
+.table__list tr:last-child td {
+  border-bottom: none;
 }
 
 table[class*=bg-] td {

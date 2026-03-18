@@ -7,471 +7,472 @@ category: tables
 anchor: table-treeTable
 order: 7
 ---
+<div class="unityBlock">
+  <p>Для вывода строк таблицы в виде дерева - со скрытием подстрок используем скрипт <code class="language-plaintext highlighter-rouge">jQuery treetable</code>:</p>
 
-<p>Для вывода строк таблицы в виде дерева - со скрытием подстрок используем скрипт <code class="language-plaintext highlighter-rouge">jQuery treetable</code>:</p>
+  <p>- таблице дописываем класс <code class="language-plaintext highlighter-rouge">js-tree-table</code> и инициализируем скрипт с помощью <code class="language-plaintext highlighter-rouge">initTreeTable()</code> (При необходимости делаем <code class="language-plaintext highlighter-rouge">import {initTreeTable} from "../utils")</code></p>
 
-<p>- таблице дописываем класс <code class="language-plaintext highlighter-rouge">js-tree-table</code> и инициализируем скрипт с помощью <code class="language-plaintext highlighter-rouge">initTreeTable()</code> (При необходимости делаем <code class="language-plaintext highlighter-rouge">import {initTreeTable} from "../utils")</code></p>
+  <p>- строкам родителям задаем <code class="language-plaintext highlighter-rouge">data-tt-id="уникальное_id_родителя"</code>, a для подстрок задаем <code class="language-plaintext highlighter-rouge">data-tt-parent-id="уникальное_id_родителя"</code> и своё <code class="language-plaintext highlighter-rouge">data-tt-id</code></p>
 
-<p>- строкам родителям задаем <code class="language-plaintext highlighter-rouge">data-tt-id="уникальное_id_родителя"</code>, a для подстрок задаем <code class="language-plaintext highlighter-rouge">data-tt-parent-id="уникальное_id_родителя"</code> и своё <code class="language-plaintext highlighter-rouge">data-tt-id</code></p>
+  <p>- для расскраски в цветовую схему строке - верхнему родителю  задаем класс - <code class="language-plaintext highlighter-rouge">tr__master</code></p>
 
-<p>- для расскраски в цветовую схему строке - верхнему родителю  задаем класс - <code class="language-plaintext highlighter-rouge">tr__master</code></p>
+  <p>- для потомков используем <code class="language-plaintext highlighter-rouge">tr__slave</code> и <code class="language-plaintext highlighter-rouge">tr__subSlave</code></p>
+  <a class="btn-primary__outline mb-10" role="button" data-toggle="collapse" href="#collapseTreetable" aria-expanded="false" aria-controls="collapseTreetable">
+    Документация с http://ludo.cubicphuse.nl/jquery-treetable/
+  </a>
+  <div class="collapse" id="collapseTreetable">
+      <table class="table table__border mb-20">
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><tt>branchAttr</tt></td>
+              <td><tt>string</tt></td>
+              <td><tt>"ttBranch"</tt></td>
+              <td>Optional data attribute that can be used to force the expander icon to be rendered on a node. This allows us to define a node as a branch node even though it does not have children yet. This translates to a <tt>data-tt-branch</tt> attribute in your HTML.</td>
+            </tr>
+            <tr>
+              <td><tt>clickableNodeNames</tt></td>
+              <td><tt>bool</tt></td>
+              <td><tt>false</tt></td>
+              <td>Set to true to expand branches not only when expander icon is clicked but also when node name is clicked.</td>
+            </tr>
+            <tr>
+              <td><tt>column</tt></td>
+              <td><tt>int</tt></td>
+              <td><tt>0</tt></td>
+              <td>The number of the column in the table that should be displayed as a tree.</td>
+            </tr>
+            <tr>
+              <td><tt>columnElType</tt></td>
+              <td><tt>string</tt></td>
+              <td><tt>"td"</tt></td>
+              <td>The types of cells that should be considered for the tree (<tt>td</tt>, <tt>th</tt> or both).</td>
+            </tr>
+            <tr>
+              <td><tt>expandable</tt></td>
+              <td><tt>bool</tt></td>
+              <td><tt>false</tt></td>
+              <td>Should the tree be expandable? An expandable tree contains buttons to make each branch with children collapsible/expandable.</td>
+            </tr>
+            <tr>
+              <td><tt>expanderTemplate</tt></td>
+              <td><tt>string</tt></td>
+              <td><tt>&lt;a href="#"&gt;&amp;nbsp;&lt;/a&gt;</tt></td>
+              <td>The HTML fragment used for the expander.</td>
+            </tr>
+            <tr>
+              <td><tt>indent</tt></td>
+              <td><tt>int</tt></td>
+              <td><tt>19</tt></td>
+              <td>The number of pixels that each branch should be indented with.</td>
+            </tr>
+            <tr>
+              <td><tt>indenterTemplate</tt></td>
+              <td><tt>string</tt></td>
+              <td><tt>&lt;span class="indenter"&gt;&lt;/span&gt;</tt></td>
+              <td>The HTML fragment used for the indenter.</td>
+            </tr>
+            <tr>
+              <td><tt>initialState</tt></td>
+              <td><tt>string</tt></td>
+              <td><tt>"collapsed"</tt></td>
+              <td>Possible values: <tt>"expanded"</tt> or <tt>"collapsed"</tt>.</td>
+            </tr>
+            <tr>
+              <td><tt>nodeIdAttr</tt></td>
+              <td><tt>string</tt></td>
+              <td><tt>"ttId"</tt></td>
+              <td>Name of the data attribute used to identify node. Translates to <tt>data-tt-id</tt> in your HTML.</td>
+            </tr>
+            <tr>
+              <td><tt>parentIdAttr</tt></td>
+              <td><tt>string</tt></td>
+              <td><tt>"ttParentId"</tt></td>
+              <td>Name of the data attribute used to set parent node. Translates to <tt>data-tt-parent-id</tt> in your HTML.</td>
+            </tr>
+            <tr>
+              <td><tt>stringCollapse</tt></td>
+              <td><tt>string</tt></td>
+              <td><tt>"Collapse"</tt></td>
+              <td>For internationalization.</td>
+            </tr>
+            <tr>
+              <td><tt>stringExpand</tt></td>
+              <td><tt>string</tt></td>
+              <td><tt>"Expand"</tt></td>
+              <td>For internationalization.</td>
+            </tr>
+          </tbody>
+        </table>
+      <table class="table table__border mb-20">
+          <thead>
+            <tr>
+              <th>Setting</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><tt>onInitialized</tt></td>
+              <td><tt>function</tt></td>
+              <td><tt>null</tt></td>
+              <td>Callback function fired when the tree has been initialized.</td>
+            </tr>
+            <tr>
+              <td><tt>onNodeCollapse</tt></td>
+              <td><tt>function</tt></td>
+              <td><tt>null</tt></td>
+              <td>Callback function fired when a branch is collapsed.</td>
+            </tr>
+            <tr>
+              <td><tt>onNodeExpand</tt></td>
+              <td><tt>function</tt></td>
+              <td><tt>null</tt></td>
+              <td>Callback function fired when a branch is expanded.</td>
+            </tr>
+            <tr>
+              <td><tt>onNodeInitialized</tt></td>
+              <td><tt>function</tt></td>
+              <td><tt>null</tt></td>
+              <td>Callback function fired when a node has been initialized.</td>
+            </tr>
+          </tbody>
+        </table>
+      <div class=" mb-10">
+          The treetable() function accepts the following arguments:
+          <p>options (optional)</p>
+          <p>A Javascript object of configuration settings as described in the chapter on configuration.</p>
+          <p>force (optional)</p>
+          <p>Pass the boolean true to force reinitialization of the tree.</p>
+      </div>
+      <div class=" mb-10">
+          <p>Additional Functions</p>
+          <p>Use the following functions to manipulate the tree programmatically. Calling a function should be done through the treetable() function. For example, to collapse node '42' use $("#tree").treetable("collapseNode", "42").</p>
 
-<p>- для потомков используем <code class="language-plaintext highlighter-rouge">tr__slave</code> и <code class="language-plaintext highlighter-rouge">tr__subSlave</code></p>
-<a class="btn-primary__outline mb-10" role="button" data-toggle="collapse" href="#collapseTreetable" aria-expanded="false" aria-controls="collapseTreetable">
-  Документация с http://ludo.cubicphuse.nl/jquery-treetable/
-</a>
-<div class="collapse" id="collapseTreetable">
-    <table class="table table__border mb-20">
-        <thead>
-          <tr>
-            <th>Setting</th>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><tt>branchAttr</tt></td>
-            <td><tt>string</tt></td>
-            <td><tt>"ttBranch"</tt></td>
-            <td>Optional data attribute that can be used to force the expander icon to be rendered on a node. This allows us to define a node as a branch node even though it does not have children yet. This translates to a <tt>data-tt-branch</tt> attribute in your HTML.</td>
-          </tr>
-          <tr>
-            <td><tt>clickableNodeNames</tt></td>
-            <td><tt>bool</tt></td>
-            <td><tt>false</tt></td>
-            <td>Set to true to expand branches not only when expander icon is clicked but also when node name is clicked.</td>
-          </tr>
-          <tr>
-            <td><tt>column</tt></td>
-            <td><tt>int</tt></td>
-            <td><tt>0</tt></td>
-            <td>The number of the column in the table that should be displayed as a tree.</td>
-          </tr>
-          <tr>
-            <td><tt>columnElType</tt></td>
-            <td><tt>string</tt></td>
-            <td><tt>"td"</tt></td>
-            <td>The types of cells that should be considered for the tree (<tt>td</tt>, <tt>th</tt> or both).</td>
-          </tr>
-          <tr>
-            <td><tt>expandable</tt></td>
-            <td><tt>bool</tt></td>
-            <td><tt>false</tt></td>
-            <td>Should the tree be expandable? An expandable tree contains buttons to make each branch with children collapsible/expandable.</td>
-          </tr>
-          <tr>
-            <td><tt>expanderTemplate</tt></td>
-            <td><tt>string</tt></td>
-            <td><tt>&lt;a href="#"&gt;&amp;nbsp;&lt;/a&gt;</tt></td>
-            <td>The HTML fragment used for the expander.</td>
-          </tr>
-          <tr>
-            <td><tt>indent</tt></td>
-            <td><tt>int</tt></td>
-            <td><tt>19</tt></td>
-            <td>The number of pixels that each branch should be indented with.</td>
-          </tr>
-          <tr>
-            <td><tt>indenterTemplate</tt></td>
-            <td><tt>string</tt></td>
-            <td><tt>&lt;span class="indenter"&gt;&lt;/span&gt;</tt></td>
-            <td>The HTML fragment used for the indenter.</td>
-          </tr>
-          <tr>
-            <td><tt>initialState</tt></td>
-            <td><tt>string</tt></td>
-            <td><tt>"collapsed"</tt></td>
-            <td>Possible values: <tt>"expanded"</tt> or <tt>"collapsed"</tt>.</td>
-          </tr>
-          <tr>
-            <td><tt>nodeIdAttr</tt></td>
-            <td><tt>string</tt></td>
-            <td><tt>"ttId"</tt></td>
-            <td>Name of the data attribute used to identify node. Translates to <tt>data-tt-id</tt> in your HTML.</td>
-          </tr>
-          <tr>
-            <td><tt>parentIdAttr</tt></td>
-            <td><tt>string</tt></td>
-            <td><tt>"ttParentId"</tt></td>
-            <td>Name of the data attribute used to set parent node. Translates to <tt>data-tt-parent-id</tt> in your HTML.</td>
-          </tr>
-          <tr>
-            <td><tt>stringCollapse</tt></td>
-            <td><tt>string</tt></td>
-            <td><tt>"Collapse"</tt></td>
-            <td>For internationalization.</td>
-          </tr>
-          <tr>
-            <td><tt>stringExpand</tt></td>
-            <td><tt>string</tt></td>
-            <td><tt>"Expand"</tt></td>
-            <td>For internationalization.</td>
-          </tr>
-        </tbody>
-      </table>
-    <table class="table table__border mb-20">
-        <thead>
-          <tr>
-            <th>Setting</th>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><tt>onInitialized</tt></td>
-            <td><tt>function</tt></td>
-            <td><tt>null</tt></td>
-            <td>Callback function fired when the tree has been initialized.</td>
-          </tr>
-          <tr>
-            <td><tt>onNodeCollapse</tt></td>
-            <td><tt>function</tt></td>
-            <td><tt>null</tt></td>
-            <td>Callback function fired when a branch is collapsed.</td>
-          </tr>
-          <tr>
-            <td><tt>onNodeExpand</tt></td>
-            <td><tt>function</tt></td>
-            <td><tt>null</tt></td>
-            <td>Callback function fired when a branch is expanded.</td>
-          </tr>
-          <tr>
-            <td><tt>onNodeInitialized</tt></td>
-            <td><tt>function</tt></td>
-            <td><tt>null</tt></td>
-            <td>Callback function fired when a node has been initialized.</td>
-          </tr>
-        </tbody>
-      </table>
-    <div class="unityBlock mb-10">
-        The treetable() function accepts the following arguments:
-        <p>options (optional)</p>
-        <p>A Javascript object of configuration settings as described in the chapter on configuration.</p>
-        <p>force (optional)</p>
-        <p>Pass the boolean true to force reinitialization of the tree.</p>
-    </div>
-    <div class="unityBlock mb-10">
-        <p>Additional Functions</p>
-        <p>Use the following functions to manipulate the tree programmatically. Calling a function should be done through the treetable() function. For example, to collapse node '42' use $("#tree").treetable("collapseNode", "42").</p>
-
-        <p>collapseAll()</p>
-        <p>Collapse all nodes at once.</p>
-        <p>collapseNode(id)</p>
-        <p>Collapse a single node, identified by id.</p>
-        <p>expandAll()</p>
-        <p>Expand all nodes at once.</p>
-        <p>expandNode(id)</p>
-        <p>Expand a single node, identified by id.</p>
-        <p>loadBranch(node, rows)</p>
-        <p>Load additional rows (HTML <tr>s) into the tree, with parent node. If node is null rows will be added as root nodes.</p>
-        <p>move(nodeId, destinationId)</p>
-        <p>Move node nodeId to new parent with destinationId.</p>
-        <p>node(id)</p>
-        <p>Select a node from the tree. Returns a TreeTable.Node object.</p>
-        <p>removeNode(id)</p>
-        <p>Remove a node and all its descendants from the tree.</p>
-        <p>reveal(id)</p>
-        <p>Reveal a node in the tree.</p>
-        <p>sortBranch(node), sortBranch(node, columnOrFunction)</p>
-        <p>Sort node's children alphabetically. Defaults to sorting on the values in the configured tree column (see settings). Pass an optional column number or sorting function as the second argument columnOrFunction. See the tests for examples of custom sorting functions. Does not recursively sort children of children.</p>
-        <p>unloadBranch(node)</p>
-        <p>Remove nodes/rows (HTML <tr>s) from the tree, with parent node. Note that the parent (node) will not be removed.</p>
-    </div>
-    <div class="unityBlock">
-        <p>Complex Tree With Drag and Drop</p>
-        <p>This example uses jQuery UI's Draggable and Droppable components</p>
-        <code class="language-plaintext highlighter-rouge">
-            $("#example-advanced").treetable({ expandable: true });
-            // Highlight selected row
-            $("#example-advanced tbody").on("mousedown", "tr", function() {
-              $(".selected").not(this).removeClass("selected");
-              $(this).toggleClass("selected");
-            });
-
-            // Drag & Drop Example Code
-            $("#example-advanced .file, #example-advanced .folder").draggable({
-              helper: "clone",
-              opacity: .75,
-              refreshPositions: true,
-              revert: "invalid",
-              revertDuration: 300,
-              scroll: true
-            });
-
-            $("#example-advanced .folder").each(function() {
-              $(this).parents("#example-advanced tr").droppable({
-                accept: ".file, .folder",
-                drop: function(e, ui) {
-                  var droppedEl = ui.draggable.parents("tr");
-                  $("#example-advanced").treetable("move", droppedEl.data("ttId"), $(this).data("ttId"));
-                },
-                hoverClass: "accept",
-                over: function(e, ui) {
-                  var droppedEl = ui.draggable.parents("tr");
-                  if(this != droppedEl[0] && !$(this).is(".expanded")) {
-                    $("#example-advanced").treetable("expandNode", $(this).data("ttId"));
-                  }
-                }
+          <p>collapseAll()</p>
+          <p>Collapse all nodes at once.</p>
+          <p>collapseNode(id)</p>
+          <p>Collapse a single node, identified by id.</p>
+          <p>expandAll()</p>
+          <p>Expand all nodes at once.</p>
+          <p>expandNode(id)</p>
+          <p>Expand a single node, identified by id.</p>
+          <p>loadBranch(node, rows)</p>
+          <p>Load additional rows (HTML <tr>s) into the tree, with parent node. If node is null rows will be added as root nodes.</p>
+          <p>move(nodeId, destinationId)</p>
+          <p>Move node nodeId to new parent with destinationId.</p>
+          <p>node(id)</p>
+          <p>Select a node from the tree. Returns a TreeTable.Node object.</p>
+          <p>removeNode(id)</p>
+          <p>Remove a node and all its descendants from the tree.</p>
+          <p>reveal(id)</p>
+          <p>Reveal a node in the tree.</p>
+          <p>sortBranch(node), sortBranch(node, columnOrFunction)</p>
+          <p>Sort node's children alphabetically. Defaults to sorting on the values in the configured tree column (see settings). Pass an optional column number or sorting function as the second argument columnOrFunction. See the tests for examples of custom sorting functions. Does not recursively sort children of children.</p>
+          <p>unloadBranch(node)</p>
+          <p>Remove nodes/rows (HTML <tr>s) from the tree, with parent node. Note that the parent (node) will not be removed.</p>
+      </div>
+      <div class="">
+          <p>Complex Tree With Drag and Drop</p>
+          <p>This example uses jQuery UI's Draggable and Droppable components</p>
+          <code class="language-plaintext highlighter-rouge">
+              $("#example-advanced").treetable({ expandable: true });
+              // Highlight selected row
+              $("#example-advanced tbody").on("mousedown", "tr", function() {
+                $(".selected").not(this).removeClass("selected");
+                $(this).toggleClass("selected");
               });
-            });
-        </code>
+
+              // Drag & Drop Example Code
+              $("#example-advanced .file, #example-advanced .folder").draggable({
+                helper: "clone",
+                opacity: .75,
+                refreshPositions: true,
+                revert: "invalid",
+                revertDuration: 300,
+                scroll: true
+              });
+
+              $("#example-advanced .folder").each(function() {
+                $(this).parents("#example-advanced tr").droppable({
+                  accept: ".file, .folder",
+                  drop: function(e, ui) {
+                    var droppedEl = ui.draggable.parents("tr");
+                    $("#example-advanced").treetable("move", droppedEl.data("ttId"), $(this).data("ttId"));
+                  },
+                  hoverClass: "accept",
+                  over: function(e, ui) {
+                    var droppedEl = ui.draggable.parents("tr");
+                    if(this != droppedEl[0] && !$(this).is(".expanded")) {
+                      $("#example-advanced").treetable("expandNode", $(this).data("ttId"));
+                    }
+                  }
+                });
+              });
+          </code>
+      </div>
+  </div>
+  <div class="bs-docs-example">
+    <div class="wrapper__tableSticky" style="max-height: 40vh;">
+      <table class="table table__border js-tree-table treetable">
+        <thead>
+            <tr>
+                <th style="width:20%;" rowspan="2">table__border</th>
+                <th class="text-center" colspan="9">Заголовок02</th>
+                <th class="text-center" colspan="4">Заголовок03</th>
+                <th class="text-center" colspan="2">Заголовок04</th>
+            </tr>
+            <tr>
+                <th class="border-left__none">&nbsp;</th>
+                <th class="text-center">Подзаголовок01</th>
+                <th class="text-center">Подзаголовок02</th>
+                <th>%</th>
+                <th class="text-center">Подзаголовок03 </th>
+                <th>%</th>
+                <th class="text-center">Подзаголовок04</th>
+                <th>%</th>
+                <th class="text-center">Подзаголовок05</th>
+                <th class="text-center">Подзаголовок06</th>
+                <th>Подзаголовок07</th>
+                <th class="text-center">Подзаголовок08</th>
+                <th class="tableHelpIcon_td">%</th>
+                <th class="text-center">Подзаголовок09</th>
+                <th class="text-center">Подзаголовок10</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tr__master" data-tt-id="distributor-1">
+                <td class="nowrap">ООО "Человек и Ко" </td>
+                <td class="text-center"></td>
+                <td class="text-center">639</td>
+                <td class="text-center">221</td>
+                <td><span>35%</span></td>
+                <td class="text-center">50</td>
+                <td><span>8%</span></td>
+                <td class="text-center">28</td>
+                <td><span>4%</span></td>
+                <td class="text-center nowrap">2</td>
+                <td class="text-center">57</td>
+                <td>+29</td>
+                <td class="text-center">58</td>
+                <td>98%</td>
+                <td class="text-center nowrap">57</td>
+                <td class="text-center">54</td>
+            </tr>
+            <tr class="tr__slave" data-tt-id="bdm-1-42" data-tt-parent-id="distributor-1">
+                <td class="nowrap">Иванова Мария</td>
+                <td class="text-center"></td>
+                <td class="text-center">125</td>
+                <td class="text-center">84</td>
+                <td><span>67%</span></td>
+                <td class="text-center">2 </td>
+                <td><span>2%</span></td>
+                <td class="text-center">4 </td>
+                <td><span>3%</span></td>
+                <td class="text-center nowrap"></td>
+                <td class="text-center">12</td>
+                <td>+8 </td>
+                <td class="text-center">12 </td>
+                <td>100%</td>
+                <td class="text-center nowrap">12 </td>
+                <td class="text-center" data-name-td="bdm">12 </td>
+            </tr>
+            <tr class="tr__subSlave leaf" data-tt-id="dealer-11" data-tt-parent-id="bdm-1-42">
+                <td class="nowrap"><span>Дилер 11</span></td>
+                <td class="text-center">&nbsp;</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center nowrap">0</td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center">0 </td>
+                <td>0%</td>
+                <td class="text-center nowrap">0 </td>
+                <td class="text-center" data-name-td="bdm">0</td>
+            </tr>
+            <tr class="tr__subSlave leaf" data-tt-id="dealer-143" data-tt-parent-id="bdm-1-42">
+                <td class="nowrap"><span>Дилер 143</span></td>
+                <td class="text-center">&nbsp;</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center nowrap">0</td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center">1 </td>
+                <td>0%</td>
+                <td class="text-center nowrap">— </td>
+                <td class="text-center" data-name-td="bdm">— </td>
+            </tr>
+            <tr class="tr__slave" data-tt-id="bdm-1-1967" data-tt-parent-id="distributor-1">
+                <td class="nowrap">Иванов Иван </td>
+                <td class="text-center"></td>
+                <td class="text-center">69</td>
+                <td class="text-center">45</td>
+                <td><span>27%</span></td>
+                <td class="text-center">5 </td>
+                <td><span>3%</span></td>
+                <td class="text-center">8 </td>
+                <td><span>5%</span></td>
+                <td class="text-center nowrap">1</td>
+                <td class="text-center">22</td>
+                <td>+14 </td>
+                <td class="text-center">24 </td>
+                <td>92%</td>
+                <td class="text-center nowrap">22 </td>
+                <td class="text-center" data-name-td="bdm">22 </td>
+            </tr>
+            <tr class="tr__subSlave leaf" data-tt-id="dealer-136" data-tt-parent-id="bdm-1-1967">
+                <td class="nowrap"><span>Дилер 136</span></td>
+                <td class="text-center"><span class="state state-success">&nbsp;</span></td>
+                <td class="text-center">3</td>
+                <td class="text-center">2</td>
+                <td><span>67%</span></td>
+                <td class="text-center">0</td>
+                <td><span>0%</span></td>
+                <td class="text-center">0</td>
+                <td><span>0%</span></td>
+                <td class="text-center nowrap">1</td>
+                <td class="text-center">1</td>
+                <td>+1 </td>
+                <td class="text-center">1 </td>
+                <td>100%</td>
+                <td class="text-center nowrap">1 </td>
+                <td class="text-center" data-name-td="bdm">1</td>
+            </tr>
+            <tr class="tr__subSlave leaf" data-tt-id="dealer-140" data-tt-parent-id="bdm-1-1967">
+                <td class="nowrap"><span>Дилер 140</span></td>
+                <td class="text-center">&nbsp;</td>
+                <td class="text-center">2</td>
+                <td class="text-center">1</td>
+                <td><span>50%</span></td>
+                <td class="text-center">0</td>
+                <td><span>0%</span></td>
+                <td class="text-center">0</td>
+                <td><span>0%</span></td>
+                <td class="text-center nowrap">0</td>
+                <td class="text-center">1</td>
+                <td>+1 </td>
+                <td class="text-center">1 </td>
+                <td>100%</td>
+                <td class="text-center nowrap">1 </td>
+                <td class="text-center" data-name-td="bdm">1</td>
+            </tr>
+            <tr class="tr__subSlave leaf" data-tt-id="dealer-152" data-tt-parent-id="bdm-1-1967">
+                <td class="nowrap"><span>Дилер 152</span></td>
+                <td class="text-center">&nbsp;</td>
+                <td class="text-center">0</td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center nowrap">0</td>
+                <td class="text-center">0</td>
+                <td></td>
+                <td class="text-center">0 </td>
+                <td>0%</td>
+                <td class="text-center nowrap">— </td>
+                <td class="text-center"><span class="label label-success">0</span></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Итого</th>
+                <th>&nbsp;</th>
+                <th class="text-center">
+                    <div class="pt-5 pb-5 nowrap">644
+                    </div>
+                    <div>-247 </div>
+                </th>
+                <th class="text-center">
+                    <div class="pt-5 pb-5 nowrap"><span>222</span>
+                    </div>
+                    <div class="fz11"><span class="text-danger">-123</span>
+                    </div>
+                </th>
+                <th>
+                    <div class="pt-5 pb-5 nowrap"><span>34%</span>
+                    </div>
+                    <div class="fz11"><span class="text-danger">-36%</span>
+                    </div>
+                </th>
+                <th class="text-center">
+                    <div class="pt-5 pb-5 nowrap">50 </div>
+                    <div class="fz11"><span class="text-danger">-3</span>
+                    </div>
+                </th>
+                <th>
+                    <div class="pt-5 pb-5 nowrap"><span>8%</span>
+                    </div>
+                    <div class="fz11"><span class="text-danger">-6%</span>
+                    </div>
+                </th>
+                <th class="text-center">
+                    <div class="pt-5 pb-5 nowrap">28 </div>
+                    <div class="fz11"><span class="text-success">+10</span>
+                    </div>
+                </th>
+                <th>
+                    <div class="pt-5 pb-5 nowrap"><span>4%</span>
+                    </div>
+                    <div class="fz11"><span class="dark-red">0%</span>
+                    </div>
+                </th>
+                <th class="text-center">
+                    <div class="pt-5 pb-5 nowrap">2
+                    </div>
+                    <div class="fz11"><span class="text-success">+1</span>
+                    </div>
+                </th>
+                <th class="text-center">
+                    <div class="pt-5 pb-5 nowrap">57
+                    </div>
+                </th>
+                <th>
+                    <div class="pt-5 pb-5 nowrap">+29 </div>
+                </th>
+                <th class="text-center">
+                    <div class="pt-5 pb-5 nowrap">58 </div>
+                    <div class="fz11"><span class="text-success">+10</span>
+                    </div>
+                </th>
+                <th>
+                    <div class="pt-5 pb-5 nowrap">48%
+                    </div>
+                </th>
+                <th class="text-center">
+                    <div class="pt-5 pb-5 nowrap">57 </div>
+                    <div class="fz11"><span class="text-success">+6</span>
+                    </div>
+                </th>
+                <th class="text-center">
+                    <div class="pt-5 pb-5 nowrap">54 </div>
+                    <div class="fz11"><span class="text-success">+3</span>
+                    </div>
+                </th>
+            </tr>
+        </tfoot>
+      </table>
     </div>
-</div>
-<div class="bs-docs-example">
-  <div class="wrapper__tableSticky" style="max-height: 40vh;">
-    <table class="table table__border js-tree-table treetable">
-      <thead>
-          <tr>
-              <th style="width:20%;" rowspan="2">table__border</th>
-              <th class="text-center" colspan="9">Заголовок02</th>
-              <th class="text-center" colspan="4">Заголовок03</th>
-              <th class="text-center" colspan="2">Заголовок04</th>
-          </tr>
-          <tr>
-              <th class="border-left__none">&nbsp;</th>
-              <th class="text-center">Подзаголовок01</th>
-              <th class="text-center">Подзаголовок02</th>
-              <th>%</th>
-              <th class="text-center">Подзаголовок03 </th>
-              <th>%</th>
-              <th class="text-center">Подзаголовок04</th>
-              <th>%</th>
-              <th class="text-center">Подзаголовок05</th>
-              <th class="text-center">Подзаголовок06</th>
-              <th>Подзаголовок07</th>
-              <th class="text-center">Подзаголовок08</th>
-              <th class="tableHelpIcon_td">%</th>
-              <th class="text-center">Подзаголовок09</th>
-              <th class="text-center">Подзаголовок10</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr class="tr__master" data-tt-id="distributor-1">
-              <td class="nowrap">ООО "Человек и Ко" </td>
-              <td class="text-center"></td>
-              <td class="text-center">639</td>
-              <td class="text-center">221</td>
-              <td><span>35%</span></td>
-              <td class="text-center">50</td>
-              <td><span>8%</span></td>
-              <td class="text-center">28</td>
-              <td><span>4%</span></td>
-              <td class="text-center nowrap">2</td>
-              <td class="text-center">57</td>
-              <td>+29</td>
-              <td class="text-center">58</td>
-              <td>98%</td>
-              <td class="text-center nowrap">57</td>
-              <td class="text-center">54</td>
-          </tr>
-          <tr class="tr__slave" data-tt-id="bdm-1-42" data-tt-parent-id="distributor-1">
-              <td class="nowrap">Иванова Мария</td>
-              <td class="text-center"></td>
-              <td class="text-center">125</td>
-              <td class="text-center">84</td>
-              <td><span>67%</span></td>
-              <td class="text-center">2 </td>
-              <td><span>2%</span></td>
-              <td class="text-center">4 </td>
-              <td><span>3%</span></td>
-              <td class="text-center nowrap"></td>
-              <td class="text-center">12</td>
-              <td>+8 </td>
-              <td class="text-center">12 </td>
-              <td>100%</td>
-              <td class="text-center nowrap">12 </td>
-              <td class="text-center" data-name-td="bdm">12 </td>
-          </tr>
-          <tr class="tr__subSlave leaf" data-tt-id="dealer-11" data-tt-parent-id="bdm-1-42">
-              <td class="nowrap"><span>Дилер 11</span></td>
-              <td class="text-center">&nbsp;</td>
-              <td class="text-center">0</td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center nowrap">0</td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center">0 </td>
-              <td>0%</td>
-              <td class="text-center nowrap">0 </td>
-              <td class="text-center" data-name-td="bdm">0</td>
-          </tr>
-          <tr class="tr__subSlave leaf" data-tt-id="dealer-143" data-tt-parent-id="bdm-1-42">
-              <td class="nowrap"><span>Дилер 143</span></td>
-              <td class="text-center">&nbsp;</td>
-              <td class="text-center">0</td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center nowrap">0</td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center">1 </td>
-              <td>0%</td>
-              <td class="text-center nowrap">— </td>
-              <td class="text-center" data-name-td="bdm">— </td>
-          </tr>
-          <tr class="tr__slave" data-tt-id="bdm-1-1967" data-tt-parent-id="distributor-1">
-              <td class="nowrap">Иванов Иван </td>
-              <td class="text-center"></td>
-              <td class="text-center">69</td>
-              <td class="text-center">45</td>
-              <td><span>27%</span></td>
-              <td class="text-center">5 </td>
-              <td><span>3%</span></td>
-              <td class="text-center">8 </td>
-              <td><span>5%</span></td>
-              <td class="text-center nowrap">1</td>
-              <td class="text-center">22</td>
-              <td>+14 </td>
-              <td class="text-center">24 </td>
-              <td>92%</td>
-              <td class="text-center nowrap">22 </td>
-              <td class="text-center" data-name-td="bdm">22 </td>
-          </tr>
-          <tr class="tr__subSlave leaf" data-tt-id="dealer-136" data-tt-parent-id="bdm-1-1967">
-              <td class="nowrap"><span>Дилер 136</span></td>
-              <td class="text-center"><span class="state state-success">&nbsp;</span></td>
-              <td class="text-center">3</td>
-              <td class="text-center">2</td>
-              <td><span>67%</span></td>
-              <td class="text-center">0</td>
-              <td><span>0%</span></td>
-              <td class="text-center">0</td>
-              <td><span>0%</span></td>
-              <td class="text-center nowrap">1</td>
-              <td class="text-center">1</td>
-              <td>+1 </td>
-              <td class="text-center">1 </td>
-              <td>100%</td>
-              <td class="text-center nowrap">1 </td>
-              <td class="text-center" data-name-td="bdm">1</td>
-          </tr>
-          <tr class="tr__subSlave leaf" data-tt-id="dealer-140" data-tt-parent-id="bdm-1-1967">
-              <td class="nowrap"><span>Дилер 140</span></td>
-              <td class="text-center">&nbsp;</td>
-              <td class="text-center">2</td>
-              <td class="text-center">1</td>
-              <td><span>50%</span></td>
-              <td class="text-center">0</td>
-              <td><span>0%</span></td>
-              <td class="text-center">0</td>
-              <td><span>0%</span></td>
-              <td class="text-center nowrap">0</td>
-              <td class="text-center">1</td>
-              <td>+1 </td>
-              <td class="text-center">1 </td>
-              <td>100%</td>
-              <td class="text-center nowrap">1 </td>
-              <td class="text-center" data-name-td="bdm">1</td>
-          </tr>
-          <tr class="tr__subSlave leaf" data-tt-id="dealer-152" data-tt-parent-id="bdm-1-1967">
-              <td class="nowrap"><span>Дилер 152</span></td>
-              <td class="text-center">&nbsp;</td>
-              <td class="text-center">0</td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center nowrap">0</td>
-              <td class="text-center">0</td>
-              <td></td>
-              <td class="text-center">0 </td>
-              <td>0%</td>
-              <td class="text-center nowrap">— </td>
-              <td class="text-center"><span class="label label-success">0</span></td>
-          </tr>
-      </tbody>
-      <tfoot>
-          <tr>
-              <th>Итого</th>
-              <th>&nbsp;</th>
-              <th class="text-center">
-                  <div class="pt-5 pb-5 nowrap">644
-                  </div>
-                  <div>-247 </div>
-              </th>
-              <th class="text-center">
-                  <div class="pt-5 pb-5 nowrap"><span>222</span>
-                  </div>
-                  <div class="fz11"><span class="text-danger">-123</span>
-                  </div>
-              </th>
-              <th>
-                  <div class="pt-5 pb-5 nowrap"><span>34%</span>
-                  </div>
-                  <div class="fz11"><span class="text-danger">-36%</span>
-                  </div>
-              </th>
-              <th class="text-center">
-                  <div class="pt-5 pb-5 nowrap">50 </div>
-                  <div class="fz11"><span class="text-danger">-3</span>
-                  </div>
-              </th>
-              <th>
-                  <div class="pt-5 pb-5 nowrap"><span>8%</span>
-                  </div>
-                  <div class="fz11"><span class="text-danger">-6%</span>
-                  </div>
-              </th>
-              <th class="text-center">
-                  <div class="pt-5 pb-5 nowrap">28 </div>
-                  <div class="fz11"><span class="text-success">+10</span>
-                  </div>
-              </th>
-              <th>
-                  <div class="pt-5 pb-5 nowrap"><span>4%</span>
-                  </div>
-                  <div class="fz11"><span class="dark-red">0%</span>
-                  </div>
-              </th>
-              <th class="text-center">
-                  <div class="pt-5 pb-5 nowrap">2
-                  </div>
-                  <div class="fz11"><span class="text-success">+1</span>
-                  </div>
-              </th>
-              <th class="text-center">
-                  <div class="pt-5 pb-5 nowrap">57
-                  </div>
-              </th>
-              <th>
-                  <div class="pt-5 pb-5 nowrap">+29 </div>
-              </th>
-              <th class="text-center">
-                  <div class="pt-5 pb-5 nowrap">58 </div>
-                  <div class="fz11"><span class="text-success">+10</span>
-                  </div>
-              </th>
-              <th>
-                  <div class="pt-5 pb-5 nowrap">48%
-                  </div>
-              </th>
-              <th class="text-center">
-                  <div class="pt-5 pb-5 nowrap">57 </div>
-                  <div class="fz11"><span class="text-success">+6</span>
-                  </div>
-              </th>
-              <th class="text-center">
-                  <div class="pt-5 pb-5 nowrap">54 </div>
-                  <div class="fz11"><span class="text-success">+3</span>
-                  </div>
-              </th>
-          </tr>
-      </tfoot>
-    </table>
   </div>
 </div>
