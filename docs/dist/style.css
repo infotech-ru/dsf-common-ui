@@ -13075,6 +13075,8 @@ select.selectpicker {
 }
 .form-control-container + .form-control-container .form-control {
   border-left-width: 1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .form-control-container + .form-control-container .bootstrap-select .btn {
   border-top-left-radius: 0;
@@ -13082,16 +13084,28 @@ select.selectpicker {
 }
 .form-control-container:first-child .form-control {
   border-left-width: 1px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 .form-control-container:first-child .bootstrap-select .btn {
   border-right: 0px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 .form-control-container:last-child .form-control {
   border-right-width: 1px;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.form-control-container:last-child .bootstrap-select .btn {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.form-control-container:not(:first-child):not(:last-child) .form-control {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .form-control-container:not(:first-child):not(:last-child) .bootstrap-select [class*=btn-] {
   border-right: 0px;
@@ -13176,6 +13190,10 @@ select.selectpicker {
 }
 .inputGroup_append [class*=btn-] + .inputGroup_outer {
   border-left: none;
+}
+.inputGroup_append .inputGroup_inner:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .inputGroup_text,

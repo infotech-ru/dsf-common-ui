@@ -524,6 +524,8 @@
   & + .form-control-container {
     .form-control {
       border-left-width: 1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
     .bootstrap-select .btn{
       border-top-left-radius: 0;
@@ -533,21 +535,33 @@
   &:first-child {
     .form-control {
       border-left-width: 1px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
     }
     .bootstrap-select .btn{
       border-right: 0px;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
+      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
     }
   }
   &:last-child {
     .form-control {
       border-right-width: 1px;
+      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+    }
+    .bootstrap-select .btn{
+      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
     }
   }
   &:not(:first-child):not(:last-child){
+    .form-control {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
     .bootstrap-select [class*="btn-"]{
       border-right: 0px;
       border-bottom-left-radius: 0;
@@ -628,6 +642,12 @@
   }
   [class*="btn-"] +  .inputGroup_outer {
     border-left: none;
+  }
+  .inputGroup_inner {
+    &:last-child{
+      border-bottom-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-top-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+    }
   }
 }
 

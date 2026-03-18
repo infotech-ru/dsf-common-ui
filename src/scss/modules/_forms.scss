@@ -10,12 +10,6 @@
 @use './../utilities/functions/func_svg-url' as svgurl;
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-
-// @use './../utilities/variables/var-lineHeights' as *;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-fonts' as *;
-// @use './../utilities/variables/var-sizes' as *;
-// @use './../utilities/variables/var-cursors' as *;
 @use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
 @use './../utilities/mixins/transition' as transition;
 @use './../utilities/mixins/placeholder' as placeholder;
