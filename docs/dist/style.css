@@ -13096,12 +13096,12 @@ select.selectpicker {
 }
 .form-control-container:last-child .form-control {
   border-right-width: 1px;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 .form-control-container:last-child .bootstrap-select .btn {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 .form-control-container:not(:first-child):not(:last-child) .form-control {
   border-bottom-left-radius: 0;
@@ -13176,6 +13176,11 @@ select.selectpicker {
 }
 .inputGroup_prepend .inputGroup_outer {
   border-right: 1px solid #BABABA;
+}
+.inputGroup_prepend .inputGroup_text:first-child,
+.inputGroup_prepend .inputGroup_inner:first-child {
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
 }
 
 .inputGroup_append {

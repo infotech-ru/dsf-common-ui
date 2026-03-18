@@ -549,12 +549,12 @@
   &:last-child {
     .form-control {
       border-right-width: 1px;
-      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-top-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-bottom-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
     }
     .bootstrap-select .btn{
-      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-top-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-bottom-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
     }
   }
   &:not(:first-child):not(:last-child){
@@ -627,6 +627,13 @@
   }
   .inputGroup_outer{
     border-right: 1px solid val.brandPalette(inputGroupEl-borderColor);  
+  }
+  .inputGroup_text,
+  .inputGroup_inner {
+    &:first-child{
+      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+    }
   }
 }
 
