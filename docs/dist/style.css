@@ -13171,6 +13171,10 @@ select.selectpicker {
 .inputGroup_prepend .inputGroup_inner {
   border-left: 1px solid #BABABA;
 }
+.inputGroup_prepend + .form-control-container .form-control {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
 .inputGroup_prepend + .form-control-container .bootstrap-select [class*=btn-] {
   border-left: 0px;
 }

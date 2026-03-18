@@ -621,6 +621,10 @@
     border-left: 1px solid val.brandPalette(inputGroupEl-borderColor);
   }
   & + .form-control-container {
+    .form-control{
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
     .bootstrap-select [class*="btn-"]{
       border-left: 0px;
     }
