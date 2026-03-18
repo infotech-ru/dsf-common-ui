@@ -400,13 +400,9 @@
 // -------------------------
 .input-group-btn {
   position: relative;
-  // Jankily prevent input button groups from wrapping with `white-space` and
-  // `font-size` in combination with `inline-block` on buttons.
   font-size: 0;
   white-space: nowrap;
 
-  // Negative margin for spacing, position for bringing hovered/focused/actived
-  // element above the siblings.
   > .btn {
     position: relative;
     + .btn {
@@ -518,8 +514,8 @@
     }
   }
   .form-control {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    // border-top-left-radius: 0;
+    // border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     border-left-width: 0;
@@ -529,13 +525,21 @@
     .form-control {
       border-left-width: 1px;
     }
+    .bootstrap-select .btn{
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   }
   &:first-child {
     .form-control {
       border-left-width: 1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
     .bootstrap-select .btn{
       border-right: 0px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
     }
   }
   &:last-child {
@@ -546,6 +550,10 @@
   &:not(:first-child):not(:last-child){
     .bootstrap-select [class*="btn-"]{
       border-right: 0px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
     }
   }
   &__border{ 
