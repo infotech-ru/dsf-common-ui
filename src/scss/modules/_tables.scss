@@ -40,6 +40,12 @@ td {
   height: fonts.rem(val.tableSizes(tableCell_height));
   padding: fonts.rem(val.tableSizes(table_paddingY)) fonts.rem(val.tableSizes(table_paddingX));
   vertical-align: middle;
+  text-align: left;
+  & + &{
+    .table__list &{
+      padding-left: fonts.rem(val.tableSizes(tableList_paddingY));
+    }
+  }
   &:first-child {
     padding-left: #{val.tableSizes(table_paddingXFirst)}px;
     text-align: left;
@@ -66,7 +72,6 @@ td {
   .empty {
     text-align: center;
   }
-  text-align: left;
   .table__border &{ 
     border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
     border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
@@ -78,6 +83,13 @@ td {
   .table__simple &{
     padding: #{math.div(val.brandSizes(base_paddingSize), 2)}px;
     height: auto;
+  }
+  .table__list &{
+    border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+    border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
+    border-bottom-color: var(--border_bottom_color, var(--border_color, val.brandTable(table_border)));
+    min-height: fonts.rem(val.lineHeight(input));
+    padding: fonts.rem(val.tableSizes(tableList_paddingY)) 0;
   }
   .tr__slave &{
     --tdnesting-bgc: 96%;
@@ -161,6 +173,11 @@ thead {
         border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
         border-bottom-color: var(--border_top_color, var(--border_color, val.brandTable(thead_border)));
         .table__simple &{
+          border-bottom: none;
+        }
+      }
+      td{
+        .table__list &{
           border-bottom: none;
         }
       }

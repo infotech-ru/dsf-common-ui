@@ -11477,10 +11477,10 @@ output {
 .css-formFree .control-label {
   font-size: 0.75rem;
   left: 0;
+  line-height: 1.75rem;
   padding-left: 0.4375rem;
   padding-right: calc(16px + 16px + 10px);
   position: absolute;
-  line-height: 1.75rem;
   margin-bottom: 0;
   overflow: hidden;
   pointer-events: none;
@@ -11525,8 +11525,8 @@ output {
   padding-right: 0;
 }
 .control-label-static {
-  font-size: 0.6875rem;
-  line-height: 0.6875rem;
+  font-size: 0.75rem;
+  line-height: 1.75rem;
   padding: 0;
   margin: 0;
 }
@@ -13701,6 +13701,12 @@ td {
   vertical-align: middle;
   text-align: left;
 }
+.table__list th + th,
+.table__list th + td,
+.table__list td + th,
+.table__list td + td {
+  padding-left: 0.25rem;
+}
 th:first-child,
 td:first-child {
   padding-left: 10px;
@@ -13747,6 +13753,14 @@ td .empty {
 .table__simple td {
   padding: 5px;
   height: auto;
+}
+.table__list th,
+.table__list td {
+  border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+  border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
+  border-bottom-color: var(--border_bottom_color, var(--border_color, #dddddd));
+  min-height: 1.625rem;
+  padding: 0.25rem 0;
 }
 .tr__slave th,
 .tr__slave td {
@@ -13813,6 +13827,9 @@ thead tr:last-child th {
   border-bottom-color: var(--border_top_color, var(--border_color, #dddddd));
 }
 .table__simple thead tr:last-child th {
+  border-bottom: none;
+}
+.table__list thead tr:last-child td {
   border-bottom: none;
 }
 

@@ -86,11 +86,11 @@ output {
       font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       left: 0;
       // left: fonts.rem($paddinFromLeft * -1);
+      line-height: fonts.rem(calc(val.lineHeight(input) + 2));
       padding-left: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
       // padding-right: fonts.rem(calc(val.formsSizes(formControl_paddingX) + 5));
       padding-right: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
       position: absolute;
-      line-height: fonts.rem(calc(val.lineHeight(input) + 2));
       margin-bottom: 0;
       // transition: color .2s ease-out;
       overflow: hidden;
@@ -159,8 +159,8 @@ output {
       }
     }
     &-static{
-      font-size: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-      line-height: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+      font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
+      line-height: fonts.rem(calc(val.lineHeight(input) + 2));
       padding: 0;
       margin: 0;
     }

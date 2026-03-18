@@ -18,7 +18,8 @@ $brand-sizes: (
   output_paddingY:                 7,
   square_height:                   64,
   unityBlock_bRadius:              0,
-  unityBlock_padding:              10,
+  unityBlock_padding:              baseValue.$base-padding,
+  unityBlockHeader_mb:             baseValue.$base-padding,
 )!default;
 
 $layout-sizes:(
@@ -42,6 +43,8 @@ $table-sizes:(
   table_paddingXFirst:             baseValue.$base-padding,
   table_paddingX:                  6,
   table_paddingY:                  5,
+  tableList_paddingX:              5,
+  tableList_paddingY:              4,
   table_lineHeigth:                14,
   tableCell_height:                40,
   tableCellMaster_height:          26,
