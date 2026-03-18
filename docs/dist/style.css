@@ -795,7 +795,7 @@ blockquote .small:before {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: Roboto, Arial, "Helvetica Neue", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   color: #333333;
 }
@@ -852,20 +852,26 @@ h6 .small, .h6 small,
 }
 
 h1, .h1 {
+  text-transform: none;
+}
+h1, .h1 {
   letter-spacing: 0px;
 }
 h1, .h1 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 h1, .h1 {
-  --fontSize_H1: 36;
+  --fontSize_H1: 24;
 }
 
 h2, .h2 {
+  text-transform: none;
+}
+h2, .h2 {
   letter-spacing: 0px;
 }
 h2, .h2 {
-  font-weight: 400;
+  font-weight: 700;
 }
 h2, .h2 {
   font-size: 1.125rem;
@@ -880,6 +886,9 @@ h2, .h2 {
   --lineHeight_H2: 21;
 }
 
+h3, .h3 {
+  text-transform: none;
+}
 h3, .h3 {
   letter-spacing: 0px;
 }
@@ -8942,7 +8951,7 @@ input[type=checkbox][disabled] {
   border-style: solid;
   border-color: transparent;
   border-width: 1px;
-  border-radius: 1px;
+  border-radius: 4px;
   cursor: pointer;
   display: inline-block;
   font-size: 0.75rem;
@@ -11408,7 +11417,7 @@ a.label:hover, a.label:focus {
 fieldset {
   padding: 0 12px 8px;
   border: 1px solid #C0C0C0;
-  border-radius: 3px;
+  border-radius: 0.25rem;
 }
 
 legend {
@@ -11515,11 +11524,17 @@ output {
   padding-left: 0;
   padding-right: 0;
 }
+.control-label-static {
+  font-size: 0.6875rem;
+  line-height: 0.6875rem;
+  padding: 0;
+  margin: 0;
+}
 
 .form-control {
   background-image: none;
   background-color: var(--bg_color, #ffffff);
-  border-radius: 1px;
+  border-radius: 0.25rem;
   border: 1px solid #BABABA;
   box-shadow: none;
   color: #333333;
@@ -11649,7 +11664,7 @@ output {
 }
 
 textarea.form-control {
-  border-radius: 0.0625rem;
+  border-radius: 0.25rem;
   height: auto;
   line-height: 0.875rem;
   min-height: 1.75rem;
@@ -11938,7 +11953,7 @@ fieldset[disabled] .checkbox-inline {
   width: 100%;
 }
 .redactorBlockContainer {
-  border-radius: 1px;
+  border-radius: 0.25rem;
   border: 1px solid #BABABA;
   display: flex;
   min-height: 36px;
@@ -14435,7 +14450,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   align-items: center;
   background-color: #ffffff;
   border: 1px solid #BABABA;
-  border-radius: 1px;
+  border-radius: 4px;
   display: flex;
   justify-content: space-between;
   position: relative;

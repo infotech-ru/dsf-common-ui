@@ -50,7 +50,7 @@ $table-sizes:(
 )!default;
 
 $forms-sizes:(
-  borderRadiusFormElem:            1,
+  borderRadiusFormElem:            4,
   controlLabel_mb:                 3,
   controlLabel_mr:                 5,
   formControl_borderSize:          1,
@@ -87,7 +87,7 @@ $radio-sizes:(
 $btn-sizes: (
   btn_paddingX:                    baseValue.$base-padding,
   btn_borderWidth:                 1,
-  btn_borderRadius:                1,
+  btn_borderRadius:                4,
   btnXs-paddingX:                  5,
   btnXs-paddingY:                  0,
   btnLg-paddingX:                  15,

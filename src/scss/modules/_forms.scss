@@ -25,7 +25,7 @@
 fieldset {
     padding: 0 12px 8px;
     border: 1px solid #C0C0C0;
-    border-radius: 3px;
+    border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
 }
 
 legend {
@@ -107,7 +107,7 @@ output {
       transform-origin: 0% 100%;
       top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
       // z-index: 0; // Если больше 0 - появляется некликабельный участок. Fix: pointer-events: none;
-      z-index: 1;
+      z-index: val.zIndex(controlLabel_active);
       white-space: nowrap;
       > span{
         pointer-events: all;
@@ -132,7 +132,7 @@ output {
         padding-right: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
         transform: translateX(fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
         top: 2px; // корректировка из-за line-height
-        z-index: 1;
+        z-index: val.zIndex(controlLabel_active);
         max-width: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
       }
       .inputGroup &{
@@ -164,13 +164,19 @@ output {
         }
       }
     }
+    &-static{
+      font-size: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+      line-height: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+      padding: 0;
+      margin: 0;
+    }
 }
 
 .form-control {
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   // background-color: val.brandPalette(formControl-bgc);
   background-color:var(--bg_color, val.brandPalette(formControl-bgc));
-  border-radius: #{val.formsSizes(borderRadiusFormElem)}px;
+  border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
   border: #{val.formsSizes(formControl_borderSize)}px solid val.brandPalette(formControl-borderColor);
   box-shadow: none;
   color: val.brandPalette(formControl-color);
@@ -635,7 +641,7 @@ textarea.form-control {
   flex-direction: column;
   width: 100%;
   &Container{
-    border-radius: #{val.formsSizes(borderRadiusFormElem)}px;
+    border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
     border: 1px solid val.brandPalette(formControl-borderColor);
     display: flex;
     min-height: 36px;

@@ -6,8 +6,6 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-zindex' as *;
 
 .pageHeader{
   align-items: center;
@@ -23,9 +21,9 @@
     color: val.brandPalette(pageHeader_color);
     display: flex;
     justify-content: space-between;
-    font-size: fonts.rem(18);
+    font-size: fonts.rem(val.fontSizes(pageHeaderTilte));
     flex-shrink: 0;
-    font-weight: 400;
+    font-weight: val.fontWeight(pageHeaderTilte);
     line-height: fonts.rem(21);
     margin: 0;
     .mobile-view &{
