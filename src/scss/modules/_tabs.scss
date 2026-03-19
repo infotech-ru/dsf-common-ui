@@ -172,6 +172,13 @@
   font-weight: val.fontWeight(navCards);
   gap: fonts.rem(8);
   padding: fonts.rem(val.tabsSizes(navCards_padding));
+  .svg--icon{ 
+    #{--svg-icon-fill}: val.brandPalette(navCards_svg);
+    #{--svg-icon-fill_blue}: val.brandPalette(navCards_svg);
+    #{--svg-icon-stroke_blue}: val.brandPalette(navCards_svg);
+    #{--svg-icon-stroke}: val.brandPalette(navCards_svg);
+    #{--limited-stroke-off}: val.brandColors(_transparent);
+  }
 }
 .nav-cards > li.active > a,
 .nav-cards > li > a.active,
@@ -181,6 +188,13 @@
   border-bottom-color: val.brandPalette(navCards-active_borderColor);
   border-bottom-width: 2px;
   color: val.brandPalette(navCards-active_color);
+  .svg--icon{ 
+    #{--svg-icon-fill}: val.brandPalette(navCards-active_svg);
+    #{--svg-icon-fill_blue}: val.brandPalette(navCards-active_svg);
+    #{--svg-icon-stroke_blue}: val.brandPalette(navCards-active_svg);
+    #{--svg-icon-stroke}: val.brandPalette(navCards-active_svg);
+    #{--limited-stroke-off}: val.brandColors(_transparent);
+  }
 }
 .nav-cards {
   .svg--icon{

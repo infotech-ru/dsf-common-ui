@@ -10218,8 +10218,6 @@ input[type=button].btn-block {
   line-height: 0.75rem;
 }
 .btn-download .svg--icon {
-  height: var(--svgIcon_height, 0.75rem);
-  width: var(--svgIcon_height, 0.75rem);
   vertical-align: middle;
   --svg-icon-fill: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
@@ -10227,7 +10225,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #4A8DC6;
   --limited-stroke-off: #00000000;
 }
-.btn-download .svg--icon svg {
+.btn-download .svg--icon, .btn-download .svg--icon svg {
   height: var(--svgIcon_height, 0.75rem);
   width: var(--svgIcon_height, 0.75rem);
 }
@@ -15152,6 +15150,14 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   gap: 0.5rem;
   padding: 0.625rem;
 }
+.nav-cards > li > a .svg--icon,
+.nav-cards .nav-link .svg--icon {
+  --svg-icon-fill: #333333;
+  --svg-icon-fill_blue: #333333;
+  --svg-icon-stroke_blue: #333333;
+  --svg-icon-stroke: #333333;
+  --limited-stroke-off: #00000000;
+}
 
 .nav-cards > li.active > a,
 .nav-cards > li > a.active,
@@ -15161,6 +15167,16 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-bottom-color: #4A8DC6;
   border-bottom-width: 2px;
   color: #4A8DC6;
+}
+.nav-cards > li.active > a .svg--icon,
+.nav-cards > li > a.active .svg--icon,
+.nav-cards .nav-link.active .svg--icon,
+.nav-cards .active .nav-link .svg--icon {
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --limited-stroke-off: #00000000;
 }
 
 .nav-cards .svg--icon svg {

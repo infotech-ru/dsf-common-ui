@@ -688,15 +688,13 @@ input[type="button"] {
     line-height: fonts.rem(12);
   }
   .svg--icon {
-    height: var(--svgIcon_height, fonts.rem(12));
-    width: var(--svgIcon_height, fonts.rem(12));
     vertical-align: middle;
     #{--svg-icon-fill}: val.brandPalette(btnIconSvg_color);
     #{--svg-icon-fill_blue}: val.brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke_blue}: val.brandPalette(btnIconSvg_color);
     #{--svg-icon-stroke}: val.brandPalette(btnIconSvg_color);
     #{--limited-stroke-off}: val.brandColors(_transparent);
-    svg{
+    &, svg{
       height: var(--svgIcon_height, fonts.rem(12));
       width: var(--svgIcon_height, fonts.rem(12));
     }
