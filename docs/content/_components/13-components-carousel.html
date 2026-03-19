@@ -6,43 +6,125 @@ category: components
 anchor: components-carousel
 order: 13
 ---
+<div class="unityBlock">
+    <p>Используется скрипт bootstrap v4 <a href="https://getbootstrap.com/docs/4.6/components/carousel/">carousel.js</a></p>
+    <p>Для vue есть компонент Carousel.vue</p>
+    <p>- Классы для изменения пропорции картинок с 4/3 на 16/9 и 16/10<code class="language-plaintext highlighter-rouge">carousel__aspectRatio16-9</code> <code class="language-plaintext highlighter-rouge">carousel__aspectRatio16-10</code></p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-indicators__line</code> - изменяет превью из картинок в чёрточки</p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-indicators__bigPreview</code> - изменяет размер превью картинок в больший размер</p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-action carousel-action_visible</code> - вывод кнопок действия без эффекта наведения</p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-action__bottom</code> - объединение вывода кнопок действия внизу</p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-action__top</code> - объединение вывода кнопок действия сверху</p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-action__bottomRight</code> - вывод кнопок действия внизу справа</p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-action__bottomLeft</code> - вывод кнопок действия внизу слева</p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-action__topRight</code> - вывод кнопок действия вверху справа</p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-action__topLeft</code> - вывод кнопок действия вверху слева</p>
+    <p>- Класс <code class="language-plaintext highlighter-rouge">carousel-action__center</code> - вывод кнопок посередине</p>
 
-<p>Используется скрипт bootstrap v4 <a href="https://getbootstrap.com/docs/4.6/components/carousel/">carousel.js</a></p>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-carousel" role="button" aria-expanded="false" aria-controls="collpase-carousel">
+        <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
+            <svg width="24" height="24">
+                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
+            </svg>
+        </span>
+        <span class="btn-text">
+            <span class="block__show">Показать код</span>
+            <span class="block__hide">Скрыть код</span>
+        </span>
+    </a>
 
-<p>Для vue есть компонент Carousel.vue</p>
-
-<p>Классы для изменения пропорции картинок с 4/3 на 16/9 и 16/10<code class="language-plaintext highlighter-rouge">carousel__aspectRatio16-9</code> <code class="language-plaintext highlighter-rouge">carousel__aspectRatio16-10</code></p>
-
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-indicators__line</code> - изменяет превью из картинок в чёрточки</p>
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-indicators__bigPreview</code> - изменяет размер превью картинок в больший размер</p>
-
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-action carousel-action_visible</code> - вывод кнопок действия без эффекта наведения</p>
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-action__bottom</code> - объединение вывода кнопок действия внизу</p>
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-action__top</code> - объединение вывода кнопок действия сверху</p>
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-action__bottomRight</code> - вывод кнопок действия внизу справа</p>
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-action__bottomLeft</code> - вывод кнопок действия внизу слева</p>
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-action__topRight</code> - вывод кнопок действия вверху справа</p>
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-action__topLeft</code> - вывод кнопок действия вверху слева</p>
-<p>Класс <code class="language-plaintext highlighter-rouge">carousel-action__center</code> - вывод кнопок посередине</p>
-
-{% highlight html %}
-<div id="carouselExampleIndicators" class="carousel slide carousel__aspectRatio16-9" data-ride="carousel">
-    <div class="p-relative mb-10">
-      <div class="carousel-inner">
-        <div class="carousel-item h-100p overflow-hidden p-relative background-container active" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
-          <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
-          <div class="carousel-action">
-              <div class="carousel-action__topRight">
-                  <a class="btn-danger__outline js-delete-photo" href="">
-                    <span class="svg--icon svg-danger">
-                      <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
+    <div class="collapse" id="collpase-carousel">
+        {% highlight html %}
+        <div id="carouselExampleIndicators" class="carousel slide carousel__aspectRatio16-9" data-ride="carousel">
+            <div class="p-relative mb-10">
+            <div class="carousel-inner">
+                <div class="carousel-item h-100p overflow-hidden p-relative background-container active" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
+                <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+                <div class="carousel-action">
+                    <div class="carousel-action__topRight">
+                        <a class="btn-danger__outline js-delete-photo" href="">
+                            <span class="svg--icon svg-danger">
+                            <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
+                            </span>
+                            <span class="btn-text"><?= Yii::t('app', 'Удалить') ?></span>
+                        </a>
+                    </div>
+                    <div class="carousel-action__center">
+                        <div class="radioCheck">
+                            <input type="radio" id="id-1" class="" name="nameGroup" value="1">
+                            <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-1">
+                                <span class="svg--icon">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_check"></use>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
+                <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+                </div>
+                <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
+                <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <?= Icons::wrapper('bicolors-arrow_left__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
+                <span class="sr-only"><?= Yii::t('app', 'Предыдущее') ?></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <?= Icons::wrapper('bicolors-arrow_right__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
+                <span class="sr-only"><?= Yii::t('app', 'Следующее') ?></span>
+            </a>
+            </div>
+            <div class="carousel-indicators_outer">
+                <div class="carousel-indicators__abs">
+                    <button class="btn-download btn-download__square">
+                        <span class="btn-download_inner">
+                            <?= Icons::withText('bicolors-photo__24vb', Yii::t('app', 'Добавить фото'), ['class' => 'svg--icon svg--icon__24vb']) ?>
+                        </span>
+                    </button>
+                </div>
+                <div class="carousel-indicators">
+                    <div class="carousel-indicators_item thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0">
+                        <div class="thumbnailInner">
+                            <div class="thumbnailActions">
+                                <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
+                                    <?= Icons::wrapper('bicolors-photo__24vb', ['class' => 'svg--icon svg--icon__20 svg--icon__24vb svg-primary']) ?>
+                                </a>
+                                <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
+                                    <?= Icons::wrapper('bicolors-delete__24vb', ['class' => 'svg--icon svg--icon__20 svg--icon__24vb']) ?>
+                                </a>
+                            </div>
+                            <div class="thumbnailCaption">Имя картинки</div>
+                            <div class="thumbnailImgWrapper" style="--background_container:<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>"><img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endhighlight %}
+    </div>
+    <div class="bs-docs-example">
+    <div id="carouselExampleIndicators" class="carousel carousel__aspectRatio16-9 slide" data-ride="carousel">
+        <div class="p-relative mb-10">
+        <div class="carousel-inner">
+            <div class="carousel-item h-100p overflow-hidden p-relative background-container active" style="--background_container: url('/dsf-common-ui/dist/images/placeholderCarouselBig1.jpg')">
+            <img src="/dsf-common-ui/dist/images/placeholderCarouselBig1.jpg" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+            <div class="carousel-action">
+                <div class="carousel-action__topRight">
+                    <a class="btn-danger__outline js-delete-photo" href="">
+                    <span class="svg--icon">
+                        <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
                     </span>
-                    <span class="btn-text"><?= Yii::t('app', 'Удалить') ?></span>
-                  </a>
-              </div>
-              <div class="carousel-action__center">
+                    <span class="btn-text">Удалить</span>
+                    </a>
+                </div>
+                <div class="carousel-action__center">
                 <div class="radioCheck">
-                    <input type="radio" id="id-1" class="" name="nameGroup" value="1">
+                    <input type="radio" id="id-1" class="" name="nameGroup" value="1">  
                     <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-1">
                         <span class="svg--icon">
                             <svg width="24" height="24">
@@ -51,266 +133,195 @@ order: 13
                         </span>
                     </label>
                 </div>
-              </div>
-          </div>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url('/dsf-common-ui/dist/images/placeholderCarouselBig2.jpg')">
+            <img src="/dsf-common-ui/dist/images/placeholderCarouselBig2.jpg" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+            <div class="carousel-action">
+                <div class="carousel-action__topRight">
+                    <a class="btn-danger__outline js-delete-photo" href="">
+                    <span class="svg--icon">
+                        <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
+                    </span>
+                    <span class="btn-text">Удалить</span>
+                    </a>
+                </div>
+                <div class="carousel-action__center">
+                <div class="radioCheck">
+                    <input type="radio" id="id-2" class="" name="nameGroup" value="2">  
+                    <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-2">
+                        <span class="svg--icon">
+                            <svg width="24" height="24">
+                                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_check"></use>
+                            </svg>
+                        </span>
+                    </label>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url('/dsf-common-ui/dist/images/placeholderCarouselBig3.jpg')">
+            <img src="/dsf-common-ui/dist/images/placeholderCarouselBig3.jpg" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+            <div class="carousel-action">
+                <div class="carousel-action__topRight">
+                    <a class="btn-danger__outline js-delete-photo" href="">
+                    <span class="svg--icon">
+                        <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
+                    </span>
+                    <span class="btn-text">Удалить</span>
+                    </a>
+                </div>
+                <div class="carousel-action__center">
+                <div class="radioCheck">
+                    <input type="radio" id="id-1" class="" name="nameGroup" value="3">  
+                    <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-3">
+                        <span class="svg--icon">
+                            <svg width="24" height="24">
+                                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_check"></use>
+                            </svg>
+                        </span>
+                    </label>
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
-        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
-          <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="svg--icon" aria-hidden="true"> 
+                <svg class="bicolors-arrow_left__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_left__24vb"></use></svg>
+            </span>
+            <span class="sr-only">Предыдущее</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="svg--icon" aria-hidden="true"> 
+                <svg class="bicolors-arrow_right__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_right__24vb"></use></svg>
+            </span>
+            <span class="sr-only">Следующее</span>
+        </a>
         </div>
-        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
-          <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <?= Icons::wrapper('bicolors-arrow_left__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
-          <span class="sr-only"><?= Yii::t('app', 'Предыдущее') ?></span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <?= Icons::wrapper('bicolors-arrow_right__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
-          <span class="sr-only"><?= Yii::t('app', 'Следующее') ?></span>
-      </a>
-    </div>
-    <div class="carousel-indicators_outer">
-        <div class="carousel-indicators__abs">
-            <button class="btn-download btn-download__square">
-                <span class="btn-download_inner">
-                    <?= Icons::withText('bicolors-photo__24vb', Yii::t('app', 'Добавить фото'), ['class' => 'svg--icon svg--icon__24vb']) ?>
-                </span>
-            </button>
-        </div>
-        <div class="carousel-indicators">
-            <div class="carousel-indicators_item thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0">
-                <div class="thumbnailInner">
-                    <div class="thumbnailActions">
-                        <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
-                            <?= Icons::wrapper('bicolors-photo__24vb', ['class' => 'svg--icon svg--icon__20 svg--icon__24vb svg-primary']) ?>
-                        </a>
-                        <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
-                            <?= Icons::wrapper('bicolors-delete__24vb', ['class' => 'svg--icon svg--icon__20 svg--icon__24vb']) ?>
-                        </a>
+        <div class="carousel-indicators_outer mb-10">
+            <div class="carousel-indicators">
+                <div class="carousel-indicators_item thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0" >
+                    <div class="thumbnailInner">
+                        <div class="thumbnailActions">
+                            <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
+                                <span class="svg--icon svg--icon__24vb">
+                                    <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
+                                </span>
+                            </a>
+                            <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
+                                <span class="svg--icon svg--icon__24vb">
+                                    <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="thumbnailCaption">Имя картинки</div>
+                        <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarouselBig1.jpg')">
+                            <img src="/dsf-common-ui/dist/images/placeholderCarouselBig1.jpg">
+                        </div>
                     </div>
-                    <div class="thumbnailCaption">Имя картинки</div>
-                    <div class="thumbnailImgWrapper" style="--background_container:<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>"><img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>" alt=""></div>
+                </div>
+                <div class="carousel-indicators_item thumbnail thumbnail__bigSize" data-target="#carouselExampleIndicators" data-slide-to="1" >
+                    <div class="thumbnailInner">
+                        <div class="thumbnailActions">
+                            <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
+                                <span class="svg--icon svg--icon__24vb">
+                                    <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
+                                </span>
+                            </a>
+                            <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
+                                <span class="svg--icon svg--icon__24vb">
+                                    <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="thumbnailCaption">Имя картинки 2</div>
+                        <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarouselBig2.jpg')">
+                            <img src="/dsf-common-ui/dist/images/placeholderCarouselBig2.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators_item thumbnail thumbnail__bigSize" data-target="#carouselExampleIndicators" data-slide-to="2">
+                    <div class="thumbnailInner">
+                        <div class="thumbnailActions">
+                            <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
+                                <span class="svg--icon svg--icon__24vb">
+                                    <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
+                                </span>
+                            </a>
+                            <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
+                                <span class="svg--icon svg--icon__24vb">
+                                    <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="thumbnailCaption">Имя картинки 3</div>
+                        <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarouselBig3.jpg')">
+                            <img src="/dsf-common-ui/dist/images/placeholderCarouselBig3.jpg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-  </div>
-{% endhighlight %}
-<div class="bs-docs-example">
-  <div id="carouselExampleIndicators" class="carousel carousel__aspectRatio16-9 slide" data-ride="carousel">
-    <div class="p-relative mb-10">
-      <div class="carousel-inner">
-        <div class="carousel-item h-100p overflow-hidden p-relative background-container active" style="--background_container: url('/dsf-common-ui/dist/images/placeholderCarouselBig1.jpg')">
-          <img src="/dsf-common-ui/dist/images/placeholderCarouselBig1.jpg" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
-          <div class="carousel-action">
-            <div class="carousel-action__topRight">
-                <a class="btn-danger__outline js-delete-photo" href="">
-                  <span class="svg--icon">
-                    <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
-                  </span>
-                  <span class="btn-text">Удалить</span>
-                </a>
-            </div>
-            <div class="carousel-action__center">
-              <div class="radioCheck">
-                  <input type="radio" id="id-1" class="" name="nameGroup" value="1">  
-                  <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-1">
-                      <span class="svg--icon">
-                          <svg width="24" height="24">
-                              <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_check"></use>
-                          </svg>
-                      </span>
-                  </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url('/dsf-common-ui/dist/images/placeholderCarouselBig2.jpg')">
-          <img src="/dsf-common-ui/dist/images/placeholderCarouselBig2.jpg" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
-          <div class="carousel-action">
-            <div class="carousel-action__topRight">
-                <a class="btn-danger__outline js-delete-photo" href="">
-                  <span class="svg--icon">
-                    <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
-                  </span>
-                  <span class="btn-text">Удалить</span>
-                </a>
-            </div>
-            <div class="carousel-action__center">
-              <div class="radioCheck">
-                  <input type="radio" id="id-2" class="" name="nameGroup" value="2">  
-                  <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-2">
-                      <span class="svg--icon">
-                          <svg width="24" height="24">
-                              <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_check"></use>
-                          </svg>
-                      </span>
-                  </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url('/dsf-common-ui/dist/images/placeholderCarouselBig3.jpg')">
-          <img src="/dsf-common-ui/dist/images/placeholderCarouselBig3.jpg" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
-          <div class="carousel-action">
-            <div class="carousel-action__topRight">
-                <a class="btn-danger__outline js-delete-photo" href="">
-                  <span class="svg--icon">
-                    <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
-                  </span>
-                  <span class="btn-text">Удалить</span>
-                </a>
-            </div>
-            <div class="carousel-action__center">
-              <div class="radioCheck">
-                  <input type="radio" id="id-1" class="" name="nameGroup" value="3">  
-                  <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-3">
-                      <span class="svg--icon">
-                          <svg width="24" height="24">
-                              <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_check"></use>
-                          </svg>
-                      </span>
-                  </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="svg--icon" aria-hidden="true"> 
-              <svg class="bicolors-arrow_left__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_left__24vb"></use></svg>
-          </span>
-          <span class="sr-only">Предыдущее</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="svg--icon" aria-hidden="true"> 
-              <svg class="bicolors-arrow_right__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_right__24vb"></use></svg>
-          </span>
-          <span class="sr-only">Следующее</span>
-      </a>
-    </div>
-    <div class="carousel-indicators_outer mb-10">
-        <div class="carousel-indicators">
-            <div class="carousel-indicators_item thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0" >
-                <div class="thumbnailInner">
-                    <div class="thumbnailActions">
-                        <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
-                            <span class="svg--icon svg--icon__24vb">
-                                <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
-                            </span>
-                        </a>
-                        <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
-                            <span class="svg--icon svg--icon__24vb">
-                                <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
-                            </span>
-                        </a>
+        <div class="carousel-indicators_outer mb-10">
+            <div class="carousel-indicators">
+                <div class="carousel-indicators_item thumbnail active" data-target="#carouselExampleIndicators" data-slide-to="0">
+                    <div class="thumbnailInner">
+                        <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel1.jpg')">
+                            <img src="/dsf-common-ui/dist/images/placeholderCarousel1.jpg">
+                        </div>
                     </div>
-                    <div class="thumbnailCaption">Имя картинки</div>
-                    <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarouselBig1.jpg')">
-                        <img src="/dsf-common-ui/dist/images/placeholderCarouselBig1.jpg">
+                </div>
+                <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="1">
+                    <div class="thumbnailInner">
+                        <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel2.jpg')">
+                            <img src="/dsf-common-ui/dist/images/placeholderCarousel2.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="2">
+                    <div class="thumbnailInner">
+                        <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel3.jpg')">
+                            <img src="/dsf-common-ui/dist/images/placeholderCarousel3.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-indicators_item thumbnail thumbnail__bigSize" data-target="#carouselExampleIndicators" data-slide-to="1" >
-                <div class="thumbnailInner">
-                    <div class="thumbnailActions">
-                        <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
-                            <span class="svg--icon svg--icon__24vb">
-                                <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
-                            </span>
-                        </a>
-                        <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
-                            <span class="svg--icon svg--icon__24vb">
-                                <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="thumbnailCaption">Имя картинки 2</div>
-                    <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarouselBig2.jpg')">
-                        <img src="/dsf-common-ui/dist/images/placeholderCarouselBig2.jpg">
+        </div>
+        <div class="carousel-indicators_outer">
+            <div class="carousel-indicators__abs">
+                <button class="btn-download btn-download__square">
+                    <span class="btn-download_inner">
+                        <span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
+                        <span class="btn-text">Добавить фото</span>
+                    </span>
+                </button>
+            </div>
+            <div class="carousel-indicators">
+                <div class="carousel-indicators_item thumbnail active" data-target="#carouselExampleIndicators" data-slide-to="0">
+                    <div class="thumbnailInner">
+                        <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel1.jpg')">
+                            <img src="/dsf-common-ui/dist/images/placeholderCarousel1.jpg">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="carousel-indicators_item thumbnail thumbnail__bigSize" data-target="#carouselExampleIndicators" data-slide-to="2">
-                <div class="thumbnailInner">
-                    <div class="thumbnailActions">
-                        <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
-                            <span class="svg--icon svg--icon__24vb">
-                                <svg class="bicolors-photo__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg>
-                            </span>
-                        </a>
-                        <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
-                            <span class="svg--icon svg--icon__24vb">
-                                <svg class="bicolors-delete__24vb" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb"></use></svg>
-                            </span>
-                        </a>
+                <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="1">
+                    <div class="thumbnailInner">
+                        <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel2.jpg')">
+                            <img src="/dsf-common-ui/dist/images/placeholderCarousel2.jpg">
+                        </div>
                     </div>
-                    <div class="thumbnailCaption">Имя картинки 3</div>
-                    <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarouselBig3.jpg')">
-                        <img src="/dsf-common-ui/dist/images/placeholderCarouselBig3.jpg">
+                </div>
+                <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="2">
+                    <div class="thumbnailInner">
+                        <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel3.jpg')">
+                            <img src="/dsf-common-ui/dist/images/placeholderCarousel3.jpg">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="carousel-indicators_outer mb-10">
-        <div class="carousel-indicators">
-            <div class="carousel-indicators_item thumbnail active" data-target="#carouselExampleIndicators" data-slide-to="0">
-                <div class="thumbnailInner">
-                    <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel1.jpg')">
-                        <img src="/dsf-common-ui/dist/images/placeholderCarousel1.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="1">
-                <div class="thumbnailInner">
-                    <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel2.jpg')">
-                        <img src="/dsf-common-ui/dist/images/placeholderCarousel2.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="2">
-                <div class="thumbnailInner">
-                    <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel3.jpg')">
-                        <img src="/dsf-common-ui/dist/images/placeholderCarousel3.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <div class="carousel-indicators_outer">
-        <div class="carousel-indicators__abs">
-            <button class="btn-download btn-download__square">
-                <span class="btn-download_inner">
-                    <span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-photo__24vb"></use></svg></span>
-                    <span class="btn-text">Добавить фото</span>
-                </span>
-            </button>
-        </div>
-        <div class="carousel-indicators">
-            <div class="carousel-indicators_item thumbnail active" data-target="#carouselExampleIndicators" data-slide-to="0">
-                <div class="thumbnailInner">
-                    <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel1.jpg')">
-                        <img src="/dsf-common-ui/dist/images/placeholderCarousel1.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="1">
-                <div class="thumbnailInner">
-                    <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel2.jpg')">
-                        <img src="/dsf-common-ui/dist/images/placeholderCarousel2.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-indicators_item thumbnail" data-target="#carouselExampleIndicators" data-slide-to="2">
-                <div class="thumbnailInner">
-                    <div class="thumbnailImgWrapper" style="--background_container:url('/dsf-common-ui/dist/images/placeholderCarousel3.jpg')">
-                        <img src="/dsf-common-ui/dist/images/placeholderCarousel3.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
 </div>

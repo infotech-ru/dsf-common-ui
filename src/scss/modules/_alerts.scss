@@ -5,10 +5,9 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_svg-url' as svgurl;
-// @use './../utilities/functions/func_fonts' as fonts;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
-// @use './../utilities/variables/var-colors' as *;
 
 .error-summary { 
   color: val.brandAlert(danger_bg);
@@ -16,20 +15,30 @@
 
 .alert {
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: fonts.rem(val.alertsSizes(alert_radius));
   box-shadow: none;
-  margin-bottom: 10px;
-  padding: 10px 20px 10px 10px;
+  margin-bottom: fonts.rem(val.alertsSizes(alert_margin));
+  padding: fonts.rem(val.alertsSizes(alert_padding));
+  padding-right: fonts.rem(val.alertsSizes(alert_padding) + val.alertsSizes(alertClose_size));
   position: relative;
   text-shadow: none;
   h4 {
     margin-top: 0;
     color: inherit; // Specified for the h4 to prevent conflicts of changing $headings-color
   }
+  h4, .h4{
+    .svg--icon__24vb{
+      margin-right: fonts.rem(5);
+      &, svg{
+        height: fonts.rem(24);
+        width: fonts.rem(24);
+      }
+    }
+  }
 
   // Provide class for links that match alerts
   .alert-link {
-    font-weight: varbootstrapv3.$alert-link-font-weight;
+    font-weight: 700;
   }
 
   // Improve alignment and spacing of inner content
@@ -55,6 +64,16 @@
       h4, .h4{
         color: val.brandAlert(#{$alert}_title);
       }
+      .svg--icon{
+         svg{
+          fill: val.brandAlert(#{$alert}_svg);
+          #{--svg-icon-fill}: val.brandAlert(#{$alert}_svg);
+          #{--svg-icon-stroke}: val.brandAlert(#{$alert}_svg);
+          #{--svg-icon-fill_blue}: val.brandAlert(#{$alert}_svg_blue);
+          #{--svg-icon-stroke_blue}: val.brandAlert(#{$alert}_svg_blue);
+          #{--limited-stroke-off}: val.brandColors(_transparent);
+        }
+      }
     }
   }
   .close{
@@ -63,16 +82,15 @@
     background-image: none;
     cursor: pointer;
     float: none;
+    padding: 0;
     opacity: 1;
-    height: 14px;
-    width: 14px;
     position: absolute;
-    right: 10px;
+    right: fonts.rem(val.alertsSizes(alert_padding));
     text-shadow: none;
-    top: 10px;
-    svg{
-      height: 14px;
-      width: 14px;
+    top: fonts.rem(val.alertsSizes(alert_padding));
+    &, svg{
+      height: fonts.rem(val.alertsSizes(alertClose_size));
+      width: fonts.rem(val.alertsSizes(alertClose_size));
     }
   }
   &__attention,

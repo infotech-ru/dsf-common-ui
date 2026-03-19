@@ -8,46 +8,55 @@ order: 4
 ---
 <div class="unityBlock">
     <p>В раскрывающемся контейнере используется <a href="https://getbootstrap.com/docs/4.6/components/collapse/">collapse.js</a></p>
-
     <p>- Для визуального оформления используется класс <code class="language-plaintext highlighter-rouge">limited</code>
         и иконка <code class="language-plaintext highlighter-rouge">bicolors-arrow_up</code></p>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collapse-collapse" role="button" aria-expanded="false" aria-controls="collapse-collapse">
+        <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
+            <svg width="24" height="24">
+                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
+            </svg>
+        </span>
+        <span class="btn-text">
+            <span class="block__show">Показать код</span>
+            <span class="block__hide">Скрыть код</span>
+        </span>
+    </a>
 
-
-    {% highlight html %}
-        <a class="btn-primary__outline" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
-            aria-controls="collapseExample">
-            Link with href
-        </a>
-        <button class="btn-primary__outline" type="button" data-toggle="collapse" data-target="#collapseExample"
-            aria-expanded="false" aria-controls="collapseExample">
-            Button with data-target
-        </button>
-        <div class="collapse" id="collapseExample">
-            <div class="">
-                ...
+    <div class="collapse" id="collapse-collapse">
+        {% highlight html %}
+            <a class="btn-primary__outline" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+                aria-controls="collapseExample">
+                Link with href
+            </a>
+            <button class="btn-primary__outline" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Button with data-target
+            </button>
+            <div class="collapse" id="collapseExample">
+                <div class="">
+                    ...
+                </div>
             </div>
-        </div>
 
-        <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse"
-            href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
-            <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
-                <svg width="24" height="24">
-                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
-                </svg>
-            </span>
-            <span class="btn-text">
-                <span class="block__show">Показать</span>
-                <span class="block__hide">Скрыть</span>
-            </span>
-        </a>
-        <div class="collapse" id="collapseExample2">
-            Some placeholder content for the collapse component.
-        </div>
-    {% endhighlight %}
-
+            <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse"
+                href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
+                    <svg width="24" height="24">
+                        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
+                    </svg>
+                </span>
+                <span class="btn-text">
+                    <span class="block__show">Показать</span>
+                    <span class="block__hide">Скрыть</span>
+                </span>
+            </a>
+            <div class="collapse" id="collapseExample2">
+                Some placeholder content for the collapse component.
+            </div>
+        {% endhighlight %}
+    </div>
     <div class="bs-docs-example">
-        <a class="btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
-            aria-controls="collapseExample">
+        <a class="btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             Link with href
         </a>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"

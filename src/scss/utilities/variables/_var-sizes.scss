@@ -164,6 +164,13 @@ $tooltip-sizes: (
   tooltipWide_maxWidth:            400,
 )!default;
 
+$alert-sizes: (
+  alert_radius:                    0,
+  alert_padding:                   baseValue.$base-padding,
+  alert_margin:                    baseValue.$base-gutter,
+  alertClose_size:                 14,
+)!default;
+
 $marginSizes: 0, 5, 6, 7, 8, 10, 15, 20, 25, 30, 40, 50;
 $paddingSizes: 0, 5, 6, 7, 8, 10, 12, 15, 16, 20, 25, 30, 40, 50;
 $gapSizes: 0, 5, 10, 15, 20, 30, 40, 50;

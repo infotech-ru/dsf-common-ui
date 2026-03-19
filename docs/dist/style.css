@@ -14675,16 +14675,24 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 
 .alert {
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 0rem;
   box-shadow: none;
-  margin-bottom: 10px;
-  padding: 10px 20px 10px 10px;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
+  padding-right: 1.5rem;
   position: relative;
   text-shadow: none;
 }
 .alert h4 {
   margin-top: 0;
   color: inherit;
+}
+.alert h4 .svg--icon__24vb, .alert .h4 .svg--icon__24vb {
+  margin-right: 0.3125rem;
+}
+.alert h4 .svg--icon__24vb, .alert h4 .svg--icon__24vb svg, .alert .h4 .svg--icon__24vb, .alert .h4 .svg--icon__24vb svg {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 .alert .alert-link {
   font-weight: bold;
@@ -14710,6 +14718,14 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-default h4, .alert-default .h4 {
   color: #333333;
 }
+.alert-default .svg--icon svg {
+  fill: #333333;
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
+  --svg-icon-fill_blue: #333333;
+  --svg-icon-stroke_blue: #333333;
+  --limited-stroke-off: #00000000;
+}
 .alert-primary {
   background-color: #4A8DC6;
   border-color: #4A8DC6;
@@ -14723,6 +14739,14 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .alert-primary h4, .alert-primary .h4 {
   color: #ffffff;
+}
+.alert-primary .svg--icon svg {
+  fill: #ffffff;
+  --svg-icon-fill: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
+  --limited-stroke-off: #00000000;
 }
 .alert-success {
   background-color: #DAF0DA;
@@ -14738,6 +14762,14 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-success h4, .alert-success .h4 {
   color: #467B46;
 }
+.alert-success .svg--icon svg {
+  fill: #467B46;
+  --svg-icon-fill: #467B46;
+  --svg-icon-stroke: #467B46;
+  --svg-icon-fill_blue: #467B46;
+  --svg-icon-stroke_blue: #467B46;
+  --limited-stroke-off: #00000000;
+}
 .alert-danger {
   background-color: #FCEEEE;
   border-color: #FCEEEE;
@@ -14751,6 +14783,14 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .alert-danger h4, .alert-danger .h4 {
   color: #D9534F;
+}
+.alert-danger .svg--icon svg {
+  fill: #D9534F;
+  --svg-icon-fill: #D9534F;
+  --svg-icon-stroke: #D9534F;
+  --svg-icon-fill_blue: #D9534F;
+  --svg-icon-stroke_blue: #D9534F;
+  --limited-stroke-off: #00000000;
 }
 .alert-warning {
   background-color: #FFDF9A;
@@ -14766,6 +14806,14 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-warning h4, .alert-warning .h4 {
   color: #DE8500;
 }
+.alert-warning .svg--icon svg {
+  fill: #DE8500;
+  --svg-icon-fill: #DE8500;
+  --svg-icon-stroke: #DE8500;
+  --svg-icon-fill_blue: #DE8500;
+  --svg-icon-stroke_blue: #DE8500;
+  --limited-stroke-off: #00000000;
+}
 .alert-info {
   background-color: #E4EEF7;
   border-color: #E4EEF7;
@@ -14780,23 +14828,30 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-info h4, .alert-info .h4 {
   color: #4A8DC6;
 }
+.alert-info .svg--icon svg {
+  fill: #4A8DC6;
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+  --limited-stroke-off: #00000000;
+}
 .alert .close {
   border: none;
   background-color: transparent;
   background-image: none;
   cursor: pointer;
   float: none;
+  padding: 0;
   opacity: 1;
-  height: 14px;
-  width: 14px;
   position: absolute;
-  right: 10px;
+  right: 0.625rem;
   text-shadow: none;
-  top: 10px;
+  top: 0.625rem;
 }
-.alert .close svg {
-  height: 14px;
-  width: 14px;
+.alert .close, .alert .close svg {
+  height: 0.875rem;
+  width: 0.875rem;
 }
 .alert__attention, .alert__checked, .alert__caution {
   background-repeat: no-repeat;
@@ -14950,7 +15005,6 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .nav-tabs,
-.nav-tabs-vertical,
 .nav-pills,
 .nav-btns,
 .nav-cards {
@@ -14959,10 +15013,6 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.nav-tabs-vertical {
-  flex-direction: column;
 }
 
 .nav-pills,
@@ -14978,40 +15028,21 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   gap: 0.125rem;
 }
 
-.nav-tabs > li, .nav-tabs-vertical > li,
+.nav-tabs > li,
 .nav-pills > li,
 .nav-tabs .nav-item,
-.nav-tabs-vertical .nav-item,
 .nav-pills .nav-item {
   margin-left: -1px;
 }
-.nav-tabs-vertical .nav-tabs > li, .nav-tabs-vertical .nav-tabs-vertical > li,
-.nav-tabs-vertical .nav-pills > li,
-.nav-tabs-vertical .nav-tabs .nav-item,
-.nav-tabs-vertical .nav-tabs-vertical .nav-item,
-.nav-tabs-vertical .nav-pills .nav-item {
-  padding-right: 0;
-  padding-bottom: 5px;
-  margin-left: 0;
-}
-.nav-tabs > li:first-child, .nav-tabs-vertical > li:first-child,
+.nav-tabs > li:first-child,
 .nav-pills > li:first-child,
 .nav-tabs .nav-item:first-child,
-.nav-tabs-vertical .nav-item:first-child,
 .nav-pills .nav-item:first-child {
   margin-left: 0;
 }
-.nav-tabs-vertical .nav-tabs > li:last-child, .nav-tabs-vertical .nav-tabs-vertical > li:last-child,
-.nav-tabs-vertical .nav-pills > li:last-child,
-.nav-tabs-vertical .nav-tabs .nav-item:last-child,
-.nav-tabs-vertical .nav-tabs-vertical .nav-item:last-child,
-.nav-tabs-vertical .nav-pills .nav-item:last-child {
-  padding-bottom: 0;
-}
 
-.nav-tabs > li > a, .nav-tabs-vertical > li > a,
-.nav-tabs .nav-link,
-.nav-tabs-vertical .nav-link {
+.nav-tabs > li > a,
+.nav-tabs .nav-link {
   align-items: center;
   border-radius: 0;
   background-color: #dddddd;
@@ -15030,13 +15061,10 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   text-decoration: none;
   white-space: nowrap;
 }
-.nav-tabs > li > a:hover, .nav-tabs-vertical > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs-vertical > li > a:focus, .nav-tabs > li > a:active, .nav-tabs-vertical > li > a:active,
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs > li > a:active,
 .nav-tabs .nav-link:hover,
-.nav-tabs-vertical .nav-link:hover,
 .nav-tabs .nav-link:focus,
-.nav-tabs-vertical .nav-link:focus,
-.nav-tabs .nav-link:active,
-.nav-tabs-vertical .nav-link:active {
+.nav-tabs .nav-link:active {
   background-color: #dddddd;
   border-color: #BABABA;
   color: #777777;
@@ -15075,29 +15103,25 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   cursor: pointer;
 }
 
-.nav-tabs > li.active > a, .nav-tabs-vertical > li.active > a,
+.nav-tabs > li.active > a,
 .nav-tabs > li > a.active,
-.nav-tabs-vertical > li > a.active,
-.nav-link.active,
-.active .nav-link {
+.nav-tabs .nav-link.active,
+.nav-tabs .active .nav-link {
   background-color: #ffffff;
   border-top-color: #69C26A;
   border-bottom-color: transparent;
   color: #333333;
 }
-.nav-tabs > li.active > a:hover, .nav-tabs-vertical > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs-vertical > li.active > a:focus, .nav-tabs > li.active > a:active, .nav-tabs-vertical > li.active > a:active,
+.nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:active,
 .nav-tabs > li > a.active:hover,
-.nav-tabs-vertical > li > a.active:hover,
 .nav-tabs > li > a.active:focus,
-.nav-tabs-vertical > li > a.active:focus,
 .nav-tabs > li > a.active:active,
-.nav-tabs-vertical > li > a.active:active,
-.nav-link.active:hover,
-.nav-link.active:focus,
-.nav-link.active:active,
-.active .nav-link:hover,
-.active .nav-link:focus,
-.active .nav-link:active {
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-link.active:focus,
+.nav-tabs .nav-link.active:active,
+.nav-tabs .active .nav-link:hover,
+.nav-tabs .active .nav-link:focus,
+.nav-tabs .active .nav-link:active {
   background-color: #ffffff;
   border-top-color: #69C26A;
   border-bottom-color: transparent;
@@ -15186,6 +15210,36 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .nav-cards .svg--icon__24, .nav-cards .svg--icon__24 svg {
   height: 24px;
   width: 24px;
+}
+
+.nav__vertical {
+  flex-direction: column;
+}
+.nav__vertical > li,
+.nav__vertical .nav-item {
+  padding-right: 0;
+  padding-bottom: 5px;
+  margin-left: 0;
+}
+.nav__vertical > li:last-child,
+.nav__vertical .nav-item:last-child {
+  padding-bottom: 0;
+}
+.nav__vertical.nav-pills, .nav__vertical.nav-btns {
+  align-items: start;
+}
+
+.nav__justify {
+  width: 100%;
+}
+.nav__justify > li,
+.nav__justify .nav-item {
+  flex: 1 0 0;
+}
+.nav__justify > li > a,
+.nav__justify .nav-link {
+  display: inline-flex;
+  width: 100%;
 }
 
 .tab-content {

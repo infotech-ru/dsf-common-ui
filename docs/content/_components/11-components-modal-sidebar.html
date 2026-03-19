@@ -6,44 +6,58 @@ category: components
 anchor: modal-sisebar
 order: 11
 ---
+<div class="unityBlock">
+  <p><i>Виджет ModalSidebar показывает боковое окно слева или справа экрана. Создан на основе bootstrap modal и использует modal.js.</i></p>
+  <p>- Для правильной отрисовки бокового окна нужно дополнить вызов модалки параметром: <code class="language-plaintext highlighter-rouge">sidebar: true</code>.</p>
+  <p>- Размер окна изменяется в size: <code class="language-plaintext highlighter-rouge">SIZE_LARGE</code> и <code class="language-plaintext highlighter-rouge">SIZE_SMALL</code>.</p>
 
-<p>Виджет ModalSidebar показывает боковое окно слева или справа экрана. Создан на основе bootstrap modal и использует modal.js.</p>
-<p>Для правильной отрисовки бокового окна нужно дополнить вызов модалки параметром: <code class="language-plaintext highlighter-rouge">sidebar: true</code>.</p>
-<p>Размер окна изменяется в size: <code class="language-plaintext highlighter-rouge">SIZE_LARGE</code> и <code class="language-plaintext highlighter-rouge">SIZE_SMALL</code>.</p>
+  {% highlight html %}
+  'size': SIZE_LARGE
+  'size': SIZE_SMALL
+  {% endhighlight %}
 
-{% highlight html %}
-'size': SIZE_LARGE
-'size': SIZE_SMALL
-{% endhighlight %}
+  <p>- Сторона открытия изменяется через side: <code class="language-plaintext highlighter-rouge">SIDE_LEFT</code> и <code class="language-plaintext highlighter-rouge">SIDE_RIGHT</code>.</p>
 
-<p>Сторона открытия изменяется через side: <code class="language-plaintext highlighter-rouge">SIDE_LEFT</code> и <code class="language-plaintext highlighter-rouge">SIDE_RIGHT</code>.</p>
+  {% highlight html %}
+    'side': SIDE_RIGHT
+    'side': SIDE_RIGHT
+  {% endhighlight %}
 
-{% highlight html %}
-  'side': SIDE_RIGHT
-  'side': SIDE_RIGHT
-{% endhighlight %}
+  <p>- Шапка окна отрисовывается через в header исплоьзуя для заголовка h4 классы <code class="language-plaintext highlighter-rouge">h4 modal-sidebar-headerTitle</code>.</p>
+  <p>- Рядом могут находится другие элементы - label, icon...</p>
 
-<p>Шапка окна отрисовывается через в header исплоьзуя для заголовка h4 классы <code class="language-plaintext highlighter-rouge">h4 modal-sidebar-headerTitle</code>.</p>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-sidebar" role="button" aria-expanded="false" aria-controls="collpase-sidebar">
+        <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
+            <svg width="24" height="24">
+                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
+            </svg>
+        </span>
+        <span class="btn-text">
+            <span class="block__show">Показать код</span>
+            <span class="block__hide">Скрыть код</span>
+        </span>
+    </a>
 
-<p>Рядом могут находится другие элементы - label, icon...</p>
+    <div class="collapse" id="collpase-sidebar">
+      {% highlight html %}
+      php:
+        use app\widgets\ModalSidebar;
 
-{% highlight html %}
-php:
-  use app\widgets\ModalSidebar;
+        ModalSidebar::begin(
+          [
+            'header' => '<h4 class="h4 modal-sidebar-headerTitle">' . Yii::t('app', 'Заголовок') . '</h4>',
+            'size' => ModalSidebar::SIZE_LARGE,
+            'side' => ModalSidebar::SIDE_LEFT,
+          ]
+          ...
+        )
+        ModalSidebar::end()
 
-  ModalSidebar::begin(
-    [
-      'header' => '<h4 class="h4 modal-sidebar-headerTitle">' . Yii::t('app', 'Заголовок') . '</h4>',
-      'size' => ModalSidebar::SIZE_LARGE,
-      'side' => ModalSidebar::SIDE_LEFT,
-    ]
-    ...
-  )
-  ModalSidebar::end()
-
-js:
-  show.call(this, {
-    sidebar: true,
-    ...
-  })
-{% endhighlight %}
+      js:
+        show.call(this, {
+          sidebar: true,
+          ...
+        })
+      {% endhighlight %}
+    </div>
+</div>

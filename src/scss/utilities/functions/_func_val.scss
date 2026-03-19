@@ -140,6 +140,9 @@
 @function tabsSizes($keys...) {
   @return maps.val(sizes.$tabs-sizes, $keys...);
 }
+@function alertsSizes($keys...) {
+  @return maps.val(sizes.$alert-sizes, $keys...);
+}
 @function zIndex($keys...) {
   @return maps.val(zindex.$zindex, $keys...);
 }

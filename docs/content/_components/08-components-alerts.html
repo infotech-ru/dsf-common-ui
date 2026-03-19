@@ -7,41 +7,41 @@ anchor: components-alert
 order: 8
 ---
 
-<h4> Для простых уведомлений используется alert:</h4>
 
-Используемый скрипт bootstrap v4 <a href="https://getbootstrap.com/docs/4.6/components/alerts/">alert.js</a>
+<div class="unityBlock">
+  <p>Используется скрипт bootstrap v4 <a href="https://getbootstrap.com/docs/4.6/components/alerts/">alert.js</a></p>
+  <p>Цвета уведомлений задаётся доп. классами: <code class="language-plaintext highlighter-rouge">alert-default</code>, <code class="language-plaintext highlighter-rouge">alert-primary</code>, <code class="language-plaintext highlighter-rouge">alert-success</code>, <code class="language-plaintext highlighter-rouge">alert-danger</code>, <code class="language-plaintext highlighter-rouge">alert-warning</code>, <code class="language-plaintext highlighter-rouge">alert-info</code></p>
+  <p>В заголовок можно добавить иконку.</p>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-alert" role="button" aria-expanded="false" aria-controls="collpase-alert">
+        <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
+            <svg width="24" height="24">
+                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
+            </svg>
+        </span>
+        <span class="btn-text">
+            <span class="block__show">Показать код</span>
+            <span class="block__hide">Скрыть код</span>
+        </span>
+    </a>
 
-{% highlight html %}
-<div class="alert alert-info">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Отметить прочитанным">
-        <span class="svg--icon" aria-hidden="true"><?= Icons::icon('bicolors-close__24vb') ?></span>
-    </button>
-    <div class="h4 mb-10">Заголовок</div>
-    <div class="fz-10 mb-5 text-default">дата</div>
-    <div>
-      Текст уведомления
-    </div>
-</div>
-{% endhighlight %}
-
-<div class="bs-docs-example">
-  <div class="alert alert-info">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Отметить прочитанным">
-          <span class="svg--icon" aria-hidden="true"><svg width="24" height="24">
-            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-close__24vb"></use>
-          </svg></span>
-      </button>
-      <div class="h4 mb-10">Заголовок</div>
-      <div class="fz-10 mb-5 text-default">дата</div>
-      <div>
-        Текст уведомления
+    <div class="collapse" id="collpase-alert">
+      {% highlight html %}
+      <div class="alert alert-info">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Отметить прочитанным">
+              <span class="svg--icon" aria-hidden="true"><?= Icons::icon('bicolors-close__24vb') ?></span>
+          </button>
+          <div class="h4 mb-10">
+            <span class="svg--icon svg--icon__24vb"><?= Icons::icon('bicolors-circle_information__24vb') ?></span>
+            Заголовок с иконкой
+          </div>
+          <div class="fz-10 mb-5 text-default">дата</div>
+          <div>
+            Текст уведомления
+          </div>
       </div>
+      {% endhighlight %}
   </div>
-</div>
 
-<h4> Цвета уведоммлений задайются доп. классами:</h4>
-<br>
-<p><code class="language-plaintext highlighter-rouge">alert-default</code>, <code class="language-plaintext highlighter-rouge">alert-primary</code>, <code class="language-plaintext highlighter-rouge">alert-success</code>, <code class="language-plaintext highlighter-rouge">alert-danger</code>, <code class="language-plaintext highlighter-rouge">alert-warning</code>, <code class="language-plaintext highlighter-rouge">alert-info</code></p>
 
 <div class="bs-docs-example">
   <div class="alert alert-default mb-20">
@@ -50,7 +50,14 @@ order: 8
             <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-close__24vb"></use>
           </svg></span>
       </button>
-      <div class="h4 mb-10">Заголовок</div>
+      <div class="h4 mb-10">
+        <span class="svg--icon svg--icon__24vb">
+            <svg width="24" height="24">
+                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_information__24vb"></use>
+            </svg>
+        </span>
+        Заголовок с иконкой
+      </div>
       <div class="fz-10 mb-5 text-default">дата</div>
       <div>
         Текст уведомления alert-default
@@ -121,41 +128,54 @@ order: 8
 <h4> Особый вид уведомлений с иконкой устанавливается доп. классом </h4>
 <br>
 <p><code class="language-plaintext highlighter-rouge">alert__checked</code>, <code class="language-plaintext highlighter-rouge">alert__attention</code>, <code class="language-plaintext highlighter-rouge">alert__caution</code></p>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-alert-attention" role="button" aria-expanded="false" aria-controls="collpase-alert-attention">
+        <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
+            <svg width="24" height="24">
+                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
+            </svg>
+        </span>
+        <span class="btn-text">
+            <span class="block__show">Показать код</span>
+            <span class="block__hide">Скрыть код</span>
+        </span>
+    </a>
 
-{% highlight html %}
-  <div class="alert alert-success alert__checked">
-    <div class="h4 mb-10">Внимание!</div>
-    <div>Тут текст уведлмления alert__checked</div>
-    <a href="">Внесите данные</a>
-  </div>
-  <div class="alert alert-default alert__attention">
-    <div class="h4 mb-10">Внимание!</div>
-    <div>Тут текст уведлмления alert__attention</div>
-    <a href="">Внесите данные</a>
-  </div>
-  <div class="alert alert-danger alert__caution">
+    <div class="collapse" id="collpase-alert-attention">
+      {% highlight html %}
+        <div class="alert alert-success alert__checked">
+          <div class="h4 mb-10">Внимание!</div>
+          <div>Тут текст уведлмления alert__checked</div>
+          <a href="">Внесите данные</a>
+        </div>
+        <div class="alert alert-default alert__attention">
+          <div class="h4 mb-10">Внимание!</div>
+          <div>Тут текст уведлмления alert__attention</div>
+          <a href="">Внесите данные</a>
+        </div>
+        <div class="alert alert-danger alert__caution">
+            <div class="h4 mb-10">Внимание!</div>
+            <div class="">Тут текст уведлмления alert__caution</div>
+            <a href="">Внесите данные</a>
+        </div>
+      {% endhighlight %}
+    </div>
+  <div class="bs-docs-example">
+    <div class="alert alert-success alert__checked mb-20">
       <div class="h4 mb-10">Внимание!</div>
-      <div class="">Тут текст уведлмления alert__caution</div>
-      <a href="">Внесите данные</a>
-  </div>
-{% endhighlight %}
-<div class="bs-docs-example">
-  <div class="alert alert-success alert__checked mb-20">
-    <div class="h4 mb-10">Внимание!</div>
-    <div>Тут текст уведлмления alert__checked</div>
-    <a href="">Внесите данные</a>
-  </div>
-
-  <div class="alert alert-default alert__attention mb-20">
-      <div class="h4 mb-10">Внимание!</div>
-      <div>Тут текст уведлмления alert__attention</div>
-      <a href="">Внесите данные</a>
-  </div>
-
-    <div class="alert alert-danger alert__caution">
-      <div class="h4 mb-10">Внимание!</div>
-      <div class="">Тут текст уведлмления alert__caution</div>
+      <div>Тут текст уведлмления alert__checked</div>
       <a href="">Внесите данные</a>
     </div>
-</div>
 
+    <div class="alert alert-default alert__attention mb-20">
+        <div class="h4 mb-10">Внимание!</div>
+        <div>Тут текст уведлмления alert__attention</div>
+        <a href="">Внесите данные</a>
+    </div>
+
+      <div class="alert alert-danger alert__caution">
+        <div class="h4 mb-10">Внимание!</div>
+        <div class="">Тут текст уведлмления alert__caution</div>
+        <a href="">Внесите данные</a>
+      </div>
+  </div>
+</div>
