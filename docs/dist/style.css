@@ -15008,7 +15008,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 
 .nav-tabs > li > a,
-.nav-link {
+.nav-tabs .nav-link {
   align-items: center;
   border-radius: 0;
   background-color: #dddddd;
@@ -15028,9 +15028,9 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   white-space: nowrap;
 }
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs > li > a:active,
-.nav-link:hover,
-.nav-link:focus,
-.nav-link:active {
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:active {
   background-color: #dddddd;
   border-color: #BABABA;
   color: #777777;
@@ -15127,6 +15127,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .nav-cards > li > a,
 .nav-cards .nav-link {
   align-items: center;
+  border-bottom-color: #dddddd;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   color: #333333;
@@ -15143,6 +15144,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .nav-cards > li > a.active,
 .nav-cards .nav-link.active,
 .nav-cards .active .nav-link {
+  background-color: #E4EEF7;
+  border-bottom-color: #4A8DC6;
   border-bottom-width: 2px;
   color: #4A8DC6;
 }

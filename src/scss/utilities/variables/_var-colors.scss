@@ -747,12 +747,12 @@ $brand-palette: map.merge((
   navTabs-active_color:                   map.get($brand-colors, _dark-grey),
 
 
-  navCards_borderColor:                    map.get($brand-colors, _grey2),
-  navCards_bgc:                            map.get($brand-colors, _light-grey2),
-  navCards_color:                          map.get($brand-colors, _dark-grey),
-  navCards-active_borderColor:             map.get($brand-colors, _light-blue),
-  navCards-active_bgc:                     map.get($brand-colors, _light-blue2),
-  navCards-active_color:                   map.get($brand-colors, _light-blue),
+  navCards_borderColor:                   map.get($brand-colors, _grey2),
+  navCards_bgc:                           map.get($brand-colors, _light-grey2),
+  navCards_color:                         map.get($brand-colors, _dark-grey),
+  navCards-active_borderColor:            map.get($brand-colors, _light-blue),
+  navCards-active_bgc:                    map.get($brand-colors, _light-blue2),
+  navCards-active_color:                  map.get($brand-colors, _light-blue),
 
   pageHeader_color:                       map.get($brand-colors, _dark-grey),
   
