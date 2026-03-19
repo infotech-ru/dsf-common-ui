@@ -27,6 +27,8 @@
     color: inherit; // Specified for the h4 to prevent conflicts of changing $headings-color
   }
   h4, .h4{
+    align-items: center;
+    display: inline-flex;
     .svg--icon__24vb{
       margin-right: fonts.rem(5);
       &, svg{

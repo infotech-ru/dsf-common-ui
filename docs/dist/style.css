@@ -14687,6 +14687,10 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   margin-top: 0;
   color: inherit;
 }
+.alert h4, .alert .h4 {
+  align-items: center;
+  display: inline-flex;
+}
 .alert h4 .svg--icon__24vb, .alert .h4 .svg--icon__24vb {
   margin-right: 0.3125rem;
 }
@@ -15239,6 +15243,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .nav__justify > li > a,
 .nav__justify .nav-link {
   display: inline-flex;
+  justify-content: center;
   width: 100%;
 }
 
