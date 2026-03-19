@@ -6,7 +6,7 @@ category: components
 anchor: components-menu
 order: 7
 ---
-
+<div class="unityBlock">
 <h3>Инициализация</h3>
 
 <p>Используется для объединения ссылок или кнопок с js-обработкой под одной кнопкой меню. </p>
@@ -36,57 +36,70 @@ order: 7
 <p>На ссылку или кнопку навешиваем класс <code class="language-plaintext highlighter-rouge">dropdown__link</code>,
 для иконки внутри класс - <code class="language-plaintext highlighter-rouge">dropdown__linkIcon</code>, текста внутри <code class="language-plaintext highlighter-rouge">dropdown__linkText</code></p>
 
-{% highlight html %}
-  <button class="btn-icon js-actionMenu"
-          type="button"
-          data-content="
-            <a class='dropdown__link' href='#'>
-              <span class='dropdown__linkIcon'>
-                <svg class='bicolors-edit' width='24' height='24'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
-                </svg>
-              </span>
-              <span class='dropdown__linkText'>Редактировать</span>
-            </a>
-            <a class='dropdown__link' href='#'>
-              <span class='dropdown__linkIcon'>
-                <svg class='bicolors-edit' width='24' height='24'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use>
-                </svg>
-              </span>
-              <span class='dropdown__linkText'>Удалить</span>
-            </a>
-          ">
-          <span class="svg--icon">
-            <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
-          </span>
-  </button>
-  <button class="btn-link js-actionMenu"
-          type="button"
-          data-content="
-            <button class='dropdown__link'>
-              <span class='dropdown__linkIcon'>
-                <svg class='bicolors-edit' width='24' height='24'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
-                </svg>
-              </span>
-              <span class='dropdown__linkText'>Редактировать</span>
-            </button>
-            <button class='dropdown__link'>
-              <span class='dropdown__linkIcon'>
-                <svg class='bicolors-plus' width='24' height='24'>
-                  <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use>
-                </svg>
-              </span>
-              <span class='dropdown__linkText'>Добавить</span>
-            </button>
-          ">
-          <span class="svg--icon">
-            <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
-          </span>
-  </button>
-{% endhighlight %}
+  <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#actionMenu" role="button" aria-expanded="false" aria-controls="actionMenu">
+      <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
+          <svg width="24" height="24">
+              <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
+          </svg>
+      </span>
+      <span class="btn-text">
+          <span class="block__show">Показать код</span>
+          <span class="block__hide">Скрыть код</span>
+      </span>
+  </a>
 
+  <div class="collapse" id="actionMenu">
+    {% highlight html %}
+      <button class="btn-icon js-actionMenu"
+              type="button"
+              data-content="
+                <a class='dropdown__link' href='#'>
+                  <span class='dropdown__linkIcon'>
+                    <svg class='bicolors-edit' width='24' height='24'>
+                      <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
+                    </svg>
+                  </span>
+                  <span class='dropdown__linkText'>Редактировать</span>
+                </a>
+                <a class='dropdown__link' href='#'>
+                  <span class='dropdown__linkIcon'>
+                    <svg class='bicolors-edit' width='24' height='24'>
+                      <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use>
+                    </svg>
+                  </span>
+                  <span class='dropdown__linkText'>Удалить</span>
+                </a>
+              ">
+              <span class="svg--icon">
+                <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
+              </span>
+      </button>
+      <button class="btn-link js-actionMenu"
+              type="button"
+              data-content="
+                <button class='dropdown__link'>
+                  <span class='dropdown__linkIcon'>
+                    <svg class='bicolors-edit' width='24' height='24'>
+                      <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
+                    </svg>
+                  </span>
+                  <span class='dropdown__linkText'>Редактировать</span>
+                </button>
+                <button class='dropdown__link'>
+                  <span class='dropdown__linkIcon'>
+                    <svg class='bicolors-plus' width='24' height='24'>
+                      <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use>
+                    </svg>
+                  </span>
+                  <span class='dropdown__linkText'>Добавить</span>
+                </button>
+              ">
+              <span class="svg--icon">
+                <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
+              </span>
+      </button>
+    {% endhighlight %}
+  </div>
 <div class="bs-docs-example">
   <button class="btn-icon mr-10 js-actionMenu" type="button" data-content="<a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='dropdown__linkIconText'>Редактировать</span></a><a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use></svg></span><span class='dropdown__linkIconText'>Удалить</span></a> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
   <button class="btn-link js-actionMenu ml-10" type="button" data-content="<button class='dropdown__link'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='dropdown__linkIconText'>Редактировать</span></button><button class='dropdown__link'><span class='dropdown__linkIcon'><svg class='bicolors-plus' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use></svg></span><span class='dropdown__linkIconText'>Добавить</span></button>"><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
@@ -198,4 +211,5 @@ order: 7
       </ul>
     </li>
   </ul>
+</div>
 </div>

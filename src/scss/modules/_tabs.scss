@@ -19,7 +19,8 @@
   margin: 0;
   padding: 0;
 }
-.nav-tabs-vertical{ 
+.nav-tabs-vertical{
+  @extend .nav-tabs;
   flex-direction: column;
 }
 .nav-pills,
@@ -159,7 +160,7 @@
 .nav-cards > li > a,
 .nav-cards .nav-link {
   align-items: center;
-  background-color: val.brandPalette(navCards_bgс);
+  background-color: val.brandPalette(navCards_bgc);
   border-bottom-color: val.brandPalette(navCards_borderColor);
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -180,6 +181,20 @@
   border-bottom-color: val.brandPalette(navCards-active_borderColor);
   border-bottom-width: 2px;
   color: val.brandPalette(navCards-active_color);
+}
+.nav-cards {
+  .svg--icon{
+    svg{
+      height: 18px;
+      width: auto;
+    }
+  }
+  .svg--icon__24{
+    &, svg{
+      height: 24px;
+      width: 24px;
+    }
+  }
 }
 
 .tab-content {

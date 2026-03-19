@@ -14952,9 +14952,9 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .nav-tabs,
+.nav-tabs-vertical,
 .nav-pills,
 .nav-btns,
-.nav-tabs-vertical,
 .nav-cards {
   display: flex;
   flex-wrap: wrap;
@@ -14980,35 +14980,40 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   gap: 0.125rem;
 }
 
-.nav-tabs > li,
+.nav-tabs > li, .nav-tabs-vertical > li,
 .nav-pills > li,
 .nav-tabs .nav-item,
+.nav-tabs-vertical .nav-item,
 .nav-pills .nav-item {
   margin-left: -1px;
 }
-.nav-tabs-vertical .nav-tabs > li,
+.nav-tabs-vertical .nav-tabs > li, .nav-tabs-vertical .nav-tabs-vertical > li,
 .nav-tabs-vertical .nav-pills > li,
 .nav-tabs-vertical .nav-tabs .nav-item,
+.nav-tabs-vertical .nav-tabs-vertical .nav-item,
 .nav-tabs-vertical .nav-pills .nav-item {
   padding-right: 0;
   padding-bottom: 5px;
   margin-left: 0;
 }
-.nav-tabs > li:first-child,
+.nav-tabs > li:first-child, .nav-tabs-vertical > li:first-child,
 .nav-pills > li:first-child,
 .nav-tabs .nav-item:first-child,
+.nav-tabs-vertical .nav-item:first-child,
 .nav-pills .nav-item:first-child {
   margin-left: 0;
 }
-.nav-tabs-vertical .nav-tabs > li:last-child,
+.nav-tabs-vertical .nav-tabs > li:last-child, .nav-tabs-vertical .nav-tabs-vertical > li:last-child,
 .nav-tabs-vertical .nav-pills > li:last-child,
 .nav-tabs-vertical .nav-tabs .nav-item:last-child,
+.nav-tabs-vertical .nav-tabs-vertical .nav-item:last-child,
 .nav-tabs-vertical .nav-pills .nav-item:last-child {
   padding-bottom: 0;
 }
 
-.nav-tabs > li > a,
-.nav-tabs .nav-link {
+.nav-tabs > li > a, .nav-tabs-vertical > li > a,
+.nav-tabs .nav-link,
+.nav-tabs-vertical .nav-link {
   align-items: center;
   border-radius: 0;
   background-color: #dddddd;
@@ -15027,10 +15032,13 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   text-decoration: none;
   white-space: nowrap;
 }
-.nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs > li > a:active,
+.nav-tabs > li > a:hover, .nav-tabs-vertical > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs-vertical > li > a:focus, .nav-tabs > li > a:active, .nav-tabs-vertical > li > a:active,
 .nav-tabs .nav-link:hover,
+.nav-tabs-vertical .nav-link:hover,
 .nav-tabs .nav-link:focus,
-.nav-tabs .nav-link:active {
+.nav-tabs-vertical .nav-link:focus,
+.nav-tabs .nav-link:active,
+.nav-tabs-vertical .nav-link:active {
   background-color: #dddddd;
   border-color: #BABABA;
   color: #777777;
@@ -15069,8 +15077,9 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   cursor: pointer;
 }
 
-.nav-tabs > li.active > a,
+.nav-tabs > li.active > a, .nav-tabs-vertical > li.active > a,
 .nav-tabs > li > a.active,
+.nav-tabs-vertical > li > a.active,
 .nav-link.active,
 .active .nav-link {
   background-color: #ffffff;
@@ -15078,10 +15087,13 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-bottom-color: transparent;
   color: #333333;
 }
-.nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:active,
+.nav-tabs > li.active > a:hover, .nav-tabs-vertical > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs-vertical > li.active > a:focus, .nav-tabs > li.active > a:active, .nav-tabs-vertical > li.active > a:active,
 .nav-tabs > li > a.active:hover,
+.nav-tabs-vertical > li > a.active:hover,
 .nav-tabs > li > a.active:focus,
+.nav-tabs-vertical > li > a.active:focus,
 .nav-tabs > li > a.active:active,
+.nav-tabs-vertical > li > a.active:active,
 .nav-link.active:hover,
 .nav-link.active:focus,
 .nav-link.active:active,
@@ -15127,6 +15139,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .nav-cards > li > a,
 .nav-cards .nav-link {
   align-items: center;
+  background-color: #F5F5F5;
   border-bottom-color: #dddddd;
   border-bottom-style: solid;
   border-bottom-width: 1px;
@@ -15148,6 +15161,15 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-bottom-color: #4A8DC6;
   border-bottom-width: 2px;
   color: #4A8DC6;
+}
+
+.nav-cards .svg--icon svg {
+  height: 18px;
+  width: auto;
+}
+.nav-cards .svg--icon__24, .nav-cards .svg--icon__24 svg {
+  height: 24px;
+  width: 24px;
 }
 
 .tab-content {
