@@ -222,16 +222,16 @@ order: 5
             </div>
             <div class="col">
                 <div class="tab-content">
-                    <div class="tab-pane active" role="tabpanel" id="nav-tabs-vertical1">
+                    <div class="tab-pane active" role="tabpanel" id="nav-tabs-vertical-1">
                         Вкладка 1
                     </div>
-                    <div class="tab-pane" role="tabpanel" id="nav-tabs-vertical2">
+                    <div class="tab-pane" role="tabpanel" id="nav-tabs-vertical-2">
                         Вкладка 2
                     </div>
-                    <div class="tab-pane" role="tabpanel" id="nav-tabs-vertical3">
+                    <div class="tab-pane" role="tabpanel" id="nav-tabs-vertical-3">
                         Вкладка 3
                     </div>
-                    <div class="tab-pane" role="tabpanel" id="nav-tabs-vertical4">
+                    <div class="tab-pane" role="tabpanel" id="nav-tabs-vertical-4">
                         Вкладка 4
                     </div>
                 </div>
@@ -285,31 +285,106 @@ order: 5
         {% endhighlight %}
     </div>
     <div class="bs-docs-example">
-        <ul class="nav-tabs pt-10 pb-10" role="tablist">
+        <ul class="nav-btns pt-10 pb-10" role="tablist">
             <li class="nav-item active">
-                <a class="nav-link" href="#nav-tabs-vertical-1" role="tab" data-toggle="tab">Таб 1</a>
+                <a class="nav-link" href="#nav-btns-1" role="tab" data-toggle="tab">Таб 1</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#nav-tabs-vertical-2" role="tab" data-toggle="tab">Таб 2</a>
+                <a class="nav-link" href="#nav-btns-2" role="tab" data-toggle="tab">Таб 2</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#nav-tabs-vertical-3" role="tab" data-toggle="tab">Таб 3</a>
+                <a class="nav-link" href="#nav-btns-3" role="tab" data-toggle="tab">Таб 3</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#nav-tabs-vertical-4" role="tab" data-toggle="tab">Таб 4</a>
+                <a class="nav-link" href="#nav-btns-4" role="tab" data-toggle="tab">Таб 4</a>
             </li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane active" role="tabpanel" id="nav-tabs-vertical-1">
+            <div class="tab-pane active" role="tabpanel" id="nav-btns-1">
                 Вкладка 1
             </div>
-            <div class="tab-pane" role="tabpanel" id="nav-tabs-vertical-2">
+            <div class="tab-pane" role="tabpanel" id="nav-btns-2">
                 Вкладка 2
             </div>
-            <div class="tab-pane" role="tabpanel" id="nav-tabs-vertical-3">
+            <div class="tab-pane" role="tabpanel" id="nav-btns-3">
                 Вкладка 3
             </div>
-            <div class="tab-pane" role="tabpanel" id="nav-tabs-vertical-4">
+            <div class="tab-pane" role="tabpanel" id="nav-btns-4">
+                Вкладка 4
+            </div>
+        </div>
+    </div>
+    <h3>Вариант nav-cards</h3>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#nav-cards" role="button" aria-expanded="false" aria-controls="nav-cards">
+        <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
+            <svg width="24" height="24">
+                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
+            </svg>
+        </span>
+        <span class="btn-text">
+            <span class="block__show">Показать код</span>
+            <span class="block__hide">Скрыть код</span>
+        </span>
+    </a>
+
+    <div class="collapse" id="nav-cards">
+        {% highlight html %}
+        <ul class="nav-cards pt-10 pb-10" role="tablist">
+            <li class="nav-item active">
+                <a class="nav-link" href="#tab-1" role="tab" data-toggle="tab">Таб 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tab-2" role="tab" data-toggle="tab">Таб 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tab-3" role="tab" data-toggle="tab">Таб 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tab-4" role="tab" data-toggle="tab">Таб 4</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" role="tabpanel" id="tab-1">
+                Вкладка 1
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-2">
+                Вкладка 2
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-3">
+                Вкладка 3
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-4">
+                Вкладка 4
+            </div>
+        </div>
+        {% endhighlight %}
+    </div>
+    <div class="bs-docs-example">
+        <ul class="nav-cards pt-10 pb-10" role="tablist">
+            <li class="nav-item active">
+                <a class="nav-link" href="#nav-cards-1" role="tab" data-toggle="tab">Таб 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#nav-cards-2" role="tab" data-toggle="tab">Таб 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#nav-cards-3" role="tab" data-toggle="tab">Таб 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#nav-cards-4" role="tab" data-toggle="tab">Таб 4</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" role="tabpanel" id="nav-cards-1">
+                Вкладка 1
+            </div>
+            <div class="tab-pane" role="tabpanel" id="nav-cards-2">
+                Вкладка 2
+            </div>
+            <div class="tab-pane" role="tabpanel" id="nav-cards-3">
+                Вкладка 3
+            </div>
+            <div class="tab-pane" role="tabpanel" id="nav-cards-4">
                 Вкладка 4
             </div>
         </div>
