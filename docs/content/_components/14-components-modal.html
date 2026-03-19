@@ -7,12 +7,13 @@ anchor: components-modal
 order: 14
 ---
 
+<div class="unityBlock">
 <p>Виджет Modal показывает модальное окно посредине экрана.</p>
 
 <p>Используемый скрипт bootstrap v3 <a href="https://getbootstrap.com/docs/3.4/javascript/#modals">modal.js</a></p>
 
-<p>Размер окна изменяется добавлением класса. <br>
-Для классов modal-lg и modal-sm в yii можно использовать SIZE_LARGE и SIZE_SMALL</p>
+<p>Размер окна изменяется добавлением класса.</p>
+<p>Для классов modal-lg и modal-sm в yii можно использовать SIZE_LARGE и SIZE_SMALL</p>
 
 {% highlight html %}
   'size' => SIZE_LARGE
@@ -32,12 +33,12 @@ order: 14
   'size' => 'modal-xl modal-xxl',
 {% endhighlight %}
 
-Класс <code class="language-plaintext highlighter-rouge">modal-responsive</code> - добавления резиновой ширины модалки.
+<p>Класс <code class="language-plaintext highlighter-rouge">modal-responsive</code> - добавления резиновой ширины модалки.</p>
 {% highlight html %}
   'size' => 'modal-responsive',
 {% endhighlight %}
 
-Класс <code class="language-plaintext highlighter-rouge">modalScrollableBody</code> - Добавление вертикального скрола для modal-body.
+<p>Класс <code class="language-plaintext highlighter-rouge">modalScrollableBody</code> - Добавление вертикального скрола для modal-body.</p>
 {% highlight html %}
   'size' => 'modalScrollableBody'
 {% endhighlight %}
@@ -51,7 +52,7 @@ order: 14
 'size' => 'modal-light-grey2 modal-svgClose'
 {% endhighlight %}
 
-Шапка окна отрисовывается через 'header'. 
+<p>Шапка окна отрисовывается через 'header'. </p>
 {% highlight html %}
 'header' => '<div class="modalHeader_item">' 
             . Icons::wrapper('bicolors-checklists__24vb', ['class' => 'svg--icon svg--icon__24vb modalHeader_itemTitleSvg'])
@@ -62,4 +63,5 @@ order: 14
             . '</div>',
 {% endhighlight %}
 
-Рядом с названиеи могут находится другие элементы - иконки, кнопки, лейблы.
+<p>Рядом с названиеи могут находится другие элементы - иконки, кнопки, лейблы.</p>
+</div>
