@@ -6,8 +6,11 @@ anchor: components-pageHeader
 order: 1
 ---
 
-<p>Шапка страницы имеет следующую структуру:</p>
-<p>Для прилипания шапки страницы при пркручивания используется класс <code class="language-plaintext highlighter-rouge">pageHeader_sticky</code></p>
+<div class="unityBlock">
+    <p>- Используется внутри контейнера <code class="language-plaintext highlighter-rouge">unityBlock</code></p>
+    <p>- Используется ОДИН раз на страницу</p>
+    <p>- Для прилипания шапки страницы при пркручивания используется класс <code class="language-plaintext highlighter-rouge">pageHeader_sticky</code></p>
+    <p>Шапка страницы имеет следующую структуру:</p>
 
 {% highlight html %}
 <div class="pageHeader">
@@ -15,6 +18,9 @@ order: 1
         <h2 class="pageHeader__title">
             <?= $this->title ?>
         </h2>
+        <button class="btn-succcess__outline ml-10">
+            <?= Icons::wrapper('bicolors-filter') ?>
+        </button>
         <span class="label label-success ml-10">Доп. элемент</span>
     </div>
     <div class="pageHeader__right">
@@ -29,10 +35,18 @@ order: 1
             <h2 class="pageHeader__title">
                 Заголовок страницы
             </h2>
+            <button class="btn-succcess__outline ml-10">
+                <span class="svg--icon">
+                    <svg width="24" height="24">
+                        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter"></use>
+                    </svg>
+                </span>
+            </button>
             <span class="label label-success ml-10">Доп. элемент</span>
         </div>
         <div class="pageHeader__right">
             <button class="btn-primary__outline">Кнопка действия</button>
         </div>
     </div>
+</div>
 </div>

@@ -24,6 +24,11 @@ $brand-sizes: (
   unityBlockHeader_mb:             baseValue.$base-padding,
 )!default;
 
+$tabs-sizes:(
+  navCards_padding:                baseValue.$base-gutter,
+  tabPane_padding:                 baseValue.$base-gutter,
+)!default;
+
 $layout-sizes:(
   footer_height:                   52,
   footer_marginTop:                baseValue.$base-padding,

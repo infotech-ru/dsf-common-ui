@@ -6,15 +6,13 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-lineHeights' as *;
-// @use './../utilities/variables/var-fonts' as *;
-// @use './../utilities/variables/var-sizes' as *;
 @use './buttons' as buttons;
 
 .nav-tabs,
 .nav-pills,
-.nav-btns {
+.nav-btns,
+.nav-tabs-vertical,
+.nav-cards {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -22,7 +20,6 @@
   padding: 0;
 }
 .nav-tabs-vertical{ 
-  @extend .nav-tabs;
   flex-direction: column;
 }
 .nav-pills,
@@ -32,11 +29,13 @@
 .nav-btns {
   gap: fonts.rem(5);
 }
+.nav-cards {
+  gap: fonts.rem(2);
+}
 .nav-tabs>li,
 .nav-pills>li,
-.nav-btns>li,
-.nav-item{
-  // padding-right: 5px;
+.nav-tabs .nav-item,
+.nav-pills .nav-item {
   margin-left: -1px;
   .nav-tabs-vertical &{ 
     padding-right: 0;
@@ -47,7 +46,6 @@
     margin-left: 0;
   }
   &:last-child{
-    // padding-right: 0;
     .nav-tabs-vertical &{ 
       padding-bottom: 0;
     } 
@@ -60,8 +58,8 @@
   border-radius: 0;
   background-color: val.brandPalette(navTabs_bgc);
   border-color: val.brandPalette(navTabs_borderColor);
-  border-width: 1px;
   border-style: solid;
+  border-width: 1px;
   color: val.brandPalette(navTabs_color);
   cursor: pointer;
   display: inline-flex;
@@ -84,18 +82,22 @@
 
 .nav-pills > li > a,
 .nav-pills .nav-link {
-  border-width: #{val.brandSizes(navPills-borderWidth)}px;
+  background-color: val.brandPalette(navPills_bg);
   border-color: val.brandPalette(navPills_border);
   border-style: solid;
+  border-width: #{val.brandSizes(navPills-borderWidth)}px;
+  border-radius: 0;
   cursor: pointer;
-  background-color: val.brandPalette(navPills_bg);
   color: val.brandPalette(navPills_color);
   display: inline-block;
   font-size: fonts.rem(val.fontSizes(navPills));
   font-weight: val.fontWeight(navPills);
   line-height: fonts.rem(val.lineHeight(navPills));
   height: min-content;
-  padding: 0 #{val.brandSizes(navPills-paddingX)}px;
+  margin: 0;
+  padding: 0 fonts.rem(val.brandSizes(navPills-paddingX));
+  text-decoration: none;
+  white-space: nowrap;
   &:hover,
   &:focus,
   &:active {
@@ -129,24 +131,24 @@
   }
 }
  
-.nav-pills>li.active>a,
-.nav-pills>li>a.active,
+.nav-pills > li.active > a,
+.nav-pills > li > a.active,
 .nav-pills .nav-link.active,
 .nav-pills .active .nav-link {
-  border-color: val.brandPalette(navPills-active_border);
   background-color: val.brandPalette(navPills-active_bg);
+  border-color: val.brandPalette(navPills-active_border);
   color: val.brandPalette(navPills-active_color);
   &:hover,
   &:focus,
   &:active {
-    border-color: val.brandPalette(navPills-active_border);
     background-color: val.brandPalette(navPills-active_bg);
+    border-color: val.brandPalette(navPills-active_border);
     color: val.brandPalette(navPills-active_color);
   }
 }
 
-.nav-btns>li.active>a,
-.nav-btns>li>a.active,
+.nav-btns > li.active > a,
+.nav-btns > li > a.active,
 .nav-btns .nav-link.active,
 .nav-btns .active .nav-link {
   @extend .btn-default__outline;
@@ -154,10 +156,36 @@
   background-color: val.brandColors(_white);
 }
 
+.nav-cards > li > a,
+.nav-cards .nav-link {
+  align-items: center;
+  background-color: val.brandPalette(navCards_bg);
+  border-bottom-color: val.brandPalette(navCards_border);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: val.brandPalette(navCards_color);
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: fonts.rem(val.fontSizes(navCards));
+  font-weight: val.fontWeight(navCards);
+  gap: fonts.rem(8);
+  padding: fonts.rem(val.tabsSizes(navCards_padding));
+}
+.nav-cards > li.active > a,
+.nav-cards > li > a.active,
+.nav-cards .nav-link.active,
+.nav-cards .active .nav-link {
+  background-color: val.brandPalette(navCards-active_bg);
+  border-bottom-color: val.brandPalette(navCards-active_border);
+  border-bottom-width: 2px;
+  color: val.brandPalette(navCards-active_color);
+}
+
 .tab-content {
   border-radius: 0;
   border: none;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   >.tab-pane {
     display: none;
   }
@@ -170,8 +198,8 @@
   background-color: val.brandPalette(tabsPane-active_bgc);
   border-radius: 0;
   border: none;
-  padding: fonts.rem(10) fonts.rem(10) 0;
+  padding: fonts.rem(val.tabsSizes(tabPane_padding)) fonts.rem(val.tabsSizes(tabPane_padding)) 0;
   .modal & {
-    padding: fonts.rem(10) 0 0;
+    padding: fonts.rem(val.tabsSizes(tabPane_padding)) 0 0;
   }
 }

@@ -6,55 +6,62 @@ anchor: components-unityBlock
 order: 2
 ---
 
-<div class="mb-10">Основная единица объединения информации - контейнер <code class="language-plaintext highlighter-rouge">unityBlock</code></div>
-<div class="mb-10">Имеет шапку <code class="language-plaintext highlighter-rouge">unityBlock_header</code> и unityBlock_body</div>
-<div class="mb-10">Шапка состоит из контейненров <code class="language-plaintext highlighter-rouge">unityBlock_headerItem</code>, которые позиционируются в разные строны.</div>
-<div class="mb-10">В шапке может быть иконка, заголовок с классами <code class="language-plaintext highlighter-rouge">h4 unityBlock_headerTitle</code>, кнопки действия и статусы.</div>
-<div class="mb-10">Все остальная информация находится в <code class="language-plaintext highlighter-rouge">unityBlock_body</code></div>
-<div class=""><code class="language-plaintext highlighter-rouge">unityBlock__noshadow</code> - убирает тень у контейнера</div>
-<div class=""><code class="language-plaintext highlighter-rouge">unityBlock__nobg</code> - убирает фон у контейнера</div>
-
-{% highlight html %}
 <div class="unityBlock">
-  <div class="unityBlock_header">
-      <div class="unityBlock_headerItem">
-            <?= Icons::wrapper('bicolors-car__24vb', ['class' => 'svg--icon svg--icon__24vb unityBlock_headerSvgTitle']) ?>
-          <h4 class="h4 unityBlock_headerTitle"><?= Yii::t('app', 'Название блока') ?></h4>
-      </div>
-      <div class="unityBlock_headerItem">
-        <button class="btn-icon">
-          <?= Icons::wrapper('bicolors-edit__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
-        </button>
-      </div>
-  </div>
-  <div class="unityBlock_body">
-    ...
-  </div>
-</div>
-{% endhighlight %}
-<div class="bs-docs-example">
-  <div class="unityBlock">
-    <div class="unityBlock_header">
-        <div class="unityBlock_headerItem">
-            <span class="svg--icon svg--icon__24vb  unityBlock_headerSvgTitle"> 
-              <svg width="24" height="24">
-                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-car__24vb"></use>
-              </svg>
-            </span>
-            <h4 class="h4 unityBlock_headerTitle">Название блока</h4>
+    <div class="mb-10">- Основная единица объединения информации - контейнер <code class="language-plaintext highlighter-rouge">unityBlock</code></div>
+    <div class="mb-10">- Может иметь шапку <code class="language-plaintext highlighter-rouge">unityBlock_header</code>, тело <code class="language-plaintext highlighter-rouge">unityBlock_body</code> и подвал <code class="language-plaintext highlighter-rouge">unityBlock_footer</code></div>
+    <div class="mb-10">- Шапка состоит из 2-x контейненров <code class="language-plaintext highlighter-rouge">unityBlock_headerItem</code>, которые позиционируются в разные строны.</div>
+    <div class="mb-10">- В шапке может быть иконка, заголовок с классами <code class="language-plaintext highlighter-rouge">h4 unityBlock_headerTitle</code>, кнопки действия и статусы.</div>
+    <div class="mb-10">- Все основная информация находится в <code class="language-plaintext highlighter-rouge">unityBlock_body</code></div>
+    <div class="mb-10">- Итоговая информация находится в <code class="language-plaintext highlighter-rouge">unityBlock_footer</code></div>
+    <h4>Модификации</h4>
+    <div class="mb-10"><code class="language-plaintext highlighter-rouge">unityBlock__noshadow</code> - убирает тень у контейнера</div>
+    <div class=""><code class="language-plaintext highlighter-rouge">unityBlock__nobg</code> - убирает фон у контейнера</div>
+
+    {% highlight html %}
+    <div class="unityBlock">
+        <div class="unityBlock_header">
+            <div class="unityBlock_headerItem">
+                <?= Icons::wrapper('bicolors-car__24vb', ['class' => 'svg--icon svg--icon__24vb unityBlock_headerSvgTitle']) ?>
+                <h4 class="h4 unityBlock_headerTitle">
+                    <?= Yii::t('app', 'Название блока') ?>
+                </h4>
+            </div>
+            <div class="unityBlock_headerItem">
+                <button class="btn-icon">
+                    <?= Icons::wrapper('bicolors-edit__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
+                </button>
+            </div>
         </div>
-        <div class="unityBlock_headerItem">
-          <button class="btn-icon">
-            <span class="svg--icon svg--icon__24vb "> 
-              <svg width="24" height="24">
-                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb"></use>
-              </svg>
-            </span>
-          </button>
+        <div class="unityBlock_body">
+        </div>
+        <div class="unityBlock_footer">
         </div>
     </div>
-    <div class="unityBlock_body">
-      ...
+    {% endhighlight %}
+    <div class="bs-docs-example">
+        <div class="unityBlock">
+            <div class="unityBlock_header">
+                <div class="unityBlock_headerItem">
+                    <span class="svg--icon svg--icon__24vb  unityBlock_headerSvgTitle">
+                        <svg width="24" height="24">
+                            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-car__24vb"></use>
+                        </svg>
+                    </span>
+                    <h4 class="h4 unityBlock_headerTitle">Название блока</h4>
+                </div>
+                <div class="unityBlock_headerItem">
+                    <button class="btn-icon">
+                        <span class="svg--icon svg--icon__24vb ">
+                            <svg width="24" height="24">
+                                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb"></use>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="unityBlock_body">
+                
+            </div>
+        </div>
     </div>
-  </div>
 </div>
