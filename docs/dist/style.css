@@ -15032,13 +15032,25 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   gap: 0.125rem;
 }
 
+.nav-info {
+  display: flex;
+  gap: 2px;
+  position: absolute;
+  right: 0;
+  top: -0.6875rem;
+}
+
 .nav-summary {
-  border-radius: 22px;
+  align-items: center;
+  border-radius: 1.375rem;
+  display: inline-flex;
   color: #ffffff;
   font-size: 0.8125rem;
+  justify-content: center;
   font-weight: 700;
-  height: 22px;
-  width: 22px;
+  line-height: 1.375rem;
+  height: 1.375rem;
+  width: 1.375rem;
 }
 
 .nav-tabs > li,
@@ -15071,6 +15083,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   height: 1.75rem;
   margin: 0;
   padding: 0px 15px;
+  position: relative;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -15099,6 +15112,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   height: min-content;
   margin: 0;
   padding: 0 0.5625rem;
+  position: relative;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -15114,6 +15128,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .nav-btns > li > a,
 .nav-btns .nav-link {
   cursor: pointer;
+  position: relative;
 }
 
 .nav-tabs > li.active > a,
@@ -15186,6 +15201,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   font-weight: 700;
   gap: 0.5rem;
   padding: 0.625rem;
+  position: relative;
 }
 .nav-cards > li > a .svg--icon,
 .nav-cards .nav-link .svg--icon {

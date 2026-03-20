@@ -28,14 +28,24 @@
 .nav-cards {
   gap: fonts.rem(2);
 }
-
+.nav-info{
+  display: flex;
+  gap: 2px;
+  position: absolute;
+  right: 0;
+  top: fonts.rem(-11);
+}
 .nav-summary{
-  border-radius: 22px;
+  align-items: center;
+  border-radius: fonts.rem(22);
+  display: inline-flex;
   color: val.brandColors(_white);
   font-size: fonts.rem(13);
+  justify-content: center;
   font-weight: 700;
-  height: 22px;
-  width: 22px;
+  line-height: fonts.rem(22);
+  height: fonts.rem(22);
+  width: fonts.rem(22);
 }
 
 .nav-tabs > li,
@@ -65,6 +75,7 @@
   height: fonts.rem(val.lineHeight(navTabs));
   margin: 0;
   padding: 0px 15px;
+  position: relative;
   text-decoration: none;
   white-space: nowrap;
   &:hover,
@@ -92,6 +103,7 @@
   height: min-content;
   margin: 0;
   padding: 0 fonts.rem(val.brandSizes(navPills-paddingX));
+  position: relative;
   text-decoration: none;
   white-space: nowrap;
   &:hover,
@@ -106,6 +118,7 @@
 .nav-btns > li > a,
 .nav-btns .nav-link {
   cursor: pointer;
+  position: relative;
   @extend .btn-link;
 }
 
@@ -167,6 +180,7 @@
   font-weight: val.fontWeight(navCards);
   gap: fonts.rem(8);
   padding: fonts.rem(val.tabsSizes(navCards_padding));
+  position: relative;
   .svg--icon{ 
     #{--svg-icon-fill}: val.brandPalette(navCards_svg);
     #{--svg-icon-fill_blue}: val.brandPalette(navCards_svg);
