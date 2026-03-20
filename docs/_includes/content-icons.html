@@ -15,8 +15,8 @@
   <div class="col-lg-8 col-xxl-9" role="main">
     {% for doc in site.icons %}
     {% if doc.category == page.category %}
-      <div class="pageItem" id="{{ doc.anchor }}">
-        <h2>{{ doc.Title }}</h2>
+      <div class="mb-30 pt-30" id="{{ doc.anchor }}">
+        <h2 class="bg-white mb-0 pl-10 pr-10 pt-5 pb-5 d-inline-flex">{{ doc.Title }}</h2>
         {{ doc.content }}
       </div>
     {% endif %}

@@ -5,7 +5,7 @@ category: icons
 anchor: icons-states
 order: 2
 ---
-
+<div class="unityBlock">
 <h4 class="mb-10">Модификация иконки bicolors-plus или bicolors-arrow_down при использование скрипта collspse.js</h4>
 <p>Cоздание эффекта замены на `bicolors-minus` или bicolors-arrow_up при расскрытии списка.</p>
 <br>Для иконки bicolors-arrow_down используется класс <code
@@ -54,21 +54,22 @@ order: 2
 
 {% highlight html %}
 <span class="iconModification">
-  <?= Icons::wrapper('bicolors-star') ?>
-  <?= Icons::wrapper('bicolors-favorite') ?>
-  <?= Icons::wrapper('bicolors-questions') ?>
-  <?= Icons::wrapper('bicolors-play') ?>
-  <?= Icons::wrapper('bicolors-minus__24vb') ?>
+    <?= Icons::wrapper('bicolors-star') ?>
+    <?= Icons::wrapper('bicolors-favorite') ?>
+    <?= Icons::wrapper('bicolors-questions') ?>
+    <?= Icons::wrapper('bicolors-play') ?>
+    <?= Icons::wrapper('bicolors-minus__24vb') ?>
 </span>
 <span class="iconModification active">
-  <?= Icons::wrapper('bicolors-star') ?>
-  <?= Icons::wrapper('bicolors-favorite') ?>
-  <?= Icons::wrapper('bicolors-questions') ?>
-  <?= Icons::wrapper('bicolors-play') ?>
-  <?= Icons::wrapper('bicolors-minus__24vb') ?>
-  <?= Icons::wrapper('bicolors-plus', ['class' => 'svg--icon svg--icon__notIconModification']) ?>
+    <?= Icons::wrapper('bicolors-star') ?>
+    <?= Icons::wrapper('bicolors-favorite') ?>
+    <?= Icons::wrapper('bicolors-questions') ?>
+    <?= Icons::wrapper('bicolors-play') ?>
+    <?= Icons::wrapper('bicolors-minus__24vb') ?>
+    <?= Icons::wrapper('bicolors-plus', ['class' => 'svg--icon svg--icon__notIconModification']) ?>
 </span>
 {% endhighlight %}
+
 <h4 class="mb-10">Модификация иконки классом с заменой на другую с залитым фоном или иную через классы родителя</h4>
 <p>Для применения у родителей указываем <code class="language-plaintext highlighter-rouge">iconModification iconModification_ver__1</code> и <code class="language-plaintext highlighter-rouge">iconModification iconModification_ver__2</code>
 <div class="d-flex w-100p mb-10 mt-10">
@@ -1559,4 +1560,5 @@ order: 2
       </div>
     </div>
   </div>
+</div>
 </div>
