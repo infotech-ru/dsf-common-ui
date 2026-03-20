@@ -5,7 +5,7 @@ category: forms
 anchor: radio-item
 order: 7
 ---
-
+<div class="unityBlock">
 <p>Стилизация переключателя в текст с иконкой</p>
 <div class="bs-docs-example mb-10">
     <div class="bg-default padding-10">
@@ -33,8 +33,9 @@ order: 7
 </div>
 
 {% highlight html %}
-     <div class="radioCheck mb-10">
-        <?= Html::radio(
+<?= Html::tag(
+        'div',
+        Html::radio(
             'nameGroup',
             $model,
             [
@@ -43,15 +44,18 @@ order: 7
                 'uncheckValue' => null,
                 'id' => "id-$main->id",
             ]
-        ) ?>
-        <?= Html::label(
-            '<span class="svg--icon">' . Icons::icon('bicolors-circle_check') . '</span>',
+        ) 
+        . Html::label(
+            Icons::wrapper('bicolors-circle_check'),
             "id-$model->id",
             [
                 'class' => 'radio',
                 'data-mainImageText' => Yii::t('app', 'Главное изображение'),
                 'data-plainImageText' => Yii::t('app', 'Сделать главным')
             ]
-        ) ?>
-    </div>
+        ),
+        ['class' => 'radioCheck mb-10']
+    )
+?>
 {% endhighlight %}
+</div>

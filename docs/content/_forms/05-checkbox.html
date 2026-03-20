@@ -5,7 +5,7 @@ category: forms
 anchor: checkbox-item
 order: 5
 ---
-
+<div class="unityBlock">
 <p>Для стилизации checkbox используется следующая структура.</p>
 
 <div class="bs-docs-example">
@@ -15,25 +15,34 @@ order: 5
     </div>
 </div>
 
-{% highlight html %}
-  <div class="checkbox-item">
+{% highlight HTML %}
+<div class="checkbox-item">
     <input type="checkbox" class="input-sm" id="testId">
     <label for="testId" class="checkbox"><span>Заголовок чекбокса</span></label>
-  </div>
-  
-  или
-  
-  use \yii\bootstrap\ActiveForm;
-
-  <?= $form->field(
-      $model, 
-      'onlyVehicles', 
-      [
-        'options' => ['class' => 'checkbox-item'], 
-        'template' => "{input}{beginLabel}<span>{labelTitle}</span>{endLabel}{error}"
-      ])
-      ->checkbox(['class' => 'input-sm'], false)
-      ->label(null, ['class' => 'checkbox']); 
-  ?>
-  
+</div>
 {% endhighlight %}
+  
+<p>PHP через расширенный ActiveForm</p>
+
+{% highlight PHP %}
+use app\widgets\ActiveForm;
+  
+<?= $form->field($model, 'onlyVehicles')->checkbox() ?>
+{% endhighlight %}
+
+<p>или PHP вариант template</p>
+
+{% highlight PHP %}
+use \yii\bootstrap\ActiveForm;
+<?= $form->field(
+    $model, 
+    'onlyVehicles', 
+    [
+      'options' => ['class' => 'checkbox-item'], 
+      'template' => "{input}{beginLabel}<span>{labelTitle}</span>{endLabel}{error}"
+    ])
+    ->checkbox(['class' => ''], false)
+    ->label(null, ['class' => 'checkbox']); 
+?>
+{% endhighlight %}
+</div>

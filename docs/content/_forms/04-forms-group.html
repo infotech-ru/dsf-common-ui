@@ -6,6 +6,7 @@ category: forms
 anchor: formsGroup
 order: 4
 ---
+<div class="unityBlock">
 <p>Класс обертка - inputGroup</p>
 <p>Класс-контейнер для элементов формы - селектов, инпутов - <code
         class="language-plaintext highlighter-rouge">form-control-container</code>. Каждрый инпут, селект в своем
@@ -32,45 +33,45 @@ order: 4
     </span>
 </a>
 <div class="collapse" id="collapseCode1">
-    {% highlight html %}
-    <div class="js-allSelect-formFree css-formFree">
-        <div class="inputGroup">
-            <div class="form-control-container">
-                <label class="control-label" for="formsGroup_10">Группировка инпута с иконкой справа внутри</label>
-                <input type="text" class="form-control" id="formsGroup_10">
-            </div>
-            <div class="inputGroup_append">
-                <span class="inputGroup_inner">
-                    <?= Icons::wrapper('bicolors-questions__24vb', ['class' => 'svg--icon svg--icon__24vb']]) ?>
-                </span>
-            </div>
+{% highlight html %}
+<div class="js-allSelect-formFree css-formFree">
+    <div class="inputGroup">
+        <div class="form-control-container">
+            <label class="control-label" for="formsGroup_10">Группировка инпута с иконкой справа внутри</label>
+            <input type="text" class="form-control" id="formsGroup_10">
         </div>
-        <div class="inputGroup">
-            <div class="form-control-container">
-                <label class="control-label" for="formsGroup_20">Группировка инпута с кнопкой-иконкой справа</label>
-                <input type="text" class="form-control" id="formsGroup_20">
-            </div>
-            <div class="inputGroup_append">
-                <button class="btn-default" type="button">
-                    <?= Icons::wrapper('bicolors-search']) ?>
-                </button>
-            </div>
-        </div>
-        <div class="inputGroup">
-            <div class="form-control-container">
-                <label class="control-label" for="formsGroup_30">Группировка инпута с кнопкой справа</label>
-                <input type="text" class="form-control" id="formsGroup_30">
-            </div>
-            <div class="inputGroup_append">
-                <span class="inputGroup_outer">
-                    <button class="btn-icon btn-icon__form btn-icon__danger" type="button">
-                        <?= Icons::wrapper('bicolors-delete']) ?>
-                    </button>
-                </span>
-            </div>
+        <div class="inputGroup_append">
+            <span class="inputGroup_inner">
+                <?= Icons::wrapper('bicolors-questions__24vb', ['class' => 'svg--icon svg--icon__24vb']]) ?>
+            </span>
         </div>
     </div>
-    {% endhighlight %}
+    <div class="inputGroup">
+        <div class="form-control-container">
+            <label class="control-label" for="formsGroup_20">Группировка инпута с кнопкой-иконкой справа</label>
+            <input type="text" class="form-control" id="formsGroup_20">
+        </div>
+        <div class="inputGroup_append">
+            <button class="btn-default" type="button">
+                <?= Icons::wrapper('bicolors-search']) ?>
+            </button>
+        </div>
+    </div>
+    <div class="inputGroup">
+        <div class="form-control-container">
+            <label class="control-label" for="formsGroup_30">Группировка инпута с кнопкой справа</label>
+            <input type="text" class="form-control" id="formsGroup_30">
+        </div>
+        <div class="inputGroup_append">
+            <span class="inputGroup_outer">
+                <button class="btn-icon btn-icon__form btn-icon__danger" type="button">
+                    <?= Icons::wrapper('bicolors-delete']) ?>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+{% endhighlight %}
 </div>
 <div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
     <div class="inputGroup mb-10">
@@ -136,45 +137,45 @@ order: 4
 </a>
 
 <div class="collapse" id="collapseCode2">
-    {% highlight html %}
-    <div class="js-allSelect-formFree css-formFree">
-        <div class="inputGroup">
-            <div class="inputGroup_prepend">
-                <span class="inputGroup_inner">
-                    <?= Icons::wrapper('bicolors-questions__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
-                </span>
-            </div>
-            <div class="form-control-container">
-                <label class="control-label" for="formsGroup_70">Группировка инпута с иконкой слева</label>
-                <input type="text" class="form-control" id="formsGroup_70">
-            </div>
+{% highlight html %}
+<div class="js-allSelect-formFree css-formFree">
+    <div class="inputGroup">
+        <div class="inputGroup_prepend">
+            <span class="inputGroup_inner">
+                <?= Icons::wrapper('bicolors-questions__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
+            </span>
         </div>
-        <div class="inputGroup">
-            <div class="inputGroup_prepend">
-                <button class="btn-default" type="button">
-                    <?= Icons::wrapper('bicolors-search']) ?>
-                </button>
-            </div>
-            <div class="form-control-container">
-                <label class="control-label" for="formsGroup_80">Группировка инпута с кнопкой-иконкой слева</label>
-                <input type="text" class="form-control" id="formsGroup_80">
-            </div>
-        </div>
-        <div class="inputGroup">
-            <div class="inputGroup_prepend">
-                <span class="inputGroup_outer">
-                    <button class="btn-icon btn-icon__form" type="button">
-                        <?= Icons::wrapper('bicolors-search']) ?>
-                    </button>
-                </span>
-            </div>
-            <div class="form-control-container">
-                <label class="control-label" for="formsGroup_80">Группировка инпута с кнопкой слева</label>
-                <input type="text" class="form-control" id="formsGroup_80">
-            </div>
+        <div class="form-control-container">
+            <label class="control-label" for="formsGroup_70">Группировка инпута с иконкой слева</label>
+            <input type="text" class="form-control" id="formsGroup_70">
         </div>
     </div>
-    {% endhighlight %}
+    <div class="inputGroup">
+        <div class="inputGroup_prepend">
+            <button class="btn-default" type="button">
+                <?= Icons::wrapper('bicolors-search']) ?>
+            </button>
+        </div>
+        <div class="form-control-container">
+            <label class="control-label" for="formsGroup_80">Группировка инпута с кнопкой-иконкой слева</label>
+            <input type="text" class="form-control" id="formsGroup_80">
+        </div>
+    </div>
+    <div class="inputGroup">
+        <div class="inputGroup_prepend">
+            <span class="inputGroup_outer">
+                <button class="btn-icon btn-icon__form" type="button">
+                    <?= Icons::wrapper('bicolors-search']) ?>
+                </button>
+            </span>
+        </div>
+        <div class="form-control-container">
+            <label class="control-label" for="formsGroup_80">Группировка инпута с кнопкой слева</label>
+            <input type="text" class="form-control" id="formsGroup_80">
+        </div>
+    </div>
+</div>
+{% endhighlight %}
 </div>
 
 <div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
@@ -242,24 +243,24 @@ order: 4
 </a>
 
 <div class="collapse" id="collapseCode3">
-    {% highlight html %}
-    <div class="inputGroup">
-        <div class="inputGroup_prepend">
-            <button class="btn-default__outline" type="button">
-                <?= Icons::wrapper('bicolors-search']) ?>
-            </button>
-        </div>
-        <div class="form-control-container">
-            <label class="control-label" for="formsGroup_110">Группировка инпута с кнопкам слева и справа</label>
-            <input type="text" class="form-control" id="formsGroup_110">
-        </div>
-        <div class="inputGroup_append">
-            <button class="btn-primary" type="button">
-                <?= Icons::wrapper('bicolors-search']) ?>
-            </button>
-        </div>
+{% highlight html %}
+<div class="inputGroup">
+    <div class="inputGroup_prepend">
+        <button class="btn-default__outline" type="button">
+            <?= Icons::wrapper('bicolors-search']) ?>
+        </button>
     </div>
-    {% endhighlight %}
+    <div class="form-control-container">
+        <label class="control-label" for="formsGroup_110">Группировка инпута с кнопкам слева и справа</label>
+        <input type="text" class="form-control" id="formsGroup_110">
+    </div>
+    <div class="inputGroup_append">
+        <button class="btn-primary" type="button">
+            <?= Icons::wrapper('bicolors-search']) ?>
+        </button>
+    </div>
+</div>
+{% endhighlight %}
 </div>
 
 <div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
@@ -333,32 +334,32 @@ order: 4
             ['class' => 'inputGroup mb-10']
         )?>
     </template>
-    {% highlight html %}
-    <div class="inputGroup mb-10">
-        <?= $form->field($model, 'createdAtFrom', 
-                ['options' => ['class' => 'form-control-container']])
-            ->widget(DatePicker::class,
-                [
-                    'options' => [
-                        'class' => 'form-control form-control__placeholder', 
-                        'placeholder' => Yii::t('app', 'От')
-                    ],
-                ])
-            ->label(Yii::t('app', 'Создано')) 
-        ?>
-        <?= $form->field($model, 'createdAtTo', 
-                ['options' => ['class' => 'form-control-container']])
-            ->widget(DatePicker::class,
-                [
-                    'options' => [
-                        'class' => 'form-control form-control__placeholder', 
-                        'placeholder' => Yii::t('app', 'До')
-                    ],
-                ])
-            ->label(false) 
-        ?>
-    </div>
-    {% endhighlight %}
+{% highlight html %}
+<div class="inputGroup mb-10">
+    <?= $form->field($model, 'createdAtFrom', 
+            ['options' => ['class' => 'form-control-container']])
+        ->widget(DatePicker::class,
+            [
+                'options' => [
+                    'class' => 'form-control form-control__placeholder', 
+                    'placeholder' => Yii::t('app', 'От')
+                ],
+            ])
+        ->label(Yii::t('app', 'Создано')) 
+    ?>
+    <?= $form->field($model, 'createdAtTo', 
+            ['options' => ['class' => 'form-control-container']])
+        ->widget(DatePicker::class,
+            [
+                'options' => [
+                    'class' => 'form-control form-control__placeholder', 
+                    'placeholder' => Yii::t('app', 'До')
+                ],
+            ])
+        ->label(false) 
+    ?>
+</div>
+{% endhighlight %}
 </div>
 <div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
     <div class="inputGroup mb-10">
@@ -394,24 +395,24 @@ order: 4
     </span>
 </a>
 <div class="collapse" id="collapseCode4">
-    {% highlight html %}
-    <div class="inputGroup">
-        <div class="inputGroup_prepend">
-            <span class="inputGroup_inner bg-light-grey">Заголовок группы</span>
-        </div>
-        <div class="form-control-container">
-            <input type="text" class="form-control form-control__placeholder" id="" placeholder="От">
-        </div>
-        <div class="form-control-container">
-            <input type="text" class="form-control form-control__placeholder" id="" placeholder="До">
-        </div>
-        <div class="inputGroup_append">
-            <button class="btn-primary" type="button">
-                <?= Icons::wrapper('bicolors-search']) ?>
-            </button>
-        </div>
+{% highlight html %}
+<div class="inputGroup">
+    <div class="inputGroup_prepend">
+        <span class="inputGroup_inner bg-light-grey">Заголовок группы</span>
     </div>
-    {% endhighlight %}
+    <div class="form-control-container">
+        <input type="text" class="form-control form-control__placeholder" id="" placeholder="От">
+    </div>
+    <div class="form-control-container">
+        <input type="text" class="form-control form-control__placeholder" id="" placeholder="До">
+    </div>
+    <div class="inputGroup_append">
+        <button class="btn-primary" type="button">
+            <?= Icons::wrapper('bicolors-search']) ?>
+        </button>
+    </div>
+</div>
+{% endhighlight %}
 </div>
 
 
@@ -452,32 +453,32 @@ order: 4
 </a>
 
 <div class="collapse" id="collapseCode5">
-    {% highlight html %}
-    <div class="inputGroup">
-        <div class="form-control-container">
-            <label class="control-label" for="formGroup130">Группировка селектов с одним заголовком</label>
-            <select class="selectpicker" id="formGroup130">
-                <option>Mustard</option>
-                <option>Ketchup</option>
-                <option>Relish</option>
-            </select>
-        </div>
-        <div class="form-control-container">
-            <select class="selectpicker" id="formGroup1301">
-                <option>Mustard</option>
-                <option>Ketchup</option>
-                <option>Relish</option>
-            </select>
-        </div>
-        <div class="inputGroup_append">
-            <span class="inputGroup_inner">
-                <button class="btn-icon btn-icon__danger" type="button">
-                    <?= Icons::wrapper('bicolors-delete']) ?>
-                </button>
-            </span>
-        </div>
+{% highlight html %}
+<div class="inputGroup">
+    <div class="form-control-container">
+        <label class="control-label" for="formGroup130">Группировка селектов с одним заголовком</label>
+        <select class="selectpicker" id="formGroup130">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </select>
     </div>
-    {% endhighlight %}
+    <div class="form-control-container">
+        <select class="selectpicker" id="formGroup1301">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </select>
+    </div>
+    <div class="inputGroup_append">
+        <span class="inputGroup_inner">
+            <button class="btn-icon btn-icon__danger" type="button">
+                <?= Icons::wrapper('bicolors-delete']) ?>
+            </button>
+        </span>
+    </div>
+</div>
+{% endhighlight %}
 </div>
 
 <div class="bs-docs-example mb-10 js-allSelect-formFree css-formFree">
@@ -820,4 +821,5 @@ order: 4
             </span>
         </div>
     </div>
+</div>
 </div>

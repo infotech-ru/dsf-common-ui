@@ -7,17 +7,17 @@ category: forms
 anchor: formsfree
 order: 3
 ---
-
+<div class="unityBlock">
 <h4>Всплывающие заголовки элементов формы. Скрипт formsFree</h4>
 <p>- Родителю добавляем классы <code class="language-plaintext highlighter-rouge js-copy-to-clipboard" data-copy="js-allSelect-formFree css-formFree">js-allSelect-formFree css-formFree</code></p>
 <p>- Инициализируем скрипт FormsFree();</p>
 
 {% highlight js %}
-  import { FormsFree } from "../forms-free";
+import { FormsFree } from "../forms-free";
 
-  mounted() {
+mounted() {
     FormsFree();
-  }
+}
 {% endhighlight %}
 {% highlight html %}
 <div class="js-allSelect-formFree css-formFree">
@@ -64,4 +64,5 @@ order: 3
       <input type="text" class="form-control" id="formsfree_2">
     </div>
   </div>
+</div>
 </div>

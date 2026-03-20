@@ -5,6 +5,7 @@ category: forms
 anchor: radio-item
 order: 6
 ---
+<div class="unityBlock">
 <p>Простая стилизация переключателя radio</p>
 
 <div class="bs-docs-example mb-10">
@@ -25,19 +26,20 @@ order: 6
 </div>
 
 {% highlight html %}
-        <?= $form->field($model, 'creditType')->radioList(RequestCredit::getCreditTypeList(), [
-            'class' => 'd-flex',
-            'item' => function ($index, $label, $name, $checked, $value) use ($model) {
-                $options = [
-                    'label' => null,
-                    'value' => $value,
-                    'id' => $id = Html::getInputId($model, 'creditType') . "-$value",
-                ];
+<?= $form->field($model, 'creditType')->radioList(RequestCredit::getCreditTypeList(), [
+    'class' => 'd-flex',
+    'item' => function ($index, $label, $name, $checked, $value) use ($model) {
+        $options = [
+            'label' => null,
+            'value' => $value,
+            'id' => $id = Html::getInputId($model, 'creditType') . "-$value",
+        ];
 
-                return '<div class="radio-item mr-10">'
-                    . Html::radio($name, $checked, $options)
-                    . Html::label($label, $id, ['class' => 'radio'])
-                    . '</div>';
-            }
-        ])->label(false) ?>
+        return '<div class="radio-item mr-10">'
+            . Html::radio($name, $checked, $options)
+            . Html::label($label, $id, ['class' => 'radio'])
+            . '</div>';
+    }
+])->label(false) ?>
 {% endhighlight %}
+</div>
