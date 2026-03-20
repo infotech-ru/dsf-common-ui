@@ -5,8 +5,8 @@ category: helpers
 anchor: helpers-data
 order: 8
 ---
-
-Установлено оформление для отдельных полей:
+<div class="unityBlock">
+<p>Установлено оформление для отдельных полей:</p>
 
 <h3>Телефона</h3>
 
@@ -28,13 +28,13 @@ order: 8
 <p>Для вывода hex значения рядом с кругом передаем его через дата-атрибут <code class="language-plaintext highlighter-rouge">data-colorfield</code></p>
 
 {% highlight html %}
-  <div class="phoneField__orange">+7(910)000-00-00</div>
-  <div class="phoneField__blue">+7(910)000-00-00</div>
-  <div class="commentField">комментарий</div>
-  <div class="form-group"> 
-      <label class="control-label bg-clear active">&nbsp;</label>
-      <?= $form->field($model, 'color', ['options' => ['class' => 'colorField colorField__form-control', 'data-colorField' => $model->color ? $model->color : '#000000']])->input('color', ['class' => 'colorField_formControl'])->label(false) ?>
-  </div>
+<div class="phoneField__orange">+7(910)000-00-00</div>
+<div class="phoneField__blue">+7(910)000-00-00</div>
+<div class="commentField">комментарий</div>
+<div class="form-group"> 
+    <label class="control-label bg-clear active">&nbsp;</label>
+    <?= $form->field($model, 'color', ['options' => ['class' => 'colorField colorField__form-control', 'data-colorField' => $model->color ? $model->color : '#000000']])->input('color', ['class' => 'colorField_formControl'])->label(false) ?>
+</div>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="phoneField__orange mb-10">+7(910)000-00-00</div>
@@ -116,7 +116,7 @@ order: 8
 <h3>Блок-визитка</h3>
 <p>Используется для вывода информации о клиенте или обе его контакте или об автомобиле.</p>
 {% highlight html %}
-  <div class="d-flex">
+<div class="d-flex">
     <div class="blockBusinessCardLeft">
         <div class="blockBusinessCardLeft_image blockBusinessCardLeft_image__personal">
           <img src="" />
@@ -124,7 +124,7 @@ order: 8
     </div>
     <div class="blockBusinessCardRight">
     </div>
-  </div>
+</div>
 {% endhighlight %}
 <div class="bs-docs-example">
     <div class="d-flex mb-10">
@@ -260,4 +260,5 @@ order: 8
       <div class="col-2 mb-10"><div class="square square{{ item.name }} h-100p"><span class="square_title">square{{ item.name }}</span></div></div>
     {% endfor %}
   </div>
+</div>
 </div>
