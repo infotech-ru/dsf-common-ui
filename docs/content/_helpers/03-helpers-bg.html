@@ -11,11 +11,11 @@ order: 3
 <div class="bs-docs-example">
   {% for item in site.data.jekyll.brandnamecolor %}
     {% if item.name == 'clear' %}
-      <div class="bg-grey padding-5 mb-10"><div class="bg-{{ item.name }} border border-white">bg-grey.padding-5 > border.border-white.bg-{{ item.name }}</div></div>
+      <div class="bg-grey padding-5 mb-10"><div class="bg-{{ item.name }} border border-white js-copy-to-clipboard" data-copy="bg-{{ item.name }}">bg-grey.padding-5 > border.border-white.bg-{{ item.name }}</div></div>
     {% elsif item.name == 'white' %}
-      <div class="bg-grey padding-5 mb-10"><div class="bg-{{ item.name }}">bg-grey.padding-5 > bg-{{ item.name }}</div></div>
+      <div class="bg-grey padding-5 mb-10"><div class="bg-{{ item.name }} js-copy-to-clipboard" data-copy="bg-{{ item.name }}">bg-grey.padding-5 > bg-{{ item.name }}</div></div>
     {% else %}
-      <div class="bg-{{ item.name }} padding-5 mb-10">bg-{{ item.name }}</div>
+      <div class="bg-{{ item.name }} padding-5 mb-10 js-copy-to-clipboard" data-copy="bg-{{ item.name }}">bg-{{ item.name }}</div>
     {% endif %}
   {% endfor %}
 </div>
@@ -23,4 +23,3 @@ order: 3
   <div class="bg-primary">...</div>
   <div class="bg-light-green">...</div>
 {% endhighlight %}
-</div>

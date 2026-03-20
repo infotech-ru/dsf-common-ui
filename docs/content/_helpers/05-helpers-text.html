@@ -158,22 +158,22 @@ order: 5
 <p>Для активаци hover-эффекта текста при наведении на элемент-родителя выставить класс на родителе - <code class="language-plaintext highlighter-rouge">textHoverTarget</code></p>
 
 {% highlight html %}
-  <div class="text-default">...</div>
-  <div class="text-primary textHover-danger">text-primary textHover-danger</div>
-  <div class="text-white textHover-orange">text-white textHover-orange</div>
-  <div class="textHoverTarget bg-muted text-center">text-clear bg-mu<span class="text-clear textHover-success">te</span>d text-center textHover-success on parent</div>
+<div class="text-default">...</div>
+<div class="text-primary textHover-danger">text-primary textHover-danger</div>
+<div class="text-white textHover-orange">text-white textHover-orange</div>
+<div class="textHoverTarget bg-muted text-center">text-clear bg-mu<span class="text-clear textHover-success">te</span>d text-center textHover-success on parent</div>
 {% endhighlight %}
 
 <div class="bs-docs-example">
   {% for item in site.data.jekyll.brandnamecolor %}
     {% if item.name == 'primary' %}
-      <div class="mb-10"><span class="text-{{ item.name }} textHover-danger fontWeightBold">text-{{ item.name }} textHover-danger</span></div>
+      <div class="mb-10"><span class="text-{{ item.name }} textHover-danger fontWeightBold js-copy-to-clipboard" data-copy="text-{{ item.name }}">text-{{ item.name }} textHover-danger</span></div>
     {% elsif item.name == 'white' %}
-      <div class="bg-default padding-5 mb-10"><span class="text-{{ item.name }} textHover-orange fontWeightBold">text-{{ item.name }} textHover-orange</span></div>
+      <div class="bg-default padding-5 mb-10 js-copy-to-clipboard" data-copy="text-{{ item.name }}"><span class="text-{{ item.name }} textHover-orange fontWeightBold">text-{{ item.name }} textHover-orange</span></div>
     {% elsif item.name == 'clear' %}
-      <div class="textHoverTarget bg-muted text-center fontWeightBold padding-5 mb-10">text-clear bg-mu<span class="text-{{ item.name }} textHover-success">te</span>d text-center textHover-success on parent</div>
+      <div class="textHoverTarget bg-muted text-center fontWeightBold padding-5 mb-10 js-copy-to-clipboard" data-copy="text-{{ item.name }}">text-clear bg-mu<span class="text-{{ item.name }} textHover-success">te</span>d text-center textHover-success on parent</div>
     {% else %}
-      <div class="padding-5 mb-10"><span class="text-{{ item.name }}">text-{{ item.name }}</span></div>
+      <div class="padding-5 mb-10 js-copy-to-clipboard" data-copy="text-{{ item.name }}"><span class="text-{{ item.name }}">text-{{ item.name }}</span></div>
     {% endif %}
   {% endfor %}
 </div>
@@ -192,10 +192,10 @@ order: 5
 <p>Используется <code class="language-plaintext highlighter-rouge">headline</code> для контейнера родителя, <code class="language-plaintext highlighter-rouge">headline_title</code> - для оформления заголовка и <code class="language-plaintext highlighter-rouge">headline__optional</code></p>
 
 {% highlight html %}
-  <div class="headline">
-    <div class="headline_title">Заголовок</div>
-    <div class="headline_optional">доп. инфа</div>
-  </div>
+<div class="headline">
+  <div class="headline_title">Заголовок</div>
+  <div class="headline_optional">доп. инфа</div>
+</div>
 {% endhighlight %}
 <div class="bs-docs-example">
   <div class="headline">
