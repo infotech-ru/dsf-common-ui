@@ -15032,6 +15032,15 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   gap: 0.125rem;
 }
 
+.nav-summary {
+  border-radius: 22px;
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  height: 22px;
+  width: 22px;
+}
+
 .nav-tabs > li,
 .nav-pills > li,
 .nav-tabs .nav-item,
