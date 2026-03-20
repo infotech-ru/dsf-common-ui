@@ -530,7 +530,7 @@ pre{
   content: 'Copy';
   display: block;
   bottom: auto;
-  top: -80%;
+  top: -14px;
   position: absolute;
   right: -16px;
   align-items: center;

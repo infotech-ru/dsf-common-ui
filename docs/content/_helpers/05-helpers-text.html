@@ -169,11 +169,11 @@ order: 5
     {% if item.name == 'primary' %}
       <div class="mb-10"><span class="text-{{ item.name }} textHover-danger fontWeightBold js-copy-to-clipboard" data-copy="text-{{ item.name }}">text-{{ item.name }} textHover-danger</span></div>
     {% elsif item.name == 'white' %}
-      <div class="bg-default padding-5 mb-10 js-copy-to-clipboard" data-copy="text-{{ item.name }}"><span class="text-{{ item.name }} textHover-orange fontWeightBold">text-{{ item.name }} textHover-orange</span></div>
+      <div class="bg-default padding-5 mb-10"><span class="text-{{ item.name }} textHover-orange fontWeightBold js-copy-to-clipboard" data-copy="text-{{ item.name }}">text-{{ item.name }} textHover-orange</span></div>
     {% elsif item.name == 'clear' %}
-      <div class="textHoverTarget bg-muted text-center fontWeightBold padding-5 mb-10 js-copy-to-clipboard" data-copy="text-{{ item.name }}">text-clear bg-mu<span class="text-{{ item.name }} textHover-success">te</span>d text-center textHover-success on parent</div>
+      <div class="textHoverTarget bg-muted text-center fontWeightBold padding-5 mb-10">text-clear bg-mu<span class="text-{{ item.name }} textHover-success js-copy-to-clipboard" data-copy="text-{{ item.name }}">te</span>d text-center textHover-success on parent</div>
     {% else %}
-      <div class="padding-5 mb-10 js-copy-to-clipboard" data-copy="text-{{ item.name }}"><span class="text-{{ item.name }}">text-{{ item.name }}</span></div>
+      <div class="padding-5 mb-10"><span class="text-{{ item.name }} js-copy-to-clipboard" data-copy="text-{{ item.name }}">text-{{ item.name }}</span></div>
     {% endif %}
   {% endfor %}
 </div>
