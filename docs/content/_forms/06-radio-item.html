@@ -25,7 +25,7 @@ order: 6
     </div>
 </div>
 
-{% highlight html %}
+{% highlight PHP %}
 <?= $form->field($model, 'creditType')->radioList(RequestCredit::getCreditTypeList(), [
     'class' => 'd-flex',
     'item' => function ($index, $label, $name, $checked, $value) use ($model) {

@@ -48,7 +48,9 @@ use app\widgets\Toggle
     ->widget(Toggle::class, ['options' => ['value' => ''],])
     ->label($model->getAttributeLabel('XXX'), ['class' => 'form-control-static ml-5']) ?>
 {% endhighlight %}
+
 <p>php radioList</p>
+
 {% highlight PHP %}
 <?= $form->field($client, 'exampleName0', [
     'options' => [

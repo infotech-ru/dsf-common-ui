@@ -10,14 +10,14 @@ order: 2
 <h3>Использование иконок в шапке.</h3>
 <p>Для подсказки вставить контейнер с иконкой и текстом подсказки</p>
 
-{% highlight html %}<span class="tableHelpIcon" data-toggle="tooltip" title="Текст подсказки"><?= Icons::icon('bicolors-questions_full')?></span>{% endhighlight %}
+{% highlight PHP %}<?= Icons::wrapper('bicolors-questions_full', ['class' => 'svg--icon tableHelpIcon' 'data-toggle' => 'tooltip 'title' => 'Текст подсказки']) ?>{% endhighlight %}
 
 <p>А на ячейку добавляем класс <code class="language-plaintext highlighter-rouge">tableHelpIcon_td</code></p>
 
 
 <p>Для функционала раскрытия колонок используем</p>
 
-{% highlight html %}<a class="css-td-expand collapsible-col collapseTdIcon_link"><span class="collapseTdIcon"><?= Icons::icon('bicolors-width__24vb') ?></span></a>{% endhighlight %}
+{% highlight PHP %}<?= Html::a(Icons::wrapper('bicolors-width__24vb', ['class' => 'svg--icon svg--icon__24vb collapseTdIcon']), '#', ['class' => 'css-td-expand collapsible-col collapseTdIcon_link']) ?>{% endhighlight %}
 
 <p>На ячейку добавляем класс <code class="language-plaintext highlighter-rouge">collapseTdIcon_td</code></p>
 
@@ -29,11 +29,11 @@ order: 2
 
 <p>Сами иконки оборачиваем в </p>
 
-{% highlight html %}<span class="svg--icon"><?= Icons::icon('bicolors-edit') ?></span>{% endhighlight %}
+{% highlight PHP %}<?= Icons::wrapper('bicolors-edit') ?>{% endhighlight %}
 
 <p>Функционал удаления выделяем цветом</p>
 
-{% highlight html %}<span class="svg--icon svg-danger"><?= Icons::icon('bicolors-delete') ?></span>{% endhighlight %}
+{% highlight php %}<?= Icons::wrapper('bicolors-delete', ['class' => 'svg--icon svg-danger']) ?>{% endhighlight %}
 
 {% highlight html %}
 <table class="table table__border">
