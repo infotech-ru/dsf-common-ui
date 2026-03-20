@@ -1,0 +1,44 @@
+---
+Title: Основной класс
+menutitle: Основное
+category: buttons
+anchor: general
+rank: 1
+---
+<div class="unityBlock">
+<p>Внешний вид класса <code class="language-plaintext highlighter-rouge">btn</code> - соответствует <code class="language-plaintext highlighter-rouge">btn-default</code>. Используется, если это требует скрипт bootstrap.</p>
+
+<h4>Изменение текста в кнопке</h4>
+<p>Для изменения с помощью класса <code class="language-plaintext highlighter-rouge">.active</code> текста в кнопке используем класс-модификатор <code class="language-plaintext highlighter-rouge">.btn__activable</code>. Для текста использем классы <code class="language-plaintext highlighter-rouge">btn-text_isDefaultOn</code> и <code class="language-plaintext highlighter-rouge">btn-text_isActiveOn</code>, которые изменяют display:inline-block на display:none при <code class="language-plaintext highlighter-rouge">.active</code></p>
+
+{% highlight html %}
+<button class="btn">Кнопка btn</button>
+<button class="btn-default btn__activable">
+    <span class="btn-text">
+        <span class="btn-text_isDefaultOn">Кнопка без active</span>
+        <span class="btn-text_isActiveOn">Кнопка с active</span>
+    </span>
+</button>
+<button class="btn-default btn__activable active">
+    <span class="btn-text">
+        <span class="btn-text_isDefaultOn">Кнопка без active</span>
+        <span class="btn-text_isActiveOn">Кнопка с active</span>
+    </span>
+</button>
+{% endhighlight %}
+<div class="bs-docs-example">
+  <button class="btn">Кнопка btn</button>
+  <button class="btn-default btn__activable">
+    <span class="btn-text">
+      <span class="btn-text_isDefaultOn">Кнопка без active</span>
+      <span class="btn-text_isActiveOn">Кнопка с active</span>
+    </span>
+  </button>
+  <button class="btn-default btn__activable active">
+    <span class="btn-text">
+      <span class="btn-text_isDefaultOn">Кнопка без active</span>
+      <span class="btn-text_isActiveOn">Кнопка с active</span>
+    </span>
+  </button>
+</div>
+</div>
