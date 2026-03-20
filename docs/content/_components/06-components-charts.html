@@ -44,104 +44,104 @@ order: 6
         </span>
     </a>
     <div class="collapse" id="collapse-chart">
-        {% highlight html %}
-        <div class="chartsBlock mb-10">
-        <div class="chartsBlock_header">
-            <div class="chartsBlock_headerItem">
-                <?= Icons::wrapper("bicolors-car__24vb", ['class' => 'svg--icon mr-10']) ?>
-                <h3>Название графика</h3>
-            </div>
-            <div class="chartsBlock_headerItem">
-            </div>
-        </div>
-        <div class="chartsBlock_headerSubtitles">Подзаголовок</div>
-        <div class="chartsBlock_body">
-            <?= Highcharts::widget([
-                'htmlOptions' => [
-                    'class' => '',
+{% highlight html %}
+<div class="chartsBlock mb-10">
+<div class="chartsBlock_header">
+    <div class="chartsBlock_headerItem">
+        <?= Icons::wrapper("bicolors-car__24vb", ['class' => 'svg--icon mr-10']) ?>
+        <h3>Название графика</h3>
+    </div>
+    <div class="chartsBlock_headerItem">
+    </div>
+</div>
+<div class="chartsBlock_headerSubtitles">Подзаголовок</div>
+<div class="chartsBlock_body">
+    <?= Highcharts::widget([
+        'htmlOptions' => [
+            'class' => '',
+        ],
+        'options' => array_merge(
+            [
+                'chart' => [
+                    'height' => 220,
+                    'spacingTop' => 20,
+                    'width' => null,
+                    'style' => [
+                        'fontFamily' => 'inherit',
+                    ],
                 ],
-                'options' => array_merge(
-                    [
-                        'chart' => [
-                            'height' => 220,
-                            'spacingTop' => 20,
-                            'width' => null,
-                            'style' => [
-                                'fontFamily' => 'inherit',
-                            ],
+                'title' => [
+                    'text' => '',
+                ],
+                'exporting' => [
+                    'enabled' => true,
+                    'buttons' => [ // если нужно вывести меню экспорта
+                        'contextButton' => [
+                            'buttonSpacing' => 0,
+                            'height' => 20,
+                            'menuItems' => ['viewFullscreen', 'printChart', 'separator', 'downloadPNG', 'downloadJPEG','downloadPDF'],
+                            'symbolStrokeWidth' =>  1,
+                            'symbolFill' =>  'var(--chart-label-color)',
+                            'symbolStroke' =>  'var(--chart-label-color)',
+                            'symbolSize' => 16,
+                            'symbolX' => 11,
+                            'x' => 6,
+                            'y' => -24,
+                            'width' => 20,
                         ],
-                        'title' => [
-                            'text' => '',
-                        ],
-                        'exporting' => [
+                    ],
+                ],
+                'credits'=> [
+                    'enabled' => false
+                ],
+                'colors' => [
+                        'var(--chart-blue)',
+                        'var(--chart-green)',
+                        'var(--chart-red)',
+                        'var(--chart-light-blue)',
+                        'var(--chart-orange)',
+                        'var(--chart-rose)',
+                        'var(--chart-light-yellow2)',
+                        'var(--chart-dark-green)',
+                        'var(--chart-grey)',
+                        'var(--chart-light-green)',
+                        'var(--chart-dark-grey)',
+                        'var(--chart-black)',
+                        'var(--chart-dark-red)',
+                        'var(--chart-dark-orange)',
+                        'var(--chart-yellow2)',
+                ],
+                'plotOptions' => [
+                    'series' => [
+                        'lineWidth' => 2, // для 'chart' => ['type' => 'spline']
+                        'dataLabels' => [
                             'enabled' => true,
-                            'buttons' => [ // если нужно вывести меню экспорта
-                                'contextButton' => [
-                                    'buttonSpacing' => 0,
-                                    'height' => 20,
-                                    'menuItems' => ['viewFullscreen', 'printChart', 'separator', 'downloadPNG', 'downloadJPEG','downloadPDF'],
-                                    'symbolStrokeWidth' =>  1,
-                                    'symbolFill' =>  'var(--chart-label-color)',
-                                    'symbolStroke' =>  'var(--chart-label-color)',
-                                    'symbolSize' => 16,
-                                    'symbolX' => 11,
-                                    'x' => 6,
-                                    'y' => -24,
-                                    'width' => 20,
-                                ],
-                            ],
-                        ],
-                        'credits'=> [
-                            'enabled' => false
-                        ],
-                        'colors' => [
-                                'var(--chart-blue)',
-                                'var(--chart-green)',
-                                'var(--chart-red)',
-                                'var(--chart-light-blue)',
-                                'var(--chart-orange)',
-                                'var(--chart-rose)',
-                                'var(--chart-light-yellow2)',
-                                'var(--chart-dark-green)',
-                                'var(--chart-grey)',
-                                'var(--chart-light-green)',
-                                'var(--chart-dark-grey)',
-                                'var(--chart-black)',
-                                'var(--chart-dark-red)',
-                                'var(--chart-dark-orange)',
-                                'var(--chart-yellow2)',
-                        ],
-                        'plotOptions' => [
-                            'series' => [
-                                'lineWidth' => 2, // для 'chart' => ['type' => 'spline']
-                                'dataLabels' => [
-                                    'enabled' => true,
-                                    'style' => [
-                                        'color' => 'var(--chart-label-color)',
-                                        'fontSize' => '11px',
-                                        'fontWeight' => 'normal',
-                                        'textOutline' => false,
-                                    ],
-                                ],
-                            ],
-                        ],
-                        'legend' => [
-                            'align' => 'right', // для ['chart' => 'type' => 'pie']
-                            'verticalAlign' => 'middle', // для ['chart' => 'type' => 'pie']
-                            'layout' => 'vertical', // для ['chart' => 'type' => 'pie']
-                            'itemStyle' => [
+                            'style' => [
+                                'color' => 'var(--chart-label-color)',
+                                'fontSize' => '11px',
                                 'fontWeight' => 'normal',
+                                'textOutline' => false,
                             ],
-                            'padding' => 0, // для ['chart' => 'type' => 'pie']
-                            'itemWidth' => null, // для ['chart' => 'type' => 'pie']
-                            'width' => "60%", // для ['chart' => 'type' => 'pie']
                         ],
-                        'tooltip' => [
-                            'backgroundColor' => "#ffffff",
-                        ],
-        </div>
-        </div>
-        {% endhighlight %}
+                    ],
+                ],
+                'legend' => [
+                    'align' => 'right', // для ['chart' => 'type' => 'pie']
+                    'verticalAlign' => 'middle', // для ['chart' => 'type' => 'pie']
+                    'layout' => 'vertical', // для ['chart' => 'type' => 'pie']
+                    'itemStyle' => [
+                        'fontWeight' => 'normal',
+                    ],
+                    'padding' => 0, // для ['chart' => 'type' => 'pie']
+                    'itemWidth' => null, // для ['chart' => 'type' => 'pie']
+                    'width' => "60%", // для ['chart' => 'type' => 'pie']
+                ],
+                'tooltip' => [
+                    'backgroundColor' => "#ffffff",
+                ],
+</div>
+</div>
+{% endhighlight %}
     </div>
 
 <div class="bs-docs-example">

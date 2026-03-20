@@ -7,16 +7,21 @@ anchor: components-labels
 order: 10
 ---
 <div class="unityBlock">
-  <h3>Форма лейбла</h3>
-  <div class="mb-20">
-  <p><code class="language-plaintext highlighter-rouge">.label</code> - Имеет квадратные очертания. Используется для указания статуса.</p>
-  <p><code class="language-plaintext highlighter-rouge">.label_chip</code> - Чипс более закругленный, имеет состояние hover и active. Позволяют пользователям вводить информацию, делать выбор, фильтровать контент или инициировать действия.</p>
-  <p><code class="language-plaintext highlighter-rouge">.label_small</code> - Имеет маленький размер. Используется для счетчиков в кнопках и подобном.</p>
-  <p><code class="language-plaintext highlighter-rouge">.label_circle</code>- Круглый. Используется для цифр</p>
-  </div>
+    <h3>Форма лейбла</h3>
+    <div class="mb-20">
+        <p><code class="language-plaintext highlighter-rouge">.label</code> - Имеет квадратные очертания. Используется
+            для указания статуса.</p>
+        <p><code class="language-plaintext highlighter-rouge">.label_chip</code> - Чипс более закругленный, имеет
+            состояние hover и active. Позволяют пользователям вводить информацию, делать выбор, фильтровать контент или
+            инициировать действия.</p>
+        <p><code class="language-plaintext highlighter-rouge">.label_small</code> - Имеет маленький размер. Используется
+            для счетчиков в кнопках и подобном.</p>
+        <p><code class="language-plaintext highlighter-rouge">.label_circle</code>- Круглый. Используется для цифр</p>
+    </div>
 
-  <h3 class="mt-20">Цветовая модификация</h3>
-      <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-labels-color" role="button" aria-expanded="false" aria-controls="collpase-labels-color">
+    <h3 class="mt-20">Цветовая модификация</h3>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse"
+        href="#collpase-labels-color" role="button" aria-expanded="false" aria-controls="collpase-labels-color">
         <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
             <svg width="24" height="24">
                 <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
@@ -29,69 +34,74 @@ order: 10
     </a>
 
     <div class="collapse" id="collpase-labels-color">
-      {% highlight html %}
-        <span class="label label-primary">label-primary</span>
-        <span class="label label-primary__outline">label-primary__outline</span>
-        <span class="label label-yellow__outline">label-yellow__outline</span>
-        <span class="label_chip label-primary">label-primary</span>
-        <span class="label_chip label-primary__outline">label-primary__outline</span>
-        <span class="label_chip label-yellow">label-yellow</span>
-        <span class="label_chip label-yellow__outline">label-yellow__outline</span>
-        <span class="label_small label-danger">2</span>
-        <span class="label_circle label-info">20</span>
-      {% endhighlight %}
-  </div>
-<div class="bs-docs-example">
-  <h4 class="mb-10">Label</h4>
-  <div class="d-flex flex-wrap gap-10 mb-20">
-    {% for item in site.data.jekyll.brandlabel %}
-      <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
-    {% endfor %}
-  </div>
-  <h4 class="mb-10">Chip</h4>
-  <div class="d-flex flex-wrap gap-10 mb-10">
-    {% for item in site.data.jekyll.brandlabel %}
-      <span class="label_chip label-{{ item.name }}">label-{{ item.name }}</span>
-    {% endfor %}
-  </div>
-  <div class="d-flex flex-wrap gap-10 mb-20">
-    {% for item in site.data.jekyll.brandlabel %}
-      <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}__outline</span>
-    {% endfor %}
-  </div>
-  <h4 class="mb-10">label_small и label_circle</h4>
-  <div class="d-flex flex-wrap gap-10">
-    <button class="btn-icon p-relative">
-       <span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-eye"></use></svg></span>
-       <span class="label_small label-danger">2</span>
-    </button>
-    <span class="label_circle label-info">20</span>
-  </div>
-</div>
+{% highlight html %}
+<span class="label label-primary">label-primary</span>
+<span class="label label-primary__outline">label-primary__outline</span>
+<span class="label label-yellow__outline">label-yellow__outline</span>
+<span class="label_chip label-primary">label-primary</span>
+<span class="label_chip label-primary__outline">label-primary__outline</span>
+<span class="label_chip label-yellow">label-yellow</span>
+<span class="label_chip label-yellow__outline">label-yellow__outline</span>
+<span class="label_small label-danger">2</span>
+<span class="label_circle label-info">20</span>
+{% endhighlight %}
+    </div>
+    <div class="bs-docs-example">
+        <h4 class="mb-10">Label</h4>
+        <div class="d-flex flex-wrap gap-10 mb-20">
+            {% for item in site.data.jekyll.brandlabel %}
+            <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
+            {% endfor %}
+        </div>
+        <h4 class="mb-10">Chip</h4>
+        <div class="d-flex flex-wrap gap-10 mb-10">
+            {% for item in site.data.jekyll.brandlabel %}
+            <span class="label_chip label-{{ item.name }}">label-{{ item.name }}</span>
+            {% endfor %}
+        </div>
+        <div class="d-flex flex-wrap gap-10 mb-20">
+            {% for item in site.data.jekyll.brandlabel %}
+            <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}__outline</span>
+            {% endfor %}
+        </div>
+        <h4 class="mb-10">label_small и label_circle</h4>
+        <div class="d-flex flex-wrap gap-10">
+            <button class="btn-icon p-relative">
+                <span class="svg--icon"><svg class="bicolors-plus" width="24" height="24">
+                        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-eye"></use>
+                    </svg></span>
+                <span class="label_small label-danger">2</span>
+            </button>
+            <span class="label_circle label-info">20</span>
+        </div>
+    </div>
 
-<h3 class="mt-20">Семантика цвета при использовании <code class="language-plaintext highlighter-rouge">.label</code> для статусов</h3>
-<p>Для "промежуточных" статусов используется <code class="language-plaintext highlighter-rouge">label-info</code></p>
+    <h3 class="mt-20">Семантика цвета при использовании <code class="language-plaintext highlighter-rouge">.label</code>
+        для статусов</h3>
+    <p>Для "промежуточных" статусов используется <code class="language-plaintext highlighter-rouge">label-info</code>
+    </p>
 
-<div class="bs-docs-example d-flex flex-wrap gap-10">
-  <span class="label label-grey2">Черновик</span>
-  <span class="label label-light-yellow2">Неполные данные</span>
-  <span class="label label-light-yellow2">Необходимы исправления</span>
-  <span class="label label-light-green2">Исправлен</span>
-  <span class="label label-light-green">Признан</span>
-  <span class="label label-dark-green">Выполнен</span>
-  <span class="label label-light-red">Отклонен</span>
-  <span class="label label-grey4">Закрыт</span>
-  <span class="label label-info">Запрос</span>
-  <span class="label label-info">Новый</span>
-  <span class="label label-info">Необходим осмотр</span>
-  <span class="label label-info">Обработан</span>
-  <span class="label label-info">Принят </span>
-</div>
+    <div class="bs-docs-example d-flex flex-wrap gap-10">
+        <span class="label label-grey2">Черновик</span>
+        <span class="label label-light-yellow2">Неполные данные</span>
+        <span class="label label-light-yellow2">Необходимы исправления</span>
+        <span class="label label-light-green2">Исправлен</span>
+        <span class="label label-light-green">Признан</span>
+        <span class="label label-dark-green">Выполнен</span>
+        <span class="label label-light-red">Отклонен</span>
+        <span class="label label-grey4">Закрыт</span>
+        <span class="label label-info">Запрос</span>
+        <span class="label label-info">Новый</span>
+        <span class="label label-info">Необходим осмотр</span>
+        <span class="label label-info">Обработан</span>
+        <span class="label label-info">Принят </span>
+    </div>
 
-<h3 class="mt-20">Модификации лейблов</h3>
+    <h3 class="mt-20">Модификации лейблов</h3>
 
-<h4 class="mb-10">Модификации текста</h4>
-    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-labels-modText" role="button" aria-expanded="false" aria-controls="collpase-labels-modText">
+    <h4 class="mb-10">Модификации текста</h4>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse"
+        href="#collpase-labels-modText" role="button" aria-expanded="false" aria-controls="collpase-labels-modText">
         <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
             <svg width="24" height="24">
                 <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
@@ -104,23 +114,27 @@ order: 10
     </a>
 
     <div class="collapse" id="collpase-labels-modText">
-      {% highlight html %}
-          <span class="label label-success fontWeightNormal">fontWeightNormal</span>
-          <span class="label label-danger transformNone">transformNone</span>
-          <span class="label label-success fontWeightNormal"><span class="label_text">fontWeightNormal</span><span class="label_text fontWeightBold">Bold</span></span>
-      {% endhighlight %}
+{% highlight html %}
+<span class="label label-success fontWeightNormal">fontWeightNormal</span>
+<span class="label label-danger transformNone">transformNone</span>
+<span class="label label-success fontWeightNormal"><span class="label_text">fontWeightNormal</span><span class="label_text fontWeightBold">Bold</span></span>
+{% endhighlight %}
     </div>
     <div class="bs-docs-example d-flex flex-wrap gap-10">
         <span class="label label-success fontWeightNormal">fontWeightNormal</span>
         <span class="label label-danger transformNone">transformNone</span>
-        <span class="label label-light-red fontWeightNormal"><span class="label_text">fontWeightNormal</span><span class="label_text fontWeightBold">Bold</span></span>
-        <span class="label_chip label-danger__outline"><span class="label_text">label_chip</span><span class="label_text fontWeightBold">Bold</span></span>
+        <span class="label label-light-red fontWeightNormal"><span class="label_text">fontWeightNormal</span><span
+                class="label_text fontWeightBold">Bold</span></span>
+        <span class="label_chip label-danger__outline"><span class="label_text">label_chip</span><span
+                class="label_text fontWeightBold">Bold</span></span>
     </div>
 
     <h4 class="mb-10">Модификации размера</h4>
 
-    <p>Для <code class="language-plaintext highlighter-rouge">.label</code> увеличенный размер - <code class="language-plaintext highlighter-rouge">.label__big</code></p>
-    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-labels-modsize" role="button" aria-expanded="false" aria-controls="collpase-labels-modsize">
+    <p>Для <code class="language-plaintext highlighter-rouge">.label</code> увеличенный размер - <code
+            class="language-plaintext highlighter-rouge">.label__big</code></p>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse"
+        href="#collpase-labels-modsize" role="button" aria-expanded="false" aria-controls="collpase-labels-modsize">
         <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
             <svg width="24" height="24">
                 <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
@@ -133,17 +147,20 @@ order: 10
     </a>
 
     <div class="collapse" id="collpase-labels-modsize">
-      {% highlight html %}
-          <span class="label label-warning">label</span>
-          <span class="label label-warning label__big">label__big</span>
-      {% endhighlight %}
+{% highlight html %}
+<span class="label label-warning">label</span>
+<span class="label label-warning label__big">label__big</span>
+{% endhighlight %}
     </div>
     <div class="bs-docs-example d-flex flex-wrap align-center gap-10">
         <span class="label label-warning">label</span>
         <span class="label label-warning label__big">label__big</span>
     </div>
-    <p>Для <code class="language-plaintext highlighter-rouge">.label_chip</code> увеличенный размер - <code class="language-plaintext highlighter-rouge">.label_chip__big</code> и уменьшеные размер <code class="language-plaintext highlighter-rouge">.label_chip__small</code></p>
-    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-labels-size-chip" role="button" aria-expanded="false" aria-controls="collpase-labels-size-chip">
+    <p>Для <code class="language-plaintext highlighter-rouge">.label_chip</code> увеличенный размер - <code
+            class="language-plaintext highlighter-rouge">.label_chip__big</code> и уменьшеные размер <code
+            class="language-plaintext highlighter-rouge">.label_chip__small</code></p>
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse"
+        href="#collpase-labels-size-chip" role="button" aria-expanded="false" aria-controls="collpase-labels-size-chip">
         <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
             <svg width="24" height="24">
                 <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
@@ -156,13 +173,13 @@ order: 10
     </a>
 
     <div class="collapse" id="collpase-labels-size-chip">
-      {% highlight html %}
-          <span class="label_chip label-dark-green">label_chip</span>
-          <span class="label_chip label-dark-green label_chip__big">label_chip__big</span>
-          <span class="label_chip label-dark-green label_chip__small">label_chip__small</span>
-          <span class="label_chip label-dark-green__outline label_chip__big">label_chip__big</span>
-          <span class="label_chip label-dark-green__outline label_chip__small">label_chip__small</span>
-      {% endhighlight %}
+{% highlight html %}
+<span class="label_chip label-dark-green">label_chip</span>
+<span class="label_chip label-dark-green label_chip__big">label_chip__big</span>
+<span class="label_chip label-dark-green label_chip__small">label_chip__small</span>
+<span class="label_chip label-dark-green__outline label_chip__big">label_chip__big</span>
+<span class="label_chip label-dark-green__outline label_chip__small">label_chip__small</span>
+{% endhighlight %}
     </div>
     <div class="bs-docs-example d-flex flex-wrap align-center gap-10">
         <span class="label_chip label-dark-green">label_chip</span>
@@ -173,7 +190,8 @@ order: 10
     </div>
 
     <h3 class="mt-20">Вывод иконки внутри лейбла:</h3>
-    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-labels-icons" role="button" aria-expanded="false" aria-controls="collpase-labels-icons">
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse"
+        href="#collpase-labels-icons" role="button" aria-expanded="false" aria-controls="collpase-labels-icons">
         <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
             <svg width="24" height="24">
                 <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
@@ -186,35 +204,98 @@ order: 10
     </a>
 
     <div class="collapse" id="collpase-labels-icons">
-      {% highlight html %}
-            <span class="label label-success"><span class="svg--icon svg--icon__24vb"><?= Icons::icon('bicolors-filter__24vb') ?></span><span class="label_text">label-success</span></span>
-            <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon svg--icon__24vb"><?= Icons::icon('bicolors-attention__24vb') ?></span></span>
-            <span class="label label-info"><span class="label_text">label-info</span><span class="svg--icon svg--icon"><?= Icons::icon('bicolors-attention') ?></span></span>
-      {% endhighlight %}
+{% highlight html %}
+<span class="label label-success">
+    <span class="svg--icon svg--icon__24vb">
+        <?= Icons::icon('bicolors-filter__24vb') ?>
+    </span>
+    <span class="label_text">label-success</span>
+</span>
+<span class="label label-danger">
+    <span class="label_text">label-danger</span>
+    <span class="svg--icon svg--icon__24vb">
+        <?= Icons::icon('bicolors-attention__24vb') ?>
+    </span>
+</span>
+<span class="label label-info">
+    <span class="label_text">label-info</span>
+    <span class="svg--icon svg--icon">
+        <?= Icons::icon('bicolors-attention') ?>
+    </span>
+</span>
+{% endhighlight %}
     </div>
     <div class="bs-docs-example d-flex flex-wrap align-center gap-10">
-          <span class="label label-success"><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter__24vb"></use></svg></span><span class="label_text">label-success</span></span>
-          <span class="label label-danger"><span class="label_text">label-danger</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
-          <span class="label label-info"><span class="label_text">label-info</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions_full"></use></svg></span></span>
-          <span class="label label__big label-light-red"><span class="label_text">label-light-red</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions_full"></use></svg></span></span>
-          <span class="label label__big label-light-green2"><span class="label_text">label-light-green2</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions_full__24vb"></use></svg></span></span>
-          <span class="label_chip label-warning"><span class="label_text">label_chip label-warning</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
-          <span class="label_chip label-warning__outline"><span class="label_text">label_chip label-warning__outline</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use></svg></span></span>
-          <span class="label_chip label-danger"><span class="label_text">label_chip label-danger</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use></svg></span></span>
-          <span class="label_chip label-danger__outline"><span class="label_text">label_chip label-danger__outline</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use></svg></span></span>
-          <span class="label_chip label-light-green"><span class="label_text">label_chip label-light-green</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore"></use></svg></span></span>
-          <span class="label_chip label_chip__big label-dark-green"><span class="label_text">label_chip label-dark-green</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore"></use></svg></span></span>
-          <span class="label_chip label_chip__big label-vibrant-blue"><span class="label_text">label_chip label-vibrant-blue</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use></svg></span></span>
-          <span class="label_chip label_chip__small label-grey2"><span class="label_text">label_chip label-grey2</span><span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore"></use></svg></span></span>
-          <span class="label_chip label_chip__small label-rose"><span class="label_text">label_chip label-rose</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use></svg></span></span>
+        <span class="label label-success"><span class="svg--icon"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-filter__24vb"></use>
+                </svg></span><span class="label_text">label-success</span></span>
+        <span class="label label-danger"><span class="label_text">label-danger</span><span
+                class="svg--icon svg--icon__24vb"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use>
+                </svg></span></span>
+        <span class="label label-info"><span class="label_text">label-info</span><span class="svg--icon"><svg width="24"
+                    height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions_full"></use>
+                </svg></span></span>
+        <span class="label label__big label-light-red"><span class="label_text">label-light-red</span><span
+                class="svg--icon"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions_full"></use>
+                </svg></span></span>
+        <span class="label label__big label-light-green2"><span class="label_text">label-light-green2</span><span
+                class="svg--icon svg--icon__24vb"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-questions_full__24vb"></use>
+                </svg></span></span>
+        <span class="label_chip label-warning"><span class="label_text">label_chip label-warning</span><span
+                class="svg--icon svg--icon__24vb"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use>
+                </svg></span></span>
+        <span class="label_chip label-warning__outline"><span class="label_text">label_chip
+                label-warning__outline</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-attention__24vb"></use>
+                </svg></span></span>
+        <span class="label_chip label-danger"><span class="label_text">label_chip label-danger</span><span
+                class="svg--icon svg--icon__24vb"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use>
+                </svg></span></span>
+        <span class="label_chip label-danger__outline"><span class="label_text">label_chip
+                label-danger__outline</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use>
+                </svg></span></span>
+        <span class="label_chip label-light-green"><span class="label_text">label_chip label-light-green</span><span
+                class="svg--icon"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore"></use>
+                </svg></span></span>
+        <span class="label_chip label_chip__big label-dark-green"><span class="label_text">label_chip
+                label-dark-green</span><span class="svg--icon"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore"></use>
+                </svg></span></span>
+        <span class="label_chip label_chip__big label-vibrant-blue"><span class="label_text">label_chip
+                label-vibrant-blue</span><span class="svg--icon svg--icon__24vb"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use>
+                </svg></span></span>
+        <span class="label_chip label_chip__small label-grey2"><span class="label_text">label_chip
+                label-grey2</span><span class="svg--icon"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore"></use>
+                </svg></span></span>
+        <span class="label_chip label_chip__small label-rose"><span class="label_text">label_chip label-rose</span><span
+                class="svg--icon svg--icon__24vb"><svg width="24" height="24">
+                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_ignore__24vb"></use>
+                </svg></span></span>
     </div>
 
     <h3 class="mt-20">Ипользование стилей label, через дата-атрибуты</h3>
-    <p>Для вывода дополнительной информации в виде <code class="language-plaintext highlighter-rouge">label</code>, но без модификации всего контейнера, на котором навешивается класс - используется <code class="language-plaintext highlighter-rouge">label__after</code> или <code class="language-plaintext highlighter-rouge">label__before</code> и необходимый модификатор цвета. <br>
-    Текст дополнительного поля выводится через дата-атрибут <code class="language-plaintext highlighter-rouge">data-label-text</code>. <br>
-    Возможно изменения отступа от поля через изменения в style переменной <code class="language-plaintext highlighter-rouge">--label_margin-left</code> или <code class="language-plaintext highlighter-rouge">--label_margin-right</code>
+    <p>Для вывода дополнительной информации в виде <code class="language-plaintext highlighter-rouge">label</code>, но
+        без модификации всего контейнера, на котором навешивается класс - используется <code
+            class="language-plaintext highlighter-rouge">label__after</code> или <code
+            class="language-plaintext highlighter-rouge">label__before</code> и необходимый модификатор цвета. <br>
+        Текст дополнительного поля выводится через дата-атрибут <code
+            class="language-plaintext highlighter-rouge">data-label-text</code>. <br>
+        Возможно изменения отступа от поля через изменения в style переменной <code
+            class="language-plaintext highlighter-rouge">--label_margin-left</code> или <code
+            class="language-plaintext highlighter-rouge">--label_margin-right</code>
     </p>
-      <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#collpase-labels-data" role="button" aria-expanded="false" aria-controls="collpase-labels-data">
+    <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse"
+        href="#collpase-labels-data" role="button" aria-expanded="false" aria-controls="collpase-labels-data">
         <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
             <svg width="24" height="24">
                 <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
@@ -227,25 +308,27 @@ order: 10
     </a>
 
     <div class="collapse" id="collpase-labels-data">
-      {% highlight html %}
-      <div class="form-group"> 
-        <label class="control-label label__after label-danger" data-label-text="Название доп. постзаголовка" style="--label_margin-left: 10px">Название заголовка</label>
-        <input type="text" class="form-control">
-      </div>
-      <div class="form-group"> 
-          <label class="control-label label__before label-success" data-label-text="Название предзаголовка">Название заголовка</label>
-          <input type="text" class="form-control">
-        </div>
-      {% endhighlight %}
-    </div>
-<div class="bs-docs-example">
-  <div class="form-group"> 
-    <label class="control-label label__after label-danger" data-label-text="Название постзаголовка" style="--label_margin-left: 10px">Название заголовка</label>
+{% highlight html %}
+<div class="form-group">
+    <label class="control-label label__after label-danger" data-label-text="Название доп. постзаголовка" style="--label_margin-left: 10px">Название заголовка</label>
     <input type="text" class="form-control">
-  </div>
-  <div class="form-group"> 
+</div>
+<div class="form-group">
     <label class="control-label label__before label-success" data-label-text="Название предзаголовка">Название заголовка</label>
     <input type="text" class="form-control">
-  </div>
 </div>
+{% endhighlight %}
+</div>
+    <div class="bs-docs-example">
+        <div class="form-group">
+            <label class="control-label label__after label-danger" data-label-text="Название постзаголовка"
+                style="--label_margin-left: 10px">Название заголовка</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="control-label label__before label-success" data-label-text="Название предзаголовка">Название
+                заголовка</label>
+            <input type="text" class="form-control">
+        </div>
+    </div>
 </div>

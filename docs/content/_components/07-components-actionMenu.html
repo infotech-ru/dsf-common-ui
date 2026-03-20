@@ -15,9 +15,9 @@ order: 7
 <p>В системе реализовано через widgets <code class="language-plaintext highlighter-rouge">DropDownActionColumn</code></p>
 
 {% highlight html %}
-  use app\widgets\DropDownActionColumn;
+use app\widgets\DropDownActionColumn;
  
-    'class' => DropDownActionColumn::class,
+'class' => DropDownActionColumn::class,
 {% endhighlight %}
 
 <p>Popover изначально не попадает в DOM, скрипт по типу <code class="language-plaintext highlighter-rouge">$(".js-action").click</code> внутри него не будет работать.</p>
@@ -49,56 +49,56 @@ order: 7
   </a>
 
   <div class="collapse" id="actionMenu">
-    {% highlight html %}
-      <button class="btn-icon js-actionMenu"
-              type="button"
-              data-content="
-                <a class='dropdown__link' href='#'>
-                  <span class='dropdown__linkIcon'>
-                    <svg class='bicolors-edit' width='24' height='24'>
-                      <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
-                    </svg>
-                  </span>
-                  <span class='dropdown__linkText'>Редактировать</span>
-                </a>
-                <a class='dropdown__link' href='#'>
-                  <span class='dropdown__linkIcon'>
-                    <svg class='bicolors-edit' width='24' height='24'>
-                      <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use>
-                    </svg>
-                  </span>
-                  <span class='dropdown__linkText'>Удалить</span>
-                </a>
-              ">
-              <span class="svg--icon">
-                <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
-              </span>
-      </button>
-      <button class="btn-link js-actionMenu"
-              type="button"
-              data-content="
-                <button class='dropdown__link'>
-                  <span class='dropdown__linkIcon'>
-                    <svg class='bicolors-edit' width='24' height='24'>
-                      <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
-                    </svg>
-                  </span>
-                  <span class='dropdown__linkText'>Редактировать</span>
-                </button>
-                <button class='dropdown__link'>
-                  <span class='dropdown__linkIcon'>
-                    <svg class='bicolors-plus' width='24' height='24'>
-                      <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use>
-                    </svg>
-                  </span>
-                  <span class='dropdown__linkText'>Добавить</span>
-                </button>
-              ">
-              <span class="svg--icon">
-                <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
-              </span>
-      </button>
-    {% endhighlight %}
+{% highlight html %}
+<button class="btn-icon js-actionMenu"
+        type="button"
+        data-content="
+        <a class='dropdown__link' href='#'>
+            <span class='dropdown__linkIcon'>
+            <svg class='bicolors-edit' width='24' height='24'>
+                <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
+            </svg>
+            </span>
+            <span class='dropdown__linkText'>Редактировать</span>
+        </a>
+        <a class='dropdown__link' href='#'>
+            <span class='dropdown__linkIcon'>
+            <svg class='bicolors-edit' width='24' height='24'>
+                <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use>
+            </svg>
+            </span>
+            <span class='dropdown__linkText'>Удалить</span>
+        </a>
+        ">
+        <span class="svg--icon">
+        <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
+        </span>
+</button>
+<button class="btn-link js-actionMenu"
+        type="button"
+        data-content="
+        <button class='dropdown__link'>
+            <span class='dropdown__linkIcon'>
+            <svg class='bicolors-edit' width='24' height='24'>
+                <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use>
+            </svg>
+            </span>
+            <span class='dropdown__linkText'>Редактировать</span>
+        </button>
+        <button class='dropdown__link'>
+            <span class='dropdown__linkIcon'>
+            <svg class='bicolors-plus' width='24' height='24'>
+                <use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use>
+            </svg>
+            </span>
+            <span class='dropdown__linkText'>Добавить</span>
+        </button>
+        ">
+        <span class="svg--icon">
+        <svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg>
+        </span>
+</button>
+{% endhighlight %}
   </div>
 <div class="bs-docs-example">
   <button class="btn-icon mr-10 js-actionMenu" type="button" data-content="<a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb'></use></svg></span><span class='dropdown__linkIconText'>Редактировать</span></a><a class='dropdown__link' href='#'><span class='dropdown__linkIcon'><svg class='bicolors-edit' width='24' height='24'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete__24vb'></use></svg></span><span class='dropdown__linkIconText'>Удалить</span></a> "><span class="svg--icon"><svg class="bicolors-menu" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-menu"></use></svg></span></button>
@@ -122,57 +122,57 @@ order: 7
   </a>
 
   <div class="collapse" id="multilevelMenu">
-    {% highlight html %}
-    <ul class="multilevelMenu">
-        <li class="dropdown">
-          <a class="dropdown dropdown-toggle" href="#" data-toggle="dropdown">
-            Первый уровень
-          </a>
-          <ul class="dropdown-menu">
+{% highlight html %}
+<ul class="multilevelMenu">
+    <li class="dropdown">
+        <a class="dropdown dropdown-toggle" href="#" data-toggle="dropdown">
+        Первый уровень
+        </a>
+        <ul class="dropdown-menu">
             <li class="dropdown__items dropdown dropdown-submenu">
-              <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+                <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
                 Второй уровень пункт 1
-              </a>
-              <ul class="dropdown-menu">
-                <li class="dropdown__items dropdown dropdown-submenu">
-                  <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
-                    Третий уровень
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li class="dropdown__items">
-                      <a class="dropdown__link" href="#">Вложенный пункт 1</a>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown__items dropdown dropdown-submenu">
+                        <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Третий уровень
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown__items">
+                                <a class="dropdown__link" href="#">Вложенный пункт 1</a>
+                            </li>
+                            <li class="dropdown__items">
+                                <a class="dropdown__link" href="#">Вложенный пункт 2</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="dropdown__items">
-                      <a class="dropdown__link" href="#">Вложенный пункт 2</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+                </ul>
             </li>
             <li class="dropdown__items dropdown dropdown-submenu dropdown-submenu_actionHover">
-              <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+                <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
                 Второй уровень пункт 2 - (наведеине)
-              </a>
-              <ul class="dropdown-menu">
-                <li class="dropdown__items dropdown dropdown-submenu dropdown-submenu_actionHover">
-                  <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
-                    Третий уровень  - (наведеине)
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li class="dropdown__items">
-                      <a class="dropdown__link" href="#">Вложенный пункт 1</a>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown__items dropdown dropdown-submenu dropdown-submenu_actionHover">
+                        <a class="dropdown__link dropdown-toggle" href="#" data-toggle="dropdown">
+                        Третий уровень  - (наведеине)
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown__items">
+                                <a class="dropdown__link" href="#">Вложенный пункт 1</a>
+                            </li>
+                            <li class="dropdown__items">
+                                <a class="dropdown__link" href="#">Вложенный пункт 2</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="dropdown__items">
-                      <a class="dropdown__link" href="#">Вложенный пункт 2</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+                </ul>
             </li>
-          </ul>
-        </li>
-      </ul>
-    {% endhighlight %}
+        </ul>
+    </li>
+</ul>
+{% endhighlight %}
   </div>
   <div class="bs-docs-example">
     <ul class="multilevelMenu list-unstyled mb-0">

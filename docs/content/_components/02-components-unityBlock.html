@@ -17,27 +17,27 @@ order: 2
     <div class="mb-10"><code class="language-plaintext highlighter-rouge">unityBlock__noshadow</code> - убирает тень у контейнера</div>
     <div class=""><code class="language-plaintext highlighter-rouge">unityBlock__nobg</code> - убирает фон у контейнера</div>
 
-    {% highlight html %}
-    <div class="unityBlock">
-        <div class="unityBlock_header">
-            <div class="unityBlock_headerItem">
-                <?= Icons::wrapper('bicolors-car__24vb', ['class' => 'svg--icon svg--icon__24vb unityBlock_headerSvgTitle']) ?>
-                <h4 class="h4 unityBlock_headerTitle">
-                    <?= Yii::t('app', 'Название блока') ?>
-                </h4>
-            </div>
-            <div class="unityBlock_headerItem">
-                <button class="btn-icon">
-                    <?= Icons::wrapper('bicolors-edit__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
-                </button>
-            </div>
+{% highlight html %}
+<div class="unityBlock">
+    <div class="unityBlock_header">
+        <div class="unityBlock_headerItem">
+            <?= Icons::wrapper('bicolors-car__24vb', ['class' => 'svg--icon svg--icon__24vb unityBlock_headerSvgTitle']) ?>
+            <h4 class="h4 unityBlock_headerTitle">
+                <?= Yii::t('app', 'Название блока') ?>
+            </h4>
         </div>
-        <div class="unityBlock_body">
-        </div>
-        <div class="unityBlock_footer">
+        <div class="unityBlock_headerItem">
+            <button class="btn-icon">
+                <?= Icons::wrapper('bicolors-edit__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
+            </button>
         </div>
     </div>
-    {% endhighlight %}
+    <div class="unityBlock_body">
+    </div>
+    <div class="unityBlock_footer">
+    </div>
+</div>
+{% endhighlight %}
     <div class="bs-docs-example">
         <div class="unityBlock">
             <div class="unityBlock_header">

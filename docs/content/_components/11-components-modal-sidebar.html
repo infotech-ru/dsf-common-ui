@@ -11,17 +11,17 @@ order: 11
   <p>- Для правильной отрисовки бокового окна нужно дополнить вызов модалки параметром: <code class="language-plaintext highlighter-rouge">sidebar: true</code>.</p>
   <p>- Размер окна изменяется в size: <code class="language-plaintext highlighter-rouge">SIZE_LARGE</code> и <code class="language-plaintext highlighter-rouge">SIZE_SMALL</code>.</p>
 
-  {% highlight html %}
-  'size': SIZE_LARGE
-  'size': SIZE_SMALL
-  {% endhighlight %}
+{% highlight html %}
+'size': SIZE_LARGE
+'size': SIZE_SMALL
+{% endhighlight %}
 
   <p>- Сторона открытия изменяется через side: <code class="language-plaintext highlighter-rouge">SIDE_LEFT</code> и <code class="language-plaintext highlighter-rouge">SIDE_RIGHT</code>.</p>
 
-  {% highlight html %}
-    'side': SIDE_RIGHT
-    'side': SIDE_RIGHT
-  {% endhighlight %}
+{% highlight html %}
+'side': SIDE_RIGHT
+'side': SIDE_RIGHT
+{% endhighlight %}
 
   <p>- Шапка окна отрисовывается через в header исплоьзуя для заголовка h4 классы <code class="language-plaintext highlighter-rouge">h4 modal-sidebar-headerTitle</code>.</p>
   <p>- Рядом могут находится другие элементы - label, icon...</p>
@@ -39,25 +39,25 @@ order: 11
     </a>
 
     <div class="collapse" id="collpase-sidebar">
-      {% highlight html %}
-      php:
-        use app\widgets\ModalSidebar;
+{% highlight html %}
+php:
+    use app\widgets\ModalSidebar;
 
-        ModalSidebar::begin(
-          [
-            'header' => '<h4 class="h4 modal-sidebar-headerTitle">' . Yii::t('app', 'Заголовок') . '</h4>',
-            'size' => ModalSidebar::SIZE_LARGE,
-            'side' => ModalSidebar::SIDE_LEFT,
-          ]
-          ...
-        )
-        ModalSidebar::end()
+    ModalSidebar::begin(
+    [
+        'header' => '<h4 class="h4 modal-sidebar-headerTitle">' . Yii::t('app', 'Заголовок') . '</h4>',
+        'size' => ModalSidebar::SIZE_LARGE,
+        'side' => ModalSidebar::SIDE_LEFT,
+    ]
+    ...
+    )
+    ModalSidebar::end()
 
-      js:
-        show.call(this, {
-          sidebar: true,
-          ...
-        })
-      {% endhighlight %}
+js:
+    show.call(this, {
+        sidebar: true,
+        ...
+    })
+{% endhighlight %}
     </div>
 </div>

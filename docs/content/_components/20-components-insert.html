@@ -12,21 +12,21 @@ order: 20
 <code class="language-plaintext highlighter-rouge">import {initCopyDataAttrToClipboardBtns} from "./copyTextToClipboardNotify"</code></p>
 <p>Через data атрибуты copySuccessMessageText, copySuccessMessageType, copyErrorMessageType, copyErrorMessageType можно изменить тексты и типы сообщений, установленных по умолчанию</p>
 <p>В контейнер добавляем иконку 
-    {% highlight html %}
-      <div class="css-copy-to-clipboard-icon">
-        <?= Icons::wrapper('bicolors-copy__24vb', ['class' => 'svg--icon svg--icon__20 bg-white svg-primary']) ?>
-      </div>
-    {% endhighlight %}
+{% highlight html %}
+<div class="css-copy-to-clipboard-icon">
+    <?= Icons::wrapper('bicolors-copy__24vb', ['class' => 'svg--icon svg--icon__20 bg-white svg-primary']) ?>
+</div>
+{% endhighlight %}
   data-copy с копируемым текстом и классы для скрипта <code class="language-plaintext highlighter-rouge">css-copy-to-clipboard js-copy-to-clipboard</code>
 </p>
 
 
 {% highlight html %}
-  <div class="css-copy-to-clipboard js-copy-to-clipboard" data-copy="Копируемое значение">
+<div class="css-copy-to-clipboard js-copy-to-clipboard" data-copy="Копируемое значение">
     Какие-либо данные
     <div class="css-copy-to-clipboard-icon">
-      <?= Icons::wrapper('bicolors-copy__24vb', ['class' => 'svg--icon svg--icon__20 bg-white svg-primary']) ?>
+        <?= Icons::wrapper('bicolors-copy__24vb', ['class' => 'svg--icon svg--icon__20 bg-white svg-primary']) ?>
     </div>
-  </div>
+</div>
 {% endhighlight %}
 </div>

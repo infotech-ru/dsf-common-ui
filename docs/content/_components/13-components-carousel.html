@@ -34,78 +34,78 @@ order: 13
     </a>
 
     <div class="collapse" id="collpase-carousel">
-        {% highlight html %}
-        <div id="carouselExampleIndicators" class="carousel slide carousel__aspectRatio16-9" data-ride="carousel">
-            <div class="p-relative mb-10">
-            <div class="carousel-inner">
-                <div class="carousel-item h-100p overflow-hidden p-relative background-container active" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
-                <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
-                <div class="carousel-action">
-                    <div class="carousel-action__topRight">
-                        <a class="btn-danger__outline js-delete-photo" href="">
-                            <span class="svg--icon svg-danger">
-                            <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
-                            </span>
-                            <span class="btn-text"><?= Yii::t('app', 'Удалить') ?></span>
-                        </a>
-                    </div>
-                    <div class="carousel-action__center">
-                        <div class="radioCheck">
-                            <input type="radio" id="id-1" class="" name="nameGroup" value="1">
-                            <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-1">
-                                <span class="svg--icon">
-                                    <svg width="24" height="24">
-                                        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_check"></use>
-                                    </svg>
-                                </span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
-                <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
-                </div>
-                <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
-                <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
-                </div>
+{% highlight html %}
+<div id="carouselExampleIndicators" class="carousel slide carousel__aspectRatio16-9" data-ride="carousel">
+    <div class="p-relative mb-10">
+    <div class="carousel-inner">
+        <div class="carousel-item h-100p overflow-hidden p-relative background-container active" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
+        <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+        <div class="carousel-action">
+            <div class="carousel-action__topRight">
+                <a class="btn-danger__outline js-delete-photo" href="">
+                    <span class="svg--icon svg-danger">
+                    <svg class="bicolors-delete" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-delete"></use></svg>
+                    </span>
+                    <span class="btn-text"><?= Yii::t('app', 'Удалить') ?></span>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <?= Icons::wrapper('bicolors-arrow_left__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
-                <span class="sr-only"><?= Yii::t('app', 'Предыдущее') ?></span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <?= Icons::wrapper('bicolors-arrow_right__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
-                <span class="sr-only"><?= Yii::t('app', 'Следующее') ?></span>
-            </a>
-            </div>
-            <div class="carousel-indicators_outer">
-                <div class="carousel-indicators__abs">
-                    <button class="btn-download btn-download__square">
-                        <span class="btn-download_inner">
-                            <?= Icons::withText('bicolors-photo__24vb', Yii::t('app', 'Добавить фото'), ['class' => 'svg--icon svg--icon__24vb']) ?>
+            <div class="carousel-action__center">
+                <div class="radioCheck">
+                    <input type="radio" id="id-1" class="" name="nameGroup" value="1">
+                    <label class="radio" data-mainimagetext="Главное изображение" data-plainimagetext="Сделать главным" for="id-1">
+                        <span class="svg--icon">
+                            <svg width="24" height="24">
+                                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_check"></use>
+                            </svg>
                         </span>
-                    </button>
-                </div>
-                <div class="carousel-indicators">
-                    <div class="carousel-indicators_item thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0">
-                        <div class="thumbnailInner">
-                            <div class="thumbnailActions">
-                                <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
-                                    <?= Icons::wrapper('bicolors-photo__24vb', ['class' => 'svg--icon svg--icon__20 svg--icon__24vb svg-primary']) ?>
-                                </a>
-                                <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
-                                    <?= Icons::wrapper('bicolors-delete__24vb', ['class' => 'svg--icon svg--icon__20 svg--icon__24vb']) ?>
-                                </a>
-                            </div>
-                            <div class="thumbnailCaption">Имя картинки</div>
-                            <div class="thumbnailImgWrapper" style="--background_container:<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>"><img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>" alt=""></div>
-                        </div>
-                    </div>
+                    </label>
                 </div>
             </div>
         </div>
-        {% endhighlight %}
+        </div>
+        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
+        <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+        </div>
+        <div class="carousel-item h-100p overflow-hidden p-relative background-container" style="--background_container: url(<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>)">
+        <img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '600', '900') ?? '/images/empty-photo.png' ?>" class="object-fit-contain minh-100p minw-100p zindex-1" alt="">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <?= Icons::wrapper('bicolors-arrow_left__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
+        <span class="sr-only"><?= Yii::t('app', 'Предыдущее') ?></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <?= Icons::wrapper('bicolors-arrow_right__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
+        <span class="sr-only"><?= Yii::t('app', 'Следующее') ?></span>
+    </a>
+    </div>
+    <div class="carousel-indicators_outer">
+        <div class="carousel-indicators__abs">
+            <button class="btn-download btn-download__square">
+                <span class="btn-download_inner">
+                    <?= Icons::withText('bicolors-photo__24vb', Yii::t('app', 'Добавить фото'), ['class' => 'svg--icon svg--icon__24vb']) ?>
+                </span>
+            </button>
+        </div>
+        <div class="carousel-indicators">
+            <div class="carousel-indicators_item thumbnail thumbnail__bigSize active" data-target="#carouselExampleIndicators" data-slide-to="0">
+                <div class="thumbnailInner">
+                    <div class="thumbnailActions">
+                        <a class="btn-icon thumbnailActionsBtn__shadow" href="#">
+                            <?= Icons::wrapper('bicolors-photo__24vb', ['class' => 'svg--icon svg--icon__20 svg--icon__24vb svg-primary']) ?>
+                        </a>
+                        <a class="btn-icon btn-icon__danger thumbnailActionsBtn__shadow" href="#">
+                            <?= Icons::wrapper('bicolors-delete__24vb', ['class' => 'svg--icon svg--icon__20 svg--icon__24vb']) ?>
+                        </a>
+                    </div>
+                    <div class="thumbnailCaption">Имя картинки</div>
+                    <div class="thumbnailImgWrapper" style="--background_container:<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>"><img src="<?= ImageProcessorUploadHelper::thumbnail($photo, '200', '200') ?? '/images/empty-photo.png' ?>" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endhighlight %}
     </div>
     <div class="bs-docs-example">
     <div id="carouselExampleIndicators" class="carousel carousel__aspectRatio16-9 slide" data-ride="carousel">

@@ -25,21 +25,21 @@ order: 8
     </a>
 
     <div class="collapse" id="collpase-alert">
-      {% highlight html %}
-      <div class="alert alert-info">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Отметить прочитанным">
-              <span class="svg--icon" aria-hidden="true"><?= Icons::icon('bicolors-close__24vb') ?></span>
-          </button>
-          <div class="h4 mb-10">
-            <span class="svg--icon svg--icon__24vb"><?= Icons::icon('bicolors-circle_information__24vb') ?></span>
-            Заголовок с иконкой
-          </div>
-          <div class="fz-10 mb-5 text-default">дата</div>
-          <div>
-            Текст уведомления
-          </div>
-      </div>
-      {% endhighlight %}
+{% highlight html %}
+<div class="alert alert-info">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Отметить прочитанным">
+        <span class="svg--icon" aria-hidden="true"><?= Icons::icon('bicolors-close__24vb') ?></span>
+    </button>
+    <div class="h4 mb-10">
+      <span class="svg--icon svg--icon__24vb"><?= Icons::icon('bicolors-circle_information__24vb') ?></span>
+      Заголовок с иконкой
+    </div>
+    <div class="fz-10 mb-5 text-default">дата</div>
+    <div>
+      Текст уведомления
+    </div>
+</div>
+{% endhighlight %}
   </div>
 
 
@@ -141,23 +141,23 @@ order: 8
     </a>
 
     <div class="collapse" id="collpase-alert-attention">
-      {% highlight html %}
-        <div class="alert alert-success alert__checked">
-          <div class="h4 mb-10">Внимание!</div>
-          <div>Тут текст уведлмления alert__checked</div>
-          <a href="">Внесите данные</a>
-        </div>
-        <div class="alert alert-default alert__attention">
-          <div class="h4 mb-10">Внимание!</div>
-          <div>Тут текст уведлмления alert__attention</div>
-          <a href="">Внесите данные</a>
-        </div>
-        <div class="alert alert-danger alert__caution">
-            <div class="h4 mb-10">Внимание!</div>
-            <div class="">Тут текст уведлмления alert__caution</div>
-            <a href="">Внесите данные</a>
-        </div>
-      {% endhighlight %}
+{% highlight html %}
+<div class="alert alert-success alert__checked">
+    <div class="h4 mb-10">Внимание!</div>
+    <div>Тут текст уведлмления alert__checked</div>
+    <a href="">Внесите данные</a>
+</div>
+<div class="alert alert-default alert__attention">
+    <div class="h4 mb-10">Внимание!</div>
+    <div>Тут текст уведлмления alert__attention</div>
+    <a href="">Внесите данные</a>
+</div>
+<div class="alert alert-danger alert__caution">
+    <div class="h4 mb-10">Внимание!</div>
+    <div class="">Тут текст уведлмления alert__caution</div>
+    <a href="">Внесите данные</a>
+</div>
+{% endhighlight %}
     </div>
   <div class="bs-docs-example">
     <div class="alert alert-success alert__checked mb-20">

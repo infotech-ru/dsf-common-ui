@@ -31,70 +31,70 @@ order: 12
     </a>
 
     <div class="collapse" id="collpase-comment">
-        {% highlight html %}
-            <div class="commentBlock">
-                <div class="bg-light-yellow2 padding-10 scrollbar__thin overflowY-auto" style="max-height:240px" :style="{ height: uploadName ? '240px' : '264px' }">
-                    <div class="mb-10 user-event">
-                        <div class="commentBlock_info">
-                            <span class="commentBlock_infoUser">User</span>
-                            <span class="commentBlock_infoDate">00.00.0000</span>
-                        </div>
-                        <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
-                            <div>Тело сообщения User</div>
-                            <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon mr-5"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
-                        </div>
-                    </div>
-                    <div class="mb-10 current-user-comment">
-                        <div class="commentBlock_info">
-                            <span class="commentBlock_infoUser">Админ</span>
-                            <span class="commentBlock_infoDate">00.00.0000</span>
-                        </div>
-                        <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
-                            <div>Тело сообщения админа</div>
-                        </div>
-                    </div>
-                    <div class="mb-10 user-event">
-                        <div class="commentBlock_info">
-                            <span class="commentBlock_infoUser">User</span>
-                            <span class="commentBlock_infoDate">00.00.0000</span>
-                        </div>
-                        <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
-                            <div>Тело сообщения User</div>
-                        </div>
-                    </div>
-                    <div class="mb-10 current-user-comment">
-                        <div class="commentBlock_info">
-                            <span class="commentBlock_infoUser">Админ</span>
-                            <span class="commentBlock_infoDate">00.00.0000</span>
-                        </div>
-                        <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
-                            <div>Тело сообщения админа</div>
-                            <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon mr-5"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="pl-10 pr-10 pt-10 bg-light-yellow2" style="display: none;"></div>
-                    <div class="pl-10 pr-10 pt-10 bg-white" style="display: block;">
-                        Загружаем файл ${uploadName}... Файл ${uploadName} готов к отправке
-                    </div>
-                    <div class="padding-10 bg-white">
-                        <div class="commentBlock_inputGroup commentBlock_inputGroup__bigHeight">
-                            <input type="file" style="display: none;">
-                            <textarea name="message" class="commentBlock_formControl scrollbar__thin commentBlock_formControl__resizeVert overflowY-auto" placeholder="Введите сообщение"></textarea>
-                            <div class="commentBlock_actionBlock">
-                                <button class="btn-icon">
-                                    <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc_add"></use></svg></span>
-                                </button>
-                                <button class="btn-icon ml-10" title="Отправить">
-                                    <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-telegram"></use></svg></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+{% highlight html %}
+<div class="commentBlock">
+    <div class="bg-light-yellow2 padding-10 scrollbar__thin overflowY-auto" style="max-height:240px" :style="{ height: uploadName ? '240px' : '264px' }">
+        <div class="mb-10 user-event">
+            <div class="commentBlock_info">
+                <span class="commentBlock_infoUser">User</span>
+                <span class="commentBlock_infoDate">00.00.0000</span>
+            </div>
+            <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
+                <div>Тело сообщения User</div>
+                <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon mr-5"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
+            </div>
+        </div>
+        <div class="mb-10 current-user-comment">
+            <div class="commentBlock_info">
+                <span class="commentBlock_infoUser">Админ</span>
+                <span class="commentBlock_infoDate">00.00.0000</span>
+            </div>
+            <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
+                <div>Тело сообщения админа</div>
+            </div>
+        </div>
+        <div class="mb-10 user-event">
+            <div class="commentBlock_info">
+                <span class="commentBlock_infoUser">User</span>
+                <span class="commentBlock_infoDate">00.00.0000</span>
+            </div>
+            <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
+                <div>Тело сообщения User</div>
+            </div>
+        </div>
+        <div class="mb-10 current-user-comment">
+            <div class="commentBlock_info">
+                <span class="commentBlock_infoUser">Админ</span>
+                <span class="commentBlock_infoDate">00.00.0000</span>
+            </div>
+            <div class="commentBlock_comments commentBlock_comments__shadow bg-light-green">
+                <div>Тело сообщения админа</div>
+                <div><a class="d-flex align-center" href="" target="_blank"><span class="svg--icon mr-5"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-image"></use></svg></span><span>Имя загруженного файла</span></a></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="pl-10 pr-10 pt-10 bg-light-yellow2" style="display: none;"></div>
+        <div class="pl-10 pr-10 pt-10 bg-white" style="display: block;">
+            Загружаем файл ${uploadName}... Файл ${uploadName} готов к отправке
+        </div>
+        <div class="padding-10 bg-white">
+            <div class="commentBlock_inputGroup commentBlock_inputGroup__bigHeight">
+                <input type="file" style="display: none;">
+                <textarea name="message" class="commentBlock_formControl scrollbar__thin commentBlock_formControl__resizeVert overflowY-auto" placeholder="Введите сообщение"></textarea>
+                <div class="commentBlock_actionBlock">
+                    <button class="btn-icon">
+                        <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc_add"></use></svg></span>
+                    </button>
+                    <button class="btn-icon ml-10" title="Отправить">
+                        <span class="svg--icon"><svg width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-telegram"></use></svg></span>
+                    </button>
                 </div>
             </div>
-        {% endhighlight %}
+        </div>
+    </div>
+</div>
+{% endhighlight %}
     </div>
     <div class="bs-docs-example">
         <div class="commentBlock">
