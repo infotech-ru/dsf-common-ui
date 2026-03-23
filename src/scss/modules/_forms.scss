@@ -177,7 +177,7 @@ output {
   box-shadow: none;
   color: val.brandPalette(formControl-color);
   display: block;
-  height: fonts.rem(calc(val.lineHeight(input) + 2)); //  + border-top and border-bottom
+  height: fonts.rem(calc(val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2))); //  + border-top and border-bottom
   font-size: fonts.rem(val.fontSizes(formElem));
   font-weight: val.fontWeight(formElem);
   line-height: fonts.rem(val.lineHeight(input));

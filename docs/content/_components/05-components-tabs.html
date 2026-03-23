@@ -239,6 +239,20 @@ order: 5
 
     <div class="collapse" id="nav-cards">
 {% highlight html %}
+<ul class="nav-cards__forms pt-10 pb-10" role="tablist">
+    <li class="nav-item active">
+        <a class="nav-link" href="#tab-1" role="tab" data-toggle="tab">Таб 1</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#tab-2" role="tab" data-toggle="tab">Таб 2</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#tab-3" role="tab" data-toggle="tab">Таб 3</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#tab-4" role="tab" data-toggle="tab">Таб 4</a>
+    </li>
+</ul>
 <ul class="nav-cards pt-10 pb-10" role="tablist">
     <li class="nav-item active">
         <a class="nav-link" href="#tab-1" role="tab" data-toggle="tab">Таб 1</a>
@@ -303,23 +317,45 @@ order: 5
         </a>
     </li>
 </ul>
-<div class="tab-content">
-    <div class="tab-pane active" role="tabpanel" id="tab-1">
-        Вкладка 1
-    </div>
-    <div class="tab-pane" role="tabpanel" id="tab-2">
-        Вкладка 2
-    </div>
-    <div class="tab-pane" role="tabpanel" id="tab-3">
-        Вкладка 3
-    </div>
-    <div class="tab-pane" role="tabpanel" id="tab-4">
-        Вкладка 4
-    </div>
-</div>
 {% endhighlight %}
     </div>
     <div class="bs-docs-example">
+        <ul class="nav-cards nav-cards__forms pt-10 pb-10" role="tablist">
+            <li class="nav-item active">
+                <a class="nav-link" href="#nav-cards__forms-icon-1" role="tab" data-toggle="tab">
+                    Таб 1
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#nav-cards__forms-icon-2" role="tab" data-toggle="tab">
+                    Таб 2
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#nav-cards__forms-icon-3" role="tab" data-toggle="tab">
+                    Таб 3
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#nav-cards__forms-icon-4" role="tab" data-toggle="tab">
+                    Таб 4
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content mb-10">
+            <div class="tab-pane active" role="tabpanel" id="nav-cards__forms-icon-1">
+                Вкладка 1
+            </div>
+            <div class="tab-pane" role="tabpanel" id="nav-cards__forms-icon-2">
+                Вкладка 2
+            </div>
+            <div class="tab-pane" role="tabpanel" id="nav-cards__forms-icon-3">
+                Вкладка 3
+            </div>
+            <div class="tab-pane" role="tabpanel" id="nav-cards__forms-icon-4">
+                Вкладка 4
+            </div>
+        </div>
         <ul class="nav-cards pt-10 pb-10" role="tablist">
             <li class="nav-item active">
                 <a class="nav-link" href="#nav-cards-icon-1" role="tab" data-toggle="tab">

@@ -15200,7 +15200,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   font-size: 0.8125rem;
   font-weight: 700;
   gap: 0.5rem;
-  padding: 0.625rem;
+  line-height: 1rem;
+  padding: 0.875rem 1.5rem;
   position: relative;
 }
 .nav-cards > li > a .svg--icon,
@@ -15210,6 +15211,16 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   --svg-icon-stroke_blue: #333333;
   --svg-icon-stroke: #333333;
   --limited-stroke-off: #00000000;
+}
+.nav-cards > li > a .svg--icon + span,
+.nav-cards .nav-link .svg--icon + span {
+  line-height: 0.75rem;
+}
+
+.nav-cards__forms > li > a,
+.nav-cards__forms .nav-link {
+  padding: 0 1rem;
+  height: 1.75rem;
 }
 
 .nav-cards > li.active > a,

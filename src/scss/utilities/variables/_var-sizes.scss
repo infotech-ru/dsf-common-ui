@@ -25,7 +25,9 @@ $brand-sizes: (
 )!default;
 
 $tabs-sizes:(
-  navCards_padding:                baseValue.$base-gutter,
+  navCardsForms_padding:           16,
+  navCards_paddingX:               24,
+  navCards_paddingY:               14,
   tabPane_padding:                 baseValue.$base-gutter,
 )!default;
 
