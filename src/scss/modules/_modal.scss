@@ -335,19 +335,26 @@
 
     .modal-footer,
     .note-modal-footer {
-        padding: 10px fonts.rem(val.modalSizes(modal-theme2_padding)) fonts.rem(val.modalSizes(modal-theme2_padding));
+        padding: fonts.rem(val.modalSizes(modal-theme2_paddingY)) fonts.rem(val.modalSizes(modal-theme2_paddingX)) fonts.rem(val.modalSizes(modal-theme2_padding));
     }
 
     .modal-header,
     .note-modal-header {
-        padding: fonts.rem(val.modalSizes(modal-theme2_padding)) fonts.rem(val.modalSizes(modal-theme2_padding)) 10px;
+        padding: fonts.rem(val.modalSizes(modal-theme2_padding)) fonts.rem(val.modalSizes(modal-theme2_paddingX)) fonts.rem(val.modalSizes(modal-theme2_paddingY));
+        & + .modal-body {
+            padding-top: 0;
+        }
     }
 
     .modal-body {
-        padding: 10px fonts.rem(val.modalSizes(modal-theme2_padding)) 10px;
+        padding: fonts.rem(val.modalSizes(modal-theme2_paddingY)) fonts.rem(val.modalSizes(modal-theme2_paddingX)) fonts.rem(val.modalSizes(modal-theme2_paddingY));
 
         &:last-child {
-            padding-bottom: fonts.rem(val.modalSizes(modal-theme2_padding));
+            padding-bottom: fonts.rem(val.modalSizes(modal-theme2_paddingY));
+        }
+        & + .modal-footer,
+        & + .note-modal-footer{
+            padding-top: 0;
         }
     }
 
@@ -361,11 +368,11 @@
     }
 
     .modal-header-offset-left {
-        padding-left: fonts.rem(math.div(val.modalSizes(modal-theme2_padding), 2));
+        padding-left: fonts.rem(math.div(val.modalSizes(modal-theme2_paddingX), 2));
     }
 
     .modal-header-offset-right {
-        padding-right: fonts.rem(math.div(val.modalSizes(modal-theme2_padding), 2));
+        padding-right: fonts.rem(math.div(val.modalSizes(modal-theme2_paddingX), 2));
     }
 }
 
@@ -389,10 +396,10 @@
     &.modal-light-grey2 {
         .modal-header,
         .note-modal-header {
-            padding-right: fonts.rem(val.modalSizes(modal-header-close_size) + val.modalSizes(modal-theme2_padding));
+            padding-right: fonts.rem(val.modalSizes(modal-header-close_size) + val.modalSizes(modal-theme2_paddingX));
         }
         .modal-header .close {
-            right: fonts.rem(val.modalSizes(modal-theme2_padding));
+            right: fonts.rem(val.modalSizes(modal-theme2_paddingX));
         }
     }
 }
