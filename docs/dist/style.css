@@ -14710,7 +14710,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .alert-default {
   background-color: #F5F5F5;
-  border-color: #F5F5F5;
+  border-color: #dddddd;
   color: #333333;
 }
 .alert-default .close {
@@ -14754,7 +14754,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .alert-success {
   background-color: #DAF0DA;
-  border-color: #DAF0DA;
+  border-color: #B4E1B5;
   color: #467B46;
 }
 .alert-success .close {
@@ -14776,7 +14776,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .alert-danger {
   background-color: #FCEEEE;
-  border-color: #FCEEEE;
+  border-color: #FF9996;
   color: #D9534F;
 }
 .alert-danger .close {
@@ -14798,7 +14798,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .alert-warning {
   background-color: #FFDF9A;
-  border-color: #FFDF9A;
+  border-color: #DE8500;
   color: #DE8500;
 }
 .alert-warning .close {
@@ -14820,7 +14820,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .alert-info {
   background-color: #E4EEF7;
-  border-color: #E4EEF7;
+  border-color: #4A8DC6;
   color: #4A8DC6;
 }
 .alert-info .close {
