@@ -624,6 +624,7 @@
   background-color: val.brandPalette(inputGroupEl-bgc);
   border-bottom: 1px solid val.brandPalette(inputGroupEl-borderColor);
   border-top: 1px solid val.brandPalette(inputGroupEl-borderColor);
+  border-left: none;
   color: val.brandPalette(inputGroupEl-color);
   display: flex;
   font-size: fonts.rem(val.fontSizes(inputGroupElem));

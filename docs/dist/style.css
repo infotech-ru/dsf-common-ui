@@ -13210,6 +13210,7 @@ select.selectpicker {
   background-color: #ffffff;
   border-bottom: 1px solid #BABABA;
   border-top: 1px solid #BABABA;
+  border-left: none;
   color: #333333;
   display: flex;
   font-size: 0.75rem;
