@@ -3,7 +3,7 @@
 $brand-sizes: (
   base_marginSize:                 baseValue.$base-gutter,
   base_paddingSize:                baseValue.$base-padding,
-  border-radius-base:              4,
+  border-radius-base:              baseValue.$base-radius,
   border-radius-large:             6,
   caret_size:                      6,
   caretDropdown_size:              4,
@@ -19,7 +19,7 @@ $brand-sizes: (
   navPills-borderWidth:            1,
   output_paddingY:                 7,
   square_height:                   64,
-  unityBlock_bRadius:              0,
+  unityBlock_bRadius:              baseValue.$base-radius,
   unityBlock_padding:              baseValue.$base-gutter,
   unityBlockHeader_mb:             baseValue.$base-padding,
 )!default;
@@ -62,7 +62,7 @@ $table-sizes:(
 )!default;
 
 $forms-sizes:(
-  borderRadiusFormElem:            1,
+  borderRadiusFormElem:            baseValue.$base-radius,
   controlLabel_mb:                 3,
   controlLabel_mr:                 5,
   formControl_borderSize:          1,
@@ -99,7 +99,7 @@ $radio-sizes:(
 $btn-sizes: (
   btn_paddingX:                    baseValue.$base-padding,
   btn_borderWidth:                 1,
-  btn_borderRadius:                1,
+  btn_borderRadius:                baseValue.$base-radius,
   btnXs-paddingX:                  5,
   btnXs-paddingY:                  0,
   btnLg-paddingX:                  15,
@@ -169,7 +169,7 @@ $tooltip-sizes: (
 )!default;
 
 $alert-sizes: (
-  alert_radius:                    0,
+  alert_radius:                    baseValue.$base-radius,
   alert_padding:                   baseValue.$base-padding,
   alert_margin:                    baseValue.$base-gutter,
   alertClose_size:                 14,
