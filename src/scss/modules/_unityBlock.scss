@@ -10,7 +10,7 @@
 @use './../utilities/functions/func_val' as val;
 
 .unityBlock{
-  background-color: val.brandColors(_white);
+  background-color: val.brandPalette(unityBlock_bgc);
   border-radius: #{val.brandSizes(unityBlock_bRadius)}px;
   box-shadow: 0px 1px 0px color.scale(rgba(val.brandColors(_black), 1), $alpha: -80%, $space: rgb);
   padding: fonts.rem(val.brandSizes(unityBlock_padding));
@@ -21,6 +21,11 @@
   }
   &__noshadow{
     box-shadow: none;
+  }
+  &__border{
+    border-width: 1px;
+    border-style: solid;
+    border-color: val.brandPalette(unityBlock_border);
   }
   &_header{
     align-items: center;
@@ -36,7 +41,7 @@
       }
     }
     &Title{
-      color: val.brandPalette(joinBlockTitle_color);
+      color: val.brandPalette(unityBlockTitle_color);
       white-space: nowrap;
     }
     &SvgTitle{

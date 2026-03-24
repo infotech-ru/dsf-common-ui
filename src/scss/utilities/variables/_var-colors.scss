@@ -695,7 +695,6 @@ $brand-palette: map.merge((
   dropdownActive_bgc:                     map.get($brand-colors, _light-blue2),
   dropdownLinkDisabled_color:             map.get($brand-colors, _grey4),
 
-  joinBlockTitle_color:                   map.get($brand-colors, _dark-grey),
 
   inputGroupEl-bgc:                       map.get($brand-colors, _white),
   inputGroupEl-borderColor:               map.get($brand-colors, _grey),
@@ -829,6 +828,11 @@ $brand-palette: map.merge((
 
   tooltip_bgc:                            map.get($brand-colors, _black),
   tooltip_color:                          map.get($brand-colors, _white),
+
+  unityBlock_bgc:                         map.get($brand-colors, _white),
+  unityBlock_border:                      map.get($brand-colors, _grey2),
+  unityBlockTitle_color:                  map.get($brand-colors, _dark-grey),
+
 ), emptymap.$brand-palette) !default;
 
 $brand-state: map.merge((
