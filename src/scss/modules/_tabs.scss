@@ -27,6 +27,9 @@
 }
 .nav-cards {
   gap: fonts.rem(2);
+  border-bottom-color: val.brandPalette(navCards_borderColor);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 .nav-info{
   display: flex;
@@ -56,6 +59,11 @@
   &:first-child{
     margin-left: 0;
   }
+}
+
+.nav-cards > li,
+.nav-cards .nav-item{
+  margin-bottom: -1px;
 }
 
 .nav-tabs > li > a,
@@ -245,6 +253,13 @@
   &.nav-btns {
     align-items: start;
   }
+  &.nav-cards{
+    border-bottom: none;
+    & > li,
+    .nav-item{
+      margin-bottom: 0;
+    }
+  }
 }
 
 .nav__justify{
@@ -258,6 +273,13 @@
     display: inline-flex;
     justify-content: center;
     width: 100%;
+  }
+  &.nav-cards{
+    border-bottom: none;
+    & > li,
+    .nav-item{
+      margin-bottom: 0;
+    }
   }
 }
 

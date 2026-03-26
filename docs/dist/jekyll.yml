@@ -235,6 +235,10 @@ fontsizelist {
 }
 
 fontsizelist {
+  15: 0;
+}
+
+fontsizelist {
   16: 0;
 }
 
@@ -259,11 +263,19 @@ lineheightsizelist {
 }
 
 lineheightsizelist {
+  11: 0;
+}
+
+lineheightsizelist {
   12: 0;
 }
 
 lineheightsizelist {
   14: 0;
+}
+
+lineheightsizelist {
+  15: 0;
 }
 
 lineheightsizelist {
@@ -276,6 +288,14 @@ lineheightsizelist {
 
 lineheightsizelist {
   20: 0;
+}
+
+lineheightsizelist {
+  21: 0;
+}
+
+lineheightsizelist {
+  22: 0;
 }
 
 lineheightsizelist {
@@ -480,6 +500,10 @@ svgsizes {
 
 svgsizes {
   24: 0;
+}
+
+svgsizes {
+  32: 0;
 }
 
 posSizes {
