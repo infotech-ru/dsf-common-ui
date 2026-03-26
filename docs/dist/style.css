@@ -7448,6 +7448,24 @@ h6, .h6 {
   margin: 6px 0;
   overflow: hidden;
 }
+.dropdown-menu__wrapList {
+  padding: 0.625rem;
+  max-width: 500px;
+}
+.dropdown-menu__wrapList > li > a,
+.dropdown-menu__wrapList > li > span {
+  background-color: transparent;
+  min-height: auto;
+  line-height: 1;
+  padding: 0;
+  width: auto;
+}
+.dropdown-menu__wrapList > li > a:hover, .dropdown-menu__wrapList > li > a:focus,
+.dropdown-menu__wrapList > li > span:hover,
+.dropdown-menu__wrapList > li > span:focus {
+  background-color: transparent;
+}
+
 .dropdown__linkIcon {
   margin-right: 5px;
   height: 24px;

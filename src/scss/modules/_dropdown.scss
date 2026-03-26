@@ -94,6 +94,22 @@
   // }
 }
 
+.dropdown-menu__wrapList {
+  padding: fonts.rem(10);
+  max-width: 500px;
+  > li > a,
+  > li > span{
+    background-color: transparent;
+    min-height: auto;
+    line-height: 1;
+    padding: 0;
+    width: auto;
+    &:hover,
+    &:focus{
+      background-color: transparent;
+    }
+  }
+}
 
 
 .dropdown__linkIcon{
