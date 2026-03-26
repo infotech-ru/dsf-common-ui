@@ -35,7 +35,11 @@
   [class*="btn"] + [class*="btn"],
   [class*="btn"] + .btn-group,
   .btn-group + [class*="btn"],
-  .btn-group + .btn-group {
+  .btn-group + .btn-group,
+  .dropdown + .btn-group,
+  .dropdown + .btn-group,
+  [class*="btn"] + .dropdown > [class*="btn"],
+  .btn-group + .dropdown > [class*="btn"] {
     margin-left: -1px;
   }
 }

@@ -12714,7 +12714,11 @@ select.selectpicker {
 .btn-group [class*=btn] + [class*=btn],
 .btn-group [class*=btn] + .btn-group,
 .btn-group .btn-group + [class*=btn],
-.btn-group .btn-group + .btn-group {
+.btn-group .btn-group + .btn-group,
+.btn-group .dropdown + .btn-group,
+.btn-group .dropdown + .btn-group,
+.btn-group [class*=btn] + .dropdown > [class*=btn],
+.btn-group .btn-group + .dropdown > [class*=btn] {
   margin-left: -1px;
 }
 
