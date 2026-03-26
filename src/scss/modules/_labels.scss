@@ -222,20 +222,20 @@
     }
   }
   .label-#{$name}__outline{
-    #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
-    #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
+    #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
+    #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border-outline');
     #{--label_bgc}: val.brandColors(_transparent);
-    #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
+    #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
     #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
     #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
     #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
     #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
     &.label_chip{
       &:hover, &.active, &:active{
-        #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
-        #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
+        #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline_active');
+        #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border-outline_active');
         #{--label_bgc}: maps.map-deep-get(colors.$brand-label, $name, 'bg-outline_active');
-        #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
+        #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline_active');
         #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
         #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
         #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');

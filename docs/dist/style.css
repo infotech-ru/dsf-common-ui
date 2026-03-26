@@ -10521,10 +10521,10 @@ input[type=button].btn-block {
 }
 
 .label-default__outline {
-  --label_color: #F5F5F5;
+  --label_color: #333333;
   --label_borderColor: #F5F5F5;
   --label_bgc: #00000000;
-  --svg-valute-fill: #F5F5F5;
+  --svg-valute-fill: #333333;
   --svg-icon-fill: #F5F5F5;
   --svg-icon-stroke: #F5F5F5;
   --svg-icon-fill_blue: #F5F5F5;
@@ -10899,20 +10899,20 @@ input[type=button].btn-block {
 }
 
 .label-grey2__outline {
-  --label_color: #dddddd;
+  --label_color: #333333;
   --label_borderColor: #dddddd;
   --label_bgc: #00000000;
-  --svg-valute-fill: #dddddd;
+  --svg-valute-fill: #333333;
   --svg-icon-fill: #dddddd;
   --svg-icon-stroke: #dddddd;
   --svg-icon-fill_blue: #dddddd;
   --svg-icon-stroke_blue: #dddddd;
 }
 .label-grey2__outline.label_chip:hover, .label-grey2__outline.label_chip.active, .label-grey2__outline.label_chip:active {
-  --label_color: #dddddd;
+  --label_color: #333333;
   --label_borderColor: #dddddd;
   --label_bgc: #e5e5e5;
-  --svg-valute-fill: #dddddd;
+  --svg-valute-fill: #333333;
   --svg-icon-fill: #dddddd;
   --svg-icon-stroke: #dddddd;
   --svg-icon-fill_blue: #dddddd;
