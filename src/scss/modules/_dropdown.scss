@@ -8,10 +8,6 @@
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-placeholder' as varplaceholder;
-// @use './../utilities/variables/var-zindex' as *;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-fonts' as *;
-// @use './../utilities/variables/var-sizes' as *;
 
 
 // Dropdown arrow/caret
@@ -95,6 +91,8 @@
 }
 
 .dropdown-menu__wrapList {
+  // display: flex;
+  flex-wrap: wrap;
   padding: fonts.rem(10);
   max-width: 500px;
   > li > a,
@@ -134,6 +132,9 @@
   // Show the menu
   > .dropdown-menu {
     display: block;
+  }
+  > .dropdown-menu__wrapList {
+    display: flex;
   }
 
   // Remove the outline when :focus is triggered

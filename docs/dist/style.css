@@ -7449,6 +7449,7 @@ h6, .h6 {
   overflow: hidden;
 }
 .dropdown-menu__wrapList {
+  flex-wrap: wrap;
   padding: 0.625rem;
   max-width: 500px;
 }
@@ -7482,6 +7483,10 @@ h6, .h6 {
 .show > .dropdown-menu,
 .open > .dropdown-menu {
   display: block;
+}
+.show > .dropdown-menu__wrapList,
+.open > .dropdown-menu__wrapList {
+  display: flex;
 }
 .show > a,
 .open > a {
