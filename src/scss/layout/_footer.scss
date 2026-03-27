@@ -4,11 +4,8 @@
 /* path: dsf-common-ui/src/scss/layout/_footer.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-// @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-paths' as path;
-// @use './../utilities/variables/var-sizes' as *;
-// @use './../utilities/variables/var-colors' as *;
 
 .footer{
   align-items: center;
@@ -29,7 +26,7 @@
     position: relative;
     z-index: 1;
     a{
-      color: val.brandColors(_vibrant-blue);
+      color: val.brandColors(_light-blue);
     }
   }
   .mobile-view &{
@@ -86,7 +83,7 @@
     a{ 
       .reset-view.mobile-view &,
       .guest-view.mobile-view &{
-        color: val.brandColors(_vibrant-blue);
+        color: val.brandColors(_light-blue);
       }
     }
     &_right{

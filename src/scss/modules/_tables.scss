@@ -119,12 +119,12 @@ td {
   }
   .desc{
     &:before{
-      background-image: svgurl.svg-url('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6L6 4L4 6" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.04 4.5V20.5" stroke="#333" fill="none" /><path d="M11 18H21" stroke="#0094ff" fill="none" /><path d="M11 12H17" stroke="#0094ff" fill="none" /><path d="M11 6H15" stroke="#0094ff" fill="none" /></svg>');
+      background-image: svgurl.svg-url('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6L6 4L4 6" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.04 4.5V20.5" stroke="#333" fill="none" /><path d="M11 18H21" stroke="#4A8DC6" fill="none" /><path d="M11 12H17" stroke="#4A8DC6" fill="none" /><path d="M11 6H15" stroke="#4A8DC6" fill="none" /></svg>');
     }
   }
   .asc{
     &:before{
-      background-image: svgurl.svg-url('<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M5.03333 16.6668V3.33346" stroke="#333" fill="none" /><path d="M9.16669 5.00012H12.5" stroke="#0094ff" fill="none" /><path d="M9.16669 10.0001H14.1667" stroke="#0094ff" fill="none" /><path d="M9.16669 15.0001H17.5" stroke="#0094ff" fill="none" /></svg>');
+      background-image: svgurl.svg-url('<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66669 15.4168L5.00002 17.0835L3.33335 15.4168" stroke="#333" fill="none" stroke-linecap="round" stroke-linejoin="round" /><path d="M5.03333 16.6668V3.33346" stroke="#333" fill="none" /><path d="M9.16669 5.00012H12.5" stroke="#4A8DC6" fill="none" /><path d="M9.16669 10.0001H14.1667" stroke="#4A8DC6" fill="none" /><path d="M9.16669 15.0001H17.5" stroke="#4A8DC6" fill="none" /></svg>');
     }
   }
 }
