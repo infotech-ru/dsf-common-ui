@@ -693,6 +693,20 @@ $brand-table: map.merge((
   tdHover_bgc:                            map.get($brand-colors, _light-grey2),
 ), emptymap.$brand-table) !default;
 
+$brand-progress: map.merge((
+  progress_bgc:                           map.get($brand-colors, _grey2),
+  progress_color:                         map.get($brand-colors, _white),
+  progress_borderColor:                   map.get($brand-colors, _white),
+  progressBar_bgc:                        map.get($brand-colors, _light-blue),
+  progressBarDefault_bgc:                 map.get($brand-colors, _grey),
+  progressBarDefault_color:               map.get($brand-colors, _dark-grey),
+  progressBarDanger_bgc:                  map.get($brand-colors, _red),
+  progressBarWarning_bgc:                 map.get($brand-colors, _light-orange),
+  progressBarInfo_bgc:                    map.get($brand-colors, _light-blue3),
+  progressBarPrimary_bgc:                 map.get($brand-colors, _light-blue),
+  progressBarSuccess_bgc:                 map.get($brand-colors, _green),
+), emptymap.$brand-progress) !default;
+
 $brand-palette: map.merge((
   body_bgc:                               map.get($brand-colors, _light-grey3),
   body_color:                             map.get($brand-colors, _dark-grey),

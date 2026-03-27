@@ -56,6 +56,9 @@
 @function brandPalette($keys...) {
   @return maps.val(colors.$brand-palette, $keys...);
 }
+@function brandProgress($keys...) {
+  @return maps.val(colors.$brand-progress, $keys...);
+}
 @function _brand-palette($keys...) {
   @return maps.val(colors.$brand-palette, $keys...);
 }

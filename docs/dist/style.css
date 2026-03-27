@@ -16718,7 +16718,7 @@ body[style^=padding-right] .modal-sidebar {
   }
 }
 .progress {
-  background-color: var(--color_light-grey2);
+  background-color: #dddddd;
   background-image: none;
   background-repeat: repeat-x;
   border-radius: var(--progress-border-radius, 0);
@@ -16729,10 +16729,11 @@ body[style^=padding-right] .modal-sidebar {
   width: 100%;
 }
 .progress-bar {
-  background-color: var(--color_light-blue);
+  background-color: #4A8DC6;
   background-image: none;
   background-repeat: repeat-x;
-  color: var(--color_white);
+  border-right: 1px solid #ffffff;
+  color: #ffffff;
   font-size: 0.75rem;
   height: 100%;
   position: relative;
@@ -16741,30 +16742,33 @@ body[style^=padding-right] .modal-sidebar {
   width: 0%;
   transition: width 0.6s ease;
 }
+.progress-bar[style*="widht:100%"] {
+  border-right: none;
+}
 .progress-bar-success {
-  background-color: var(--color_green);
+  background-color: #69C26A;
   background-image: none;
 }
 .progress-bar-primary {
-  background-color: var(--color_light-blue);
+  background-color: #4A8DC6;
   background-image: none;
 }
 .progress-bar-info {
-  background-color: var(--color_light-blue3);
+  background-color: #B6D1E8;
   background-image: none;
 }
 .progress-bar-warning {
-  background-color: var(--color_light-orange);
+  background-color: #FFDF9A;
   background-image: none;
 }
 .progress-bar-danger {
-  background-color: var(--color_red);
+  background-color: #D9534F;
   background-image: none;
 }
 .progress-bar-default {
-  background-color: var(--color_grey);
+  background-color: #BABABA;
   background-image: none;
-  color: var(--color_dark-grey);
+  color: #333333;
 }
 .progress-bar-striped {
   background-size: 40px 40px;
