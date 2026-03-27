@@ -14317,7 +14317,11 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-style: solid;
   border-color: #dddddd;
 }
-.unityBlock__hover {
+.unityBlock__hover:focus, .unityBlock__hover:hover {
+  background-color: #E4EEF7;
+  border-color: #B6D1E8;
+}
+.unityBlock.active {
   background-color: #E4EEF7;
   border-color: #B6D1E8;
 }

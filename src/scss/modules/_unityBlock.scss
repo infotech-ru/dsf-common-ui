@@ -28,6 +28,13 @@
     border-color: val.brandPalette(unityBlock_border);
   }
   &__hover{
+    &:focus,
+    &:hover{
+      background-color: val.brandPalette(unityBlockHover_bgc);
+      border-color: val.brandPalette(unityBlockHover_border);
+    }
+  }
+  &.active{
     background-color: val.brandPalette(unityBlockHover_bgc);
     border-color: val.brandPalette(unityBlockHover_border);
   }
