@@ -97,6 +97,12 @@ a {
       color: val.brandPalette(linkIncomplete_color);
     }
   }
+  &.text-white{
+    &:hover,
+    &:focus-visible {
+      color: val.brandColors(_light-grey2);
+    }
+  }
 }
 
 hr {

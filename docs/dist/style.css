@@ -676,6 +676,9 @@ a.dashed.incomplete {
   border-bottom-color: #333333;
   color: #333333;
 }
+a.text-white:hover, a.text-white:focus-visible {
+  color: #F5F5F5;
+}
 
 hr {
   border: 0;
