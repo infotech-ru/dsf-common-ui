@@ -4,6 +4,6 @@
 <path d="M8 10H16" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M8 13H10" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M8 16H10" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<circle cx="14" cy="15" r="2.5" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-<path d="M13 22V18H15V22L14 21.2L13 22Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<circle cx="14" cy="15" r="2.5" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
+<path d="M13 22V18H15V22L14 21.2L13 22Z" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
 </svg>

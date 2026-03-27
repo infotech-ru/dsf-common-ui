@@ -4,6 +4,6 @@
 <path d="M3 13C3 11.8954 3.89543 11 5 11H7V15C7 16.1046 6.10457 17 5 17V17C3.89543 17 3 16.1046 3 15V13Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M17 11H19C20.1046 11 21 11.8954 21 13V15C21 16.1046 20.1046 17 19 17V17C17.8954 17 17 16.1046 17 15V11Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <rect x="12" y="19" width="3" height="2" rx="1" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M12 18L12 6" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-<path d="M10 8L12 6L14 8" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M12 18L12 6" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
+<path d="M10 8L12 6L14 8" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
 </svg>

@@ -7,5 +7,5 @@
 <path d="M9 8H12" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M9 13H12" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M9 18H12" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M15.4375 8L15 3.71429L17 5.42857L18.5 2L20.25 5.42857L22 3.71429L21.5625 8H15.4375Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-linejoin="round"/>
+<path d="M15.4375 8L15 3.71429L17 5.42857L18.5 2L20.25 5.42857L22 3.71429L21.5625 8H15.4375Z" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none" stroke-linejoin="round"/>
 </svg>

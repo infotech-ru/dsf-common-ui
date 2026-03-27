@@ -13743,7 +13743,7 @@ th,
 td {
   background-color: var(--tableTd-bgc, #ffffff);
   font-weight: 400;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   line-height: 0.875rem;
   height: 2.5rem;
   padding: 0.3125rem 0.375rem;
@@ -13861,7 +13861,7 @@ thead th {
 }
 .table__simple thead th {
   background-color: #00000000;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 400;
   height: auto;
 }
@@ -13890,13 +13890,13 @@ tfoot td {
   background-color: #e5e5e5;
   bottom: 0;
   color: #333333;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 .table__simple tfoot th,
 .table__simple tfoot td {
   background-color: #00000000;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 tfoot th:first-child,

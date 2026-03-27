@@ -3,7 +3,7 @@
 <path d="M4.11353 10.2822H9.48853V5.50586" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <circle cx="5.25684" cy="16.3455" r="1.78589" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <circle cx="14.1399" cy="16.3455" r="1.78589" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M20.2422 9.41406L21.6564 11.1604L20.2422 12.9067" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-<path d="M21.123 11.1523H16.2168" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-<path d="M16.2385 17.0737C17.4736 17.0737 23.4095 17.0737 23.8519 17.0737C24.4049 17.0737 24.1008 15.8242 24.0178 15.616C23.9349 15.4077 23.8519 13.5934 23.8519 12.7257C23.8519 11.8579 23.769 6.33129 23.6031 5.77595C23.4703 5.33167 22.7367 5.04398 22.3864 5.12497H16.2385" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-dasharray="1 1"/>
+<path d="M20.2422 9.41406L21.6564 11.1604L20.2422 12.9067" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
+<path d="M21.123 11.1523H16.2168" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
+<path d="M16.2385 17.0737C17.4736 17.0737 23.4095 17.0737 23.8519 17.0737C24.4049 17.0737 24.1008 15.8242 24.0178 15.616C23.9349 15.4077 23.8519 13.5934 23.8519 12.7257C23.8519 11.8579 23.769 6.33129 23.6031 5.77595C23.4703 5.33167 22.7367 5.04398 22.3864 5.12497H16.2385" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none" stroke-dasharray="1 1"/>
 </svg>

@@ -3,8 +3,8 @@
 <path d="M2 10.5C2 10.5 6 10.106 7 9.60596C8 9.10596 8 9.10596 8.5 8C9 6.89404 9 5.50586 9 5.50586" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <circle cx="4.25684" cy="16.3455" r="1.78589" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <circle cx="18.2859" cy="16.2859" r="1.78589" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M17.0254 7L18.4396 8.74631L17.0254 10.4926" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-<path d="M17.9062 8.73828H13" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
-<path d="M23 11.5C23 10.5883 22.9127 6.28175 22.7381 5.69828C22.5984 5.23151 21.8262 4.92924 21.4576 5.01433L10.5 5.01433" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none" stroke-dasharray="1 1"/>
+<path d="M17.0254 7L18.4396 8.74631L17.0254 10.4926" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
+<path d="M17.9062 8.73828H13" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
+<path d="M23 11.5C23 10.5883 22.9127 6.28175 22.7381 5.69828C22.5984 5.23151 21.8262 4.92924 21.4576 5.01433L10.5 5.01433" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none" stroke-dasharray="1 1"/>
 <path d="M10.5 12.9515L23.25 13V16.785H20.5C20.5 16.785 20.4376 14.0766 18.2188 14.0766C16 14.0766 16.1875 16.8752 16.1875 16.8752L10 16.8653L10.5 12.9515Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 </svg>

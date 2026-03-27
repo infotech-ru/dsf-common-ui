@@ -3,7 +3,7 @@
 <path d="M11 16L11 21L9 21L9 16" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M16 19H18V20H16V19Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M16 9H18V10H16V9Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M14 13H5V16H14V13Z" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M14 13H5V16H14V13Z" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
 <path d="M16 14H18V15H16V14Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M16 4H18V5H16V4Z" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 </svg>

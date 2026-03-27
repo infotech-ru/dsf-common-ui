@@ -3,5 +3,5 @@
 <path d="M3.5 9.5H20.5" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M7 4V8" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
 <path d="M17 4V8" stroke="var(--svg-icon-stroke, #333)" fill="none"/>
-<path d="M9 14.5L11.3333 17L16 12" stroke="var(--svg-icon-stroke_blue, #0094ff)" fill="none"/>
+<path d="M9 14.5L11.3333 17L16 12" stroke="var(--svg-icon-stroke_blue, #4A8DC6)" fill="none"/>
 </svg>
