@@ -32,11 +32,13 @@
     &:hover{
       background-color: val.brandPalette(unityBlockHover_bgc);
       border-color: val.brandPalette(unityBlockHover_border);
+      --tableTd-bgc: val.brandPalette(unityBlockHover_bgc);
     }
   }
   &.active{
     background-color: val.brandPalette(unityBlockHover_bgc);
     border-color: val.brandPalette(unityBlockHover_border);
+    --tableTd-bgc: val.brandPalette(unityBlockHover_bgc);
   }
   &_header{
     align-items: center;

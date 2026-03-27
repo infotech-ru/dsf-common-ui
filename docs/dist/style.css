@@ -13738,7 +13738,7 @@ caption {
 
 th,
 td {
-  background-color: #ffffff;
+  background-color: var(--tableTd-bgc, #ffffff);
   font-weight: 400;
   font-size: 0.8125rem;
   line-height: 0.875rem;
@@ -14320,10 +14320,12 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .unityBlock__hover:focus, .unityBlock__hover:hover {
   background-color: #E4EEF7;
   border-color: #B6D1E8;
+  --tableTd-bgc: val.brandPalette(unityBlockHover_bgc);
 }
 .unityBlock.active {
   background-color: #E4EEF7;
   border-color: #B6D1E8;
+  --tableTd-bgc: val.brandPalette(unityBlockHover_bgc);
 }
 .unityBlock_header {
   align-items: center;

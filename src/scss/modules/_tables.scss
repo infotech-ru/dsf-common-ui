@@ -32,7 +32,7 @@ caption {
 
 th,
 td {
-  background-color: val.brandTable(tbody_bgc);
+  background-color: var(--tableTd-bgc, val.brandTable(tbody_bgc));
   color: val.brandTable(tbody-color);
   font-weight: 400;
   font-size: fonts.rem(val.fontSizes(tbody));
