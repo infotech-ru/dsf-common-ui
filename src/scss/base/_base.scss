@@ -100,7 +100,7 @@ a {
   &.text-white{
     &:hover,
     &:focus-visible {
-      color: val.brandColors(_light-grey2);
+      color: val.brandColors(_grey);
     }
   }
 }
@@ -206,5 +206,14 @@ blockquote {
     &:before {
       content: "\2014 \00A0"; // em dash, nbsp
     }
+  }
+}
+
+.text-base{
+  color: val.brandPalette(body_color);
+  &:hover,
+  &:focus-visible,
+  &:focus{
+    color: val.brandPalette(body_color);
   }
 }
