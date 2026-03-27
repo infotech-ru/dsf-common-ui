@@ -902,6 +902,8 @@ $brand-palette: map.merge((
   tooltip_color:                          map.get($brand-colors, _white),
 
   unityBlock_bgc:                         map.get($brand-colors, _white),
+  unityBlockHover_bgc:                    map.get($brand-colors, _light-blue2),
+  unityBlockHover_border:                 map.get($brand-colors, _light-blue3),
   unityBlock_border:                      map.get($brand-colors, _grey2),
   unityBlockTitle_color:                  map.get($brand-colors, _dark-grey),
 

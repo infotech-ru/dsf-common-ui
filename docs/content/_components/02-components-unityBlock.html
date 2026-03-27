@@ -15,13 +15,15 @@ order: 2
     <div class="mb-10">- Итоговая информация находится в <code class="language-plaintext highlighter-rouge">unityBlock_footer</code></div>
     <h4>Модификации</h4>
     <div class="mb-10"><code class="language-plaintext highlighter-rouge">unityBlock__noshadow</code> - убирает тень у контейнера</div>
+    <div class="mb-10"><code class="language-plaintext highlighter-rouge">unityBlock__border</code> - добавляет бордер у контейнера</div>
+    <div class="mb-10"><code class="language-plaintext highlighter-rouge">unityBlock__hover</code> - добавляет ховер фона (/бордера) у контейнера</div>
     <div class=""><code class="language-plaintext highlighter-rouge">unityBlock__nobg</code> - убирает фон у контейнера</div>
 
 {% highlight html %}
 <div class="unityBlock">
     <div class="unityBlock_header">
         <div class="unityBlock_headerItem">
-            <?= Icons::wrapper('bicolors-car__24vb', ['class' => 'svg--icon svg--icon__24vb unityBlock_headerSvgTitle']) ?>
+            <?= Icons::wrapper('bicolors-circle_information__24vb', ['class' => 'svg--icon svg--icon__24vb unityBlock_headerSvgTitle']) ?>
             <h4 class="h4 unityBlock_headerTitle">
                 <?= Yii::t('app', 'Название блока') ?>
             </h4>
@@ -39,28 +41,96 @@ order: 2
 </div>
 {% endhighlight %}
     <div class="bs-docs-example">
-        <div class="unityBlock">
-            <div class="unityBlock_header">
-                <div class="unityBlock_headerItem">
-                    <span class="svg--icon svg--icon__24vb  unityBlock_headerSvgTitle">
-                        <svg width="24" height="24">
-                            <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-car__24vb"></use>
-                        </svg>
-                    </span>
-                    <h4 class="h4 unityBlock_headerTitle">Название блока</h4>
-                </div>
-                <div class="unityBlock_headerItem">
-                    <button class="btn-icon">
-                        <span class="svg--icon svg--icon__24vb ">
-                            <svg width="24" height="24">
-                                <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb"></use>
-                            </svg>
-                        </span>
-                    </button>
+        <div class="row">
+            <div class="col-6">
+                <div class="unityBlock">
+                    <div class="unityBlock_header">
+                        <div class="unityBlock_headerItem">
+                            <span class="svg--icon svg--icon__24vb  unityBlock_headerSvgTitle">
+                                <svg width="24" height="24">
+                                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-circle_information__24vb"></use>
+                                </svg>
+                            </span>
+                            <h4 class="h4 unityBlock_headerTitle">Название блока</h4>
+                        </div>
+                        <div class="unityBlock_headerItem">
+                            <button class="btn-icon">
+                                <span class="svg--icon svg--icon__24vb ">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="unityBlock_body">
+                        <table class="table table__list">
+                            <tbody>
+                                <tr>
+                                <td><label class="control-label-static">Заголовок</label></td>
+                                <td>Значение</td>
+                                </tr>
+                                <tr>
+                                <td><label class="control-label-static">Заголовок</label></td>
+                                <td>Значение</td>
+                                </tr>
+                                <tr>
+                                <td><label class="control-label-static">Заголовок</label></td>
+                                <td>Значение</td>
+                                </tr>
+                                <tr>
+                                <td><label class="control-label-static">Заголовок</label></td>
+                                <td>Значение</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="unityBlock_body">
-                
+            <div class="col-6">
+                <div class="unityBlock unityBlock__border unityBlock__hover">
+                    <div class="unityBlock_header">
+                        <div class="unityBlock_headerItem">
+                            <span class="svg--icon svg--icon__24vb  unityBlock_headerSvgTitle">
+                                <svg width="24" height="24">
+                                    <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-doc_info__24vb"></use>
+                                </svg>
+                            </span>
+                            <h4 class="h4 unityBlock_headerTitle">Название блока 2</h4>
+                        </div>
+                        <div class="unityBlock_headerItem">
+                            <button class="btn-icon">
+                                <span class="svg--icon svg--icon__24vb ">
+                                    <svg width="24" height="24">
+                                        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-edit__24vb"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="unityBlock_body">
+                        <table class="table table__list">
+                            <tbody>
+                                <tr>
+                                <td><label class="control-label-static">Заголовок</label></td>
+                                <td>Значение</td>
+                                </tr>
+                                <tr>
+                                <td><label class="control-label-static">Заголовок</label></td>
+                                <td>Значение</td>
+                                </tr>
+                                <tr>
+                                <td><label class="control-label-static">Заголовок</label></td>
+                                <td>Значение</td>
+                                </tr>
+                                <tr>
+                                <td><label class="control-label-static">Заголовок</label></td>
+                                <td>Значение</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -27,6 +27,10 @@
     border-style: solid;
     border-color: val.brandPalette(unityBlock_border);
   }
+  &__hover{
+    background-color: val.brandPalette(unityBlockHover_bgc);
+    border-color: val.brandPalette(unityBlockHover_border);
+  }
   &_header{
     align-items: center;
     display: flex;
