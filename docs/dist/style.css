@@ -13260,6 +13260,7 @@ select.selectpicker {
 .inputGroup_append .inputGroup_outer {
   border-left: 1px solid #BABABA;
 }
+.inputGroup_append .inputGroup_inner + .inputGroup_outer,
 .inputGroup_append [class*=btn-] + .inputGroup_outer {
   border-left: none;
 }

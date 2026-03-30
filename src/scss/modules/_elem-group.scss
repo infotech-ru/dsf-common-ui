@@ -611,7 +611,8 @@
   .inputGroup_outer {
     border-left: 1px solid val.brandPalette(inputGroupEl-borderColor);
   }
-  [class*="btn-"] +  .inputGroup_outer {
+  .inputGroup_inner + .inputGroup_outer,
+  [class*="btn-"] + .inputGroup_outer {
     border-left: none;
   }
   .inputGroup_inner {

@@ -24,11 +24,52 @@ $brand-sizes: (
   unityBlockHeader_mb:             baseValue.$base-padding,
 )!default;
 
-$tabs-sizes:(
-  navCardsForms_padding:           16,
-  navCards_paddingX:               24,
-  navCards_paddingY:               14,
-  tabPane_padding:                 baseValue.$base-gutter,
+$alert-sizes: (
+  alert_radius:                    baseValue.$base-radius,
+  alert_padding:                   baseValue.$base-padding,
+  alert_margin:                    baseValue.$base-gutter,
+  alertClose_size:                 14,
+)!default;
+
+$btn-sizes: (
+  btn_paddingX:                    baseValue.$base-padding,
+  btn_borderWidth:                 1,
+  btn_borderRadius:                baseValue.$base-radius,
+  btnXs-paddingX:                  5,
+  btnXs-paddingY:                  0,
+  btnLg-paddingX:                  15,
+  btnLg-paddingY:                  0,
+  btnIcon_height:                  20,
+  btnIconSvg_height:               14,
+  btnDownloadSvg_height:           20,
+)!default;
+
+$carousel-sizes:(
+  carousel-thumbs_size:            64,
+  carousel-thumbsBig_size:         108,
+  carousel-thumbs_gap:             7,
+  carousel-control_size:           26,
+)!default;
+
+$checkbox-sizes:(
+  comboTreeCheckbox_size:          16,
+  checkboxItem_size:               12,
+  checkboxItemBig_size:            24,
+)!default;
+
+$forms-sizes:(
+  borderRadiusFormElem:            baseValue.$base-radius,
+  controlLabel_mb:                 3,
+  controlLabel_mr:                 5,
+  formControl_borderSize:          1,
+  formControl_paddingX:            baseValue.$base-padding,
+  formControlStatic_paddingY:      7,
+  formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
+  formGroup__formFree_mb:          25,
+  iconLabel:                       16,
+  iconLabelActive:                 12,
+  inputGroupAddon_paddingX:        12,
+  inputGroupAddon_paddingY:        6,
 )!default;
 
 $layout-sizes:(
@@ -38,6 +79,35 @@ $layout-sizes:(
   header_marginBottom:             baseValue.$base-padding,
   headerTop_height:                44,
   headerBottom_height:             34,
+)!default;
+
+$modal-sizes: (
+  modalSidebar_padding:            16,
+  modalSidebar_close_size:         15,
+  modal-theme2_padding:            24,
+  modal-theme2_paddingX:           24,
+  modal-theme2_paddingY:           16,
+  modal-header-close_size:         16,
+  modal_paddingX:                  15,
+  modal_paddingXR:                 30,
+  modal_paddingY:                  baseValue.$base-padding,
+)!default;
+
+$popover-sizes: (
+  popoverArrow_width:              6,
+  popoverArrow_height:             6,
+  popover_borderWidth:             1,
+  popover_paddingX:                12,
+  popover_paddingY:                8,
+  popover_maxWidth:                276,
+  popoverWide_maxWidth:            400,
+)!default;
+
+$radio-sizes:(
+  radioItem_size:                  14,
+  radioItem_paddingText:           5,
+  radioItemBorder_size:            1,
+  radioItemDot_size:               6,
 )!default;
 
 $stages-sizes:(
@@ -61,52 +131,11 @@ $table-sizes:(
   tableSortIcon_size:              20,
 )!default;
 
-$forms-sizes:(
-  borderRadiusFormElem:            baseValue.$base-radius,
-  controlLabel_mb:                 3,
-  controlLabel_mr:                 5,
-  formControl_borderSize:          1,
-  formControl_paddingX:            baseValue.$base-padding,
-  formControlStatic_paddingY:      7,
-  formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
-  formGroup__formFree_mb:          25,
-  iconLabel:                       16,
-  iconLabelActive:                 12,
-  inputGroupAddon_paddingX:        12,
-  inputGroupAddon_paddingY:        6,
-)!default;
-
-$carousel-sizes:(
-  carousel-thumbs_size:            64,
-  carousel-thumbsBig_size:         108,
-  carousel-thumbs_gap:             7,
-  carousel-control_size:           26,
-)!default;
-
-$checkbox-sizes:(
-  comboTreeCheckbox_size:          16,
-  checkboxItem_size:               12,
-  checkboxItemBig_size:            24,
-)!default;
-
-$radio-sizes:(
-  radioItem_size:                  14,
-  radioItem_paddingText:           5,
-  radioItemBorder_size:            1,
-  radioItemDot_size:               6,
-)!default;
-
-$btn-sizes: (
-  btn_paddingX:                    baseValue.$base-padding,
-  btn_borderWidth:                 1,
-  btn_borderRadius:                baseValue.$base-radius,
-  btnXs-paddingX:                  5,
-  btnXs-paddingY:                  0,
-  btnLg-paddingX:                  15,
-  btnLg-paddingY:                  0,
-  btnIcon_height:                  20,
-  btnIconSvg_height:               14,
-  btnDownloadSvg_height:           20,
+$tabs-sizes:(
+  navCardsForms_padding:           16,
+  navCards_paddingX:               24,
+  navCards_paddingY:               14,
+  tabPane_padding:                 baseValue.$base-gutter,
 )!default;
 
 $toggleCheck-sizes:(
@@ -118,17 +147,6 @@ $toggleCheck-sizes:(
   toggleCheck_width:               36,
 )!default;
 
-$modal-sizes: (
-  modalSidebar_padding:            16,
-  modalSidebar_close_size:         15,
-  modal-theme2_padding:            24,
-  modal-theme2_paddingX:           24,
-  modal-theme2_paddingY:           16,
-  modal-header-close_size:         16,
-  modal_paddingX:                  15,
-  modal_paddingXR:                 30,
-  modal_paddingY:                  baseValue.$base-padding,
-)!default;
 
 $pagination-sizes: (
   paginationItem_borderRadius:     1,
@@ -149,16 +167,6 @@ $toast-sizes: (
   toast_maxWidth:                  350,
 )!default;
 
-$popover-sizes: (
-  popoverArrow_width:              6,
-  popoverArrow_height:             6,
-  popover_borderWidth:             1,
-  popover_paddingX:                12,
-  popover_paddingY:                8,
-  popover_maxWidth:                276,
-  popoverWide_maxWidth:            400,
-)!default;
-
 $tooltip-sizes: (
   tooltipArrow_height:             6,
   tooltipArrow_width:              6,
@@ -168,12 +176,6 @@ $tooltip-sizes: (
   tooltipWide_maxWidth:            400,
 )!default;
 
-$alert-sizes: (
-  alert_radius:                    baseValue.$base-radius,
-  alert_padding:                   baseValue.$base-padding,
-  alert_margin:                    baseValue.$base-gutter,
-  alertClose_size:                 14,
-)!default;
 
 $marginSizes: 0, 5, 6, 7, 8, 10, 15, 20, 25, 30, 40, 50;
 $paddingSizes: 0, 5, 6, 7, 8, 10, 12, 15, 16, 20, 25, 30, 40, 50;
