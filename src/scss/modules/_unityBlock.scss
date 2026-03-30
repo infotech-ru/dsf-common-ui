@@ -55,6 +55,8 @@
     }
     &Title{
       color: val.brandPalette(unityBlockTitle_color);
+      font-size: fonts.rem(val.fontSizes(unityBlockTitle));
+      font-weight: val.fontWeight(unityBlockTitle);
       white-space: nowrap;
     }
     &SvgTitle{

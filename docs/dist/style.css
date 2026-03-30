@@ -14378,6 +14378,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .unityBlock_headerTitle {
   color: #333333;
+  font-size: 0.75rem;
+  font-weight: 700;
   white-space: nowrap;
 }
 .unityBlock_headerSvgTitle {
