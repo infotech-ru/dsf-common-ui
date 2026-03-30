@@ -21,7 +21,7 @@ $brand-sizes: (
   square_height:                   64,
   unityBlock_bRadius:              baseValue.$base-radius,
   unityBlock_padding:              baseValue.$base-gutter,
-  unityBlockHeader_mb:             baseValue.$base-padding,
+  unityBlockHeader_mb:             baseValue.$base-gutter,
 )!default;
 
 $alert-sizes: (
