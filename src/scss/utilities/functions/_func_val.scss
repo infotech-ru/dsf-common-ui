@@ -14,43 +14,22 @@
 @function brandColors($keys...) {
   @return maps.val(colors.$brand-colors, $keys...);
 }
-@function _brand-colors($keys...) {
-  @return maps.val(colors.$brand-colors, $keys...);
-}
 @function brandHover($keys...) {
-  @return maps.val(colors.$brand-hover, $keys...);
-}
-@function _brand-hover($keys...) {
   @return maps.val(colors.$brand-hover, $keys...);
 }
 @function brandNameColors($keys...) {
   @return maps.val(colors.$brand-namecolors, $keys...);
 }
-@function _brand-namecolors($keys...) {
-  @return maps.val(colors.$brand-namecolors, $keys...);
-}
 @function brandBtn($keys...) {
-  @return maps.val(colors.$brand-btn, $keys...);
-}
-@function _brand-btn($keys...) {
   @return maps.val(colors.$brand-btn, $keys...);
 }
 @function brandLabel($keys...) {
   @return maps.val(colors.$brand-label, $keys...);
 }
-@function _brand-label($keys...) {
-  @return maps.val(colors.$brand-label, $keys...);
-}
 @function brandAlert($keys...) {
   @return maps.val(colors.$brand-alert, $keys...);
 }
-@function _brand-alert($keys...) {
-  @return maps.val(colors.$brand-alert, $keys...);
-}
 @function brandTable($keys...) {
-  @return maps.val(colors.$brand-table, $keys...);
-}
-@function _brand-table($keys...) {
   @return maps.val(colors.$brand-table, $keys...);
 }
 @function brandPalette($keys...) {
@@ -59,25 +38,19 @@
 @function brandProgress($keys...) {
   @return maps.val(colors.$brand-progress, $keys...);
 }
-@function _brand-palette($keys...) {
-  @return maps.val(colors.$brand-palette, $keys...);
-}
 @function brandCursor($keys...) {
   @return maps.val(cursor.$brandCursor, $keys...);
 }
 @function brandDataImage($keys...) {
   @return maps.val(dataimages.$brandDataImage, $keys...);
 }
+@function fontSizesBase($keys...) {
+  @return maps.val(fonts.$fontSizesBase, $keys...);
+}
 @function fontSizes($keys...) {
   @return maps.val(fonts.$fontSizes, $keys...);
 }
-@function _fontSizes($keys...) {
-  @return maps.val(fonts.$fontSizes, $keys...);
-}
 @function fontWeight($keys...) {
-  @return maps.val(fonts.$fontWeight, $keys...);
-}
-@function _fontWeight($keys...) {
   @return maps.val(fonts.$fontWeight, $keys...);
 }
 @function textTransform($keys...) {
@@ -85,12 +58,6 @@
 }
 @function lineHeight($keys...) {
   @return maps.val(lineheights.$lineHeight, $keys...);
-}
-@function _lineHeight($keys...) {
-  @return maps.val(lineheights.$lineHeight, $keys...);
-}
-@function _brand-sizes($keys...) {
-  @return maps.val(sizes.$brand-sizes, $keys...);
 }
 @function brandSizes($keys...) {
   @return maps.val(sizes.$brand-sizes, $keys...);
@@ -147,8 +114,5 @@
   @return maps.val(sizes.$alert-sizes, $keys...);
 }
 @function zIndex($keys...) {
-  @return maps.val(zindex.$zindex, $keys...);
-}
-@function _zindex($keys...) {
   @return maps.val(zindex.$zindex, $keys...);
 }

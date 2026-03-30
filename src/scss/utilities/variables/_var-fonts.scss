@@ -1,6 +1,4 @@
-// @function _fontsList($keys...) {
-//   @return val($fontsList, $keys...);
-// }
+@use './_var-baseValue' as baseValue;
 
 $fontsList: (
   "Roboto": (
@@ -15,39 +13,43 @@ $fontsList: (
   )
 )!default;
 
+$fontSizesBase: (
+  body:                                                                      baseValue.$base-body,
+  headingH1:                                                                 baseValue.$base-headingH1,
+  headingH2:                                                                 baseValue.$base-headingH2,
+  headingH3:                                                                 baseValue.$base-headingH3,
+  headingH4:                                                                 baseValue.$base-headingH4,
+  headingH5:                                                                 baseValue.$base-headingH5,
+  headingH6:                                                                 baseValue.$base-headingH6,
+)!default;
+
 $fontSizes: (
-  body:                                                                      12,
-  btn:                                                                       12,
+  btn:                                                                       baseValue.$base-body,
   btnXs:                                                                     10,
   btnLg:                                                                     14,
   blockquote:                                                                18,
   controlLabel:                                                              11,
-  controlLabel__formFree:                                                    12,
+  controlLabel__formFree:                                                    baseValue.$base-body,
   controlLabel_active__formFree:                                             11,
-  checkbox:                                                                  12,
-  inputGroupElem:                                                            12,
-  dropdown:                                                                  12,
+  checkbox:                                                                  baseValue.$base-body,
+  inputGroupElem:                                                            baseValue.$base-body,
+  dropdown:                                                                  baseValue.$base-body,
   dropdownHeader:                                                            11,
-  formElem:                                                                  12,
-  headingH1:                                                                 24,
-  headingH2:                                                                 18,
-  headingH3:                                                                 16,
-  headingH4:                                                                 12,
-  headingH5:                                                                 14,
-  headingH6:                                                                 12,
+  formElem:                                                                  baseValue.$base-body,
   navCards:                                                                  13,
-  navPills:                                                                  12,
+  navPills:                                                                  baseValue.$base-body,
   navTabs:                                                                   13,
   output:                                                                    14,
   pageHeaderTilte:                                                           18,
-  pagination:                                                                12,
+  pagination:                                                                baseValue.$base-body,
   popoverHeader:                                                             14,
-  popover:                                                                   12,
-  toast:                                                                     12,
+  popover:                                                                   baseValue.$base-body,
+  toast:                                                                     baseValue.$base-body,
   thead:                                                                     11,
-  tbody:                                                                     12,
-  tfoot:                                                                     12,
-  tooltip:                                                                   12,
+  tbody:                                                                     baseValue.$base-body,
+  tfoot:                                                                     baseValue.$base-body,
+  tooltip:                                                                   baseValue.$base-body,
+  unityBlockTitle:                                                           baseValue.$base-headingH2,
 )!default;
 
 $fontWeight: (

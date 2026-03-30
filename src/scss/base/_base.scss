@@ -135,7 +135,7 @@ pre {
   border-radius: val.brandSizes(border-radius-base);
   color: val.brandPalette(pre_color);
   display: block;
-  font-size: fonts.rem(calc(val.fontSizes(body) - 1));
+  font-size: fonts.rem(calc(val.fontSizesBase(body) - 1));
   margin: 0 0 10px;
   line-height: fonts.rem(val.lineHeight(body));
   padding: 2px 4px;

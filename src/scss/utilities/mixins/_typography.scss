@@ -12,7 +12,7 @@
 
 
 @mixin responsive-font-size($baseKey) {
-  $font-size: maps.val(varfonts.$fontSizes, $baseKey);
+  $font-size: maps.val(varfonts.$fontSizesBase, $baseKey);
   
   @if $font-size {
     & {
@@ -20,7 +20,7 @@
     }
   }
   
-  @each $key, $value in varfonts.$fontSizes {
+  @each $key, $value in varfonts.$fontSizesBase {
     @if string.index($key, $baseKey) == 1 and $key != $baseKey {
       $postfix: string.slice($key, string.length($baseKey) + 1);
       
@@ -38,7 +38,7 @@
 }
 
 @mixin responsive-font-size-vaiables($baseKey) {
-  $font-size: maps.val(varfonts.$fontSizes, $baseKey);
+  $font-size: maps.val(varfonts.$fontSizesBase, $baseKey);
   
   @if $font-size {
     @if string.index($baseKey, "heading") {
@@ -49,7 +49,7 @@
     }
   }
   
-  @each $key, $value in varfonts.$fontSizes {
+  @each $key, $value in varfonts.$fontSizesBase {
     @if string.index($key, $baseKey) == 1 and $key != $baseKey {
       $postfix: string.slice($key, string.length($baseKey) + 1);
       
