@@ -790,6 +790,22 @@ blockquote .small:before {
   color: #333333;
 }
 
+.mb-base {
+  margin-bottom: 0.625rem;
+}
+
+.mt-base {
+  margin-top: 0.625rem;
+}
+
+.pl-base {
+  padding-left: 0.625rem;
+}
+
+.pr-base {
+  padding-right: 0.625rem;
+}
+
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* BASE                                                                       */
