@@ -27,7 +27,7 @@
 }
 .nav-cards {
   gap: fonts.rem(2);
-  border-bottom-color: val.brandPalette(navCards_borderColor);
+  border-bottom-color: val.brandNav(navCards_borderColor);
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
@@ -70,11 +70,11 @@
 .nav-tabs .nav-link{ 
   align-items: center;
   border-radius: 0;
-  background-color: val.brandPalette(navTabs_bgc);
-  border-color: val.brandPalette(navTabs_borderColor);
+  background-color: val.brandNav(navTabs_bgc);
+  border-color: val.brandNav(navTabs_borderColor);
   border-style: solid;
   border-width: 1px;
-  color: val.brandPalette(navTabs_color);
+  color: val.brandNav(navTabs_color);
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -89,21 +89,21 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: val.brandPalette(navTabs_bgc);
-    border-color: val.brandPalette(navTabs_borderColor);
-    color: val.brandPalette(navTabs_color);
+    background-color: val.brandNav(navTabs_bgc);
+    border-color: val.brandNav(navTabs_borderColor);
+    color: val.brandNav(navTabs_color);
   }
 }
 
 .nav-pills > li > a,
 .nav-pills .nav-link {
-  background-color: val.brandPalette(navPills_bg);
-  border-color: val.brandPalette(navPills_border);
+  background-color: val.brandNav(navPills_bg);
+  border-color: val.brandNav(navPills_border);
   border-style: solid;
   border-width: #{val.brandSizes(navPills-borderWidth)}px;
   border-radius: 0;
   cursor: pointer;
-  color: val.brandPalette(navPills_color);
+  color: val.brandNav(navPills_color);
   display: inline-block;
   font-size: fonts.rem(val.fontSizes(navPills));
   font-weight: val.fontWeight(navPills);
@@ -117,9 +117,9 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: val.brandPalette(navPills_bg);
-    border-color: val.brandPalette(navPills_border);
-    color: val.brandPalette(navPills_color);
+    background-color: val.brandNav(navPills_bg);
+    border-color: val.brandNav(navPills_border);
+    color: val.brandNav(navPills_color);
   }
 }
 
@@ -134,17 +134,17 @@
 .nav-tabs > li > a.active,
 .nav-tabs .nav-link.active,
 .nav-tabs .active .nav-link{ 
-  background-color: val.brandPalette(navTabs-active_bgc);
-  border-top-color: val.brandPalette(navTabs-active_borderColor);
+  background-color: val.brandNav(navTabs-active_bgc);
+  border-top-color: val.brandNav(navTabs-active_borderColor);
   border-bottom-color: transparent;
-  color: val.brandPalette(navTabs-active_color);
+  color: val.brandNav(navTabs-active_color);
   &:hover,
   &:focus,
   &:active { 
-    background-color: val.brandPalette(navTabs-active_bgc);
-    border-top-color: val.brandPalette(navTabs-active_borderColor);
+    background-color: val.brandNav(navTabs-active_bgc);
+    border-top-color: val.brandNav(navTabs-active_borderColor);
     border-bottom-color: transparent;
-    color: val.brandPalette(navTabs-active_color);
+    color: val.brandNav(navTabs-active_color);
   }
 }
  
@@ -152,15 +152,15 @@
 .nav-pills > li > a.active,
 .nav-pills .nav-link.active,
 .nav-pills .active .nav-link {
-  background-color: val.brandPalette(navPills-active_bg);
-  border-color: val.brandPalette(navPills-active_border);
-  color: val.brandPalette(navPills-active_color);
+  background-color: val.brandNav(navPills-active_bg);
+  border-color: val.brandNav(navPills-active_border);
+  color: val.brandNav(navPills-active_color);
   &:hover,
   &:focus,
   &:active {
-    background-color: val.brandPalette(navPills-active_bg);
-    border-color: val.brandPalette(navPills-active_border);
-    color: val.brandPalette(navPills-active_color);
+    background-color: val.brandNav(navPills-active_bg);
+    border-color: val.brandNav(navPills-active_border);
+    color: val.brandNav(navPills-active_color);
   }
 }
 
@@ -176,11 +176,11 @@
 .nav-cards > li > a,
 .nav-cards .nav-link {
   align-items: center;
-  background-color: val.brandPalette(navCards_bgc);
-  border-bottom-color: val.brandPalette(navCards_borderColor);
+  background-color: val.brandNav(navCards_bgc);
+  border-bottom-color: val.brandNav(navCards_borderColor);
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  color: val.brandPalette(navCards_color);
+  color: val.brandNav(navCards_color);
   display: inline-flex;
   justify-content: center;
   flex-direction: column;
@@ -191,10 +191,10 @@
   padding: fonts.rem(val.tabsSizes(navCards_paddingY)) fonts.rem(val.tabsSizes(navCards_paddingX));
   position: relative;
   .svg--icon{ 
-    #{--svg-icon-fill}: val.brandPalette(navCards_svg);
-    #{--svg-icon-fill_blue}: val.brandPalette(navCards_svg);
-    #{--svg-icon-stroke_blue}: val.brandPalette(navCards_svg);
-    #{--svg-icon-stroke}: val.brandPalette(navCards_svg);
+    #{--svg-icon-fill}: val.brandNav(navCards_svg);
+    #{--svg-icon-fill_blue}: val.brandNav(navCards_svg);
+    #{--svg-icon-stroke_blue}: val.brandNav(navCards_svg);
+    #{--svg-icon-stroke}: val.brandNav(navCards_svg);
     #{--limited-stroke-off}: val.brandColors(_transparent);
     + span{
       line-height: fonts.rem(val.lineHeight(navCards) - 4); // компенсация паддинга когда с иконкой
@@ -211,15 +211,15 @@
 .nav-cards > li > a.active,
 .nav-cards .nav-link.active,
 .nav-cards .active .nav-link {
-  background-color: val.brandPalette(navCards-active_bgc);
-  border-bottom-color: val.brandPalette(navCards-active_borderColor);
+  background-color: val.brandNav(navCards-active_bgc);
+  border-bottom-color: val.brandNav(navCards-active_borderColor);
   border-bottom-width: 2px;
-  color: val.brandPalette(navCards-active_color);
+  color: val.brandNav(navCards-active_color);
   .svg--icon{ 
-    #{--svg-icon-fill}: val.brandPalette(navCards-active_svg);
-    #{--svg-icon-fill_blue}: val.brandPalette(navCards-active_svg);
-    #{--svg-icon-stroke_blue}: val.brandPalette(navCards-active_svg);
-    #{--svg-icon-stroke}: val.brandPalette(navCards-active_svg);
+    #{--svg-icon-fill}: val.brandNav(navCards-active_svg);
+    #{--svg-icon-fill_blue}: val.brandNav(navCards-active_svg);
+    #{--svg-icon-stroke_blue}: val.brandNav(navCards-active_svg);
+    #{--svg-icon-stroke}: val.brandNav(navCards-active_svg);
     #{--limited-stroke-off}: val.brandColors(_transparent);
   }
 }

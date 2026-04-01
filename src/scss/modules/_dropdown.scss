@@ -42,7 +42,7 @@
   z-index: val.zIndex(dropdown-menu);
   // Dividers (basically an hr) within the dropdown
   .divider {
-    background-color: val.brandPalette(menuDropdown_borderColor);
+    background-color: val.brandDropdown(dropdownDivider_bgc);
     height: 1px;
     margin: 6px 0;
     overflow: hidden;

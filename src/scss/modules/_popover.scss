@@ -16,10 +16,10 @@
 // @use './../utilities/variables/var-fonts' as *;
 
 .popover {
-  background-color: val.brandPalette(popover_bgc);
+  background-color: val.brandPopover(popover_bgc);
   background-clip: padding-box;
   border-radius: 0;
-  border: 1px solid val.brandPalette(popover_borderColor);
+  border: 1px solid val.brandPopover(popover_borderColor);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   display: block;
   font-size: fonts.rem(val.fontSizes(popover));
@@ -45,7 +45,7 @@
   white-space: normal;
   z-index: val.zIndex(popover);
 
-  // box-shadow: 0 .25rem .5rem val.brandPalette(popover_borderColor);
+  // box-shadow: 0 .25rem .5rem val.brandPopover(popover_borderColor);
   &.show {
     opacity: 1;
   }
@@ -94,7 +94,7 @@
     &::after {
       bottom: fonts.rem(val.popoverSizes(popover_borderWidth));
       border-width: fonts.rem(val.popoverSizes(popoverArrow_height)) fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) 0;
-      border-top-color: val.brandPalette(popover_bgc);
+      border-top-color: val.brandPopover(popover_bgc);
     }
   }
 }
@@ -119,7 +119,7 @@
     &::after {
       left: fonts.rem(val.popoverSizes(popover_borderWidth));
       border-width: fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) fonts.rem(val.popoverSizes(popoverArrow_height)) fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) 0;
-      border-right-color: val.brandPalette(popover_bgc);
+      border-right-color: val.brandPopover(popover_bgc);
     }
   }
 }
@@ -141,7 +141,7 @@
     &::after {
       top: fonts.rem(val.popoverSizes(popover_borderWidth));
       border-width: 0 fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) fonts.rem(val.popoverSizes(popoverArrow_height)) fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5));
-      border-bottom-color: val.brandPalette(popover_bgc);
+      border-bottom-color: val.brandPopover(popover_bgc);
     }
   }
 
@@ -154,7 +154,7 @@
     width: fonts.rem(val.popoverSizes(popoverArrow_width));
     margin-left: fonts.rem(calc(val.popoverSizes(popoverArrow_width) * -0.5));
     content: "";
-    border-bottom: fonts.rem(val.popoverSizes(popover_borderWidth)) solid val.brandPalette(popoverHeader_bgc);
+    border-bottom: fonts.rem(val.popoverSizes(popover_borderWidth)) solid val.brandPopover(popoverHeader_bgc);
   }
 }
 
@@ -178,7 +178,7 @@
     &::after {
       right: fonts.rem(val.popoverSizes(popover_borderWidth));
       border-width: fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) 0 fonts.rem(calc(val.popoverSizes(popoverArrow_width) * .5)) fonts.rem(val.popoverSizes(popoverArrow_height));
-      border-left-color: val.brandPalette(popover_bgc);
+      border-left-color: val.brandPopover(popover_bgc);
     }
   }
 }
@@ -201,9 +201,9 @@
 
 // Offset the popover to account for the popover arrow
 .popover-header {
-  background-color: val.brandPalette(popoverHeader_bgc);
-  color: val.brandPalette(popoverHeader_color);
-  border-bottom: 1px solid val.brandPalette(popoverHeader_borderolor);
+  background-color: val.brandPopover(popoverHeader_bgc);
+  color: val.brandPopover(popoverHeader_color);
+  border-bottom: 1px solid val.brandPopover(popoverHeader_borderolor);
   border-radius: 0;
   font-size: fonts.rem(val.fontSizes(popoverHeader));
   padding: fonts.rem(val.popoverSizes(popover_paddingY)) fonts.rem(val.popoverSizes(popover_paddingX));
@@ -214,8 +214,8 @@
 }
 
 .popover-body {
-  background-color: val.brandPalette(popover_bgc);
-  color: val.brandPalette(popover_color);
+  background-color: val.brandPopover(popover_bgc);
+  color: val.brandPopover(popover_color);
   padding: fonts.rem(val.popoverSizes(popover_paddingY)) fonts.rem(val.popoverSizes(popover_paddingX));
   &:empty {
     display: none;

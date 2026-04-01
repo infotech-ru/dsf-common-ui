@@ -72,7 +72,7 @@
     bottom: 0;
     &::before {
       border-width: fonts.rem(val.tooltipSizes(tooltipArrow_height)) fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * .5)) 0;
-      border-top-color: val.brandPalette(tooltip_bgc);
+      border-top-color: val.brandTooltip(tooltip_bgc);
       left: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * -0.5));
       top: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * -0.5));
     }
@@ -88,7 +88,7 @@
 
     &::before {
       border-width: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * .5)) fonts.rem(val.tooltipSizes(tooltipArrow_height)) fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * .5)) 0;
-      border-right-color: val.brandPalette(tooltip_bgc);
+      border-right-color: val.brandTooltip(tooltip_bgc);
       right: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * -0.5));
       top: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * -0.5));
     }
@@ -104,7 +104,7 @@
     &::before {
       bottom: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * -0.5));
       border-width: 0 fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * .5)) fonts.rem(val.tooltipSizes(tooltipArrow_height));
-      border-bottom-color: val.brandPalette(tooltip_bgc);
+      border-bottom-color: val.brandTooltip(tooltip_bgc);
       left: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * -0.5));
     }
   }
@@ -121,7 +121,7 @@
     &::before {
       // left: 0;
       border-width: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * .5)) 0 fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * .5)) fonts.rem(val.tooltipSizes(tooltipArrow_height));
-      border-left-color: val.brandPalette(tooltip_bgc);
+      border-left-color: val.brandTooltip(tooltip_bgc);
       left: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * -0.5));
       top: fonts.rem(calc(val.tooltipSizes(tooltipArrow_width) * -0.5));
     }
@@ -145,8 +145,8 @@
 
 // Wrapper for the tooltip content
 .tooltip-inner {
-  background-color: val.brandPalette(tooltip_bgc);
-  color: val.brandPalette(tooltip_color);
+  background-color: val.brandTooltip(tooltip_bgc);
+  color: val.brandTooltip(tooltip_color);
   max-width: fonts.rem(val.tooltipSizes(tooltip_maxWidth));
   padding: fonts.rem(val.tooltipSizes(tooltip_paddingY)) fonts.rem(val.tooltipSizes(tooltip_paddingX));
   text-align: center;

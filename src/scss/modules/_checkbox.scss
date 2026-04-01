@@ -14,8 +14,8 @@
 input[type=checkbox] {
     -webkit-appearance: none;
     appearance: none;
-    background-color: val.brandPalette(checkboxItem_bgc);
-    border: 1px solid val.brandPalette(checkboxItem_border);
+    background-color: val.brandCheckbox(checkboxItem_bgc);
+    border: 1px solid val.brandCheckbox(checkboxItem_border);
     cursor: pointer;
     position: relative;
     height: fonts.rem(val.checkboxSizes(checkboxItem_size));
@@ -23,8 +23,8 @@ input[type=checkbox] {
     flex-shrink: 0; // в comboTreeItemChlid сжимает при длинном названии
     width: fonts.rem(val.checkboxSizes(checkboxItem_size));
     &:checked{
-        background-color: val.brandPalette(checkboxItemActive_bgc);
-        border-color: val.brandPalette(checkboxItemActive_border);
+        background-color: val.brandCheckbox(checkboxItemActive_bgc);
+        border-color: val.brandCheckbox(checkboxItemActive_border);
         content: url("#{val.brandDataImage(checkIcon)}");
     }
     &[disabled]{
@@ -44,30 +44,30 @@ input[type=checkbox] {
         margin: 0;
         &:checked + label.checkbox:before {
             background-image: url("#{val.brandDataImage(checkIcon)}");
-            background-color: val.brandPalette(checkboxItemActive_bgc);
-            border-color: val.brandPalette(checkboxItemActive_border);
+            background-color: val.brandCheckbox(checkboxItemActive_bgc);
+            border-color: val.brandCheckbox(checkboxItemActive_border);
         }
         & + label.checkbox:before {
             background-image: none;
-            border-color: val.brandPalette(checkboxItem_border);
+            border-color: val.brandCheckbox(checkboxItem_border);
         }
         &:checked + label.checkbox:hover:before {
             background-image: url("#{val.brandDataImage(checkIcon)}");
-            background-color: val.brandPalette(checkboxItemHover_bgc);
-            border-color: val.brandPalette(checkboxItemHover_border);
+            background-color: val.brandCheckbox(checkboxItemHover_bgc);
+            border-color: val.brandCheckbox(checkboxItemHover_border);
         }
         &[disabled] + label.checkbox:before{
             cursor: not-allowed;
         }
         &[disabled] + label.checkbox{
-            color: val.brandPalette(checkboxItemDisabled_color);
+            color: val.brandCheckbox(checkboxItemDisabled_color);
             cursor: not-allowed;
         }
     }
     label.checkbox {
         align-items: center;
         cursor: pointer;
-        color: val.brandPalette(checkboxItem_color);
+        color: val.brandCheckbox(checkboxItem_color);
         // display: inline-block;
         display: inline-flex;
         font-size: fonts.rem(val.fontSizes(checkbox));
@@ -78,14 +78,14 @@ input[type=checkbox] {
         line-height: fonts.rem(val.lineHeight(input) + val.formsSizes(formControl_borderSize) * 2);
         vertical-align: top;
         &:hover:before {
-            border-color: val.brandPalette(checkboxItem_border);
+            border-color: val.brandCheckbox(checkboxItem_border);
         }
         &:before {
-            background-color: val.brandPalette(checkboxItem_bgc);
+            background-color: val.brandCheckbox(checkboxItem_bgc);
             background-repeat: no-repeat;
             background-size: 74% auto;
             background-position: center center;
-            border: 1px solid val.brandPalette(checkboxItem_border);
+            border: 1px solid val.brandCheckbox(checkboxItem_border);
             border-radius: 0;
             content: " ";
             display: inline-block;
@@ -138,7 +138,7 @@ input[type=checkbox] {
                 }
             }
             &:after {
-                background-color: val.brandPalette(toggleChecktoggle_bgc);
+                background-color: val.brandToggleCheck(toggleChecktoggle_bgc);
                 background-image: none;
                 border-radius: fonts.rem(val.toggleCheckSizes(toggleCheckToggle_borderRadius));
                 border: none;
@@ -155,7 +155,7 @@ input[type=checkbox] {
                 width: fonts.rem(val.toggleCheckSizes(toggleCheckToggle_width));
             }
             &:before{
-                background-color: val.brandPalette(toggleCheckNonActive_color);
+                background-color: val.brandToggleCheck(toggleCheckNonActive_color);
                 background-image: none;
                 border-radius: fonts.rem(val.toggleCheckSizes(toggleCheck_borderRadius));
                 bottom: auto;
@@ -186,21 +186,21 @@ input[type=checkbox] {
                 background-color: transparent;
                 background-image: none;
                 &:after{
-                    background-color: val.brandPalette(toggleChecktoggle_bgc);
+                    background-color: val.brandToggleCheck(toggleChecktoggle_bgc);
                     background-image: none;
                 }
                 &:before{
-                    background-color: val.brandPalette(toggleCheckActive_color);
+                    background-color: val.brandToggleCheck(toggleCheckActive_color);
                     background-image: none;
                 }
             }
             &:after{
-                background-color: val.brandPalette(toggleChecktoggle_bgc);
+                background-color: val.brandToggleCheck(toggleChecktoggle_bgc);
                 background-image: none;
                 left: fonts.rem(math.div(val.toggleCheckSizes(toggleCheck_width), 2));
             }
             &:before{
-                background-color: val.brandPalette(toggleCheckActive_color);
+                background-color: val.brandToggleCheck(toggleCheckActive_color);
                 background-image: none;
             }
         }

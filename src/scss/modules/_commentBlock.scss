@@ -210,8 +210,8 @@
   $textareaFormControlPaddingX: 7;
   &_inputGroup {
     align-items: center;
-    background-color: val.brandPalette(formControl-bgc);
-    border: 1px solid val.brandPalette(formControl-borderColor);
+    background-color: val.brandForms(formControl-bgc);
+    border: 1px solid val.brandForms(formControl-borderColor);
     border-radius: #{val.formsSizes(borderRadiusFormElem)}px;
     display: flex;
     justify-content: space-between;
@@ -236,7 +236,7 @@
     border: none;
     box-shadow: none;
     border-radius: 0;
-    color: val.brandPalette(formControl-color);
+    color: val.brandForms(formControl-color);
     flex-basis: 100%;
     font-size: fonts.rem(val.fontSizes(formElem));
     line-height: fonts.rem(val.lineHeight(input));
@@ -245,7 +245,7 @@
     resize: none;
     // resize: vertical;
     overflow: hidden;
-    @include placeholder.placeholder2(val.brandPalette(formControl-placeholder), 400, 12);
+    @include placeholder.placeholder2(val.brandForms(formControl-placeholder), 400, 12);
     .commentBlock_inputGroup__whatsup &{
       @include placeholder.placeholder2(val.brandColors(grey), 400, 12);
     }
@@ -308,7 +308,7 @@
   &_info {
     &User,
     &Date {
-      color: val.brandPalette(commentBlockInfo_color);
+      color: val.brandCommentBlock(commentBlockInfo_color);
       display: inline-block;
       font-size: 11px;
       font-weight: 400;
@@ -317,7 +317,7 @@
     }
   }
   &_comments {
-    color: val.brandPalette(commentBlockComments_color);
+    color: val.brandCommentBlock(commentBlockComments_color);
     display: inline-flex;
     font-size: fonts.rem(12);
     flex-direction: column;

@@ -117,12 +117,12 @@ select.selectpicker {
   .error & .dropdown-toggle,
   &.is-invalid .dropdown-toggle,
   .was-validated & select:invalid + .dropdown-toggle {
-    border-color: val.brandPalette(hasDanger_borderColor);
+    border-color: val.brandFormState(hasDanger_borderColor);
   }
 
   &.is-valid .dropdown-toggle,
   .was-validated & select:valid + .dropdown-toggle {
-    border-color: val.brandPalette(hasSuccess_borderColor);
+    border-color: val.brandFormState(hasSuccess_borderColor);
   }
 
   &.fit-width {
@@ -196,7 +196,7 @@ select.selectpicker {
   .btn {
     background-color: transparent;
     background-image: none;
-    border-color: val.brandPalette(formControl-borderColor);
+    border-color: val.brandForms(formControl-borderColor);
   
     &:active,
     &.active {
@@ -536,7 +536,7 @@ select.selectpicker {
     }
   }
   .dropdown-divider {
-    border-bottom: 1px solid val.brandPalette(bootstrapSelect_divider_color);
+    border-bottom: 1px solid val.brandForms(bootstrapSelect_divider_color);
   }
 }
 
@@ -680,10 +680,10 @@ select.selectpicker {
       padding: 0;
       position: relative;
       &Plus{
-        #{--svg-icon-fill}: val.brandPalette(bootstrapSelect_caret_color);
-        #{--svg-icon-stroke}: val.brandPalette(bootstrapSelect_caret_color);
-        #{--svg-icon-fill_blue}: val.brandPalette(bootstrapSelect_caret_color);
-        #{--svg-icon-stroke_blue}: val.brandPalette(bootstrapSelect_caret_color);
+        #{--svg-icon-fill}: val.brandForms(bootstrapSelect_caret_color);
+        #{--svg-icon-stroke}: val.brandForms(bootstrapSelect_caret_color);
+        #{--svg-icon-fill_blue}: val.brandForms(bootstrapSelect_caret_color);
+        #{--svg-icon-stroke_blue}: val.brandForms(bootstrapSelect_caret_color);
         height: #{val.checkboxSizes(comboTreeCheckbox_size)}px;
         // left: #{val.brandSizes(dropdownLink_paddingX)}px;
         left: auto;
@@ -777,7 +777,7 @@ select.selectpicker {
     text-align: left;
     width: 100%;
     .has-error & {
-        border-color: val.brandPalette(hasDanger_borderColor);
+        border-color: val.brandFormState(hasDanger_borderColor);
     }
   }
   &ArrowBtn {

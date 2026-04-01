@@ -127,7 +127,7 @@
 
 .btn-group__radioCheck{
   align-items: center;
-  background-color: val.brandPalette(toggleCheckNonActive_color);
+  background-color: val.brandToggleCheck(toggleCheckNonActive_color);
   border-radius: fonts.rem(val.toggleCheckSizes(toggleCheck_borderRadius));
   border: none;
   display: inline-flex;
@@ -143,7 +143,7 @@
   }
   &Item{
     align-items: center;
-    background-color: val.brandPalette(toggleCheckActive_color);
+    background-color: val.brandToggleCheck(toggleCheckActive_color);
     background-image: none;
     border: none;
     border-radius: fonts.rem(val.toggleCheckSizes(toggleCheck_borderRadius));
@@ -162,7 +162,7 @@
       padding-left: 0;
     }
     &:after{
-      background-color: val.brandPalette(toggleChecktoggle_bgc);
+      background-color: val.brandToggleCheck(toggleChecktoggle_bgc);
       border-radius: fonts.rem(val.toggleCheckSizes(toggleCheckToggle_borderRadius));
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
       display: none;
@@ -172,31 +172,31 @@
     }
     &:focus, &:hover{ 
       background-image: none;
-      background-color: val.brandPalette(toggleCheckActive_color);
+      background-color: val.brandToggleCheck(toggleCheckActive_color);
       border: none;
       outline: none;
     }
     &.active{
-      background-color: val.brandPalette(toggleCheckNonActive_color);
+      background-color: val.brandToggleCheck(toggleCheckNonActive_color);
       background-image: none;
       &:after{
         display: block;
       }
       &:focus, &:hover{ 
-        background-color: val.brandPalette(toggleCheckNonActive_color);
+        background-color: val.brandToggleCheck(toggleCheckNonActive_color);
         background-image: none;
       }
       & + .btn-group__radioCheckItem{
         &, &:focus, &:hover{ 
-          background-color: val.brandPalette(toggleCheckNonActive_color);
+          background-color: val.brandToggleCheck(toggleCheckNonActive_color);
         }
       }
     }
     & + .active{
-      background-color: val.brandPalette(toggleCheckActive_color);
+      background-color: val.brandToggleCheck(toggleCheckActive_color);
       width: 100%;
       &:focus, &:hover{ 
-        background-color: val.brandPalette(toggleCheckActive_color);
+        background-color: val.brandToggleCheck(toggleCheckActive_color);
       }
     }
   }
@@ -317,10 +317,10 @@
   font-size: fonts.rem(val.fontSizes(inputGroupElem));
   font-weight: 400;
   line-height: 1;
-  color: val.brandPalette(inputGroupEl-color);
+  color: val.brandForms(inputGroupEl-color);
   text-align: center;
-  background-color: val.brandPalette(inputGroupEl-bgc);
-  border: 1px solid val.brandPalette(inputGroupEl-borderColor);
+  background-color: val.brandForms(inputGroupEl-bgc);
+  border: 1px solid val.brandForms(inputGroupEl-borderColor);
   border-radius: 0;
 
   // Nuke default margins from checkboxes and radios to vertically center within.
@@ -438,7 +438,7 @@
     .inputGroup_text,
     .inputGroup_outer,
     .inputGroup_inner{
-      border-color: val.brandPalette(formControl-color);
+      border-color: val.brandForms(formControl-color);
       @include transition.transition(border-color ease-in-out .15s);
       svg {
         --svg-icon-fill: var(--btn_svg__hover);
@@ -446,7 +446,7 @@
       }
     }
     [class*="btn-"]:not(.bootstrap-select [class*="btn-"]){ 
-      border-color: val.brandPalette(formControl-color);
+      border-color: val.brandForms(formControl-color);
       background-color: var(--btn_bg__hover);
       // background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
       background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
@@ -458,7 +458,7 @@
     }
     .form-control,
     .bootstrap-select [class*="btn-"]{
-      border-color: val.brandPalette(formControl-color);
+      border-color: val.brandForms(formControl-color);
       @include transition.transition(border-color ease-in-out .15s);
     }
   }
@@ -578,7 +578,7 @@
   margin-right: 0;
   .inputGroup_text,
   .inputGroup_inner {
-    border-left: 1px solid val.brandPalette(inputGroupEl-borderColor);
+    border-left: 1px solid val.brandForms(inputGroupEl-borderColor);
   }
   & + .form-control-container {
     .form-control{
@@ -590,7 +590,7 @@
     }
   }
   .inputGroup_outer{
-    border-right: 1px solid val.brandPalette(inputGroupEl-borderColor);  
+    border-right: 1px solid val.brandForms(inputGroupEl-borderColor);  
   }
   .inputGroup_text,
   .inputGroup_inner {
@@ -606,10 +606,10 @@
   margin-left: 0;
   .inputGroup_text,
   .inputGroup_inner {
-    border-right: 1px solid val.brandPalette(inputGroupEl-borderColor);
+    border-right: 1px solid val.brandForms(inputGroupEl-borderColor);
   }
   .inputGroup_outer {
-    border-left: 1px solid val.brandPalette(inputGroupEl-borderColor);
+    border-left: 1px solid val.brandForms(inputGroupEl-borderColor);
   }
   .inputGroup_inner + .inputGroup_outer,
   [class*="btn-"] + .inputGroup_outer {
@@ -626,11 +626,11 @@
 .inputGroup_text,
 .inputGroup_inner {
   align-items: center;
-  background-color: val.brandPalette(inputGroupEl-bgc);
-  border-bottom: 1px solid val.brandPalette(inputGroupEl-borderColor);
-  border-top: 1px solid val.brandPalette(inputGroupEl-borderColor);
+  background-color: val.brandForms(inputGroupEl-bgc);
+  border-bottom: 1px solid val.brandForms(inputGroupEl-borderColor);
+  border-top: 1px solid val.brandForms(inputGroupEl-borderColor);
   border-left: none;
-  color: val.brandPalette(inputGroupEl-color);
+  color: val.brandForms(inputGroupEl-color);
   display: flex;
   font-size: fonts.rem(val.fontSizes(inputGroupElem));
   font-weight: val.fontWeight(inputGroupElem);
@@ -659,7 +659,7 @@
 }
 .inputGroup_outer {
   align-items: center;
-  // background-color: val.brandPalette(inputGroupEl-bgc);
+  // background-color: val.brandForms(inputGroupEl-bgc);
   display: flex;
   line-height: fonts.rem(val.lineHeight(input));
   margin-bottom: 0; 

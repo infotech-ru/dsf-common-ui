@@ -72,9 +72,9 @@
 
 // Actual modal
 .modal-content {
-    background-color: val.brandPalette(modal_bgc);
+    background-color: val.brandModal(modal_bgc);
     // border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
-    border: 1px solid val.brandPalette(modal_borderColor);
+    border: 1px solid val.brandModal(modal_borderColor);
     border-radius: 2px;
     box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
     background-clip: padding-box;
@@ -85,7 +85,7 @@
 
 // Modal background
 .modal-backdrop {
-    background-color: val.brandPalette(modalBackdrop_bgc);
+    background-color: val.brandModal(modalBackdrop_bgc);
     bottom: 0;
     left: 0;
     position: fixed;
@@ -103,8 +103,8 @@
 .modal-header {
     align-items: center;
     // background-color: rgba(0, 0, 0, 0.03);
-    background-color: val.brandPalette(modalHeader_bgc);
-    border-bottom: 1px solid val.brandPalette(modalHeader_borderColor);
+    background-color: val.brandModal(modalHeader_bgc);
+    border-bottom: 1px solid val.brandModal(modalHeader_borderColor);
     box-shadow: inset rgba(0, 0, 0, 0.1) 0 -10px 10px -10px;
     display: flex;
     justify-content: space-between;
@@ -178,8 +178,8 @@
 // Footer (for actions)
 .modal-footer {
     align-items: center;
-    background-color: val.brandPalette(modalFooter_bgc);
-    border-top: 1px solid val.brandPalette(modalFooter_borderColor);
+    background-color: val.brandModal(modalFooter_bgc);
+    border-top: 1px solid val.brandModal(modalFooter_borderColor);
     box-shadow: inset rgba(0, 0, 0, 0.1) 0 10px 10px -10px;
     display: flex;
     justify-content: space-between;
@@ -329,7 +329,7 @@
 
     .modal-content,
     .note-modal-content {
-        background-color: val.brandPalette(modal-theme2_bgc);
+        background-color: val.brandModal(modal-theme2_bgc);
         box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.20);
     }
 

@@ -21,8 +21,8 @@
       align-items: center;
       border: none;
       border-radius: fonts.rem(val.paginationSizes(paginationItem_borderRadius));
-      background-color: val.brandPalette(pagination_bgc);
-      color: val.brandPalette(pagination_color);
+      background-color: val.brandPagination(pagination_bgc);
+      color: val.brandPagination(pagination_color);
       cursor: pointer;
       display: inline-flex;
       font-size: fonts.rem(val.fontSizes(pagination));
@@ -37,8 +37,8 @@
 
       &:hover,
       &:focus {
-        background-color: val.brandPalette(pagination_bgc);
-        color: val.brandPalette(pagination_color);
+        background-color: val.brandPagination(pagination_bgc);
+        color: val.brandPagination(pagination_color);
         outline: none;
         z-index: val.zIndex(pagination);
       }
@@ -57,10 +57,10 @@
   .bicolors-arrow_left_double__24vb,
   .bicolors-arrow_right_double__24vb,
   .bicolors-arrow_right__24vb {
-    #{--svg-icon-fill}: val.brandPalette(pagination-svg_color);
-    #{--svg-icon-fill_blue}: val.brandPalette(pagination-svg_color);
-    #{--svg-icon-stroke}: val.brandPalette(pagination-svg_color);
-    #{--svg-icon-stroke_blue}: val.brandPalette(pagination-svg_color);
+    #{--svg-icon-fill}: val.brandPagination(pagination-svg_color);
+    #{--svg-icon-fill_blue}: val.brandPagination(pagination-svg_color);
+    #{--svg-icon-stroke}: val.brandPagination(pagination-svg_color);
+    #{--svg-icon-stroke_blue}: val.brandPagination(pagination-svg_color);
   }
   >.active>a,
   >.active>span {
@@ -68,9 +68,9 @@
     &,
     &:hover,
     &:focus {
-      background-color: val.brandPalette(pagination-active_bgc);
+      background-color: val.brandPagination(pagination-active_bgc);
       border-color: transparent;
-      color: val.brandPalette(pagination-active_color);
+      color: val.brandPagination(pagination-active_color);
       cursor: default;
       outline: none;
       z-index: val.zIndex(pagination_active);
@@ -84,8 +84,8 @@
     >a,
     >a:hover,
     >a:focus {
-      background-color: val.brandPalette(pagination-disable_bgc);
-      color: val.brandPalette(pagination-disable_color);
+      background-color: val.brandPagination(pagination-disable_bgc);
+      color: val.brandPagination(pagination-disable_color);
       cursor: not-allowed;
     }
     .bicolors-arrow_left__24vb,
@@ -93,10 +93,10 @@
     .bicolors-arrow_right_double__24vb,
     .bicolors-arrow_right__24vb {
       // opacity: 0.2;
-      #{--svg-icon-fill}: val.brandPalette(pagination-svg-disable_color);
-      #{--svg-icon-fill_blue}: val.brandPalette(pagination-svg-disable_color);
-      #{--svg-icon-stroke}: val.brandPalette(pagination-svg-disable_color);
-      #{--svg-icon-stroke_blue}: val.brandPalette(pagination-svg-disable_color);
+      #{--svg-icon-fill}: val.brandPagination(pagination-svg-disable_color);
+      #{--svg-icon-fill_blue}: val.brandPagination(pagination-svg-disable_color);
+      #{--svg-icon-stroke}: val.brandPagination(pagination-svg-disable_color);
+      #{--svg-icon-stroke_blue}: val.brandPagination(pagination-svg-disable_color);
     }
   }
   .bicolors-arrow_left__24vb,

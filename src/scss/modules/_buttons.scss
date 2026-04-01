@@ -427,7 +427,7 @@ a.btn {
   padding: 0;
   text-align: left;
   .glyphicon {
-    color: val.brandPalette(btnIconSvg_color);
+    color: val.brandBtnIcon(btnIconSvg_color);
     font-size: fonts.rem(val.btnSizes(btnIconSvg_height));
     height: fonts.rem(val.btnSizes(btnIconSvg_height));
     top: 0;
@@ -435,18 +435,18 @@ a.btn {
   }
   .svg--icon {
     align-items: center;
-    background-color: val.brandPalette(btnIconSvg_bgc);
+    background-color: val.brandBtnIcon(btnIconSvg_bgc);
     display: inline-flex;
     justify-content: center;
     height: fonts.rem(val.btnSizes(btnIcon_height));
     width: fonts.rem(val.btnSizes(btnIcon_height));
     // vertical-align: middle;
-    #{--svg-icon-fill}: val.brandPalette(btnDownloadSvg_color);
-    #{--svg-icon-fill_blue}: val.brandPalette(btnDownloadSvg_color);
-    #{--svg-icon-stroke_blue}: val.brandPalette(btnDownloadSvg_color);
-    #{--svg-icon-stroke}: val.brandPalette(btnDownloadSvg_color);
+    #{--svg-icon-fill}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--svg-icon-fill_blue}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--svg-icon-stroke_blue}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--svg-icon-stroke}: val.brandBtnDownload(btnDownloadSvg_color);
     #{--limited-stroke-off}: val.brandColors(_transparent);
-    #{--btn_svg__hover}: val.brandPalette(btnDownloadSvg_color);
+    #{--btn_svg__hover}: val.brandBtnDownload(btnDownloadSvg_color);
     svg{
       height: fonts.rem(val.btnSizes(btnIconSvg_height));
     }
@@ -461,7 +461,7 @@ a.btn {
   &.active,
   &.active:focus{
     .svg--icon {
-      background-color: val.brandPalette(btnIconSvgHover_bgc);
+      background-color: val.brandBtnIcon(btnIconSvgHover_bgc);
     }
   }
   &:hover,
@@ -493,14 +493,14 @@ a.btn {
     &.active,
     &.active:focus{
       .svg--icon {
-        background-color: val.brandPalette(btnIconSvgDangerHover_bgc);
+        background-color: val.brandBtnIcon(btnIconSvgDangerHover_bgc);
       }
     }
     .svg--icon {
-      #{--svg-icon-fill}: val.brandPalette(btnIconSvgDanger_color);
-      #{--svg-icon-fill_blue}: val.brandPalette(btnIconSvgDanger_color);
-      #{--svg-icon-stroke_blue}: val.brandPalette(btnIconSvgDanger_color);
-      #{--svg-icon-stroke}: val.brandPalette(btnIconSvgDanger_color);
+      #{--svg-icon-fill}: val.brandBtnIcon(btnIconSvgDanger_color);
+      #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIconSvgDanger_color);
+      #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvgDanger_color);
+      #{--svg-icon-stroke}: val.brandBtnIcon(btnIconSvgDanger_color);
       #{--limited-stroke-off}: val.brandColors(_transparent);
     }
   }
@@ -510,16 +510,16 @@ a.btn {
     &.active,
     &.active:focus{
       .svg--icon {
-        background-color: val.brandPalette(btnIconSvgDangerHover_bgc);
+        background-color: val.brandBtnIcon(btnIconSvgDangerHover_bgc);
       }
     }
     .svg--icon {
-      #{--svg-icon-fill}: val.brandPalette(btnIconSvgDanger_color);
-      #{--svg-icon-fill_blue}: val.brandPalette(btnIconSvgDanger_color);
-      #{--svg-icon-stroke_blue}: val.brandPalette(btnIconSvgDanger_color);
-      #{--svg-icon-stroke}: val.brandPalette(btnIconSvgDanger_color);
+      #{--svg-icon-fill}: val.brandBtnIcon(btnIconSvgDanger_color);
+      #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIconSvgDanger_color);
+      #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvgDanger_color);
+      #{--svg-icon-stroke}: val.brandBtnIcon(btnIconSvgDanger_color);
       #{--limited-stroke-off}: val.brandColors(_transparent);
-      #{--btn_svg__hover}: val.brandPalette(btnIconSvgDanger_color);
+      #{--btn_svg__hover}: val.brandBtnIcon(btnIconSvgDanger_color);
     }
   }
   &__success{
@@ -528,16 +528,16 @@ a.btn {
     &.active,
     &.active:focus{
       .svg--icon {
-        background-color: val.brandPalette(btnIconSvgSuccessHover_bgc);
+        background-color: val.brandBtnIcon(btnIconSvgSuccessHover_bgc);
       }
     }
     .svg--icon {
-      #{--svg-icon-fill}: val.brandPalette(btnIconSvgSuccess_color);
-      #{--svg-icon-fill_blue}: val.brandPalette(btnIconSvgSuccess_color);
-      #{--svg-icon-stroke_blue}: val.brandPalette(btnIconSvgSuccess_color);
-      #{--svg-icon-stroke}: val.brandPalette(btnIconSvgSuccess_color);
+      #{--svg-icon-fill}: val.brandBtnIcon(btnIconSvgSuccess_color);
+      #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIconSvgSuccess_color);
+      #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvgSuccess_color);
+      #{--svg-icon-stroke}: val.brandBtnIcon(btnIconSvgSuccess_color);
       #{--limited-stroke-off}: val.brandColors(_transparent);
-      #{--btn_svg__hover}: val.brandPalette(btnIconSvgSuccess_color);
+      #{--btn_svg__hover}: val.brandBtnIcon(btnIconSvgSuccess_color);
     }
   }
   &__clear{
@@ -549,7 +549,7 @@ a.btn {
     &.active,
     &.active:focus{
       .svg--icon {
-        background-color: val.brandPalette(btnIconSvgHover_bgc);
+        background-color: val.brandBtnIcon(btnIconSvgHover_bgc);
       }
     }
   }
@@ -577,10 +577,10 @@ a.btn {
     fill: none;
   }
   .fill{
-    fill: val.brandPalette(btnIconSvg_color);
+    fill: val.brandBtnIcon(btnIconSvg_color);
   }
   .stroke{
-    stroke: val.brandPalette(btnIconSvg_color);
+    stroke: val.brandBtnIcon(btnIconSvg_color);
   }
 }
 
@@ -631,9 +631,9 @@ input[type="button"] {
 .btn-download{
   background-color: var(--color_white);
   background-image: none;
-  border: 1px dashed val.brandPalette(btnDownload_borderColor);
+  border: 1px dashed val.brandBtnDownload(btnDownload_borderColor);
   box-shadow: none;
-  color: val.brandPalette(btnDownload_color);
+  color: val.brandBtnDownload(btnDownload_color);
   cursor: pointer;
   display: inline-block;
   font-size: fonts.rem(12);
@@ -647,7 +647,7 @@ input[type="button"] {
   vertical-align: middle;
   &_inner{
     align-items: center;
-    background-color: val.brandPalette(btnDownload_bgc);
+    background-color: val.brandBtnDownload(btnDownload_bgc);
     display: flex;
     height: 100%;
     justify-content: center;
@@ -681,7 +681,7 @@ input[type="button"] {
     box-shadow: none;
     outline: 0;
     .btn-download_inner{
-      background-color: val.brandPalette(btnDownloadHover_bgc);
+      background-color: val.brandBtnDownload(btnDownloadHover_bgc);
     }
   }
   .btn-text{
@@ -689,10 +689,10 @@ input[type="button"] {
   }
   .svg--icon {
     vertical-align: middle;
-    #{--svg-icon-fill}: val.brandPalette(btnIconSvg_color);
-    #{--svg-icon-fill_blue}: val.brandPalette(btnIconSvg_color);
-    #{--svg-icon-stroke_blue}: val.brandPalette(btnIconSvg_color);
-    #{--svg-icon-stroke}: val.brandPalette(btnIconSvg_color);
+    #{--svg-icon-fill}: val.brandBtnIcon(btnIconSvg_color);
+    #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIconSvg_color);
+    #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvg_color);
+    #{--svg-icon-stroke}: val.brandBtnIcon(btnIconSvg_color);
     #{--limited-stroke-off}: val.brandColors(_transparent);
     &, svg{
       height: var(--svgIcon_height, fonts.rem(12));
@@ -700,10 +700,10 @@ input[type="button"] {
     }
   }
   .fill{
-    fill: val.brandPalette(btnIconSvg_color);
+    fill: val.brandBtnIcon(btnIconSvg_color);
   }
   .stroke{
-    stroke: val.brandPalette(btnIconSvg_color);
+    stroke: val.brandBtnIcon(btnIconSvg_color);
   }
   &__dragover{
     opacity: 0.4;
@@ -785,7 +785,7 @@ input[type="button"] {
     &:hover,
     &:focus-visible{
       .btn-download_inner {
-        background-color: val.brandPalette(btnDownload_bgc);
+        background-color: val.brandBtnDownload(btnDownload_bgc);
       }
     }
   }

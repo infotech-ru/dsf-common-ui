@@ -88,8 +88,8 @@
     input[type=radio]:checked + label.radio{
         font-weight: normal;
         &:before {
-            background-color: val.brandPalette(radioItem-active_bg);
-            border-color: val.brandPalette(radioItem-active_border);
+            background-color: val.brandRadioItem(radioItem-active_bg);
+            border-color: val.brandRadioItem(radioItem-active_border);
         }
         &:after{
             display: block;
@@ -110,14 +110,14 @@
 
         &[disabled] + label.radio,
         .disabled & + label.radio {
-            color: val.brandPalette(radioItemDisabled_color);
+            color: val.brandRadioItem(radioItemDisabled_color);
             cursor: val.brandCursor(radioItemDisabled);
             pointer-events: none;
         }
     }
     .dublicate & label.radio,
     &.dublicate label.radio{
-        color: val.brandPalette(radioItemDisabled_color);
+        color: val.brandRadioItem(radioItemDisabled_color);
         text-decoration: line-through;
     }
     label{
@@ -132,8 +132,8 @@
             position: relative;
             &:before {
                 border-radius: 100%;
-                background-color: val.brandPalette(radioItem_bg);
-                border: fonts.rem(val.radioSizes(radioItemBorder_size)) solid val.brandPalette(radioItem_border);
+                background-color: val.brandRadioItem(radioItem_bg);
+                border: fonts.rem(val.radioSizes(radioItemBorder_size)) solid val.brandRadioItem(radioItem_border);
                 content: " ";
                 display: block;
                 height: fonts.rem(val.radioSizes(radioItem_size));
@@ -144,7 +144,7 @@
                 width: fonts.rem(val.radioSizes(radioItem_size));
             }
             &:after{
-                background-color: val.brandPalette(radioItemDotActive);
+                background-color: val.brandRadioItem(radioItemDotActive);
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-image: var(--radioItemDotActive_image, none);

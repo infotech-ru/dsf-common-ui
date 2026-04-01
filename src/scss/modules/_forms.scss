@@ -66,14 +66,14 @@ output {
     $paddinFromLeft: 3;
     // letter-spacing: .5px;
     display: block;
-    color: val.brandPalette(controlLabel_color);
+    color: val.brandForms(controlLabel_color);
     font-size: fonts.rem(val.fontSizes(controlLabel));
     font-weight: val.fontWeight(controlLabel);
     line-height: 14px; // возможность добавлять иконку
     margin-bottom: #{val.formsSizes(controlLabel_mb)}px;
     &:after {
       .required & {
-        color: val.brandPalette(controlLabelError_color);
+        color: val.brandForms(controlLabelError_color);
         content: '*';
         .css-formFree & {
           display: inline-block;
@@ -116,8 +116,8 @@ output {
     }
     &.active {
       .css-formFree & {
-        // background-color: val.brandPalette(controlLabelActive_bgc);
-        background-color:var(--bg_color, val.brandPalette(controlLabelActive_bgc));
+        // background-color: val.brandForms(controlLabelActive_bgc);
+        background-color:var(--bg_color, val.brandForms(controlLabelActive_bgc));
         font-size: fonts.rem(val.fontSizes(controlLabel_active__formFree));
         left: fonts.rem($paddinFromLeft * -1);
         line-height: fonts.rem(val.fontSizes(controlLabel_active__formFree));
@@ -159,7 +159,7 @@ output {
       }
     }
     &-static{
-      color: val.brandPalette(controlLabel_color);
+      color: val.brandForms(controlLabel_color);
       font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       font-weight: val.fontWeight(controlLabel);
       line-height: fonts.rem(val.lineHeight(body));
@@ -170,12 +170,12 @@ output {
 
 .form-control {
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  // background-color: val.brandPalette(formControl-bgc);
-  background-color:var(--bg_color, val.brandPalette(formControl-bgc));
+  // background-color: val.brandForms(formControl-bgc);
+  background-color:var(--bg_color, val.brandForms(formControl-bgc));
   border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-  border: #{val.formsSizes(formControl_borderSize)}px solid val.brandPalette(formControl-borderColor);
+  border: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
   box-shadow: none;
-  color: val.brandPalette(formControl-color);
+  color: val.brandForms(formControl-color);
   display: block;
   height: fonts.rem(calc(val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2))); //  + border-top and border-bottom
   font-size: fonts.rem(val.fontSizes(formElem));
@@ -188,7 +188,7 @@ output {
   // Customize the `:focus` state to imitate native WebKit styles.
   // Placeholder
   // @include placeholder;
-  @include placeholder.placeholder2(val.brandPalette(formControl-placeholder), 400, 12);
+  @include placeholder.placeholder2(val.brandForms(formControl-placeholder), 400, 12);
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
     background-color: transparent;
@@ -203,7 +203,7 @@ output {
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
-    background-color: val.brandPalette(formControlDisabled-bgc);
+    background-color: val.brandForms(formControlDisabled-bgc);
     opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
   }
 
@@ -234,25 +234,25 @@ output {
       }
       &::-moz-placeholder {
           .css-formFree &{ 
-              color: val.brandPalette(controlLabel_color);
+              color: val.brandForms(controlLabel_color);
               font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &:-moz-placeholder {
           .css-formFree &{ 
-              color: val.brandPalette(controlLabel_color);
+              color: val.brandForms(controlLabel_color);
               font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &:-ms-input-placeholder {
           .css-formFree &{ 
-              color: val.brandPalette(controlLabel_color);
+              color: val.brandForms(controlLabel_color);
               font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &::-webkit-input-placeholder {
           .css-formFree &{ 
-              color: val.brandPalette(controlLabel_color);
+              color: val.brandForms(controlLabel_color);
               font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
@@ -260,25 +260,25 @@ output {
   &.timepicker{
       &::-moz-placeholder {
           .css-formFree &{ 
-              color: val.brandPalette(controlLabel_color);
+              color: val.brandForms(controlLabel_color);
               font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &:-moz-placeholder {
           .css-formFree &{ 
-              color: val.brandPalette(controlLabel_color);
+              color: val.brandForms(controlLabel_color);
               font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &:-ms-input-placeholder {
           .css-formFree &{ 
-              color: val.brandPalette(controlLabel_color);
+              color: val.brandForms(controlLabel_color);
               font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
       &::-webkit-input-placeholder {
           .css-formFree &{ 
-              color: val.brandPalette(controlLabel_color);
+              color: val.brandForms(controlLabel_color);
               font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
           }
       }
@@ -300,25 +300,25 @@ output {
   &__placeholder{
     &::-moz-placeholder {
       .css-formFree & {
-        color: val.brandPalette(controlLabel_color);
+        color: val.brandForms(controlLabel_color);
         font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       }
     }
     &:-moz-placeholder {
       .css-formFree & {
-        color: val.brandPalette(controlLabel_color);
+        color: val.brandForms(controlLabel_color);
         font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       }
     }
     &:-ms-input-placeholder {
       .css-formFree & {
-        color: val.brandPalette(controlLabel_color);
+        color: val.brandForms(controlLabel_color);
         font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       }
     }
     &::-webkit-input-placeholder {
       .css-formFree & {
-        color: val.brandPalette(controlLabel_color);
+        color: val.brandForms(controlLabel_color);
         font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       }
     }
@@ -445,7 +445,7 @@ textarea.form-control {
 }
 
 .form-control-static {
-  color: val.brandPalette(formControl-color);
+  color: val.brandForms(formControl-color);
   // min-height: ($line-height-computed + $font-size-base);
   font-size: fonts.rem(val.fontSizes(formElem));
   font-weight: val.fontWeight(formElem);
@@ -467,13 +467,13 @@ textarea.form-control {
 }
 
 .has-success {
-  @include forms.form-control-validation(val.brandPalette(hasSuccess_color), val.brandPalette(hasSuccess_border), val.brandPalette(hasSuccess_bgc));
+  @include forms.form-control-validation(val.brandFormState(hasSuccess_color), val.brandFormState(hasSuccess_border), val.brandFormState(hasSuccess_bgc));
 }
 .has-warning {
-  @include forms.form-control-validation(val.brandPalette(hasWarning_color), val.brandPalette(hasWarning_border), val.brandPalette(hasWarning_bgc));
+  @include forms.form-control-validation(val.brandFormState(hasWarning_color), val.brandFormState(hasWarning_border), val.brandFormState(hasWarning_bgc));
 }
 .has-error {
-  @include forms.form-control-validation(val.brandPalette(hasDanger_color), val.brandPalette(hasDanger_border), val.brandPalette(hasDanger_bgc));
+  @include forms.form-control-validation(val.brandFormState(hasDanger_color), val.brandFormState(hasDanger_border), val.brandFormState(hasDanger_bgc));
 }
 
 .has-feedback label {
@@ -491,7 +491,7 @@ textarea.form-control {
   line-height: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: val.brandPalette(controlLabelActive_color);
+  color: val.brandForms(controlLabelActive_color);
   &:empty { // style.css
       display: none;
   }
@@ -626,7 +626,7 @@ textarea.form-control {
   &.btn {
     background-color: transparent;
     background-image: none;
-    border-color: val.brandPalette(formControl-borderColor);
+    border-color: val.brandForms(formControl-borderColor);
     // .css-formFree & {
     // }
   }
@@ -638,7 +638,7 @@ textarea.form-control {
   width: 100%;
   &Container{
     border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-    border: 1px solid val.brandPalette(formControl-borderColor);
+    border: 1px solid val.brandForms(formControl-borderColor);
     display: flex;
     min-height: 36px;
     outline: none;
@@ -682,7 +682,7 @@ textarea.form-control {
     .redactor-toolbar {
       box-shadow: none;
       li a{
-        color: val.brandPalette(formControl-color);
+        color: val.brandForms(formControl-color);
         font-size: 16px;
         margin-right: 5px;
         padding: 0 3px;
@@ -704,7 +704,7 @@ textarea.form-control {
       margin-bottom: 0;
     }
     .redactor-placeholder::after{
-      color: val.brandPalette(controlLabel_color) !important;
+      color: val.brandForms(controlLabel_color) !important;
       font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       left: 0px;
       top: 10px;

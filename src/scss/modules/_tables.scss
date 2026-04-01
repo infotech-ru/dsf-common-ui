@@ -184,7 +184,7 @@ thead {
 tbody {
   .svg--icon{
       svg{
-        fill: val.brandPalette(table-color);
+        fill: val.brandTable(table_color);
         height: var(--svgIcon_height, 14px);
         width: auto;
       }
@@ -473,7 +473,7 @@ tbody tr {
   svg{
     height: #{val.tableSizes(tableHelpIcon_size)}px;
     width: #{val.tableSizes(tableHelpIcon_size)}px;
-    #{--svg-icon-fill}: val.brandPalette(tableHelpIcon_bgc);
+    #{--svg-icon-fill}: val.brandTable(tableHelpIcon_bgc);
   }
   .asc &, .desc &{
     // display: inline-flex;

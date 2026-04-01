@@ -10,7 +10,7 @@
 @use './../utilities/functions/func_val' as val;
 
 .unityBlock{
-  background-color: val.brandPalette(unityBlock_bgc);
+  background-color: val.brandUnityBlock(unityBlock_bgc);
   border-radius: #{val.brandSizes(unityBlock_bRadius)}px;
   box-shadow: 0px 1px 0px color.scale(rgba(val.brandColors(_black), 1), $alpha: -80%, $space: rgb);
   padding: fonts.rem(val.brandSizes(unityBlock_padding));
@@ -25,20 +25,20 @@
   &__border{
     border-width: 1px;
     border-style: solid;
-    border-color: val.brandPalette(unityBlock_border);
+    border-color: val.brandUnityBlock(unityBlock_border);
   }
   &__hover{
     &:focus,
     &:hover{
-      background-color: val.brandPalette(unityBlockHover_bgc);
-      border-color: val.brandPalette(unityBlockHover_border);
-      --tableTd-bgc: #{val.brandPalette(unityBlockHover_bgc)};
+      background-color: val.brandUnityBlock(unityBlockHover_bgc);
+      border-color: val.brandUnityBlock(unityBlockHover_border);
+      --tableTd-bgc: #{val.brandUnityBlock(unityBlockHover_bgc)};
     }
   }
   &.active{
-    background-color: val.brandPalette(unityBlockHover_bgc);
-    border-color: val.brandPalette(unityBlockHover_border);
-    --tableTd-bgc: #{val.brandPalette(unityBlockHover_bgc)};
+    background-color: val.brandUnityBlock(unityBlockHover_bgc);
+    border-color: val.brandUnityBlock(unityBlockHover_border);
+    --tableTd-bgc: #{val.brandUnityBlock(unityBlockHover_bgc)};
   }
   &_header{
     align-items: center;
@@ -54,7 +54,7 @@
       }
     }
     &Title{
-      color: val.brandPalette(unityBlockTitle_color);
+      color: val.brandUnityBlock(unityBlockTitle_color);
       font-size: fonts.rem(val.fontSizes(unityBlockTitle));
       font-weight: val.fontWeight(unityBlockTitle);
       text-transform: val.textTransform(unityBlockTitle);

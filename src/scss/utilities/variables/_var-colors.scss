@@ -679,6 +679,8 @@ $brand-alert: map.merge((
 $brand-table: map.merge(( 
   caption_color:                          map.get($brand-colors, _dark-grey),
   table_border:                           map.get($brand-colors, _grey2),
+  table_color:                            map.get($brand-colors, _dark-grey),
+  tableHelpIcon_bgc:                      map.get($brand-colors, _dark-grey),
   tbodyFirstTd_bgc:                       map.get($brand-colors, _white),
   tbodySlaveTd_bgc:                       map.get($brand-colors, _light-grey2),
   tbodySubSlaveTd_bgc:                    map.get($brand-colors, _light-grey3),
@@ -707,41 +709,7 @@ $brand-progress: map.merge((
   progressBarSuccess_bgc:                 map.get($brand-colors, _green),
 ), emptymap.$brand-progress) !default;
 
-$brand-palette: map.merge((
-  body_bgc:                               map.get($brand-colors, _light-grey3),
-  body_color:                             map.get($brand-colors, _dark-grey),
-  blockquote_borderColor:                 map.get($brand-colors, _light-grey3),
-  blockquote_color:                       map.get($brand-colors, _grey4),
-  border:                                 map.get($brand-colors, _grey),
-  bootstrapSelect_caret_color:            map.get($brand-colors, _dark-grey),
-  bootstrapSelect_divider_color:          map.get($brand-colors, _grey2),
-
-  btnIconSvg_bgc:                         map.get($brand-colors, _light-grey),
-  btnIconSvgHover_bgc:                    map.get($brand-colors, _light-blue2),
-  btnIconSvgDanger_color:                 map.get($brand-colors, _red),
-  btnIconSvgDangerHover_bgc:              map.get($brand-colors, _light-red),
-  btnIconSvgSuccess_color:                map.get($brand-colors, _green),
-  btnIconSvgSuccessHover_bgc:             map.get($brand-colors, _light-green),
-  btnIconSvg_color:                       map.get($brand-colors, _light-blue),
-  btnDownloadSvg_color:                   map.get($brand-colors, _light-blue),
-  btnDownload_borderColor:                map.get($brand-colors, _light-blue),
-  btnDownload_color:                      map.get($brand-colors, _light-blue),
-  btnDownload_bgc:                        map.get($brand-colors, _light-blue2),
-  btnDownloadHover_bgc:                   map.get($brand-colors, _light-blue3),
-
-  code_bgc:                               map.get($brand-colors, _light-grey2),
-  code_color:                             map.get($brand-colors, _dark-grey),
-  pre_bgc:                                map.get($brand-colors, _light-grey2),
-  pre_color:                              map.get($brand-colors, _dark-grey),
-  mark_bgc:                               map.get($brand-colors, _orange),
-  headerTop_bgc:                          map.get($brand-colors, _white),
-  headerLang_border:                      map.get($brand-colors, _grey2),
-  headerBottom_bgc:                       map.get($brand-colors, _light-grey),
-  haeding_color:                          map.get($brand-colors, _dark-grey),
-  footer_bgc:                             map.get($brand-colors, _white),
-
-  chartBlock_border:                      map.get($brand-colors, _grey2),
-
+$brand-checkbox: map.merge((
   checkboxItem_color:                     map.get($brand-colors, _dark-grey),
   checkboxItemDisabled_color:             map.get($brand-colors, _grey3),
   checkboxItem_bgc:                       map.get($brand-colors, _white),
@@ -750,81 +718,9 @@ $brand-palette: map.merge((
   checkboxItem_border:                    map.get($brand-colors, _grey),
   checkboxItemActive_border:              map.get($brand-colors, _blue),
   checkboxItemHover_border:               map.get($brand-colors, _blue),
+), emptymap.$brand-checkbox) !default;
 
-  // checkboxItemBig--color:                 map.get($brand-colors, _dark-grey),
-  // checkboxItemBig--bgColor:               map.get($brand-colors, _transparent),
-  // checkboxItemBig--bgColor_active:        map.get($brand-colors, _transparent),
-  // checkboxItemBig--bgColor_hover:         map.get($brand-colors, _transparent),
-  // checkboxItemBig--borderColor:           map.get($brand-colors, _grey),
-  // checkboxItemBig--borderColor_active:    map.get($brand-colors, _grey),
-  // checkboxItemBig--borderColor_hover:     map.get($brand-colors, _grey),
-  
-  commentBlockInfo_color:                 map.get($brand-colors, _dark-grey),
-  commentBlockComments_color:             map.get($brand-colors, _dark-grey),
-  
-  collapseHeader_bgc:                     map.get($brand-colors, _light-grey2),
-  collapseHeader_border:                  map.get($brand-colors, _grey),
-  collapseHeader_color:                   map.get($brand-colors, _dark-grey),
-  collapseHeaderActive_bgc:               map.get($brand-colors, _grey2),
-  collapseHeaderActive_border:            map.get($brand-colors, _grey),
-  collapseHeaderActive_color:             map.get($brand-colors, _dark-grey),
-  
-  controlLabel_color:                     map.get($brand-colors, _grey4),
-  controlLabelActive_color:               map.get($brand-colors, _grey4),
-  controlLabelActive_bgc:                 map.get($brand-colors, _white),
-  controlLabelError_color:                map.get($brand-colors, _red),
-
-  dropdown_bgc:                           map.get($brand-colors, _white),
-  dropdown_color:                         map.get($brand-colors, _dark-grey),
-  dropdownHeader_color:                   map.get($brand-colors, _light-grey),
-  dropdownActive_color:                   map.get($brand-colors, _dark-grey),
-  dropdownActive_bgc:                     map.get($brand-colors, _light-blue2),
-  dropdownLinkDisabled_color:             map.get($brand-colors, _grey4),
-
-
-  inputGroupEl-bgc:                       map.get($brand-colors, _white),
-  inputGroupEl-borderColor:               map.get($brand-colors, _grey),
-  inputGroupEl-color:                     map.get($brand-colors, _dark-grey),
-
-  formControl-borderColor:                map.get($brand-colors, _grey),
-  formControl-bgc:                        map.get($brand-colors, _white),
-  formControlDisabled-bgc:                map.get($brand-colors, _light-grey2),
-  formControlDisabled-color:              map.get($brand-colors, _grey),
-  formControl-color:                      map.get($brand-colors, _dark-grey),
-  formControl-placeholder:                map.get($brand-colors, _dark-grey),
-
-  hasSuccess_bgc:                         map.get($brand-colors, _green),
-  hasSuccess_color:                       map.get($brand-colors, _green),
-  hasSuccess_borderColor:                 map.get($brand-colors, _green),
-  hasWarning_bgc:                         map.get($brand-colors, _orange),
-  hasWarning_color:                       map.get($brand-colors, _orange),
-  hasWarning_borderColor:                 map.get($brand-colors, _orange),
-  hasDanger_bgc:                          map.get($brand-colors, _red),
-  hasDanger_color:                        map.get($brand-colors, _red),
-  hasDanger_borderColor:                  map.get($brand-colors, _red),
-
-  lighten:                                color.scale(map.get($brand-colors, _red), $lightness: 10%),
-  hr_border:                              map.get($brand-colors, _dark-grey),
-
-  link_color:                             map.get($brand-colors, _light-blue),
-  linkEmpty_color:                        map.get($brand-colors, _dark-grey),
-  linkIncomplete_color:                   map.get($brand-colors, _dark-grey),
-  linkHover_color:                        map.get($brand-colors, _blue),
-  linkDisabled_color:                     map.get($brand-colors, _grey4),
-  
-  menuLink_color:                         map.get($brand-colors, _light-blue),
-  menuLink_svg:                           map.get($brand-colors, _light-blue),
-  menuLinkActive_bgc:                     map.get($brand-colors, _light-blue),
-  menuLinkActive_svg:                     map.get($brand-colors, _blue),
-  menuLinkActive_color:                   map.get($brand-colors, _white),
-  menuDropdown_bgc:                       map.get($brand-colors, _white),
-  menuDropdownSvg_color:                  map.get($brand-colors, _light-blue),
-  menuDropdown_borderColor:               map.get($brand-colors, _grey4),
-  menuDropdown_color:                     map.get($brand-colors, _dark-grey),
-  menuDropdownActive_color:               map.get($brand-colors, _dark-grey),
-  menuDropdownActive_bgc:                 map.get($brand-colors, _light-blue2),
-  menuDropdownHeader_color:               map.get($brand-colors, _grey),
-  
+$brand-modal: map.merge((
   modal_bgc:                              map.get($brand-colors, _white),
   modal-theme2_bgc:                       map.get($brand-colors, _light-grey2),
   modal_borderColor:                      color.scale(rgba(map.get($brand-colors, _black), 1), $alpha: -80%, $space: rgb),
@@ -833,7 +729,63 @@ $brand-palette: map.merge((
   modalFooter_borderColor:                map.get($brand-colors, _grey2),
   modalHeader_borderColor:                map.get($brand-colors, _grey2),
   modalHeader_bgc:                        color.scale(rgba(map.get($brand-colors, _black), 1), $alpha: -97%, $space: rgb),
-  
+), emptymap.$brand-modal) !default;
+
+$brand-pagination: map.merge((
+  pagination_bgc:                         map.get($brand-colors, _transparent),
+  pagination-active_bgc:                  map.get($brand-colors, _light-blue3),
+  pagination-disable_bgc:                 map.get($brand-colors, _transparent),
+  pagination_color:                       map.get($brand-colors, _light-blue),
+  pagination-disable_color:               map.get($brand-colors, _light-blue3),
+  pagination-svg_color:                   map.get($brand-colors, _light-blue),
+  pagination-active_color:                map.get($brand-colors, _light-blue),
+  pagination-svg-disable_color:           map.get($brand-colors, _light-blue3),
+), emptymap.$brand-pagination) !default;
+
+$brand-tooltip: map.merge((
+  tooltip_bgc:                            map.get($brand-colors, _black),
+  tooltip_color:                          map.get($brand-colors, _white),
+), emptymap.$brand-tooltip) !default;
+
+$brand-popover: map.merge((
+  popover_bgc:                            map.get($brand-colors, _white),
+  popover_borderColor:                    map.get($brand-colors, _white),
+  popover_color:                          map.get($brand-colors, _dark-grey),
+  popoverHeader_bgc:                      map.get($brand-colors, _light-grey3),
+  popoverHeader_borderolor:               map.get($brand-colors, _light-grey4),
+  popoverHeader_color:                    map.get($brand-colors, _dark-grey),
+), emptymap.$brand-popover) !default;
+
+$brand-radioItem: map.merge((
+  radioItem_color:                        map.get($brand-colors, _dark-grey),
+  radioItemDisabled_color:                map.get($brand-colors, _grey3),
+  radioItem_bg:                           map.get($brand-colors, _white),
+  radioItem_border:                       map.get($brand-colors, _grey3),
+  radioItem-active_bg:                    map.get($brand-colors, _light-blue),
+  radioItem-active_border:                map.get($brand-colors, _blue),
+  radioItemDotActive:                     map.get($brand-colors, _white),
+), emptymap.$brand-radioItem) !default;
+
+$brand-stages: map.merge((
+  stagesList_borderColor:                 map.get($brand-colors, _grey4),
+  stagesClose_bgc:                        map.get($brand-colors, _light-green),
+  stagesClose_svg:                        map.get($brand-colors, _dark-green),
+  stagesDefault_bgc:                      map.get($brand-colors, _light-grey2),
+  stagesDefault_svg:                      map.get($brand-colors, _grey4),
+  stagesOpen_bgc:                         map.get($brand-colors, _light-blue2),
+  stagesOpen_svg:                         map.get($brand-colors, _light-blue),
+), emptymap.$brand-stages) !default;
+
+$brand-toast: map.merge((
+  toastBody_bgc:                          map.get($brand-colors, _white),
+  toastBody_borderColor:                  map.get($brand-colors, _white),
+  toastBody_color:                        map.get($brand-colors, _dark-grey),
+  toastHeader_bgc:                        map.get($brand-colors, _light-orange),
+  toastHeader_borderColor:                map.get($brand-colors, _white),
+  toastHeader_color:                      map.get($brand-colors, _dark-grey),
+), emptymap.$brand-toast) !default;
+
+$brand-nav: map.merge((
   navPills_border:                        map.get($brand-colors, _light-blue),
   navPills-active_border:                 map.get($brand-colors, _light-blue),
   navPills_bg:                            map.get($brand-colors, _white),
@@ -848,7 +800,6 @@ $brand-palette: map.merge((
   navTabs-active_bgc:                     map.get($brand-colors, _white),
   navTabs-active_color:                   map.get($brand-colors, _dark-grey),
 
-
   navCards_borderColor:                   map.get($brand-colors, _grey2),
   navCards_bgc:                           map.get($brand-colors, _light-grey2),
   navCards_color:                         map.get($brand-colors, _dark-grey),
@@ -857,69 +808,147 @@ $brand-palette: map.merge((
   navCards-active_bgc:                    map.get($brand-colors, _light-blue2),
   navCards-active_color:                  map.get($brand-colors, _light-blue),
   navCards-active_svg:                    map.get($brand-colors, _light-blue),
+), emptymap.$brand-nav) !default;
 
-  pageHeader_color:                       map.get($brand-colors, _dark-grey),
-  
-  output_color:                           map.get($brand-colors, _grey4),
-  
-  pagination_bgc:                         map.get($brand-colors, _transparent),
-  pagination-active_bgc:                  map.get($brand-colors, _light-blue3),
-  pagination-disable_bgc:                 map.get($brand-colors, _transparent),
-  pagination_color:                       map.get($brand-colors, _light-blue),
-  pagination-disable_color:               map.get($brand-colors, _light-blue3),
-  pagination-svg_color:                   map.get($brand-colors, _light-blue),
-  pagination-active_color:                map.get($brand-colors, _light-blue),
-  pagination-svg-disable_color:           map.get($brand-colors, _light-blue3),
-
-  popover_bgc:                            map.get($brand-colors, _white),
-  popover_borderColor:                    map.get($brand-colors, _white),
-  popover_color:                          map.get($brand-colors, _dark-grey),
-  popoverHeader_bgc:                      map.get($brand-colors, _light-grey3),
-  popoverHeader_borderolor:               map.get($brand-colors, _light-grey4),
-  popoverHeader_color:                    map.get($brand-colors, _dark-grey),
-
-  radioItem_color:                        map.get($brand-colors, _dark-grey),
-  radioItemDisabled_color:                map.get($brand-colors, _grey3),
-  radioItem_bg:                           map.get($brand-colors, _white),
-  radioItem_border:                       map.get($brand-colors, _grey3),
-  radioItem-active_bg:                    map.get($brand-colors, _light-blue),
-  radioItem-active_border:                map.get($brand-colors, _blue),
-  radioItemDotActive:                     map.get($brand-colors, _white),
-
-  stagesList_borderColor:                 map.get($brand-colors, _grey4),
-  stagesClose_bgc:                        map.get($brand-colors, _light-green),
-  stagesClose_svg:                        map.get($brand-colors, _dark-green),
-  stagesDefault_bgc:                      map.get($brand-colors, _light-grey2),
-  stagesDefault_svg:                      map.get($brand-colors, _grey4),
-  stagesOpen_bgc:                         map.get($brand-colors, _light-blue2),
-  stagesOpen_svg:                         map.get($brand-colors, _light-blue),
-
-  table-color:                            map.get($brand-colors, _dark-grey),
-  tableHelpIcon_bgc:                      map.get($brand-colors, _dark-grey),
-  table-table-striped-bg-odd:             map.get($brand-colors, _white),
-  table-table-striped-bg-even:            map.get($brand-colors, _light-grey),
-  
-  tabsPane-active_bgc:                    map.get($brand-colors, _white),
-
-  toastBody_bgc:                          map.get($brand-colors, _white),
-  toastBody_borderColor:                  map.get($brand-colors, _white),
-  toastBody_color:                        map.get($brand-colors, _dark-grey),
-  toastHeader_bgc:                        map.get($brand-colors, _light-orange),
-  toastHeader_borderColor:                map.get($brand-colors, _white),
-  toastHeader_color:                      map.get($brand-colors, _dark-grey),
-  
+$brand-toggleCheck: map.merge((
   toggleCheckNonActive_color:             map.get($brand-colors, _grey2),
   toggleCheckActive_color:                map.get($brand-colors, _light-blue),
   toggleChecktoggle_bgc:                  map.get($brand-colors, _white),
+), emptymap.$brand-toggleCheck) !default;
 
-  tooltip_bgc:                            map.get($brand-colors, _black),
-  tooltip_color:                          map.get($brand-colors, _white),
-
+$brand-unityBlock: map.merge((
   unityBlock_bgc:                         map.get($brand-colors, _white),
   unityBlockHover_bgc:                    map.get($brand-colors, _light-blue2),
   unityBlockHover_border:                 map.get($brand-colors, _light-blue3),
   unityBlock_border:                      map.get($brand-colors, _grey2),
   unityBlockTitle_color:                  map.get($brand-colors, _dark-grey),
+), emptymap.$brand-unityBlock) !default;
+
+$brand-menu: map.merge((
+  menuLink_color:                         map.get($brand-colors, _light-blue),
+  menuLink_svg:                           map.get($brand-colors, _light-blue),
+  menuLinkActive_bgc:                     map.get($brand-colors, _light-blue),
+  menuLinkActive_svg:                     map.get($brand-colors, _blue),
+  menuLinkActive_color:                   map.get($brand-colors, _white),
+  menuDropdown_bgc:                       map.get($brand-colors, _white),
+  menuDropdownSvg_color:                  map.get($brand-colors, _light-blue),
+  menuDropdown_borderColor:               map.get($brand-colors, _grey4),
+  menuDropdown_color:                     map.get($brand-colors, _dark-grey),
+  menuDropdownActive_color:               map.get($brand-colors, _dark-grey),
+  menuDropdownActive_bgc:                 map.get($brand-colors, _light-blue2),
+  menuDropdownHeader_color:               map.get($brand-colors, _grey),
+), emptymap.$brand-menu) !default;
+
+$brand-collapseHeader: map.merge((
+  collapseHeader_bgc:                     map.get($brand-colors, _light-grey2),
+  collapseHeader_border:                  map.get($brand-colors, _grey),
+  collapseHeader_color:                   map.get($brand-colors, _dark-grey),
+  collapseHeaderActive_bgc:               map.get($brand-colors, _grey2),
+  collapseHeaderActive_border:            map.get($brand-colors, _grey),
+  collapseHeaderActive_color:             map.get($brand-colors, _dark-grey),
+), emptymap.$brand-collapseHeader) !default;
+
+$brand-formState: map.merge((
+  hasSuccess_bgc:                         map.get($brand-colors, _green),
+  hasSuccess_color:                       map.get($brand-colors, _green),
+  hasSuccess_borderColor:                 map.get($brand-colors, _green),
+  hasWarning_bgc:                         map.get($brand-colors, _orange),
+  hasWarning_color:                       map.get($brand-colors, _orange),
+  hasWarning_borderColor:                 map.get($brand-colors, _orange),
+  hasDanger_bgc:                          map.get($brand-colors, _red),
+  hasDanger_color:                        map.get($brand-colors, _red),
+  hasDanger_borderColor:                  map.get($brand-colors, _red),
+), emptymap.$brand-formState) !default;
+
+$brand-dropdown: map.merge((
+  dropdown_bgc:                           map.get($brand-colors, _white),
+  dropdown_color:                         map.get($brand-colors, _dark-grey),
+  dropdownHeader_color:                   map.get($brand-colors, _light-grey),
+  dropdownActive_color:                   map.get($brand-colors, _dark-grey),
+  dropdownActive_bgc:                     map.get($brand-colors, _light-blue2),
+  dropdownDivider_bgc:                    map.get($brand-colors, _grey4),
+  dropdownLinkDisabled_color:             map.get($brand-colors, _grey4),
+), emptymap.$brand-dropdown) !default;
+
+$brand-forms: map.merge((
+  bootstrapSelect_caret_color:            map.get($brand-colors, _dark-grey),
+  bootstrapSelect_divider_color:          map.get($brand-colors, _grey2),
+
+  controlLabel_color:                     map.get($brand-colors, _grey4),
+  controlLabelActive_color:               map.get($brand-colors, _grey4),
+  controlLabelActive_bgc:                 map.get($brand-colors, _white),
+  controlLabelError_color:                map.get($brand-colors, _red),
+  
+  inputGroupEl-bgc:                       map.get($brand-colors, _white),
+  inputGroupEl-borderColor:               map.get($brand-colors, _grey),
+  inputGroupEl-color:                     map.get($brand-colors, _dark-grey),
+  
+  formControl-borderColor:                map.get($brand-colors, _grey),
+  formControl-bgc:                        map.get($brand-colors, _white),
+  formControlDisabled-bgc:                map.get($brand-colors, _light-grey2),
+  formControlDisabled-color:              map.get($brand-colors, _grey),
+  formControl-color:                      map.get($brand-colors, _dark-grey),
+  formControl-placeholder:                map.get($brand-colors, _dark-grey),
+), emptymap.$brand-forms) !default;
+
+$brand-commentBlock: map.merge((
+  commentBlockInfo_color:                 map.get($brand-colors, _dark-grey),
+  commentBlockComments_color:             map.get($brand-colors, _dark-grey),
+), emptymap.$brand-commentBlock) !default;
+
+$brand-btn-icon: map.merge((
+  btnIconSvg_bgc:                         map.get($brand-colors, _light-grey),
+  btnIconSvgHover_bgc:                    map.get($brand-colors, _light-blue2),
+  btnIconSvgDanger_color:                 map.get($brand-colors, _red),
+  btnIconSvgDangerHover_bgc:              map.get($brand-colors, _light-red),
+  btnIconSvgSuccess_color:                map.get($brand-colors, _green),
+  btnIconSvgSuccessHover_bgc:             map.get($brand-colors, _light-green),
+  btnIconSvg_color:                       map.get($brand-colors, _light-blue),
+), emptymap.$brand-btn-icon) !default;
+
+$brand-btn-download: map.merge((
+  btnDownloadSvg_color:                   map.get($brand-colors, _light-blue),
+  btnDownload_borderColor:                map.get($brand-colors, _light-blue),
+  btnDownload_color:                      map.get($brand-colors, _light-blue),
+  btnDownload_bgc:                        map.get($brand-colors, _light-blue2),
+  btnDownloadHover_bgc:                   map.get($brand-colors, _light-blue3),
+), emptymap.$brand-btn-download) !default;
+
+$brand-palette: map.merge((
+  body_bgc:                               map.get($brand-colors, _light-grey3),
+  body_color:                             map.get($brand-colors, _dark-grey),
+  blockquote_borderColor:                 map.get($brand-colors, _light-grey3),
+  blockquote_color:                       map.get($brand-colors, _grey4),
+  border:                                 map.get($brand-colors, _grey),
+
+
+  code_bgc:                               map.get($brand-colors, _light-grey2),
+  code_color:                             map.get($brand-colors, _dark-grey),
+  pre_bgc:                                map.get($brand-colors, _light-grey2),
+  pre_color:                              map.get($brand-colors, _dark-grey),
+  mark_bgc:                               map.get($brand-colors, _orange),
+  headerTop_bgc:                          map.get($brand-colors, _white),
+  headerLang_border:                      map.get($brand-colors, _grey2),
+  headerBottom_bgc:                       map.get($brand-colors, _light-grey),
+  haeding_color:                          map.get($brand-colors, _dark-grey),
+  footer_bgc:                             map.get($brand-colors, _white),
+
+  chartBlock_border:                      map.get($brand-colors, _grey2),
+
+  lighten:                                color.scale(map.get($brand-colors, _red), $lightness: 10%),
+  hr_border:                              map.get($brand-colors, _dark-grey),
+
+  link_color:                             map.get($brand-colors, _light-blue),
+  linkEmpty_color:                        map.get($brand-colors, _dark-grey),
+  linkIncomplete_color:                   map.get($brand-colors, _dark-grey),
+  linkHover_color:                        map.get($brand-colors, _blue),
+  linkDisabled_color:                     map.get($brand-colors, _grey4),
+  
+  pageHeader_color:                       map.get($brand-colors, _dark-grey),
+  
+  output_color:                           map.get($brand-colors, _grey4),
+
+  tabsPane-active_bgc:                    map.get($brand-colors, _white),
 
 ), emptymap.$brand-palette) !default;
 

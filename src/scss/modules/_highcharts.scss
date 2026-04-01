@@ -145,8 +145,8 @@
     }
     text {
       // fill: var(--chart-grey2);
-      // fill: val.brandPalette(tooltip_color);
-      fill: val.brandPalette(popover_color);
+      // fill: val.brandTooltip(tooltip_color);
+      fill: val.brandPopover(popover_color);
       // font-size: 0.8em;
     }
     // .highcharts-header {
@@ -155,8 +155,8 @@
     &-box {
       // stroke-width: 1px;
       // fill: var(--chart-transparent);
-      // fill: val.brandPalette(tooltip_bgc);
-      fill: val.brandPalette(popover_bgc);
+      // fill: val.brandTooltip(tooltip_bgc);
+      fill: val.brandPopover(popover_bgc);
       stroke-width: 1;
       stroke:rgba(0, 0, 0, 0.25);
       .highcharts-label-box {

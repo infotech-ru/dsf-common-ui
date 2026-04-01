@@ -23,6 +23,12 @@
 @function brandBtn($keys...) {
   @return maps.val(colors.$brand-btn, $keys...);
 }
+@function brandBtnIcon($keys...) {
+  @return maps.val(colors.$brand-btn-icon, $keys...);
+}
+@function brandBtnDownload($keys...) {
+  @return maps.val(colors.$brand-btn-download, $keys...);
+}
 @function brandLabel($keys...) {
   @return maps.val(colors.$brand-label, $keys...);
 }
@@ -34,6 +40,57 @@
 }
 @function brandPalette($keys...) {
   @return maps.val(colors.$brand-palette, $keys...);
+}
+@function brandCheckbox($keys...) {
+  @return maps.val(colors.$brand-checkbox, $keys...);
+}
+@function brandForms($keys...) {
+  @return maps.val(colors.$brand-forms, $keys...);
+}
+@function brandCommentBlock($keys...) {
+  @return maps.val(colors.$brand-commentBlock, $keys...);
+}
+@function brandCollapseHeader($keys...) {
+  @return maps.val(colors.$brand-collapseHeader, $keys...);
+}
+@function brandModal($keys...) {
+  @return maps.val(colors.$brand-modal, $keys...);
+}
+@function brandFormState($keys...) {
+  @return maps.val(colors.$brand-formState, $keys...);
+}
+@function brandDropdown($keys...) {
+  @return maps.val(colors.$brand-dropdown, $keys...);
+}
+@function brandPagination($keys...) {
+  @return maps.val(colors.$brand-pagination, $keys...);
+}
+@function brandTooltip($keys...) {
+  @return maps.val(colors.$brand-tooltip, $keys...);
+}
+@function brandPopover($keys...) {
+  @return maps.val(colors.$brand-popover, $keys...);
+}
+@function brandRadioItem($keys...) {
+  @return maps.val(colors.$brand-radioItem, $keys...);
+}
+@function brandStages($keys...) {
+  @return maps.val(colors.$brand-stages, $keys...);
+}
+@function brandToast($keys...) {
+  @return maps.val(colors.$brand-toast, $keys...);
+}
+@function brandNav($keys...) {
+  @return maps.val(colors.$brand-nav, $keys...);
+}
+@function brandToggleCheck($keys...) {
+  @return maps.val(colors.$brand-toggleCheck, $keys...);
+}
+@function brandUnityBlock($keys...) {
+  @return maps.val(colors.$brand-unityBlock, $keys...);
+}
+@function brandMenu($keys...) {
+  @return maps.val(colors.$brand-menu, $keys...);
 }
 @function brandProgress($keys...) {
   @return maps.val(colors.$brand-progress, $keys...);
