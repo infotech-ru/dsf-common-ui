@@ -14197,6 +14197,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 
 .gridRow {
   display: grid;
+  grid-template-columns: var(--grid-template-columns, repeat(auto-fit, minmax(0, 1fr)));
 }
 .gridRow__grandMaster {
   background-color: var(--color_light-grey);

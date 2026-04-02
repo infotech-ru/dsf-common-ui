@@ -496,6 +496,7 @@ tbody tr {
 
 .gridRow{
     display: grid;
+    grid-template-columns: var(--grid-template-columns, repeat(auto-fit, minmax(0, 1fr)));
     &__grandMaster{
         background-color: var(--color_light-grey);
         margin: fonts.rem(val.brandSizes(base_paddingSize) * 2) 0 fonts.rem(val.brandSizes(base_paddingSize));
