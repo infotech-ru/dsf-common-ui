@@ -12,187 +12,211 @@
 
 // Dropdown arrow/caret
 .caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 5px;
-  vertical-align: middle;
-  border-top: fonts.rem(val.brandSizes(caretDropdown_size)) dashed;
-  // border-top: fonts.rem(val.brandSizes(caretDropdown_size)) solid \9; // IE8
-  border-right: fonts.rem(val.brandSizes(caretDropdown_size)) solid transparent;
-  border-left: fonts.rem(val.brandSizes(caretDropdown_size)) solid transparent;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+    border-top: fonts.rem(val.brandSizes(caretDropdown_size)) dashed;
+    // border-top: fonts.rem(val.brandSizes(caretDropdown_size)) solid \9; // IE8
+    border-right: fonts.rem(val.brandSizes(caretDropdown_size)) solid transparent;
+    border-left: fonts.rem(val.brandSizes(caretDropdown_size)) solid transparent;
 }
 
 // The dropdown wrapper (div)
 .dropup,
 .dropdown,
 .dropdown-submenu {
-  position: relative;
+    position: relative;
 }
+
 // Prevent the focus on the dropdown toggle when closing dropdowns
 .dropdown-toggle:focus {
-  outline: 0;
+    outline: 0;
 }
 
 
 // The dropdown menu (ul)
 .dropdown-menu {
-  @extend %dropdown-menu;
-  // float: left;
-  z-index: val.zIndex(dropdown-menu);
-  // Dividers (basically an hr) within the dropdown
-  .divider {
-    background-color: val.brandDropdown(dropdownDivider_bgc);
-    height: 1px;
-    margin: 6px 0;
-    overflow: hidden;
-  }
+    @extend %dropdown-menu;
+    // float: left;
+    z-index: val.zIndex(dropdown-menu);
 
-  // Links within the dropdown menu
-  > li > a {
-    @extend %dropdown__link;
-    @extend %dropdown__linkColors;
-    &:hover,
-    &:focus {
-      @extend %dropdown__linkHover;
+    // Dividers (basically an hr) within the dropdown
+    .divider {
+        background-color: val.brandDropdown(dropdownDivider_bgc);
+        height: 1px;
+        margin: 6px 0;
+        overflow: hidden;
     }
-  }
-  > li > span {
-    @extend %dropdown__link;
-    @extend %dropdown__linkColors;
-  }
-  .active > .dropdown__link,
-  .dropdown__link.active,
-  & > li > a.active,
-  & > .active > a {
-    @extend %dropdown__link__active;
-  }
-  .disabled > .dropdown__link,
-  .dropdown__link.disabled,
-  & > .disabled > span,
-  & > .disabled > a {
-    @extend %dropdown__link__disable;
-  }
+
+    // Links within the dropdown menu
+    >li>a {
+        @extend %dropdown__link;
+        @extend %dropdown__linkColors;
+
+        &:hover,
+        &:focus {
+            @extend %dropdown__linkHover;
+        }
+    }
+
+    >li>span {
+        @extend %dropdown__link;
+        @extend %dropdown__linkColors;
+    }
+
+    .active>.dropdown__link,
+    .dropdown__link.active,
+    &>li>a.active,
+    &>.active>a {
+        @extend %dropdown__link__active;
+    }
+
+    .disabled>.dropdown__link,
+    .dropdown__link.disabled,
+    &>.disabled>span,
+    &>.disabled>a {
+        @extend %dropdown__link__disable;
+    }
 }
 
 .dropdown__link {
-  @extend %dropdown__link;
-  @extend %dropdown__linkColors;
+    @extend %dropdown__link;
+    @extend %dropdown__linkColors;
 
-  &:hover,
-  &:focus {
-    @extend %dropdown__linkHover;
-  }
-  // .svg--icon,
-  // svg{
-  //   height: 24px;
-  //   width: auto;
-  // }
+    &:hover,
+    &:focus {
+        @extend %dropdown__linkHover;
+    }
+
+    // .svg--icon,
+    // svg{
+    //   height: 24px;
+    //   width: auto;
+    // }
 }
 
 .dropdown-menu__wrapList {
-  // display: flex;
-  flex-wrap: wrap;
-  padding: fonts.rem(10);
-  max-width: 500px;
-  > li > a,
-  > li > span{
-    background-color: transparent;
-    min-height: auto;
-    line-height: 1;
-    padding: 0;
-    width: auto;
-    &:hover,
-    &:focus{
-      background-color: transparent;
+    // display: flex;
+    flex-wrap: wrap;
+    padding: fonts.rem(10);
+    max-width: 500px;
+
+    >li {
+        max-width: 100%;
+        >a,
+        >span {
+            background-color: transparent;
+            min-height: auto;
+            line-height: 1;
+            padding: 0;
+            max-width: 100%;
+            width: auto;
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+            }
+        }
     }
-  }
 }
 
 
-.dropdown__linkIcon{
-  margin-right: 5px;
-  height: 24px;
-  width: 24px;
-  &.svg--icon__24vb{
-    svg{
-      height: 24px;
-      width: 24px;
+.dropdown__linkIcon {
+    margin-right: 5px;
+    height: 24px;
+    width: 24px;
+
+    &.svg--icon__24vb {
+        svg {
+            height: 24px;
+            width: 24px;
+        }
     }
-  }
-  &.svg--icon{
-    + .btn-text{
-      margin-left: 0;
+
+    &.svg--icon {
+        +.btn-text {
+            margin-left: 0;
+        }
     }
-  }
 }
+
 // Open state for the dropdown
 .show,
 .open {
-  // Show the menu
-  > .dropdown-menu {
-    display: block;
-  }
-  > .dropdown-menu__wrapList {
-    display: flex;
-  }
-  .dropdown-toggle{
-    .svg--icon{
-      svg{
-        transform: rotate(180deg);
-        transition-property: transform;
-        transition-duration: 0.4s;
-        transition-timing-function: cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        transition-delay: 0s;
-      }
+
+    // Show the menu
+    >.dropdown-menu {
+        display: block;
     }
-  }
-  // Remove the outline when :focus is triggered
-  > a {
-    outline: 0;
-  }
+
+    >.dropdown-menu__wrapList {
+        display: flex;
+    }
+
+    .dropdown-toggle {
+        .svg--icon {
+            svg {
+                transform: rotate(180deg);
+                transition-property: transform;
+                transition-duration: 0.4s;
+                transition-timing-function: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+                transition-delay: 0s;
+            }
+        }
+    }
+
+    // Remove the outline when :focus is triggered
+    >a {
+        outline: 0;
+    }
 }
 
 
 // Menu positioning
 
 .dropdown-menu-right {
-  left: auto; // Reset the default from `.dropdown-menu`
-  right: 0;
-  > .dropdown-menu{
-    left: auto;
+    left: auto; // Reset the default from `.dropdown-menu`
     right: 0;
-  }
+
+    >.dropdown-menu {
+        left: auto;
+        right: 0;
+    }
 }
+
 .dropdown-menu-left {
-  left: 0;
-  right: auto;
-  > .dropdown-menu{
     left: 0;
     right: auto;
-  }
+
+    >.dropdown-menu {
+        left: 0;
+        right: auto;
+    }
 }
+
 // Dropdown section headers
 .dropdown-header {
-  display: block;
-  color: val.brandColors(dropdownHeader_color);
-  font-size: fonts.rem(val.fontSizes(dropdownHeader));
-  line-height: fonts.rem(val.fontSizes(dropdownHeader));
-  // padding: 3px 20px;
-  padding: 6px 9px;
-  white-space: nowrap; // as with > li > a
+    display: block;
+    color: val.brandColors(dropdownHeader_color);
+    font-size: fonts.rem(val.fontSizes(dropdownHeader));
+    line-height: fonts.rem(val.fontSizes(dropdownHeader));
+    // padding: 3px 20px;
+    padding: 6px 9px;
+    white-space: nowrap; // as with > li > a
 }
 
 
 // Backdrop to catch body clicks on mobile, etc.
 .dropdown-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: val.zIndex(dropdownBackdrop);
-  // z-index: ($zindex-dropdown - 10);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: val.zIndex(dropdownBackdrop);
+    // z-index: ($zindex-dropdown - 10);
 }
 
 // Right aligned dropdowns
@@ -200,96 +224,115 @@
 //   right: 0;
 //   left: auto;
 
-.dropup{
-  // Reverse the caret
-  // .caret {
+.dropup {
+
+    // Reverse the caret
+    // .caret {
     // content: "";
     // border-top: 0; 
     // border-bottom: $caret-width-base dashed;
-  // }
-  // Different positioning for bottom up menu
-  .dropdown-menu {
-    top: auto;
-    // bottom: 100%; // вывод с пустотой в 4 версии.
-    margin-bottom: 2px;
-  }
-  &.show, // Используется только для 3 версии. в 4 версии .show
-  &.open{ // Используется только для 3 версии. в 4 версии .show
-    > .dropdown-menu {
-      bottom: 100%; // в 4 версии dropdown использовать нельзя
-    }
-    &.dropdown-submenu{ 
-      > .dropdown-menu {
-        bottom: 0%;
+    // }
+    // Different positioning for bottom up menu
+    .dropdown-menu {
         top: auto;
-      }
+        // bottom: 100%; // вывод с пустотой в 4 версии.
+        margin-bottom: 2px;
     }
-  }
+
+    &.show,
+    // Используется только для 3 версии. в 4 версии .show
+    &.open {
+
+        // Используется только для 3 версии. в 4 версии .show
+        >.dropdown-menu {
+            bottom: 100%; // в 4 версии dropdown использовать нельзя
+        }
+
+        &.dropdown-submenu {
+            >.dropdown-menu {
+                bottom: 0%;
+                top: auto;
+            }
+        }
+    }
 }
 
 .dropdown-submenu {
-  &_actionHover{ 
-    &:hover, &:focus{
-      > .dropdown-menu {
-        display: block;
-      }
-    }
-  }
-  > .dropdown-menu{
-    top: 0;
-    right: auto;
-    left: 100%;
-    .mobile-view &{
-      left: auto;
-    }
-    .dropdown-menu-right &{
-      right: 100%;
-      left: auto;
-      .mobile-view &{
-        right: auto;
-      }
-    }
-  }
-  .dropdown-menu{
-    padding-right: fonts.rem(calc(val.brandSizes(dropdownLink_paddingX) * 2));
-    > li > a,
-    .dropdown__link{
-      box-sizing: content-box;
-    }
-  }
-  &-left{
-    > .dropdown-menu{
-      left: auto;
-      top: 0;
-      right: 100%;
-    }
-  }
-  > .dropdown__link{
-    .caret{
-      display: block;
-    }
-    &:after{
-      background-repeat: no-repeat;
-      background-size: 6px 14px; // #12782
-      background-position: right center;
-      background-image: svgurl.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17"><path d="M.5,16.5l8-8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/><path d="M.5.5l8,8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-      content: '';
-      height: 24px;
-      margin-left: auto;
-      width: 24px;
-      .mobile-view &{
-        background-position: center;
-      }
-    }
-  }
-  &.show,
-  &.open{
-    > .dropdown__link{
-      &:after{
-        .mobile-view &{
-          transform: rotate(90deg);
+    &_actionHover {
+
+        &:hover,
+        &:focus {
+            >.dropdown-menu {
+                display: block;
+            }
         }
-      }
     }
-  }
+
+    >.dropdown-menu {
+        top: 0;
+        right: auto;
+        left: 100%;
+
+        .mobile-view & {
+            left: auto;
+        }
+
+        .dropdown-menu-right & {
+            right: 100%;
+            left: auto;
+
+            .mobile-view & {
+                right: auto;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        padding-right: fonts.rem(calc(val.brandSizes(dropdownLink_paddingX) * 2));
+
+        >li>a,
+        .dropdown__link {
+            box-sizing: content-box;
+        }
+    }
+
+    &-left {
+        >.dropdown-menu {
+            left: auto;
+            top: 0;
+            right: 100%;
+        }
+    }
+
+    >.dropdown__link {
+        .caret {
+            display: block;
+        }
+
+        &:after {
+            background-repeat: no-repeat;
+            background-size: 6px 14px; // #12782
+            background-position: right center;
+            background-image: svgurl.svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17"><path d="M.5,16.5l8-8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/><path d="M.5.5l8,8" fill="none" stroke="var(--svg-icon-stroke, #000)" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            content: '';
+            height: 24px;
+            margin-left: auto;
+            width: 24px;
+
+            .mobile-view & {
+                background-position: center;
+            }
+        }
+    }
+
+    &.show,
+    &.open {
+        >.dropdown__link {
+            &:after {
+                .mobile-view & {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
 }

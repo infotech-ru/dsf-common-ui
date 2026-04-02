@@ -7479,12 +7479,16 @@ h6, .h6 {
   padding: 0.625rem;
   max-width: 500px;
 }
+.dropdown-menu__wrapList > li {
+  max-width: 100%;
+}
 .dropdown-menu__wrapList > li > a,
 .dropdown-menu__wrapList > li > span {
   background-color: transparent;
   min-height: auto;
   line-height: 1;
   padding: 0;
+  max-width: 100%;
   width: auto;
 }
 .dropdown-menu__wrapList > li > a:hover, .dropdown-menu__wrapList > li > a:focus,
@@ -14187,20 +14191,11 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   display: inline-flex;
   padding: 5px 6px;
   line-height: 0.875rem;
-  min-height: 2.5rem;
+  min-height: var(--grid-table-cell-min-height, 2.5rem);
   text-align: left;
-  border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
-  border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
-  border-bottom-color: var(--border_bottom_color, var(--border_color, #ddd));
-  border-right-width: var(--width_border-right__modify, var(--width_border-right, 1px));
-  border-right-style: var(--style_border_right, var(--style_border, solid));
-  border-right-color: var(--border_right_color, var(--border_color, #ddd));
 }
 
 .gridRow {
-  border-left-width: var(--width_border-left__modify, var(--width_border-left, 1px));
-  border-left-style: var(--style_border_right, var(--style_border, solid));
-  border-left-color: var(--border_right_color, var(--border_color, #ddd));
   display: grid;
 }
 .gridRow__grandMaster {
@@ -14211,23 +14206,10 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   margin-top: 0.625rem;
 }
 .gridRow__grandMaster .gridCell {
-  border-top-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
-  border-top-style: var(--style_border_bottom, var(--style_border, solid));
-  border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
-  border-left-color: transparent;
-  border-right-color: transparent;
   font-weight: 700;
 }
 .gridRow__grandMaster .gridCell:first-child {
   padding-left: 0.625rem;
-}
-.gridRow__grandMaster .gridCell:last-child {
-  border-right-color: var(--border_right_color, var(--border_color, #ddd));
-}
-.gridRow__grandMaster + .gridRow__master .gridCell {
-  border-top-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
-  border-top-style: var(--style_border_bottom, var(--style_border, solid));
-  border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
 }
 .gridRow__grandMaster .svg--icon.collapseIcon_expand svg,
 .gridRow__grandMaster .svg--icon.collapseIcon_collapse svg {
@@ -14264,12 +14246,49 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   background-color: var(--color_light-grey);
   display: flex;
 }
-.gridHeaderRow:first-child .gridHeaderCell {
+
+.gridTable__cellHeightAuto {
+  --grid-table-cell-min-height: auto;
+}
+
+.gridTable__cellHeightMin {
+  --grid-table-cell-min-height: 1rem;
+}
+
+.gridTable__border .gridCell {
+  border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+  border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
+  border-bottom-color: var(--border_bottom_color, var(--border_color, #ddd));
+  border-right-width: var(--width_border-right__modify, var(--width_border-right, 1px));
+  border-right-style: var(--style_border_right, var(--style_border, solid));
+  border-right-color: var(--border_right_color, var(--border_color, #ddd));
+}
+.gridTable__border .gridRow {
+  border-left-width: var(--width_border-left__modify, var(--width_border-left, 1px));
+  border-left-style: var(--style_border_right, var(--style_border, solid));
+  border-left-color: var(--border_right_color, var(--border_color, #ddd));
+}
+.gridTable__border .gridRow__grandMaster .gridCell {
+  border-top-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+  border-top-style: var(--style_border_bottom, var(--style_border, solid));
+  border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.gridTable__border .gridRow__grandMaster .gridCell:last-child {
+  border-right-color: var(--border_right_color, var(--border_color, #ddd));
+}
+.gridTable__border .gridRow__grandMaster + .gridRow__master .gridCell {
+  border-top-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+  border-top-style: var(--style_border_bottom, var(--style_border, solid));
+  border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
+}
+.gridTable__border .gridHeaderRow:first-child .gridHeaderCell {
   border-top-width: var(--width_border-top__modify, var(--width_border-top, 1px));
   border-top-style: var(--style_border_top, var(--style_border, solid));
   border-top-color: var(--border_top_color, var(--border_color, #ddd));
 }
-.gridHeaderRow:last-child .gridHeaderCell {
+.gridTable__border .gridHeaderRow:last-child .gridHeaderCell {
   border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
   border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
   border-bottom-color: var(--border_top_color, var(--border_color, #ddd));

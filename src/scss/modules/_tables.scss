@@ -490,19 +490,11 @@ tbody tr {
     display: inline-flex;
     padding: #{val.tableSizes(table_paddingY)}px #{val.tableSizes(table_paddingX)}px;
     line-height: fonts.rem(val.tableSizes(table_lineHeigth));
-    min-height: fonts.rem(val.tableSizes(tableCell_height));
+    min-height: var(--grid-table-cell-min-height, #{fonts.rem(val.tableSizes(tableCell_height))});
     text-align: left;
-    border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
-    border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
-    border-bottom-color: var(--border_bottom_color, var(--border_color, #ddd));
-    border-right-width: var(--width_border-right__modify, var(--width_border-right, 1px));
-    border-right-style: var(--style_border_right, var(--style_border, solid));
-    border-right-color: var(--border_right_color, var(--border_color, #ddd));
 }
+
 .gridRow{
-    border-left-width: var(--width_border-left__modify, var(--width_border-left, 1px));
-    border-left-style: var(--style_border_right, var(--style_border, solid));
-    border-left-color: var(--border_right_color, var(--border_color, #ddd));
     display: grid;
     &__grandMaster{
         background-color: var(--color_light-grey);
@@ -511,24 +503,9 @@ tbody tr {
             margin-top: fonts.rem(val.tableSizes(table_paddingXFirst));
         }
         .gridCell {
-            border-top-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
-            border-top-style: var(--style_border_bottom, var(--style_border, solid));
-            border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
-            border-left-color: transparent;
-            border-right-color: transparent;
             font-weight: val.fontWeight(gridRowGrandMaster);
             &:first-child{
                 padding-left: fonts.rem(val.brandSizes(base_paddingSize));
-            }
-            &:last-child{
-                border-right-color: var(--border_right_color, var(--border_color, #ddd));
-            }
-        }
-        & + .gridRow__master{
-            .gridCell {
-                border-top-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
-                border-top-style: var(--style_border_bottom, var(--style_border, solid));
-                border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
             }
         }
         .svg--icon.collapseIcon_expand svg,
@@ -559,6 +536,7 @@ tbody tr {
         }
     }
 }
+
 .gridHeader{
     font-size: val.fontSizes(thead);
     font-weight: val.fontWeight(gridHeader);
@@ -570,23 +548,67 @@ tbody tr {
         background-color: var(--color_light-grey);
         display: flex;
     }
-    &Row{
-        &:first-child{
-            .gridHeaderCell{
-                border-top-width: var(--width_border-top__modify, var(--width_border-top, 1px));
-                border-top-style: var(--style_border_top, var(--style_border, solid));
-                border-top-color: var(--border_top_color, var(--border_color, #ddd));
+    
+}
+.gridTable__cellHeightAuto{
+    --grid-table-cell-min-height: auto;
+}
+.gridTable__cellHeightMin{
+    --grid-table-cell-min-height: #{fonts.rem(val.tableSizes(tableCellMin_height))};
+}
+.gridTable__border {
+    .gridCell {
+      border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+      border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
+      border-bottom-color: var(--border_bottom_color, var(--border_color, #ddd));
+      border-right-width: var(--width_border-right__modify, var(--width_border-right, 1px));
+      border-right-style: var(--style_border_right, var(--style_border, solid));
+      border-right-color: var(--border_right_color, var(--border_color, #ddd));
+    }
+    .gridRow{
+        border-left-width: var(--width_border-left__modify, var(--width_border-left, 1px));
+        border-left-style: var(--style_border_right, var(--style_border, solid));
+        border-left-color: var(--border_right_color, var(--border_color, #ddd));
+        &__grandMaster{
+            .gridCell {
+                border-top-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+                border-top-style: var(--style_border_bottom, var(--style_border, solid));
+                border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
+                border-left-color: transparent;
+                border-right-color: transparent;
+                &:last-child{
+                    border-right-color: var(--border_right_color, var(--border_color, #ddd));
+                }
+            }
+            & + .gridRow__master{
+                .gridCell {
+                    border-top-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+                    border-top-style: var(--style_border_bottom, var(--style_border, solid));
+                    border-top-color: var(--border_bottom_color, var(--border_color, #ddd));
+                }
             }
         }
-        &:last-child{
-            .gridHeaderCell{ 
-                border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
-                border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
-                border-bottom-color: var(--border_top_color, var(--border_color, #ddd));
+    }
+    .gridHeader{
+        &Row{
+            &:first-child{
+                .gridHeaderCell{
+                    border-top-width: var(--width_border-top__modify, var(--width_border-top, 1px));
+                    border-top-style: var(--style_border_top, var(--style_border, solid));
+                    border-top-color: var(--border_top_color, var(--border_color, #ddd));
+                }
+            }
+            &:last-child{
+                .gridHeaderCell{ 
+                    border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+                    border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
+                    border-bottom-color: var(--border_top_color, var(--border_color, #ddd));
+                }
             }
         }
     }
 }
+
 
 
 .collapseTrIcon{
