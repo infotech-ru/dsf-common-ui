@@ -14367,6 +14367,9 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .unityBlock__noshadow {
   box-shadow: none;
 }
+.unityBlock__shadowBig {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+}
 .unityBlock__border {
   border-width: 1px;
   border-style: solid;
@@ -14802,6 +14805,10 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   padding-right: 1.5rem;
   position: relative;
   text-shadow: none;
+}
+.alert-sm {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 .alert h4 {
   margin-top: 0;

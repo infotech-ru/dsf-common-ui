@@ -22,6 +22,10 @@
   padding-right: fonts.rem(val.alertsSizes(alert_padding) + val.alertsSizes(alertClose_size));
   position: relative;
   text-shadow: none;
+  &-sm{
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
   h4 {
     margin-top: 0;
     color: inherit; // Specified for the h4 to prevent conflicts of changing $headings-color
