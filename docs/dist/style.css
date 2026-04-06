@@ -10562,18 +10562,21 @@ input[type=button].btn-block {
 
 .label-default {
   --label_color: #333333;
-  --label_bgc: #F5F5F5;
-  --label_borderColor: #F5F5F5;
+  --label_bgc: #f9f9f9;
+  --label_borderColor: #f9f9f9;
   --svg-valute-fill: #333333;
   --svg-icon-fill: #1E6393;
   --svg-icon-stroke: #1E6393;
   --svg-icon-fill_blue: #1E6393;
   --svg-icon-stroke_blue: #1E6393;
 }
+.label-default.label_chip {
+  --label_borderColor: #dddddd;
+}
 .label-default.label_chip:hover, .label-default.label_chip.active, .label-default.label_chip:active {
   --label_color: #333333;
   --label_bgc: #dddddd;
-  --label_borderColor: #F5F5F5;
+  --label_borderColor: #dddddd;
   --svg-valute-fill: #333333;
   --svg-icon-fill: #1E6393;
   --svg-icon-stroke: #1E6393;
@@ -10583,7 +10586,7 @@ input[type=button].btn-block {
 
 .label-default__outline {
   --label_color: #333333;
-  --label_borderColor: #F5F5F5;
+  --label_borderColor: #dddddd;
   --label_bgc: #00000000;
   --svg-valute-fill: #333333;
   --svg-icon-fill: #F5F5F5;
@@ -10592,10 +10595,10 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #F5F5F5;
 }
 .label-default__outline.label_chip:hover, .label-default__outline.label_chip.active, .label-default__outline.label_chip:active {
-  --label_color: #F5F5F5;
-  --label_borderColor: #F5F5F5;
+  --label_color: #333333;
+  --label_borderColor: #dddddd;
   --label_bgc: #F5F5F5;
-  --svg-valute-fill: #F5F5F5;
+  --svg-valute-fill: #333333;
   --svg-icon-fill: #F5F5F5;
   --svg-icon-stroke: #F5F5F5;
   --svg-icon-fill_blue: #F5F5F5;
@@ -10612,10 +10615,13 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
 }
+.label-primary.label_chip {
+  --label_borderColor: #4A8DC6;
+}
 .label-primary.label_chip:hover, .label-primary.label_chip.active, .label-primary.label_chip:active {
   --label_color: #ffffff;
   --label_bgc: #E4EEF7;
-  --label_borderColor: #4A8DC6;
+  --label_borderColor: #E4EEF7;
   --svg-valute-fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -10653,6 +10659,9 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+}
+.label-danger.label_chip {
+  --label_borderColor: #D9534F;
 }
 .label-danger.label_chip:hover, .label-danger.label_chip.active, .label-danger.label_chip:active {
   --label_color: #ffffff;
@@ -10696,10 +10705,13 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
 }
-.label-success.label_chip:hover, .label-success.label_chip.active, .label-success.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: #DAF0DA;
+.label-success.label_chip {
   --label_borderColor: #69C26A;
+}
+.label-success.label_chip:hover, .label-success.label_chip.active, .label-success.label_chip:active {
+  --label_color: #69C26A;
+  --label_bgc: #B4E1B5;
+  --label_borderColor: #B4E1B5;
   --svg-valute-fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -10709,7 +10721,7 @@ input[type=button].btn-block {
 
 .label-success__outline {
   --label_color: #69C26A;
-  --label_borderColor: #69C26A;
+  --label_borderColor: #B4E1B5;
   --label_bgc: #00000000;
   --svg-valute-fill: #69C26A;
   --svg-icon-fill: #69C26A;
@@ -10719,8 +10731,8 @@ input[type=button].btn-block {
 }
 .label-success__outline.label_chip:hover, .label-success__outline.label_chip.active, .label-success__outline.label_chip:active {
   --label_color: #69C26A;
-  --label_borderColor: #69C26A;
-  --label_bgc: #DAF0DA;
+  --label_borderColor: #B4E1B5;
+  --label_bgc: #B4E1B5;
   --svg-valute-fill: #69C26A;
   --svg-icon-fill: #69C26A;
   --svg-icon-stroke: #69C26A;
@@ -10737,6 +10749,9 @@ input[type=button].btn-block {
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
+}
+.label-warning.label_chip {
+  --label_borderColor: #FFBD41;
 }
 .label-warning.label_chip:hover, .label-warning.label_chip.active, .label-warning.label_chip:active {
   --label_color: #333333;
@@ -10780,10 +10795,13 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
 }
+.label-info.label_chip {
+  --label_borderColor: #B6D1E8;
+}
 .label-info.label_chip:hover, .label-info.label_chip.active, .label-info.label_chip:active {
   --label_color: #4A8DC6;
   --label_bgc: #B6D1E8;
-  --label_borderColor: #E4EEF7;
+  --label_borderColor: #B6D1E8;
   --svg-valute-fill: #4A8DC6;
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
@@ -10793,7 +10811,7 @@ input[type=button].btn-block {
 
 .label-info__outline {
   --label_color: #E4EEF7;
-  --label_borderColor: #E4EEF7;
+  --label_borderColor: #B6D1E8;
   --label_bgc: #00000000;
   --svg-valute-fill: #E4EEF7;
   --svg-icon-fill: #E4EEF7;
@@ -10803,7 +10821,7 @@ input[type=button].btn-block {
 }
 .label-info__outline.label_chip:hover, .label-info__outline.label_chip.active, .label-info__outline.label_chip:active {
   --label_color: #E4EEF7;
-  --label_borderColor: #E4EEF7;
+  --label_borderColor: #B6D1E8;
   --label_bgc: #B6D1E8;
   --svg-valute-fill: #E4EEF7;
   --svg-icon-fill: #E4EEF7;
@@ -10821,6 +10839,9 @@ input[type=button].btn-block {
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
+}
+.label-yellow.label_chip {
+  --label_borderColor: #FFDA7D;
 }
 .label-yellow.label_chip:hover, .label-yellow.label_chip.active, .label-yellow.label_chip:active {
   --label_color: #333333;
@@ -10864,6 +10885,9 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
 }
+.label-black.label_chip {
+  --label_borderColor: #000000;
+}
 .label-black.label_chip:hover, .label-black.label_chip.active, .label-black.label_chip:active {
   --label_color: #ffffff;
   --label_bgc: #dddddd;
@@ -10905,6 +10929,9 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+}
+.label-dark-grey.label_chip {
+  --label_borderColor: #333333;
 }
 .label-dark-grey.label_chip:hover, .label-dark-grey.label_chip.active, .label-dark-grey.label_chip:active {
   --label_color: #ffffff;
@@ -10948,6 +10975,9 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
 }
+.label-grey2.label_chip {
+  --label_borderColor: #dddddd;
+}
 .label-grey2.label_chip:hover, .label-grey2.label_chip.active, .label-grey2.label_chip:active {
   --label_color: #333333;
   --label_bgc: #e5e5e5;
@@ -10989,6 +11019,9 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+}
+.label-vibrant-blue.label_chip {
+  --label_borderColor: #0094FF;
 }
 .label-vibrant-blue.label_chip:hover, .label-vibrant-blue.label_chip.active, .label-vibrant-blue.label_chip:active {
   --label_color: #ffffff;
@@ -11032,6 +11065,9 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #DE8500;
   --svg-icon-stroke_blue: #DE8500;
 }
+.label-light-yellow2.label_chip {
+  --label_borderColor: #FFF6DF;
+}
 .label-light-yellow2.label_chip:hover, .label-light-yellow2.label_chip.active, .label-light-yellow2.label_chip:active {
   --label_color: #DE8500;
   --label_bgc: #FFDF9A;
@@ -11073,6 +11109,9 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+}
+.label-dark-green.label_chip {
+  --label_borderColor: #467B46;
 }
 .label-dark-green.label_chip:hover, .label-dark-green.label_chip.active, .label-dark-green.label_chip:active {
   --label_color: #ffffff;
@@ -11116,6 +11155,9 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
 }
+.label-light-green.label_chip {
+  --label_borderColor: #DAF0DA;
+}
 .label-light-green.label_chip:hover, .label-light-green.label_chip.active, .label-light-green.label_chip:active {
   --label_color: #467B46;
   --label_bgc: #F5F5F5;
@@ -11157,6 +11199,9 @@ input[type=button].btn-block {
   --svg-icon-stroke: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
+}
+.label-light-green2.label_chip {
+  --label_borderColor: #B4E1B5;
 }
 .label-light-green2.label_chip:hover, .label-light-green2.label_chip.active, .label-light-green2.label_chip:active {
   --label_color: #467B46;
@@ -11200,6 +11245,9 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
 }
+.label-light-red.label_chip {
+  --label_borderColor: #FCEEEE;
+}
 .label-light-red.label_chip:hover, .label-light-red.label_chip.active, .label-light-red.label_chip:active {
   --label_color: #D9534F;
   --label_bgc: #F5F5F5;
@@ -11242,6 +11290,9 @@ input[type=button].btn-block {
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
 }
+.label-rose.label_chip {
+  --label_borderColor: #FF9996;
+}
 .label-rose.label_chip:hover, .label-rose.label_chip.active, .label-rose.label_chip:active {
   --label_color: #ffffff;
   --label_bgc: #FCEEEE;
@@ -11283,6 +11334,9 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+}
+.label-grey4.label_chip {
+  --label_borderColor: #777777;
 }
 .label-grey4.label_chip:hover, .label-grey4.label_chip.active, .label-grey4.label_chip:active {
   --label_color: #ffffff;
@@ -11614,7 +11668,7 @@ output {
   background-image: none;
   background-color: var(--bg_color, #ffffff);
   border-radius: 0.0625rem;
-  border: 1px solid #BABABA;
+  border: 1px solid #dddddd;
   box-shadow: none;
   color: #333333;
   display: block;
@@ -12023,7 +12077,7 @@ fieldset[disabled] .checkbox-inline {
 .comboTreeInputBox, .comboTreeInputBox.btn-default, .comboTreeInputBox.btn {
   background-color: transparent;
   background-image: none;
-  border-color: #BABABA;
+  border-color: #dddddd;
 }
 
 .redactorBlock {
@@ -12033,7 +12087,7 @@ fieldset[disabled] .checkbox-inline {
 }
 .redactorBlockContainer {
   border-radius: 0.0625rem;
-  border: 1px solid #BABABA;
+  border: 1px solid #dddddd;
   display: flex;
   min-height: 36px;
   outline: none;
@@ -12277,7 +12331,7 @@ select.selectpicker {
 .bootstrap-select .btn {
   background-color: transparent;
   background-image: none;
-  border-color: #BABABA;
+  border-color: #dddddd;
 }
 .bootstrap-select .btn-default:active, .bootstrap-select .btn-default.active,
 .bootstrap-select .btn:active,
@@ -13845,6 +13899,7 @@ td .empty {
   border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
   border-bottom-color: var(--border_bottom_color, var(--border_color, #dddddd));
   min-height: 1.625rem;
+  height: auto;
   padding: 0.25rem 0;
 }
 .tr__slave th,
@@ -14627,7 +14682,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .commentBlock_inputGroup {
   align-items: center;
   background-color: #ffffff;
-  border: 1px solid #BABABA;
+  border: 1px solid #dddddd;
   border-radius: 1px;
   display: flex;
   justify-content: space-between;
