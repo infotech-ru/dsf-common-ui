@@ -13306,7 +13306,7 @@ select.selectpicker {
 }
 .inputGroup_prepend .inputGroup_text,
 .inputGroup_prepend .inputGroup_inner {
-  border-left: 1px solid #BABABA;
+  border-left: 1px solid #dddddd;
 }
 .inputGroup_prepend + .form-control-container .form-control {
   border-bottom-left-radius: 0;
@@ -13316,7 +13316,7 @@ select.selectpicker {
   border-left: 0px;
 }
 .inputGroup_prepend .inputGroup_outer {
-  border-right: 1px solid #BABABA;
+  border-right: 1px solid #dddddd;
 }
 .inputGroup_prepend .inputGroup_text:first-child,
 .inputGroup_prepend .inputGroup_inner:first-child {
@@ -13329,10 +13329,10 @@ select.selectpicker {
 }
 .inputGroup_append .inputGroup_text,
 .inputGroup_append .inputGroup_inner {
-  border-right: 1px solid #BABABA;
+  border-right: 1px solid #dddddd;
 }
 .inputGroup_append .inputGroup_outer {
-  border-left: 1px solid #BABABA;
+  border-left: 1px solid #dddddd;
 }
 .inputGroup_append .inputGroup_inner + .inputGroup_outer,
 .inputGroup_append [class*=btn-] + .inputGroup_outer {
@@ -13347,7 +13347,7 @@ select.selectpicker {
 .inputGroup_inner {
   align-items: center;
   background-color: #ffffff;
-  border-bottom: 1px solid #BABABA;
+  border-bottom: 1px solid #dddddd;
   border-top: 1px solid #BABABA;
   border-left: none;
   color: #333333;

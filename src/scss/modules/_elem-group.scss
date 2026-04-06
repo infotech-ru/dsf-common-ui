@@ -578,7 +578,7 @@
   margin-right: 0;
   .inputGroup_text,
   .inputGroup_inner {
-    border-left: 1px solid val.brandForms(inputGroupEl-borderColor);
+    border-left: 1px solid val.brandForms(formControl-borderColor);
   }
   & + .form-control-container {
     .form-control{
@@ -590,7 +590,7 @@
     }
   }
   .inputGroup_outer{
-    border-right: 1px solid val.brandForms(inputGroupEl-borderColor);  
+    border-right: 1px solid val.brandForms(formControl-borderColor);  
   }
   .inputGroup_text,
   .inputGroup_inner {
@@ -606,10 +606,10 @@
   margin-left: 0;
   .inputGroup_text,
   .inputGroup_inner {
-    border-right: 1px solid val.brandForms(inputGroupEl-borderColor);
+    border-right: 1px solid val.brandForms(formControl-borderColor);
   }
   .inputGroup_outer {
-    border-left: 1px solid val.brandForms(inputGroupEl-borderColor);
+    border-left: 1px solid val.brandForms(formControl-borderColor);
   }
   .inputGroup_inner + .inputGroup_outer,
   [class*="btn-"] + .inputGroup_outer {
@@ -627,7 +627,7 @@
 .inputGroup_inner {
   align-items: center;
   background-color: val.brandForms(inputGroupEl-bgc);
-  border-bottom: 1px solid val.brandForms(inputGroupEl-borderColor);
+  border-bottom: 1px solid val.brandForms(formControl-borderColor);
   border-top: 1px solid val.brandForms(inputGroupEl-borderColor);
   border-left: none;
   color: val.brandForms(inputGroupEl-color);
