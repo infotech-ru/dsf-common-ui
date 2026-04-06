@@ -57,7 +57,7 @@ order: 10
 
         <h4 class="mb-10">Label (остальные)</h4>
         <div class="d-flex flex-wrap gap-10 mb-20">
-            {% assign right_items = site.data.jekyll.brandlabel | where_exp: "item", "item.name != 'default' and item.name != 'info' and item.name != 'light-green' or item.name == 'light-red'" %}
+            {% assign right_items = site.data.jekyll.brandlabel | where_exp: "item", "item.name != 'default' and item.name != 'info' and item.name != 'light-green' and item.name != 'light-red'" %}
             {% for item in right_items %}
                 <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
             {% endfor %}
@@ -79,13 +79,13 @@ order: 10
 
         <h4 class="mb-10">Chip (остальные)</h4>
         <div class="d-flex flex-wrap gap-10 mb-10">
-            {% assign right_items2 = site.data.jekyll.brandlabel | where_exp: "item", "item.name != 'default' and item.name != 'info' and item.name != 'light-green' or item.name == 'light-red'" %}
+            {% assign right_items2 = site.data.jekyll.brandlabel | where_exp: "item", "item.name != 'default' and item.name != 'info' and item.name != 'light-green' and item.name != 'light-red'" %}
             {% for item in right_items2 %}
                 <span class="label_chip label-{{ item.name }}">label-{{ item.name }}</span>
             {% endfor %}
         </div>
         <div class="d-flex flex-wrap gap-10 mb-20">
-            {% assign right_items3 = site.data.jekyll.brandlabel | where_exp: "item", "item.name != 'default' and item.name != 'info' and item.name != 'light-green' or item.name == 'light-red'" %}
+            {% assign right_items3 = site.data.jekyll.brandlabel | where_exp: "item", "item.name != 'default' and item.name != 'info' and item.name != 'light-green' and item.name != 'light-red'" %}
             {% for item in right_items3 %}
                 <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}</span>
             {% endfor %}
