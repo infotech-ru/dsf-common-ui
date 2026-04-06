@@ -88,8 +88,7 @@ td {
     border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
     border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
     border-bottom-color: var(--border_bottom_color, var(--border_color, val.brandTable(table_border)));
-    min-height: fonts.rem(val.lineHeight(input));
-    height: auto;
+    height: fonts.rem(val.lineHeight(input) + (val.tableSizes(tableList_paddingY) * 2) - 1);
     padding: fonts.rem(val.tableSizes(tableList_paddingY)) 0;
   }
   .tr__slave &{

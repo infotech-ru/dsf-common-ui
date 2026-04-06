@@ -13898,8 +13898,7 @@ td .empty {
   border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
   border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
   border-bottom-color: var(--border_bottom_color, var(--border_color, #dddddd));
-  min-height: 1.625rem;
-  height: auto;
+  height: 2.0625rem;
   padding: 0.25rem 0;
 }
 .tr__slave th,
