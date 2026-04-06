@@ -60,7 +60,7 @@
       color: val.brandUnityBlock(unityBlockTitle_color);
       font-size: fonts.rem(val.fontSizes(unityBlockTitle));
       font-weight: val.fontWeight(unityBlockTitle);
-      line-height: val.lineHeight(unityBlockTitle);
+      line-height: fonts.rem(val.lineHeight(unityBlockTitle));
       text-transform: val.textTransform(unityBlockTitle);
       white-space: nowrap;
     }

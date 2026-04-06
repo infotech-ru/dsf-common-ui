@@ -14403,7 +14403,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   color: #333333;
   font-size: 0.75rem;
   font-weight: 700;
-  line-height: 14;
+  line-height: 0.875rem;
   text-transform: uppercase;
   white-space: nowrap;
 }
