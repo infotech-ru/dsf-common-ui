@@ -72,7 +72,7 @@ order: 10
         <div class="d-flex flex-wrap gap-10 mb-10">
             {% for item in site.data.jekyll.brandlabel %}
                 {% if item.name == "default" or item.name == "info" or item.name == "light-green" or item.name == "light-red" %}
-                    <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
+                    <span class="label_chip label-{{ item.name }}">label-{{ item.name }}</span>
                 {% endif %}
             {% endfor %}
         </div>
@@ -81,7 +81,7 @@ order: 10
         <div class="d-flex flex-wrap gap-10 mb-20">
             {% for item in site.data.jekyll.brandlabel %}
                 {% if item.name == "default" or item.name == "info" or item.name == "light-green" or item.name == "light-red" %}
-                    <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}</span>
+                    <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}__outline</span>
                 {% endif %}
             {% endfor %}
         </div>
@@ -100,7 +100,7 @@ order: 10
         <div class="d-flex flex-wrap gap-10 mb-20">
             {% for item in site.data.jekyll.brandlabel %}
                 {% if item.name != "default" and item.name != "info" and item.name != "light-green" and item.name != "light-red" %}
-                    <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}</span>
+                    <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}__outline</span>
                 {% endif %}
             {% endfor %}
         </div>

@@ -10976,12 +10976,12 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #333333;
 }
 .label-grey2.label_chip {
-  --label_borderColor: #dddddd;
+  --label_borderColor: #777777;
 }
 .label-grey2.label_chip:hover, .label-grey2.label_chip.active, .label-grey2.label_chip:active {
   --label_color: #333333;
   --label_bgc: #e5e5e5;
-  --label_borderColor: #dddddd;
+  --label_borderColor: #777777;
   --svg-valute-fill: #333333;
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
@@ -10991,7 +10991,7 @@ input[type=button].btn-block {
 
 .label-grey2__outline {
   --label_color: #333333;
-  --label_borderColor: #dddddd;
+  --label_borderColor: #777777;
   --label_bgc: #00000000;
   --svg-valute-fill: #333333;
   --svg-icon-fill: #dddddd;
@@ -11001,7 +11001,7 @@ input[type=button].btn-block {
 }
 .label-grey2__outline.label_chip:hover, .label-grey2__outline.label_chip.active, .label-grey2__outline.label_chip:active {
   --label_color: #333333;
-  --label_borderColor: #dddddd;
+  --label_borderColor: #777777;
   --label_bgc: #e5e5e5;
   --svg-valute-fill: #333333;
   --svg-icon-fill: #dddddd;
@@ -11066,12 +11066,12 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #DE8500;
 }
 .label-light-yellow2.label_chip {
-  --label_borderColor: #FFF6DF;
+  --label_borderColor: #DE8500;
 }
 .label-light-yellow2.label_chip:hover, .label-light-yellow2.label_chip.active, .label-light-yellow2.label_chip:active {
   --label_color: #DE8500;
   --label_bgc: #FFDF9A;
-  --label_borderColor: #FFF6DF;
+  --label_borderColor: #DE8500;
   --svg-valute-fill: #DE8500;
   --svg-icon-fill: #DE8500;
   --svg-icon-stroke: #DE8500;
@@ -11080,24 +11080,24 @@ input[type=button].btn-block {
 }
 
 .label-light-yellow2__outline {
-  --label_color: #FFF6DF;
-  --label_borderColor: #FFF6DF;
+  --label_color: #DE8500;
+  --label_borderColor: #DE8500;
   --label_bgc: #00000000;
-  --svg-valute-fill: #FFF6DF;
-  --svg-icon-fill: #FFF6DF;
-  --svg-icon-stroke: #FFF6DF;
-  --svg-icon-fill_blue: #FFF6DF;
-  --svg-icon-stroke_blue: #FFF6DF;
+  --svg-valute-fill: #DE8500;
+  --svg-icon-fill: #DE8500;
+  --svg-icon-stroke: #DE8500;
+  --svg-icon-fill_blue: #DE8500;
+  --svg-icon-stroke_blue: #DE8500;
 }
 .label-light-yellow2__outline.label_chip:hover, .label-light-yellow2__outline.label_chip.active, .label-light-yellow2__outline.label_chip:active {
-  --label_color: #FFF6DF;
-  --label_borderColor: #FFF6DF;
+  --label_color: #DE8500;
+  --label_borderColor: #DE8500;
   --label_bgc: #FFDF9A;
-  --svg-valute-fill: #FFF6DF;
-  --svg-icon-fill: #FFF6DF;
-  --svg-icon-stroke: #FFF6DF;
-  --svg-icon-fill_blue: #FFF6DF;
-  --svg-icon-stroke_blue: #FFF6DF;
+  --svg-valute-fill: #DE8500;
+  --svg-icon-fill: #DE8500;
+  --svg-icon-stroke: #DE8500;
+  --svg-icon-fill_blue: #DE8500;
+  --svg-icon-stroke_blue: #DE8500;
 }
 
 .label-dark-green {
@@ -11291,12 +11291,12 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-rose.label_chip {
-  --label_borderColor: #FF9996;
+  --label_borderColor: #FCEEEE;
 }
 .label-rose.label_chip:hover, .label-rose.label_chip.active, .label-rose.label_chip:active {
   --label_color: #ffffff;
   --label_bgc: #FCEEEE;
-  --label_borderColor: #FF9996;
+  --label_borderColor: #FCEEEE;
   --svg-valute-fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -11306,7 +11306,7 @@ input[type=button].btn-block {
 
 .label-rose__outline {
   --label_color: #FF9996;
-  --label_borderColor: #FF9996;
+  --label_borderColor: #FCEEEE;
   --label_bgc: #00000000;
   --svg-valute-fill: #FF9996;
   --svg-icon-fill: #FF9996;
@@ -11316,7 +11316,7 @@ input[type=button].btn-block {
 }
 .label-rose__outline.label_chip:hover, .label-rose__outline.label_chip.active, .label-rose__outline.label_chip:active {
   --label_color: #FF9996;
-  --label_borderColor: #FF9996;
+  --label_borderColor: #FCEEEE;
   --label_bgc: #FCEEEE;
   --svg-valute-fill: #FF9996;
   --svg-icon-fill: #FF9996;
@@ -11336,12 +11336,12 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #ffffff;
 }
 .label-grey4.label_chip {
-  --label_borderColor: #777777;
+  --label_borderColor: #333333;
 }
 .label-grey4.label_chip:hover, .label-grey4.label_chip.active, .label-grey4.label_chip:active {
   --label_color: #ffffff;
   --label_bgc: #dddddd;
-  --label_borderColor: #777777;
+  --label_borderColor: #333333;
   --svg-valute-fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -11351,7 +11351,7 @@ input[type=button].btn-block {
 
 .label-grey4__outline {
   --label_color: #777777;
-  --label_borderColor: #777777;
+  --label_borderColor: #333333;
   --label_bgc: #00000000;
   --svg-valute-fill: #777777;
   --svg-icon-fill: #777777;
@@ -11361,7 +11361,7 @@ input[type=button].btn-block {
 }
 .label-grey4__outline.label_chip:hover, .label-grey4__outline.label_chip.active, .label-grey4__outline.label_chip:active {
   --label_color: #777777;
-  --label_borderColor: #777777;
+  --label_borderColor: #333333;
   --label_bgc: #dddddd;
   --svg-valute-fill: #777777;
   --svg-icon-fill: #777777;
