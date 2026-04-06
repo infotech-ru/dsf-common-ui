@@ -13781,7 +13781,7 @@ td {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 0.875rem;
-  height: 2.5rem;
+  height: 2.375rem;
   padding: 0.3125rem 0.375rem;
   vertical-align: middle;
   text-align: left;
@@ -14073,7 +14073,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .table-sticky-head-left_col thead tr:nth-child(2) th,
 .wrapper__tableSticky thead tr:nth-child(2) th {
-  top: 2.5rem;
+  top: 2.375rem;
 }
 .table-sticky-head-left_col thead tr:nth-child(2) th:first-child,
 .wrapper__tableSticky thead tr:nth-child(2) th:first-child {
@@ -14081,15 +14081,15 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .table-sticky-head-left_col thead tr:nth-child(3) th,
 .wrapper__tableSticky thead tr:nth-child(3) th {
-  top: 5rem;
+  top: 4.75rem;
 }
 .table-sticky-head-left_col thead tr:nth-child(4) th,
 .wrapper__tableSticky thead tr:nth-child(4) th {
-  top: 7.5rem;
+  top: 7.125rem;
 }
 .table-sticky-head-left_col thead tr:nth-child(5) th,
 .wrapper__tableSticky thead tr:nth-child(5) th {
-  top: 7.5rem;
+  top: 7.125rem;
 }
 
 .tdSticky {
@@ -14191,7 +14191,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   display: inline-flex;
   padding: 5px 6px;
   line-height: 0.875rem;
-  min-height: var(--grid-table-cell-min-height, 2.5rem);
+  min-height: var(--grid-table-cell-min-height, 2.375rem);
   text-align: left;
 }
 
@@ -14403,6 +14403,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   color: #333333;
   font-size: 0.75rem;
   font-weight: 700;
+  line-height: 14;
   text-transform: uppercase;
   white-space: nowrap;
 }

@@ -27,6 +27,7 @@ $brand-sizes: (
 $alert-sizes: (
   alert_radius:                    baseValue.$base-radius,
   alert_padding:                   baseValue.$base-padding,
+  alert_padding-sm:                baseValue.$base-padding,
   alert_margin:                    baseValue.$base-gutter,
   alertClose_size:                 14,
 )!default;
@@ -125,7 +126,7 @@ $table-sizes:(
   tableList_paddingX:              5,
   tableList_paddingY:              4,
   table_lineHeigth:                14,
-  tableCell_height:                40,
+  tableCell_height:                38,
   tableCellMin_height:             16,
   tableCellMaster_height:          26,
   tableHelpIcon_size:              8,
