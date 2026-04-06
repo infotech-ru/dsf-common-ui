@@ -11246,12 +11246,12 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: #D9534F;
 }
 .label-light-red.label_chip {
-  --label_borderColor: #FCEEEE;
+  --label_borderColor: #FF9996;
 }
 .label-light-red.label_chip:hover, .label-light-red.label_chip.active, .label-light-red.label_chip:active {
   --label_color: #D9534F;
-  --label_bgc: #F5F5F5;
-  --label_borderColor: #FCEEEE;
+  --label_bgc: #FF9996;
+  --label_borderColor: #FF9996;
   --svg-valute-fill: #D9534F;
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
@@ -11260,24 +11260,24 @@ input[type=button].btn-block {
 }
 
 .label-light-red__outline {
-  --label_color: #FCEEEE;
-  --label_borderColor: #FCEEEE;
+  --label_color: #D9534F;
+  --label_borderColor: #FF9996;
   --label_bgc: #00000000;
-  --svg-valute-fill: #FCEEEE;
-  --svg-icon-fill: #FCEEEE;
-  --svg-icon-stroke: #FCEEEE;
-  --svg-icon-fill_blue: #FCEEEE;
-  --svg-icon-stroke_blue: #FCEEEE;
+  --svg-valute-fill: #D9534F;
+  --svg-icon-fill: #D9534F;
+  --svg-icon-stroke: #D9534F;
+  --svg-icon-fill_blue: #D9534F;
+  --svg-icon-stroke_blue: #D9534F;
 }
 .label-light-red__outline.label_chip:hover, .label-light-red__outline.label_chip.active, .label-light-red__outline.label_chip:active {
-  --label_color: #FCEEEE;
-  --label_borderColor: #FCEEEE;
-  --label_bgc: #F5F5F5;
-  --svg-valute-fill: #FCEEEE;
-  --svg-icon-fill: #FCEEEE;
-  --svg-icon-stroke: #FCEEEE;
-  --svg-icon-fill_blue: #FCEEEE;
-  --svg-icon-stroke_blue: #FCEEEE;
+  --label_color: #D9534F;
+  --label_borderColor: #FF9996;
+  --label_bgc: #FF9996;
+  --svg-valute-fill: #D9534F;
+  --svg-icon-fill: #D9534F;
+  --svg-icon-stroke: #D9534F;
+  --svg-icon-fill_blue: #D9534F;
+  --svg-icon-stroke_blue: #D9534F;
 }
 
 .label-rose {

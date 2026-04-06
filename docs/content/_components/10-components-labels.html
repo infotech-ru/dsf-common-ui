@@ -47,23 +47,50 @@ order: 10
 {% endhighlight %}
     </div>
     <div class="bs-docs-example">
-        <h4 class="mb-10">Label</h4>
-        <div class="d-flex flex-wrap gap-10 mb-20">
-            {% for item in site.data.jekyll.brandlabel %}
-            <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
-            {% endfor %}
-        </div>
-        <h4 class="mb-10">Chip</h4>
+        <h4 class="mb-10">Label (базовые)</h4>
         <div class="d-flex flex-wrap gap-10 mb-10">
-            {% for item in site.data.jekyll.brandlabel %}
-            <span class="label_chip label-{{ item.name }}">label-{{ item.name }}</span>
+            {% assign left_items = site.data.jekyll.brandlabel | where_exp: "item", "item.name == 'default' or item.name == 'info' or item.name == 'light-green' or item.name == 'light-red'" %}
+            {% for item in left_items %}
+                <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
+            {% endfor %}
+        </div>
+
+        <h4 class="mb-10">Label (остальные)</h4>
+        <div class="d-flex flex-wrap gap-10 mb-20">
+            {% assign right_items = site.data.jekyll.brandlabel | where_exp: "item", "item.name != 'default' and item.name != 'info' and item.name != 'light-green' or item.name == 'light-red'" %}
+            {% for item in right_items %}
+                <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
+            {% endfor %}
+        </div>
+
+        <h4 class="mb-10">Chip (базовые)</h4>
+        <div class="d-flex flex-wrap gap-10 mb-10">
+            {% assign left_items = site.data.jekyll.brandlabel | where_exp: "item", "item.name == 'default' or item.name == 'info' or item.name == 'light-green' or item.name == 'light-red'" %}
+            {% for item in left_items %}
+                <span class="label label-{{ item.name }}">label-{{ item.name }}</span>
             {% endfor %}
         </div>
         <div class="d-flex flex-wrap gap-10 mb-20">
-            {% for item in site.data.jekyll.brandlabel %}
-            <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}__outline</span>
+            {% assign left_items = site.data.jekyll.brandlabel | where_exp: "item", "item.name == 'default' or item.name == 'info' or item.name == 'light-green' or item.name == 'light-red'" %}
+            {% for item in left_items %}
+                <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}</span>
             {% endfor %}
         </div>
+
+        <h4 class="mb-10">Chip (остальные)</h4>
+        <div class="d-flex flex-wrap gap-10 mb-10">
+            {% assign right_items = site.data.jekyll.brandlabel | where_exp: "item", "item.name != 'default' and item.name != 'info' and item.name != 'light-green' or item.name == 'light-red'" %}
+            {% for item in right_items %}
+                <span class="label_chip label-{{ item.name }}">label-{{ item.name }}</span>
+            {% endfor %}
+        </div>
+        <div class="d-flex flex-wrap gap-10 mb-20">
+            {% assign right_items = site.data.jekyll.brandlabel | where_exp: "item", "item.name != 'default' and item.name != 'info' and item.name != 'light-green' or item.name == 'light-red'" %}
+            {% for item in right_items %}
+                <span class="label_chip label-{{ item.name }}__outline">label-{{ item.name }}</span>
+            {% endfor %}
+        </div>
+
         <h4 class="mb-10">label_small и label_circle</h4>
         <div class="d-flex flex-wrap gap-10">
             <button class="btn-icon p-relative">
