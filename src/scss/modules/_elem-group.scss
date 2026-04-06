@@ -628,7 +628,7 @@
   align-items: center;
   background-color: val.brandForms(inputGroupEl-bgc);
   border-bottom: 1px solid val.brandForms(formControl-borderColor);
-  border-top: 1px solid val.brandForms(inputGroupEl-borderColor);
+  border-top: 1px solid val.brandForms(formControl-borderColor);
   border-left: none;
   color: val.brandForms(inputGroupEl-color);
   display: flex;

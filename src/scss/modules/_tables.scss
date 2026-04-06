@@ -546,7 +546,7 @@ tbody tr {
     z-index: val.zIndex(gridHeader);
     &Cell{
         align-items: center;
-        background-color: var(--color_light-grey);
+        background-color: val.brandTable(thead_bgc);
         display: flex;
     }
     

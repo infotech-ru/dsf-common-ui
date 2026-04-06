@@ -13348,7 +13348,7 @@ select.selectpicker {
   align-items: center;
   background-color: #ffffff;
   border-bottom: 1px solid #dddddd;
-  border-top: 1px solid #BABABA;
+  border-top: 1px solid #dddddd;
   border-left: none;
   color: #333333;
   display: flex;
@@ -14298,7 +14298,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .gridHeaderCell {
   align-items: center;
-  background-color: var(--color_light-grey);
+  background-color: #F5F5F5;
   display: flex;
 }
 
