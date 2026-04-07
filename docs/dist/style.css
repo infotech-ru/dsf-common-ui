@@ -13401,6 +13401,10 @@ select.selectpicker {
   text-align: center;
   white-space: nowrap;
 }
+.inputGroup__big .inputGroup_text,
+.inputGroup__big .inputGroup_inner {
+  padding: 0 1.25rem;
+}
 .inputGroup_text input[type=radio],
 .inputGroup_text input[type=checkbox],
 .inputGroup_inner input[type=radio],

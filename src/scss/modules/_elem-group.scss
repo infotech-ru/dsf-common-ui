@@ -638,6 +638,9 @@
   margin-bottom: 0;
   text-align: center;
   white-space: nowrap;
+  .inputGroup__big &{
+    padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__big));
+  }
 
   input[type="radio"],
   input[type="checkbox"] {
