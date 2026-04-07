@@ -11708,9 +11708,9 @@ output {
   box-shadow: none;
   color: #333333;
   display: block;
-  height: 1.75rem;
   font-size: 0.75rem;
   font-weight: 400;
+  height: 1.75rem;
   line-height: 1.625rem;
   padding: 0 0.625rem;
   width: 100%;
@@ -11830,6 +11830,11 @@ output {
 .css-formFree .form-control__placeholder::-webkit-input-placeholder {
   color: #777777;
   font-size: 0.75rem;
+}
+.form-control__big {
+  height: 3.25rem;
+  line-height: 3.125rem;
+  padding: 0 1.25rem;
 }
 
 textarea.form-control {
@@ -13390,8 +13395,7 @@ select.selectpicker {
   display: flex;
   font-size: 0.75rem;
   font-weight: 400;
-  line-height: 1.625rem;
-  min-height: 1.75rem;
+  min-height: 100%;
   padding: 0 0.625rem;
   margin-bottom: 0;
   text-align: center;
@@ -13403,27 +13407,36 @@ select.selectpicker {
 .inputGroup_inner input[type=checkbox] {
   margin-top: 0;
 }
+.inputGroup_text .btn-icon,
+.inputGroup_inner .btn-icon {
+  height: 100%;
+}
 .inputGroup_text .svg--icon__24vb,
 .inputGroup_inner .svg--icon__24vb {
   --svgIcon_height: 16px;
 }
-.inputGroup_text .svg--icon,
-.inputGroup_inner .svg--icon {
-  height: var(--svgIcon_height, 11px);
-  width: var(--svgIcon_height, 11px);
+.inputGroup__big .inputGroup_text .svg--icon__24vb,
+.inputGroup__big .inputGroup_inner .svg--icon__24vb {
+  --svgIcon_height: 20px;
 }
-.inputGroup_text .svg--icon svg,
+.inputGroup_text .svg--icon, .inputGroup_text .svg--icon svg,
+.inputGroup_inner .svg--icon,
 .inputGroup_inner .svg--icon svg {
   height: var(--svgIcon_height, 11px);
   width: var(--svgIcon_height, 11px);
+}
+.inputGroup__big .inputGroup_text .svg--icon, .inputGroup__big .inputGroup_text .svg--icon svg,
+.inputGroup__big .inputGroup_inner .svg--icon,
+.inputGroup__big .inputGroup_inner .svg--icon svg {
+  height: var(--svgIcon_height, 13px);
+  width: var(--svgIcon_height, 13px);
 }
 
 .inputGroup_outer {
   align-items: center;
   display: flex;
-  line-height: 1.625rem;
   margin-bottom: 0;
-  min-height: 1.75rem;
+  min-height: 100%;
   padding: 0 0.625rem;
   text-align: center;
   white-space: nowrap;
@@ -13934,7 +13947,7 @@ td .empty {
   border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
   border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
   border-bottom-color: var(--border_bottom_color, var(--border_color, #dddddd));
-  height: 2.0625rem;
+  height: 2.1875rem;
   padding: 0.25rem 0;
 }
 .tr__slave th,

@@ -64,7 +64,10 @@ $forms-sizes:(
   controlLabel_mb:                 3,
   controlLabel_mr:                 5,
   formControl_borderSize:          1,
+  formControl_height:              28,
+  formControl_height__big:         52,
   formControl_paddingX:            baseValue.$base-padding,
+  formControl_paddingX__big:       baseValue.$base-padding * 2,
   formControlStatic_paddingY:      7,
   formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
   formGroup__formFree_mb:          25,
@@ -124,6 +127,7 @@ $table-sizes:(
   table_paddingXFirst:             baseValue.$base-padding,
   table_paddingX:                  6,
   table_paddingY:                  5,
+  tableList_border:                1,
   tableList_paddingX:              5,
   tableList_paddingY:              4,
   table_lineHeigth:                14,

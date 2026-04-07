@@ -125,7 +125,7 @@
             cursor: val.brandCursor(radioItemLabel);
             font-weight: normal;
             // min-height: fonts.rem(val.lineHeight(radioItemLabel));
-            line-height: fonts.rem(val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2));
+            line-height: fonts.rem(val.formsSizes(formControl_height));
             margin-bottom: 0;
             padding-top: 0;
             padding-left: 0;

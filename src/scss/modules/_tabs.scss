@@ -204,7 +204,7 @@
 .nav-cards__forms > li > a,
 .nav-cards__forms .nav-link {
   padding:0 fonts.rem(val.tabsSizes(navCardsForms_padding));
-  height: fonts.rem(calc(val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2)));
+  height: fonts.rem(val.formsSizes(formControl_height));
 }
 
 .nav-cards > li.active > a,

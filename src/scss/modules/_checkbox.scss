@@ -36,7 +36,7 @@ input[type=checkbox] {
     align-items: center;
     display: inline-flex;
     line-height: fonts.rem(val.lineHeight(checkbox));
-    min-height: fonts.rem(val.lineHeight(input) + val.formsSizes(formControl_borderSize) * 2);
+    min-height: fonts.rem(val.formsSizes(formControl_height));
     position: relative;
     input[type=checkbox] {
         position: absolute;
@@ -75,7 +75,7 @@ input[type=checkbox] {
         padding-left: fonts.rem(calc(val.checkboxSizes(checkboxItem_size) / 0.75));
         position: relative;
         text-align: left;
-        line-height: fonts.rem(val.lineHeight(input) + val.formsSizes(formControl_borderSize) * 2);
+        line-height: fonts.rem(val.formsSizes(formControl_height));
         vertical-align: top;
         &:hover:before {
             border-color: val.brandCheckbox(checkboxItem_border);
@@ -114,7 +114,7 @@ input[type=checkbox] {
         background-color: transparent;
         border: none;
         // height: 20px;
-        height: fonts.rem(val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2));
+        height: fonts.rem(val.formsSizes(formControl_height));
         padding: 0;
         width: auto;
         label.checkbox{
@@ -125,7 +125,7 @@ input[type=checkbox] {
             border-radius: 0;
             display: inline-flex;
             font-size: 0; // safari fix
-            height: fonts.rem(val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2));
+            height: fonts.rem(val.formsSizes(formControl_height));
             outline: none;
             padding: 0;
             position: relative;
@@ -151,7 +151,7 @@ input[type=checkbox] {
                 padding: 0;
                 position: absolute;
                 transition: left 0.3s ease;
-                top: fonts.rem(math.div((val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2) - val.toggleCheckSizes(toggleCheckToggle_height)), 2));
+                top: fonts.rem(math.div((val.formsSizes(formControl_height) - val.toggleCheckSizes(toggleCheckToggle_height)), 2));
                 width: fonts.rem(val.toggleCheckSizes(toggleCheckToggle_width));
             }
             &:before{
@@ -167,7 +167,7 @@ input[type=checkbox] {
                 left: 0;
                 right: auto;
                 // top: 0;
-                top: fonts.rem(math.div((val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2) - val.toggleCheckSizes(toggleCheck_height)), 2));
+                top: fonts.rem(math.div((val.formsSizes(formControl_height) - val.toggleCheckSizes(toggleCheck_height)), 2));
                 position: absolute;
                 height: fonts.rem(val.toggleCheckSizes(toggleCheck_height));
                 width: fonts.rem(val.toggleCheckSizes(toggleCheck_width));

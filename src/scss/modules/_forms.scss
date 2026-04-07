@@ -86,7 +86,7 @@ output {
       font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       left: 0;
       // left: fonts.rem($paddinFromLeft * -1);
-      line-height: fonts.rem(calc(val.lineHeight(input) + 2));
+      line-height: fonts.rem(val.formsSizes(formControl_height));
       padding-left: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
       // padding-right: fonts.rem(calc(val.formsSizes(formControl_paddingX) + 5));
       padding-right: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
@@ -177,10 +177,10 @@ output {
   box-shadow: none;
   color: val.brandForms(formControl-color);
   display: block;
-  height: fonts.rem(calc(val.lineHeight(input) + (val.formsSizes(formControl_borderSize) * 2))); //  + border-top and border-bottom
   font-size: fonts.rem(val.fontSizes(formElem));
   font-weight: val.fontWeight(formElem);
-  line-height: fonts.rem(val.lineHeight(input));
+  height: fonts.rem(val.formsSizes(formControl_height));
+  line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
   padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   width: 100%;
   @include transition.transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
@@ -323,6 +323,11 @@ output {
       }
     }
   }
+  &__big{
+    height: fonts.rem(val.formsSizes(formControl_height__big));
+    line-height: fonts.rem(val.formsSizes(formControl_height__big) - (val.formsSizes(formControl_borderSize) * 2));
+    padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__big));
+  }
   // [converter] extracted textarea& to textarea.form-control
 }
 
@@ -330,7 +335,7 @@ textarea.form-control {
   border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
   height: auto;
   line-height: fonts.rem(calc(val.fontSizes(formElem) + 2));
-  min-height: fonts.rem(calc(val.lineHeight(input) + 2));
+  min-height: fonts.rem(val.formsSizes(formControl_height));
   padding: 6px fonts.rem(val.formsSizes(formControl_paddingX)) 2px;
   resize: vertical;
 }
@@ -350,7 +355,7 @@ textarea.form-control {
   input[type="datetime-local"],
   input[type="month"] {
     &.form-control {
-      line-height: fonts.rem(val.lineHeight(input));
+      line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
     }
 
   }
@@ -458,7 +463,7 @@ textarea.form-control {
   padding-right: 0;
   padding-left: 0;
   &__height{
-    height: fonts.rem(calc(val.lineHeight(input) + 2));
+    height: fonts.rem(val.formsSizes(formControl_height));
   }
   .css-formFree &{ 
     padding-left: fonts.rem(val.formsSizes(formControl_paddingX));

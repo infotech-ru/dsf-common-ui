@@ -448,7 +448,6 @@
     [class*="btn-"]:not(.bootstrap-select [class*="btn-"]){ 
       border-color: val.brandForms(formControl-color);
       background-color: var(--btn_bg__hover);
-      // background-image: -webkit-linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
       background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
       @include transition.transition(border-color ease-in-out .15s);
       svg{ 
@@ -474,8 +473,6 @@
     }
   }
   .form-control {
-    // border-top-left-radius: 0;
-    // border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     border-left-width: 0;
@@ -483,7 +480,7 @@
   }
   & + .form-control-container {
     .form-control {
-      border-left-width: 1px;
+      border-left-width: #{val.formsSizes(formControl_borderSize)}px;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -494,7 +491,7 @@
   }
   &:first-child {
     .form-control {
-      border-left-width: 1px;
+      border-left-width: #{val.formsSizes(formControl_borderSize)}px;
       border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
       border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
     }
@@ -508,7 +505,7 @@
   }
   &:last-child {
     .form-control {
-      border-right-width: 1px;
+      border-right-width: #{val.formsSizes(formControl_borderSize)}px;
       border-top-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
       border-bottom-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
     }
@@ -537,7 +534,7 @@
       min-width: 0;
       margin-bottom: 0;
       .form-control{
-        border-left-width: 1px;
+        border-left-width: #{val.formsSizes(formControl_borderSize)}px;
       }
       .css-formFree &{
           padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
@@ -606,10 +603,10 @@
   margin-left: 0;
   .inputGroup_text,
   .inputGroup_inner {
-    border-right: 1px solid val.brandForms(formControl-borderColor);
+    border-right: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
   }
   .inputGroup_outer {
-    border-left: 1px solid val.brandForms(formControl-borderColor);
+    border-left: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
   }
   .inputGroup_inner + .inputGroup_outer,
   [class*="btn-"] + .inputGroup_outer {
@@ -627,15 +624,16 @@
 .inputGroup_inner {
   align-items: center;
   background-color: val.brandForms(inputGroupEl-bgc);
-  border-bottom: 1px solid val.brandForms(formControl-borderColor);
-  border-top: 1px solid val.brandForms(formControl-borderColor);
+  border-bottom: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
+  border-top: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
   border-left: none;
   color: val.brandForms(inputGroupEl-color);
   display: flex;
   font-size: fonts.rem(val.fontSizes(inputGroupElem));
   font-weight: val.fontWeight(inputGroupElem);
-  line-height: fonts.rem(val.lineHeight(input));
-  min-height: fonts.rem(calc(val.lineHeight(input) + 2));
+  // line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
+  // min-height: fonts.rem(val.formsSizes(formControl_height));
+  min-height: 100%;
   padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   margin-bottom: 0;
   text-align: center;
@@ -645,15 +643,25 @@
   input[type="checkbox"] {
     margin-top: 0;
   }
+  .btn-icon{
+    height: 100%;
+  }
   .svg--icon__24vb{
     --svgIcon_height: 16px;
+    .inputGroup__big &{
+      --svgIcon_height: 20px;
+    }
   }
   .svg--icon{
-    height: var(--svgIcon_height, 11px);
-    width: var(--svgIcon_height, 11px);
-    svg{
+    &, svg{
       height: var(--svgIcon_height, 11px);
       width: var(--svgIcon_height, 11px);
+    }
+    .inputGroup__big &{
+      &, svg{
+        height: var(--svgIcon_height, 13px);
+        width: var(--svgIcon_height, 13px);
+      }
     }
   }
 }
@@ -661,9 +669,10 @@
   align-items: center;
   // background-color: val.brandForms(inputGroupEl-bgc);
   display: flex;
-  line-height: fonts.rem(val.lineHeight(input));
+  // line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
   margin-bottom: 0; 
-  min-height: fonts.rem(calc(val.lineHeight(input) + 2));
+  // min-height: fonts.rem(val.formsSizes(formControl_height));
+  min-height: 100%;
   padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   text-align: center;
   white-space: nowrap;

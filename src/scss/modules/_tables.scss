@@ -85,10 +85,10 @@ td {
     height: auto;
   }
   .table__list &{
-    border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, 1px));
+    border-bottom-width: var(--width_border-bottom__modify, var(--width_border-bottom, #{val.tableSizes(tableList_border)}px));
     border-bottom-style: var(--style_border_bottom, var(--style_border, solid));
     border-bottom-color: var(--border_bottom_color, var(--border_color, val.brandTable(table_border)));
-    height: fonts.rem(val.lineHeight(input) + (val.tableSizes(tableList_paddingY) * 2) - 1);
+    height: fonts.rem(val.formsSizes(formControl_height) + (val.tableSizes(tableList_paddingY) * 2) - val.tableSizes(tableList_border));
     padding: fonts.rem(val.tableSizes(tableList_paddingY)) 0;
   }
   .tr__slave &{

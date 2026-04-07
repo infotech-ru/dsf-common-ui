@@ -188,7 +188,7 @@ h6, .h6 {
   align-items: center;
   display: inline-flex;
   &__form-control{
-    height: fonts.rem(calc(val.lineHeight(input) + 2));
+    height: fonts.rem(val.formsSizes(formControl_height));
   }
   &_formControl{
     border: none;
