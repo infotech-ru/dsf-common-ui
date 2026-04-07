@@ -394,7 +394,7 @@
 
 
 .inputGroup {
-  align-items: flex-end;
+  // align-items: flex-end; // тогда нужна min-height
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -575,7 +575,7 @@
   margin-right: 0;
   .inputGroup_text,
   .inputGroup_inner {
-    border-left: 1px solid val.brandForms(formControl-borderColor);
+    border-left: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
   }
   & + .form-control-container {
     .form-control{
@@ -587,7 +587,7 @@
     }
   }
   .inputGroup_outer{
-    border-right: 1px solid val.brandForms(formControl-borderColor);  
+    border-right: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);  
   }
   .inputGroup_text,
   .inputGroup_inner {

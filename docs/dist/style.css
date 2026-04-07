@@ -13172,7 +13172,6 @@ select.selectpicker {
 }
 
 .inputGroup {
-  align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   position: relative;
