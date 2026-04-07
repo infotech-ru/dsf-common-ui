@@ -653,6 +653,7 @@
     }
   }
   .svg--icon{
+    background-color: inherit;
     &, svg{
       height: var(--svgIcon_height, 11px);
       width: var(--svgIcon_height, 11px);

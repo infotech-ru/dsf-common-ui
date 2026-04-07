@@ -13419,6 +13419,10 @@ select.selectpicker {
 .inputGroup__big .inputGroup_inner .svg--icon__24vb {
   --svgIcon_height: 20px;
 }
+.inputGroup_text .svg--icon,
+.inputGroup_inner .svg--icon {
+  background-color: inherit;
+}
 .inputGroup_text .svg--icon, .inputGroup_text .svg--icon svg,
 .inputGroup_inner .svg--icon,
 .inputGroup_inner .svg--icon svg {
