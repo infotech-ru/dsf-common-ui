@@ -191,6 +191,8 @@ marginsizes:
   value: 0
 - name: 50
   value: 0
+- name: 60
+  value: 0
 
 paddingsizes:
 - name: 0
@@ -221,6 +223,8 @@ paddingsizes:
   value: 0
 - name: 50
   value: 0
+- name: 80
+  value: 0
 
 gapsizes:
 - name: 0
@@ -231,6 +235,8 @@ gapsizes:
   value: 0
 - name: 15
   value: 0
+- name: 16
+  value: 0
 - name: 20
   value: 0
 - name: 30
@@ -238,6 +244,8 @@ gapsizes:
 - name: 40
   value: 0
 - name: 50
+  value: 0
+- name: 60
   value: 0
 
 svgsizes:
