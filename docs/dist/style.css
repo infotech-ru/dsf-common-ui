@@ -654,12 +654,12 @@ body.error-view {
 }
 
 a {
-  color: #4A8DC6;
+  color: var(--base-link-color, #4A8DC6);
   --svg-valute-fill: #4A8DC6;
   text-decoration: none;
 }
 a:hover, a:focus-visible {
-  color: #1E6393;
+  color: var(--base-link-hoverColor, #1E6393);
   --svg-valute-fill: #1E6393;
   outline: none;
   text-decoration: none;
@@ -10582,6 +10582,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #1E6393;
   --svg-icon-fill_blue: #1E6393;
   --svg-icon-stroke_blue: #1E6393;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-default__outline {
@@ -10603,6 +10604,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #F5F5F5;
   --svg-icon-fill_blue: #F5F5F5;
   --svg-icon-stroke_blue: #F5F5F5;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-primary {
@@ -10627,6 +10629,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-primary__outline {
@@ -10648,6 +10651,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-danger {
@@ -10672,6 +10676,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-danger__outline {
@@ -10693,6 +10698,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-success {
@@ -10717,6 +10723,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-success__outline {
@@ -10738,6 +10745,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #69C26A;
   --svg-icon-fill_blue: #69C26A;
   --svg-icon-stroke_blue: #69C26A;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-warning {
@@ -10762,6 +10770,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-warning__outline {
@@ -10783,6 +10792,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #DE8500;
   --svg-icon-fill_blue: #DE8500;
   --svg-icon-stroke_blue: #DE8500;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-info {
@@ -10807,6 +10817,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-info__outline {
@@ -10828,6 +10839,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-yellow {
@@ -10852,6 +10864,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-yellow__outline {
@@ -10873,6 +10886,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #FFDA7D;
   --svg-icon-fill_blue: #FFDA7D;
   --svg-icon-stroke_blue: #FFDA7D;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-black {
@@ -10897,6 +10911,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-black__outline {
@@ -10918,6 +10933,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #000000;
   --svg-icon-fill_blue: #000000;
   --svg-icon-stroke_blue: #000000;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-dark-grey {
@@ -10942,6 +10958,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-dark-grey__outline {
@@ -10963,6 +10980,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-grey2 {
@@ -10987,6 +11005,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-grey2__outline {
@@ -11008,6 +11027,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #dddddd;
   --svg-icon-fill_blue: #dddddd;
   --svg-icon-stroke_blue: #dddddd;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-vibrant-blue {
@@ -11032,6 +11052,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-vibrant-blue__outline {
@@ -11053,6 +11074,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #0094FF;
   --svg-icon-fill_blue: #0094FF;
   --svg-icon-stroke_blue: #0094FF;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-light-yellow2 {
@@ -11077,6 +11099,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #DE8500;
   --svg-icon-fill_blue: #DE8500;
   --svg-icon-stroke_blue: #DE8500;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-light-yellow2__outline {
@@ -11098,6 +11121,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #DE8500;
   --svg-icon-fill_blue: #DE8500;
   --svg-icon-stroke_blue: #DE8500;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-dark-green {
@@ -11122,6 +11146,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-dark-green__outline {
@@ -11143,6 +11168,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-light-green {
@@ -11167,6 +11193,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-light-green__outline {
@@ -11188,6 +11215,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-light-green2 {
@@ -11212,6 +11240,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-light-green2__outline {
@@ -11233,6 +11262,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #B4E1B5;
   --svg-icon-fill_blue: #B4E1B5;
   --svg-icon-stroke_blue: #B4E1B5;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-light-red {
@@ -11257,6 +11287,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-light-red__outline {
@@ -11278,6 +11309,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-rose {
@@ -11302,6 +11334,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-rose__outline {
@@ -11323,6 +11356,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #FF9996;
   --svg-icon-fill_blue: #FF9996;
   --svg-icon-stroke_blue: #FF9996;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-grey4 {
@@ -11347,6 +11381,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
+  --base-link-hoverColor: var(--label_color);
 }
 
 .label-grey4__outline {
@@ -11368,6 +11403,7 @@ input[type=button].btn-block {
   --svg-icon-stroke: #777777;
   --svg-icon-fill_blue: #777777;
   --svg-icon-stroke_blue: #777777;
+  --base-link-hoverColor: var(--label_color);
 }
 
 a.label:hover, a.label:focus {

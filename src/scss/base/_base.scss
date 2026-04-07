@@ -75,12 +75,12 @@ body {
 }
 
 a {
-  color: val.brandPalette(link_color);
+  color: var(--base-link-color, val.brandPalette(link_color));
   #{--svg-valute-fill}: val.brandPalette(link_color);
   text-decoration: none;
   &:hover,
   &:focus-visible {
-    color: val.brandPalette(linkHover_color);
+    color: var(--base-link-hoverColor, val.brandPalette(linkHover_color));
     #{--svg-valute-fill}: val.brandPalette(linkHover_color);
     outline: none;
     text-decoration: none;

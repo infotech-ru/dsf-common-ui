@@ -219,6 +219,7 @@
         #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg');
         #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue');
         #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue');
+        #{--base-link-hoverColor}:  var(--label_color);
       }
     }
   }
@@ -241,6 +242,7 @@
         #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
         #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
         #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
+        #{--base-link-hoverColor}:  var(--label_color);
       }
     }
   }
