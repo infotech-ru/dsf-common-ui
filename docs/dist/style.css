@@ -10519,17 +10519,12 @@ input[type=button].btn-block {
   white-space: nowrap;
   --label-lineHeight: 0.875rem;
 }
-.label_chip .svg--icon {
-  display: inline-flex;
-  height: var(--svgIcon_height, 0.5625rem);
-  width: var(--svgIcon_height, 0.5625rem);
-}
-.label_chip .svg--icon svg {
-  height: var(--svgIcon_height, 0.5625rem);
-  width: var(--svgIcon_height, 0.5625rem);
-}
+.label_chip .svg--icon,
 .label_chip .svg--icon__24vb {
+  align-items: center;
   display: inline-flex;
+  --svgIcon_height: 0.5625rem;
+  --svgIcon_width: 0.5625rem;
   --svgIcon_height__24vb: 0.75rem;
   --svgIcon_width__24vb: 0.75rem;
 }
@@ -10539,6 +10534,9 @@ input[type=button].btn-block {
   --label_chip-minHeight: 1rem;
   --label_chip-paddingX: 0.25rem;
   --label-lineHeight: 0.75rem;
+}
+.label_chip__small .svg--icon,
+.label_chip__small .svg--icon__24vb {
   --svgIcon_height: 0.5625rem;
   --svgIcon_width: 0.5625rem;
   --svgIcon_height__24vb: 0.75rem;
@@ -10550,6 +10548,9 @@ input[type=button].btn-block {
   --label_chip-minHeight: 1.625rem;
   --label_chip-paddingX: 0.4375rem;
   --label-lineHeight: 1rem;
+}
+.label_chip__big .svg--icon,
+.label_chip__big .svg--icon__24vb {
   --svgIcon_height: 0.75rem;
   --svgIcon_width: 0.75rem;
   --svgIcon_height__24vb: 1rem;
