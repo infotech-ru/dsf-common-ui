@@ -55,19 +55,17 @@
   .svg--icon{
     display: inline-flex;
     height: var(--svgIcon_height, fonts.rem(12));
-    width: var(--svgIcon_height, fonts.rem(12));
+    width: var(--svgIcon_width, fonts.rem(12));
     svg{
       height: var(--svgIcon_height, fonts.rem(12));
-      width: var(--svgIcon_height, fonts.rem(12));
+      width: var(--svgIcon_width, fonts.rem(12));
     }
   }
   .svg--icon__24vb{
     display: inline-flex;
-    height: var(--svgIcon_height__24vb, fonts.rem(15));
-    width: var(--svgIcon_height__24vb, fonts.rem(15));
-    svg{
-      height: var(--svgIcon_height__24vb, fonts.rem(15));
-      width: var(--svgIcon_height__24vb, fonts.rem(15));
+    &, svg{
+      --svgIcon_height__24vb: #{fonts.rem(15)};
+      --svgIcon_width__24vb: #{fonts.rem(15)};
     }
   }
   &__big{
@@ -75,7 +73,9 @@
     --label-lineHeight: #{fonts.rem(12)};
     --labelMinHeight: #{fonts.rem(19)};
     --svgIcon_height: #{fonts.rem(12)};
+    --svgIcon_width: #{fonts.rem(12)};
     --svgIcon_height__24vb: #{fonts.rem(18)};
+    --svgIcon_width__24vb: #{fonts.rem(18)};
   }
 }
 
@@ -134,12 +134,8 @@
   }
   .svg--icon__24vb{
     display: inline-flex;
-    height: var(--svgIcon_height__24vb, fonts.rem(12));
-    width: var(--svgIcon_height__24vb, fonts.rem(12));
-    svg{
-      height: var(--svgIcon_height__24vb, fonts.rem(12));
-      width: var(--svgIcon_height__24vb, fonts.rem(12));
-    }
+    --svgIcon_height__24vb: #{fonts.rem(12)};
+    --svgIcon_width__24vb: #{fonts.rem(12)};
   }
   &__small{
     --label_chip-borderRadius: #{fonts.rem(8)};
@@ -148,7 +144,9 @@
     --label_chip-paddingX: #{fonts.rem(4)};
     --label-lineHeight: #{fonts.rem(12)};
     --svgIcon_height: #{fonts.rem(9)};
+    --svgIcon_width: #{fonts.rem(9)};
     --svgIcon_height__24vb: #{fonts.rem(12)};
+    --svgIcon_width__24vb: #{fonts.rem(12)};
   }
   &__big{
     --label_chip-borderRadius: #{fonts.rem(12)};
@@ -157,7 +155,9 @@
     --label_chip-paddingX: #{fonts.rem(7)};
     --label-lineHeight: #{fonts.rem(16)};
     --svgIcon_height: #{fonts.rem(12)};
+    --svgIcon_width: #{fonts.rem(12)};
     --svgIcon_height__24vb: #{fonts.rem(16)};
+    --svgIcon_width__24vb: #{fonts.rem(16)};
   }
 }
 

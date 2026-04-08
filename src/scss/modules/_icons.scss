@@ -5,18 +5,32 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/variables/var-sizes' as sizes;
+@use './../utilities/functions/func_val' as val;
+@use './../utilities/functions/func_fonts' as fonts;
 
-.svg--icon {
-    $this: &;
+.svg--icon,
+.svg--icon__24vb {
     background-repeat: no-repeat;
     display: inline-block;
-    height: 16px; // !default
-    width: auto;
     svg{
         display: block;
+        #{--svg-icon-fill}: #{val.brandColors(_dark-grey)};
+        #{--svg-icon-fill_blue}: #{val.brandColors(_light-blue)};
+        #{--svg-icon-stroke}: #{val.brandColors(_dark-grey)};
+        #{--svg-icon-stroke_blue}: #{val.brandColors(_light-blue)};
+    }
+}
+.svg--icon {
+    &, svg{
         height: 16px;
         width: auto;
     }
+}
+.svg--icon__24vb{
+  &, svg{
+    height: var(--svgIcon_height__24vb, var(--svgIcon_height, fonts.rem(16)));
+    width: var(--svgIcon_width__24vb, var(--svgIcon_width, fonts.rem(16)));
+  }
 }
 @each $svgMod in sizes.$svgSizes{
   .svg--icon__#{$svgMod}{

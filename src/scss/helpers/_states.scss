@@ -77,10 +77,6 @@ tbody.collapse.in { display: table-row-group; }
       #{--limited-fill-on}: inherit;
       #{--limited-stroke-off}: transparent;
       #{--limited-fill-off}: transparent;
-      #{--svg-icon-fill}: #{val.brandColors(_dark-grey)};
-      #{--svg-icon-fill_blue}: #{val.brandColors(_light-blue)};
-      #{--svg-icon-stroke}: #{val.brandColors(_dark-grey)};
-      #{--svg-icon-stroke_blue}: #{val.brandColors(_light-blue)};
     }
     &.active{
       svg{
@@ -139,7 +135,7 @@ tbody.collapse.in { display: table-row-group; }
   #{--svg-icon-fill_blue}: brandColors.$base_color;
   #{--svg-icon-stroke_blue}: brandColors.$base_color;
   #{--svg-valute-fill}: brandColors.$base_color;
-  margin-right: baseValue.$base-gutter;
+  margin-right: fonts.rem(baseValue.$base-gutter);
   &, svg{
     height: fonts.rem(16);
     width: fonts.rem(16);

@@ -68,7 +68,7 @@
     &SvgTitle{
       height: fonts.rem(24);
       width: fonts.rem(24);
-      margin-right: baseValue.$base-padding;
+      margin-right: fonts.rem(baseValue.$base-padding);
       svg{
         height: fonts.rem(24);
         width: fonts.rem(24);

@@ -35,10 +35,8 @@
     display: inline-flex;
     .svg--icon__24vb{
       margin-right: fonts.rem(5);
-      &, svg{
-        height: fonts.rem(24);
-        width: fonts.rem(24);
-      }
+      --svgIcon_height__24vb: #{fonts.rem(24)};
+      --svgIcon_width__24vb: #{fonts.rem(24)};
     }
   }
 

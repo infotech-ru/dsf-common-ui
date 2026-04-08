@@ -7179,16 +7179,28 @@ h6, .h6 {
 /* path: dsf-common-ui/src/scss/modules/_icons.scss                           */
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
-.svg--icon {
+.svg--icon,
+.svg--icon__24vb {
   background-repeat: no-repeat;
   display: inline-block;
+}
+.svg--icon svg,
+.svg--icon__24vb svg {
+  display: block;
+  --svg-icon-fill: #333333;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke: #333333;
+  --svg-icon-stroke_blue: #4A8DC6;
+}
+
+.svg--icon, .svg--icon svg {
   height: 16px;
   width: auto;
 }
-.svg--icon svg {
-  display: block;
-  height: 16px;
-  width: auto;
+
+.svg--icon__24vb, .svg--icon__24vb svg {
+  height: var(--svgIcon_height__24vb, var(--svgIcon_height, 1rem));
+  width: var(--svgIcon_width__24vb, var(--svgIcon_width, 1rem));
 }
 
 .svg--icon__8, .svg--icon__8.svg--icon {
@@ -7499,12 +7511,12 @@ h6, .h6 {
 
 .dropdown__linkIcon {
   margin-right: 5px;
-  height: 24px;
-  width: 24px;
+  height: 1.5rem;
+  width: 1.5rem;
 }
-.dropdown__linkIcon.svg--icon__24vb svg {
-  height: 24px;
-  width: 24px;
+.dropdown__linkIcon.svg--icon__24vb {
+  --svgIcon_height__24vb: 1.5rem;
+  --svgIcon_width__24vb: 1.5rem;
 }
 .dropdown__linkIcon.svg--icon + .btn-text {
   margin-left: 0;
@@ -10430,27 +10442,27 @@ input[type=button].btn-block {
 .label .svg--icon {
   display: inline-flex;
   height: var(--svgIcon_height, 0.75rem);
-  width: var(--svgIcon_height, 0.75rem);
+  width: var(--svgIcon_width, 0.75rem);
 }
 .label .svg--icon svg {
   height: var(--svgIcon_height, 0.75rem);
-  width: var(--svgIcon_height, 0.75rem);
+  width: var(--svgIcon_width, 0.75rem);
 }
 .label .svg--icon__24vb {
   display: inline-flex;
-  height: var(--svgIcon_height__24vb, 0.9375rem);
-  width: var(--svgIcon_height__24vb, 0.9375rem);
 }
-.label .svg--icon__24vb svg {
-  height: var(--svgIcon_height__24vb, 0.9375rem);
-  width: var(--svgIcon_height__24vb, 0.9375rem);
+.label .svg--icon__24vb, .label .svg--icon__24vb svg {
+  --svgIcon_height__24vb: 0.9375rem;
+  --svgIcon_width__24vb: 0.9375rem;
 }
 .label__big {
   --label-fontSize: 0.75rem;
   --label-lineHeight: 0.75rem;
   --labelMinHeight: 1.1875rem;
   --svgIcon_height: 0.75rem;
+  --svgIcon_width: 0.75rem;
   --svgIcon_height__24vb: 1.125rem;
+  --svgIcon_width__24vb: 1.125rem;
 }
 
 .label__after.control-label {
@@ -10501,12 +10513,8 @@ input[type=button].btn-block {
 }
 .label_chip .svg--icon__24vb {
   display: inline-flex;
-  height: var(--svgIcon_height__24vb, 0.75rem);
-  width: var(--svgIcon_height__24vb, 0.75rem);
-}
-.label_chip .svg--icon__24vb svg {
-  height: var(--svgIcon_height__24vb, 0.75rem);
-  width: var(--svgIcon_height__24vb, 0.75rem);
+  --svgIcon_height__24vb: 0.75rem;
+  --svgIcon_width__24vb: 0.75rem;
 }
 .label_chip__small {
   --label_chip-borderRadius: 0.5rem;
@@ -10515,7 +10523,9 @@ input[type=button].btn-block {
   --label_chip-paddingX: 0.25rem;
   --label-lineHeight: 0.75rem;
   --svgIcon_height: 0.5625rem;
+  --svgIcon_width: 0.5625rem;
   --svgIcon_height__24vb: 0.75rem;
+  --svgIcon_width__24vb: 0.75rem;
 }
 .label_chip__big {
   --label_chip-borderRadius: 0.75rem;
@@ -10524,7 +10534,9 @@ input[type=button].btn-block {
   --label_chip-paddingX: 0.4375rem;
   --label-lineHeight: 1rem;
   --svgIcon_height: 0.75rem;
+  --svgIcon_width: 0.75rem;
   --svgIcon_height__24vb: 1rem;
+  --svgIcon_width__24vb: 1rem;
 }
 
 .label_circle {
@@ -13416,11 +13428,13 @@ select.selectpicker {
 }
 .inputGroup_text .svg--icon__24vb,
 .inputGroup_inner .svg--icon__24vb {
-  --svgIcon_height: 16px;
+  --svgIcon_height__24vb: 1rem;
+  --svgIcon_width__24vb: 1rem;
 }
 .inputGroup__big .inputGroup_text .svg--icon__24vb,
 .inputGroup__big .inputGroup_inner .svg--icon__24vb {
-  --svgIcon_height: 20px;
+  --svgIcon_height__24vb: 1.25rem;
+  --svgIcon_width__24vb: 1.25rem;
 }
 .inputGroup_text .svg--icon,
 .inputGroup_inner .svg--icon {
@@ -13429,14 +13443,14 @@ select.selectpicker {
 .inputGroup_text .svg--icon, .inputGroup_text .svg--icon svg,
 .inputGroup_inner .svg--icon,
 .inputGroup_inner .svg--icon svg {
-  height: var(--svgIcon_height, 11px);
-  width: var(--svgIcon_height, 11px);
+  --svgIcon_height: 0.6875rem;
+  --svgIcon_width: 0.6875rem;
 }
 .inputGroup__big .inputGroup_text .svg--icon, .inputGroup__big .inputGroup_text .svg--icon svg,
 .inputGroup__big .inputGroup_inner .svg--icon,
 .inputGroup__big .inputGroup_inner .svg--icon svg {
-  height: var(--svgIcon_height, 13px);
-  width: var(--svgIcon_height, 13px);
+  --svgIcon_height: 0.8125rem;
+  --svgIcon_width: 0.8125rem;
 }
 
 .inputGroup_outer {
@@ -14432,10 +14446,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 
 .collapseTdIcon {
   display: inline-flex;
-  height: 14px;
-  width: 14px;
 }
-.collapseTdIcon svg {
+.collapseTdIcon, .collapseTdIcon svg {
   height: 14px;
   width: 14px;
 }
@@ -14520,7 +14532,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .unityBlock_headerSvgTitle {
   height: 1.5rem;
   width: 1.5rem;
-  margin-right: 10;
+  margin-right: 0.625rem;
 }
 .unityBlock_headerSvgTitle svg {
   height: 1.5rem;
@@ -14931,10 +14943,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .alert h4 .svg--icon__24vb, .alert .h4 .svg--icon__24vb {
   margin-right: 0.3125rem;
-}
-.alert h4 .svg--icon__24vb, .alert h4 .svg--icon__24vb svg, .alert .h4 .svg--icon__24vb, .alert .h4 .svg--icon__24vb svg {
-  height: 1.5rem;
-  width: 1.5rem;
+  --svgIcon_height__24vb: 1.5rem;
+  --svgIcon_width__24vb: 1.5rem;
 }
 .alert .alert-link {
   font-weight: 700;
@@ -16547,9 +16557,9 @@ body[style^=padding-right] .modal-sidebar {
   text-align: center;
   text-overflow: ellipsis;
 }
-.square-title .svg--icon__24vb, .square-title .svg--icon__24vb svg {
-  height: var(--svgIcon_height, 24px);
-  width: var(--svgIcon_width, 24px);
+.square-title .svg--icon__24vb {
+  --svgIcon_height__24vb: 1.5rem;
+  --svgIcon_width__24vb: 1.5rem;
 }
 .square-text {
   align-items: center;
@@ -16566,9 +16576,9 @@ body[style^=padding-right] .modal-sidebar {
   font-weight: normal;
   line-height: 0.875rem;
 }
-.square-text .svg--icon__24vb, .square-text .svg--icon__24vb svg {
-  height: var(--svgIcon_height, 24px);
-  width: var(--svgIcon_width, 24px);
+.square-text .svg--icon__24vb {
+  --svgIcon_height__24vb: 1.5rem;
+  --svgIcon_width__24vb: 1.5rem;
 }
 .square-action {
   bottom: 0.625rem;
@@ -17151,10 +17161,6 @@ tbody.collapse.in {
   --limited-fill-on: inherit;
   --limited-stroke-off: transparent;
   --limited-fill-off: transparent;
-  --svg-icon-fill: #333333;
-  --svg-icon-fill_blue: #4A8DC6;
-  --svg-icon-stroke: #333333;
-  --svg-icon-stroke_blue: #4A8DC6;
 }
 .iconModification.svg--icon.active svg,
 .iconModification .svg--icon.active svg {
@@ -17195,7 +17201,7 @@ tbody.collapse.in {
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
   --svg-valute-fill: #333333;
-  margin-right: 10;
+  margin-right: 0.625rem;
 }
 .svg--collapseIcon, .svg--collapseIcon svg {
   height: 1rem;

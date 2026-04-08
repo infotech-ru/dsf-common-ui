@@ -638,9 +638,7 @@ tbody tr {
 }
 .collapseTdIcon{
   display: inline-flex;
-  height: #{val.tableSizes(collapseTdIcon_size)}px;
-  width: #{val.tableSizes(collapseTdIcon_size)}px;
-  svg{
+  &, svg{
     height: #{val.tableSizes(collapseTdIcon_size)}px;
     width: #{val.tableSizes(collapseTdIcon_size)}px;
   }

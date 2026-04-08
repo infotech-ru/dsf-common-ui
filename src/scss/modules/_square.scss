@@ -8,7 +8,6 @@
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/functions/func_maps' as maps;
 @use './../utilities/variables/var-colors' as colors;
-// @use './../utilities/variables/var-sizes' as *;
 
 .square {
     align-items: center;
@@ -45,10 +44,8 @@
         text-align: center;
         text-overflow: ellipsis;
         .svg--icon__24vb{
-            &, svg{
-                height: var(--svgIcon_height, 24px);
-                width: var(--svgIcon_width, 24px);
-            }
+            --svgIcon_height__24vb: #{fonts.rem(24)};
+            --svgIcon_width__24vb: #{fonts.rem(24)};
         }
     }
 
@@ -67,10 +64,8 @@
             line-height: fonts.rem(14);
         }
         .svg--icon__24vb{
-            &, svg{
-                height: var(--svgIcon_height, 24px);
-                width: var(--svgIcon_width, 24px);
-            }
+            --svgIcon_height__24vb: #{fonts.rem(24)};
+            --svgIcon_width__24vb: #{fonts.rem(24)};
         }
     }
 

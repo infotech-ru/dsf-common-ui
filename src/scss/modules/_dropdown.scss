@@ -125,14 +125,12 @@
 
 .dropdown__linkIcon {
     margin-right: 5px;
-    height: 24px;
-    width: 24px;
+    height: fonts.rem(24);
+    width: fonts.rem(24);
 
     &.svg--icon__24vb {
-        svg {
-            height: 24px;
-            width: 24px;
-        }
+        --svgIcon_height__24vb: #{fonts.rem(24)};
+        --svgIcon_width__24vb: #{fonts.rem(24)};
     }
 
     &.svg--icon {

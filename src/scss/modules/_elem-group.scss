@@ -650,21 +650,23 @@
     height: 100%;
   }
   .svg--icon__24vb{
-    --svgIcon_height: 16px;
+    --svgIcon_height__24vb: #{fonts.rem(16)};
+    --svgIcon_width__24vb: #{fonts.rem(16)};
     .inputGroup__big &{
-      --svgIcon_height: 20px;
+      --svgIcon_height__24vb: #{fonts.rem(20)};
+      --svgIcon_width__24vb: #{fonts.rem(20)};
     }
   }
   .svg--icon{
     background-color: inherit;
     &, svg{
-      height: var(--svgIcon_height, 11px);
-      width: var(--svgIcon_height, 11px);
+      --svgIcon_height: #{fonts.rem(11)};
+      --svgIcon_width: #{fonts.rem(11)};
     }
     .inputGroup__big &{
       &, svg{
-        height: var(--svgIcon_height, 13px);
-        width: var(--svgIcon_height, 13px);
+        --svgIcon_height: #{fonts.rem(13)};
+        --svgIcon_width: #{fonts.rem(13)};
       }
     }
   }
