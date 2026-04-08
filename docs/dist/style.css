@@ -15130,7 +15130,18 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   top: 0.625rem;
   width: 1.25rem;
 }
-.alert .close svg {
+.alert .close .svg--icon__24vb,
+.alert .close .svg--icon {
+  --svg-icon-fill: val.brandBtnIcon(btnIconSvg_color);
+  --svg-icon-stroke: val.brandBtnIcon(btnIconSvg_color);
+  --svg-icon-fill_blue: val.brandBtnIcon(btnIconSvg_color);
+  --svg-icon-stroke_blue: val.brandBtnIcon(btnIconSvg_color);
+}
+.alert .close .svg--icon__24vb, .alert .close .svg--icon__24vb svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.alert .close .svg--icon, .alert .close .svg--icon svg {
   height: 0.625rem;
   width: 0.625rem;
 }

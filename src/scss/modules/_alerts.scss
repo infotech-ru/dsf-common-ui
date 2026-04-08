@@ -103,9 +103,24 @@
     text-shadow: none;
     top: fonts.rem(val.alertsSizes(alert_padding));
     width: fonts.rem(val.alertsSizes(alertClose_size));
-    svg{
-      height: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
-      width: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
+    .svg--icon__24vb,
+    .svg--icon{
+        --svg-icon-fill: val.brandBtnIcon(btnIconSvg_color);
+        --svg-icon-stroke: val.brandBtnIcon(btnIconSvg_color);
+        --svg-icon-fill_blue: val.brandBtnIcon(btnIconSvg_color);
+        --svg-icon-stroke_blue: val.brandBtnIcon(btnIconSvg_color);
+    }
+    .svg--icon__24vb{ 
+      &, svg{
+        height: fonts.rem(val.alertsSizes(alertClose_size));
+        width: fonts.rem(val.alertsSizes(alertClose_size));
+      }
+    }
+    .svg--icon{ 
+      &, svg{
+        height: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
+        width: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
+      }
     }
   }
   &__attention,
