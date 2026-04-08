@@ -26,11 +26,13 @@ $brand-sizes: (
 )!default;
 
 $alert-sizes: (
-  alert_radius:                    baseValue.$base-radius,
+  alert_radius:                    baseValue.$base-radius__medium,
   alert_padding:                   baseValue.$base-padding,
   alert_padding-sm:                baseValue.$base-padding,
   alert_margin:                    baseValue.$base-gutter,
-  alertClose_size:                 14,
+  alertTitle_margin:               baseValue.$base-padding,
+  alertClose_size:                 20,
+  alertIcon_size:                  24,
 )!default;
 
 $btn-sizes: (

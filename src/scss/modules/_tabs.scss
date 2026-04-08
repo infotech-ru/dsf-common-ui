@@ -224,17 +224,12 @@
   }
 }
 .nav-cards {
-  .svg--icon{
-    svg{
-      height: 18px;
-      width: auto;
-    }
-  }
+  .svg--icon,
   .svg--icon__24{
-    &, svg{
-      height: 24px;
-      width: 24px;
-    }
+    --svgIcon_height: #{fonts.rem(18)};
+    --svgIcon_width: auto;
+    --svgIcon_height__24vb: #{fonts.rem(24)};
+    --svgIcon_width__24vb: #{fonts.rem(24)};
   }
 }
 

@@ -23,11 +23,12 @@
     &Item{
       align-items: center;
       display: flex;
-      .svg--icon{
-        &, svg{
-          height: 24px;
-          width: 24px;
-        }
+      .svg--icon,
+      .svg--icon__24vb{
+        --svgIcon_height: #{fonts.rem(18)};
+        --svgIcon_width: auto;
+        --svgIcon_height__24vb: #{fonts.rem(24)};
+        --svgIcon_width__24vb: #{fonts.rem(24)};
       }
       .svg--iconAction{
         &, svg{

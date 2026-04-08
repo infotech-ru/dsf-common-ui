@@ -12,12 +12,12 @@
 .svg--icon__24vb {
     background-repeat: no-repeat;
     display: inline-block;
+    #{--svg-icon-fill}: #{val.brandColors(_dark-grey)};
+    #{--svg-icon-fill_blue}: #{val.brandColors(_light-blue)};
+    #{--svg-icon-stroke}: #{val.brandColors(_dark-grey)};
+    #{--svg-icon-stroke_blue}: #{val.brandColors(_light-blue)};
     svg{
         display: block;
-        #{--svg-icon-fill}: #{val.brandColors(_dark-grey)};
-        #{--svg-icon-fill_blue}: #{val.brandColors(_light-blue)};
-        #{--svg-icon-stroke}: #{val.brandColors(_dark-grey)};
-        #{--svg-icon-stroke_blue}: #{val.brandColors(_light-blue)};
     }
 }
 .svg--icon {
