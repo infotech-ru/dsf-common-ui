@@ -22,7 +22,7 @@
 }
 .svg--icon {
     &, svg{
-        height: 16px;
+        height: var(--svgIcon_height, fonts.rem(16));
         width: auto;
     }
 }

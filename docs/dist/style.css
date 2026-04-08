@@ -7200,7 +7200,7 @@ h6, .h6 {
 }
 
 .svg--icon, .svg--icon svg {
-  height: 16px;
+  height: var(--svgIcon_height, 1rem);
   width: auto;
 }
 
@@ -10545,7 +10545,7 @@ input[type=button].btn-block {
 .label_chip__big {
   --label_chip-borderRadius: 0.75rem;
   --label_chip-fontSize: 0.75rem;
-  --label_chip-minHeight: 1.625rem;
+  --label_chip-minHeight: 1.75rem;
   --label_chip-paddingX: 0.4375rem;
   --label-lineHeight: 1rem;
 }
