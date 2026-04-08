@@ -6,9 +6,11 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use 'sass:map';
 @use './../utilities/functions/func_val' as val;
+@use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/mixins/transition' as transition;
 @use './../utilities/mixins_bootstrap-v3/vendor-prefixes' as vendorprefixes;
-// @use './../utilities/variables/var-colors' as color;
+@use './../utilities/variables/var-colors' as brandColors;
+@use './../utilities/variables/var-baseValue' as baseValue;
 
 .fade {
   // display: none;
@@ -131,12 +133,22 @@ tbody.collapse.in { display: table-row-group; }
   }
 }
 
-// .svg--collapseIcon{
+.svg--collapseIcon{
+  #{--svg-icon-fill}: brandColors.$base_color;
+  #{--svg-icon-stroke}: brandColors.$base_color;
+  #{--svg-icon-fill_blue}: brandColors.$base_color;
+  #{--svg-icon-stroke_blue}: brandColors.$base_color;
+  #{--svg-valute-fill}: brandColors.$base_color;
+  margin-right: baseValue.$base-gutter;
+  &, svg{
+    height: fonts.rem(16);
+    width: fonts.rem(16);
+  }
 //   transform: rotate(180deg);
 //   .collapsed &{ 
 //     transform: rotate(0deg);
 //   }
-// }
+}
 
 
 .hoverTarget_parent{

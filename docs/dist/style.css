@@ -14520,7 +14520,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .unityBlock_headerSvgTitle {
   height: 1.5rem;
   width: 1.5rem;
-  margin-right: 0.3125rem;
+  margin-right: 10;
 }
 .unityBlock_headerSvgTitle svg {
   height: 1.5rem;
@@ -17187,6 +17187,19 @@ tbody.collapse.in {
 .iconModification_ver__2 .svg--icon svg {
   --limited-stroke-ver_2: var(--svg-icon-stroke_blue);
   --limited-fill-ver_2: var(--svg-icon-fill_blue);
+}
+
+.svg--collapseIcon {
+  --svg-icon-fill: #333333;
+  --svg-icon-stroke: #333333;
+  --svg-icon-fill_blue: #333333;
+  --svg-icon-stroke_blue: #333333;
+  --svg-valute-fill: #333333;
+  margin-right: 10;
+}
+.svg--collapseIcon, .svg--collapseIcon svg {
+  height: 1rem;
+  width: 1rem;
 }
 
 .hoverTarget_parent .hoverTarget_item__block,

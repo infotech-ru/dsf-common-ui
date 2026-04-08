@@ -6,24 +6,20 @@ anchor: icons-states
 order: 2
 ---
 <div class="unityBlock">
-<h4 class="mb-10">Модификация иконки bicolors-plus или bicolors-arrow_down при использование скрипта collspse.js</h4>
-<p>Cоздание эффекта замены на `bicolors-minus` или bicolors-arrow_up при расскрытии списка.</p>
-<br>Для иконки bicolors-arrow_down используется класс <code
+<h4 class="mb-10">Модификация иконки bicolors-arrow_down__24vb при использование скрипта collspse.js</h4>
+<p>Cоздание эффекта замены на bicolors-arrow_right__24vb при скрытии списка.</p>
+<br>Для иконки bicolors-arrow_down__24vb используется класс <code
   class="language-plaintext highlighter-rouge">svg--collapseIcon</code> у убертки `svg--icon`.</p>
 {% highlight html %}
-<a class="iconModification collapsed" role="button" data-toggle="collapse" href="#collapseLimited" aria-expanded="false"
-  aria-controls="collapseLimited">
-  <?= Icons::wrapper('bicolors-plus') ?>
-</a>
-<a class="iconModification collapsed" role="button" data-toggle="collapse" href="#collapseLimited2" aria-expanded="false"
+<a class="iconModification" role="button" data-toggle="collapse" href="#collapseLimited2" aria-expanded="false"
   aria-controls="collapseLimited2">
-  <?= Icons::wrapper('bicolors-arrow_down', ['class' => 'svg--collapseIcon']) ?>
+  <?= Icons::wrapper('bicolors-arrow_down__24vb', ['class' => 'svg--icon svg--icon__24vb svg--icon__16 svg-dark-grey svg--collapseIcon']) ?>
 </a>
 {% endhighlight %}
 <div class="bs-docs-example">
-  <a class="iconModification collapsed btn-icon" role="button" data-toggle="collapse" href="#collapseLimited"
+  <a class="iconModification btn-icon" role="button" data-toggle="collapse" href="#collapseLimited"
     aria-expanded="false" aria-controls="collapseLimited">
-    <span class="svg--icon">
+    <span class="svg--icon svg-dark-grey">
       <svg width="24" height="24">
         <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use>
       </svg>
@@ -33,7 +29,7 @@ order: 2
     aria-expanded="false" aria-controls="collapseLimited2">
     <span class="svg--icon svg--collapseIcon">
       <svg width="24" height="24">
-        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down"></use>
+        <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down__24vb"></use>
       </svg>
     </span>
   </a>
@@ -46,11 +42,32 @@ order: 2
 </div>
 
 <h4 class="mb-10">Модификация иконки классом "active" с заменой на другую с залитым фоном или иную</h4>
-<p>Использование иконок <code class="language-plaintext highlighter-rouge">bicolors-favorite, bicolors-star, bicolors-play, bicolors-play_1_5x, bicolors-play_2x, bicolors-play_next, bicolors-height_collapse, bicolors-height_collapse__24vb, bicolors-height_expand, bicolors-height_expand__24vb, bicolors-plus__24vb, bicolors-plus, bicolors-minus__24vb, icolors-arrow_down, bicolors-arrow_down__24vb, bicolors-arrow_up, bicolors-arrow_up__24vb, bicolors-questions, bicolors-questions__24vb</code>
-  для создания эффекта замены на <code class="language-plaintext highlighter-rouge">bicolors-favorite-full, bicolors-star-full...</code>.</p>
-<p>Для применения у родителей указываем <code class="language-plaintext highlighter-rouge">iconModification</code> и для переключения на другую иконку<code class="language-plaintext highlighter-rouge">active</code></p>
 
-<p>Использование класса '.svg--icon__notIconModification' c 'svg--icon' отменяет действие у иконки '.active'</p>
+<p>Для применения у родителей указываем <code class="language-plaintext highlighter-rouge">.iconModification</code> и для переключения на другую иконку<code class="language-plaintext highlighter-rouge">.active</code></p>
+  <p>Изменяются следующие иконки:</p>
+
+<p class="d-flex flex-column gap-5">
+  <span><code class="language-plaintext highlighter-rouge">bicolors-favorite</code> и <code class="language-plaintext highlighter-rouge">bicolors-favorite</code> в bicolors-favorite_full и bicolors-favorite_full__24vb</span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-star</code> и <code class="language-plaintext highlighter-rouge">bicolors-star</code> в bicolors-star_full и bicolors-star_full__24vb</span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-play</code> и <code class="language-plaintext highlighter-rouge">bicolors-play__24vb</code> закрашивает</span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-play_1_5x</code> и <code class="language-plaintext highlighter-rouge">bicolors-play_1_5x__24vb</code> закрашивает</span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-play_2x</code>и <code class="language-plaintext highlighter-rouge">bicolors-play_2x__24vb</code> закрашивает</span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-play_next</code> и <code class="language-plaintext highlighter-rouge">bicolors-play_next__24vb</code> закрашивает</span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-height_collapse</code> и <code class="language-plaintext highlighter-rouge">bicolors-height_collapse__24vb</code> в bicolors-height_expand и bicolors-height_expand__24vb</span>
+  <span> в </span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-height_expand</code> и <code class="language-plaintext highlighter-rouge">bicolors-height_expand__24vb</code> в bicolors-height_collapse и bicolors-height_collapse__24vb</span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-plus</code> и <code class="language-plaintext highlighter-rouge">bicolors-plus__24vb</code> в bicolors-minus и bicolors-minus__24vb</span>
+  <span> в </span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-minus</code> и <code class="language-plaintext highlighter-rouge">bicolors-minus__24vb</code> в bicolors-plus и bicolors-plus__24vb</span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-arrow_up</code> и <code class="language-plaintext highlighter-rouge">bicolors-arrow_up__24vb</code> в bicolors-arrow_down и bicolors-arrow_down__24vb</span>
+  <span> в </span>
+  <span><code class="language-plaintext highlighter-rouge">bicolors-questions</code> и <code class="language-plaintext highlighter-rouge">bicolors-questions__24vb</code> в bicolors-questions_full и bicolors-questions_full__24vb</span>
+  
+  <span><code class="language-plaintext highlighter-rouge">bicolors-arrow_down__24vb</code> в bicolors-arrow_right__24vb</span>
+  </p>
+
+
+<p>Использование класса <code class="language-plaintext highlighter-rouge">.svg--icon__notIconModification</code> c <code class="language-plaintext highlighter-rouge">.svg--icon</code> отменяет действие у иконки <code class="language-plaintext highlighter-rouge">.active</code></p>
 
 {% highlight html %}
 <span class="iconModification">
@@ -192,11 +209,6 @@ order: 2
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
           <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down__24vb"></use>
-        </svg>
-      </span>
-      <span class="svg--icon">
-        <svg width="24" height="24">
-          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down"></use>
         </svg>
       </span>
       <span class="svg--icon svg--icon__24vb">
@@ -346,11 +358,6 @@ order: 2
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
           <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down__24vb"></use>
-        </svg>
-      </span>
-      <span class="svg--icon">
-        <svg width="24" height="24">
-          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down"></use>
         </svg>
       </span>
       <span class="svg--icon svg--icon__24vb">
@@ -650,11 +657,6 @@ order: 2
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
           <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down__24vb"></use>
-        </svg>
-      </span>
-      <span class="svg--icon">
-        <svg width="24" height="24">
-          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down"></use>
         </svg>
       </span>
       <span class="svg--icon svg--icon__24vb">
@@ -1104,11 +1106,6 @@ order: 2
       <span class="svg--icon svg--icon__24vb">
         <svg width="24" height="24">
           <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down__24vb"></use>
-        </svg>
-      </span>
-      <span class="svg--icon">
-        <svg width="24" height="24">
-          <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_down"></use>
         </svg>
       </span>
       <span class="svg--icon svg--icon__24vb">

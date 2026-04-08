@@ -8,6 +8,7 @@
 
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
+@use './../utilities/variables/var-baseValue' as baseValue;
 
 .unityBlock{
   background-color: val.brandUnityBlock(unityBlock_bgc);
@@ -67,7 +68,7 @@
     &SvgTitle{
       height: fonts.rem(24);
       width: fonts.rem(24);
-      margin-right: fonts.rem(5);
+      margin-right: baseValue.$base-padding;
       svg{
         height: fonts.rem(24);
         width: fonts.rem(24);
