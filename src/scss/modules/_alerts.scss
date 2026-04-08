@@ -74,15 +74,14 @@
       h4, .h4{
         color: val.brandAlert(#{$alert}_title);
       }
-      .svg--icon{
-         svg{
-          fill: val.brandAlert(#{$alert}_svg);
-          #{--svg-icon-fill}: val.brandAlert(#{$alert}_svg);
-          #{--svg-icon-stroke}: val.brandAlert(#{$alert}_svg);
-          #{--svg-icon-fill_blue}: val.brandAlert(#{$alert}_svg_blue);
-          #{--svg-icon-stroke_blue}: val.brandAlert(#{$alert}_svg_blue);
-          #{--limited-stroke-off}: val.brandColors(_transparent);
-        }
+      .svg--icon,
+      .svg--icon__24vb{
+        fill: val.brandAlert(#{$alert}_svg);
+        #{--svg-icon-fill}: val.brandAlert(#{$alert}_svg);
+        #{--svg-icon-stroke}: val.brandAlert(#{$alert}_svg);
+        #{--svg-icon-fill_blue}: val.brandAlert(#{$alert}_svg_blue);
+        #{--svg-icon-stroke_blue}: val.brandAlert(#{$alert}_svg_blue);
+        #{--limited-stroke-off}: val.brandColors(_transparent);
       }
       ul{
         color: colors.$base_color;
@@ -105,10 +104,10 @@
     width: fonts.rem(val.alertsSizes(alertClose_size));
     .svg--icon__24vb,
     .svg--icon{
-        --svg-icon-fill: val.brandBtnIcon(btnIconSvg_color);
-        --svg-icon-stroke: val.brandBtnIcon(btnIconSvg_color);
-        --svg-icon-fill_blue: val.brandBtnIcon(btnIconSvg_color);
-        --svg-icon-stroke_blue: val.brandBtnIcon(btnIconSvg_color);
+        #{--svg-icon-fill}: val.brandBtnIcon(btnIconSvg_color);
+        #{--svg-icon-stroke}: val.brandBtnIcon(btnIconSvg_color);
+        #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIconSvg_color);
+        #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvg_color);
     }
     .svg--icon__24vb{ 
       &, svg{

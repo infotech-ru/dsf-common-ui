@@ -14979,7 +14979,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-default h4, .alert-default .h4 {
   color: #333333;
 }
-.alert-default .svg--icon svg {
+.alert-default .svg--icon,
+.alert-default .svg--icon__24vb {
   fill: #333333;
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
@@ -15004,7 +15005,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-primary h4, .alert-primary .h4 {
   color: #ffffff;
 }
-.alert-primary .svg--icon svg {
+.alert-primary .svg--icon,
+.alert-primary .svg--icon__24vb {
   fill: #ffffff;
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
@@ -15029,7 +15031,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-success h4, .alert-success .h4 {
   color: #467B46;
 }
-.alert-success .svg--icon svg {
+.alert-success .svg--icon,
+.alert-success .svg--icon__24vb {
   fill: #467B46;
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
@@ -15054,7 +15057,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-danger h4, .alert-danger .h4 {
   color: #D9534F;
 }
-.alert-danger .svg--icon svg {
+.alert-danger .svg--icon,
+.alert-danger .svg--icon__24vb {
   fill: #D9534F;
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
@@ -15079,7 +15083,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-warning h4, .alert-warning .h4 {
   color: #DE8500;
 }
-.alert-warning .svg--icon svg {
+.alert-warning .svg--icon,
+.alert-warning .svg--icon__24vb {
   fill: #DE8500;
   --svg-icon-fill: #DE8500;
   --svg-icon-stroke: #DE8500;
@@ -15104,7 +15109,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-info h4, .alert-info .h4 {
   color: #4A8DC6;
 }
-.alert-info .svg--icon svg {
+.alert-info .svg--icon,
+.alert-info .svg--icon__24vb {
   fill: #4A8DC6;
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
@@ -15132,10 +15138,10 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .alert .close .svg--icon__24vb,
 .alert .close .svg--icon {
-  --svg-icon-fill: val.brandBtnIcon(btnIconSvg_color);
-  --svg-icon-stroke: val.brandBtnIcon(btnIconSvg_color);
-  --svg-icon-fill_blue: val.brandBtnIcon(btnIconSvg_color);
-  --svg-icon-stroke_blue: val.brandBtnIcon(btnIconSvg_color);
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
 }
 .alert .close .svg--icon__24vb, .alert .close .svg--icon__24vb svg {
   height: 1.25rem;
