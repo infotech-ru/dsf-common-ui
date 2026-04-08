@@ -84,8 +84,10 @@ pre{
   padding-bottom: 20px;
   margin-bottom: 0px;
   margin-top: -10px;
-  background-color: #B6D1E8;
+  /* background-color: #B6D1E8; */
+  background-color: #B3DFFF;
   color: #333;
+  text-align: center;
 }
 
 .bs-docs-header .btn {
@@ -94,16 +96,20 @@ pre{
 }
 
 .bs-docs-header h1 {
-  color: #FFDA7D;
+  /* color: #FFDA7D; */
+  color: #fff;
+  /* color: #FFE9B3; */
   font-size: 28px;
   line-height: 28px;
   margin-bottom: 0px;
-  text-shadow: 1px 2px 0 #00000015;
+  /* text-shadow: 1px 2px 0 #00000015; */
+  text-shadow: 1px 2px 0 #1e6394e0;
 }
 .bs-docs-header h3 {
   color: #fff;
   margin-top: 10px;
-  text-shadow: 1px 2px 0 #00000030;
+  /* text-shadow: 1px 2px 0 #00000030; */
+  text-shadow: 1px 1px 0 #1e6394e0;
 }
 
 .bs-docs-header .lead {
