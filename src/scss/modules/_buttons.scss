@@ -98,6 +98,7 @@
   .btn-#{$btn}{
     border-color: val.brandBtn(#{$btn}_border);
     color: val.brandBtn(#{$btn}_color);
+    transition: background-color 0.3s ease-in-out;
     @if (val.brandBtn(#{$btn}_bg) == val.brandBtn(#{$btn}-end_bg)) {
       background-color: val.brandBtn(#{$btn}_bg);
       background-image: none;
@@ -311,6 +312,7 @@
     background-image: none;
     border-color: val.brandBtn(#{$btn}_border__outline);
     color: val.brandBtn(#{$btn}_color__outline);
+    transition: background-color 0.3s ease-in-out;
     @extend %btn;
     &:hover,
     &:focus-visible,

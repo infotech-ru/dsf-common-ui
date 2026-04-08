@@ -6,7 +6,7 @@ brandnamecolor:
 - name: danger
   value: #D9534F
 - name: warning
-  value: #DE8500
+  value: #B56C00
 - name: success
   value: #69C26A
 - name: info
