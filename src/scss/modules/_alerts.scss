@@ -70,6 +70,10 @@
         #{--svg-icon-fill}: val.brandAlert(#{$alert}_close);
         #{--svg-icon-stroke}: val.brandAlert(#{$alert}_close);
         #{--svg-icon-stroke_blue}: val.brandAlert(#{$alert}_close);
+        > svg{
+          #{--svgIcon_height}: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
+          #{--svgIcon_width}: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
+        }
       }
       h4, .h4{
         color: val.brandAlert(#{$alert}_title);
@@ -110,12 +114,12 @@
         #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvg_color);
     }
     .svg--icon__24vb{ 
-      --svgIcon_height__24vb: fonts.rem(val.alertsSizes(alertClose_size));
-      --svgIcon_width__24vb: fonts.rem(val.alertsSizes(alertClose_size));
+      #{--svgIcon_height__24vb}: fonts.rem(val.alertsSizes(alertClose_size));
+      #{--svgIcon_width__24vb}: fonts.rem(val.alertsSizes(alertClose_size));
     }
     .svg--icon{ 
-      --svgIcon_height: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
-      --svgIcon_width: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
+      #{--svgIcon_height}: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
+      #{--svgIcon_width}: fonts.rem(val.alertsSizes(alertClose_size) * 0.5);
     }
   }
   &__attention,

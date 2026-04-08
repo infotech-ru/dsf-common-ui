@@ -88,7 +88,7 @@ $brand-palette: map.merge((
 $brand-alert: map.merge((
   default_bg:                             map.get($brand-colors, _light-grey2),
   default_border:                         map.get($brand-colors, _light-grey2),
-  default_close:                          map.get($brand-colors, _dark-grey),
+  default_close:                          map.get($brand-colors, _light-blue),
   default_color:                          map.get($brand-colors, _dark-grey),
   default_title:                          map.get($brand-colors, _dark-grey),
   default_svg:                            map.get($brand-colors, _dark-grey),
@@ -96,7 +96,7 @@ $brand-alert: map.merge((
 
   primary_bg:                             map.get($brand-colors, _light-blue),
   primary_border:                         map.get($brand-colors, _light-blue),
-  primary_close:                          map.get($brand-colors, _white),
+  primary_close:                          map.get($brand-colors, _light-blue),
   primary_color:                          map.get($brand-colors, _white),
   primary_title:                          map.get($brand-colors, _white),
   primary_svg:                            map.get($brand-colors, _white),
@@ -104,7 +104,7 @@ $brand-alert: map.merge((
 
   success_bg:                             map.get($brand-colors, _light-green),
   success_border:                         map.get($brand-colors, _light-green),
-  success_close:                          map.get($brand-colors, _dark-green),
+  success_close:                          map.get($brand-colors, _light-blue),
   success_color:                          map.get($brand-colors, _dark-grey),
   success_title:                          map.get($brand-colors, _dark-green),
   success_svg:                            map.get($brand-colors, _dark-green),
@@ -112,7 +112,7 @@ $brand-alert: map.merge((
 
   danger_bg:                              map.get($brand-colors, _light-red),
   danger_border:                          map.get($brand-colors, _light-red),
-  danger_close:                           map.get($brand-colors, _red),
+  danger_close:                           map.get($brand-colors, _light-blue),
   danger_color:                           map.get($brand-colors, _red),
   danger_title:                           map.get($brand-colors, _red),
   danger_svg:                             map.get($brand-colors, _red),
@@ -120,14 +120,14 @@ $brand-alert: map.merge((
 
   warning_bg:                             map.get($brand-colors, _light-yellow2),
   warning_border:                         map.get($brand-colors, _light-yellow2),
-  warning_close:                          map.get($brand-colors, _dark-orange),
+  warning_close:                          map.get($brand-colors, _light-blue),
   warning_color:                          map.get($brand-colors, _dark-orange),
   warning_title:                          map.get($brand-colors, _dark-orange),
   warning_svg:                            map.get($brand-colors, _dark-orange),
   warning_svg_blue:                       map.get($brand-colors, _dark-orange),
 
   info_bg:                                map.get($brand-colors, _light-blue2),
-  info_border:                            map.get($brand-colors, _light-blue),
+  info_border:                            map.get($brand-colors, _light-blue2),
   info_close:                             map.get($brand-colors, _light-blue),
   info_color:                             map.get($brand-colors, _light-blue),
   info_title:                             map.get($brand-colors, _light-blue),
