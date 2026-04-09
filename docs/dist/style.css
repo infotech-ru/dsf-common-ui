@@ -10543,7 +10543,7 @@ input[type=button].btn-block {
   --svgIcon_width__24vb: 0.75rem;
 }
 .label_chip__big {
-  --label_chip-borderRadius: 0.75rem;
+  --label_chip-borderRadius: 1rem;
   --label_chip-fontSize: 0.75rem;
   --label_chip-minHeight: 1.75rem;
   --label_chip-paddingX: 0.4375rem;
@@ -15125,6 +15125,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   background-color: #F5F5F5;
   border-color: #F5F5F5;
   color: #333333;
+  --base-link-hoverColor: #333333;
 }
 .alert-default .close {
   color: #4A8DC6;
@@ -15155,6 +15156,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   background-color: #4A8DC6;
   border-color: #4A8DC6;
   color: #ffffff;
+  --base-link-hoverColor: #ffffff;
 }
 .alert-primary .close {
   color: #4A8DC6;
@@ -15185,6 +15187,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   background-color: #E9F5E9;
   border-color: #E9F5E9;
   color: #333333;
+  --base-link-hoverColor: #333333;
 }
 .alert-success .close {
   color: #4A8DC6;
@@ -15215,6 +15218,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   background-color: #FCEEEE;
   border-color: #FCEEEE;
   color: #D9534F;
+  --base-link-hoverColor: #D9534F;
 }
 .alert-danger .close {
   color: #4A8DC6;
@@ -15245,6 +15249,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   background-color: #FFF6DF;
   border-color: #FFF6DF;
   color: #B56C00;
+  --base-link-hoverColor: #B56C00;
 }
 .alert-warning .close {
   color: #4A8DC6;
@@ -15275,6 +15280,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   background-color: #E4EEF7;
   border-color: #E4EEF7;
   color: #4A8DC6;
+  --base-link-hoverColor: #4A8DC6;
 }
 .alert-info .close {
   color: #4A8DC6;

@@ -322,7 +322,11 @@ pre{
     border-radius: 5px;
     list-style-type: none;
 }
-
+@media (min-width: 992px) {
+  .bs-sidenav {
+    opacity: 0.3;
+  }
+}
 /* All levels of nav */
 .bs-sidebar .nav > li > a {
     color: #333;
@@ -369,6 +373,10 @@ pre{
     .bs-sidebar {
         position: sticky; /* Undo the static from mobile first approach */
         top: 40px;
+    }
+    .sidebarHover:hover .bs-sidenav {
+      opacity: 1;
+      transition: opacity .3 ease-in-out;
     }
 
 }

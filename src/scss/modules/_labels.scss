@@ -148,9 +148,9 @@
     }
   }
   &__big{
-    --label_chip-borderRadius: #{fonts.rem(12)};
+    --label_chip-borderRadius: #{fonts.rem(16)};
     --label_chip-fontSize: #{fonts.rem(12)};
-    --label_chip-minHeight: #{fonts.rem(28  )};
+    --label_chip-minHeight: #{fonts.rem(28)};
     --label_chip-paddingX: #{fonts.rem(7)};
     --label-lineHeight: #{fonts.rem(16)};
     .svg--icon,
