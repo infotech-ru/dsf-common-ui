@@ -1,15 +1,16 @@
+// import {t} from "./translate";
 let isListeningDocument = false;
 
 export function initCopyDataAttrToClipboardBtns() {
     if (!isListeningDocument) {
         isListeningDocument = true;
         $("body").on("click", ".js-copy-to-clipboard", function (e) {
-            const modalElement = e.target.closest(".modal");
-            const copySuccessMessageText = e.target.dataset.copySuccessMessageText || "Скопировано";
-            const copySuccessMessageType = e.target.dataset.copySuccessMessageType || "success";
-            const copyErrorMessageType = e.target.dataset.copyErrorMessageType || "danger";
-            const copyErrorMessageText = e.target.dataset.copyErrorMessageText || "Ошибка";
-            let modalForm = null;
+            const modalElement = e.target.closest('.modal')
+            const copySuccessMessageText = e.target.dataset.copySuccessMessageText ?? t("Скопировано"),
+                copySuccessMessageType = e.target.dataset.copySuccessMessageType ?? "success",
+                copyErrorMessageType = e.target.dataset.copyErrorMessageType ?? "danger",
+                copyErrorMessageText = e.target.dataset.copyErrorMessageText ?? t("Ошибка")
+            let modalForm = null
             if (!modalElement) {
                 modalForm = document.body;
                 // console.log('Кликнутый элемент находится в открытом модальном окне');
@@ -17,34 +18,21 @@ export function initCopyDataAttrToClipboardBtns() {
                 modalForm = this;
                 // console.log('Клик был вне модального окна');
             }
-            
-            let textPromise;
-            const templateId = $(this).data("template-id");
-            if (templateId) {
-                const template = document.getElementById(templateId);
-                if (template) {
-                    textPromise = Promise.resolve(template.innerHTML);
-                } else {
-                    textPromise = Promise.reject(new Error(`Template with id "${templateId}" not found`));
-                }
-            } else {
-                textPromise = Promise.resolve($(this).data("copy"));
-            }
-
-            textPromise
+            let text = $(this).data("copy")
+            Promise.resolve(text)
                 .then((text) => {
-                    return copyToClipboard(text, modalForm);
+                    return copyToClipboard(text, modalForm)
                 })
                 .then(() => {
-                    showNotification(copySuccessMessageText, {type: copySuccessMessageType});
+                    showNotification(copySuccessMessageText, { type: copySuccessMessageType })
                 })
                 .catch((error) => {
                     console.error("Error while copying text: ", error);
-                    showNotification(copyErrorMessageText, {type: copyErrorMessageType});
+                    showNotification(copyErrorMessageText, { type: copyErrorMessageType })
                 });
-
-            return false;
-        });
+                
+            return false
+        })
     }
 }
 
@@ -110,13 +98,12 @@ function fallbackCopyToClipboard(text, modalForm) {
  * @param {Object} [options] - Дополнительные настройки уведомления.
  * @param {string} [options.type='success'] - Тип уведомления, определяющий его стиль.
  */
-function showNotification(message, {type = "success"} = {}) {
+function showNotification(message, {type = 'success'} = {}) {
     if (typeof $.notify === "function") {
         $.notify(
-            {message: message},
+            { message: message },
             {
                 type: type,
-                z_index: 9999,
                 delay: 2000
             }
         );
@@ -124,3 +111,4 @@ function showNotification(message, {type = "success"} = {}) {
         console.warn("jQuery Notify is not available. Notification skipped.");
     }
 }
+    

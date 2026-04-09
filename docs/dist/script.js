@@ -894,15 +894,69 @@ var DSFUI = (function (exports) {
     }
 
     function AutoresizeTextarea() {
-      var tx = document.getElementsByClassName("js-formControl__resize");
-      for (var i = 0; i < tx.length; i++) {
-        tx[i].setAttribute("style", "height:" + tx[i].scrollHeight + "px;overflow-y:hidden;");
-        tx[i].addEventListener("input", OnInput, false);
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var _options$selector = options.selector,
+        selector = _options$selector === void 0 ? '.js-formControl__resize' : _options$selector,
+        _options$context = options.context,
+        context = _options$context === void 0 ? document : _options$context,
+        _options$minHeight = options.minHeight,
+        minHeight = _options$minHeight === void 0 ? null : _options$minHeight,
+        _options$maxHeight = options.maxHeight,
+        maxHeight = _options$maxHeight === void 0 ? null : _options$maxHeight,
+        _options$onResize = options.onResize,
+        onResize = _options$onResize === void 0 ? null : _options$onResize;
+      var elements;
+      console.log('вход');
+      var searchContext;
+      if (context instanceof Element || context instanceof Document) {
+        searchContext = context;
+        console.log(searchContext, '1');
+      } else if (typeof context === 'string') {
+        searchContext = document.querySelector(context);
+        console.log(searchContext, '2');
+        if (!searchContext) {
+          console.warn('AutoresizeTextareaFlexible: контекст не найден', context);
+          console.log('3');
+          return;
+        }
+      } else {
+        searchContext = document;
+        console.log(searchContext, '4');
       }
-      function OnInput() {
-        this.style.height = 0;
-        this.style.height = this.scrollHeight + "px";
-      }
+      elements = searchContext.querySelectorAll(selector);
+      elements.forEach(function (textarea) {
+        console.log('найдено');
+        if (textarea.hasAttribute('data-autoresize-initialized')) {
+          return;
+        }
+
+        // const style = window.getComputedStyle(textarea);
+        // const paddingTop = parseFloat(style.paddingTop) || 0;
+        // const paddingBottom = parseFloat(style.paddingBottom) || 0;
+
+        function resize() {
+          textarea.style.height = '28px';
+          // let contentHeight = textarea.scrollHeight - paddingTop - paddingBottom;
+          var contentHeight = textarea.scrollHeight;
+          if (minHeight !== null) {
+            contentHeight = Math.max(contentHeight, minHeight);
+          }
+          if (maxHeight !== null) {
+            contentHeight = Math.min(contentHeight, maxHeight);
+          }
+          textarea.style.height = contentHeight + 'px';
+          if (onResize && typeof onResize === 'function') {
+            onResize(textarea, contentHeight);
+          }
+        }
+        textarea.style.overflowY = 'hidden';
+        resize();
+        textarea.addEventListener('input', resize);
+        textarea.addEventListener('change', resize);
+        textarea.addEventListener('propertychange', resize);
+        textarea.updateAutoresize = resize;
+        textarea.setAttribute('data-autoresize-initialized', 'true');
+      });
     }
 
     function CustomFileUpload() {
@@ -931,16 +985,18 @@ var DSFUI = (function (exports) {
       }
     }
 
+    // import {t} from "./translate";
     var isListeningDocument = false;
     function initCopyDataAttrToClipboardBtns() {
       if (!isListeningDocument) {
         isListeningDocument = true;
         $("body").on("click", ".js-copy-to-clipboard", function (e) {
-          var modalElement = e.target.closest(".modal");
-          var copySuccessMessageText = e.target.dataset.copySuccessMessageText || "Скопировано";
-          var copySuccessMessageType = e.target.dataset.copySuccessMessageType || "success";
-          var copyErrorMessageType = e.target.dataset.copyErrorMessageType || "danger";
-          var copyErrorMessageText = e.target.dataset.copyErrorMessageText || "Ошибка";
+          var _e$target$dataset$cop, _e$target$dataset$cop2, _e$target$dataset$cop3, _e$target$dataset$cop4;
+          var modalElement = e.target.closest('.modal');
+          var copySuccessMessageText = (_e$target$dataset$cop = e.target.dataset.copySuccessMessageText) !== null && _e$target$dataset$cop !== void 0 ? _e$target$dataset$cop : t("Скопировано"),
+            copySuccessMessageType = (_e$target$dataset$cop2 = e.target.dataset.copySuccessMessageType) !== null && _e$target$dataset$cop2 !== void 0 ? _e$target$dataset$cop2 : "success",
+            copyErrorMessageType = (_e$target$dataset$cop3 = e.target.dataset.copyErrorMessageType) !== null && _e$target$dataset$cop3 !== void 0 ? _e$target$dataset$cop3 : "danger",
+            copyErrorMessageText = (_e$target$dataset$cop4 = e.target.dataset.copyErrorMessageText) !== null && _e$target$dataset$cop4 !== void 0 ? _e$target$dataset$cop4 : t("Ошибка");
           var modalForm = null;
           if (!modalElement) {
             modalForm = document.body;
@@ -949,19 +1005,8 @@ var DSFUI = (function (exports) {
             modalForm = this;
             // console.log('Клик был вне модального окна');
           }
-          var textPromise;
-          var templateId = $(this).data("template-id");
-          if (templateId) {
-            var template = document.getElementById(templateId);
-            if (template) {
-              textPromise = Promise.resolve(template.innerHTML);
-            } else {
-              textPromise = Promise.reject(new Error("Template with id \"".concat(templateId, "\" not found")));
-            }
-          } else {
-            textPromise = Promise.resolve($(this).data("copy"));
-          }
-          textPromise.then(function (text) {
+          var text = $(this).data("copy");
+          Promise.resolve(text).then(function (text) {
             return copyToClipboard(text, modalForm);
           }).then(function () {
             showNotification(copySuccessMessageText, {
@@ -1043,13 +1088,12 @@ var DSFUI = (function (exports) {
     function showNotification(message) {
       var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
         _ref$type = _ref.type,
-        type = _ref$type === void 0 ? "success" : _ref$type;
+        type = _ref$type === void 0 ? 'success' : _ref$type;
       if (typeof $.notify === "function") {
         $.notify({
           message: message
         }, {
           type: type,
-          z_index: 9999,
           delay: 2000
         });
       } else {
