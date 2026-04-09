@@ -10257,10 +10257,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
 .btn__activable .btn-text_isDefaultOn {
   display: inline-block;
 }
-.btn__activable.active .btn-text_isActiveOn {
+.btn__activable.isActive .btn-text_isActiveOn, .btn__activable.active .btn-text_isActiveOn {
   display: inline-block;
 }
-.btn__activable.active .btn-text_isDefaultOn {
+.btn__activable.isActive .btn-text_isDefaultOn, .btn__activable.active .btn-text_isDefaultOn {
   display: none;
 }
 

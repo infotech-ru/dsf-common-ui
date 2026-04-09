@@ -1,3 +1,37 @@
+/**
+ * CollapseParent – менеджер для добавления/удаления CSS-классов у родительского элемента
+ * в зависимости от событий collapse.js (Bootstrap 4) (show, shown, hide, hidden).
+ *
+ * Особенности:
+ * - Работает с динамически подгружаемыми коллапсами (AJAX).
+ * - Использует jQuery для надёжного перехвата событий Bootstrap 4.
+ * - Позволяет задать произвольный селектор родителя и любые наборы классов для каждого события.
+ *
+ * @param {Object} options - настройки менеджера.
+ * @param {string} [options.parentSelector='.js-collapse-parent'] - CSS-селектор родительского элемента,
+ *        относительно которого будут применяться классы.
+ * @param {Object} options.eventHandlers - объект с обработчиками для событий:
+ *        - show:   { add: string|string[], remove: string|string[] }
+ *        - shown:  { add: string|string[], remove: string|string[] }
+ *        - hide:   { add: string|string[], remove: string|string[] }
+ *        - hidden: { add: string|string[], remove: string|string[] }
+ *        Каждое свойство (add/remove) опционально.
+ *
+ * @returns {Object} Публичное API: { init, destroy }
+ *
+ * @example
+ * const manager = CollapseParent({
+ *   parentSelector: '.accordion-item',
+ *   eventHandlers: {
+ *     show:   { add: 'opening', remove: 'collapsed' },
+ *     shown:  { add: 'expanded', remove: 'opening' },
+ *     hide:   { add: 'closing', remove: 'expanded' },
+ *     hidden: { add: 'collapsed', remove: 'closing' }
+ *   }
+ * });
+ * manager.init();
+ */
+
 export function CollapseParent(options = {}) {
 
     const parentSelector = options.parentSelector || '.js-collapse-parent';

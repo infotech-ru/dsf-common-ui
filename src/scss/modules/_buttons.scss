@@ -609,6 +609,7 @@ a.btn {
   .btn-text_isDefaultOn{
     display: inline-block;
   }
+  &.isActive, // если надо чтобы кнопка не была в состоянии active
   &.active {
      .btn-text_isActiveOn{
       display: inline-block;
