@@ -54,67 +54,22 @@ export function ParseHeight(containerSelector = ".js-target-set-height") {
      * @param {string} targetSelector - селектор целевых элементов
      * @returns {number|null} высота в пикселях или null, если расчёт невозможен
      */
-    function computeTotalHeight(parentSelector, targetSelector) {
+     function computeTotalHeight(parentSelector, targetSelector) {
         const parent = document.querySelector(parentSelector);
-        if (!parent) {
-            console.warn(`Родитель "${parentSelector}" не найден`);
-            return null;
-        }
+        if (!parent) return null;
 
         const targets = parent.querySelectorAll(targetSelector);
-        if (targets.length === 0) {
-            console.warn(`Нет элементов "${targetSelector}" внутри родителя`);
-            return null;
-        }
-        
-        let minTop = Infinity;
-    let maxBottom = -Infinity;
-    let marginTopOfMin = 0;
-    let marginBottomOfMax = 0;
-    let topmostElement = null;
-    let bottommostElement = null;
+        if (targets.length === 0) return null;
 
-    targets.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        // Пропускаем невидимые элементы
-        if (rect.width === 0 && rect.height === 0) return;
-
-        const top = rect.top + window.scrollY;
-        const bottom = rect.bottom + window.scrollY;
-
-        // Ищем самый верхний элемент
-        if (top < minTop) {
-            minTop = top;
-            topmostElement = el;
-        }
-        // Ищем самый нижний элемент
-        if (bottom > maxBottom) {
-            maxBottom = bottom;
-            bottommostElement = el;
-        }
-    });
-
-    if (minTop === Infinity || maxBottom === -Infinity) {
-        console.warn(`Не удалось определить координаты целевых элементов`);
-        return null;
-    }
-
-    // Получаем margin только для крайних элементов
-    const getMargin = (el, isTop) => {
-        if (!el) return 0;
-        const style = window.getComputedStyle(el);
-        const marginTop = parseFloat(style.marginTop) || 0;
-        const marginBottom = parseFloat(style.marginBottom) || 0;
-        return isTop ? marginTop : marginBottom;
-    };
-
-    const marginTopFirst = getMargin(topmostElement, true);
-    const marginBottomLast = getMargin(bottommostElement, false);
-
-    // Итоговая высота = расстояние между крайними точками + внешние margin
-    const totalHeight = (maxBottom - minTop) + marginTopFirst + marginBottomLast;
-
-    console.log(`Родитель: ${parentSelector}, элементов: ${targets.length}, высота с margin: ${totalHeight}px`);
-    return totalHeight;
+        let total = 0;
+        targets.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.width === 0 && rect.height === 0) return;
+            const style = window.getComputedStyle(el);
+            const marginTop = parseFloat(style.marginTop) || 0;
+            const marginBottom = parseFloat(style.marginBottom) || 0;
+            total += rect.height + marginTop + marginBottom;
+        });
+        return total === 0 ? null : total;
     }
 }
