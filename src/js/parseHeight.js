@@ -66,27 +66,55 @@ export function ParseHeight(containerSelector = ".js-target-set-height") {
             console.warn(`Нет элементов "${targetSelector}" внутри родителя`);
             return null;
         }
-
+        
         let minTop = Infinity;
-        let maxBottom = -Infinity;
+    let maxBottom = -Infinity;
+    let marginTopOfMin = 0;
+    let marginBottomOfMax = 0;
+    let topmostElement = null;
+    let bottommostElement = null;
 
-        targets.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            // Пропускаем полностью скрытые элементы
-            if (rect.width === 0 && rect.height === 0) return;
+    targets.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        // Пропускаем невидимые элементы
+        if (rect.width === 0 && rect.height === 0) return;
 
-            // Координаты относительно документа
-            const top = rect.top + window.scrollY;
-            const bottom = rect.bottom + window.scrollY;
+        const top = rect.top + window.scrollY;
+        const bottom = rect.bottom + window.scrollY;
 
-            minTop = Math.min(minTop, top);
-            maxBottom = Math.max(maxBottom, bottom);
-        });
-
-        if (minTop === Infinity || maxBottom === -Infinity) {
-            return null;
+        // Ищем самый верхний элемент
+        if (top < minTop) {
+            minTop = top;
+            topmostElement = el;
         }
+        // Ищем самый нижний элемент
+        if (bottom > maxBottom) {
+            maxBottom = bottom;
+            bottommostElement = el;
+        }
+    });
 
-        return maxBottom - minTop;
+    if (minTop === Infinity || maxBottom === -Infinity) {
+        console.warn(`Не удалось определить координаты целевых элементов`);
+        return null;
+    }
+
+    // Получаем margin только для крайних элементов
+    const getMargin = (el, isTop) => {
+        if (!el) return 0;
+        const style = window.getComputedStyle(el);
+        const marginTop = parseFloat(style.marginTop) || 0;
+        const marginBottom = parseFloat(style.marginBottom) || 0;
+        return isTop ? marginTop : marginBottom;
+    };
+
+    const marginTopFirst = getMargin(topmostElement, true);
+    const marginBottomLast = getMargin(bottommostElement, false);
+
+    // Итоговая высота = расстояние между крайними точками + внешние margin
+    const totalHeight = (maxBottom - minTop) + marginTopFirst + marginBottomLast;
+
+    console.log(`Родитель: ${parentSelector}, элементов: ${targets.length}, высота с margin: ${totalHeight}px`);
+    return totalHeight;
     }
 }
