@@ -1,15 +1,19 @@
-// import { Tabs } from "Tabs.js"; // из папки assets/js
+// import { Tabs } from "./Tabs.js";
 /**
- * Инициализирует обработку кликов по элементам с классом 'js-goToTab'
- * для открытия вкладок Bootstrap 3 и плавной прокрутки к ним.
+  * Инициализирует обработку кликов по элементам с заданным селектором
+ * для открытия вкладок tabs.js (Bootstrap 3), загрузки контента (через Tabs.loadTab),
+ * плавной прокрутки и выполнения пользовательского действия.
  * 
  * @param {Object} options
+ * @param {string} options.triggerSelector - селектор элементов-триггеров (по умолчанию '.js-goToTab')
  * @param {string} options.tabLinkSelector - селектор ссылок вкладок (по умолчанию 'a[data-toggle="tab"]')
  * @param {string} options.scrollTarget - селектор элемента для прокрутки (по умолчанию '.js-scrollToNav')
  * @param {number} options.scrollOffset - отступ сверху в px (по умолчанию 20)
  * @param {number} options.scrollDelay - задержка перед прокруткой в мс (по умолчанию 200)
  * @param {number} options.scrollDuration - длительность анимации в мс (по умолчанию 500)
  * @param {boolean} options.preventDefault - отменять стандартное действие ссылки (по умолчанию true)
+ * @param {Function} options.onAfterClick - функция, вызываемая после активации вкладки и загрузки контента.
+ *        Принимает параметры: ($trigger, $tabLink, tabId)
  */
 export function initExternalTabsNavigation(options = {}) {
   
@@ -19,12 +23,14 @@ export function initExternalTabsNavigation(options = {}) {
     }
 
     const settings = {
+        triggerSelector: '.js-goToTab',
         tabLinkSelector: 'a[data-toggle="tab"]',
         scrollTarget: '.js-scrollToNav',
         scrollOffset: 20,
         scrollDelay: 200,
         scrollDuration: 500,
         preventDefault: true,
+        onAfterClick: null, 
         ...options
     };
 
@@ -37,46 +43,53 @@ export function initExternalTabsNavigation(options = {}) {
     }
    
 
-    $(document).on('click', '.js-goToTab', function(event) {
+    $(document).on('click', settings.triggerSelector, function(event) {
         const $trigger = $(this);
 
         let target = $trigger.data('target') || $trigger.attr('href');
         if (!target || target === '#') {
-            console.warn('js-goToTab: не указан target вкладки (data-target или href)');
+            console.warn(`${settings.triggerSelector}: не указан target вкладки (data-target или href)`);
             return;
         }
 
-        // Нормализуем target (добавляем #, если нужно)
         const tabId = target.startsWith('#') ? target : '#' + target;
 
         let $tabLink = $(`${settings.tabLinkSelector}[href="${tabId}"]`);
 
         if ($tabLink.length === 0) {
-            console.warn(`js-goToTab: не найдена ссылка вкладки для "${tabId}"`);
+            console.warn(`${settings.triggerSelector}: не найдена ссылка вкладки для "${tabId}"`);
             return;
         }
 
-        // Отменяем переход по ссылке, если нужно
         if (settings.preventDefault) {
             event.preventDefault();
         }
 
         $tabLink.tab('show');
-        
-        // Загружаем содержимое через Ajax, если нужно
+
         const $li = $tabLink.closest('li');
-        if ($li.length) Tabs.loadTab($li);
+        let loadPromise = Promise.resolve();
 
-        const scrollSelector = $trigger.data('scroll-to') || settings.scrollTarget;
-        const $scrollElement = $(scrollSelector);
-
-        if ($scrollElement.length) {
-            // Даём время Bootstrap на переключение вкладки и перерисовку
-            setTimeout(() => {
-                smoothScrollTo($scrollElement);
-            }, settings.scrollDelay);
-        } else {
-            console.warn(`js-goToTab: элемент для прокрутки не найден ("${scrollSelector}")`);
+        if ($li.length && Tabs && typeof Tabs.loadTab === 'function') {
+            loadPromise = Tabs.loadTab($li);
         }
+
+        loadPromise.then(() => {
+            if (typeof settings.onAfterClick === 'function') {
+                settings.onAfterClick($trigger, $tabLink, tabId);
+            }
+
+            const scrollSelector = $trigger.data('scroll-to') || settings.scrollTarget;
+            const $scrollElement = $(scrollSelector);
+            if ($scrollElement.length) {
+                setTimeout(() => {
+                    smoothScrollTo($scrollElement);
+                }, settings.scrollDelay);
+            } else {
+                console.warn(`${settings.triggerSelector}: элемент для прокрутки не найден ("${scrollSelector}")`);
+            }
+        }).catch(err => {
+            console.error('Ошибка загрузки вкладки:', err);
+        });
     });
 }

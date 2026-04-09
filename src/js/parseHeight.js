@@ -1,21 +1,23 @@
 /**
- * Скрипт вычисляет общую высоту всех элементов с указанным классом (по умолчанию "js-target-get-height")
+ * Вычисляет общую высоту всех элементов с указанным классом (по умолчанию "js-target-get-height")
  * внутри общего родителя (по умолчанию "js-target-parent-get-height") с учётом отступов.
- * Результат подставляется в CSS-свойство (height / max-height / min-height) контейнера с классом "js-target-set-height".
+ * Результат подставляется в CSS-свойство (height / max-height / min-height) контейнера.
  * Возможно использование формулы из data-атрибута data-set-formula, где {height} заменяется на вычисленное значение.
  * Для каждого контейнера можно задать свои классы целей и родителя через data-target-class и data-parent-class.
+ *
+ * @param {string} containerSelector - CSS-селектор контейнеров, для которых нужно установить высоту.
+ *                                      По умолчанию ".js-target-set-height".
  */
-
-export function ParseHeight() {
+export function ParseHeight(containerSelector = ".js-target-set-height") {
     // Если DOM ещё не загружен, ждём события
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", ParseHeight);
+        document.addEventListener("DOMContentLoaded", () => ParseHeight(containerSelector));
         return;
     }
 
-    const containers = document.querySelectorAll(".js-target-set-height");
+    const containers = document.querySelectorAll(containerSelector);
     if (containers.length === 0) {
-        console.log("Нет контейнеров .js-target-set-height");
+        console.log(`Нет контейнеров по селектору "${containerSelector}"`);
         return;
     }
 
