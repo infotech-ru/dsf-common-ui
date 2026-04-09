@@ -114,7 +114,7 @@
   cursor: pointer;
   display: inline-flex;
   font-size: var(--label_chip-fontSize, fonts.rem(10));
-  font-weight: 400;
+  font-weight: val.fontWeight(chips);
   height: fit-content;
   line-height: 1;
   min-height: var(--label_chip-minHeight, fonts.rem(20));
