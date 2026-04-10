@@ -15,6 +15,7 @@
 @use './../utilities/mixins/placeholder' as placeholder;
 @use './../utilities/mixins_bootstrap-v3/forms' as forms;
 @use './../utilities/mixins_bootstrap-v3/grid' as grid;
+@use './../utilities/variables/var-baseValue' as baseValue;
 
 fieldset {
     padding: 0 12px 8px;
@@ -184,10 +185,10 @@ output {
   height: fonts.rem(val.formsSizes(formControl_height));
   line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
   padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
+  transition: baseValue.$base-transition_form;
   width: 100%;
   #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize));
   #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem));
-  @include transition.transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
   // Customize the `:focus` state to imitate native WebKit styles.
   @include placeholder.placeholder2(val.brandForms(formControl-placeholder), 400, 12);

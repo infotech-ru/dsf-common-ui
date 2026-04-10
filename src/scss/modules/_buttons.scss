@@ -449,13 +449,10 @@ a.btn {
     #{--svg-icon-stroke}: val.brandBtnDownload(btnDownloadSvg_color);
     #{--limited-stroke-off}: val.brandColors(_transparent);
     #{--btn_svg__hover}: val.brandBtnDownload(btnDownloadSvg_color);
-    svg{
-      height: fonts.rem(val.btnSizes(btnIconSvg_height));
-    }
+    #{--svgIcon_height}: fonts.rem(val.btnSizes(btnIconSvg_height));
     &__24vb{
-      svg{
-        height: fonts.rem(val.btnSizes(btnIcon_height));
-      }
+      #{--svgIcon_height}: fonts.rem(val.btnSizes(btnIcon_height));
+      #{--svgIcon_width}: fonts.rem(val.btnSizes(btnIcon_height));
     }
   }
   &:hover,
@@ -506,22 +503,22 @@ a.btn {
       #{--limited-stroke-off}: val.brandColors(_transparent);
     }
   }
-  &__danger{
+  &__default{
     &:hover,
     &:focus-visible,
     &.active,
     &.active:focus{
       .svg--icon {
-        background-color: val.brandBtnIcon(btnIconSvgDangerHover_bgc);
+        background-color: val.brandBtnIcon(btnIconSvgDefaultHover_bgc);
       }
     }
     .svg--icon {
-      #{--svg-icon-fill}: val.brandBtnIcon(btnIconSvgDanger_color);
-      #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIconSvgDanger_color);
-      #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvgDanger_color);
-      #{--svg-icon-stroke}: val.brandBtnIcon(btnIconSvgDanger_color);
+      #{--svg-icon-fill}: val.brandBtnIcon(btnIconSvgDefault_color);
+      #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIconSvgDefault_color);
+      #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvgDefault_color);
+      #{--svg-icon-stroke}: val.brandBtnIcon(btnIconSvgDefault_color);
       #{--limited-stroke-off}: val.brandColors(_transparent);
-      #{--btn_svg__hover}: val.brandBtnIcon(btnIconSvgDanger_color);
+      #{--btn_svg__hover}: val.brandBtnIcon(btnIconSvgDefault_color);
     }
   }
   &__success{

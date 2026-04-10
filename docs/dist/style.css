@@ -10148,12 +10148,11 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --svg-icon-stroke: #4A8DC6;
   --limited-stroke-off: #00000000;
   --btn_svg__hover: #4A8DC6;
+  --svgIcon_height: 0.875rem;
 }
-.btn-icon .svg--icon svg {
-  height: 0.875rem;
-}
-.btn-icon .svg--icon__24vb svg {
-  height: 1.25rem;
+.btn-icon .svg--icon__24vb {
+  --svgIcon_height: 1.25rem;
+  --svgIcon_width: 1.25rem;
 }
 .btn-icon:hover .svg--icon, .btn-icon:focus-visible .svg--icon, .btn-icon.active .svg--icon, .btn-icon.active:focus .svg--icon {
   background-color: #E4EEF7;
@@ -10183,16 +10182,16 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --svg-icon-stroke: #D9534F;
   --limited-stroke-off: #00000000;
 }
-.btn-icon__danger:hover .svg--icon, .btn-icon__danger:focus-visible .svg--icon, .btn-icon__danger.active .svg--icon, .btn-icon__danger.active:focus .svg--icon {
-  background-color: #FCEEEE;
+.btn-icon__default:hover .svg--icon, .btn-icon__default:focus-visible .svg--icon, .btn-icon__default.active .svg--icon, .btn-icon__default.active:focus .svg--icon {
+  background-color: #e5e5e5;
 }
-.btn-icon__danger .svg--icon {
-  --svg-icon-fill: #D9534F;
-  --svg-icon-fill_blue: #D9534F;
-  --svg-icon-stroke_blue: #D9534F;
-  --svg-icon-stroke: #D9534F;
+.btn-icon__default .svg--icon {
+  --svg-icon-fill: #333333;
+  --svg-icon-fill_blue: #333333;
+  --svg-icon-stroke_blue: #333333;
+  --svg-icon-stroke: #333333;
   --limited-stroke-off: #00000000;
-  --btn_svg__hover: #D9534F;
+  --btn_svg__hover: #333333;
 }
 .btn-icon__success:hover .svg--icon, .btn-icon__success:focus-visible .svg--icon, .btn-icon__success.active .svg--icon, .btn-icon__success.active:focus .svg--icon {
   background-color: #E9F5E9;
@@ -11889,10 +11888,10 @@ output {
   height: 1.75rem;
   line-height: 1.625rem;
   padding: 0 0.4375rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   width: 100%;
   --formControl-borderwidth: 0.0625rem;
   --formControl-borderRadius: 0.0625rem;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .form-control::-moz-placeholder {
   color: #333333;
@@ -13404,7 +13403,7 @@ select.selectpicker {
 .inputGroup:focus-within .inputGroup_outer,
 .inputGroup:focus-within .inputGroup_inner {
   border-color: #333333;
-  transition: border-color ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .inputGroup:focus-within .inputGroup_text svg,
 .inputGroup:focus-within .inputGroup_outer svg,
@@ -13416,7 +13415,7 @@ select.selectpicker {
   border-color: #333333;
   background-color: var(--btn_bg__hover);
   background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
-  transition: border-color ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .inputGroup:focus-within [class*=btn-]:not(.bootstrap-select [class*=btn-]) svg {
   --svg-icon-fill: var(--btn_svg__hover);
@@ -13425,7 +13424,7 @@ select.selectpicker {
 .inputGroup:focus-within .form-control,
 .inputGroup:focus-within .bootstrap-select [class*=btn-] {
   border-color: #333333;
-  transition: border-color ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 .css-formFree .form-control-container {
@@ -13537,6 +13536,7 @@ select.selectpicker {
 .inputGroup_prepend .inputGroup_text,
 .inputGroup_prepend .inputGroup_inner {
   border-left: var(--formControl-borderwidth) solid #dddddd;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .inputGroup_prepend + .form-control-container .form-control {
   border-bottom-left-radius: 0;
@@ -13547,6 +13547,7 @@ select.selectpicker {
 }
 .inputGroup_prepend .inputGroup_outer {
   border-right: var(--formControl-borderwidth) solid #dddddd;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .inputGroup_prepend .inputGroup_text:first-child,
 .inputGroup_prepend .inputGroup_inner:first-child {
@@ -13560,9 +13561,11 @@ select.selectpicker {
 .inputGroup_append .inputGroup_text,
 .inputGroup_append .inputGroup_inner {
   border-right: var(--formControl-borderwidth) solid #dddddd;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .inputGroup_append .inputGroup_outer {
   border-left: var(--formControl-borderwidth) solid #dddddd;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .inputGroup_append .inputGroup_inner + .inputGroup_outer,
 .inputGroup_append [class*=btn-] + .inputGroup_outer {

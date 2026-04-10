@@ -232,12 +232,14 @@ $brand-btn-download: map.merge((
 
 $brand-btn-icon: map.merge((
   btnIconSvg_bgc:                         map.get($brand-colors, _light-grey),
+  btnIconSvg_color:                       map.get($brand-colors, _light-blue),
   btnIconSvgHover_bgc:                    map.get($brand-colors, _light-blue2),
   btnIconSvgDanger_color:                 map.get($brand-colors, _red),
   btnIconSvgDangerHover_bgc:              map.get($brand-colors, _light-red),
   btnIconSvgSuccess_color:                map.get($brand-colors, _green),
   btnIconSvgSuccessHover_bgc:             map.get($brand-colors, _light-green),
-  btnIconSvg_color:                       map.get($brand-colors, _light-blue),
+  btnIconSvgDefault_color:                map.get($brand-colors, _dark-grey),
+  btnIconSvgDefaultHover_bgc:             map.get($brand-colors, _light-grey4),
 ), emptymap.$brand-btn-icon) !default;
 
 $brand-checkbox: map.merge((

@@ -9,8 +9,8 @@
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/mixins_bootstrap-v3/border-radius' as borderradius;
 @use './../utilities/mixins/transition' as transition;
+@use './../utilities/variables/var-baseValue' as baseValue;
 @use './buttons' as buttons;
-
 
 .btn-group{
   position: relative;
@@ -443,7 +443,7 @@
     .inputGroup_outer,
     .inputGroup_inner{
       border-color: val.brandForms(formControl-color);
-      @include transition.transition(border-color ease-in-out .15s);
+      transition: baseValue.$base-transition_form;
       svg {
         --svg-icon-fill: var(--btn_svg__hover);
         --svg-icon-stroke: var(--btn_svg__hover);
@@ -453,7 +453,7 @@
       border-color: val.brandForms(formControl-color);
       background-color: var(--btn_bg__hover);
       background-image: linear-gradient(var(--btn_bg__hover) 0%, var(--btn_bg-end__hover) 100%);
-      @include transition.transition(border-color ease-in-out .15s);
+      transition: baseValue.$base-transition_form;
       svg{ 
         --svg-icon-fill: var(--btn_svg__hover);
         --svg-icon-stroke: var(--btn_svg__hover);
@@ -462,7 +462,7 @@
     .form-control,
     .bootstrap-select [class*="btn-"]{
       border-color: val.brandForms(formControl-color);
-      @include transition.transition(border-color ease-in-out .15s);
+      transition: baseValue.$base-transition_form;
     }
   }
 }
@@ -580,6 +580,7 @@
   .inputGroup_text,
   .inputGroup_inner {
     border-left: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);
+    transition: baseValue.$base-transition_form;
   }
   & + .form-control-container {
     .form-control{
@@ -592,6 +593,7 @@
   }
   .inputGroup_outer{
     border-right: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);  
+    transition: baseValue.$base-transition_form;
   }
   .inputGroup_text,
   .inputGroup_inner {
@@ -608,9 +610,11 @@
   .inputGroup_text,
   .inputGroup_inner {
     border-right: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);
+    transition: baseValue.$base-transition_form;
   }
   .inputGroup_outer {
     border-left: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);
+    transition: baseValue.$base-transition_form;
   }
   .inputGroup_inner + .inputGroup_outer,
   [class*="btn-"] + .inputGroup_outer {
