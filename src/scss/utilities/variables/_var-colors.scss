@@ -89,7 +89,7 @@ $brand-palette: map.merge((
 $brand-header: map.merge((
   headerTop_bgc:                          map.get($brand-colors, _white),
   headerLang_border:                      map.get($brand-colors, _grey2),
-  header_border:                          map.get($brand-colors, _grey2),
+  header_border:                          map.get($brand-colors, _transparent),
   headerBottom_bgc:                       map.get($brand-colors, _light-grey),
 ), emptymap.$brand-header) !default;
 

@@ -3370,7 +3370,7 @@ h6, .h6 {
   background-color: #ffffff;
   border-bottom-width: 0px;
   border-bottom-style: solid;
-  border-bottom-color: #dddddd;
+  border-bottom-color: #00000000;
   display: flex;
   justify-content: space-between;
   height: 44px;
@@ -3387,7 +3387,7 @@ h6, .h6 {
   background-color: #f9f9f9;
   border-bottom-width: 0px;
   border-bottom-style: solid;
-  border-bottom-color: #dddddd;
+  border-bottom-color: #00000000;
   height: 34px;
 }
 .header__bottom.collapse {
@@ -3737,7 +3737,7 @@ h6, .h6 {
   justify-content: flex-start;
   list-style: none;
   height: 100%;
-  padding: 0 5px;
+  padding: 0 0.3125rem;
   margin: 0;
 }
 .mobile-view .headerMenu {
@@ -3760,7 +3760,7 @@ h6, .h6 {
   font-size: 0.8125rem;
   font-weight: 700;
   height: 100%;
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 .mobile-view .headerMenu__link {
   justify-content: space-between;

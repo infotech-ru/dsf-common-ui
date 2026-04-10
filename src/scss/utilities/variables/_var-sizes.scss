@@ -88,6 +88,8 @@ $layout-sizes:(
   header_marginBottom:             baseValue.$base-padding,
   header_border:                   0,
   headerTop_height:                44,
+  headerMenu_padding:              baseValue.$base-gutter,
+  headerMenuLink_padding:          baseValue.$base-padding,
   headerBottom_height:             34,
   headerPadding:                   baseValue.$base-gutter,
   headerBlock_size:                baseValue.$base-gutter,

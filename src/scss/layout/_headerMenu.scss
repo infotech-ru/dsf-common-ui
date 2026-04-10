@@ -7,7 +7,7 @@
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-placeholder' as placeholder;
-// @use './../utilities/variables/var-colors' as *;
+@use './../utilities/variables/var-baseValue' as baseValue;
 
 .headerMenu{
   align-items: center;
@@ -15,7 +15,7 @@
   justify-content: flex-start;
   list-style: none;
   height: 100%;
-  padding: 0 5px;
+  padding: 0 fonts.rem(val.layoutSizes(headerMenu_padding) * .5);
   margin: 0;
   .mobile-view &{
     align-items: flex-start;
@@ -34,10 +34,10 @@
     align-items: center;
     color: val.brandMenu(menuLink_color);
     display: inline-flex;
-    font-size: fonts.rem(13);
-    font-weight: 700;
+    font-size: fonts.rem(val.fontSizes(headerMenu));
+    font-weight: val.fontWeight(headerMenu);
     height: 100%;
-    padding: 0 10px;
+    padding: 0 fonts.rem(val.layoutSizes(headerMenuLink_padding));
     .mobile-view &{
       justify-content: space-between;
       height: auto;
