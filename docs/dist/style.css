@@ -13605,6 +13605,8 @@ select.selectpicker {
 }
 .inputGroup_text .btn-icon,
 .inputGroup_inner .btn-icon {
+  align-items: center;
+  display: inline-flex;
   height: 100%;
 }
 .inputGroup_text .svg--icon__24vb,
