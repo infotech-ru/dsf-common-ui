@@ -399,6 +399,10 @@
   flex-wrap: wrap;
   position: relative;
   width: 100%;
+  &__big{
+    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize__big));
+    #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem__big));
+  }
   .css-formFree & {
     align-items: stretch;
   }
@@ -480,7 +484,7 @@
   }
   & + .form-control-container {
     .form-control {
-      border-left-width: #{val.formsSizes(formControl_borderSize)}px;
+      border-left-width: var(--formControl-borderwidth);
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -491,27 +495,27 @@
   }
   &:first-child {
     .form-control {
-      border-left-width: #{val.formsSizes(formControl_borderSize)}px;
-      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-left-width: var(--formControl-borderwidth);
+      border-top-left-radius: var(--formControl-borderRadius);
+      border-bottom-left-radius: var(--formControl-borderRadius);
     }
     .bootstrap-select .btn{
       border-right: 0px;
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
-      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-top-left-radius: var(--formControl-borderRadius);
+      border-bottom-left-radius: var(--formControl-borderRadius);
     }
   }
   &:last-child {
     .form-control {
-      border-right-width: #{val.formsSizes(formControl_borderSize)}px;
-      border-top-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-bottom-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-right-width: var(--formControl-borderwidth);
+      border-top-right-radius: var(--formControl-borderRadius);
+      border-bottom-right-radius: var(--formControl-borderRadius);
     }
     .bootstrap-select .btn{
-      border-top-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-bottom-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-top-right-radius: var(--formControl-borderRadius);
+      border-bottom-right-radius: var(--formControl-borderRadius);
     }
   }
   &:not(:first-child):not(:last-child){
@@ -534,7 +538,7 @@
       min-width: 0;
       margin-bottom: 0;
       .form-control{
-        border-left-width: #{val.formsSizes(formControl_borderSize)}px;
+        border-left-width: var(--formControl-borderwidth);
       }
       .css-formFree &{
           padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
@@ -575,7 +579,7 @@
   margin-right: 0;
   .inputGroup_text,
   .inputGroup_inner {
-    border-left: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
+    border-left: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);
   }
   & + .form-control-container {
     .form-control{
@@ -587,13 +591,13 @@
     }
   }
   .inputGroup_outer{
-    border-right: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);  
+    border-right: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);  
   }
   .inputGroup_text,
   .inputGroup_inner {
     &:first-child{
-      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-bottom-left-radius: var(--formControl-borderRadius);
+      border-top-left-radius: var(--formControl-borderRadius);
     }
   }
 }
@@ -603,10 +607,10 @@
   margin-left: 0;
   .inputGroup_text,
   .inputGroup_inner {
-    border-right: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
+    border-right: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);
   }
   .inputGroup_outer {
-    border-left: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
+    border-left: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);
   }
   .inputGroup_inner + .inputGroup_outer,
   [class*="btn-"] + .inputGroup_outer {
@@ -614,8 +618,8 @@
   }
   .inputGroup_inner {
     &:last-child{
-      border-bottom-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-top-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-bottom-right-radius: var(--formControl-borderRadius);
+      border-top-right-radius: var(--formControl-borderRadius);
     }
   }
 }
@@ -624,8 +628,8 @@
 .inputGroup_inner {
   align-items: center;
   background-color: val.brandForms(inputGroupEl-bgc);
-  border-bottom: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
-  border-top: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
+  border-bottom: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);
+  border-top: var(--formControl-borderwidth) solid val.brandForms(formControl-borderColor);
   border-left: none;
   color: val.brandForms(inputGroupEl-color);
   display: flex;

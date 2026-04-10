@@ -63,13 +63,15 @@ $checkbox-sizes:(
 
 $forms-sizes:(
   borderRadiusFormElem:            baseValue.$base-radius__small,
+  borderRadiusFormElem__big:       baseValue.$base-radius,
   controlLabel_mb:                 3,
   controlLabel_mr:                 5,
   formControl_borderSize:          1,
+  formControl_borderSize__big:     2,
   formControl_height:              28,
   formControl_height__big:         52,
-  formControl_paddingX:            baseValue.$base-padding,
-  formControl_paddingX__big:       baseValue.$base-padding * 2,
+  formControl_paddingX:            7,
+  formControl_paddingX__big:       16,
   formControlStatic_paddingY:      7,
   formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
   formGroup__formFree_mb:          25,

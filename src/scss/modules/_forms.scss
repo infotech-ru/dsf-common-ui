@@ -171,9 +171,11 @@ output {
 .form-control {
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   // background-color: val.brandForms(formControl-bgc);
-  background-color:var(--bg_color, val.brandForms(formControl-bgc));
-  border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-  border: #{val.formsSizes(formControl_borderSize)}px solid val.brandForms(formControl-borderColor);
+  background-color: var(--bg_color, val.brandForms(formControl-bgc));
+  border-color: val.brandForms(formControl-borderColor);
+  border-radius: var(--formControl-borderRadius);
+  border-style: solid;
+  border-width: var(--formControl-borderwidth);
   box-shadow: none;
   color: val.brandForms(formControl-color);
   display: block;
@@ -183,11 +185,11 @@ output {
   line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
   padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   width: 100%;
+  #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize));
+  #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem));
   @include transition.transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  // Placeholder
-  // @include placeholder;
   @include placeholder.placeholder2(val.brandForms(formControl-placeholder), 400, 12);
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
@@ -195,8 +197,6 @@ output {
     border: 0;
   }
 
-  // Disabled and read-only inputs
-  //
   // HTML5 says that controls under a fieldset > legend:first-child won't be
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
@@ -327,6 +327,8 @@ output {
     height: fonts.rem(val.formsSizes(formControl_height__big));
     line-height: fonts.rem(val.formsSizes(formControl_height__big) - (val.formsSizes(formControl_borderSize) * 2));
     padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__big));
+    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize__big));
+    #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem__big));
   }
   // [converter] extracted textarea& to textarea.form-control
 }
@@ -357,7 +359,9 @@ textarea.form-control {
     &.form-control {
       line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
     }
-
+    &.form-control__big {
+      line-height: fonts.rem(val.formsSizes(formControl_height__big) - (val.formsSizes(formControl_borderSize__big) * 2));
+    }
   }
 }
 
