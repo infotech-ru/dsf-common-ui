@@ -399,6 +399,8 @@
   flex-wrap: wrap;
   position: relative;
   width: 100%;
+  #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize));
+  #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem));
   &__big{
     #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize__big));
     #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem__big));
