@@ -73,7 +73,7 @@
     top: 1px;
     svg{
       height: var(--svgIcon_height, fonts.rem(12));
-      max-width:20px;
+      max-width: var(--svgIcon_height, 20px);
       width: auto;
     }
     // &:only-child{

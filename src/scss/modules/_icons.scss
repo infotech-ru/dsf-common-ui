@@ -23,6 +23,7 @@
 .svg--icon {
     &, svg{
         height: var(--svgIcon_height, fonts.rem(16));
+        max-width: var(--svgIcon_height, fonts.rem(16));
         width: auto;
     }
 }

@@ -427,6 +427,8 @@ export function searchIcon() {
         'bicolors-lamp__24vb': ['лампа', 'lamp', '24vb'],
         'bicolors-leasing': ['лизинг', 'leasing', 'компания', 'юридическое', 'minvb'],
         'bicolors-leasing__24vb': ['лизинг', 'leasing', 'компания', 'юридическое', '24vb'],
+        'bicolors-lifebuoy': ['круг', 'спасательный', 'help', 'lifebuoy', 'minvb'],
+        'bicolors-lifebuoy__24vb': ['круг', 'спасательный', 'help', 'lifebuoy', '24vb'],
         'bicolors-link': ['ссылка', 'link', 'minvb'],
         'bicolors-lightning': ['lightning', 'electro', 'электричество', 'молния', 'minvb'],
         'bicolors-lightning__24vb': ['lightning', 'electro', 'электричество', 'молния', '24vb'],
