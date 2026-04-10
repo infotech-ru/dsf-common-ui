@@ -44,28 +44,49 @@
       padding: 10px;
       width: 100%;
     }
-    .caret{
+    &Caret{
+      margin-left: 3px;
+      #{--svg-icon-fill}: val.brandMenu(menuLink_color);
+      #{--svg-icon-fill_blue}: val.brandMenu(menuLink_color);
+      #{--svg-icon-stroke}: val.brandMenu(menuLink_color);
+      #{--svg-icon-stroke_blue}: val.brandMenu(menuLink_color);
+    }
+    .caret,
+    .headerMenu__linkCaret {
       .mobile-view &{
         transform: rotate(-90deg);
       }
     }
     .open > &{
-      .caret{
+      .caret,
+      .headerMenu__linkCaret {
         .mobile-view &{
           transform: rotate(0deg);
         }
       }
     }
-    svg{
-      fill: val.brandPalette(link_color);
-    }
+    // svg{
+    //   fill: val.brandPalette(link_color);
+    // }
     &:hover,
     &:focus{
       color: val.brandMenu(menuLink_color);
+      .headerMenu__linkCaret {
+        #{--svg-icon-fill}: val.brandMenu(menuLink_color);
+        #{--svg-icon-fill_blue}: val.brandMenu(menuLink_color);
+        #{--svg-icon-stroke}: val.brandMenu(menuLink_color);
+        #{--svg-icon-stroke_blue}: val.brandMenu(menuLink_color);
+      }
     }
     .active &{
       background-color: val.brandMenu(menuLinkActive_bgc);
       color: val.brandMenu(menuLinkActive_color);
+      .headerMenu__linkCaret {
+        #{--svg-icon-fill}: val.brandMenu(menuLinkActive_color);
+        #{--svg-icon-fill_blue}: val.brandMenu(menuLinkActive_color);
+        #{--svg-icon-stroke}: val.brandMenu(menuLinkActive_color);
+        #{--svg-icon-stroke_blue}: val.brandMenu(menuLinkActive_color);
+      }
     }
   }
   &_linkIcon{

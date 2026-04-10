@@ -66,8 +66,8 @@
       white-space: nowrap;
     }
     &SvgTitle{
-      height: fonts.rem(24);
-      width: fonts.rem(24);
+      // height: fonts.rem(24);
+      // width: fonts.rem(24);
       margin-right: fonts.rem(baseValue.$base-padding);
       --svgIcon_height__24vb: #{fonts.rem(24)};
       --svgIcon_width__24vb: #{fonts.rem(24)};

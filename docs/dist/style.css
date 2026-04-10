@@ -3769,21 +3769,39 @@ h6, .h6 {
   padding: 10px;
   width: 100%;
 }
-.mobile-view .headerMenu__link .caret {
+.headerMenu__linkCaret {
+  margin-left: 3px;
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+}
+.mobile-view .headerMenu__link .caret,
+.mobile-view .headerMenu__link .headerMenu__linkCaret {
   transform: rotate(-90deg);
 }
-.mobile-view .open > .headerMenu__link .caret {
+.mobile-view .open > .headerMenu__link .caret,
+.mobile-view .open > .headerMenu__link .headerMenu__linkCaret {
   transform: rotate(0deg);
-}
-.headerMenu__link svg {
-  fill: #4A8DC6;
 }
 .headerMenu__link:hover, .headerMenu__link:focus {
   color: #4A8DC6;
 }
+.headerMenu__link:hover .headerMenu__linkCaret, .headerMenu__link:focus .headerMenu__linkCaret {
+  --svg-icon-fill: #4A8DC6;
+  --svg-icon-fill_blue: #4A8DC6;
+  --svg-icon-stroke: #4A8DC6;
+  --svg-icon-stroke_blue: #4A8DC6;
+}
 .active .headerMenu__link {
   background-color: #4A8DC6;
   color: #ffffff;
+}
+.active .headerMenu__link .headerMenu__linkCaret {
+  --svg-icon-fill: #ffffff;
+  --svg-icon-fill_blue: #ffffff;
+  --svg-icon-stroke: #ffffff;
+  --svg-icon-stroke_blue: #ffffff;
 }
 .headerMenu_linkIcon {
   margin-left: 5px;
@@ -7216,288 +7234,138 @@ h6, .h6 {
 }
 
 .svg--icon__8, .svg--icon__8.svg--icon {
-  height: 8px;
-  width: 8px;
   --svgIcon_height: 8px;
   --svgIcon_width: 8px;
 }
-.svg--icon__8 svg, .svg--icon__8.svg--icon svg {
-  height: 8px;
-  width: 8px;
-}
 
 .svg--icon__h8, .svg--icon__h8.svg--icon {
-  height: 8px;
   --svgIcon_height: 8px;
-}
-.svg--icon__h8 svg, .svg--icon__h8.svg--icon svg {
-  height: 8px;
 }
 
 .svg--icon__9, .svg--icon__9.svg--icon {
-  height: 9px;
-  width: 9px;
   --svgIcon_height: 9px;
   --svgIcon_width: 9px;
 }
-.svg--icon__9 svg, .svg--icon__9.svg--icon svg {
-  height: 9px;
-  width: 9px;
-}
 
 .svg--icon__h9, .svg--icon__h9.svg--icon {
-  height: 9px;
   --svgIcon_height: 9px;
-}
-.svg--icon__h9 svg, .svg--icon__h9.svg--icon svg {
-  height: 9px;
 }
 
 .svg--icon__10, .svg--icon__10.svg--icon {
-  height: 10px;
-  width: 10px;
   --svgIcon_height: 10px;
   --svgIcon_width: 10px;
 }
-.svg--icon__10 svg, .svg--icon__10.svg--icon svg {
-  height: 10px;
-  width: 10px;
-}
 
 .svg--icon__h10, .svg--icon__h10.svg--icon {
-  height: 10px;
   --svgIcon_height: 10px;
-}
-.svg--icon__h10 svg, .svg--icon__h10.svg--icon svg {
-  height: 10px;
 }
 
 .svg--icon__11, .svg--icon__11.svg--icon {
-  height: 11px;
-  width: 11px;
   --svgIcon_height: 11px;
   --svgIcon_width: 11px;
 }
-.svg--icon__11 svg, .svg--icon__11.svg--icon svg {
-  height: 11px;
-  width: 11px;
-}
 
 .svg--icon__h11, .svg--icon__h11.svg--icon {
-  height: 11px;
   --svgIcon_height: 11px;
-}
-.svg--icon__h11 svg, .svg--icon__h11.svg--icon svg {
-  height: 11px;
 }
 
 .svg--icon__12, .svg--icon__12.svg--icon {
-  height: 12px;
-  width: 12px;
   --svgIcon_height: 12px;
   --svgIcon_width: 12px;
 }
-.svg--icon__12 svg, .svg--icon__12.svg--icon svg {
-  height: 12px;
-  width: 12px;
-}
 
 .svg--icon__h12, .svg--icon__h12.svg--icon {
-  height: 12px;
   --svgIcon_height: 12px;
-}
-.svg--icon__h12 svg, .svg--icon__h12.svg--icon svg {
-  height: 12px;
 }
 
 .svg--icon__14, .svg--icon__14.svg--icon {
-  height: 14px;
-  width: 14px;
   --svgIcon_height: 14px;
   --svgIcon_width: 14px;
 }
-.svg--icon__14 svg, .svg--icon__14.svg--icon svg {
-  height: 14px;
-  width: 14px;
-}
 
 .svg--icon__h14, .svg--icon__h14.svg--icon {
-  height: 14px;
   --svgIcon_height: 14px;
-}
-.svg--icon__h14 svg, .svg--icon__h14.svg--icon svg {
-  height: 14px;
 }
 
 .svg--icon__16, .svg--icon__16.svg--icon {
-  height: 16px;
-  width: 16px;
   --svgIcon_height: 16px;
   --svgIcon_width: 16px;
 }
-.svg--icon__16 svg, .svg--icon__16.svg--icon svg {
-  height: 16px;
-  width: 16px;
-}
 
 .svg--icon__h16, .svg--icon__h16.svg--icon {
-  height: 16px;
   --svgIcon_height: 16px;
-}
-.svg--icon__h16 svg, .svg--icon__h16.svg--icon svg {
-  height: 16px;
 }
 
 .svg--icon__18, .svg--icon__18.svg--icon {
-  height: 18px;
-  width: 18px;
   --svgIcon_height: 18px;
   --svgIcon_width: 18px;
 }
-.svg--icon__18 svg, .svg--icon__18.svg--icon svg {
-  height: 18px;
-  width: 18px;
-}
 
 .svg--icon__h18, .svg--icon__h18.svg--icon {
-  height: 18px;
   --svgIcon_height: 18px;
-}
-.svg--icon__h18 svg, .svg--icon__h18.svg--icon svg {
-  height: 18px;
 }
 
 .svg--icon__20, .svg--icon__20.svg--icon {
-  height: 20px;
-  width: 20px;
   --svgIcon_height: 20px;
   --svgIcon_width: 20px;
 }
-.svg--icon__20 svg, .svg--icon__20.svg--icon svg {
-  height: 20px;
-  width: 20px;
-}
 
 .svg--icon__h20, .svg--icon__h20.svg--icon {
-  height: 20px;
   --svgIcon_height: 20px;
-}
-.svg--icon__h20 svg, .svg--icon__h20.svg--icon svg {
-  height: 20px;
 }
 
 .svg--icon__21, .svg--icon__21.svg--icon {
-  height: 21px;
-  width: 21px;
   --svgIcon_height: 21px;
   --svgIcon_width: 21px;
 }
-.svg--icon__21 svg, .svg--icon__21.svg--icon svg {
-  height: 21px;
-  width: 21px;
-}
 
 .svg--icon__h21, .svg--icon__h21.svg--icon {
-  height: 21px;
   --svgIcon_height: 21px;
-}
-.svg--icon__h21 svg, .svg--icon__h21.svg--icon svg {
-  height: 21px;
 }
 
 .svg--icon__22, .svg--icon__22.svg--icon {
-  height: 22px;
-  width: 22px;
   --svgIcon_height: 22px;
   --svgIcon_width: 22px;
 }
-.svg--icon__22 svg, .svg--icon__22.svg--icon svg {
-  height: 22px;
-  width: 22px;
-}
 
 .svg--icon__h22, .svg--icon__h22.svg--icon {
-  height: 22px;
   --svgIcon_height: 22px;
-}
-.svg--icon__h22 svg, .svg--icon__h22.svg--icon svg {
-  height: 22px;
 }
 
 .svg--icon__24, .svg--icon__24.svg--icon {
-  height: 24px;
-  width: 24px;
   --svgIcon_height: 24px;
   --svgIcon_width: 24px;
 }
-.svg--icon__24 svg, .svg--icon__24.svg--icon svg {
-  height: 24px;
-  width: 24px;
-}
 
 .svg--icon__h24, .svg--icon__h24.svg--icon {
-  height: 24px;
   --svgIcon_height: 24px;
-}
-.svg--icon__h24 svg, .svg--icon__h24.svg--icon svg {
-  height: 24px;
 }
 
 .svg--icon__28, .svg--icon__28.svg--icon {
-  height: 28px;
-  width: 28px;
   --svgIcon_height: 28px;
   --svgIcon_width: 28px;
 }
-.svg--icon__28 svg, .svg--icon__28.svg--icon svg {
-  height: 28px;
-  width: 28px;
-}
 
 .svg--icon__h28, .svg--icon__h28.svg--icon {
-  height: 28px;
   --svgIcon_height: 28px;
-}
-.svg--icon__h28 svg, .svg--icon__h28.svg--icon svg {
-  height: 28px;
 }
 
 .svg--icon__30, .svg--icon__30.svg--icon {
-  height: 30px;
-  width: 30px;
   --svgIcon_height: 30px;
   --svgIcon_width: 30px;
 }
-.svg--icon__30 svg, .svg--icon__30.svg--icon svg {
-  height: 30px;
-  width: 30px;
-}
 
 .svg--icon__h30, .svg--icon__h30.svg--icon {
-  height: 30px;
   --svgIcon_height: 30px;
-}
-.svg--icon__h30 svg, .svg--icon__h30.svg--icon svg {
-  height: 30px;
 }
 
 .svg--icon__32, .svg--icon__32.svg--icon {
-  height: 32px;
-  width: 32px;
   --svgIcon_height: 32px;
   --svgIcon_width: 32px;
 }
-.svg--icon__32 svg, .svg--icon__32.svg--icon svg {
-  height: 32px;
-  width: 32px;
-}
 
 .svg--icon__h32, .svg--icon__h32.svg--icon {
-  height: 32px;
   --svgIcon_height: 32px;
-}
-.svg--icon__h32 svg, .svg--icon__h32.svg--icon svg {
-  height: 32px;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
@@ -14759,8 +14627,6 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   white-space: nowrap;
 }
 .unityBlock_headerSvgTitle {
-  height: 1.5rem;
-  width: 1.5rem;
   margin-right: 0.625rem;
   --svgIcon_height__24vb: 1.5rem;
   --svgIcon_width__24vb: 1.5rem;
