@@ -3382,6 +3382,7 @@ h6, .h6 {
 }
 .guest-view .header__top {
   background-color: transparent;
+  border-bottom: none;
 }
 .header__bottom {
   background-color: #f9f9f9;
