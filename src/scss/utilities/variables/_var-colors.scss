@@ -59,9 +59,11 @@ $brand-palette: map.merge((
   pre_bgc:                                map.get($brand-colors, _light-grey2),
   pre_color:                              $base_color,
   mark_bgc:                               map.get($brand-colors, _orange),
+  
   headerTop_bgc:                          map.get($brand-colors, _white),
   headerLang_border:                      map.get($brand-colors, _grey2),
   headerBottom_bgc:                       map.get($brand-colors, _light-grey),
+  
   haeding_color:                          $base_color,
   footer_bgc:                             map.get($brand-colors, _white),
 
@@ -83,6 +85,13 @@ $brand-palette: map.merge((
   tabsPane-active_bgc:                    map.get($brand-colors, _white),
 
 ), emptymap.$brand-palette) !default;
+
+$brand-header: map.merge((
+  headerTop_bgc:                          map.get($brand-colors, _white),
+  headerLang_border:                      map.get($brand-colors, _grey2),
+  header_border:                          map.get($brand-colors, _grey2),
+  headerBottom_bgc:                       map.get($brand-colors, _light-grey),
+), emptymap.$brand-header) !default;
 
 $brand-alert: map.merge((
   default_bg:                             map.get($brand-colors, _light-grey2),

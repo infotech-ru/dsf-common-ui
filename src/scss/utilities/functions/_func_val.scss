@@ -35,6 +35,9 @@
 @function brandAlert($keys...) {
   @return maps.val(colors.$brand-alert, $keys...);
 }
+@function brandHeader($keys...) {
+  @return maps.val(colors.$brand-header, $keys...);
+}
 @function brandTable($keys...) {
   @return maps.val(colors.$brand-table, $keys...);
 }

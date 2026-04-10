@@ -519,6 +519,14 @@ svgsizes {
 }
 
 svgsizes {
+  28: 0;
+}
+
+svgsizes {
+  30: 0;
+}
+
+svgsizes {
   32: 0;
 }
 

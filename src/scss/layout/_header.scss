@@ -7,7 +7,7 @@
 @use './../utilities/functions/func_svg-url' as svg-url;
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-
+@use './../utilities/variables/var-baseValue' as baseValue;
 .header {
   // background: linear-gradient(180deg, #F9F9F9 0%, #CACACA 100%);
   box-shadow: none;
@@ -15,7 +15,8 @@
   margin: 0 0 #{val.layoutSizes(header_marginBottom)}px;
   padding: 0;
   position: relative;
-  filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.25));
+  filter: baseValue.$base-header-filter;
+
   z-index: val.zIndex(header);
   .body_maximized &{
     display: none;
@@ -31,12 +32,16 @@
   // }
   &__top{
     align-items: center;
-    background-color: val.brandPalette(headerTop_bgc);
+    background-color: val.brandHeader(headerTop_bgc);
+    border-bottom-width: #{val.layoutSizes(header_border)}px;
+    border-bottom-style: solid;
+    border-bottom-color: val.brandHeader(header_border);
     display: flex;
     justify-content: space-between;
     height: #{val.layoutSizes(headerTop_height)}px;
-    padding: 0 0 0 15px;
+    padding: 0 fonts.rem(val.layoutSizes(headerPadding));
     .mobile-view &{
+      padding: 0 fonts.rem(val.layoutSizes(headerPadding) * .5);
       padding-right: 5px;
     }
     .guest-view &{
@@ -44,7 +49,10 @@
     }
   }
   &__bottom{
-    background-color: val.brandPalette(headerBottom_bgc);
+    background-color: val.brandHeader(headerBottom_bgc);
+    border-bottom-width: #{val.layoutSizes(header_border)}px;
+    border-bottom-style: solid;
+    border-bottom-color: val.brandHeader(header_border);
     height: #{val.layoutSizes(headerBottom_height)}px;
     &.collapse {
       background-color: #ffffff;
@@ -92,9 +100,10 @@
     align-items: center;
     display: flex;
     position: relative;
+    gap: fonts.rem(val.layoutSizes(header_marginBottom) * 2);
   }
   &__lang{
-    border: 1px solid val.brandPalette(headerLang_border);
+    border: 1px solid val.brandHeader(headerLang_border);
     height: 12px;
     width: 16px;
     & + &{
@@ -102,7 +111,7 @@
     }
   }
   &__item{
-    margin-right: 15px;
+    // margin-right: 15px;
     .mobile-view & {
       // margin-top: 10px;
       margin-right: 0;

@@ -5,7 +5,6 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-sizes' as *;
 
 .mainContainer{
   min-height: calc(100vh - #{val.layoutSizes(headerBottom_height)}px - #{val.layoutSizes(headerTop_height)}px - #{val.layoutSizes(footer_height)}px - #{val.layoutSizes(footer_marginTop)}px - #{val.layoutSizes(header_marginBottom)}px);

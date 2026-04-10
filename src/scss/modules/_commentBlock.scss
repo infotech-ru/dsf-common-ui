@@ -7,10 +7,6 @@
 @use 'sass:color';
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-sizes' as *;
-// @use './../utilities/variables/var-lineHeights' as *;
-// @use './../utilities/variables/var-fonts' as *;
 @use './../utilities/variables/var-placeholder' as varplaceholder;
 
 @use './../utilities/mixins_bootstrap-v3/clearfix' as clearfix;
