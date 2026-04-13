@@ -42,7 +42,12 @@
             #{--svgIcon_width}: 10px;
         }
     }
-    &:focus {
+    &__onlyIcon{
+        .dropdown-toggle_icon{
+            margin-left: 0;
+        }
+    }
+    &:focus {   
         outline: 0;
     }
 }

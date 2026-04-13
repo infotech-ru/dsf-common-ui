@@ -7401,6 +7401,9 @@ h6, .h6 {
   --svgIcon_height: 10px;
   --svgIcon_width: 10px;
 }
+.dropdown-toggle__onlyIcon .dropdown-toggle_icon {
+  margin-left: 0;
+}
 .dropdown-toggle:focus {
   outline: 0;
 }
@@ -15246,14 +15249,17 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   color: #333333;
 }
 .alert .close {
+  align-items: center;
   border: none;
   background-color: #f9f9f9;
   background-image: none;
-  height: 1.25rem;
   cursor: pointer;
+  display: inline-flex;
+  height: 1.25rem;
   float: none;
-  padding: 0;
+  justify-content: center;
   opacity: 1;
+  padding: 0;
   position: absolute;
   right: 0.625rem;
   text-shadow: none;

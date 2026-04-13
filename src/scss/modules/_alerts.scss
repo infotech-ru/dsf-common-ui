@@ -94,14 +94,17 @@
     }
   }
   .close{
+    align-items: center;
     border: none;
     background-color: val.brandBtnIcon(btnIconSvg_bgc);
     background-image: none;
-    height: fonts.rem(val.alertsSizes(alertClose_size));
     cursor: pointer;
+    display: inline-flex;
+    height: fonts.rem(val.alertsSizes(alertClose_size));
     float: none;
-    padding: 0;
+    justify-content: center;
     opacity: 1;
+    padding: 0;
     position: absolute;
     right: fonts.rem(val.alertsSizes(alert_padding));
     text-shadow: none;
