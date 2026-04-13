@@ -7231,6 +7231,7 @@ h6, .h6 {
 
 .svg--icon__24vb, .svg--icon__24vb svg {
   height: var(--svgIcon_height__24vb, var(--svgIcon_height, 1rem));
+  max-width: none;
   width: var(--svgIcon_width__24vb, var(--svgIcon_width, 1rem));
 }
 
@@ -7392,6 +7393,16 @@ h6, .h6 {
   position: relative;
 }
 
+.dropdown-toggle_icon {
+  margin-left: 0.625rem;
+}
+.dropdown-toggle__iconSmall {
+  margin-left: 0.3125rem;
+}
+.dropdown-toggle__iconSmall .dropdown-toggle_icon {
+  --svgIcon_height: 10px;
+  --svgIcon_width: 10px;
+}
 .dropdown-toggle:focus {
   outline: 0;
 }
@@ -7449,8 +7460,10 @@ h6, .h6 {
 .open > .dropdown-menu__wrapList {
   display: flex;
 }
-.show .dropdown-toggle .svg--icon svg,
-.open .dropdown-toggle .svg--icon svg {
+.show .dropdown-toggle .svg--icon .bicolors-arrow_down,
+.show .dropdown-toggle .svg--icon .bicolors-arrow_down__24vb,
+.open .dropdown-toggle .svg--icon .bicolors-arrow_down,
+.open .dropdown-toggle .svg--icon .bicolors-arrow_down__24vb {
   transform: rotate(180deg);
   transition-property: transform;
   transition-duration: 0.4s;
@@ -10054,6 +10067,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   display: inline-flex;
   justify-content: center;
   height: 1.25rem;
+  max-width: 1.25rem;
   width: 1.25rem;
   --svg-icon-fill: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
@@ -10272,11 +10286,7 @@ input[type=button].btn-block {
   margin: 0;
   text-align: center;
 }
-.btn-download__large .svg--icon, .btn-download__bigSquare .svg--icon, .btn-download__square .svg--icon {
-  height: var(--svgIcon_height, 1.25rem);
-  width: var(--svgIcon_height, 1.25rem);
-}
-.btn-download__large .svg--icon svg, .btn-download__bigSquare .svg--icon svg, .btn-download__square .svg--icon svg {
+.btn-download__large .svg--icon, .btn-download__large .svg--icon svg, .btn-download__bigSquare .svg--icon, .btn-download__bigSquare .svg--icon svg, .btn-download__square .svg--icon, .btn-download__square .svg--icon svg {
   height: var(--svgIcon_height, 1.25rem);
   width: var(--svgIcon_height, 1.25rem);
 }
@@ -10295,11 +10305,7 @@ input[type=button].btn-block {
 .btn-download__circle .btn-download_inner {
   border-radius: 100%;
 }
-.btn-download__circle .svg--icon {
-  height: var(--svgIcon_height, 1.3125rem);
-  width: var(--svgIcon_height, 1.3125rem);
-}
-.btn-download__circle .svg--icon svg {
+.btn-download__circle .svg--icon, .btn-download__circle .svg--icon svg {
   height: var(--svgIcon_height, 1.3125rem);
   width: var(--svgIcon_height, 1.3125rem);
 }

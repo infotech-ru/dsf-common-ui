@@ -31,8 +31,20 @@
 }
 
 // Prevent the focus on the dropdown toggle when closing dropdowns
-.dropdown-toggle:focus {
-    outline: 0;
+.dropdown-toggle{
+    &_icon{
+        margin-left: fonts.rem(10);
+    }
+    &__iconSmall{
+        margin-left: fonts.rem(5);
+        .dropdown-toggle_icon{
+            #{--svgIcon_height}: 10px;
+            #{--svgIcon_width}: 10px;
+        }
+    }
+    &:focus {
+        outline: 0;
+    }
 }
 
 
@@ -155,7 +167,8 @@
 
     .dropdown-toggle {
         .svg--icon {
-            svg {
+            .bicolors-arrow_down,
+            .bicolors-arrow_down__24vb {
                 transform: rotate(180deg);
                 transition-property: transform;
                 transition-duration: 0.4s;

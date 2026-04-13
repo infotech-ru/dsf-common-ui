@@ -30,6 +30,7 @@
 .svg--icon__24vb{
   &, svg{
     height: var(--svgIcon_height__24vb, var(--svgIcon_height, fonts.rem(16)));
+    max-width: none;
     width: var(--svgIcon_width__24vb, var(--svgIcon_width, fonts.rem(16)));
   }
 }

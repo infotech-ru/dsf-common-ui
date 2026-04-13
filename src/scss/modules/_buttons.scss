@@ -441,6 +441,7 @@ a.btn {
     display: inline-flex;
     justify-content: center;
     height: fonts.rem(val.btnSizes(btnIcon_height));
+    max-width: fonts.rem(val.btnSizes(btnIcon_height));
     width: fonts.rem(val.btnSizes(btnIcon_height));
     // vertical-align: middle;
     #{--svg-icon-fill}: val.brandBtnDownload(btnDownloadSvg_color);
@@ -734,9 +735,7 @@ input[type="button"] {
   &__bigSquare,
   &__square{
     .svg--icon {
-      height: var(--svgIcon_height, fonts.rem(val.btnSizes(btnDownloadSvg_height)));
-      width: var(--svgIcon_height, fonts.rem(val.btnSizes(btnDownloadSvg_height)));
-      svg{
+      &, svg{
         height: var(--svgIcon_height, fonts.rem(val.btnSizes(btnDownloadSvg_height)));
         width: var(--svgIcon_height, fonts.rem(val.btnSizes(btnDownloadSvg_height)));
       }
@@ -757,9 +756,7 @@ input[type="button"] {
       border-radius: 100%;
     }
     .svg--icon {
-      height: var(--svgIcon_height, fonts.rem(21));
-      width: var(--svgIcon_height, fonts.rem(21));
-      svg{
+      &, svg{
         height: var(--svgIcon_height, fonts.rem(21));
         width: var(--svgIcon_height, fonts.rem(21));
       }
