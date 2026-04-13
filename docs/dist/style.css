@@ -7396,10 +7396,8 @@ h6, .h6 {
 .dropdown-toggle_icon {
   margin-left: 0.625rem;
 }
-.dropdown-toggle__iconSmall {
-  margin-left: 0.3125rem;
-}
 .dropdown-toggle__iconSmall .dropdown-toggle_icon {
+  margin-left: 0.3125rem;
   --svgIcon_height: 10px;
   --svgIcon_width: 10px;
 }

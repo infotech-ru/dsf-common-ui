@@ -36,8 +36,8 @@
         margin-left: fonts.rem(10);
     }
     &__iconSmall{
-        margin-left: fonts.rem(5);
         .dropdown-toggle_icon{
+            margin-left: fonts.rem(5);
             #{--svgIcon_height}: 10px;
             #{--svgIcon_width}: 10px;
         }
