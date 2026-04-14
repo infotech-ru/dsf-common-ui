@@ -88,7 +88,7 @@ output {
       left: 0;
       // left: fonts.rem($paddinFromLeft * -1);
       line-height: fonts.rem(val.formsSizes(formControl_height));
-      padding-left: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
+      padding-left: fonts.rem(val.formsSizes(formControl_paddingX));
       // padding-right: fonts.rem(calc(val.formsSizes(formControl_paddingX) + 5));
       padding-right: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
       position: absolute;
@@ -120,7 +120,8 @@ output {
         // background-color: val.brandForms(controlLabelActive_bgc);
         background-color:var(--bg_color, val.brandForms(controlLabelActive_bgc));
         font-size: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-        left: fonts.rem($paddinFromLeft * -1);
+        // left: fonts.rem($paddinFromLeft * -1);
+        left: 0;
         line-height: fonts.rem(val.fontSizes(controlLabel_active__formFree));
         padding-left: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
         // padding-right: fonts.rem(val.formsSizes(formControl_paddingX));
