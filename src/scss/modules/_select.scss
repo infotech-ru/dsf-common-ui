@@ -788,6 +788,11 @@ select.selectpicker {
       @extend %selectCaret;
       right: 10px;
       top: 6px;
+      .comboTreeInputBox[disabled] + &{
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.5;
+      }
       &Img{
         display: none;
       }
