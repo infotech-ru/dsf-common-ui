@@ -69,8 +69,11 @@ export function initTreeTable(options) {
   $("table.js-tree-table").treetable({
     expandable: true,
     indent: 34,
-            expanderTemplate: "<span class='collapseTrIcon'><svg width='14px' height='14px'><use xlink:href='/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus__24vb'></use></svg></span>",
-    indenterTemplate: "<a class='collapseTrIcon_link' href=\"#\"></a>",
+    stringExpand: "collapseIcon_expand collapsed",
+    stringCollapse: "collapseIcon_collapse",
+    cellTemplate: "<div class='collapseTrIcon_wrapper'></div>",
+    expanderTemplate: "<span class='collapseTrIcon svg--icon svg--icon__24vb' data-toggle='tooltip'><svg width='14px' height='14px'><use xlink:href='/dist/sprite.symbol.svg#bicolors-arrow_down__24vb'></use></svg></span>",
+    indenterTemplate: "<a class='collapseTrIcon_link iconModification' href=\"#\"></a>",
     ...options,
   });
 }
