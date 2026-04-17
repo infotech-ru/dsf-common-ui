@@ -83,6 +83,11 @@
                 .attr("title", titleText)
                 .removeClass(this.settings.stringCollapse)
                 .addClass(this.settings.stringExpand);
+                
+            this.indenter
+                .attr("title", titleText)
+                .removeClass(this.settings.indenterStringCollapse)
+                .addClass(this.settings.indenterStringExpand);
 
             if (this.initialized && this.settings.onNodeCollapse != null) {
                 this.settings.onNodeCollapse.apply(this);
@@ -110,12 +115,16 @@
                 this._showChildren();
             }
 
-            // ===== ИЗМЕНЕНИЕ: раздельное управление title и классом =====
             var titleText = this.settings.collapseTitle !== null ? this.settings.collapseTitle : this.settings.stringCollapse;
             this.expander
                 .attr("title", titleText)
                 .removeClass(this.settings.stringExpand)
                 .addClass(this.settings.stringCollapse);
+            this.indenter
+                .attr("title", titleText)
+                .removeClass(this.settings.indenterStringExpand)
+                .addClass(this.settings.indenterStringCollapse);
+                
 
             return this;
         };
@@ -457,7 +466,9 @@
                 nodeIdAttr: "ttId",
                 parentIdAttr: "ttParentId",
                 stringExpand: "collapseIcon_expand",
-                stringCollapse: "collapseIcon_collapse active",
+                stringCollapse: "collapseIcon_collapse",
+                indenterStringExpand: "collapsed",
+                indenterStringCollapse: "",
                 expandTitle: "Expand",      // текст подсказки для свёрнутого состояния (если не задан, используется stringExpand)
                 collapseTitle: "Collapse",    // текст подсказки для развёрнутого состояния (если не задан, используется stringCollapse)
                 nodeSelector: "tr",               // selector to find node elements within container
