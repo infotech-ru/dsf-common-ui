@@ -615,6 +615,10 @@ tbody tr {
 .collapseTrIcon{
   display: inline-flex;
   position: relative;
+  #{--svg-icon-fill}: val.brandTable(tableCollapseTrIcon_color);
+  #{--svg-icon-fill_blue}: val.brandTable(tableCollapseTrIcon_color);
+  #{--svg-icon-stroke}: val.brandTable(tableCollapseTrIcon_color);
+  #{--svg-icon-stroke_blue}: val.brandTable(tableCollapseTrIcon_color);
   &, svg{
     height: #{val.tableSizes(collapseTrIcon_size)}px;
     width: #{val.tableSizes(collapseTrIcon_size)}px;

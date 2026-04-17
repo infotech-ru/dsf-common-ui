@@ -689,7 +689,7 @@ hr {
 
 code {
   background-color: #F5F5F5;
-  border-radius: 1;
+  border-radius: 0.0625rem;
   color: #333333;
   font-size: 90%;
   padding: 2px 4px;
@@ -706,7 +706,7 @@ pre code {
 pre {
   background-color: #F5F5F5;
   border: 1px solid #333333;
-  border-radius: 1;
+  border-radius: 0.0625rem;
   color: #333333;
   display: block;
   font-size: 0.6875rem;
@@ -14532,6 +14532,10 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .collapseTrIcon {
   display: inline-flex;
   position: relative;
+  --svg-icon-fill: #333333;
+  --svg-icon-fill_blue: #333333;
+  --svg-icon-stroke: #333333;
+  --svg-icon-stroke_blue: #333333;
 }
 .collapseTrIcon, .collapseTrIcon svg {
   height: 16px;

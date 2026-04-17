@@ -1115,6 +1115,7 @@ $brand-table: map.merge((
   table_border:                           map.get($brand-colors, _grey2),
   table_color:                            $base_color,
   tableHelpIcon_bgc:                      $base_color,
+  tableCollapseTrIcon_color:              $base_color,
   tbodyFirstTd_bgc:                       map.get($brand-colors, _white),
   tbodySlaveTd_bgc:                       map.get($brand-colors, _light-grey2),
   tbodySubSlaveTd_bgc:                    map.get($brand-colors, _light-grey3),

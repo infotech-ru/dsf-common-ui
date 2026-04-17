@@ -115,7 +115,7 @@ hr {
 
 code {
   background-color: val.brandPalette(code_bgc);
-  border-radius: val.brandSizes(border-radius-base);
+  border-radius: fonts.rem(val.brandSizes(border-radius-base));
   color: val.brandPalette(code_color);
   font-size: 90%;
   padding: 2px 4px;
@@ -132,7 +132,7 @@ code {
 pre {
   background-color: val.brandPalette(pre_bgc);
   border: 1px solid val.brandPalette(pre_color);
-  border-radius: val.brandSizes(border-radius-base);
+  border-radius: fonts.rem(val.brandSizes(border-radius-base));
   color: val.brandPalette(pre_color);
   display: block;
   font-size: fonts.rem(calc(val.fontSizesBase(body) - 1));
