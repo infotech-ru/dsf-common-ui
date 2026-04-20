@@ -249,6 +249,13 @@
   margin-left: auto;
 }
 
+.mb-base{
+  margin-bottom: fonts.rem(val.brandSizes(base_marginSize));
+}
+.mt-base{
+  margin-top: fonts.rem(val.brandSizes(base_marginSize));
+}
+
 @each $paddingSize in sizes.$paddingSizes {
   .padding-#{$paddingSize} {
     padding: fonts.rem($paddingSize);
@@ -284,6 +291,13 @@
   }
 }
 
+.pl-base{
+  padding-left: fonts.rem(val.brandSizes(base_paddingSize));
+}
+.pr-base{
+  padding-right: fonts.rem(val.brandSizes(base_paddingSize));
+}
+
 @each $gapSize in sizes.$gapSizes {
   .gap-#{$gapSize} {
       gap: fonts.rem($gapSize);
@@ -291,6 +305,10 @@
   .mobile-view .gap-#{$gapSize}__mobile {
       gap: fonts.rem($gapSize);
   }
+}
+
+.gap-base{
+  gap: fonts.rem(val.brandSizes(base_paddingSize));
 }
 
 @each $posName, $posSize in sizes.$posSizes {
@@ -941,6 +959,14 @@
     #{--text_color}: #{$value};
     #{--svg-valute-fill}: #{$value};
   }
+.text-base{
+  color: val.brandPalette(body_color);
+  &:hover,
+  &:focus-visible,
+  &:focus{
+    color: val.brandPalette(body_color);
+  }
+}
   .textHover-#{$name}{
     &:hover,
     .textHoverTarget:hover &{
@@ -986,7 +1012,6 @@
     #{--border_left_color}: #{$value};
   }
 }
-
 
 .zindex-0{
     z-index: 0;

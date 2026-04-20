@@ -208,25 +208,3 @@ blockquote {
     }
   }
 }
-
-.text-base{
-  color: val.brandPalette(body_color);
-  &:hover,
-  &:focus-visible,
-  &:focus{
-    color: val.brandPalette(body_color);
-  }
-}
-
-.mb-base{
-  margin-bottom: fonts.rem(val.brandSizes(base_marginSize));
-}
-.mt-base{
-  margin-top: fonts.rem(val.brandSizes(base_marginSize));
-}
-.pl-base{
-  padding-left: fonts.rem(val.brandSizes(base_paddingSize));
-}
-.pr-base{
-  padding-right: fonts.rem(val.brandSizes(base_paddingSize));
-}

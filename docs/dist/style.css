@@ -783,29 +783,6 @@ blockquote .small:before {
   content: "— ";
 }
 
-.text-base {
-  color: #333333;
-}
-.text-base:hover, .text-base:focus-visible, .text-base:focus {
-  color: #333333;
-}
-
-.mb-base {
-  margin-bottom: 0.625rem;
-}
-
-.mt-base {
-  margin-top: 0.625rem;
-}
-
-.pl-base {
-  padding-left: 0.625rem;
-}
-
-.pr-base {
-  padding-right: 0.625rem;
-}
-
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* BASE                                                                       */
@@ -18142,6 +18119,14 @@ tbody.collapse.in {
   margin-left: auto;
 }
 
+.mb-base {
+  margin-bottom: 0.625rem;
+}
+
+.mt-base {
+  margin-top: 0.625rem;
+}
+
 .padding-0 {
   padding: 0rem;
 }
@@ -18742,6 +18727,14 @@ tbody.collapse.in {
   padding-left: 5rem;
 }
 
+.pl-base {
+  padding-left: 0.625rem;
+}
+
+.pr-base {
+  padding-right: 0.625rem;
+}
+
 .gap-0 {
   gap: 0rem;
 }
@@ -18820,6 +18813,10 @@ tbody.collapse.in {
 
 .mobile-view .gap-60__mobile {
   gap: 3.75rem;
+}
+
+.gap-base {
+  gap: 0.625rem;
 }
 
 .left-0p {
@@ -20602,6 +20599,13 @@ tbody.collapse.in {
   --svg-valute-fill: #777777;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-default:hover, .textHoverTarget:hover .textHover-default {
   color: #777777;
   --text_color: #777777;
@@ -20672,6 +20676,13 @@ tbody.collapse.in {
   color: #1E6393;
   --text_color: #1E6393;
   --svg-valute-fill: #1E6393;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-primary:hover, .textHoverTarget:hover .textHover-primary {
@@ -20746,6 +20757,13 @@ tbody.collapse.in {
   --svg-valute-fill: #D9534F;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-danger:hover, .textHoverTarget:hover .textHover-danger {
   color: #D9534F;
   --text_color: #D9534F;
@@ -20816,6 +20834,13 @@ tbody.collapse.in {
   color: #B56C00;
   --text_color: #B56C00;
   --svg-valute-fill: #B56C00;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-warning:hover, .textHoverTarget:hover .textHover-warning {
@@ -20890,6 +20915,13 @@ tbody.collapse.in {
   --svg-valute-fill: #69C26A;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-success:hover, .textHoverTarget:hover .textHover-success {
   color: #69C26A;
   --text_color: #69C26A;
@@ -20960,6 +20992,13 @@ tbody.collapse.in {
   color: #E4EEF7;
   --text_color: #E4EEF7;
   --svg-valute-fill: #E4EEF7;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-info:hover, .textHoverTarget:hover .textHover-info {
@@ -21034,6 +21073,13 @@ tbody.collapse.in {
   --svg-valute-fill: #BABABA;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-muted:hover, .textHoverTarget:hover .textHover-muted {
   color: #BABABA;
   --text_color: #BABABA;
@@ -21104,6 +21150,13 @@ tbody.collapse.in {
   color: #FFDF9A;
   --text_color: #FFDF9A;
   --svg-valute-fill: #FFDF9A;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-light-orange:hover, .textHoverTarget:hover .textHover-light-orange {
@@ -21178,6 +21231,13 @@ tbody.collapse.in {
   --svg-valute-fill: #FFBD41;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-orange:hover, .textHoverTarget:hover .textHover-orange {
   color: #FFBD41;
   --text_color: #FFBD41;
@@ -21248,6 +21308,13 @@ tbody.collapse.in {
   color: #333333;
   --text_color: #333333;
   --svg-valute-fill: #333333;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-dark-grey:hover, .textHoverTarget:hover .textHover-dark-grey {
@@ -21322,6 +21389,13 @@ tbody.collapse.in {
   --svg-valute-fill: #BABABA;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-grey:hover, .textHoverTarget:hover .textHover-grey {
   color: #BABABA;
   --text_color: #BABABA;
@@ -21392,6 +21466,13 @@ tbody.collapse.in {
   color: #dddddd;
   --text_color: #dddddd;
   --svg-valute-fill: #dddddd;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-grey2:hover, .textHoverTarget:hover .textHover-grey2 {
@@ -21466,6 +21547,13 @@ tbody.collapse.in {
   --svg-valute-fill: #cccccc;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-grey3:hover, .textHoverTarget:hover .textHover-grey3 {
   color: #cccccc;
   --text_color: #cccccc;
@@ -21536,6 +21624,13 @@ tbody.collapse.in {
   color: #777777;
   --text_color: #777777;
   --svg-valute-fill: #777777;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-grey4:hover, .textHoverTarget:hover .textHover-grey4 {
@@ -21610,6 +21705,13 @@ tbody.collapse.in {
   --svg-valute-fill: #f9f9f9;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-light-grey:hover, .textHoverTarget:hover .textHover-light-grey {
   color: #f9f9f9;
   --text_color: #f9f9f9;
@@ -21680,6 +21782,13 @@ tbody.collapse.in {
   color: #F5F5F5;
   --text_color: #F5F5F5;
   --svg-valute-fill: #F5F5F5;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-light-grey2:hover, .textHoverTarget:hover .textHover-light-grey2 {
@@ -21754,6 +21863,13 @@ tbody.collapse.in {
   --svg-valute-fill: #EEEEEE;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-light-grey3:hover, .textHoverTarget:hover .textHover-light-grey3 {
   color: #EEEEEE;
   --text_color: #EEEEEE;
@@ -21824,6 +21940,13 @@ tbody.collapse.in {
   color: #e5e5e5;
   --text_color: #e5e5e5;
   --svg-valute-fill: #e5e5e5;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-light-grey4:hover, .textHoverTarget:hover .textHover-light-grey4 {
@@ -21898,6 +22021,13 @@ tbody.collapse.in {
   --svg-valute-fill: #FCEEEE;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-light-red:hover, .textHoverTarget:hover .textHover-light-red {
   color: #FCEEEE;
   --text_color: #FCEEEE;
@@ -21968,6 +22098,13 @@ tbody.collapse.in {
   color: #762624;
   --text_color: #762624;
   --svg-valute-fill: #762624;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-dark-red:hover, .textHoverTarget:hover .textHover-dark-red {
@@ -22042,6 +22179,13 @@ tbody.collapse.in {
   --svg-valute-fill: #FF9996;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-rose:hover, .textHoverTarget:hover .textHover-rose {
   color: #FF9996;
   --text_color: #FF9996;
@@ -22112,6 +22256,13 @@ tbody.collapse.in {
   color: #00000000;
   --text_color: #00000000;
   --svg-valute-fill: #00000000;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-clear:hover, .textHoverTarget:hover .textHover-clear {
@@ -22186,6 +22337,13 @@ tbody.collapse.in {
   --svg-valute-fill: #ffffff;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-white:hover, .textHoverTarget:hover .textHover-white {
   color: #ffffff;
   --text_color: #ffffff;
@@ -22256,6 +22414,13 @@ tbody.collapse.in {
   color: #4A8DC6;
   --text_color: #4A8DC6;
   --svg-valute-fill: #4A8DC6;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-light-blue:hover, .textHoverTarget:hover .textHover-light-blue {
@@ -22330,6 +22495,13 @@ tbody.collapse.in {
   --svg-valute-fill: #E4EEF7;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-light-blue2:hover, .textHoverTarget:hover .textHover-light-blue2 {
   color: #E4EEF7;
   --text_color: #E4EEF7;
@@ -22400,6 +22572,13 @@ tbody.collapse.in {
   color: #B6D1E8;
   --text_color: #B6D1E8;
   --svg-valute-fill: #B6D1E8;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-light-blue3:hover, .textHoverTarget:hover .textHover-light-blue3 {
@@ -22474,6 +22653,13 @@ tbody.collapse.in {
   --svg-valute-fill: #0094FF;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-vibrant-blue:hover, .textHoverTarget:hover .textHover-vibrant-blue {
   color: #0094FF;
   --text_color: #0094FF;
@@ -22544,6 +22730,13 @@ tbody.collapse.in {
   color: #FFFBA0;
   --text_color: #FFFBA0;
   --svg-valute-fill: #FFFBA0;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-light-yellow:hover, .textHoverTarget:hover .textHover-light-yellow {
@@ -22618,6 +22811,13 @@ tbody.collapse.in {
   --svg-valute-fill: #FFF6DF;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-light-yellow2:hover, .textHoverTarget:hover .textHover-light-yellow2 {
   color: #FFF6DF;
   --text_color: #FFF6DF;
@@ -22688,6 +22888,13 @@ tbody.collapse.in {
   color: #FFDA7D;
   --text_color: #FFDA7D;
   --svg-valute-fill: #FFDA7D;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-yellow2:hover, .textHoverTarget:hover .textHover-yellow2 {
@@ -22762,6 +22969,13 @@ tbody.collapse.in {
   --svg-valute-fill: #E9F5E9;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-light-green:hover, .textHoverTarget:hover .textHover-light-green {
   color: #E9F5E9;
   --text_color: #E9F5E9;
@@ -22832,6 +23046,13 @@ tbody.collapse.in {
   color: #B4E1B5;
   --text_color: #B4E1B5;
   --svg-valute-fill: #B4E1B5;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-light-green2:hover, .textHoverTarget:hover .textHover-light-green2 {
@@ -22906,6 +23127,13 @@ tbody.collapse.in {
   --svg-valute-fill: #467B46;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-dark-green:hover, .textHoverTarget:hover .textHover-dark-green {
   color: #467B46;
   --text_color: #467B46;
@@ -22978,6 +23206,13 @@ tbody.collapse.in {
   --svg-valute-fill: #008B8B;
 }
 
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
+}
+
 .textHover-dark-cyan:hover, .textHoverTarget:hover .textHover-dark-cyan {
   color: #008B8B;
   --text_color: #008B8B;
@@ -23048,6 +23283,13 @@ tbody.collapse.in {
   color: #000000;
   --text_color: #000000;
   --svg-valute-fill: #000000;
+}
+
+.text-base {
+  color: #333333;
+}
+.text-base:hover, .text-base:focus-visible, .text-base:focus {
+  color: #333333;
 }
 
 .textHover-black:hover, .textHoverTarget:hover .textHover-black {
