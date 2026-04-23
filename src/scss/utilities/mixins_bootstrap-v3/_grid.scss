@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use './../variables/var-bootstrap-v3' as varbootstrapv3;
-@use './clearfix' as clearfix;
+@use '../mixins/clearfix' as clearfix;
 
 // Grid system
 //

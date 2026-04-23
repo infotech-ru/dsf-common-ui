@@ -14,7 +14,7 @@
 @use './../utilities/variables/var-sizes' as sizes;
 @use './../utilities/variables/var-fonts' as varfonts;
 @use './../utilities/variables/var-placeholder' as placeholder;
-@use './../utilities/mixins_bootstrap-v3/image' as image;
+@use './../utilities/mixins/image' as image;
 @use './../utilities/mixins/transition' as transition;
 
 .img-responsive {
@@ -249,6 +249,9 @@
   margin-left: auto;
 }
 
+.mb-base{
+  margin-bottom: fonts.rem(val.brandSizes(base_marginSize));
+}
 .mb-base{
   margin-bottom: fonts.rem(val.brandSizes(base_marginSize));
 }

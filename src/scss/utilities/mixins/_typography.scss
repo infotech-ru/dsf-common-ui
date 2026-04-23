@@ -8,7 +8,7 @@
 @use '../variables/var-fonts' as varfonts;
 @use '../variables/var-bootstrap-v3' as varbootstrapv3;
 @use '../variables/var-lineHeights' as lineheights;
-@use '../mixins_bootstrap-v4/breakpoints' as breakpoints;
+@use '../mixins/breakpoints' as breakpoints;
 
 
 @mixin responsive-font-size($baseKey) {

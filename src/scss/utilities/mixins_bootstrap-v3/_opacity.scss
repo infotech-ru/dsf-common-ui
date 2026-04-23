@@ -1,4 +1,4 @@
-// Opacity
+@warn "⚠️ Файл '_opacity.scss' устарел и будет удалён в следующих релизах. Не используйте этот миксин.";
 
 @mixin opacity($opacity) {
   $opacity-ie: ($opacity * 100);  // IE8 filter

@@ -8,12 +8,8 @@
 @use 'sass:map';
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-fonts' as *;
-// @use './../utilities/variables/var-lineHeights' as lih;
-// @use './../utilities/variables/var-sizes' as *;
 @use '../utilities/variables/_var-bootstrap-v3.scss' as varbootstrapv3;
-@use './../utilities/mixins_bootstrap-v3/clearfix' as clearfix;
+@use './../utilities/mixins/clearfix' as clearfix;
 @use './../utilities/mixins/typography' as typography;
 @use './../utilities/mixins_bootstrap-v3/text-overflow' as textoverflow;
 @use './../utilities/variables/var-paths' as paths;

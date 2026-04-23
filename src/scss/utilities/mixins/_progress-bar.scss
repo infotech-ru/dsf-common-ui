@@ -1,7 +1,5 @@
 @use '../mixins/gradients' as gradients;
 
-@warn "⚠️ Файл '_progress-bar.scss' устарел и будет удалён в следующих релизах. Используйте 'mixins/_progress-bar.scss'.";
-
 // Progress bars
 
 @mixin progress-bar-variant($color) {

@@ -6,8 +6,7 @@
 //* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ *//
 
 @forward "./mixins_bootstrap-v3/hide-text";
-@forward "./mixins_bootstrap-v3/opacity";
-@forward "./mixins_bootstrap-v3/image";
+// @forward "./mixins_bootstrap-v3/opacity";
 @forward "./mixins_bootstrap-v3/labels";
 @forward "./mixins_bootstrap-v3/reset-filter";
 @forward "./mixins_bootstrap-v3/resize";
@@ -24,15 +23,11 @@
 @forward "./mixins_bootstrap-v3/list-group";
 @forward "./mixins_bootstrap-v3/nav-divider";
 @forward "./mixins_bootstrap-v3/forms";
-@forward "./mixins_bootstrap-v3/progress-bar";
 @forward "./mixins_bootstrap-v3/background-variant";
 @forward "./mixins_bootstrap-v3/border-radius";
-@forward "./mixins_bootstrap-v3/gradients";
-@forward "./mixins_bootstrap-v3/clearfix";
-@forward "./mixins_bootstrap-v3/center-block";
 @forward "./mixins_bootstrap-v3/nav-vertical-align";
 
-@forward "./mixins_bootstrap-v4/_breakpoints";
+// @forward "./mixins_bootstrap-v4/_breakpoints";
 @forward "./mixins_bootstrap-v3/grid";
 
 
@@ -42,6 +37,11 @@
 @forward "./mixins_bootstrap-v4/_box-shadow";
 @forward "./mixins_bootstrap-v4/_reset-text";
 
+@forward "./mixins/_image";
+@forward "./mixins/_clearfix";
+@forward "./mixins/_gradients";
+@forward "./mixins/_progress-bar";
+@forward "./mixins/_center-block";
 @forward "./mixins/_placeholder";
 @forward "./mixins/_transition";
 @forward "./mixins/_keyframes";

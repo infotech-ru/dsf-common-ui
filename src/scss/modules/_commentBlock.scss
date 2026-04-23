@@ -9,7 +9,7 @@
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-placeholder' as varplaceholder;
 
-@use './../utilities/mixins_bootstrap-v3/clearfix' as clearfix;
+@use './../utilities/mixins/clearfix' as clearfix;
 @use './../utilities/mixins/placeholder' as placeholder;
 
 .comment-block {

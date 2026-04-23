@@ -112,7 +112,6 @@
     padding: #{val.modalSizes(modal_paddingY)}px #{val.modalSizes(modal_paddingXR)}px #{val.modalSizes(modal_paddingY)}px #{val.modalSizes(modal_paddingX)}px;
     position: relative;
 
-    // @include clearfix;
     .close {
         appearance: none;
         background-color: transparent;
@@ -187,7 +186,7 @@
     padding: #{val.modalSizes(modal_paddingY)}px #{val.modalSizes(modal_paddingX)}px;
     text-align: right; // right align buttons
 
-    // @include clearfix; // clear it in case folks use .pull-* classes on buttons
+    // clear it in case folks use .pull-* classes on buttons
     [class*="btn"]:first-child:last-child {
         margin-left: auto;
     }

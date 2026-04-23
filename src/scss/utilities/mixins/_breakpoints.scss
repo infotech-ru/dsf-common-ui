@@ -1,8 +1,7 @@
 @use 'sass:map';
 @use 'sass:math';
-@use '../mixins_bootstrap-v3/clearfix' as clearfix;
-@use '../mixins_bootstrap-v4/grid' as grid;
-@use '../mixins_bootstrap-v4/breakpoints' as breakpoints;
+@use '../mixins/clearfix' as clearfix;
+// @use '../mixins_bootstrap-v4/grid' as grid;
 @use '../variables/var-bootstrap-v3' as varbootstrapv3;
 @use '../variables/var-bootstrapBool' as bootstrapbool;
 
@@ -15,7 +14,7 @@
     padding-left:  ($gutter * .5);
   } @else {
     @each $breakpoint in map.keys($gutters) {
-      @include breakpoints.media-breakpoint-up($breakpoint) {
+      @include media-breakpoint-up($breakpoint) {
         $gutter: map.get($gutters, $breakpoint);
         padding-right: ($gutter * .5);
         padding-left:  ($gutter * .5);
@@ -117,7 +116,7 @@
       }
     }
 
-    @include breakpoints.media-breakpoint-up($breakpoint, $breakpoints) {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
       @if varbootstrapv3.$enable-grid-flex {
         @if $breakpoint == '' {
           .col {
@@ -236,8 +235,51 @@
   }
 }
 
+@function breakpoint-next($name, $breakpoints: varbootstrapv3.$grid-breakpoints, $breakpoint-names: map.keys($breakpoints)) {
+  @if $breakpoint-names == null {
+    $breakpoint-names: map.keys($breakpoints);
+  }
+
+  $n: list.index($breakpoint-names, $name);
+
+  @if $n != null and $n < list.length($breakpoint-names) {
+    @return list.nth($breakpoint-names, $n + 1);
+  }
+  
+  @return null;
+}
+
+@function breakpoint-min($name, $breakpoints: varbootstrapv3.$grid-breakpoints) {
+  // Проверяем, существует ли брейкпоинт
+  @if not map.has-key($breakpoints, $name) {
+    @warn "Breakpoint `#{$name}` not found in $breakpoints map.";
+    @return null;
+  }
+  
+  $min: map.get($breakpoints, $name);
+  
+  // Возвращаем null для нулевого значения (обычно для xs/mobile)
+  @if $min == 0 {
+    @return null;
+  }
+  
+  @return $min;
+}
+@function breakpoint-max($name, $breakpoints: varbootstrapv3.$grid-breakpoints) {
+  $next: breakpoint-next($name, $breakpoints);
+  
+  @if $next {
+    $min-next: breakpoint-min($next, $breakpoints);
+    
+    @if meta.type-of($min-next) == 'number' and $min-next > 0 {
+      @return $min-next - 0.02;
+    }
+  }
+  
+  @return null;
+}
 @function breakpointInfix($name, $breakpoints: varbootstrapv3.$grid-breakpoints) {
-  @if breakpoints.breakpoint-min($name, $breakpoints) == null {
+  @if breakpoint-min($name, $breakpoints) == null {
     @return "";
   }
   
@@ -250,7 +292,7 @@
     $gutters: map.get($gutter, $infix);
     $widths: map.get($max-widths, $infix);
     @if not varbootstrapv3.$grid-gutter-width-base-equal{
-      @include breakpoints.media-breakpoint-up($breakpoint, $breakpoints) {
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
         @if ($gutters == null){
           padding-right: $gutters;
           padding-left: $gutters;
@@ -263,7 +305,7 @@
       }
     }
     @else{
-      @include breakpoints.media-breakpoint-up($breakpoint, $breakpoints) {
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
         max-width: $widths;
       }
     }
@@ -279,7 +321,7 @@
   }
   @if not varbootstrapv3.$grid-gutter-width-base-equal { // @todo доработать при необходимости разных значений
     @each $breakpoint in map.keys($gutters) {
-      @include breakpoints.media-breakpoint-up($breakpoint) {
+      @include media-breakpoint-up($breakpoint) {
         $gutter: map.get($gutters, $breakpoint);
         margin-right: ($gutter * -.5);
         margin-left:  ($gutter * -.5);
@@ -289,5 +331,74 @@
   @else{
     margin-right: ($gutters * -.5);
     margin-left:  ($gutters * -.5);
+  }
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: varbootstrapv3.$grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin media-breakpoint-down($name, $breakpoints: varbootstrapv3.$grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: varbootstrapv3.$grid-breakpoints) {
+  $min: breakpoint-min($lower, $breakpoints);
+  $max: breakpoint-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@mixin media-breakpoint-only($name, $breakpoints: varbootstrapv3.$grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($name, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($name, $breakpoints) {
+      @content;
+    }
   }
 }

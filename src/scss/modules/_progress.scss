@@ -6,13 +6,8 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-bootstrap-v3' as *;
-// @use './../utilities/variables/var-sizes' as *;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-lineHeights' as *;
 
-@use "./../utilities/mixins_bootstrap-v3/_gradients" as gradients;
-// @use "./../utilities/mixins_bootstrap-v3/_progress-bar" as progressbar;
+@use "./../utilities/mixins/_gradients" as gradients;
 @use "./../utilities/mixins/_transition" as transition;
 
 // Spec and IE10+

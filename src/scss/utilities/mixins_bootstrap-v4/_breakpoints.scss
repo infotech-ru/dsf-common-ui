@@ -3,6 +3,8 @@
 @use 'sass:meta';
 @use './../variables/var-bootstrap-v3' as varbootstrapv3;
 
+@warn "⚠️ Файл '_breakpoints.scss' устарел и будет удалён в следующих релизах. Используйте 'mixins/_breakpoints.scss'.";
+
 // Breakpoint viewport sizes and media queries.
 //
 // Breakpoints are defined as a map of (name: minimum width), order from small to large:

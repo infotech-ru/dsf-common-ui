@@ -9,13 +9,8 @@
 @use "sass:math";
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
 @use './../utilities/variables/var-bootstrap-v4' as varbootstrapv4;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-sizes' as *;
-// @use './../utilities/variables/var-zindex' as *;
-// @use './../utilities/variables/var-fonts' as *;
-@use './../utilities/mixins_bootstrap-v3/clearfix' as clearfix;
+@use './../utilities/mixins/clearfix' as clearfix;
 @use './../utilities/mixins/transition' as transition;
 
 .carousel {

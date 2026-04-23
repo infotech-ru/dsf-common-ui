@@ -2,11 +2,11 @@ const sass = require('sass');
 const tilde_importer = require("grunt-sass-tilde-importer");
 const {babel} = require("@rollup/plugin-babel");
 const resolve = require("@rollup/plugin-node-resolve").default;
-const nodeGlobals = require("rollup-plugin-node-globals");
+const inject = require("@rollup/plugin-inject");
 const commonjs = require("@rollup/plugin-commonjs");
 const replace = require("@rollup/plugin-replace");
 const env = process.env.NODE_ENV || "development";
-const {terser} = require("rollup-plugin-terser");
+const {terser} = require("@rollup/plugin-terser");
 
 module.exports = function (grunt) {
     grunt.initConfig({
@@ -94,20 +94,20 @@ module.exports = function (grunt) {
                 transform: [
                   {svgo: {
                     plugins: [
-                      {cleanupAttrs: false},
-                      {mergeStyles: false},
-                      {inlineStyles: true},
-                      {mergePaths: false},
-                      {convertStyleToAttrs: true},
-                      {convertPathData: false},
-                      {convertTransform: false},
-                      {removeUnusedNS: false},
-                      {removeEditorsNSData: false},
-                      {removeEmptyAttrs: false},
-                      {removeHiddenElems: false},
-                      {minifyStyles: false},
-                      {removeUselessStrokeAndFill: false},
-                      {removeStyleElement: false}
+                      {name: 'cleanupAttrs', active: false },
+                      {name: 'mergeStyles', active: false },
+                      {name: 'inlineStyles', active: true },
+                      {name: 'mergePaths', active: false },
+                      {name: 'convertStyleToAttrs', active: true },
+                      {name: 'convertPathData', active: false },
+                      {name: 'convertTransform', active: false },
+                      {name: 'removeUnusedNS', active: false },
+                      {name: 'removeEditorsNSData', active: false },
+                      {name: 'removeEmptyAttrs', active: false },
+                      {name: 'removeHiddenElems', active: false },
+                      {name: 'minifyStyles', active: false },
+                      {name: 'removeUselessStrokeAndFill', active: false },
+                      {name: 'removeStyleElement', active: false }
                     ]
                   }}
                 ],
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
                 spacing: {        // Add padding
                   padding: 0
                 },
-                dest: './intermediate-svg'  // Keep the intermediate files
+                // dest: './intermediate-svg'  // Keep the intermediate files
               },
               svg: {
                 namespaceClassnames: false
@@ -126,9 +126,10 @@ module.exports = function (grunt) {
               mode: {
                 symbol: { // Activate the symbol mode
                   bust: false,
-                  render: {
-                    scss: true,
-                  },
+                //   render: {
+                    // scss: true,
+                    // dest: 'dist/symbol/sprite.scss'
+                //   },
                   inline: false,
                   sprite: 'sprite.symbol.svg',
                   dimensions: false,
@@ -145,7 +146,8 @@ module.exports = function (grunt) {
             options: {
                 implementation: sass,
                 sourceMap: false,
-                importer: tilde_importer
+                importer: tilde_importer,
+                api: 'modern'
             },
             default: {
                 files: {
@@ -175,29 +177,28 @@ module.exports = function (grunt) {
                     resolve(),
                     babel({
                         compact: false,
-                        babelHelpers: "external",
-                        presets: [
-                            [
-                                "@babel/preset-env",
-                                {
-                                    modules: false
-                                }
-                            ]
-                        ],
+                        babelHelpers: "bundled",
+                        presets: [["@babel/preset-env", { modules: false }]],
                         plugins: [
                             "@babel/plugin-proposal-object-rest-spread",
-                            "@babel/plugin-external-helpers",
                             "@babel/plugin-transform-destructuring"
                         ]
                     }),
-                    nodeGlobals(),
+                    inject({
+                        // Эта опция заменит все упоминания `process` в коде
+                        process: 'process-es6', // [4†L18-L20]
+                        // Эта опция заменит все упоминания `Buffer` в коде
+                        Buffer: ['buffer-es6', 'Buffer'],
+                        // Вы можете добавить и другие глобальные переменные, если нужно
+                        // global: [path.resolve('src/polyfills/global.js'), 'default'],
+                    }),
                     commonjs(),
                     replace({
                         preventAssignment: true,
                         "process.env.NODE_ENV": JSON.stringify(env)
                     }),
-                    (env === "production" && terser({mangle: false})),
-                ],
+                    env === "production" ? terser({ mangle: false }) : null
+                ].filter(Boolean),
             },
             default: {
                 options: {
