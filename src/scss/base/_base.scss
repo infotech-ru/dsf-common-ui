@@ -166,7 +166,7 @@ mark,
 
 dl {
   margin-top: 0;
-  margin-bottom: fonts.rem(val.brandSizes(base_paddingSize));
+  margin-bottom: fonts.rem(val.brandSizes(base_gridSize));
 }
 dt,
 dd {
@@ -180,8 +180,8 @@ dd {
 }
 
 blockquote {
-  padding: fonts.rem(math.div(val.brandSizes(base_paddingSize), 2)) fonts.rem(val.brandSizes(base_paddingSize));
-  margin: 0 0 fonts.rem(val.brandSizes(base_paddingSize));
+  padding: fonts.rem(math.div(val.brandSizes(theme_paddingSize), 2)) fonts.rem(val.brandSizes(theme_paddingSize));
+  margin: 0 0 fonts.rem(val.brandSizes(base_gridSize));
   font-size: fonts.rem(val.fontSizes(blockquote));
   border-left: 5px solid val.brandPalette(blockquote_borderColor);
 

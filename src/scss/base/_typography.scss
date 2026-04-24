@@ -33,7 +33,7 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   // margin-top: $line-height-computed;
-  margin-bottom: fonts.rem(val.brandSizes(base_paddingSize));
+  margin-bottom: fonts.rem(val.brandSizes(base_gridSize));
   small,
   .small {
     font-size: 65%;

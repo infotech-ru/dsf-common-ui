@@ -18946,12 +18946,44 @@ tbody.collapse.in {
   padding-left: 5rem;
 }
 
-.pl-base {
-  padding-left: 0.625rem;
+.pt-base {
+  padding-top: 0.625rem;
 }
 
 .pr-base {
   padding-right: 0.625rem;
+}
+
+.pb-base {
+  padding-bottom: 0.625rem;
+}
+
+.pl-base {
+  padding-left: 0.625rem;
+}
+
+.padding-base {
+  padding: 0.625rem;
+}
+
+.pt-theme {
+  padding-top: 0.625rem;
+}
+
+.pr-theme {
+  padding-right: 0.625rem;
+}
+
+.pb-theme {
+  padding-bottom: 0.625rem;
+}
+
+.pl-theme {
+  padding-left: 0.625rem;
+}
+
+.padding-theme {
+  padding: 0.625rem;
 }
 
 .gap-0 {
@@ -19035,6 +19067,10 @@ tbody.collapse.in {
 }
 
 .gap-base {
+  gap: 0.625rem;
+}
+
+.gap-theme {
   gap: 0.625rem;
 }
 

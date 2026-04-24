@@ -4,14 +4,18 @@ $brand-sizes: (
   base_marginSize:                 baseValue.$base-gutter,
   base_gridSize:                   baseValue.$base-grid-gutter,
   base_paddingSize:                baseValue.$base-padding,
+  
   border-radius-base:              baseValue.$base-radius,
   border-radius-base__big:         baseValue.$base-radius__big,
   border-radius-large:             6,
+  
   caret_size:                      6,
   caretDropdown_size:              4,
   caretSelect_size:                16,
   
   chartBlock_padding:              baseValue.$base-gutter,
+
+  theme_paddingSize:               baseValue.$base-gutter,
 
   disabel_opacity:                 0.5,
   dlHorizontalOffset:              180,

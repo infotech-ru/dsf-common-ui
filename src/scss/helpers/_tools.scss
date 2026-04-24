@@ -305,11 +305,36 @@
   }
 }
 
-.pl-base{
-  padding-left: fonts.rem(val.brandSizes(base_paddingSize));
+.pt-base{
+  padding-top: fonts.rem(val.brandSizes(base_paddingSize));
 }
 .pr-base{
   padding-right: fonts.rem(val.brandSizes(base_paddingSize));
+}
+.pb-base{
+  padding-bottom: fonts.rem(val.brandSizes(base_paddingSize));
+}
+.pl-base{
+  padding-left: fonts.rem(val.brandSizes(base_paddingSize));
+}
+.padding-base{
+  padding: fonts.rem(val.brandSizes(base_paddingSize));
+}
+
+.pt-theme{
+  padding-top: fonts.rem(val.brandSizes(theme_paddingSize));
+}
+.pr-theme{
+  padding-right: fonts.rem(val.brandSizes(theme_paddingSize));
+}
+.pb-theme{
+  padding-bottom: fonts.rem(val.brandSizes(theme_paddingSize));
+}
+.pl-theme{
+  padding-left: fonts.rem(val.brandSizes(theme_paddingSize));
+}
+.padding-theme{
+  padding: fonts.rem(val.brandSizes(theme_paddingSize));
 }
 
 @each $gapSize in sizes.$gapSizes {
@@ -323,6 +348,9 @@
 
 .gap-base{
   gap: fonts.rem(val.brandSizes(base_paddingSize));
+}
+.gap-theme{
+  gap: fonts.rem(val.brandSizes(theme_paddingSize));
 }
 
 @each $posName, $posSize in sizes.$posSizes {
