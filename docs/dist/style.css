@@ -18326,12 +18326,24 @@ tbody.collapse.in {
   margin-bottom: 0.625rem;
 }
 
-.mb-base {
+.mt-base {
+  margin-top: 0.625rem;
+}
+
+.mb-gutter {
   margin-bottom: 0.625rem;
 }
 
-.mt-base {
+.mt-gutter {
   margin-top: 0.625rem;
+}
+
+.ml-gutter {
+  margin-left: 0.625rem;
+}
+
+.mr-gutter {
+  margin-right: 0.625rem;
 }
 
 .padding-0 {

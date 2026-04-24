@@ -2,6 +2,7 @@
 
 $brand-sizes: (
   base_marginSize:                 baseValue.$base-gutter,
+  base_gridSize:                   baseValue.$base-grid-gutter,
   base_paddingSize:                baseValue.$base-padding,
   border-radius-base:              baseValue.$base-radius,
   border-radius-base__big:         baseValue.$base-radius__big,
