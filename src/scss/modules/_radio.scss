@@ -76,7 +76,7 @@
 }
 
 .radio-item {
-    padding-left: fonts.rem(val.radioSizes(radioItem_size) + val.radioSizes(radioItemBorder_size) + val.radioSizes(radioItem_paddingText));
+    // padding-left: fonts.rem(val.radioSizes(radioItem_size) + val.radioSizes(radioItemBorder_size) + val.radioSizes(radioItem_paddingText)); // @warn теперь :before участвует в потоке
     position: relative;
     &.checked label.radio,
     label.radio.checked,
@@ -86,6 +86,7 @@
             // background-color: var(--radioItem-color, #{val.brandRadioItem(radioItem-active_bg)}); // @warn т.к. нет after и теперь не нужна.
             background-color: val.brandRadioItem(radioItemDotActive); //@warn теперь вместо :after
             border-color: var(--radioItem-color, #{val.brandRadioItem(radioItem-active_bg)}); //@warn теперь вместо bg
+            border-width: fonts.rem((val.radioSizes(radioItem_size) - (val.radioSizes(radioItemBorder_size) * 2) - val.radioSizes(radioItemDot_size)) * .5); //@warn выолняет роль radioItemDotActive
             outline-color: var(--radioItem-color, #{val.brandRadioItem(radioItem-active_border)}); //@warn теперь вместо border
         }
         // &:after{
@@ -134,7 +135,7 @@
                 background-color: val.brandRadioItem(radioItem_bg);
                 border-color: val.brandRadioItem(radioItem_border);
                 border-style: solid;
-                border-width: fonts.rem((val.radioSizes(radioItem_size) - (val.radioSizes(radioItemBorder_size) * 2) - val.radioSizes(radioItemDot_size)) * .5); //@warn выолняет роль radioItemDotActive
+                border-width: 0; //@warn выолняет роль radioItemDotActive
                 content: " ";
                 display: block;
                 height: fonts.rem(val.radioSizes(radioItem_size) - (val.radioSizes(radioItemBorder_size) * 2)); //@warn т.к outline вне расчетов
@@ -143,7 +144,7 @@
                 // margin-top: fonts.rem(-(val.radioSizes(radioItem_size) * 0.5)); //@warn теперь участвует в потоке, чрезмерно
                 min-width: fonts.rem(val.radioSizes(radioItem_size) - (val.radioSizes(radioItemBorder_size) * 2)); //@warn т.к у родителя flex
                 outline: fonts.rem(val.radioSizes(radioItemBorder_size)) solid val.brandRadioItem(radioItem_border); //@warn вместо border
-                position: relative; // теперь участвует в потоке
+                position: relative; //@warn теперь участвует в потоке
                 // top: 50%; //@warn теперь участвует в потоке, чрезмерно
                 width: fonts.rem(val.radioSizes(radioItem_size) - (val.radioSizes(radioItemBorder_size) * 2)); //@warn т.к outline вне расчетов
             }

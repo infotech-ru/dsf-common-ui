@@ -8818,7 +8818,6 @@ input[type=checkbox][disabled] {
 }
 
 .radio-item {
-  padding-left: 1.25rem;
   position: relative;
 }
 .radio-item.checked label.radio,
@@ -8831,6 +8830,7 @@ input[type=checkbox][disabled] {
 .radio-item input[type=radio]:checked + label.radio:before {
   background-color: #ffffff;
   border-color: var(--radioItem-color, #4A8DC6);
+  border-width: 0.1875rem;
   outline-color: var(--radioItem-color, #1E6393);
 }
 .radio-item input[type=radio] {
@@ -8867,7 +8867,7 @@ input[type=checkbox][disabled] {
   background-color: #ffffff;
   border-color: #cccccc;
   border-style: solid;
-  border-width: 0.1875rem;
+  border-width: 0;
   content: " ";
   display: block;
   height: 0.75rem;
