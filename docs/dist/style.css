@@ -8883,16 +8883,27 @@ input[type=checkbox][disabled] {
   line-height: 0.875rem;
   vertical-align: middle;
 }
-.radio-item__frame {
-  border: 2px solid #dddddd;
-  border-radius: 1;
+.radio-item.radio-item__frame {
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 0;
   --radioItem-color: var(--border_color);
   --radioItem-bgc: var(--bg_color);
+  --radioItem-borderStyle: var(--style_border);
+  --radioItem-borderWidth: var(--width_border__modify);
+  --radioItem-bordeColor: var(--border_color, #dddddd);
 }
-.radio-item__frame input[type=radio]:checked + label.radio {
+.radio-item.radio-item__frame input[type=radio]:checked + label.radio {
   background-color: var(--radioItem-bgc);
 }
-.radio-item__frame label.radio:before {
+.radio-item.radio-item__frame label.radio {
+  border-color: var(--radioItem-bordeColor);
+  border-radius: 0.0625rem;
+  border-style: var(--radioItem-borderStyle, "solid");
+  border-width: var(--radioItem-borderWidth);
+  padding: 0.625rem;
+}
+.radio-item.radio-item__frame label.radio:before {
   margin-right: 0.625rem;
 }
 .radio-item .theme-color {
@@ -23344,13 +23355,16 @@ tbody.collapse.in {
 
 .text-base {
   color: #333333;
+  --text_color: #333333;
 }
 .text-base:hover, .text-base:focus-visible, .text-base:focus {
   color: #333333;
+  --text_color: #333333;
 }
 
 .border-base {
   border-color: #dddddd;
+  --border_color: #dddddd;
 }
 
 .zindex-0 {

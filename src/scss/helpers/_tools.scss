@@ -1049,14 +1049,17 @@
 
 .text-base{
     color: val.brandPalette(body_color);
+    #{--text_color}: val.brandPalette(body_color);
     &:hover,
     &:focus-visible,
     &:focus{
-      color: val.brandPalette(body_color);
+        color: val.brandPalette(body_color);
+        #{--text_color}: val.brandPalette(body_color);
     }
 }
 .border-base{
     border-color: colors.$base_border;
+    #{--border_color}: colors.$base_border;
 }
 
 .zindex-0{

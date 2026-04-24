@@ -172,15 +172,24 @@
             }
         }
     }
-    &__frame{
-        border: 2px solid val.brandPalette(border);
-        border-radius: val.brandSizes(border-radius-base);
+    &.radio-item__frame{
+        background-color: transparent;
+        border-color: transparent;
+        border-width: 0;
         --radioItem-color: var(--border_color);
         --radioItem-bgc: var(--bg_color);
+        --radioItem-borderStyle: var(--style_border);
+        --radioItem-borderWidth: var(--width_border__modify);
+        --radioItem-bordeColor: var(--border_color, #{val.brandPalette(border)});
         input[type=radio]:checked + label.radio{
             background-color: var(--radioItem-bgc);
         }
         label.radio {
+            border-color: var(--radioItem-bordeColor);
+            border-radius: fonts.rem(val.brandSizes(border-radius-base));
+            border-style: var(--radioItem-borderStyle, 'solid');
+            border-width: var(--radioItem-borderWidth);
+            padding: fonts.rem(val.radioSizes(radioItemFrame_padding));
             &:before{
                 margin-right: fonts.rem(val.radioSizes(radioItemFrame_paddingText));
             }

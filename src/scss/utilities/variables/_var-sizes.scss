@@ -126,6 +126,7 @@ $radio-sizes:(
   radioItem_size:                  14,
   radioItem_paddingText:           5,
   radioItemFrame_paddingText:      baseValue.$base-gutter,
+  radioItemFrame_padding:          baseValue.$base-gutter,
   radioItemBorder_size:            1,
   radioItemDot_size:               6,
 )!default;
