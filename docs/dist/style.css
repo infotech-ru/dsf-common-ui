@@ -8903,6 +8903,7 @@ input[type=checkbox][disabled] {
   border-width: var(--radioItem-borderWidth);
   color: var(--radioItem-color);
   padding: 0.625rem;
+  height: 100%;
 }
 .radio-item.radio-item__frame label.radio:before {
   margin-right: 0.625rem;

@@ -191,6 +191,7 @@
             border-width: var(--radioItem-borderWidth);
             color: var(--radioItem-color);
             padding: fonts.rem(val.radioSizes(radioItemFrame_padding));
+            height: 100%;
             &:before{
                 margin-right: fonts.rem(val.radioSizes(radioItemFrame_paddingText));
             }
