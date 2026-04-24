@@ -8899,7 +8899,7 @@ input[type=checkbox][disabled] {
 .radio-item.radio-item__frame label.radio {
   border-color: var(--radioItem-bordeColor);
   border-radius: 0.0625rem;
-  border-style: var(--radioItem-borderStyle, "solid");
+  border-style: var(--radioItem-borderStyle, solid);
   border-width: var(--radioItem-borderWidth);
   color: var(--radioItem-color);
   padding: 0.625rem;

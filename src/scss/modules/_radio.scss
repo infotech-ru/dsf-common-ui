@@ -187,7 +187,7 @@
         label.radio {
             border-color: var(--radioItem-bordeColor);
             border-radius: fonts.rem(val.brandSizes(border-radius-base));
-            border-style: var(--radioItem-borderStyle, 'solid');
+            border-style: var(--radioItem-borderStyle, solid);
             border-width: var(--radioItem-borderWidth);
             color: var(--radioItem-color);
             padding: fonts.rem(val.radioSizes(radioItemFrame_padding));
