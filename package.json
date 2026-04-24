@@ -1,13 +1,16 @@
 {
   "name": "dsf-common-ui",
   "version": "1.6.179",
-  "description": "Styles, scripts, vectors for DNM, CRM, DSF projects",
+  "description": "Styles, scripts, vectors for DNM, CRM, projects",
   "author": "Infotech teams",
   "repository": "github:infotech-ru/dsf-common-ui",
   "bugs": "https://github.com/infotech-ru/dsf-common-ui/issues",
   "contributors": [
     "Alexey Gorbachev tov.Bender <bend.r.bender@gmail.com>"
   ],
+  "engines": {
+    "node": "^25.9"
+  },
   "devDependencies": {
     "@babel/cli": "^7.28.6",
     "@babel/core": "^7.29.0",

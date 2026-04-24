@@ -3,7 +3,6 @@
 @use './../functions/func_maps' as maps;
 @use './../mixins/assert' as assert;
 @use './../variables/_var-bootstrapColors' as varBootstrapColors;
-// @use './../variables/var-bootstrapSizes' as varBootstrapSizes;
 
 $bootstrap-sass-asset-helper: false !default;
 
