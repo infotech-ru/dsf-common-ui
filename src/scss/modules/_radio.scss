@@ -176,7 +176,7 @@
         background-color: transparent;
         border-color: transparent;
         border-width: 0;
-        --radioItem-color: var(--border_color);
+        --radioItem-color: var(--text_color);
         --radioItem-bgc: var(--bg_color);
         --radioItem-borderStyle: var(--style_border);
         --radioItem-borderWidth: var(--width_border__modify);
@@ -189,6 +189,7 @@
             border-radius: fonts.rem(val.brandSizes(border-radius-base));
             border-style: var(--radioItem-borderStyle, 'solid');
             border-width: var(--radioItem-borderWidth);
+            color: var(--radioItem-color);
             padding: fonts.rem(val.radioSizes(radioItemFrame_padding));
             &:before{
                 margin-right: fonts.rem(val.radioSizes(radioItemFrame_paddingText));
