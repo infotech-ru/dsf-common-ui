@@ -870,13 +870,13 @@
     }
   }
   &-left{
-    --width_border-left: 1px;
     border-left-color: val.brandPalette(border);
     border-left-style: solid;
     border-left-width: var(--width_border-left, 1px);
+    --width_border-left: 1px;
     &__none {
-      --width_border-left: 0;
       border-left: none !important;
+      --width_border-left: 0;
       &__mobile{ 
         .mobile-view &{
           border-left: none !important;
@@ -919,8 +919,8 @@
     }
   }
   &__none{
-    --width_border: 0px;
     border: none !important;
+    --width_border: 0px;
     &__mobile{ 
       .mobile-view &{
         border: none !important;
@@ -940,8 +940,8 @@
     --width_border__modify: 2px;
     &__mobile{ 
       .mobile-view &{
-        --width_border__modify: 2px;
         border-width: 2px;
+        --width_border__modify: 2px;
       }
     }
   }
@@ -1001,14 +1001,6 @@
     #{--text_color}: #{$value};
     #{--svg-valute-fill}: #{$value};
   }
-.text-base{
-  color: val.brandPalette(body_color);
-  &:hover,
-  &:focus-visible,
-  &:focus{
-    color: val.brandPalette(body_color);
-  }
-}
   .textHover-#{$name}{
     &:hover,
     .textHoverTarget:hover &{
@@ -1053,6 +1045,18 @@
     border-left-color: #{$value};
     #{--border_left_color}: #{$value};
   }
+}
+
+.text-base{
+    color: val.brandPalette(body_color);
+    &:hover,
+    &:focus-visible,
+    &:focus{
+      color: val.brandPalette(body_color);
+    }
+}
+.border-base{
+    border-color: colors.$base_border;
 }
 
 .zindex-0{

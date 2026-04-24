@@ -7,11 +7,6 @@
 
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/mixins/svg-icon' as *;
-// @use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
-// @use './../utilities/variables/var-sizes' as *;
-// @use './../utilities/variables/var-colors' as *;
-// @use './../utilities/variables/var-lineHeights' as *;
 
 .radioCheck{
     padding-left: 0px;
@@ -88,8 +83,8 @@
     input[type=radio]:checked + label.radio{
         font-weight: normal;
         &:before {
-            background-color: val.brandRadioItem(radioItem-active_bg);
-            border-color: val.brandRadioItem(radioItem-active_border);
+            background-color: var(--radioItem-color, #{val.brandRadioItem(radioItem-active_bg)});
+            border-color: var(--radioItem-color, #{val.brandRadioItem(radioItem-active_border)});
         }
         &:after{
             display: block;
@@ -166,5 +161,11 @@
                 vertical-align: middle;
             }
         }
+    }
+    &__frame{
+        --radioItem-color: var(--border_color);
+    }
+    .theme-color{
+        color: var(--radioItem-color);
     }
 }

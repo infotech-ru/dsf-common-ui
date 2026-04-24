@@ -52,7 +52,7 @@ $brand-palette: map.merge((
   body_color:                             $base_color,
   blockquote_borderColor:                 map.get($brand-colors, _light-grey3),
   blockquote_color:                       map.get($brand-colors, _grey4),
-  border:                                 map.get($brand-colors, _grey),
+  border:                                 $base_border,
 
   code_bgc:                               map.get($brand-colors, _light-grey2),
   code_color:                             $base_color,
