@@ -10220,6 +10220,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-xs,
 .btn-small {
+  border-radius: 0.0625rem;
   border-radius: 1px;
   font-size: 0.625rem;
   line-height: 1.125rem;
@@ -10228,8 +10229,9 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn__large {
   border-radius: 0.0625rem;
+  border-width: 0.125rem;
   font-size: 0.875rem;
-  line-height: 1.875rem;
+  line-height: 3rem;
   padding: 0px 15px;
 }
 
@@ -10365,7 +10367,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn__abs {
-  margin-top: -13.5px;
+  margin-top: -14px;
   position: absolute;
   top: 50%;
 }
@@ -13215,7 +13217,7 @@ select.selectpicker {
 }
 
 .btn-group > .btn-large {
-  line-height: 1.875rem;
+  line-height: 3rem;
 }
 
 .btn-group > [class*=btn] + .dropdown-toggle {

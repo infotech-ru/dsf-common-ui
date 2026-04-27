@@ -20,7 +20,7 @@
 fieldset {
     padding: 0 12px 8px;
     border: 1px solid #C0C0C0;
-    border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+    border-radius: fonts.rem(val.formsSizes(formElem_borderRadius));
 }
 
 legend {
@@ -51,8 +51,8 @@ input[type="checkbox"] {
   }
 }
 select.input-sm {
-    line-height: fonts.rem(calc(val.lineHeight(btn) + 2));
-    height: fonts.rem(calc(val.lineHeight(btn) + 2));
+    line-height: fonts.rem(val.formsSizes(formElem_height));
+    height: fonts.rem(val.formsSizes(formElem_height));
 }
 
 output {
@@ -87,7 +87,7 @@ output {
       font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
       left: 0;
       // left: fonts.rem($paddinFromLeft * -1);
-      line-height: fonts.rem(val.formsSizes(formControl_height));
+      line-height: fonts.rem(val.formsSizes(formElem_height));
       padding-left: fonts.rem(val.formsSizes(formControl_paddingX));
       // padding-right: fonts.rem(calc(val.formsSizes(formControl_paddingX) + 5));
       padding-right: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
@@ -183,13 +183,13 @@ output {
   display: block;
   font-size: fonts.rem(val.fontSizes(formElem));
   font-weight: val.fontWeight(formElem);
-  height: fonts.rem(val.formsSizes(formControl_height));
-  line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
+  height: fonts.rem(val.formsSizes(formElem_height));
+  line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
   padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   transition: baseValue.$base-transition_form;
   width: 100%;
-  #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize));
-  #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem));
+  #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize));
+  #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius));
 
   // Customize the `:focus` state to imitate native WebKit styles.
   @include placeholder.placeholder2(val.brandForms(formControl-placeholder), 400, 12);
@@ -326,20 +326,20 @@ output {
     }
   }
   &__large{
-    height: fonts.rem(val.formsSizes(formControl_height__big));
-    line-height: fonts.rem(val.formsSizes(formControl_height__big) - (val.formsSizes(formControl_borderSize) * 2));
-    padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__big));
-    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize__big));
-    #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem__big));
+    height: fonts.rem(val.formsSizes(formElem_height__lg));
+    line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
+    padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__lg));
+    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+    #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
   }
   // [converter] extracted textarea& to textarea.form-control
 }
 
 textarea.form-control {
-  border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+  border-radius: fonts.rem(val.formsSizes(formElem_borderRadius));
   height: auto;
   line-height: fonts.rem(calc(val.fontSizes(formElem) + 2));
-  min-height: fonts.rem(val.formsSizes(formControl_height));
+  min-height: fonts.rem(val.formsSizes(formElem_height));
   padding: 6px fonts.rem(val.formsSizes(formControl_paddingX)) 2px;
   resize: vertical;
 }
@@ -359,10 +359,10 @@ textarea.form-control {
   input[type="datetime-local"],
   input[type="month"] {
     &.form-control {
-      line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
+      line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
     }
     &.form-control__big {
-      line-height: fonts.rem(val.formsSizes(formControl_height__big) - (val.formsSizes(formControl_borderSize__big) * 2));
+      line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize__lg) * 2));
     }
   }
 }
@@ -469,7 +469,7 @@ textarea.form-control {
   padding-right: 0;
   padding-left: 0;
   &__height{
-    height: fonts.rem(val.formsSizes(formControl_height));
+    height: fonts.rem(val.formsSizes(formElem_height));
   }
   .css-formFree &{ 
     padding-left: fonts.rem(val.formsSizes(formControl_paddingX));
@@ -648,7 +648,7 @@ textarea.form-control {
   flex-direction: column;
   width: 100%;
   &Container{
-    border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+    border-radius: fonts.rem(val.formsSizes(formElem_borderRadius));
     border: 1px solid val.brandForms(formControl-borderColor);
     display: flex;
     min-height: 36px;

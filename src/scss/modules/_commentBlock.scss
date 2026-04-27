@@ -208,7 +208,7 @@
     align-items: center;
     background-color: val.brandForms(formControl-bgc);
     border: 1px solid val.brandForms(formControl-borderColor);
-    border-radius: #{val.formsSizes(borderRadiusFormElem)}px;
+    border-radius: #{val.formsSizes(formElem_borderRadius)}px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -220,7 +220,7 @@
         align-items: flex-start;
         height: auto;
         padding-top: 6px;
-        min-height: fonts.rem(val.formsSizes(formControl_height) * 2 - (val.formsSizes(formControl_borderSize) * 2));
+        min-height: fonts.rem(val.formsSizes(formElem_height) * 2 - (val.formsSizes(formElem_borderSize) * 2));
         // .btn-icon{ 
             // margin-top: 6px;
         // }
@@ -234,8 +234,8 @@
     color: val.brandForms(formControl-color);
     flex-basis: 100%;
     font-size: fonts.rem(val.fontSizes(formElem));
-    line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
-    height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
+    line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
+    height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
     padding: 0 fonts.rem(calc((val.btnSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
     resize: none;
     // resize: vertical;
@@ -246,7 +246,7 @@
     }
     .commentBlock_inputGroup__bigHeight &{
         height: auto;
-        min-height: fonts.rem(val.formsSizes(formControl_height) * 2 - (val.formsSizes(formControl_borderSize) * 2));
+        min-height: fonts.rem(val.formsSizes(formElem_height) * 2 - (val.formsSizes(formElem_borderSize) * 2));
         line-height: fonts.rem(calc(val.fontSizes(formElem) + 2));
     }
     &__resizeVert{

@@ -74,7 +74,7 @@
 .btn-group > [class*="btn"],
 .btn-group-sm > .btn, // старые правила очищаем
 .btn-group-lg > .btn {
-  line-height: fonts.rem(val.lineHeight(btn));
+  line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
 }
 
 .btn-group > .btn-xs,
@@ -83,7 +83,7 @@
 }
 
 .btn-group > .btn-large {
-  line-height: fonts.rem(val.lineHeight(btnLg));
+  line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize__lg) * 2));
 }
 
 // Give the line between buttons some depth
@@ -214,14 +214,14 @@
 //     float: none;
 //     max-width: 100%;
     &:first-child:not(:last-child):not(.dropdown-toggle) {
-      border-top-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-top-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-top-left-radius: fonts.rem(val.formsSizes(formElem_borderRadius));
+      border-top-right-radius: fonts.rem(val.formsSizes(formElem_borderRadius));
       @include borderradius.border-bottom-radius(0);
     }
     &:last-child:not(:first-child) {
       @include borderradius.border-top-radius(0);
-      border-bottom-right-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
-      border-bottom-left-radius: fonts.rem(val.formsSizes(borderRadiusFormElem));
+      border-bottom-right-radius: fonts.rem(val.formsSizes(formElem_borderRadius));
+      border-bottom-left-radius: fonts.rem(val.formsSizes(formElem_borderRadius));
     }
     & + [class*="btn"] {
       margin-left: 0;
@@ -399,11 +399,11 @@
   flex-wrap: wrap;
   position: relative;
   width: 100%;
-  #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize));
-  #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem));
+  #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize));
+  #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius));
   &__big{
-    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formControl_borderSize__big));
-    #{--formControl-borderRadius}: fonts.rem(val.formsSizes(borderRadiusFormElem__big));
+    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+    #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
   }
   .css-formFree & {
     align-items: stretch;
@@ -423,7 +423,7 @@
     margin-bottom: 0;
 
     +.form-control {
-      margin-left: #{calc(val.btnSizes(btn_borderWidth) * -1)}px;
+      margin-left: #{calc(val.formsSizes(formElem_borderSize) * -1)}px;
     }
   }
   >.form-control:focus {
@@ -572,12 +572,12 @@
   .inputGroup_text + .inputGroup_text,
   .inputGroup_inner + .inputGroup_inner,
   .inputGroup_inner + [class*="btn-"] {
-    margin-left: #{calc(val.btnSizes(btn_borderWidth) * -1)}px;
+    margin-left: #{calc(val.formsSizes(formElem_borderSize) * -1)}px;
   }
 }
 
 .inputGroup_prepend {
-  // margin-right: #{calc(val.btnSizes(btn_borderWidth) * -1)}px;
+  // margin-right: #{calc(val.formsSizes(formElem_borderSize) * -1)}px;
   margin-right: 0;
   .inputGroup_text,
   .inputGroup_inner {
@@ -607,7 +607,7 @@
 }
 
 .inputGroup_append {
-  // margin-left: #{calc(val.btnSizes(btn_borderWidth) * -1)}px;
+  // margin-left: #{calc(val.formsSizes(formElem_borderSize) * -1)}px;
   margin-left: 0;
   .inputGroup_text,
   .inputGroup_inner {
@@ -641,15 +641,15 @@
   display: flex;
   font-size: fonts.rem(val.fontSizes(inputGroupElem));
   font-weight: val.fontWeight(inputGroupElem);
-  // line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
-  // min-height: fonts.rem(val.formsSizes(formControl_height));
+  // line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
+  // min-height: fonts.rem(val.formsSizes(formElem_height));
   min-height: 100%;
   padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   margin-bottom: 0;
   text-align: center;
   white-space: nowrap;
   .inputGroup__big &{
-    padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__big));
+    padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__lg));
   }
 
   input[type="radio"],
@@ -687,9 +687,9 @@
   align-items: center;
   // background-color: val.brandForms(inputGroupEl-bgc);
   display: flex;
-  // line-height: fonts.rem(val.formsSizes(formControl_height) - (val.formsSizes(formControl_borderSize) * 2));
+  // line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
   margin-bottom: 0; 
-  // min-height: fonts.rem(val.formsSizes(formControl_height));
+  // min-height: fonts.rem(val.formsSizes(formElem_height));
   min-height: 100%;
   padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
   text-align: center;

@@ -1,17 +1,22 @@
+$base-body:                        12!default;
+$base-border__normal:              1!default;
+$base-border__large:               2!default;
 $base-gutter:                      10!default;
 $base-grid-gutter:                 10!default; // $grid-gutter-width
-$base-padding:                     10!default;
-$base-radius:                      1!default;
-$base-radius__small:               1!default;
-$base-radius__medium:              1!default;
-$base-radius__big:                 1!default;
-$base-body:                        12!default;
 $base-headingH1:                   24!default;
 $base-headingH2:                   18!default;
 $base-headingH3:                   16!default;
 $base-headingH4:                   12!default;
 $base-headingH5:                   14!default;
 $base-headingH6:                   12!default;
+$base-padding:                     10!default;
+$base-radius:                      1!default;
+$base-radius__small:               1!default;
+$base-radius__medium:              1!default;
+$base-radius__large:               1!default;
+// $base-size__small:                 26!default;
+$base-size__normal:                28!default;
+$base-size__large:                 52!default;
 
 $base-transition_form: border-color ease-in-out .15s, box-shadow ease-in-out .15s!default;
 $base-header-filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.25))!default;

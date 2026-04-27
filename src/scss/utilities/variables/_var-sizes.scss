@@ -6,7 +6,7 @@ $brand-sizes: (
   base_paddingSize:                baseValue.$base-padding,
   
   border-radius-base:              baseValue.$base-radius,
-  border-radius-base__big:         baseValue.$base-radius__big,
+  border-radius-base__big:         baseValue.$base-radius__large,
   border-radius-large:             6,
   
   caret_size:                      6,
@@ -22,7 +22,7 @@ $brand-sizes: (
   dropdownLink_minH:               36,
   dropdownLink_paddingX:           baseValue.$base-padding,
   navPills-paddingX:               9,
-  navPills-borderWidth:            1,
+  navPills-borderWidth:            baseValue.$base-border__normal,
   output_paddingY:                 7,
   square_height:                   64,
   unityBlock_bRadius:              baseValue.$base-radius,
@@ -42,10 +42,10 @@ $alert-sizes: (
 
 $btn-sizes: (
   btn_paddingX:                    baseValue.$base-padding,
-  btn_borderWidth:                 1,
-  btn_borderRadius:                baseValue.$base-radius__small,
   btnXs-paddingX:                  5,
   btnXs-paddingY:                  0,
+  // btnMd-paddingX:                  9,
+  // btnMd-paddingY:                  0,
   btnLg-paddingX:                  15,
   btnLg-paddingY:                  0,
   btnIcon_height:                  20,
@@ -67,17 +67,17 @@ $checkbox-sizes:(
 )!default;
 
 $forms-sizes:(
-  borderRadiusFormElem:            baseValue.$base-radius__small,
-  borderRadiusFormElem__big:       baseValue.$base-radius,
   controlLabel_mb:                 3,
   controlLabel_mr:                 5,
-  formControl_borderSize:          1,
-  formControl_borderSize__big:     2,
-  formControl_height:              28,
-  formControl_height__big:         52,
   formControl_paddingX:            7,
-  formControl_paddingX__big:       16,
+  formControl_paddingX__lg:        16,
   formControlStatic_paddingY:      7,
+  formElem_borderRadius:           baseValue.$base-radius__small,
+  formElem_borderRadius__lg:       baseValue.$base-radius,
+  formElem_borderSize:             baseValue.$base-border__normal,
+  formElem_borderSize__lg:         baseValue.$base-border__large,
+  formElem_height:                 baseValue.$base-size__normal,
+  formElem_height__lg:             baseValue.$base-size__large,
   formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
   formGroup__formFree_mb:          25,
   iconLabel:                       16,

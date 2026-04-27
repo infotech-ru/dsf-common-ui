@@ -8,23 +8,20 @@
 
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-sizes' as *;
 @use './../utilities/variables/var-colors' as colors;
-// @use './../utilities/variables/var-fonts' as *;
-// @use './../utilities/variables/var-lineHeights' as *;
 @use './../utilities/mixins_bootstrap-v3/vendor-prefixes' as vendorprefixes;
 
 %btn {
   background-image: none;
   border-style: solid;
   border-color: transparent;
-  border-width: #{val.btnSizes(btn_borderWidth)}px;
-  border-radius: #{val.btnSizes(btn_borderRadius)}px;
+  border-width: #{val.formsSizes(formElem_borderSize)}px;
+  border-radius: #{val.formsSizes(formElem_borderRadius)}px;
   cursor: pointer;
   display: inline-block;
   font-size: fonts.rem(val.fontSizes(btn));
   font-weight: val.fontWeight(btn);
-  line-height: fonts.rem(val.lineHeight(btn));
+  line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
   // height: min-content; не работает в сафари с <input>
   height: auto;
   margin-bottom: 0; // For input.btn
@@ -402,6 +399,7 @@ a.btn {
 
 .btn-xs,
 .btn-small {
+  border-radius: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
   border-radius: 1px;
   font-size: fonts.rem(val.fontSizes(btnXs));
   line-height: fonts.rem(val.lineHeight(btnXs));
@@ -409,9 +407,10 @@ a.btn {
 }
 
 .btn__large {
-  border-radius: fonts.rem(val.formsSizes(borderRadiusFormElem__big));
+  border-radius: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
+  border-width: fonts.rem(val.formsSizes(formElem_borderSize__lg));
   font-size: fonts.rem(val.fontSizes(btnLg));
-  line-height: fonts.rem(val.lineHeight(btnLg));
+  line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize__lg) * 2));
   padding: #{val.btnSizes(btnLg-paddingY)}px #{val.btnSizes(btnLg-paddingX)}px;
 }
 
@@ -479,13 +478,11 @@ a.btn {
   &__form{
     align-items: center;
     border-color: transparent;
-    border-top-width: #{val.btnSizes(btn_borderWidth)}px;
-    border-bottom-width: #{val.btnSizes(btn_borderWidth)}px;
-    // border-top-width: fonts.rem(math.div(calc(val.lineHeight(btn) - val.btnSizes(btnIconSvg_height)), 2));
-    // border-bottom-width: fonts.rem(math.div(calc(val.lineHeight(btn) - val.btnSizes(btnIconSvg_height)), 2));
+    border-top-width: #{val.formsSizes(formElem_borderSize)}px;
+    border-bottom-width: #{val.formsSizes(formElem_borderSize)}px;
     display: inline-flex;
-    height: fonts.rem(calc(val.lineHeight(btn) + 2));
-    line-height: fonts.rem(val.lineHeight(btn));
+    height: fonts.rem(val.formsSizes(formElem_height));
+    line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
   }
   &__danger{
     &:hover,
@@ -595,7 +592,7 @@ a.btn {
 }
 
 .btn__abs{
-  margin-top: -#{calc((val.btnSizes(btn_borderWidth) + val.lineHeight(btn)) * .5)}px;
+  margin-top: -#{(val.formsSizes(formElem_height) * .5)}px;
   position: absolute;
   top: 50%;
 }
@@ -640,8 +637,8 @@ input[type="button"] {
   font-size: fonts.rem(12);
   font-weight: 400;
   height: auto;
-  line-height: fonts.rem(val.lineHeight(btn));
-  // max-height: fonts.rem(val.lineHeight(btn));
+  line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
+  // max-height:
   margin-bottom: 0;
   outline: none;
   padding: 3px;

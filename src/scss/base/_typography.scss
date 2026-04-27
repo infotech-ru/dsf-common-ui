@@ -184,7 +184,7 @@ h6, .h6 {
   align-items: center;
   display: inline-flex;
   &__form-control{
-    height: fonts.rem(val.formsSizes(formControl_height));
+    height: fonts.rem(val.formsSizes(formElem_height));
   }
   &_formControl{
     border: none;
