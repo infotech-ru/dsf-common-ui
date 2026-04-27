@@ -10226,7 +10226,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   padding: 0px 5px;
 }
 
-.btn-large {
+.btn__large {
   border-radius: 0.0625rem;
   font-size: 0.875rem;
   line-height: 1.875rem;
@@ -12120,7 +12120,7 @@ output {
   color: #777777;
   font-size: 0.75rem;
 }
-.form-control__big {
+.form-control__large {
   height: 3.25rem;
   line-height: 3.125rem;
   padding: 0 1rem;

@@ -325,7 +325,7 @@ output {
       }
     }
   }
-  &__big{
+  &__large{
     height: fonts.rem(val.formsSizes(formControl_height__big));
     line-height: fonts.rem(val.formsSizes(formControl_height__big) - (val.formsSizes(formControl_borderSize) * 2));
     padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__big));
