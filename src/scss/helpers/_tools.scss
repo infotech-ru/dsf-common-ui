@@ -337,6 +337,22 @@
   padding: fonts.rem(val.brandSizes(theme_paddingSize));
 }
 
+.pt-gutter{
+  padding-top: fonts.rem(val.brandSizes(base_gridSize));
+}
+.pr-gutter{
+  padding-right: fonts.rem(val.brandSizes(base_gridSize));
+}
+.pb-gutter{
+  padding-bottom: fonts.rem(val.brandSizes(base_gridSize));
+}
+.pl-gutter{
+  padding-left: fonts.rem(val.brandSizes(base_gridSize));
+}
+.padding-gutter{
+  padding: fonts.rem(val.brandSizes(base_gridSize));
+}
+
 @each $gapSize in sizes.$gapSizes {
   .gap-#{$gapSize} {
       gap: fonts.rem($gapSize);
@@ -351,6 +367,9 @@
 }
 .gap-theme{
   gap: fonts.rem(val.brandSizes(theme_paddingSize));
+}
+.gap-gutter{
+  gap: fonts.rem(val.brandSizes(base_gridSize));
 }
 
 @each $posName, $posSize in sizes.$posSizes {

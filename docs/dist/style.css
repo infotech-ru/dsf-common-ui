@@ -18998,6 +18998,26 @@ tbody.collapse.in {
   padding: 0.625rem;
 }
 
+.pt-gutter {
+  padding-top: 0.625rem;
+}
+
+.pr-gutter {
+  padding-right: 0.625rem;
+}
+
+.pb-gutter {
+  padding-bottom: 0.625rem;
+}
+
+.pl-gutter {
+  padding-left: 0.625rem;
+}
+
+.padding-gutter {
+  padding: 0.625rem;
+}
+
 .gap-0 {
   gap: 0rem;
 }
@@ -19083,6 +19103,10 @@ tbody.collapse.in {
 }
 
 .gap-theme {
+  gap: 0.625rem;
+}
+
+.gap-gutter {
   gap: 0.625rem;
 }
 
