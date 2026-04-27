@@ -66,8 +66,8 @@ output {
 .control-label{
     $paddinFromLeft: 3;
     // letter-spacing: .5px;
-    display: block;
     color: val.brandForms(controlLabel_color);
+    display: block;
     font-size: fonts.rem(val.fontSizes(controlLabel));
     font-weight: val.fontWeight(controlLabel);
     line-height: 14px; // возможность добавлять иконку
@@ -136,6 +136,22 @@ output {
           .css-formFree & {
             top: fonts.rem((val.fontSizes(controlLabel_active__formFree) - 2) * -1);
           }
+        }
+      }
+    }
+    &__large{
+      .css-formFree & {
+        font-size: fonts.rem(15);
+        padding-left: fonts.rem(val.formsSizes(formControl_paddingX__lg));
+        line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
+      }
+      &.active {
+        .css-formFree & {
+          font-size: fonts.rem(12);
+          line-height: fonts.rem(14);
+          padding-left: 0;
+          transform: translate(fonts.rem(val.formsSizes(formControl_paddingX__lg)), 0);
+          top: fonts.rem(14);
         }
       }
     }

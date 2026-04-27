@@ -10230,9 +10230,9 @@ a.btn.disabled, fieldset[disabled] a.btn {
 .btn__large {
   border-radius: 0.0625rem;
   border-width: 0.125rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 3rem;
-  padding: 0px 15px;
+  padding: 0px 24px;
 }
 
 .btn-icon {
@@ -11912,8 +11912,8 @@ output {
 }
 
 .control-label {
-  display: block;
   color: #777777;
+  display: block;
   font-size: 0.6875rem;
   font-weight: 400;
   line-height: 14px;
@@ -11966,6 +11966,18 @@ output {
 }
 .css-formFree .form-group .inputGroup .control-label.active {
   top: -0.5625rem;
+}
+.css-formFree .control-label__large {
+  font-size: 0.9375rem;
+  padding-left: 1rem;
+  line-height: 3.125rem;
+}
+.css-formFree .control-label__large.active {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding-left: 0;
+  transform: translate(1rem, 0);
+  top: 0.875rem;
 }
 .css-formFree .control-label__relative, .css-formFree .control-label__relative.active {
   left: auto;
