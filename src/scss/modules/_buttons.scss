@@ -412,6 +412,14 @@ a.btn {
   font-size: fonts.rem(val.fontSizes(btnLg));
   line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize__lg) * 2));
   padding: #{val.btnSizes(btnLg-paddingY)}px #{val.btnSizes(btnLg-paddingX)}px;
+  .svg--icon{
+    #{--svgIcon_height}: fonts.rem(14);
+    #{--svgIcon_width}: fonts.rem(14);
+    &__24vb{
+      #{--svgIcon_height}: fonts.rem(20);
+      #{--svgIcon_width}: fonts.rem(20);
+    }
+  }
 }
 
 .btn-icon{

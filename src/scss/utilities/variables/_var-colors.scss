@@ -48,6 +48,8 @@ $base_border:                             map.get($brand-colors, _grey2);
 $base_color:                              map.get($brand-colors, _dark-grey);
 
 $brand-palette: map.merge((
+  authorization_bgc:                      map.get($brand-colors, _white),
+  authorization_border:                   map.get($brand-colors, _grey2),
   body_bgc:                               map.get($brand-colors, _light-grey3),
   body_color:                             $base_color,
   blockquote_borderColor:                 map.get($brand-colors, _light-grey3),

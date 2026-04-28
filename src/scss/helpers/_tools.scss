@@ -205,172 +205,72 @@
 }
 
 @each $marginSize in sizes.$marginSizes {
-  .margin-#{$marginSize} {
-      margin: fonts.rem($marginSize);
-  }
-  .mobile-view .margin-#{$marginSize}__mobile {
-      margin: fonts.rem($marginSize);
-  }
-  .mt-#{$marginSize} {
-      margin-top: fonts.rem($marginSize);
-  }
-  .mobile-view .mt-#{$marginSize}__mobile {
-      margin-top: fonts.rem($marginSize);
-  }
-  .mr-#{$marginSize} {
-      margin-right: fonts.rem($marginSize);
-  }
-  .mobile-view .mr-#{$marginSize}__mobile {
-      margin-right: fonts.rem($marginSize);
-  }
-  .mb-#{$marginSize} {
-      margin-bottom: fonts.rem($marginSize);
-  }
-  .mobile-view .mb-#{$marginSize}__mobile {
-      margin-bottom: fonts.rem($marginSize);
-  }
-  .ml-#{$marginSize} {
-      margin-left: fonts.rem($marginSize);
-  }
-  .mobile-view .ml-#{$marginSize}__mobile {
-      margin-left: fonts.rem($marginSize);
-  }
-}
-.mt-auto{
-  margin-top: auto;
-}
-.mr-auto{
-  margin-right: auto;
-}
-.mb-auto{
-  margin-bottom: auto;
-}
-.ml-auto {
-  margin-left: auto;
+  .margin-#{$marginSize} { margin: fonts.rem($marginSize); }
+  .mobile-view .margin-#{$marginSize}__mobile { margin: fonts.rem($marginSize); }
+  .mt-#{$marginSize} { margin-top: fonts.rem($marginSize); }
+  .mobile-view .mt-#{$marginSize}__mobile { margin-top: fonts.rem($marginSize); }
+  .mr-#{$marginSize} { margin-right: fonts.rem($marginSize); }
+  .mobile-view .mr-#{$marginSize}__mobile { margin-right: fonts.rem($marginSize); }
+  .mb-#{$marginSize} { margin-bottom: fonts.rem($marginSize); }
+  .mobile-view .mb-#{$marginSize}__mobile { margin-bottom: fonts.rem($marginSize); }
+  .ml-#{$marginSize} { margin-left: fonts.rem($marginSize); }
+  .mobile-view .ml-#{$marginSize}__mobile { margin-left: fonts.rem($marginSize); }
 }
 
-.mb-base{
-  margin-bottom: fonts.rem(val.brandSizes(base_marginSize));
-}
-.mt-base{
-  margin-top: fonts.rem(val.brandSizes(base_marginSize));
-}
+.mt-auto { margin-top: auto; }
+.mr-auto { margin-right: auto; }
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
 
-.mb-gutter{
-  margin-bottom: fonts.rem(val.brandSizes(base_gridSize));
-}
-.mt-gutter{
-  margin-top: fonts.rem(val.brandSizes(base_gridSize));
-}
-.ml-gutter{
-  margin-left: fonts.rem(val.brandSizes(base_gridSize));
-}
-.mr-gutter{
-  margin-right: fonts.rem(val.brandSizes(base_gridSize));
-}
+.mt-base { margin-top: fonts.rem(val.brandSizes(base_marginSize)); }
+.mr-base { margin-right: fonts.rem(val.brandSizes(base_marginSize)); }
+.mb-base { margin-bottom: fonts.rem(val.brandSizes(base_marginSize)); }
+.ml-base { margin-left: fonts.rem(val.brandSizes(base_marginSize)); }
 
+.mt-gutter { margin-top: fonts.rem(val.brandSizes(base_gridSize)); }
+.mr-gutter { margin-right: fonts.rem(val.brandSizes(base_gridSize)); }
+.mb-gutter { margin-bottom: fonts.rem(val.brandSizes(base_gridSize)); }
+.ml-gutter { margin-left: fonts.rem(val.brandSizes(base_gridSize)); }
 
 @each $paddingSize in sizes.$paddingSizes {
-  .padding-#{$paddingSize} {
-    padding: fonts.rem($paddingSize);
-  }
-  .mobile-view .padding-#{$paddingSize}__mobile {
-    padding: fonts.rem($paddingSize);
-  }
-}
-@each $paddingSize in sizes.$paddingSizes {
-  .pt-#{$paddingSize} {
-      padding-top: fonts.rem($paddingSize);
-  }
-  .mobile-view .pt-#{$paddingSize}__mobile {
-      padding-top: fonts.rem($paddingSize);
-  }
-  .pr-#{$paddingSize} {
-      padding-right: fonts.rem($paddingSize);
-  }
-  .mobile-view .pr-#{$paddingSize}__mobile {
-      padding-right: fonts.rem($paddingSize);
-  }
-  .pb-#{$paddingSize} {
-      padding-bottom: fonts.rem($paddingSize);
-  }
-  .mobile-view .pb-#{$paddingSize}__mobile {
-      padding-bottom: fonts.rem($paddingSize);
-  }
-  .pl-#{$paddingSize} {
-      padding-left: fonts.rem($paddingSize);
-  }
-  .mobile-view .pl-#{$paddingSize}__mobile {
-      padding-left: fonts.rem($paddingSize);
-  }
+  .padding-#{$paddingSize} { padding: fonts.rem($paddingSize); }
+  .mobile-view .padding-#{$paddingSize}__mobile { padding: fonts.rem($paddingSize); }
+  .pt-#{$paddingSize} { padding-top: fonts.rem($paddingSize); }
+  .mobile-view .pt-#{$paddingSize}__mobile { padding-top: fonts.rem($paddingSize); }
+  .pr-#{$paddingSize} { padding-right: fonts.rem($paddingSize); }
+  .mobile-view .pr-#{$paddingSize}__mobile { padding-right: fonts.rem($paddingSize); }
+  .pb-#{$paddingSize} { padding-bottom: fonts.rem($paddingSize); }
+  .mobile-view .pb-#{$paddingSize}__mobile { padding-bottom: fonts.rem($paddingSize); }
+  .pl-#{$paddingSize} { padding-left: fonts.rem($paddingSize); }
+  .mobile-view .pl-#{$paddingSize}__mobile { padding-left: fonts.rem($paddingSize); }
 }
 
-.pt-base{
-  padding-top: fonts.rem(val.brandSizes(base_paddingSize));
-}
-.pr-base{
-  padding-right: fonts.rem(val.brandSizes(base_paddingSize));
-}
-.pb-base{
-  padding-bottom: fonts.rem(val.brandSizes(base_paddingSize));
-}
-.pl-base{
-  padding-left: fonts.rem(val.brandSizes(base_paddingSize));
-}
-.padding-base{
-  padding: fonts.rem(val.brandSizes(base_paddingSize));
-}
+.pt-base { padding-top: fonts.rem(val.brandSizes(base_paddingSize)); }
+.pr-base { padding-right: fonts.rem(val.brandSizes(base_paddingSize)); }
+.pb-base { padding-bottom: fonts.rem(val.brandSizes(base_paddingSize)); }
+.pl-base { padding-left: fonts.rem(val.brandSizes(base_paddingSize)); }
+.padding-base { padding: fonts.rem(val.brandSizes(base_paddingSize)); }
 
-.pt-theme{
-  padding-top: fonts.rem(val.brandSizes(theme_paddingSize));
-}
-.pr-theme{
-  padding-right: fonts.rem(val.brandSizes(theme_paddingSize));
-}
-.pb-theme{
-  padding-bottom: fonts.rem(val.brandSizes(theme_paddingSize));
-}
-.pl-theme{
-  padding-left: fonts.rem(val.brandSizes(theme_paddingSize));
-}
-.padding-theme{
-  padding: fonts.rem(val.brandSizes(theme_paddingSize));
-}
+.pt-theme { padding-top: fonts.rem(val.brandSizes(theme_paddingSize)); }
+.pr-theme { padding-right: fonts.rem(val.brandSizes(theme_paddingSize)); }
+.pb-theme { padding-bottom: fonts.rem(val.brandSizes(theme_paddingSize)); }
+.pl-theme { padding-left: fonts.rem(val.brandSizes(theme_paddingSize)); }
+.padding-theme { padding: fonts.rem(val.brandSizes(theme_paddingSize)); }
 
-.pt-gutter{
-  padding-top: fonts.rem(val.brandSizes(base_gridSize));
-}
-.pr-gutter{
-  padding-right: fonts.rem(val.brandSizes(base_gridSize));
-}
-.pb-gutter{
-  padding-bottom: fonts.rem(val.brandSizes(base_gridSize));
-}
-.pl-gutter{
-  padding-left: fonts.rem(val.brandSizes(base_gridSize));
-}
-.padding-gutter{
-  padding: fonts.rem(val.brandSizes(base_gridSize));
-}
+.pt-gutter { padding-top: fonts.rem(val.brandSizes(base_gridSize)); }
+.pr-gutter { padding-right: fonts.rem(val.brandSizes(base_gridSize)); }
+.pb-gutter { padding-bottom: fonts.rem(val.brandSizes(base_gridSize)); }
+.pl-gutter { padding-left: fonts.rem(val.brandSizes(base_gridSize)); }
+.padding-gutter { padding: fonts.rem(val.brandSizes(base_gridSize)); }
 
 @each $gapSize in sizes.$gapSizes {
-  .gap-#{$gapSize} {
-      gap: fonts.rem($gapSize);
-  }
-  .mobile-view .gap-#{$gapSize}__mobile {
-      gap: fonts.rem($gapSize);
-  }
+  .gap-#{$gapSize} { gap: fonts.rem($gapSize); }
+  .mobile-view .gap-#{$gapSize}__mobile { gap: fonts.rem($gapSize); }
 }
 
-.gap-base{
-  gap: fonts.rem(val.brandSizes(base_paddingSize));
-}
-.gap-theme{
-  gap: fonts.rem(val.brandSizes(theme_paddingSize));
-}
-.gap-gutter{
-  gap: fonts.rem(val.brandSizes(base_gridSize));
-}
+.gap-base { gap: fonts.rem(val.brandSizes(base_paddingSize)); }
+.gap-theme { gap: var(--theme-gap, #{fonts.rem(val.brandSizes(theme_paddingSize))}); }
+.gap-gutter { gap: fonts.rem(val.brandSizes(base_gridSize)); }
 
 @each $posName, $posSize in sizes.$posSizes {
   $length: list.length($posSize);
@@ -400,7 +300,6 @@
     }
   }
 }
-
 
 .list-unstyled {
   padding-left: 0;

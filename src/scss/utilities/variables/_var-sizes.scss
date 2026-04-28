@@ -1,9 +1,11 @@
 @use './_var-baseValue' as baseValue;
 
 $brand-sizes: (
-  base_marginSize:                 baseValue.$base-gutter,
-  base_gridSize:                   baseValue.$base-grid-gutter,
-  base_paddingSize:                baseValue.$base-padding,
+  authorization_borderRadius:      baseValue.$base-radius__large,
+
+  base_marginSize:                 baseValue.$base-gutter, // изменёный внешинй
+  base_gridSize:                   baseValue.$base-grid-gutter, //сетка
+  base_paddingSize:                baseValue.$base-padding, // пока не измененый внутренний
   
   border-radius-base:              baseValue.$base-radius,
   border-radius-base__big:         baseValue.$base-radius__large,
@@ -15,7 +17,7 @@ $brand-sizes: (
   
   chartBlock_padding:              baseValue.$base-gutter,
 
-  theme_paddingSize:               baseValue.$base-gutter,
+  theme_paddingSize:               baseValue.$base-gutter, // измененые внутренний
 
   disabel_opacity:                 0.5,
   dlHorizontalOffset:              180,

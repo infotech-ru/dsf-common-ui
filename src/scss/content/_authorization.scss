@@ -5,20 +5,38 @@
 /*                                                                            */
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-colors' as *;
+@use './../utilities/functions/func_fonts' as fonts;
 
 .authorization{
-  background-color: val.brandColors(_white);
-  box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.3);
-  flex-basis: 320px;
-  max-width: 320px;
-  margin: 100px auto 0;
-  padding: 30px;
+  background-color: val.brandPalette(authorization_bgc);
+  border-radius: val.brandSizes(authorization_borderRadius);
+  border-color: val.brandPalette(authorization_border);
+  border-width: 1px;
+  border-style: solid;
+  // box-shadow: 0px 50px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.10);
+  display: flex;
+  flex-basis: fonts.rem(380);
+  flex-direction: column;
+  max-width: fonts.rem(380);
+  margin: fonts.rem(100) auto 0;
+  padding: fonts.rem(50) fonts.rem(30);
   &__heading{
+    margin-bottom: fonts.rem(50);
     .logo{
-      height: 34px;
+      height: fonts.rem(34);
+      max-width: 100%;
       justify-content: center;
+      img{
+        max-width: 100%;
+        max-height: fonts.rem(34);
+      }
     }
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
   .guest-view &{
     margin-top: 0;
