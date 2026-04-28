@@ -11982,7 +11982,7 @@ output {
   --controlLabel-fontSize: 0.9375rem;
 }
 .css-formFree .control-label__large.active {
-  --controlLabel-top: 2;
+  --controlLabel-top: 0.125rem;
   --controlLabel-fontSize: 0.75rem;
   --controlLabel-lineHeight: 0.875rem;
   --controlLabel-pl: 0.875rem;
@@ -12186,7 +12186,14 @@ textarea.form-control {
 .form-group__10 {
   --formGroup-mb: 0.625rem;
 }
+.css-formFree .form-group__10 {
+  --formGroup-mb: 0.625rem;
+}
 .form-group__0 {
+  --formGroup-pt: 0;
+  --formGroup-mb: 0;
+}
+.css-formFree .form-group__0 {
   --formGroup-pt: 0;
   --formGroup-mb: 0;
 }
@@ -12210,7 +12217,7 @@ textarea.form-control {
   --controlLabel-fontSize: 0.75rem;
   --controlLabel-lineHeight: 0.875rem;
   --controlLabel-pl: 0.875rem;
-  --controlLabel-top: 2;
+  --controlLabel-top: 0.125rem;
 }
 
 .radio,

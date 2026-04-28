@@ -163,7 +163,7 @@ output {
           // line-height: fonts.rem(14);
           // padding-left: 0;
           // transform: translate(0, 0);
-          #{--controlLabel-top}: val.formsSizes(formElem_borderSize__lg);
+          #{--controlLabel-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
           #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem));
           #{--controlLabel-lineHeight}: fonts.rem(14);
           #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
@@ -402,19 +402,22 @@ textarea.form-control {
   &__10{
     #{--formGroup-mb}: fonts.rem(10);
     // margin-bottom: fonts.rem(10);
-    // .css-formFree &{ 
+    .css-formFree &{ 
+      #{--formGroup-mb}: fonts.rem(10);
       // margin-bottom: fonts.rem(10);
-    // }
+    }
   }
   &__0{
     // margin-bottom: fonts.rem(0);
     // padding-top: fonts.rem(0);
     #{--formGroup-pt}: 0;
     #{--formGroup-mb}: 0;
-    // .css-formFree &{ 
+    .css-formFree &{ 
+      #{--formGroup-pt}: 0;
+      #{--formGroup-mb}: 0;
       // margin-bottom: fonts.rem(0);
       // padding-top: fonts.rem(0);
-    // }
+    }
   }
   &__large{
     #{--formControl-paddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
@@ -434,7 +437,7 @@ textarea.form-control {
         #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem));
         #{--controlLabel-lineHeight}: fonts.rem(14);
         #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
-        #{--controlLabel-top}: val.formsSizes(formElem_borderSize__lg);
+        #{--controlLabel-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
       }
       // padding-top: 0;
       // margin-bottom: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
