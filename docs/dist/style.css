@@ -17402,7 +17402,7 @@ body[style^=padding-right] .modal-sidebar {
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .authorization {
   background-color: #ffffff;
-  border-radius: 1;
+  border-radius: 0.0625rem;
   border-color: #dddddd;
   border-width: 1px;
   border-style: solid;
@@ -17415,6 +17415,9 @@ body[style^=padding-right] .modal-sidebar {
   padding: 3.125rem 1.875rem;
 }
 .authorization__heading {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   margin-bottom: 3.125rem;
 }
 .authorization__heading .logo {
