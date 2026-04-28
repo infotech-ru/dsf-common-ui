@@ -68,10 +68,11 @@ output {
     // letter-spacing: .5px;
     color: val.brandForms(controlLabel_color);
     display: block;
-    font-size: fonts.rem(val.fontSizes(controlLabel));
+    font-size: var(--controlLabel-fontSize, fonts.rem(val.fontSizes(controlLabel)));
     font-weight: val.fontWeight(controlLabel);
-    line-height: 14px; // возможность добавлять иконку
-    margin-bottom: #{val.formsSizes(controlLabel_mb)}px;
+    line-height: var(--controlLabel-lineHeight, fonts.rem(14)); // возможность добавлять иконку
+    margin-bottom: fonts.rem(val.formsSizes(controlLabel_mb));
+    padding-left: var(--controlLabel-pl, 0);
     &:after {
       .required & {
         color: val.brandForms(controlLabelError_color);
@@ -84,11 +85,11 @@ output {
       }
     }
     .css-formFree & {
-      font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
-      left: 0;
+      // font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
+      left: var(--controlLabel-left, 0);
       // left: fonts.rem($paddinFromLeft * -1);
-      line-height: fonts.rem(val.formsSizes(formElem_height));
-      padding-left: fonts.rem(val.formsSizes(formControl_paddingX));
+      // line-height: fonts.rem(val.formsSizes(formElem_height));
+      // padding-left: fonts.rem(val.formsSizes(formControl_paddingX));
       // padding-right: fonts.rem(calc(val.formsSizes(formControl_paddingX) + 5));
       padding-right: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
       position: absolute;
@@ -98,12 +99,15 @@ output {
       pointer-events: none;
       text-overflow: ellipsis;
       transition: top .2s ease-out, font-size .2s ease-out;
-      transform: translateX(0) translateY(0);
+      // transform: translateX(0) translateY(0);
       transform-origin: 0% 100%;
-      top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+      top: var(--controlLabel-top, fonts.rem(val.fontSizes(controlLabel_active__formFree)));
       // z-index: 0; // Если больше 0 - появляется некликабельный участок. Fix: pointer-events: none;
       z-index: val.zIndex(controlLabel_active);
       white-space: nowrap;
+      #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(controlLabel__formFree));
+      #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height));
+      #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX));
       > span{
         pointer-events: all;
       }
@@ -119,17 +123,22 @@ output {
       .css-formFree & {
         // background-color: val.brandForms(controlLabelActive_bgc);
         background-color:var(--bg_color, val.brandForms(controlLabelActive_bgc));
-        font-size: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+        // font-size: fonts.rem(val.fontSizes(controlLabel_active__formFree));
         // left: fonts.rem($paddinFromLeft * -1);
-        left: 0;
-        line-height: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-        padding-left: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
+        // left: 0;
+        // line-height: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+        // padding-left: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
         // padding-right: fonts.rem(val.formsSizes(formControl_paddingX));
-        padding-right: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
-        transform: translateX(fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
-        top: 2px; // корректировка из-за line-height
-        z-index: val.zIndex(controlLabel_active);
         max-width: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
+        padding-right: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
+        // transform: translateX(fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
+        // top: fonts.rem(val.formsSizes(formElem_borderSize) * 2); // корректировка из-за line-height
+        z-index: val.zIndex(controlLabel_active);
+        #{--controlLabel-left}: fonts.rem(val.formsSizes(formControl_paddingX) - $paddinFromLeft);
+        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+        #{--controlLabel-lineHeight}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+        #{--controlLabel-pl}: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
+        #{--controlLabel-top}: fonts.rem(val.formsSizes(formElem_borderSize) * 2); // корректировка из-за line-height
       }
       .inputGroup &{
         .form-group &{
@@ -141,17 +150,23 @@ output {
     }
     &__large{
       .css-formFree & {
-        font-size: fonts.rem(15);
-        padding-left: fonts.rem(val.formsSizes(formControl_paddingX__lg));
-        line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
+        // padding-left: fonts.rem(val.formsSizes(formControl_paddingX__lg));
+        // line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
+        #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize__lg) * 2));
+        #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
+        #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+        #{--controlLabel-top}: 0;
+        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
       }
       &.active {
         .css-formFree & {
-          font-size: fonts.rem(12);
-          line-height: fonts.rem(14);
-          padding-left: 0;
-          transform: translate(fonts.rem(val.formsSizes(formControl_paddingX__lg)), 0);
-          top: fonts.rem(14);
+          // line-height: fonts.rem(14);
+          // padding-left: 0;
+          // transform: translate(0, 0);
+          #{--controlLabel-top}: val.formsSizes(formElem_borderSize__lg);
+          #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem));
+          #{--controlLabel-lineHeight}: fonts.rem(14);
+          #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
         }
       }
     }
@@ -199,15 +214,14 @@ output {
   display: block;
   font-size: fonts.rem(val.fontSizes(formElem));
   font-weight: val.fontWeight(formElem);
-  height: fonts.rem(val.formsSizes(formElem_height));
-  line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
-  padding: 0 fonts.rem(val.formsSizes(formControl_paddingX));
+  height: var(--formControl-height, #{fonts.rem(val.formsSizes(formElem_height))});
+  line-height: var(--formControl-lineHeight, #{fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2))});
+  padding: 0 var(--formControl-paddingX, #{fonts.rem(val.formsSizes(formControl_paddingX))});
   transition: baseValue.$base-transition_form;
   width: 100%;
   #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize));
   #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius));
 
-  // Customize the `:focus` state to imitate native WebKit styles.
   @include placeholder.placeholder2(val.brandForms(formControl-placeholder), 400, 12);
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
@@ -215,9 +229,6 @@ output {
     border: 0;
   }
 
-  // HTML5 says that controls under a fieldset > legend:first-child won't be
-  // disabled if the fieldset is disabled. Due to implementation difficulty, we
-  // don't honor that edge case; we style them as disabled anyway.
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
@@ -342,9 +353,13 @@ output {
     }
   }
   &__large{
-    height: fonts.rem(val.formsSizes(formElem_height__lg));
-    line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
-    padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__lg));
+    font-size: fonts.rem(val.fontSizes(formElem__large));
+    // height: fonts.rem(val.formsSizes(formElem_height__lg));
+    // line-height: var(fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
+    // padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__lg));
+    #{--formControl-paddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
+    #{--formControl-lineHeight}: 1;
+    #{--formControl-height}: fonts.rem(val.formsSizes(formElem_height__lg));
     #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
     #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
   }
@@ -359,15 +374,6 @@ textarea.form-control {
   padding: 6px fonts.rem(val.formsSizes(formControl_paddingX)) 2px;
   resize: vertical;
 }
-
-// Special styles for iOS temporal inputs
-//
-// In Mobile Safari, setting `display: block` on temporal inputs causes the
-// text within the input to become vertically misaligned. As a workaround, we
-// set a pixel line-height that matches the given height of the input, but only
-// for Safari. See https://bugs.webkit.org/show_bug.cgi?id=139848
-//
-// Note that as of 9.3, iOS doesn't support `week`.
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   input[type="date"],
@@ -384,25 +390,54 @@ textarea.form-control {
 }
 
 .form-group {
-  // margin-bottom: $form-group-margin-bottom;
-  margin-bottom: fonts.rem(val.formsSizes(formGroup_mb));
+  // margin-bottom: fonts.rem(val.formsSizes(formGroup_mb));
+  margin-bottom: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
+  padding-top: var(--formGroup-pt, 0);
   .css-formFree &{ 
-    margin-bottom: fonts.rem(calc(val.formsSizes(formGroup__formFree_mb) - val.fontSizes(controlLabel_active__formFree)));
-    padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    // margin-bottom: fonts.rem(calc(val.formsSizes(formGroup__formFree_mb) - val.fontSizes(controlLabel_active__formFree)));
     position: relative;
+    #{--formGroup-pt}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    #{--formGroup-mb}: #{fonts.rem(val.formsSizes(formGroup__formFree_mb) - val.fontSizes(controlLabel_active__formFree))};
   }
   &__10{
-    margin-bottom: fonts.rem(10);
-    .css-formFree &{ 
-      margin-bottom: fonts.rem(10);
-    }
+    #{--formGroup-mb}: fonts.rem(10);
+    // margin-bottom: fonts.rem(10);
+    // .css-formFree &{ 
+      // margin-bottom: fonts.rem(10);
+    // }
   }
   &__0{
-    margin-bottom: fonts.rem(0);
-    padding-top: fonts.rem(0);
-    .css-formFree &{ 
-      margin-bottom: fonts.rem(0);
-      padding-top: fonts.rem(0);
+    // margin-bottom: fonts.rem(0);
+    // padding-top: fonts.rem(0);
+    #{--formGroup-pt}: 0;
+    #{--formGroup-mb}: 0;
+    // .css-formFree &{ 
+      // margin-bottom: fonts.rem(0);
+      // padding-top: fonts.rem(0);
+    // }
+  }
+  &__large{
+    #{--formControl-paddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
+    #{--formControl-lineHeight}: 1;
+    #{--formControl-height}: fonts.rem(val.formsSizes(formElem_height__lg));
+    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+    #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
+    #{--formGroup-pt}: 0;
+    #{--formGroup-mb}: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
+    .css-formFree & { 
+      #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+      #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
+      #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
+      #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
+      #{--controlLabel-top}: 0;
+      .active{
+        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem));
+        #{--controlLabel-lineHeight}: fonts.rem(14);
+        #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
+        #{--controlLabel-top}: val.formsSizes(formElem_borderSize__lg);
+      }
+      // padding-top: 0;
+      // margin-bottom: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
     }
   }
 }
