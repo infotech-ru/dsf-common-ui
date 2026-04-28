@@ -518,6 +518,7 @@ textarea.form-control {
   line-height: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
+  text-align: left;
   color: val.brandForms(controlLabelActive_color);
   &:empty { // style.css
       display: none;

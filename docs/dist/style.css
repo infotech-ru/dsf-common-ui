@@ -12340,6 +12340,7 @@ fieldset[disabled] .checkbox-inline {
   line-height: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
+  text-align: left;
   color: #777777;
 }
 .help-block:empty {
