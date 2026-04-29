@@ -11919,14 +11919,39 @@ output {
   color: #777777;
 }
 
+.css-formFree {
+  --controlLabel-fontSize: 0.75rem;
+  --controlLabel-left: 0;
+  --controlLabel-lineHeight: 1.75rem;
+  --controlLabel-pl: 0.4375rem;
+  --controlLabel-pr: calc(16px + 16px + 10px);
+  --controlLabel-mb: 0;
+  --controlLabel-top: 0.6875rem;
+  --controlLabelActive-fontSize: 0.6875rem;
+  --controlLabelActive-left: 0.25rem;
+  --controlLabelActive-lineHeight: 0.6875rem;
+  --controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
+  --controlLabelActive-pl: 0.25rem;
+  --controlLabelActive-top: 0.125rem;
+  --controlLabelActive-pr: calc(12px + 5px);
+}
+
 .control-label {
   color: #777777;
   display: block;
   font-size: var(--controlLabel-fontSize, 0.6875rem);
   font-weight: 400;
+  left: var(--controlLabel-left, auto);
   line-height: var(--controlLabel-lineHeight, 0.875rem);
-  margin-bottom: 0.1875rem;
+  margin-bottom: var(--controlLabel-mb, 0.1875rem);
+  max-width: var(--controlLabel-maxwidth, none);
+  overflow: hidden;
   padding-left: var(--controlLabel-pl, 0);
+  padding-right: var(--controlLabel-pr, 0);
+  text-overflow: ellipsis;
+  top: var(--controlLabel-top, auto);
+  transform-origin: 0% 100%;
+  transition: var(--controlLabel-transition, top 0.2s ease-out, font-size 0.2s ease-out);
 }
 .required .control-label:after {
   color: #D9534F;
@@ -11938,55 +11963,46 @@ output {
   top: 0;
 }
 .css-formFree .control-label {
-  left: var(--controlLabel-left, 0);
-  padding-right: calc(16px + 16px + 10px);
   position: absolute;
-  margin-bottom: 0;
-  overflow: hidden;
   pointer-events: none;
-  text-overflow: ellipsis;
-  transition: var(--controlLabel-transition, top 0.2s ease-out, font-size 0.2s ease-out);
-  transform-origin: 0% 100%;
-  top: var(--controlLabel-top, 0.6875rem);
   z-index: 1;
   white-space: nowrap;
-  --controlLabel-fontSize: 0.75rem;
-  --controlLabel-lineHeight: 1.75rem;
-  --controlLabel-pl: 0.4375rem;
 }
-.css-formFree .control-label > span {
+.control-label > span {
   pointer-events: all;
 }
 .css-formFree .form-group .inputGroup .control-label {
   top: 0;
 }
+.control-label.active {
+  font-size: var(--controlLabelActive-fontSize, 0.6875rem);
+  left: var(--controlLabelActive-left, auto);
+  line-height: var(--controlLabelActive-lineHeight, 0.875rem);
+  max-width: var(--controlLabelActive-maxwidth, none);
+  padding-left: var(--controlLabelActive-pl, 0);
+  padding-right: var(--controlLabelActive-pr, 0);
+  top: var(--controlLabelActive-top, auto);
+  z-index: 1;
+}
 .css-formFree .control-label.active {
   background-color: var(--bg_color, #ffffff);
-  max-width: calc(100% - 0.25rem + 0.1875rem);
-  padding-right: calc(12px + 5px);
-  z-index: 1;
-  --controlLabel-left: 0.25rem;
-  --controlLabel-fontSize: 0.6875rem;
-  --controlLabel-lineHeight: 0.6875rem;
-  --controlLabel-pl: 0.25rem;
-  --controlLabel-top: 0.125rem;
 }
 .css-formFree .form-group .inputGroup .control-label.active {
   top: -0.5625rem;
 }
-.css-formFree .control-label__large {
+.control-label__large {
   --controlLabel-transition: font-size 0.2s ease-out;
+}
+.css-formFree .control-label__large {
+  --controlLabel-fontSize: 0.9375rem;
+  --controlLabel-left: 0.125rem;
   --controlLabel-lineHeight: 3.25rem;
   --controlLabel-pl: 1rem;
-  --controlLabel-left: 0.125rem;
   --controlLabel-top: 0;
-  --controlLabel-fontSize: 0.9375rem;
-}
-.css-formFree .control-label__large.active {
-  --controlLabel-top: 0.125rem;
-  --controlLabel-fontSize: 0.75rem;
-  --controlLabel-lineHeight: 0.875rem;
-  --controlLabel-pl: 0.875rem;
+  --controlLabelActive-fontSize: 0.75rem;
+  --controlLabelActive-lineHeight: 0.875rem;
+  --controlLabelActive-pl: 0.875rem;
+  --controlLabelActive-top: 0.125rem;
 }
 .css-formFree .control-label__relative, .css-formFree .control-label__relative.active {
   left: auto;
@@ -12206,20 +12222,18 @@ textarea.form-control {
   --formControl-borderRadius: 0.0625rem;
   --formGroup-pt: 0;
   --formGroup-mb: var(--formGroup-mb, 1.5625rem);
+  --controlLabel-transition: font-size 0.2s ease-out;
 }
 .css-formFree .form-group__large {
-  --controlLabel-transition: font-size 0.2s ease-out;
+  --controlLabel-fontSize: 0.9375rem;
   --controlLabel-left: 0.125rem;
   --controlLabel-lineHeight: 3.125rem;
   --controlLabel-pl: 1rem;
-  --controlLabel-fontSize: 0.9375rem;
   --controlLabel-top: 0;
-}
-.css-formFree .form-group__large .active {
-  --controlLabel-fontSize: 0.75rem;
-  --controlLabel-lineHeight: 0.875rem;
-  --controlLabel-pl: 0.875rem;
-  --controlLabel-top: 0.125rem;
+  --controlLabelActive-fontSize: 0.75rem;
+  --controlLabelActive-lineHeight: 0.875rem;
+  --controlLabelActive-pl: 0.875rem;
+  --controlLabelActive-top: 0.125rem;
 }
 
 .radio,

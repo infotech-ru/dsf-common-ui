@@ -63,16 +63,41 @@ output {
   color: val.brandPalette(output_color);
 }
 
+$paddinFromLeft: 3;
+
+.css-formFree {
+    #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(controlLabel__formFree));
+    #{--controlLabel-left}: 0;
+    #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height));
+    #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX));
+    #{--controlLabel-pr}: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
+    #{--controlLabel-mb}: 0;
+    #{--controlLabel-top}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    #{--controlLabelActive-fontSize}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    #{--controlLabelActive-left}: fonts.rem(val.formsSizes(formControl_paddingX) - $paddinFromLeft);
+    #{--controlLabelActive-lineHeight}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    #{--controlLabelActive-maxwidth}: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
+    #{--controlLabelActive-pl}: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
+    #{--controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize) * 2); // корректировка из-за line-height
+    #{--controlLabelActive-pr}: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
+}
 .control-label{
-    $paddinFromLeft: 3;
     // letter-spacing: .5px;
     color: val.brandForms(controlLabel_color);
     display: block;
     font-size: var(--controlLabel-fontSize, fonts.rem(val.fontSizes(controlLabel)));
     font-weight: val.fontWeight(controlLabel);
+    left: var(--controlLabel-left, auto);
     line-height: var(--controlLabel-lineHeight, fonts.rem(14)); // возможность добавлять иконку
-    margin-bottom: fonts.rem(val.formsSizes(controlLabel_mb));
+    margin-bottom: var(--controlLabel-mb, fonts.rem(val.formsSizes(controlLabel_mb)));
+    max-width: var(--controlLabel-maxwidth, none);
+    overflow: hidden;
     padding-left: var(--controlLabel-pl, 0);
+    padding-right: var(--controlLabel-pr, 0);
+    text-overflow: ellipsis;
+    top: var(--controlLabel-top, auto);
+    transform-origin: 0% 100%;
+    transition: var(--controlLabel-transition, top .2s ease-out, font-size .2s ease-out);
     &:after {
       .required & {
         color: val.brandForms(controlLabelError_color);
@@ -85,32 +110,14 @@ output {
       }
     }
     .css-formFree & {
-      // font-size: fonts.rem(val.fontSizes(controlLabel__formFree));
-      left: var(--controlLabel-left, 0);
-      // left: fonts.rem($paddinFromLeft * -1);
-      // line-height: fonts.rem(val.formsSizes(formElem_height));
-      // padding-left: fonts.rem(val.formsSizes(formControl_paddingX));
-      // padding-right: fonts.rem(calc(val.formsSizes(formControl_paddingX) + 5));
-      padding-right: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
       position: absolute;
-      margin-bottom: 0;
-      // transition: color .2s ease-out;
-      overflow: hidden;
       pointer-events: none;
-      text-overflow: ellipsis;
-      transition: var(--controlLabel-transition, top .2s ease-out, font-size .2s ease-out);
-      // transform: translateX(0) translateY(0);
-      transform-origin: 0% 100%;
-      top: var(--controlLabel-top, fonts.rem(val.fontSizes(controlLabel_active__formFree)));
       // z-index: 0; // Если больше 0 - появляется некликабельный участок. Fix: pointer-events: none;
       z-index: val.zIndex(controlLabel_active);
       white-space: nowrap;
-      #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(controlLabel__formFree));
-      #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height));
-      #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX));
-      > span{
+    }
+    > span{
         pointer-events: all;
-      }
     }
     .inputGroup &{
       .form-group &{
@@ -120,25 +127,16 @@ output {
       }
     }
     &.active {
-      .css-formFree & {
-        // background-color: val.brandForms(controlLabelActive_bgc);
-        background-color:var(--bg_color, val.brandForms(controlLabelActive_bgc));
-        // font-size: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-        // left: fonts.rem($paddinFromLeft * -1);
-        // left: 0;
-        // line-height: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-        // padding-left: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
-        // padding-right: fonts.rem(val.formsSizes(formControl_paddingX));
-        max-width: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
-        padding-right: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
-        // transform: translateX(fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft))) translateY(0);
-        // top: fonts.rem(val.formsSizes(formElem_borderSize) * 2); // корректировка из-за line-height
+        font-size: var(--controlLabelActive-fontSize, fonts.rem(val.fontSizes(controlLabel)));
+        left: var(--controlLabelActive-left, auto);
+        line-height: var(--controlLabelActive-lineHeight, fonts.rem(14));
+        max-width: var(--controlLabelActive-maxwidth, none);
+        padding-left: var(--controlLabelActive-pl, 0);
+        padding-right: var(--controlLabelActive-pr, 0);
+        top: var(--controlLabelActive-top, auto);
         z-index: val.zIndex(controlLabel_active);
-        #{--controlLabel-left}: fonts.rem(val.formsSizes(formControl_paddingX) - $paddinFromLeft);
-        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-        #{--controlLabel-lineHeight}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-        #{--controlLabel-pl}: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
-        #{--controlLabel-top}: fonts.rem(val.formsSizes(formElem_borderSize) * 2); // корректировка из-за line-height
+      .css-formFree & {
+        background-color:var(--bg_color, val.brandForms(controlLabelActive_bgc));
       }
       .inputGroup &{
         .form-group &{
@@ -149,26 +147,17 @@ output {
       }
     }
     &__large{
-      .css-formFree & {
-        // padding-left: fonts.rem(val.formsSizes(formControl_paddingX__lg));
-        // line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
         #{--controlLabel-transition}: font-size .2s ease-out;
+      .css-formFree & {
+        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
+        #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
         #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg));
         #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
-        #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
         #{--controlLabel-top}: 0;
-        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
-      }
-      &.active {
-        .css-formFree & {
-          // line-height: fonts.rem(14);
-          // padding-left: 0;
-          // transform: translate(0, 0);
-          #{--controlLabel-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
-          #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem));
-          #{--controlLabel-lineHeight}: fonts.rem(14);
-          #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
-        }
+        #{--controlLabelActive-fontSize}: fonts.rem(val.fontSizes(formElem));
+        #{--controlLabelActive-lineHeight}: fonts.rem(14);
+        #{--controlLabelActive-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
+        #{--controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
       }
     }
     &__relative{
@@ -355,9 +344,6 @@ output {
   }
   &__large{
     font-size: fonts.rem(val.fontSizes(formElem__large));
-    // height: fonts.rem(val.formsSizes(formElem_height__lg));
-    // line-height: var(fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
-    // padding: 0 fonts.rem(val.formsSizes(formControl_paddingX__lg));
     #{--formControl-paddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
     #{--formControl-lineHeight}: 1;
     #{--formControl-height}: fonts.rem(val.formsSizes(formElem_height__lg));
@@ -391,7 +377,6 @@ textarea.form-control {
 }
 
 .form-group {
-  // margin-bottom: fonts.rem(val.formsSizes(formGroup_mb));
   margin-bottom: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
   padding-top: var(--formGroup-pt, 0);
   .css-formFree &{ 
@@ -402,22 +387,16 @@ textarea.form-control {
   }
   &__10{
     #{--formGroup-mb}: fonts.rem(10);
-    // margin-bottom: fonts.rem(10);
     .css-formFree &{ 
       #{--formGroup-mb}: fonts.rem(10);
-      // margin-bottom: fonts.rem(10);
     }
   }
   &__0{
-    // margin-bottom: fonts.rem(0);
-    // padding-top: fonts.rem(0);
     #{--formGroup-pt}: 0;
     #{--formGroup-mb}: 0;
     .css-formFree &{ 
       #{--formGroup-pt}: 0;
       #{--formGroup-mb}: 0;
-      // margin-bottom: fonts.rem(0);
-      // padding-top: fonts.rem(0);
     }
   }
   &__large{
@@ -428,21 +407,17 @@ textarea.form-control {
     #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
     #{--formGroup-pt}: 0;
     #{--formGroup-mb}: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
+    #{--controlLabel-transition}: font-size .2s ease-out;
     .css-formFree & {
-      #{--controlLabel-transition}: font-size .2s ease-out;
-      #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
-      #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
-      #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
-      #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
-      #{--controlLabel-top}: 0;
-      .active{
-        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem));
-        #{--controlLabel-lineHeight}: fonts.rem(14);
-        #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
-        #{--controlLabel-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
-      }
-      // padding-top: 0;
-      // margin-bottom: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
+        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
+        #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+        #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
+        #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
+        #{--controlLabel-top}: 0;
+        #{--controlLabelActive-fontSize}: fonts.rem(val.fontSizes(formElem));
+        #{--controlLabelActive-lineHeight}: fonts.rem(14);
+        #{--controlLabelActive-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
+        #{--controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
     }
   }
 }
