@@ -11945,7 +11945,7 @@ output {
   overflow: hidden;
   pointer-events: none;
   text-overflow: ellipsis;
-  transition: top 0.2s ease-out, font-size 0.2s ease-out;
+  transition: var(--controlLabel-transition, top 0.2s ease-out, font-size 0.2s ease-out);
   transform-origin: 0% 100%;
   top: var(--controlLabel-top, 0.6875rem);
   z-index: 1;
@@ -11975,7 +11975,8 @@ output {
   top: -0.5625rem;
 }
 .css-formFree .control-label__large {
-  --controlLabel-lineHeight: 3rem;
+  --controlLabel-transition: font-size 0.2s ease-out;
+  --controlLabel-lineHeight: 3.25rem;
   --controlLabel-pl: 1rem;
   --controlLabel-left: 0.125rem;
   --controlLabel-top: 0;
@@ -12207,6 +12208,7 @@ textarea.form-control {
   --formGroup-mb: var(--formGroup-mb, 1.5625rem);
 }
 .css-formFree .form-group__large {
+  --controlLabel-transition: font-size 0.2s ease-out;
   --controlLabel-left: 0.125rem;
   --controlLabel-lineHeight: 3.125rem;
   --controlLabel-pl: 1rem;

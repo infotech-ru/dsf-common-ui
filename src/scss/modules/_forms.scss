@@ -98,7 +98,7 @@ output {
       overflow: hidden;
       pointer-events: none;
       text-overflow: ellipsis;
-      transition: top .2s ease-out, font-size .2s ease-out;
+      transition: var(--controlLabel-transition, top .2s ease-out, font-size .2s ease-out);
       // transform: translateX(0) translateY(0);
       transform-origin: 0% 100%;
       top: var(--controlLabel-top, fonts.rem(val.fontSizes(controlLabel_active__formFree)));
@@ -152,7 +152,8 @@ output {
       .css-formFree & {
         // padding-left: fonts.rem(val.formsSizes(formControl_paddingX__lg));
         // line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
-        #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize__lg) * 2));
+        #{--controlLabel-transition}: font-size .2s ease-out;
+        #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg));
         #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
         #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
         #{--controlLabel-top}: 0;
@@ -427,7 +428,8 @@ textarea.form-control {
     #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
     #{--formGroup-pt}: 0;
     #{--formGroup-mb}: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
-    .css-formFree & { 
+    .css-formFree & {
+      #{--controlLabel-transition}: font-size .2s ease-out;
       #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
       #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
       #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
