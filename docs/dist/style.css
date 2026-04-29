@@ -11920,6 +11920,7 @@ output {
 }
 
 .css-formFree .control-label,
+.css-formFree .inputGroup,
 .css-formFree .form-group,
 .css-formFree .form-group__large {
   --controlLabel-fontSize: var(--formsFree-controlLabel-fontSize);
