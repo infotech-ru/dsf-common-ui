@@ -11919,21 +11919,8 @@ output {
   color: #777777;
 }
 
-.css-formFree {
-  --formsFree-controlLabel-fontSize: 0.75rem;
-  --formsFree-controlLabel-left: 0;
-  --formsFree-controlLabel-lineHeight: 1.75rem;
-  --formsFree-controlLabel-pl: 0.4375rem;
-  --formsFree-controlLabel-pr: calc(16px + 16px + 10px);
-  --formsFree-controlLabel-mb: 0;
-  --formsFree-controlLabel-top: 0.6875rem;
-  --formsFree-controlLabelActive-fontSize: 0.6875rem;
-  --formsFree-controlLabelActive-left: 0.25rem;
-  --formsFree-controlLabelActive-lineHeight: 0.6875rem;
-  --formsFree-controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
-  --formsFree-controlLabelActive-pl: 0.25rem;
-  --formsFree-controlLabelActive-top: 0.125rem;
-  --formsFree-controlLabelActive-pr: calc(12px + 5px);
+.css-formFree .form-group,
+.css-formFree .form-group__large {
   --controlLabel-fontSize: var(--formsFree-controlLabel-fontSize);
   --controlLabel-left: var(--formsFree-controlLabel-left);
   --controlLabel-lineHeight: var(--formsFree-controlLabel-lineHeight);
@@ -12206,6 +12193,20 @@ textarea.form-control {
 .form-group {
   margin-bottom: var(--formGroup-mb, 1.5625rem);
   padding-top: var(--formGroup-pt, 0);
+  --formsFree-controlLabel-fontSize: 0.75rem;
+  --formsFree-controlLabel-left: 0;
+  --formsFree-controlLabel-lineHeight: 1.75rem;
+  --formsFree-controlLabel-pl: 0.4375rem;
+  --formsFree-controlLabel-pr: calc(16px + 16px + 10px);
+  --formsFree-controlLabel-mb: 0;
+  --formsFree-controlLabel-top: 0.6875rem;
+  --formsFree-controlLabelActive-fontSize: 0.6875rem;
+  --formsFree-controlLabelActive-left: 0.25rem;
+  --formsFree-controlLabelActive-lineHeight: 0.6875rem;
+  --formsFree-controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
+  --formsFree-controlLabelActive-pl: 0.25rem;
+  --formsFree-controlLabelActive-top: 0.125rem;
+  --formsFree-controlLabelActive-pr: calc(12px + 5px);
 }
 .css-formFree .form-group {
   position: relative;
