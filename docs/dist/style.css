@@ -10306,6 +10306,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #FCEEEE;
 }
 .btn-icon__danger .svg--icon {
+  --btn_svg__hover: ;
   --svg-icon-fill: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
@@ -10316,23 +10317,23 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #e5e5e5;
 }
 .btn-icon__default .svg--icon {
+  --btn_svg__hover: #333333;
   --svg-icon-fill: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
   --svg-icon-stroke: #333333;
   --limited-stroke-off: #00000000;
-  --btn_svg__hover: #333333;
 }
 .btn-icon__success:hover .svg--icon, .btn-icon__success:focus-visible .svg--icon, .btn-icon__success.active .svg--icon, .btn-icon__success.active:focus .svg--icon {
   background-color: #E9F5E9;
 }
 .btn-icon__success .svg--icon {
+  --btn_svg__hover: #69C26A;
   --svg-icon-fill: #69C26A;
   --svg-icon-fill_blue: #69C26A;
   --svg-icon-stroke_blue: #69C26A;
   --svg-icon-stroke: #69C26A;
   --limited-stroke-off: #00000000;
-  --btn_svg__hover: #69C26A;
 }
 .btn-icon__clear .svg--icon {
   background-color: transparent;
