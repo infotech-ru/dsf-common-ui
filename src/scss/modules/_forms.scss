@@ -66,20 +66,35 @@ output {
 $paddinFromLeft: 3;
 
 .css-formFree {
-    #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(controlLabel__formFree));
-    #{--controlLabel-left}: 0;
-    #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height));
-    #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX));
-    #{--controlLabel-pr}: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
-    #{--controlLabel-mb}: 0;
-    #{--controlLabel-top}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-    #{--controlLabelActive-fontSize}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-    #{--controlLabelActive-left}: fonts.rem(val.formsSizes(formControl_paddingX) - $paddinFromLeft);
-    #{--controlLabelActive-lineHeight}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-    #{--controlLabelActive-maxwidth}: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
-    #{--controlLabelActive-pl}: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
-    #{--controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize) * 2); // корректировка из-за line-height
-    #{--controlLabelActive-pr}: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
+    #{--formsFree-controlLabel-fontSize}: fonts.rem(val.fontSizes(controlLabel__formFree));
+    #{--formsFree-controlLabel-left}: 0;
+    #{--formsFree-controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height));
+    #{--formsFree-controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX));
+    #{--formsFree-controlLabel-pr}: calc(#{val.brandSizes(caretSelect_size)}px  + #{val.formsSizes(iconLabel)}px + 10px);
+    #{--formsFree-controlLabel-mb}: 0;
+    #{--formsFree-controlLabel-top}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    #{--formsFree-controlLabelActive-fontSize}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    #{--formsFree-controlLabelActive-left}: fonts.rem(val.formsSizes(formControl_paddingX) - $paddinFromLeft);
+    #{--formsFree-controlLabelActive-lineHeight}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    #{--formsFree-controlLabelActive-maxwidth}: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft)) + fonts.rem($paddinFromLeft));
+    #{--formsFree-controlLabelActive-pl}: fonts.rem(calc(val.formsSizes(formControl_paddingX) - $paddinFromLeft));
+    #{--formsFree-controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize) * 2); // корректировка из-за line-height
+    #{--formsFree-controlLabelActive-pr}: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
+    
+    #{--controlLabel-fontSize}: var(--formsFree-controlLabel-fontSize);
+    #{--controlLabel-left}: var(--formsFree-controlLabel-left);
+    #{--controlLabel-lineHeight}: var(--formsFree-controlLabel-lineHeight);
+    #{--controlLabel-pl}: var(--formsFree-controlLabel-pl);
+    #{--controlLabel-pr}: var(--formsFree-controlLabel-pr);
+    #{--controlLabel-mb}: var(--formsFree-controlLabel-mb);
+    #{--controlLabel-top}: var(--formsFree-controlLabel-top);
+    #{--controlLabelActive-fontSize}: var(--formsFree-controlLabelActive-fontSize);
+    #{--controlLabelActive-left}: var(--formsFree-controlLabelActive-left);
+    #{--controlLabelActive-lineHeight}: var(--formsFree-controlLabelActive-lineHeight);
+    #{--controlLabelActive-maxwidth}: var(--formsFree-controlLabelActive-maxwidth);
+    #{--controlLabelActive-pl}: var(--formsFree-controlLabelActive-pl);
+    #{--controlLabelActive-pr}: var(--formsFree-controlLabelActive-pr);
+    #{--controlLabelActive-top}: var(--formsFree-controlLabelActive-top);
 }
 .control-label{
     // letter-spacing: .5px;
@@ -148,17 +163,15 @@ $paddinFromLeft: 3;
     }
     &__large{
         #{--controlLabel-transition}: font-size .2s ease-out;
-      .css-formFree & {
-        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
-        #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
-        #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg));
-        #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
-        #{--controlLabel-top}: 0;
-        #{--controlLabelActive-fontSize}: fonts.rem(val.fontSizes(formElem));
-        #{--controlLabelActive-lineHeight}: fonts.rem(14);
-        #{--controlLabelActive-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
-        #{--controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
-      }
+        #{--formsFree-controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
+        #{--formsFree-controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+        #{--formsFree-controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg));
+        #{--formsFree-controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
+        #{--formsFree-controlLabel-top}: 0;
+        #{--formsFree-controlLabelActive-fontSize}: fonts.rem(val.fontSizes(formElem));
+        #{--formsFree-controlLabelActive-lineHeight}: fonts.rem(14);
+        #{--formsFree-controlLabelActive-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
+        #{--formsFree-controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
     }
     &__relative{
       &,
@@ -408,17 +421,16 @@ textarea.form-control {
     #{--formGroup-pt}: 0;
     #{--formGroup-mb}: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
     #{--controlLabel-transition}: font-size .2s ease-out;
-    .css-formFree & {
-        #{--controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
-        #{--controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
-        #{--controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
-        #{--controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
-        #{--controlLabel-top}: 0;
-        #{--controlLabelActive-fontSize}: fonts.rem(val.fontSizes(formElem));
-        #{--controlLabelActive-lineHeight}: fonts.rem(14);
-        #{--controlLabelActive-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
-        #{--controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
-    }
+
+    #{--formsFree-controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
+    #{--formsFree-controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+    #{--formsFree-controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize) * 2));
+    #{--formsFree-controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
+    #{--formsFree-controlLabel-top}: 0;
+    #{--formsFree-controlLabelActive-fontSize}: fonts.rem(val.fontSizes(formElem));
+    #{--formsFree-controlLabelActive-lineHeight}: fonts.rem(14);
+    #{--formsFree-controlLabelActive-pl}: fonts.rem(val.formsSizes(formControl_paddingX__lg) - val.formsSizes(formElem_borderSize__lg));
+    #{--formsFree-controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
   }
 }
 

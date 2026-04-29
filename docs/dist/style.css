@@ -11920,20 +11920,34 @@ output {
 }
 
 .css-formFree {
-  --controlLabel-fontSize: 0.75rem;
-  --controlLabel-left: 0;
-  --controlLabel-lineHeight: 1.75rem;
-  --controlLabel-pl: 0.4375rem;
-  --controlLabel-pr: calc(16px + 16px + 10px);
-  --controlLabel-mb: 0;
-  --controlLabel-top: 0.6875rem;
-  --controlLabelActive-fontSize: 0.6875rem;
-  --controlLabelActive-left: 0.25rem;
-  --controlLabelActive-lineHeight: 0.6875rem;
-  --controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
-  --controlLabelActive-pl: 0.25rem;
-  --controlLabelActive-top: 0.125rem;
-  --controlLabelActive-pr: calc(12px + 5px);
+  --formsFree-controlLabel-fontSize: 0.75rem;
+  --formsFree-controlLabel-left: 0;
+  --formsFree-controlLabel-lineHeight: 1.75rem;
+  --formsFree-controlLabel-pl: 0.4375rem;
+  --formsFree-controlLabel-pr: calc(16px + 16px + 10px);
+  --formsFree-controlLabel-mb: 0;
+  --formsFree-controlLabel-top: 0.6875rem;
+  --formsFree-controlLabelActive-fontSize: 0.6875rem;
+  --formsFree-controlLabelActive-left: 0.25rem;
+  --formsFree-controlLabelActive-lineHeight: 0.6875rem;
+  --formsFree-controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
+  --formsFree-controlLabelActive-pl: 0.25rem;
+  --formsFree-controlLabelActive-top: 0.125rem;
+  --formsFree-controlLabelActive-pr: calc(12px + 5px);
+  --controlLabel-fontSize: var(--formsFree-controlLabel-fontSize);
+  --controlLabel-left: var(--formsFree-controlLabel-left);
+  --controlLabel-lineHeight: var(--formsFree-controlLabel-lineHeight);
+  --controlLabel-pl: var(--formsFree-controlLabel-pl);
+  --controlLabel-pr: var(--formsFree-controlLabel-pr);
+  --controlLabel-mb: var(--formsFree-controlLabel-mb);
+  --controlLabel-top: var(--formsFree-controlLabel-top);
+  --controlLabelActive-fontSize: var(--formsFree-controlLabelActive-fontSize);
+  --controlLabelActive-left: var(--formsFree-controlLabelActive-left);
+  --controlLabelActive-lineHeight: var(--formsFree-controlLabelActive-lineHeight);
+  --controlLabelActive-maxwidth: var(--formsFree-controlLabelActive-maxwidth);
+  --controlLabelActive-pl: var(--formsFree-controlLabelActive-pl);
+  --controlLabelActive-pr: var(--formsFree-controlLabelActive-pr);
+  --controlLabelActive-top: var(--formsFree-controlLabelActive-top);
 }
 
 .control-label {
@@ -11992,17 +12006,15 @@ output {
 }
 .control-label__large {
   --controlLabel-transition: font-size 0.2s ease-out;
-}
-.css-formFree .control-label__large {
-  --controlLabel-fontSize: 0.9375rem;
-  --controlLabel-left: 0.125rem;
-  --controlLabel-lineHeight: 3.25rem;
-  --controlLabel-pl: 1rem;
-  --controlLabel-top: 0;
-  --controlLabelActive-fontSize: 0.75rem;
-  --controlLabelActive-lineHeight: 0.875rem;
-  --controlLabelActive-pl: 0.875rem;
-  --controlLabelActive-top: 0.125rem;
+  --formsFree-controlLabel-fontSize: 0.9375rem;
+  --formsFree-controlLabel-left: 0.125rem;
+  --formsFree-controlLabel-lineHeight: 3.25rem;
+  --formsFree-controlLabel-pl: 1rem;
+  --formsFree-controlLabel-top: 0;
+  --formsFree-controlLabelActive-fontSize: 0.75rem;
+  --formsFree-controlLabelActive-lineHeight: 0.875rem;
+  --formsFree-controlLabelActive-pl: 0.875rem;
+  --formsFree-controlLabelActive-top: 0.125rem;
 }
 .css-formFree .control-label__relative, .css-formFree .control-label__relative.active {
   left: auto;
@@ -12223,17 +12235,15 @@ textarea.form-control {
   --formGroup-pt: 0;
   --formGroup-mb: var(--formGroup-mb, 1.5625rem);
   --controlLabel-transition: font-size 0.2s ease-out;
-}
-.css-formFree .form-group__large {
-  --controlLabel-fontSize: 0.9375rem;
-  --controlLabel-left: 0.125rem;
-  --controlLabel-lineHeight: 3.125rem;
-  --controlLabel-pl: 1rem;
-  --controlLabel-top: 0;
-  --controlLabelActive-fontSize: 0.75rem;
-  --controlLabelActive-lineHeight: 0.875rem;
-  --controlLabelActive-pl: 0.875rem;
-  --controlLabelActive-top: 0.125rem;
+  --formsFree-controlLabel-fontSize: 0.9375rem;
+  --formsFree-controlLabel-left: 0.125rem;
+  --formsFree-controlLabel-lineHeight: 3.125rem;
+  --formsFree-controlLabel-pl: 1rem;
+  --formsFree-controlLabel-top: 0;
+  --formsFree-controlLabelActive-fontSize: 0.75rem;
+  --formsFree-controlLabelActive-lineHeight: 0.875rem;
+  --formsFree-controlLabelActive-pl: 0.875rem;
+  --formsFree-controlLabelActive-top: 0.125rem;
 }
 
 .radio,
