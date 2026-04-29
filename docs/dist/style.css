@@ -11919,6 +11919,7 @@ output {
   color: #777777;
 }
 
+.css-formFree .control-label,
 .css-formFree .form-group,
 .css-formFree .form-group__large {
   --controlLabel-fontSize: var(--formsFree-controlLabel-fontSize);
@@ -12027,21 +12028,19 @@ output {
   background-image: none;
   background-color: var(--bg_color, #ffffff);
   border-color: #dddddd;
-  border-radius: var(--formControl-borderRadius);
+  border-radius: var(--formControl-borderRadius, 0.0625rem);
   border-style: solid;
-  border-width: var(--formControl-borderwidth);
+  border-width: var(--formControl-borderwidth, 0.0625rem);
   box-shadow: none;
   color: #333333;
   display: block;
-  font-size: 0.75rem;
+  font-size: var(--formControl-fontSize, 0.75rem);
   font-weight: 400;
   height: var(--formControl-height, 1.75rem);
   line-height: var(--formControl-lineHeight, 1.625rem);
   padding: 0 var(--formControl-paddingX, 0.4375rem);
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   width: 100%;
-  --formControl-borderwidth: 0.0625rem;
-  --formControl-borderRadius: 0.0625rem;
 }
 .form-control::-moz-placeholder {
   color: #333333;
@@ -12159,12 +12158,12 @@ output {
   font-size: 0.75rem;
 }
 .form-control__large {
-  font-size: 0.9375rem;
-  --formControl-paddingX: 1rem;
-  --formControl-lineHeight: 1;
-  --formControl-height: 3.25rem;
-  --formControl-borderwidth: 0.125rem;
   --formControl-borderRadius: 0.0625rem;
+  --formControl-borderwidth: 0.125rem;
+  --formControl-fontSize: 0.9375rem;
+  --formControl-height: 3.25rem;
+  --formControl-lineHeight: 1;
+  --formControl-paddingX: 1rem;
 }
 
 textarea.form-control {
@@ -12228,11 +12227,12 @@ textarea.form-control {
   --formGroup-mb: 0;
 }
 .form-group__large {
-  --formControl-paddingX: 1rem;
-  --formControl-lineHeight: 1;
-  --formControl-height: 3.25rem;
-  --formControl-borderwidth: 0.125rem;
   --formControl-borderRadius: 0.0625rem;
+  --formControl-borderwidth: 0.125rem;
+  --formControl-fontSize: 0.9375rem;
+  --formControl-height: 3.25rem;
+  --formControl-lineHeight: 1;
+  --formControl-paddingX: 1rem;
   --formGroup-pt: 0;
   --formGroup-mb: var(--formGroup-mb, 1.5625rem);
   --controlLabel-transition: font-size 0.2s ease-out;

@@ -65,6 +65,7 @@ output {
 
 $paddinFromLeft: 3;
 
+.css-formFree .control-label,
 .css-formFree .form-group,
 .css-formFree .form-group__large {
     #{--controlLabel-fontSize}: var(--formsFree-controlLabel-fontSize);
@@ -195,21 +196,19 @@ $paddinFromLeft: 3;
   // background-color: val.brandForms(formControl-bgc);
   background-color: var(--bg_color, val.brandForms(formControl-bgc));
   border-color: val.brandForms(formControl-borderColor);
-  border-radius: var(--formControl-borderRadius);
+  border-radius: var(--formControl-borderRadius, fonts.rem(val.formsSizes(formElem_borderRadius)));
   border-style: solid;
-  border-width: var(--formControl-borderwidth);
+  border-width: var(--formControl-borderwidth, fonts.rem(val.formsSizes(formElem_borderSize)));
   box-shadow: none;
   color: val.brandForms(formControl-color);
   display: block;
-  font-size: fonts.rem(val.fontSizes(formElem));
+  font-size: var(--formControl-fontSize, fonts.rem(val.fontSizes(formElem)));
   font-weight: val.fontWeight(formElem);
   height: var(--formControl-height, #{fonts.rem(val.formsSizes(formElem_height))});
   line-height: var(--formControl-lineHeight, #{fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2))});
   padding: 0 var(--formControl-paddingX, #{fonts.rem(val.formsSizes(formControl_paddingX))});
   transition: baseValue.$base-transition_form;
   width: 100%;
-  #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize));
-  #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius));
 
   @include placeholder.placeholder2(val.brandForms(formControl-placeholder), 400, 12);
   // Unstyle the caret on `<select>`s in IE10+.
@@ -342,12 +341,12 @@ $paddinFromLeft: 3;
     }
   }
   &__large{
-    font-size: fonts.rem(val.fontSizes(formElem__large));
-    #{--formControl-paddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
-    #{--formControl-lineHeight}: 1;
-    #{--formControl-height}: fonts.rem(val.formsSizes(formElem_height__lg));
-    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
     #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
+    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+    #{--formControl-fontSize}: fonts.rem(val.fontSizes(formElem__large));
+    #{--formControl-height}: fonts.rem(val.formsSizes(formElem_height__lg));
+    #{--formControl-lineHeight}: 1;
+    #{--formControl-paddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
   }
   // [converter] extracted textarea& to textarea.form-control
 }
@@ -413,11 +412,12 @@ textarea.form-control {
         }
     }
     &__large{
-        #{--formControl-paddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
-        #{--formControl-lineHeight}: 1;
-        #{--formControl-height}: fonts.rem(val.formsSizes(formElem_height__lg));
-        #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
         #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
+        #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+        #{--formControl-fontSize}: fonts.rem(val.fontSizes(formElem__large));
+        #{--formControl-height}: fonts.rem(val.formsSizes(formElem_height__lg));
+        #{--formControl-lineHeight}: 1;
+        #{--formControl-paddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
         #{--formGroup-pt}: 0;
         #{--formGroup-mb}: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
         #{--controlLabel-transition}: font-size .2s ease-out;
