@@ -3421,6 +3421,13 @@ h6, .h6 {
 .header__bottom.collapsing {
   width: 100%;
 }
+@media (max-width: 1439.98px) {
+  .desktop-view .header__bottom.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+  }
+}
 .guest-view .header__bottom {
   display: none;
 }
@@ -3513,7 +3520,7 @@ h6, .h6 {
   display: none;
 }
 @media (min-width: 1366px) {
-  .header .navbar-toggle__desktop {
+  .header .navbar-toggle__smallDesktop {
     display: none;
   }
 }
@@ -7635,6 +7642,10 @@ h6, .h6 {
 .dropdown-submenu .dropdown-menu > li > a,
 .dropdown-submenu .dropdown-menu .dropdown__link {
   box-sizing: content-box;
+}
+.mobile-view .header__bottom .dropdown-submenu .dropdown-menu > li > a,
+.mobile-view .header__bottom .dropdown-submenu .dropdown-menu .dropdown__link {
+  box-sizing: border-box;
 }
 .dropdown-submenu-left > .dropdown-menu {
   left: auto;

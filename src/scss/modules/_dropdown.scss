@@ -309,6 +309,11 @@
         >li>a,
         .dropdown__link {
             box-sizing: content-box;
+            .header__bottom &{
+                .mobile-view &{
+                    box-sizing: border-box;
+                }
+            }
         }
     }
 

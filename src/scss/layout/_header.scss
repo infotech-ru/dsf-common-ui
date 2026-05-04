@@ -117,6 +117,13 @@
     &.collapsing {
         // top: 50px;
         width: 100%;
+        .desktop-view &{
+          @include breakpoints.media-breakpoint-down(xxl){
+            position: relative;
+            height: 0;
+            overflow: hidden;
+          }
+        }
     }
     .guest-view &{
       display: none;
@@ -219,7 +226,7 @@
           display: none;
       }
     }
-    &__desktop{
+    &__smallDesktop{
       @include breakpoints.media-breakpoint-up(xxl){
         display: none;
       }
