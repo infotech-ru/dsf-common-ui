@@ -10306,7 +10306,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #FCEEEE;
 }
 .btn-icon__danger .svg--icon {
-  --btn_svg__hover: ;
+  --btn_svg__hover: #D9534F;
   --svg-icon-fill: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;

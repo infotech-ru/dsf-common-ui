@@ -502,7 +502,7 @@ a.btn {
       }
     }
     .svg--icon {
-      #{--btn_svg__hover}: val.brandBtnDownload(btnIconSvgDanger_color);
+      #{--btn_svg__hover}: val.brandBtnIcon(btnIconSvgDanger_color);
       #{--svg-icon-fill}: val.brandBtnIcon(btnIconSvgDanger_color);
       #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIconSvgDanger_color);
       #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvgDanger_color);
