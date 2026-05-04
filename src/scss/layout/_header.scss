@@ -8,6 +8,8 @@
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-baseValue' as baseValue;
+@use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
+@use './../utilities/mixins/breakpoints' as breakpoints;
 
 .header {
   // background: linear-gradient(180deg, #F9F9F9 0%, #CACACA 100%);
@@ -70,16 +72,46 @@
       height: 0;
       transition: margin-left .5s ease, width .5s ease;
       overflow: auto;
-      // top: 0px;
       width: 0;
       z-index: val.zIndex(menuNav);
       &.show,
       &.in{
         height: calc(100vh - 50px);
         margin-left: 0;
-        // width: 100%;
         width: 100%;
         right: 0;
+      }
+    }
+    &.collapse__xxl{
+      .desktop-view &{
+        @include breakpoints.media-breakpoint-down(xxl){
+          background-color: #ffffff;
+          background-attachment: fixed;
+          box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
+          display: block;
+          flex-grow: 0;
+          flex-shrink: 0;
+          position: absolute;
+          top: #{val.layoutSizes(headerTop_height)}px;
+          left: 0;
+          padding: 0px;
+          height: 0;
+          transition: margin-left .5s ease, width .5s ease;
+          overflow: auto;
+          width: 0;
+          z-index: val.zIndex(menuNav);
+        }
+      }
+      &.show,
+      &.in{
+        .desktop-view &{
+          @include breakpoints.media-breakpoint-down(xxl){
+            height: calc(100vh - 50px);
+            margin-left: 0;
+            width: 100%;
+            right: 0;
+          }
+        }
       }
     }
     &.collapsing {
@@ -185,6 +217,11 @@
       }
       .svg--close{
           display: none;
+      }
+    }
+    &__desktop{
+      @include breakpoints.media-breakpoint-up(xxl){
+        display: none;
       }
     }
   }

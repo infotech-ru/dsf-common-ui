@@ -16,7 +16,9 @@
   box-shadow: 0px 1px 0px color.scale(rgba(val.brandColors(_black), 1), $alpha: -80%, $space: rgb);
   padding: fonts.rem(val.brandSizes(unityBlock_padding));
   z-index: val.zIndex(unityBlock);
-
+  .mobile-view &{
+    padding: 10px 5px;
+  }
   &__nobg{
     background-color: transparent;
   }
