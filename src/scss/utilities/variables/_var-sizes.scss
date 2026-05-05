@@ -89,6 +89,9 @@ $forms-sizes:(
   inputGroupAddon_paddingY:        6,
 )!default;
 
+$paddingFromLeft: 3 !default;
+$paddingFromTop-active: 7 !default;
+
 $layout-sizes:(
   footer_height:                   52,
   footer_marginTop:                baseValue.$base-padding,

@@ -12050,6 +12050,12 @@ output {
   --formControlActive-pb: var(--formsFree-formControlActive-pb);
 }
 
+.css-formFree .control-label__large,
+.css-formFree .inputGroup__large,
+.css-formFree .form-group__large {
+  --controlLabel-bg: var(--formsFree-controlLabel-bg);
+}
+
 .css-formFree .control-label,
 .css-formFree .inputGroup,
 .css-formFree .form-group,
@@ -12126,6 +12132,7 @@ output {
 }
 .control-label__large {
   --controlLabel-transition: font-size 0.2s ease-out;
+  --formsFree-controlLabel-bg: #ffffff;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
   --formsFree-controlLabel-lineHeight: 3.25rem;
@@ -12135,7 +12142,6 @@ output {
   --formsFree-controlLabelActive-lineHeight: 0.875rem;
   --formsFree-controlLabelActive-pl: 0.875rem;
   --formsFree-controlLabelActive-top: 0.4375rem;
-  --formsFree-controlLabel-lineHeight: 3.25rem;
 }
 .css-formFree .control-label__relative, .css-formFree .control-label__relative.active {
   left: auto;
@@ -12374,6 +12380,7 @@ textarea.form-control {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
+  --formsFree-controlLabel-bg: #ffffff;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
   --formsFree-controlLabel-lineHeight: 3.25rem;
@@ -13367,6 +13374,12 @@ select.selectpicker {
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
+/* FORMS ELEMENT                                                              */
+/* path: dsf-common-ui/src/scss/modules/_forms.scss                           */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
 /* GROUP ELEMENTS                                                             */
 /* path: dsf-common-ui/src/scss/modules/_elem-group.scss                      */
 /*                                                                            */
@@ -13710,8 +13723,27 @@ select.selectpicker {
   --formsFree-controlLabelActive-pr: calc(12px + 5px);
 }
 .inputGroup__large {
-  --formControl-borderwidth: 0.125rem;
   --formControl-borderRadius: 0.0625rem;
+  --formControl-borderwidth: 0.125rem;
+  --formControl-fontSize: 0.9375rem;
+  --formControl-height: 3.25rem;
+  --formControl-lineHeight: 1;
+  --formControl-paddingX: 1rem;
+  --formsFree-formControlActive-pt: 1.4375rem;
+  --formsFree-formControlActive-pb: 0.4375rem;
+  --controlLabel-transition: font-size 0.2s ease-out;
+  --formsFree-controlLabel-bg: #ffffff;
+  --formsFree-controlLabel-fontSize: 0.9375rem;
+  --formsFree-controlLabel-left: 0.125rem;
+  --formsFree-controlLabel-lineHeight: 3.25rem;
+  --formsFree-controlLabel-pl: 1rem;
+  --formsFree-controlLabel-top: 0;
+  --formsFree-controlLabelActive-fontSize: 0.75rem;
+  --formsFree-controlLabelActive-lineHeight: 0.875rem;
+  --formsFree-controlLabelActive-pl: 0.875rem;
+  --formsFree-controlLabelActive-top: 0.4375rem;
+  --formGroup-pt: 0;
+  --formGroup-mb: var(--formGroup-mb, 1.5625rem);
 }
 .css-formFree .inputGroup {
   align-items: stretch;

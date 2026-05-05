@@ -10,6 +10,7 @@
 @use './../utilities/mixins_bootstrap-v3/border-radius' as borderradius;
 @use './../utilities/mixins/transition' as transition;
 @use './../utilities/variables/var-baseValue' as baseValue;
+@use './../utilities/variables/var-mixins' as varMixins;
 @use './buttons' as buttons;
 
 .btn-group{
@@ -401,23 +402,13 @@
   width: 100%;
   #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize));
   #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius));
-  --formsFree-controlLabel-fontSize: 0.75rem;
-  --formsFree-controlLabel-left: 0;
-  --formsFree-controlLabel-lineHeight: 1.75rem;
-  --formsFree-controlLabel-pl: 0.4375rem;
-  --formsFree-controlLabel-pr: calc(16px + 16px + 10px);
-  --formsFree-controlLabel-mb: 0;
-  --formsFree-controlLabel-top: 0.6875rem;
-  --formsFree-controlLabelActive-fontSize: 0.6875rem;
-  --formsFree-controlLabelActive-left: 0.25rem;
-  --formsFree-controlLabelActive-lineHeight: 0.6875rem;
-  --formsFree-controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
-  --formsFree-controlLabelActive-pl: 0.25rem;
-  --formsFree-controlLabelActive-top: 0.125rem;
-  --formsFree-controlLabelActive-pr: calc(12px + 5px);
+  @include varMixins.varControlLabel;
   &__large{
-    #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
-    #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
+    // #{--formControl-borderwidth}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
+    // #{--formControl-borderRadius}: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
+    @include varMixins.varFormControlLarge;
+    @include varMixins.varControlLabelLarge;
+    @include varMixins.varFormGroupLarge;
   }
   .css-formFree & {
     align-items: stretch;
