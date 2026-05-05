@@ -36,10 +36,10 @@
     #{--formsFree-controlLabel-pl}: fonts.rem(val.formsSizes(formControl_paddingX));
     #{--formsFree-controlLabel-pr}: calc(#{val.brandSizes(caretSelect_size)}px + #{val.formsSizes(iconLabel)}px + 10px);
     #{--formsFree-controlLabel-mb}: 0;
-    #{--formsFree-controlLabel-top}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    #{--formsFree-controlLabel-top}: fonts.rem(val.formsSizes(controlLabelActive_lh));
     #{--formsFree-controlLabelActive-fontSize}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
     #{--formsFree-controlLabelActive-left}: fonts.rem(val.formsSizes(formControl_paddingX) - varSizes.$paddingFromLeft);
-    #{--formsFree-controlLabelActive-lineHeight}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    #{--formsFree-controlLabelActive-lineHeight}: fonts.rem(val.formsSizes(controlLabelActive_lh));
     #{--formsFree-controlLabelActive-maxwidth}: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - varSizes.$paddingFromLeft)) + fonts.rem(varSizes.$paddingFromLeft));
     #{--formsFree-controlLabelActive-pl}: fonts.rem(calc(val.formsSizes(formControl_paddingX) - varSizes.$paddingFromLeft));
     #{--formsFree-controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize) * 2); // корректировка из-за line-height

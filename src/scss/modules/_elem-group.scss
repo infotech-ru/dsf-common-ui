@@ -476,7 +476,7 @@
 
 .form-control-container {
   .css-formFree & {
-    padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    padding-top: fonts.rem(val.formsSizes(controlLabelActive_lh));
   }
   .form-group &{
     .css-formFree & {
@@ -548,7 +548,7 @@
         border-left-width: var(--formControl-borderwidth);
       }
       .css-formFree &{
-          padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+          padding-top: fonts.rem(val.formsSizes(controlLabelActive_lh));
       }
   }
 }
@@ -557,7 +557,7 @@
 .inputGroup_append {
   display: flex;
   .css-formFree & {
-    padding-top: fonts.rem(val.fontSizes(controlLabel_active__formFree));
+    padding-top: fonts.rem(val.formsSizes(controlLabelActive_lh));
   }
   .form-group &{
     .css-formFree & {

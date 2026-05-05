@@ -12123,7 +12123,7 @@ output {
   background-color: var(--formsFree-controlLabelLarge-bg, var(--bg_color, #ffffff));
 }
 .css-formFree .form-group .inputGroup .control-label.active {
-  top: -0.5625rem;
+  top: -0.625rem;
 }
 .control-label__large {
   --controlLabel-transition: font-size 0.2s ease-out;
@@ -12337,10 +12337,10 @@ textarea.form-control {
   --formsFree-controlLabel-pl: 0.4375rem;
   --formsFree-controlLabel-pr: calc(16px + 16px + 10px);
   --formsFree-controlLabel-mb: 0;
-  --formsFree-controlLabel-top: 0.6875rem;
+  --formsFree-controlLabel-top: 0.75rem;
   --formsFree-controlLabelActive-fontSize: 0.6875rem;
   --formsFree-controlLabelActive-left: 0.25rem;
-  --formsFree-controlLabelActive-lineHeight: 0.6875rem;
+  --formsFree-controlLabelActive-lineHeight: 0.75rem;
   --formsFree-controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
   --formsFree-controlLabelActive-pl: 0.25rem;
   --formsFree-controlLabelActive-top: 0.125rem;
@@ -12348,8 +12348,8 @@ textarea.form-control {
 }
 .css-formFree .form-group {
   position: relative;
-  --formGroup-pt: 0.6875rem;
-  --formGroup-mb: 0.875rem;
+  --formGroup-pt: 0.75rem;
+  --formGroup-mb: 0.8125rem;
 }
 .form-group__10 {
   --formGroup-mb: 0.625rem;
@@ -13708,10 +13708,10 @@ select.selectpicker {
   --formsFree-controlLabel-pl: 0.4375rem;
   --formsFree-controlLabel-pr: calc(16px + 16px + 10px);
   --formsFree-controlLabel-mb: 0;
-  --formsFree-controlLabel-top: 0.6875rem;
+  --formsFree-controlLabel-top: 0.75rem;
   --formsFree-controlLabelActive-fontSize: 0.6875rem;
   --formsFree-controlLabelActive-left: 0.25rem;
-  --formsFree-controlLabelActive-lineHeight: 0.6875rem;
+  --formsFree-controlLabelActive-lineHeight: 0.75rem;
   --formsFree-controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
   --formsFree-controlLabelActive-pl: 0.25rem;
   --formsFree-controlLabelActive-top: 0.125rem;
@@ -13802,7 +13802,7 @@ select.selectpicker {
 }
 
 .css-formFree .form-control-container {
-  padding-top: 0.6875rem;
+  padding-top: 0.75rem;
 }
 .css-formFree .form-group .form-control-container {
   padding-top: 0;
@@ -13865,7 +13865,7 @@ select.selectpicker {
   border-left-width: var(--formControl-borderwidth);
 }
 .css-formFree .form-control-container__border {
-  padding-top: 0.6875rem;
+  padding-top: 0.75rem;
 }
 
 .inputGroup_prepend,
@@ -13874,7 +13874,7 @@ select.selectpicker {
 }
 .css-formFree .inputGroup_prepend,
 .css-formFree .inputGroup_append {
-  padding-top: 0.6875rem;
+  padding-top: 0.75rem;
 }
 .css-formFree .form-group .inputGroup_prepend,
 .css-formFree .form-group .inputGroup_append {

@@ -162,7 +162,7 @@ output {
       .inputGroup &{
         .form-group &{
           .css-formFree & {
-            top: fonts.rem((val.fontSizes(controlLabel_active__formFree) - 2) * -1);
+            top: fonts.rem((val.formsSizes(controlLabelActive_lh) - 2) * -1);
           }
         }
       }
@@ -389,10 +389,9 @@ textarea.form-control {
     @include varMixins.varControlLabel;
     
     .css-formFree &{ 
-        // margin-bottom: fonts.rem(calc(val.formsSizes(formGroup__formFree_mb) - val.fontSizes(controlLabel_active__formFree)));
         position: relative;
-        #{--formGroup-pt}: fonts.rem(val.fontSizes(controlLabel_active__formFree));
-        #{--formGroup-mb}: #{fonts.rem(val.formsSizes(formGroup__formFree_mb) - val.fontSizes(controlLabel_active__formFree))};
+        #{--formGroup-pt}: fonts.rem(val.formsSizes(controlLabelActive_lh));
+        #{--formGroup-mb}: #{fonts.rem(val.formsSizes(formGroup__formFree_mb) - val.formsSizes(controlLabelActive_lh))};
     }
     &__10{
         #{--formGroup-mb}: fonts.rem(10);
