@@ -12050,12 +12050,6 @@ output {
   --formControlActive-pb: var(--formsFree-formControlActive-pb);
 }
 
-.css-formFree .control-label__large,
-.css-formFree .inputGroup__large,
-.css-formFree .form-group__large {
-  --controlLabel-bg: var(--formsFree-controlLabel-bg);
-}
-
 .css-formFree .control-label,
 .css-formFree .inputGroup,
 .css-formFree .form-group,
@@ -12126,14 +12120,14 @@ output {
   z-index: 1;
 }
 .css-formFree .control-label.active {
-  background-color: var(--bg_color, #ffffff);
+  background-color: var(--formsFree-controlLabelLarge-bg, var(--bg_color, #ffffff));
 }
 .css-formFree .form-group .inputGroup .control-label.active {
   top: -0.5625rem;
 }
 .control-label__large {
   --controlLabel-transition: font-size 0.2s ease-out;
-  --formsFree-controlLabel-bg: transparent;
+  --formsFree-controlLabelLarge-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
   --formsFree-controlLabel-lineHeight: 3.25rem;
@@ -12381,7 +12375,7 @@ textarea.form-control {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
-  --formsFree-controlLabel-bg: transparent;
+  --formsFree-controlLabelLarge-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
   --formsFree-controlLabel-lineHeight: 3.25rem;
@@ -13733,7 +13727,7 @@ select.selectpicker {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
-  --formsFree-controlLabel-bg: transparent;
+  --formsFree-controlLabelLarge-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
   --formsFree-controlLabel-lineHeight: 3.25rem;

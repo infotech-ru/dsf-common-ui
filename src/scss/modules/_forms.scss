@@ -74,12 +74,12 @@ output {
     #{--formControlActive-pb}: var(--formsFree-formControlActive-pb);
 }
 
-// для large
-.css-formFree .control-label__large,
-.css-formFree .inputGroup__large,
-.css-formFree .form-group__large {
-    #{--controlLabel-bg}: var(--formsFree-controlLabel-bg);
-}
+// для large label
+// .css-formFree .control-label__large,
+// .css-formFree .inputGroup__large,
+// .css-formFree .form-group__large {
+//     #{--controlLabel-bg}: var(--formsFree-controlLabel-bg);
+// }
 
 .css-formFree .control-label,
 .css-formFree .inputGroup,
@@ -157,7 +157,7 @@ output {
         top: var(--controlLabelActive-top, auto);
         z-index: val.zIndex(controlLabel_active);
       .css-formFree & {
-        background-color:var(--bg_color, val.brandForms(formControl-bgc));
+        background-color:var(--formsFree-controlLabelLarge-bg, var(--bg_color, val.brandForms(formControl-bgc)));
       }
       .inputGroup &{
         .form-group &{
