@@ -82,7 +82,7 @@
         right: 0;
       }
     }
-    &.collapse__xxl{
+    &.down-xxl_collapse{
       .desktop-view &{
         @include breakpoints.media-breakpoint-down(xxl){
           background-color: #ffffff;
@@ -227,7 +227,7 @@
       }
     }
     &__smallDesktop{
-      @include breakpoints.media-breakpoint-up(xxl){
+      @include breakpoints.media-breakpoint-up(xl){
         display: none;
       }
     }
