@@ -12047,6 +12047,7 @@ output {
 .css-formFree .form-group,
 .css-formFree .form-group__large {
   --formControlActive-pt: var(--formsFree-formControlActive-pt);
+  --formControlActive-pb: var(--formsFree-formControlActive-pb);
 }
 
 .css-formFree .control-label,
@@ -12172,7 +12173,7 @@ output {
   line-height: var(--formControl-lineHeight, 1.625rem);
   padding-top: var(--formControlActive-pt, 0);
   padding-right: var(--formControl-paddingX, 0.4375rem);
-  padding-bottom: 0;
+  padding-bottom: var(--formControlActive-pb, 0);
   padding-left: var(--formControl-paddingX, 0.4375rem);
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   width: 100%;
@@ -12300,6 +12301,7 @@ output {
   --formControl-lineHeight: 1;
   --formControl-paddingX: 1rem;
   --formsFree-formControlActive-pt: 1.4375rem;
+  --formsFree-formControlActive-pb: 0.4375rem;
 }
 
 textarea.form-control {
@@ -12370,6 +12372,7 @@ textarea.form-control {
   --formControl-lineHeight: 1;
   --formControl-paddingX: 1rem;
   --formsFree-formControlActive-pt: 1.4375rem;
+  --formsFree-formControlActive-pb: 0.4375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;

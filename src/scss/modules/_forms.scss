@@ -28,6 +28,7 @@ $paddingFromTop-active: 7 !default;
   #{--formControl-lineHeight}: 1;
   #{--formControl-paddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg));
   #{--formsFree-formControlActive-pt}: fonts.rem(val.formsSizes(controlLabelActive_lh__lg) + $paddingFromTop-active + 2);
+  #{--formsFree-formControlActive-pb}: fonts.rem($paddingFromTop-active);
 }
 @mixin controlLabelLarge{
   #{--controlLabel-transition}: font-size .2s ease-out;
@@ -94,6 +95,7 @@ output {
 .css-formFree .form-group,
 .css-formFree .form-group__large {
     #{--formControlActive-pt}: var(--formsFree-formControlActive-pt);
+    #{--formControlActive-pb}: var(--formsFree-formControlActive-pb);
 }
 .css-formFree .control-label,
 .css-formFree .inputGroup,
@@ -231,7 +233,7 @@ output {
   line-height: var(--formControl-lineHeight, #{fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2))});
   padding-top: var(--formControlActive-pt, 0);
   padding-right: var(--formControl-paddingX, #{fonts.rem(val.formsSizes(formControl_paddingX))});
-  padding-bottom: 0;
+  padding-bottom: var(--formControlActive-pb, 0);
   padding-left: var(--formControl-paddingX, #{fonts.rem(val.formsSizes(formControl_paddingX))});
   transition: baseValue.$base-transition_form;
   width: 100%;
