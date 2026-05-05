@@ -16,7 +16,7 @@
 
 @mixin varControlLabelLarge {
     #{--controlLabel-transition}: font-size .2s ease-out;
-    #{--formsFree-controlLabel-bg}: val.brandForms(formControl-bgc);
+    #{--formsFree-controlLabel-bg}: transparent;
     #{--formsFree-controlLabel-fontSize}: fonts.rem(val.fontSizes(formElem__large));
     #{--formsFree-controlLabel-left}: fonts.rem(val.formsSizes(formElem_borderSize__lg));
     #{--formsFree-controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg));

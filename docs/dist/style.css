@@ -12077,6 +12077,7 @@ output {
 }
 
 .control-label {
+  background-color: var(--varControlLabelLarge, transparent);
   color: #777777;
   display: block;
   font-size: var(--controlLabel-fontSize, 0.6875rem);
@@ -12132,7 +12133,7 @@ output {
 }
 .control-label__large {
   --controlLabel-transition: font-size 0.2s ease-out;
-  --formsFree-controlLabel-bg: #ffffff;
+  --formsFree-controlLabel-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
   --formsFree-controlLabel-lineHeight: 3.25rem;
@@ -12380,7 +12381,7 @@ textarea.form-control {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
-  --formsFree-controlLabel-bg: #ffffff;
+  --formsFree-controlLabel-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
   --formsFree-controlLabel-lineHeight: 3.25rem;
@@ -13732,7 +13733,7 @@ select.selectpicker {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
-  --formsFree-controlLabel-bg: #ffffff;
+  --formsFree-controlLabel-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
   --formsFree-controlLabel-lineHeight: 3.25rem;

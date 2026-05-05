@@ -102,6 +102,7 @@ output {
 }
 
 .control-label{
+    background-color: var(--varControlLabelLarge, transparent);
     // letter-spacing: .5px;
     color: val.brandForms(controlLabel_color);
     display: block;
@@ -156,7 +157,7 @@ output {
         top: var(--controlLabelActive-top, auto);
         z-index: val.zIndex(controlLabel_active);
       .css-formFree & {
-        background-color:var(--bg_color, val.brandForms(controlLabelActive_bgc));
+        background-color:var(--bg_color, val.brandForms(formControl-bgc));
       }
       .inputGroup &{
         .form-group &{
@@ -168,6 +169,7 @@ output {
     }
     &__large{
         @include varMixins.varControlLabelLarge;
+
         // #{--formsFree-controlLabel-lineHeight}: fonts.rem(val.formsSizes(formElem_height__lg));
     }
     &__relative{

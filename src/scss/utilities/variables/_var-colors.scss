@@ -294,7 +294,7 @@ $brand-forms: map.merge((
 
   controlLabel_color:                     map.get($brand-colors, _grey4),
   controlLabelActive_color:               map.get($brand-colors, _grey4),
-  controlLabelActive_bgc:                 map.get($brand-colors, _white),
+  // controlLabelActive_bgc:                 map.get($brand-colors, _white),
   controlLabelError_color:                map.get($brand-colors, _red),
   
   inputGroupEl-bgc:                       map.get($brand-colors, _white),
