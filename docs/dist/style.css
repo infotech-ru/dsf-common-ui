@@ -3964,6 +3964,7 @@ h6, .h6 {
 @media (max-width: 1365.98px) {
   .desktop-view .headerMenu .dropdown-menu {
     border: none;
+    background-color: #EEEEEE;
     box-shadow: none;
     padding: 0;
     position: relative;
@@ -3981,8 +3982,23 @@ h6, .h6 {
 }
 @media (max-width: 1365.98px) {
   .desktop-view .headerMenu .dropdown-submenu .dropdown-menu {
+    background-color: #e5e5e5;
+    left: auto;
     max-height: none;
-    padding-left: 10px;
+    overflow: visible;
+    padding-left: 30px;
+  }
+}
+@media (max-width: 1365.98px) {
+  .desktop-view .headerMenu .dropdown-submenu.open > .dropdown__link:after {
+    transform: rotate(90deg);
+  }
+}
+@media (max-width: 1365.98px) {
+  .desktop-view .headerMenu .dropdown-submenu > .dropdown__link:after {
+    background-position: center;
+    height: 17px;
+    width: 17px;
   }
 }
 

@@ -244,6 +244,7 @@
     .desktop-view &{
         @include breakpoints.media-breakpoint-down(xl){
           border: none;
+          background-color: val.brandColors(_light-grey3);
           box-shadow: none;
           padding: 0;
           position: relative;
@@ -263,9 +264,30 @@
       }
       .desktop-view &{
         @include breakpoints.media-breakpoint-down(xl){
+          background-color: val.brandColors(_light-grey4);
+          left: auto;
           max-height:none;
-          padding-left: 10px;
+          overflow: visible;
+          padding-left: 30px;
         }
+      }
+    }
+    &.open{
+      & > .dropdown__link:after{
+        .desktop-view &{
+          @include breakpoints.media-breakpoint-down(xl){
+            transform: rotate(90deg);
+            }
+        }
+      }
+    }
+    & > .dropdown__link:after{
+      .desktop-view &{
+          @include breakpoints.media-breakpoint-down(xl){
+            background-position: center;
+            height: 17px;
+            width: 17px;
+          }
       }
     }
   }
