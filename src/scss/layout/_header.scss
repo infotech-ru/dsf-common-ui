@@ -84,7 +84,7 @@
     }
     &.down-xxl_collapse{
       .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           background-color: #ffffff;
           background-attachment: fixed;
           box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
@@ -105,7 +105,7 @@
       &.show,
       &.in{
         .desktop-view &{
-          @include breakpoints.media-breakpoint-down(xxl){
+          @include breakpoints.media-breakpoint-down(xl){
             height: calc(100vh - 50px);
             margin-left: 0;
             width: 100%;
@@ -118,7 +118,7 @@
         // top: 50px;
         width: 100%;
         .desktop-view &{
-          @include breakpoints.media-breakpoint-down(xxl){
+          @include breakpoints.media-breakpoint-down(xl){
             position: relative;
             height: 0;
             overflow: hidden;
@@ -227,7 +227,7 @@
       }
     }
     &__smallDesktop{
-      @include breakpoints.media-breakpoint-up(xl){
+      @include breakpoints.media-breakpoint-up(xxl){
         display: none;
       }
     }
