@@ -84,32 +84,27 @@
     }
     &.down-xxl_collapse{
       .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          background-color: #ffffff;
-          background-attachment: fixed;
-          box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
+        @include breakpoints.media-breakpoint-up(xxl){
           display: block;
-          flex-grow: 0;
-          flex-shrink: 0;
-          position: absolute;
-          top: #{val.layoutSizes(headerTop_height)}px;
-          left: 0;
+          position: relative;
+          top: auto;
+          left: auto;
           padding: 0px;
-          height: 0;
+          height: auto;
           transition: margin-left .5s ease, width .5s ease;
           overflow: auto;
-          width: 0;
-          z-index: val.zIndex(menuNav);
+          width: auto;
+          // z-index: val.zIndex(menuNav);
         }
       }
       &.show,
       &.in{
         .desktop-view &{
-          @include breakpoints.media-breakpoint-down(xl){
-            height: calc(100vh - 50px);
+          @include breakpoints.media-breakpoint-up(xxl){
+            height: auto;
             margin-left: 0;
+            right: auto;
             width: 100%;
-            right: 0;
           }
         }
       }
@@ -117,13 +112,6 @@
     &.collapsing {
         // top: 50px;
         width: 100%;
-        .desktop-view &{
-          @include breakpoints.media-breakpoint-down(xl){
-            position: relative;
-            height: 0;
-            overflow: hidden;
-          }
-        }
     }
     .guest-view &{
       display: none;

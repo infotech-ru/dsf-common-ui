@@ -24,7 +24,7 @@
     flex-direction: column;
   }
   .desktop-view &{
-      @include breakpoints.media-breakpoint-down(xxl){
+      @include breakpoints.media-breakpoint-down(xl){
         align-items: flex-start;
         flex-direction: column;
       }
@@ -38,7 +38,7 @@
       width: 100%;
     }
     .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           height: auto;
           width: 100%;
         }
@@ -59,7 +59,7 @@
       width: 100%;
     }
     .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           justify-content: space-between;
           height: auto;
           padding: 10px;
@@ -79,7 +79,7 @@
         transform: rotate(-90deg);
       }
       .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           transform: rotate(-90deg);
         }
       }
@@ -91,7 +91,7 @@
           transform: rotate(0deg);
         }
         .desktop-view &{
-          @include breakpoints.media-breakpoint-down(xxl){
+          @include breakpoints.media-breakpoint-down(xl){
             transform: rotate(0deg);
           }
         }
@@ -124,7 +124,7 @@
       margin-left: 0;
     }
     .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           margin-left: 0;
         }
     }
@@ -164,7 +164,7 @@
         padding: 10px;
       }
       .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           justify-content: flex-start;
           padding: 10px;
         }
@@ -182,7 +182,7 @@
         margin-left: 10px;
       }
       .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           display: inline-block;
           margin-left: 10px;
         }
@@ -199,7 +199,7 @@
         display: none;
       }
       .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           display: none;
         }
       }
@@ -230,7 +230,7 @@
       width: 100%;
     }
     .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           border: none;
           box-shadow: none;
           padding: 0;
@@ -250,7 +250,7 @@
         padding-left: 10px;
       }
       .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xxl){
+        @include breakpoints.media-breakpoint-down(xl){
           max-height:none;
           padding-left: 10px;
         }
