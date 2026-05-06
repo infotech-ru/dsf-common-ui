@@ -3986,6 +3986,13 @@ h6, .h6 {
     left: auto;
     max-height: none;
     overflow: visible;
+    padding-left: 0px;
+  }
+}
+@media (max-width: 1365.98px) {
+  .desktop-view .headerMenu .dropdown-submenu .dropdown-menu > li > a,
+  .desktop-view .headerMenu .dropdown-submenu .dropdown-menu .dropdown__link {
+    box-sizing: border-box;
     padding-left: 30px;
   }
 }

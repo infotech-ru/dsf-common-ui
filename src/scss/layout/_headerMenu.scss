@@ -268,7 +268,16 @@
           left: auto;
           max-height:none;
           overflow: visible;
-          padding-left: 30px;
+          padding-left: 0px;
+        }
+      }
+      & > li > a, 
+      .dropdown__link{
+        .desktop-view &{
+          @include breakpoints.media-breakpoint-down(xl){
+            box-sizing: border-box;
+            padding-left: 30px;
+          }
         }
       }
     }
