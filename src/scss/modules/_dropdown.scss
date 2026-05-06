@@ -56,9 +56,14 @@
 .dropdown-menu {
     @extend %dropdown-menu;
     z-index: val.zIndex(dropdown-menu);
-    
+    .header__top & {
+        .mobile-view &{
+            z-index: val.zIndex(menuNav) + 1;
+        }
+    }
     .headerMenu & {
         .mobile-view & {
+            background-color: val.brandDropdown(dropdownHeaderMenu_bgc);
             border: none;
             box-shadow: none;
             padding: 0;
@@ -69,7 +74,8 @@
         .desktop-view & {
             @include breakpoints.media-breakpoint-down(xl) {
                 border: none;
-                background-color: val.brandColors(_light-grey3);
+                // background-color: val.brandColors(_light-grey3);
+                background-color: val.brandDropdown(dropdownHeaderMenu_bgc);
                 box-shadow: none;
                 padding: 0;
                 position: relative;
@@ -307,12 +313,13 @@
             max-height: calc(80vh - 120px);
             @extend %scrollVar;
             .mobile-view & {
+                background-color: val.brandDropdown(subDropdownHeaderMenu_bgc);
                 max-height: none;
                 padding-left: 0px;
             }
             .desktop-view & {
                 @include breakpoints.media-breakpoint-down(xl) {
-                    background-color: val.brandColors(_light-grey4);
+                    background-color: val.brandDropdown(subDropdownHeaderMenu_bgc);
                     left: auto;
                     max-height: none;
                     overflow: visible;
@@ -326,6 +333,7 @@
             .headerMenu & {
                 .mobile-view &{
                     box-sizing: border-box;
+                    padding-left: 40px;
                 }
                 .desktop-view & {
                     @include breakpoints.media-breakpoint-down(xl) {

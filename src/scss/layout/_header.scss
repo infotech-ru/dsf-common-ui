@@ -43,7 +43,7 @@
     padding: 0 fonts.rem(val.layoutSizes(headerPadding));
     .mobile-view &{
       padding: 0 fonts.rem(val.layoutSizes(headerPadding) * .5);
-      padding-right: 5px;
+      // padding-right: 5px;
     }
     .guest-view &{
       background-color: transparent;

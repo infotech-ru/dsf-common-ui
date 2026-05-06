@@ -280,12 +280,14 @@ $brand-commentBlock: map.merge((
 
 $brand-dropdown: map.merge((
   dropdown_bgc:                           map.get($brand-colors, _white),
+  dropdownHeaderMenu_bgc:                 map.get($brand-colors, _light-grey3),
   dropdown_color:                         $base_color,
   dropdownHeader_color:                   map.get($brand-colors, _light-grey),
   dropdownActive_color:                   $base_color,
   dropdownActive_bgc:                     map.get($brand-colors, _light-blue2),
   dropdownDivider_bgc:                    map.get($brand-colors, _grey4),
   dropdownLinkDisabled_color:             map.get($brand-colors, _grey4),
+  subDropdownHeaderMenu_bgc:              map.get($brand-colors, _light-grey4),
 ), emptymap.$brand-dropdown) !default;
 
 $brand-forms: map.merge((
