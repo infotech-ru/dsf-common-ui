@@ -102,10 +102,10 @@
       &.in{
         .desktop-view &{
           @include breakpoints.media-breakpoint-up(xxl){
-            height: auto;
+            // height: #{val.layoutSizes(headerBottom_height)}px;
             margin-left: 0;
             right: auto;
-            width: 100%;
+            // width: 100%;
           }
         }
       }
