@@ -3799,10 +3799,22 @@ h6, .h6 {
 }
 .headerMenu__linkCaret {
   margin-left: 3px;
+  --svgIcon_height: 10px;
+  --svgIcon_width: 10px;
   --svg-icon-fill: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
+}
+.mobile-view .headerMenu__linkCaret {
+  --svgIcon_height: 24px;
+  --svgIcon_width: 24px;
+}
+@media (max-width: 1365.98px) {
+  .desktop-view .headerMenu__linkCaret {
+    --svgIcon_height: 24px;
+    --svgIcon_width: 24px;
+  }
 }
 .mobile-view .headerMenu__link .caret,
 .mobile-view .headerMenu__link .headerMenu__linkCaret {
