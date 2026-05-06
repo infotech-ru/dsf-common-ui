@@ -11,293 +11,267 @@
 @use './../utilities/variables/var-bootstrap-v3' as varbootstrapv3;
 @use './../utilities/mixins/breakpoints' as breakpoints;
 
-.headerMenu{
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-  list-style: none;
-  height: 100%;
-  padding: 0 fonts.rem(val.layoutSizes(headerMenu_padding) * .5);
-  margin: 0;
-  .mobile-view &{
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .desktop-view &{
-      @include breakpoints.media-breakpoint-down(xl){
+.headerMenu {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    height: 100%;
+    padding: 0 fonts.rem(val.layoutSizes(headerMenu_padding) * .5);
+    margin: 0;
+
+    .mobile-view & {
         align-items: flex-start;
         flex-direction: column;
-      }
-  }
-  &__item{
-    display: block;
-    position: relative;
-    height: 100%;
-    .mobile-view &{
-      height: auto;
-      width: 100%;
     }
-    .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          height: auto;
-          width: 100%;
+
+    .desktop-view & {
+        @include breakpoints.media-breakpoint-down(xl) {
+            align-items: flex-start;
+            flex-direction: column;
         }
     }
-  }
-  &__link{
-    align-items: center;
-    color: val.brandMenu(menuLink_color);
-    display: inline-flex;
-    font-size: fonts.rem(val.fontSizes(headerMenu));
-    font-weight: val.fontWeight(headerMenu);
-    height: 100%;
-    padding: 0 fonts.rem(val.layoutSizes(headerMenuLink_padding));
-    .mobile-view &{
-      justify-content: space-between;
-      height: auto;
-      padding: 10px;
-      width: 100%;
-    }
-    .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          justify-content: space-between;
-          height: auto;
-          padding: 10px;
-          width: 100%;
+
+    &__item {
+        display: block;
+        position: relative;
+        height: 100%;
+
+        .mobile-view & {
+            height: auto;
+            width: 100%;
         }
-    }
-    &Caret{
-      margin-left: 3px;
-      --svgIcon_height: 10px;
-      --svgIcon_width: 10px;
-      #{--svg-icon-fill}: val.brandMenu(menuLink_color);
-      #{--svg-icon-fill_blue}: val.brandMenu(menuLink_color);
-      #{--svg-icon-stroke}: val.brandMenu(menuLink_color);
-      #{--svg-icon-stroke_blue}: val.brandMenu(menuLink_color);
-      .mobile-view &{
-        --svgIcon_height: 17px;
-        --svgIcon_width: 17px;
-      }
-      .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          --svgIcon_height: 17px;
-          --svgIcon_width: 17px;
-        }
-      }
-    }
-    .caret,
-    .headerMenu__linkCaret {
-      .mobile-view &{
-        transform: rotate(-90deg);
-      }
-      .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          transform: rotate(-90deg);
-        }
-      }
-    }
-    .open > &{
-      .caret,
-      .headerMenu__linkCaret {
-        .mobile-view &{
-          transform: rotate(0deg);
-        }
-        .desktop-view &{
-          @include breakpoints.media-breakpoint-down(xl){
-            transform: rotate(0deg);
-          }
-        }
-      }
-    }
-    &:hover,
-    &:focus{
-      color: val.brandMenu(menuLink_color);
-      .headerMenu__linkCaret {
-        #{--svg-icon-fill}: val.brandMenu(menuLink_color);
-        #{--svg-icon-fill_blue}: val.brandMenu(menuLink_color);
-        #{--svg-icon-stroke}: val.brandMenu(menuLink_color);
-        #{--svg-icon-stroke_blue}: val.brandMenu(menuLink_color);
-      }
-    }
-    .active &{
-      background-color: val.brandMenu(menuLinkActive_bgc);
-      color: val.brandMenu(menuLinkActive_color);
-      .headerMenu__linkCaret {
-        #{--svg-icon-fill}: val.brandMenu(menuLinkActive_color);
-        #{--svg-icon-fill_blue}: val.brandMenu(menuLinkActive_color);
-        #{--svg-icon-stroke}: val.brandMenu(menuLinkActive_color);
-        #{--svg-icon-stroke_blue}: val.brandMenu(menuLinkActive_color);
-      }
-    }
-  }
-  &_linkIcon{
-    margin-left: 5px;
-    .mobile-view &{
-      margin-left: 0;
-    }
-    .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          margin-left: 0;
-        }
-    }
-    &.active{
-      .headerMenu__link{
-        background-color: transparent;
-        svg{ 
-          #{--svg-icon-fill}: val.brandMenu(menuLinkActive_svg); 
-          #{--svg-icon-fill_blue}: val.brandMenu(menuLinkActive_svg); 
-          #{--svg-icon-stroke}: val.brandMenu(menuLinkActive_svg); 
-          #{--svg-icon-stroke_blue}: val.brandMenu(menuLinkActive_svg);
-          #{--svg-icon-stroke_green}: val.brandMenu(menuLinkActive_svg);
-        }
-      }
-      .btn-primary__outline {
-        background-color: val.brandMenu(menuLinkActive_bgc);
-        svg{ 
-          #{--svg-icon-fill}: val.brandMenu(menuLinkActive_color); 
-          #{--svg-icon-fill_blue}: val.brandMenu(menuLinkActive_color); 
-          #{--svg-icon-stroke}: val.brandMenu(menuLinkActive_color); 
-          #{--svg-icon-stroke_blue}: val.brandMenu(menuLinkActive_color);
-          #{--svg-icon-stroke_green}: val.brandMenu(menuLinkActive_color);
-        }
-      }
-    }
-    .headerMenu__link{
-      padding: 0 5px;
-      svg{ 
-        #{--svg-icon-fill}: val.brandMenu(menuLink_svg); 
-        #{--svg-icon-fill_blue}: val.brandMenu(menuLink_svg); 
-        #{--svg-icon-stroke}: val.brandMenu(menuLink_svg); 
-        #{--svg-icon-stroke_blue}: val.brandMenu(menuLink_svg);
-        #{--svg-icon-stroke_green}: val.brandMenu(menuLink_svg);
-      }
-      .mobile-view &{
-        justify-content: flex-start;
-        padding: 10px;
-      }
-      .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          justify-content: flex-start;
-          padding: 10px;
-        }
-      }
-    }
-    svg{
-      #{--svg-icon-fill}: val.brandMenu(menuDropdownSvg_color);
-      #{--svg-icon-stroke}: val.brandMenu(menuDropdownSvg_color);
-      height: 16px;
-    }
-    &__text{
-      display: none;
-      .mobile-view &{
-        display: inline-block;
-        margin-left: 10px;
-      }
-      .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          display: inline-block;
-          margin-left: 10px;
-        }
-      }
-    }
-    &__wrappper{
-      margin-left: auto;
-      width: 0;
-      .headerMenu__link{
-        padding: 0;
-        width: 0;
-      }
-      .mobile-view &{
-        display: none;
-      }
-      .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          display: none;
-        }
-      }
-    }
-    &__value{
-      border-radius:2px;
-      bottom:3px; 
-      font-size:8px; 
-      line-height:8px; 
-      padding:1px 2px; 
-      right:2px; 
-    }
-  }
-  &__header{
-    background-color: val.brandMenu(menuDropdownHeader_color);
-    color: val.brandMenu(menuDropdown_bgc);
-    font-size: fonts.rem(12);
-    padding: 6px 0px 6px 10px;
-    position: relative;
-  }
-  .dropdown-menu{
-    .mobile-view &{
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      position: relative;
-      top: 0;
-      width: 100%;
-    }
-    .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          border: none;
-          background-color: val.brandColors(_light-grey3);
-          box-shadow: none;
-          padding: 0;
-          position: relative;
-          top: 0;
-          width: 100%;
-        }
-    }
-  }
-  .dropdown-submenu{
-    .dropdown-menu{
-      overflow: auto;
-      max-height: calc(80vh - 120px);
-      @extend %scrollVar;
-      .mobile-view &{
-        max-height:none;
-        padding-left: 10px;
-      }
-      .desktop-view &{
-        @include breakpoints.media-breakpoint-down(xl){
-          background-color: val.brandColors(_light-grey4);
-          left: auto;
-          max-height:none;
-          overflow: visible;
-          padding-left: 0px;
-        }
-      }
-      & > li > a, 
-      .dropdown__link{
-        .desktop-view &{
-          @include breakpoints.media-breakpoint-down(xl){
-            box-sizing: border-box;
-            padding-left: 30px;
-          }
-        }
-      }
-    }
-    &.open{
-      & > .dropdown__link:after{
-        .desktop-view &{
-          @include breakpoints.media-breakpoint-down(xl){
-            transform: rotate(90deg);
+
+        .desktop-view & {
+            @include breakpoints.media-breakpoint-down(xl) {
+                height: auto;
+                width: 100%;
             }
         }
-      }
     }
-    & > .dropdown__link:after{
-      .desktop-view &{
-          @include breakpoints.media-breakpoint-down(xl){
-            background-position: center;
-            height: 17px;
-            width: 17px;
-          }
-      }
+
+    &__link {
+        align-items: center;
+        color: val.brandMenu(menuLink_color);
+        display: inline-flex;
+        font-size: fonts.rem(val.fontSizes(headerMenu));
+        font-weight: val.fontWeight(headerMenu);
+        height: 100%;
+        padding: 0 fonts.rem(val.layoutSizes(headerMenuLink_padding));
+
+        .mobile-view & {
+            justify-content: space-between;
+            height: auto;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .desktop-view & {
+            @include breakpoints.media-breakpoint-down(xl) {
+                justify-content: space-between;
+                height: auto;
+                padding: 10px;
+                width: 100%;
+            }
+        }
+
+        &Caret {
+            margin-left: 3px;
+            --svgIcon_height: 10px;
+            --svgIcon_width: 10px;
+            #{--svg-icon-fill}: val.brandMenu(menuLink_color);
+            #{--svg-icon-fill_blue}: val.brandMenu(menuLink_color);
+            #{--svg-icon-stroke}: val.brandMenu(menuLink_color);
+            #{--svg-icon-stroke_blue}: val.brandMenu(menuLink_color);
+
+            .mobile-view & {
+                --svgIcon_height: 17px;
+                --svgIcon_width: 17px;
+            }
+
+            .desktop-view & {
+                @include breakpoints.media-breakpoint-down(xl) {
+                    --svgIcon_height: 17px;
+                    --svgIcon_width: 17px;
+                }
+            }
+        }
+
+        .caret,
+        .headerMenu__linkCaret {
+            .mobile-view & {
+                transform: rotate(-90deg);
+            }
+
+            .desktop-view & {
+                @include breakpoints.media-breakpoint-down(xl) {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+
+        .open>& {
+
+            .caret,
+            .headerMenu__linkCaret {
+                .mobile-view & {
+                    transform: rotate(0deg);
+                }
+
+                .desktop-view & {
+                    @include breakpoints.media-breakpoint-down(xl) {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+
+        &:hover,
+        &:focus {
+            color: val.brandMenu(menuLink_color);
+
+            .headerMenu__linkCaret {
+                #{--svg-icon-fill}: val.brandMenu(menuLink_color);
+                #{--svg-icon-fill_blue}: val.brandMenu(menuLink_color);
+                #{--svg-icon-stroke}: val.brandMenu(menuLink_color);
+                #{--svg-icon-stroke_blue}: val.brandMenu(menuLink_color);
+            }
+        }
+
+        .active & {
+            background-color: val.brandMenu(menuLinkActive_bgc);
+            color: val.brandMenu(menuLinkActive_color);
+
+            .headerMenu__linkCaret {
+                #{--svg-icon-fill}: val.brandMenu(menuLinkActive_color);
+                #{--svg-icon-fill_blue}: val.brandMenu(menuLinkActive_color);
+                #{--svg-icon-stroke}: val.brandMenu(menuLinkActive_color);
+                #{--svg-icon-stroke_blue}: val.brandMenu(menuLinkActive_color);
+            }
+        }
     }
-  }
+
+    &_linkIcon {
+        margin-left: 5px;
+
+        .mobile-view & {
+            margin-left: 0;
+        }
+
+        .desktop-view & {
+            @include breakpoints.media-breakpoint-down(xl) {
+                margin-left: 0;
+            }
+        }
+
+        &.active {
+            .headerMenu__link {
+                background-color: transparent;
+
+                svg {
+                    #{--svg-icon-fill}: val.brandMenu(menuLinkActive_svg);
+                    #{--svg-icon-fill_blue}: val.brandMenu(menuLinkActive_svg);
+                    #{--svg-icon-stroke}: val.brandMenu(menuLinkActive_svg);
+                    #{--svg-icon-stroke_blue}: val.brandMenu(menuLinkActive_svg);
+                    #{--svg-icon-stroke_green}: val.brandMenu(menuLinkActive_svg);
+                }
+            }
+
+            .btn-primary__outline {
+                background-color: val.brandMenu(menuLinkActive_bgc);
+
+                svg {
+                    #{--svg-icon-fill}: val.brandMenu(menuLinkActive_color);
+                    #{--svg-icon-fill_blue}: val.brandMenu(menuLinkActive_color);
+                    #{--svg-icon-stroke}: val.brandMenu(menuLinkActive_color);
+                    #{--svg-icon-stroke_blue}: val.brandMenu(menuLinkActive_color);
+                    #{--svg-icon-stroke_green}: val.brandMenu(menuLinkActive_color);
+                }
+            }
+        }
+
+        .headerMenu__link {
+            padding: 0 5px;
+
+            svg {
+                #{--svg-icon-fill}: val.brandMenu(menuLink_svg);
+                #{--svg-icon-fill_blue}: val.brandMenu(menuLink_svg);
+                #{--svg-icon-stroke}: val.brandMenu(menuLink_svg);
+                #{--svg-icon-stroke_blue}: val.brandMenu(menuLink_svg);
+                #{--svg-icon-stroke_green}: val.brandMenu(menuLink_svg);
+            }
+
+            .mobile-view & {
+                justify-content: flex-start;
+                padding: 10px;
+            }
+
+            .desktop-view & {
+                @include breakpoints.media-breakpoint-down(xl) {
+                    justify-content: flex-start;
+                    padding: 10px;
+                }
+            }
+        }
+
+        svg {
+            #{--svg-icon-fill}: val.brandMenu(menuDropdownSvg_color);
+            #{--svg-icon-stroke}: val.brandMenu(menuDropdownSvg_color);
+            height: 16px;
+        }
+
+        &__text {
+            display: none;
+
+            .mobile-view & {
+                display: inline-block;
+                margin-left: 10px;
+            }
+
+            .desktop-view & {
+                @include breakpoints.media-breakpoint-down(xl) {
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &__wrappper {
+            margin-left: auto;
+            width: 0;
+
+            .headerMenu__link {
+                padding: 0;
+                width: 0;
+            }
+
+            .mobile-view & {
+                display: none;
+            }
+
+            .desktop-view & {
+                @include breakpoints.media-breakpoint-down(xl) {
+                    display: none;
+                }
+            }
+        }
+
+        &__value {
+            border-radius: 2px;
+            bottom: 3px;
+            font-size: 8px;
+            line-height: 8px;
+            padding: 1px 2px;
+            right: 2px;
+        }
+    }
+
+    &__header {
+        background-color: val.brandMenu(menuDropdownHeader_color);
+        color: val.brandMenu(menuDropdown_bgc);
+        font-size: fonts.rem(12);
+        padding: 6px 0px 6px 10px;
+        position: relative;
+    }
+
 }

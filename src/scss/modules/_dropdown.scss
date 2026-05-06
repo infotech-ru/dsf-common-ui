@@ -8,7 +8,8 @@
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-placeholder' as varplaceholder;
-
+@use './../utilities/variables/var-placeholder' as placeholder;
+@use './../utilities/mixins/breakpoints' as breakpoints;
 
 // Dropdown arrow/caret
 .caret {
@@ -52,14 +53,32 @@
     }
 }
 
-
-// The dropdown menu (ul)
 .dropdown-menu {
     @extend %dropdown-menu;
-    // float: left;
     z-index: val.zIndex(dropdown-menu);
-
-    // Dividers (basically an hr) within the dropdown
+    
+    .headerMenu & {
+        .mobile-view & {
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            position: relative;
+            top: 0;
+            width: 100%;
+        }
+        .desktop-view & {
+            @include breakpoints.media-breakpoint-down(xl) {
+                border: none;
+                background-color: val.brandColors(_light-grey3);
+                box-shadow: none;
+                padding: 0;
+                position: relative;
+                top: 0;
+                width: 100%;
+            }
+        }
+    }
+    
     .divider {
         background-color: val.brandDropdown(dropdownDivider_bgc);
         height: 1px;
@@ -107,11 +126,6 @@
         @extend %dropdown__linkHover;
     }
 
-    // .svg--icon,
-    // svg{
-    //   height: 24px;
-    //   width: auto;
-    // }
 }
 
 .dropdown-menu__wrapList {
@@ -157,11 +171,9 @@
     }
 }
 
-// Open state for the dropdown
 .show,
 .open {
 
-    // Show the menu
     >.dropdown-menu {
         display: block;
     }
@@ -183,14 +195,10 @@
         }
     }
 
-    // Remove the outline when :focus is triggered
     >a {
         outline: 0;
     }
 }
-
-
-// Menu positioning
 
 .dropdown-menu-right {
     left: auto; // Reset the default from `.dropdown-menu`
@@ -235,20 +243,9 @@
     // z-index: ($zindex-dropdown - 10);
 }
 
-// Right aligned dropdowns
-// .pull-right > .dropdown-menu {
-//   right: 0;
-//   left: auto;
 
 .dropup {
 
-    // Reverse the caret
-    // .caret {
-    // content: "";
-    // border-top: 0; 
-    // border-bottom: $caret-width-base dashed;
-    // }
-    // Different positioning for bottom up menu
     .dropdown-menu {
         top: auto;
         // bottom: 100%; // вывод с пустотой в 4 версии.
@@ -305,13 +302,36 @@
 
     .dropdown-menu {
         padding-right: fonts.rem(calc(val.brandSizes(dropdownLink_paddingX) * 2));
-
+        .headerMenu & {
+            overflow: auto;
+            max-height: calc(80vh - 120px);
+            @extend %scrollVar;
+            .mobile-view & {
+                max-height: none;
+                padding-left: 0px;
+            }
+            .desktop-view & {
+                @include breakpoints.media-breakpoint-down(xl) {
+                    background-color: val.brandColors(_light-grey4);
+                    left: auto;
+                    max-height: none;
+                    overflow: visible;
+                    padding-left: 0px;
+                }
+            }
+        }
         >li>a,
         .dropdown__link {
             box-sizing: content-box;
-            .header__bottom &{
+            .headerMenu & {
                 .mobile-view &{
                     box-sizing: border-box;
+                }
+                .desktop-view & {
+                    @include breakpoints.media-breakpoint-down(xl) {
+                        box-sizing: border-box;
+                        padding-left: 30px;
+                    }
                 }
             }
         }
@@ -343,6 +363,16 @@
             .mobile-view & {
                 background-position: center;
             }
+
+            .headerMenu & {
+                .desktop-view & {
+                    @include breakpoints.media-breakpoint-down(xl) {
+                        background-position: center;
+                        height: 17px;
+                        width: 17px;
+                    }
+                }
+            }
         }
     }
 
@@ -352,6 +382,13 @@
             &:after {
                 .mobile-view & {
                     transform: rotate(90deg);
+                }
+                .headerMenu & {
+                    .desktop-view & {
+                        @include breakpoints.media-breakpoint-down(xl) {
+                            transform: rotate(90deg);
+                        }
+                    }
                 }
             }
         }
