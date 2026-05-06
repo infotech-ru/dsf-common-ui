@@ -75,13 +75,13 @@
       #{--svg-icon-stroke}: val.brandMenu(menuLink_color);
       #{--svg-icon-stroke_blue}: val.brandMenu(menuLink_color);
       .mobile-view &{
-        --svgIcon_height: 24px;
-        --svgIcon_width: 24px;
+        --svgIcon_height: 17px;
+        --svgIcon_width: 17px;
       }
       .desktop-view &{
         @include breakpoints.media-breakpoint-down(xl){
-          --svgIcon_height: 24px;
-          --svgIcon_width: 24px;
+          --svgIcon_height: 17px;
+          --svgIcon_width: 17px;
         }
       }
     }

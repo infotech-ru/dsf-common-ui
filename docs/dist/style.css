@@ -3807,13 +3807,13 @@ h6, .h6 {
   --svg-icon-stroke_blue: #4A8DC6;
 }
 .mobile-view .headerMenu__linkCaret {
-  --svgIcon_height: 24px;
-  --svgIcon_width: 24px;
+  --svgIcon_height: 17px;
+  --svgIcon_width: 17px;
 }
 @media (max-width: 1365.98px) {
   .desktop-view .headerMenu__linkCaret {
-    --svgIcon_height: 24px;
-    --svgIcon_width: 24px;
+    --svgIcon_height: 17px;
+    --svgIcon_width: 17px;
   }
 }
 .mobile-view .headerMenu__link .caret,
