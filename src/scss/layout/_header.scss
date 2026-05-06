@@ -85,16 +85,17 @@
     &.down-xxl_collapse{
       .desktop-view &{
         @include breakpoints.media-breakpoint-up(xxl){
+          box-shadow: none;
           display: block;
           position: relative;
           top: auto;
           left: auto;
           padding: 0px;
-          height: auto;
-          transition: margin-left .5s ease, width .5s ease;
-          overflow: auto;
+          height: #{val.layoutSizes(headerBottom_height)}px;
+          overflow: visible;
+          transition: none;
           width: auto;
-          // z-index: val.zIndex(menuNav);
+          z-index: auto;
         }
       }
       &.show,
@@ -112,6 +113,9 @@
     &.collapsing {
         // top: 50px;
         width: 100%;
+        .desktop-view &{
+          position: absolute;
+        }
     }
     .guest-view &{
       display: none;

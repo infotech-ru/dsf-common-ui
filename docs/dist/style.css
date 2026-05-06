@@ -3393,15 +3393,17 @@ h6, .h6 {
 }
 @media (min-width: 1366px) {
   .desktop-view .header__bottom.down-xxl_collapse {
+    box-shadow: none;
     display: block;
     position: relative;
     top: auto;
     left: auto;
     padding: 0px;
-    height: auto;
-    transition: margin-left 0.5s ease, width 0.5s ease;
-    overflow: auto;
+    height: 34px;
+    overflow: visible;
+    transition: none;
     width: auto;
+    z-index: auto;
   }
 }
 @media (min-width: 1366px) {
@@ -3414,6 +3416,9 @@ h6, .h6 {
 }
 .header__bottom.collapsing {
   width: 100%;
+}
+.desktop-view .header__bottom.collapsing {
+  position: absolute;
 }
 .guest-view .header__bottom {
   display: none;
