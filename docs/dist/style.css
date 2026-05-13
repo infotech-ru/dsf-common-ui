@@ -1072,9 +1072,9 @@ h6, .h6 {
 
 .blockBusinessCardLeft {
   flex-grow: 0;
-  padding-right: 0.3125rem;
+  padding-right: 0.9375rem;
   flex-basis: var(--blockBusinessCardLeftImage);
-  --blockBusinessCardLeftImage: 145px;
+  --blockBusinessCardLeftImage: fonts.rem(val.contentSizes(blockBusinessCardLeftImage_width));
 }
 .mobile-view .blockBusinessCardLeft {
   padding-left: 0;
@@ -1119,7 +1119,7 @@ h6, .h6 {
 }
 .blockBusinessCardRight {
   flex-grow: 1;
-  padding-left: 0.3125rem;
+  padding-right: 0.9375rem;
   width: 100%;
 }
 .mobile-view .blockBusinessCardRight {
@@ -1129,6 +1129,17 @@ h6, .h6 {
 .blockBusinessCardLeft__none .blockBusinessCardRight {
   padding-left: 0;
   padding-right: 0;
+}
+.blockBusinessCardRightImage {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+.blockBusinessCardRightImage img {
+  display: block;
+  max-width: 7.1875rem;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 /* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

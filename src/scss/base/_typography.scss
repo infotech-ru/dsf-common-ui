@@ -222,9 +222,9 @@ h6, .h6 {
       &Left{
           flex-grow:0;
           // padding-left: 10px;
-          padding-right: fonts.rem(calc(val.brandSizes(base_marginSize) * .5));
+          padding-right: fonts.rem(val.contentSizes(blockBusinessCardLeftImage_pr));
           flex-basis: var(--blockBusinessCardLeftImage);
-          --blockBusinessCardLeftImage: 145px;
+          --blockBusinessCardLeftImage: fonts.rem(val.contentSizes(blockBusinessCardLeftImage_width));
           .mobile-view & {
               padding-left: 0;
               padding-right: 0;
@@ -275,7 +275,8 @@ h6, .h6 {
       &Right{
           flex-grow:1;
           // padding-right: 10px;
-          padding-left: fonts.rem(calc(val.brandSizes(base_marginSize) * .5));
+          padding-right: fonts.rem(val.contentSizes(blockBusinessCardRightImage_pl));
+          // padding-left: fonts.rem(calc(val.brandSizes(base_marginSize) * .5));
           width: 100%;
           .mobile-view & {
               padding-left: 0;
@@ -284,6 +285,17 @@ h6, .h6 {
           .blockBusinessCardLeft__none &{
               padding-left: 0;
               padding-right: 0;
+          }
+          &Image{
+            flex-grow: 0;
+            flex-shrink: 1;
+            img{
+              display: block;
+              max-width: fonts.rem(val.contentSizes(blockBusinessCardLeftImage_width));
+              height: 100%;
+              object-fit: cover;
+              width: 100%;
+            }
           }
       }
   }

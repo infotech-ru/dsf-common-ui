@@ -122,6 +122,9 @@
 @function brandSizes($keys...) {
   @return maps.val(sizes.$brand-sizes, $keys...);
 }
+@function contentSizes($keys...) {
+  @return maps.val(sizes.$content-sizes, $keys...);
+}
 @function tooltipSizes($keys...) {
   @return maps.val(sizes.$tooltip-sizes, $keys...);
 }

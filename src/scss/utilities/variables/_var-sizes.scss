@@ -32,6 +32,12 @@ $brand-sizes: (
   unityBlockHeader_mb:             baseValue.$base-gutter,
 )!default;
 
+$content-sizes: (
+  blockBusinessCardLeftImage_width:      115,
+  blockBusinessCardLeftImage_pr:         15,
+  blockBusinessCardRightImage_pl:        15,
+)!default;
+
 $alert-sizes: (
   alert_radius:                    baseValue.$base-radius__medium,
   alert_padding:                   baseValue.$base-padding,
