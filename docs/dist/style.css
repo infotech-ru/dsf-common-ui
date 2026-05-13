@@ -1074,7 +1074,7 @@ h6, .h6 {
   flex-grow: 0;
   padding-right: 0.9375rem;
   flex-basis: var(--blockBusinessCardLeftImage);
-  --blockBusinessCardLeftImage: fonts.rem(val.contentSizes(blockBusinessCardLeftImage_width));
+  --blockBusinessCardLeftImage: 7.1875rem;
 }
 .mobile-view .blockBusinessCardLeft {
   padding-left: 0;
@@ -1119,7 +1119,7 @@ h6, .h6 {
 }
 .blockBusinessCardRight {
   flex-grow: 1;
-  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
   width: 100%;
 }
 .mobile-view .blockBusinessCardRight {

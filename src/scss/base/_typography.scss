@@ -224,7 +224,7 @@ h6, .h6 {
           // padding-left: 10px;
           padding-right: fonts.rem(val.contentSizes(blockBusinessCardLeftImage_pr));
           flex-basis: var(--blockBusinessCardLeftImage);
-          --blockBusinessCardLeftImage: fonts.rem(val.contentSizes(blockBusinessCardLeftImage_width));
+          --blockBusinessCardLeftImage: #{fonts.rem(val.contentSizes(blockBusinessCardLeftImage_width))};
           .mobile-view & {
               padding-left: 0;
               padding-right: 0;
@@ -275,7 +275,7 @@ h6, .h6 {
       &Right{
           flex-grow:1;
           // padding-right: 10px;
-          padding-right: fonts.rem(val.contentSizes(blockBusinessCardRightImage_pl));
+          padding-left: fonts.rem(val.contentSizes(blockBusinessCardRightImage_pl));
           // padding-left: fonts.rem(calc(val.brandSizes(base_marginSize) * .5));
           width: 100%;
           .mobile-view & {
