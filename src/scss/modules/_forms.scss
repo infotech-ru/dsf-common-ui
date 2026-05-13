@@ -129,6 +129,9 @@ output {
           top: 0;
         }
       }
+      .has-success &{
+        color: val.brandFormState(hasSuccess_color);
+      }
     }
     .css-formFree & {
       position: absolute;
@@ -534,6 +537,12 @@ textarea.form-control {
   .form-group &{
       margin: 0;
       // position: absolute; // большие тексты перекрываются
+  }
+  .form-group__lg &{
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: var(--formControl-paddingX, 0);
+    margin-top: 4px;
   }
 }
 

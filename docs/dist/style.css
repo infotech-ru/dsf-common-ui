@@ -12127,6 +12127,9 @@ output {
   position: relative;
   top: 0;
 }
+.has-success .control-label:after {
+  color: #69C26A;
+}
 .css-formFree .control-label {
   position: absolute;
   pointer-events: none;
@@ -12571,6 +12574,12 @@ fieldset[disabled] .checkbox-inline {
 }
 .css-formFree .help-block, .form-group .help-block {
   margin: 0;
+}
+.form-group__lg .help-block {
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: var(--formControl-paddingX, 0);
+  margin-top: 4px;
 }
 
 @media (min-width: 768px) {
@@ -17678,7 +17687,7 @@ body[style^=padding-right] .modal-sidebar {
   flex-direction: column;
   max-width: 23.75rem;
   margin: 6.25rem auto 0;
-  padding: 3.125rem 1.875rem;
+  padding: 3.125rem 1.875rem 1.875rem;
 }
 .authorization__heading {
   display: flex;
