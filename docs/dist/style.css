@@ -12575,7 +12575,7 @@ fieldset[disabled] .checkbox-inline {
 .css-formFree .help-block, .form-group .help-block {
   margin: 0;
 }
-.form-group__lg .help-block {
+.form-group__large .help-block {
   font-size: 12px;
   line-height: 14px;
   padding-left: var(--formControl-paddingX, 0);
