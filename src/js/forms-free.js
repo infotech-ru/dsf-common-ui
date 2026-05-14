@@ -56,7 +56,7 @@ export function FormsFree(context) {
 }
 
 export function forceUpdateForms() {
-    // console.log('🔄 Принудительное обновление всех полей FormsFree');
+    console.log('🔄 Принудительное обновление всех полей FormsFree');
     
     $(inputSelector).each((index, input) => {
         if (input.value) {
@@ -82,7 +82,7 @@ export function forceUpdateForms() {
         });
     }, 50);
     
-    // console.log('✅ Принудительное обновление завершено');
+    console.log('✅ Принудительное обновление завершено');
 }
 
 const inputTypes = [
