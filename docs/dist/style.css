@@ -12141,6 +12141,7 @@ output {
   --controlLabelActive-pl: var(--formsFree-controlLabelActive-pl);
   --controlLabelActive-pr: var(--formsFree-controlLabelActive-pr);
   --controlLabelActive-top: var(--formsFree-controlLabelActive-top);
+  --controlLabel-maxwidth: var(--formsFree-controlLabel-maxwidth);
 }
 
 .control-label {
@@ -12816,6 +12817,7 @@ fieldset[disabled] .checkbox-inline {
 .css-formFree .labelTooltipIcon {
   width: 16px;
   height: 16px;
+  padding-left: 0;
   position: absolute;
   top: 50%;
   margin-top: -8px;
