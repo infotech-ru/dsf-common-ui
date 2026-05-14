@@ -66,7 +66,7 @@
       border-color: val.brandAlert(#{$alert}_border);
       color: val.brandAlert(#{$alert}_color);
       #{--base-link-hoverColor}: val.brandAlert(#{$alert}_color);
-      #{--btn-borderColor}: val.brandAlert(#{$alert}_color);
+      #{--btn-color}: val.brandAlert(#{$alert}_color);
       .close{
         color: val.brandAlert(#{$alert}_close);
         #{--svg-icon-fill}: val.brandAlert(#{$alert}_close);

@@ -626,9 +626,45 @@ a.btn {
 .btn__shadow{
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
 }
-.btn__adaptiveBorder{
-  border-color: var(--btn-borderColor, transparent);
+.btn__adaptive{
+  background-color: transparent;
+  border-color: var(--btn-color);
+  color: var(--btn-color);
+  .svg--icon svg{
+      #{--infotech_svg-colorStroke}: var(--btn-color);
+      #{--infotech_svg-stroke}: var(--btn-color);
+      #{--infotech_svg-fill}: var(--btn-color);
+      #{--infotech_svg-colorFill}: var(--btn-color);
+      #{--svg-icon-fill_blue}: var(--btn-color);
+      #{--svg-icon-stroke_blue}: var(--btn-color);
+      #{--svg-icon-fill}: var(--btn-color);
+      #{--svg-icon-stroke}: var(--btn-color);
+      fill: var(--btn-color);
+  }
+  &:hover,
+  &:focus-visible,
+  &:active,
+  &:active:focus,
+  &.active,
+  &.active:focus,
+  &.focus {
+    background-color: color-mix(in srgb, var(--btn-color) 20%, transparent);
+    border-color: var(--btn-color);
+    color: var(--btn-color);
+    .svg--icon svg{
+        #{--infotech_svg-colorStroke}: var(--btn-color);
+        #{--infotech_svg-stroke}: var(--btn-color);
+        #{--infotech_svg-fill}: var(--btn-color);
+        #{--infotech_svg-colorFill}: var(--btn-color);
+        #{--svg-icon-fill_blue}: var(--btn-color);
+        #{--svg-icon-stroke_blue}: var(--btn-color);
+        #{--svg-icon-fill}: var(--btn-color);
+        #{--svg-icon-stroke}: var(--btn-color);
+        fill: var(--btn-color);
+    }
+  }
 }
+
 // Specificity overrides
 input[type="submit"],
 input[type="reset"],

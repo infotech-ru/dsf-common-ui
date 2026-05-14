@@ -10563,8 +10563,37 @@ a.btn.disabled, fieldset[disabled] a.btn {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
-.btn__adaptiveBorder {
-  border-color: var(--btn-borderColor, transparent);
+.btn__adaptive {
+  background-color: transparent;
+  border-color: var(--btn-color);
+  color: var(--btn-color);
+}
+.btn__adaptive .svg--icon svg {
+  --infotech_svg-colorStroke: var(--btn-color);
+  --infotech_svg-stroke: var(--btn-color);
+  --infotech_svg-fill: var(--btn-color);
+  --infotech_svg-colorFill: var(--btn-color);
+  --svg-icon-fill_blue: var(--btn-color);
+  --svg-icon-stroke_blue: var(--btn-color);
+  --svg-icon-fill: var(--btn-color);
+  --svg-icon-stroke: var(--btn-color);
+  fill: var(--btn-color);
+}
+.btn__adaptive:hover, .btn__adaptive:focus-visible, .btn__adaptive:active, .btn__adaptive:active:focus, .btn__adaptive.active, .btn__adaptive.active:focus, .btn__adaptive.focus {
+  background-color: color-mix(in srgb, var(--btn-color) 20%, transparent);
+  border-color: var(--btn-color);
+  color: var(--btn-color);
+}
+.btn__adaptive:hover .svg--icon svg, .btn__adaptive:focus-visible .svg--icon svg, .btn__adaptive:active .svg--icon svg, .btn__adaptive:active:focus .svg--icon svg, .btn__adaptive.active .svg--icon svg, .btn__adaptive.active:focus .svg--icon svg, .btn__adaptive.focus .svg--icon svg {
+  --infotech_svg-colorStroke: var(--btn-color);
+  --infotech_svg-stroke: var(--btn-color);
+  --infotech_svg-fill: var(--btn-color);
+  --infotech_svg-colorFill: var(--btn-color);
+  --svg-icon-fill_blue: var(--btn-color);
+  --svg-icon-stroke_blue: var(--btn-color);
+  --svg-icon-fill: var(--btn-color);
+  --svg-icon-stroke: var(--btn-color);
+  fill: var(--btn-color);
 }
 
 input[type=submit].btn-block,
@@ -15579,7 +15608,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #F5F5F5;
   color: #333333;
   --base-link-hoverColor: #333333;
-  --btn-borderColor: #333333;
+  --btn-color: #333333;
 }
 .alert-default .close {
   color: #4A8DC6;
@@ -15611,7 +15640,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #4A8DC6;
   color: #ffffff;
   --base-link-hoverColor: #ffffff;
-  --btn-borderColor: #ffffff;
+  --btn-color: #ffffff;
 }
 .alert-primary .close {
   color: #4A8DC6;
@@ -15643,7 +15672,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #E9F5E9;
   color: #333333;
   --base-link-hoverColor: #333333;
-  --btn-borderColor: #333333;
+  --btn-color: #333333;
 }
 .alert-success .close {
   color: #4A8DC6;
@@ -15675,7 +15704,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #FCEEEE;
   color: #D9534F;
   --base-link-hoverColor: #D9534F;
-  --btn-borderColor: #D9534F;
+  --btn-color: #D9534F;
 }
 .alert-danger .close {
   color: #4A8DC6;
@@ -15707,7 +15736,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #FFF6DF;
   color: #B56C00;
   --base-link-hoverColor: #B56C00;
-  --btn-borderColor: #B56C00;
+  --btn-color: #B56C00;
 }
 .alert-warning .close {
   color: #4A8DC6;
@@ -15739,7 +15768,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #E4EEF7;
   color: #4A8DC6;
   --base-link-hoverColor: #4A8DC6;
-  --btn-borderColor: #4A8DC6;
+  --btn-color: #4A8DC6;
 }
 .alert-info .close {
   color: #4A8DC6;
