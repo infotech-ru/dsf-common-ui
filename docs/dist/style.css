@@ -12419,6 +12419,7 @@ textarea.form-control {
   --formsFree-controlLabelActive-left: 0.25rem;
   --formsFree-controlLabelActive-lineHeight: 0.75rem;
   --formsFree-controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
+  --formsFree-controlLabel-maxwidth: calc(100% - 0.25rem + 0.1875rem);
   --formsFree-controlLabelActive-pl: 0.25rem;
   --formsFree-controlLabelActive-top: 0.125rem;
   --formsFree-controlLabelActive-pr: calc(12px + 5px);
@@ -13797,6 +13798,7 @@ select.selectpicker {
   --formsFree-controlLabelActive-left: 0.25rem;
   --formsFree-controlLabelActive-lineHeight: 0.75rem;
   --formsFree-controlLabelActive-maxwidth: calc(100% - 0.25rem + 0.1875rem);
+  --formsFree-controlLabel-maxwidth: calc(100% - 0.25rem + 0.1875rem);
   --formsFree-controlLabelActive-pl: 0.25rem;
   --formsFree-controlLabelActive-top: 0.125rem;
   --formsFree-controlLabelActive-pr: calc(12px + 5px);

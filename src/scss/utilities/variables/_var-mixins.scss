@@ -41,6 +41,7 @@
     #{--formsFree-controlLabelActive-left}: fonts.rem(val.formsSizes(formControl_paddingX) - varSizes.$paddingFromLeft);
     #{--formsFree-controlLabelActive-lineHeight}: fonts.rem(val.formsSizes(controlLabelActive_lh));
     #{--formsFree-controlLabelActive-maxwidth}: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - varSizes.$paddingFromLeft)) + fonts.rem(varSizes.$paddingFromLeft));
+    #{--formsFree-controlLabel-maxwidth}: calc(100% - fonts.rem(calc(val.formsSizes(formControl_paddingX) - varSizes.$paddingFromLeft)) + fonts.rem(varSizes.$paddingFromLeft));
     #{--formsFree-controlLabelActive-pl}: fonts.rem(calc(val.formsSizes(formControl_paddingX) - varSizes.$paddingFromLeft));
     #{--formsFree-controlLabelActive-top}: fonts.rem(val.formsSizes(formElem_borderSize) * 2); // корректировка из-за line-height
     #{--formsFree-controlLabelActive-pr}: calc(#{val.formsSizes(iconLabelActive)}px + 5px);
