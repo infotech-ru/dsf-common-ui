@@ -12441,7 +12441,7 @@ textarea.form-control {
   --formGroup-pt: 0;
   --formGroup-mb: 0;
 }
-.form-group__large {
+.form-group__large, .css-formFree .form-group__large {
   --formControl-borderRadius: 0.0625rem;
   --formControl-borderwidth: 0.125rem;
   --formControl-fontSize: 0.9375rem;

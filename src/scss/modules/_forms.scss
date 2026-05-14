@@ -411,9 +411,11 @@ textarea.form-control {
         }
     }
     &__large{
+      &, .css-formFree & { 
         @include varMixins.varFormControlLarge;
         @include varMixins.varControlLabelLarge;
         @include varMixins.varFormGroupLarge;
+      }
     }
 }
 
