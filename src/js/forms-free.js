@@ -55,6 +55,36 @@ export function FormsFree(context) {
     // $(comboTreeSelector, context).each((index, select) => updateComboTreeLabel(select));
 }
 
+export function forceUpdateForms() {
+    // console.log('🔄 Принудительное обновление всех полей FormsFree');
+    
+    $(inputSelector).each((index, input) => {
+        if (input.value) {
+            updateInputLabel(input);
+            if ($(input).hasClass('validate')) {
+                validateInput(input);
+            }
+        } else {
+            updateInputLabel(input);
+        }
+    });
+    
+    $(dropdownSelector).each((index, select) => {
+        updateDropdownLabel(select);
+    });
+    
+    // Специальная обработка для полей с автозаполнением Chromium
+    setTimeout(() => {
+        $(inputSelector).each((index, input) => {
+            if (input.value && !$(input).siblings('label').hasClass('active')) {
+                updateInputLabel(input);
+            }
+        });
+    }, 50);
+    
+    // console.log('✅ Принудительное обновление завершено');
+}
+
 const inputTypes = [
         'text',
         'password',
