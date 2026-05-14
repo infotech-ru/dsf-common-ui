@@ -399,7 +399,7 @@ a.btn {
 
 .btn-xs,
 .btn-small {
-  border-radius: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
+  // border-radius: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
   border-radius: 1px;
   font-size: fonts.rem(val.fontSizes(btnXs));
   line-height: fonts.rem(val.lineHeight(btnXs));
@@ -625,6 +625,9 @@ a.btn {
 }
 .btn__shadow{
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
+}
+.btn__adaptiveBorder{
+  border-color: var(--btn-borderColor, transparent);
 }
 // Specificity overrides
 input[type="submit"],

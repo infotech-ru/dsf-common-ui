@@ -10383,7 +10383,6 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-xs,
 .btn-small {
-  border-radius: 0.0625rem;
   border-radius: 1px;
   font-size: 0.625rem;
   line-height: 1.125rem;
@@ -10562,6 +10561,10 @@ a.btn.disabled, fieldset[disabled] a.btn {
 .nav-btns .nav-link.active,
 .nav-btns .active .nav-link {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn__adaptiveBorder {
+  border-color: var(--btn-borderColor, transparent);
 }
 
 input[type=submit].btn-block,
@@ -15576,6 +15579,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #F5F5F5;
   color: #333333;
   --base-link-hoverColor: #333333;
+  --btn-borderColor: #333333;
 }
 .alert-default .close {
   color: #4A8DC6;
@@ -15607,6 +15611,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #4A8DC6;
   color: #ffffff;
   --base-link-hoverColor: #ffffff;
+  --btn-borderColor: #ffffff;
 }
 .alert-primary .close {
   color: #4A8DC6;
@@ -15638,6 +15643,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #E9F5E9;
   color: #333333;
   --base-link-hoverColor: #333333;
+  --btn-borderColor: #333333;
 }
 .alert-success .close {
   color: #4A8DC6;
@@ -15669,6 +15675,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #FCEEEE;
   color: #D9534F;
   --base-link-hoverColor: #D9534F;
+  --btn-borderColor: #D9534F;
 }
 .alert-danger .close {
   color: #4A8DC6;
@@ -15700,6 +15707,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #FFF6DF;
   color: #B56C00;
   --base-link-hoverColor: #B56C00;
+  --btn-borderColor: #B56C00;
 }
 .alert-warning .close {
   color: #4A8DC6;
@@ -15731,6 +15739,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-color: #E4EEF7;
   color: #4A8DC6;
   --base-link-hoverColor: #4A8DC6;
+  --btn-borderColor: #4A8DC6;
 }
 .alert-info .close {
   color: #4A8DC6;

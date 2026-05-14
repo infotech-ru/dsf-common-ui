@@ -27,12 +27,12 @@ order: 8
     <div class="collapse" id="collpase-alert">
 {% highlight html %}
 <div class="alert alert-info">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Отметить прочитанным">
-        <span class="svg--icon svg--icon__24vb" aria-hidden="true"><?= Icons::icon('bicolors-close__24vb') ?></span>
+    <button type="button" class="close" data-dismiss="alert">
+        <?= Icons::wrapper('bicolors-close__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
     </button>
     <div class="h4 mb-10">
-      <span class="svg--icon svg--icon__24vb"><?= Icons::icon('bicolors-circle_information__24vb') ?></span>
-      Заголовок с иконкой
+        <?= Icons::wrapper('bicolors-circle_information__24vb', ['class' => 'svg--icon svg--icon__24vb']) ?>
+        Заголовок с иконкой
     </div>
     <div class="fz-10 mb-5 text-default">дата</div>
     <div>
