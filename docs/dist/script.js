@@ -46,13 +46,24 @@ var DSFUI = (function (exports) {
   }
 
   var isListeningDocument$1 = false;
+  var autofillContexts = new WeakSet(); // отслеживаем уже усиленные контексты
+
   function FormsFree(context) {
-    console.log('start FormsFree');
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var _options$detectAutofi = options.detectAutofill,
+      detectAutofill = _options$detectAutofi === void 0 ? false : _options$detectAutofi;
+    console.log('FormsFree called', {
+      context: context,
+      detectAutofill: detectAutofill
+    });
     if (document.readyState !== 'complete') {
       window.addEventListener('load', function () {
-        FormsFree();
+        return FormsFree(context, options);
       });
+      return;
     }
+
+    // ----- Глобальные обработчики (один раз) -----
     if (!isListeningDocument$1) {
       isListeningDocument$1 = true;
       $(document).on('focus blur change', inputSelector, function (e) {
@@ -79,23 +90,10 @@ var DSFUI = (function (exports) {
         $("label[for=\"".concat(e.target.id, "\"]")).removeClass('active');
       }).on('changed.bs.select', dropdownSelector, function (e) {
         updateDropdownLabel(e.target);
-      }).on('animationstart', "".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector), function (e) {
-        console.log('событие animationstart');
-        var target = e.target;
-        var animationName = e.originalEvent && e.originalEvent.animationName;
-        if (animationName && (animationName.includes('autofill') || animationName.includes('fill'))) {
-          console.log('анимация связана с автозаполнением Chromium');
-          updateInputLabel(target);
-          if ($(target).is(inputSelector)) {
-            validateInput(target);
-          }
-          if ($(target).is(dropdownSelector)) {
-            updateDropdownLabel(target);
-          }
-          $(target).trigger('change');
-        }
       });
     }
+
+    // ----- Инициализация существующих полей (всегда) -----
     $(inputSelector, context).each(function (index, input) {
       return updateInputLabel(input);
     });
@@ -105,20 +103,121 @@ var DSFUI = (function (exports) {
     $(dropdownSelector, context).each(function (index, select) {
       return updateDropdownLabel(select);
     });
+
+    // ----- Опциональное усиление для отслеживания автозаполнения -----
+    if (detectAutofill && !autofillContexts.has(context)) {
+      autofillContexts.add(context);
+      setupAutofillDetection(context);
+    }
   }
-  var inputTypes = ['text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'],
-    inputSelector = inputTypes.map(function (selector) {
-      return "input[type=".concat(selector, "]");
-    }).concat(['textarea:not(.js-summernote)']).join(','),
-    dateSelector = 'input[type="date"]',
-    dropdownSelector = 'select.js-select-formFree, .js-allSelect-formFree select',
-    labelSelector = 'label, i';
+
+  // ---------- НОВАЯ ФУНКЦИЯ ДЛЯ УСИЛЕННОГО РЕЖИМА ----------
+  function setupAutofillDetection(context) {
+    console.log('Autofill detection enabled for context', context);
+
+    // 1. MutationObserver – перехватывает изменение атрибута value
+    var valueObserver = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'value') {
+          var target = mutation.target;
+          if (target.oldValue === target.value) return;
+          updateInputLabel(target);
+          if ($(target).is(inputSelector)) validateInput(target);
+          if ($(target).is(dropdownSelector)) updateDropdownLabel(target);
+          $(target).trigger('change');
+        }
+      });
+    });
+
+    // Наблюдаем за всеми полями внутри контекста
+    var observeFields = function observeFields() {
+      var fields = $(context).find("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).addBack().filter("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).get();
+      fields.forEach(function (field) {
+        if (field.__formsFreeObserved) return;
+        field.__formsFreeObserved = true;
+        valueObserver.observe(field, {
+          attributes: true,
+          attributeOldValue: true,
+          attributeFilter: ['value']
+        });
+      });
+    };
+
+    // Наблюдаем за динамически добавляемыми полями внутри контекста
+    var domObserver = new MutationObserver(function (mutations) {
+      var needObserve = false;
+      mutations.forEach(function (mutation) {
+        mutation.addedNodes.forEach(function (node) {
+          if (node.nodeType === 1 && ($(node).is("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)) || $(node).find("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).length)) {
+            needObserve = true;
+          }
+        });
+      });
+      if (needObserve) observeFields();
+    });
+    domObserver.observe(context, {
+      childList: true,
+      subtree: true
+    });
+    observeFields(); // первичный обход
+
+    // 2. Периодическая проверка (fallback) – работает 5 секунд
+    var checksCount = 0;
+    var intervalId = setInterval(function () {
+      var $inputs = $(context).find(inputSelector).addBack().filter(inputSelector);
+      var $selects = $(context).find(dropdownSelector).addBack().filter(dropdownSelector);
+      $inputs.each(function (i, input) {
+        var oldVal = input.dataset.lastSeenValue;
+        var newVal = input.value;
+        if (oldVal !== newVal) {
+          input.dataset.lastSeenValue = newVal;
+          updateInputLabel(input);
+          validateInput(input);
+          $(input).trigger('change');
+        }
+      });
+      $selects.each(function (i, select) {
+        var oldVal = select.dataset.lastSeenValue;
+        var newVal = select.value;
+        if (oldVal !== newVal) {
+          select.dataset.lastSeenValue = newVal;
+          updateDropdownLabel(select);
+          $(select).trigger('change');
+        }
+      });
+      checksCount++;
+      if (checksCount > 10) {
+        // 10 * 500ms = 5 секунд
+        clearInterval(intervalId);
+        console.log('Autofill fallback interval stopped');
+      }
+    }, 500);
+
+    // Останавливаем интервал при первом взаимодействии пользователя внутри контекста
+    $(context).one('focus change', "".concat(inputSelector, ", ").concat(dropdownSelector), function () {
+      if (intervalId) clearInterval(intervalId);
+    });
+
+    // Сохраняем начальные значения в dataset.lastSeenValue
+    $(inputSelector, context).each(function (i, input) {
+      input.dataset.lastSeenValue = input.value;
+    });
+    $(dropdownSelector, context).each(function (i, select) {
+      select.dataset.lastSeenValue = select.value;
+    });
+  }
+  var inputTypes = ['text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'];
+  var inputSelector = inputTypes.map(function (selector) {
+    return "input[type=".concat(selector, "]");
+  }).concat(['textarea:not(.js-summernote)']).join(',');
+  var dateSelector = 'input[type="date"]';
+  var dropdownSelector = 'select.js-select-formFree, .js-allSelect-formFree select';
+  var labelSelector = 'label, i';
   function getIsValid($input) {
     var maxLength = Number($input.attr('length')) || 0;
     return $input.is(':valid') && (!maxLength || maxLength > $input.val().length);
   }
   function updateInputLabel(input) {
-    console.log('updateInputLabel');
     var $this = $(input);
     var $labelAndIcon;
     if (!$this.hasClass('comboTreeInputBox')) {
@@ -126,25 +225,23 @@ var DSFUI = (function (exports) {
     } else {
       $labelAndIcon = $this.closest('.form-group').children(labelSelector);
     }
-    var isActive = $this.val().length > 0 || $this.is(':focus') || $this.attr('placeholder') != null,
-      $labelTwitterTypeahead = $this.parents('.twitter-typeahead').siblings(labelSelector);
+    var isActive = $this.val().length > 0 || $this.is(':focus') || $this.attr('placeholder') != null;
+    var $labelTwitterTypeahead = $this.parents('.twitter-typeahead').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
     $labelTwitterTypeahead.toggleClass('active', isActive);
-    $this.hasClass('comboTreeInputBox');
-    // && console.log($labelAndIcon, isActive);
   }
   function validateInput(input) {
     var $this = $(input);
     if ($this.hasClass('validate')) {
-      var hasValue = $this.val().length > 0,
-        isValid = getIsValid($this);
+      var hasValue = $this.val().length > 0;
+      var isValid = getIsValid($this);
       $this.toggleClass('valid', hasValue && isValid).toggleClass('invalid', !isValid);
     }
   }
   function updateDropdownLabel(select) {
-    var $select = $(select),
-      isActive = select.value.length > 0 || $select.find('option:selected:not(.bs-title-option)').length > 0 || select.value !== '',
-      $labelAndIcon = $select.closest('div').siblings(labelSelector).length > 0 ? $select.closest('div').siblings(labelSelector) : $select.closest('div').parent('.js-formsFreeWrapper').siblings(labelSelector);
+    var $select = $(select);
+    var isActive = select.value.length > 0 || $select.find('option:selected:not(.bs-title-option)').length > 0 || select.value !== '';
+    var $labelAndIcon = $select.closest('div').siblings(labelSelector).length > 0 ? $select.closest('div').siblings(labelSelector) : $select.closest('div').parent('.js-formsFreeWrapper').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
   }
 
