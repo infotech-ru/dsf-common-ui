@@ -46,15 +46,34 @@ var DSFUI = (function (exports) {
   }
 
   var isListeningDocument$1 = false;
-  var autofillContexts = new WeakSet(); // отслеживаем уже усиленные контексты
-
-  function FormsFree(context) {
+  var autofillContexts = new WeakSet();
+  function FormsFree() {
+    var context = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.body;
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var _options$detectAutofi = options.detectAutofill,
       detectAutofill = _options$detectAutofi === void 0 ? false : _options$detectAutofi;
+
+    // Приводим context к DOM-элементу (для WeakSet и наблюдателей)
+    var ctxElement;
+    if (typeof context === 'string') {
+      ctxElement = document.querySelector(context);
+      if (!ctxElement) {
+        console.warn("FormsFree: \u044D\u043B\u0435\u043C\u0435\u043D\u0442 \u043F\u043E \u0441\u0435\u043B\u0435\u043A\u0442\u043E\u0440\u0443 \"".concat(context, "\" \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D"));
+        return;
+      }
+    } else if (context && context.jquery) {
+      // jQuery объект
+      ctxElement = context[0];
+    } else if (context && context.nodeType) {
+      // DOM элемент
+      ctxElement = context;
+    } else {
+      ctxElement = document.body;
+    }
     console.log('FormsFree called', {
       context: context,
-      detectAutofill: detectAutofill
+      detectAutofill: detectAutofill,
+      ctxElement: ctxElement
     });
     if (document.readyState !== 'complete') {
       window.addEventListener('load', function () {
@@ -71,15 +90,15 @@ var DSFUI = (function (exports) {
       }).on('blur change', inputSelector, function (e) {
         return validateInput(e.target);
       }).on('reset', 'form', function (e) {
-        var $form = $(e.target),
-          $formInputs = $form.find(inputSelector);
+        var $form = $(e.target);
+        var $formInputs = $form.find(inputSelector);
         $formInputs.removeClass('valid').removeClass('invalid').each(function (index, input) {
           return updateInputLabel(input);
         });
         $form.find('select.initialized').each(function (index, select) {
-          var $select = $(select),
-            $visibleInput = $select.siblings('input.select-dropdown'),
-            defaultValue = $select.children('[selected]').val();
+          var $select = $(select);
+          var $visibleInput = $select.siblings('input.select-dropdown');
+          var defaultValue = $select.children('[selected]').val();
           $select.val(defaultValue);
           $visibleInput.val(defaultValue);
         });
@@ -104,16 +123,16 @@ var DSFUI = (function (exports) {
       return updateDropdownLabel(select);
     });
 
-    // ----- Опциональное усиление для отслеживания автозаполнения -----
-    if (detectAutofill && !autofillContexts.has(context)) {
-      autofillContexts.add(context);
-      setupAutofillDetection(context);
+    // ----- Опциональное усиление (только для ctxElement) -----
+    if (detectAutofill && !autofillContexts.has(ctxElement)) {
+      autofillContexts.add(ctxElement);
+      setupAutofillDetection(ctxElement);
     }
   }
 
-  // ---------- НОВАЯ ФУНКЦИЯ ДЛЯ УСИЛЕННОГО РЕЖИМА ----------
-  function setupAutofillDetection(context) {
-    console.log('Autofill detection enabled for context', context);
+  // ---------- НОВАЯ ФУНКЦИЯ ДЛЯ УСИЛЕННОГО РЕЖИМА (принимает DOM-элемент) ----------
+  function setupAutofillDetection(container) {
+    console.log('Autofill detection enabled for container', container);
 
     // 1. MutationObserver – перехватывает изменение атрибута value
     var valueObserver = new MutationObserver(function (mutations) {
@@ -129,9 +148,9 @@ var DSFUI = (function (exports) {
       });
     });
 
-    // Наблюдаем за всеми полями внутри контекста
+    // Функция наблюдения за полями внутри контейнера
     var observeFields = function observeFields() {
-      var fields = $(context).find("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).addBack().filter("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).get();
+      var fields = $(container).find("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).addBack().filter("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).get();
       fields.forEach(function (field) {
         if (field.__formsFreeObserved) return;
         field.__formsFreeObserved = true;
@@ -143,7 +162,7 @@ var DSFUI = (function (exports) {
       });
     };
 
-    // Наблюдаем за динамически добавляемыми полями внутри контекста
+    // Наблюдаем за динамически добавляемыми полями внутри контейнера
     var domObserver = new MutationObserver(function (mutations) {
       var needObserve = false;
       mutations.forEach(function (mutation) {
@@ -155,7 +174,7 @@ var DSFUI = (function (exports) {
       });
       if (needObserve) observeFields();
     });
-    domObserver.observe(context, {
+    domObserver.observe(container, {
       childList: true,
       subtree: true
     });
@@ -164,8 +183,8 @@ var DSFUI = (function (exports) {
     // 2. Периодическая проверка (fallback) – работает 5 секунд
     var checksCount = 0;
     var intervalId = setInterval(function () {
-      var $inputs = $(context).find(inputSelector).addBack().filter(inputSelector);
-      var $selects = $(context).find(dropdownSelector).addBack().filter(dropdownSelector);
+      var $inputs = $(container).find(inputSelector).addBack().filter(inputSelector);
+      var $selects = $(container).find(dropdownSelector).addBack().filter(dropdownSelector);
       $inputs.each(function (i, input) {
         var oldVal = input.dataset.lastSeenValue;
         var newVal = input.value;
@@ -193,19 +212,21 @@ var DSFUI = (function (exports) {
       }
     }, 500);
 
-    // Останавливаем интервал при первом взаимодействии пользователя внутри контекста
-    $(context).one('focus change', "".concat(inputSelector, ", ").concat(dropdownSelector), function () {
+    // Останавливаем интервал при первом взаимодействии пользователя внутри контейнера
+    $(container).one('focus change', "".concat(inputSelector, ", ").concat(dropdownSelector), function () {
       if (intervalId) clearInterval(intervalId);
     });
 
     // Сохраняем начальные значения в dataset.lastSeenValue
-    $(inputSelector, context).each(function (i, input) {
+    $(inputSelector, container).each(function (i, input) {
       input.dataset.lastSeenValue = input.value;
     });
-    $(dropdownSelector, context).each(function (i, select) {
+    $(dropdownSelector, container).each(function (i, select) {
       select.dataset.lastSeenValue = select.value;
     });
   }
+
+  // ---------- ОСТАЛЬНЫЕ ФУНКЦИИ (без изменений) ----------
   var inputTypes = ['text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'];
   var inputSelector = inputTypes.map(function (selector) {
     return "input[type=".concat(selector, "]");

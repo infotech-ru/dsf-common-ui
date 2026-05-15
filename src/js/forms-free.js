@@ -1,10 +1,26 @@
 let isListeningDocument = false;
-const autofillContexts = new WeakSet(); // отслеживаем уже усиленные контексты
+const autofillContexts = new WeakSet();
 
-export function FormsFree(context, options = {}) {
+export function FormsFree(context = document.body, options = {}) {
     const { detectAutofill = false } = options;
     
-    console.log('FormsFree called', { context, detectAutofill });
+    // Приводим context к DOM-элементу (для WeakSet и наблюдателей)
+    let ctxElement;
+    if (typeof context === 'string') {
+        ctxElement = document.querySelector(context);
+        if (!ctxElement) {
+            console.warn(`FormsFree: элемент по селектору "${context}" не найден`);
+            return;
+        }
+    } else if (context && context.jquery) { // jQuery объект
+        ctxElement = context[0];
+    } else if (context && context.nodeType) { // DOM элемент
+        ctxElement = context;
+    } else {
+        ctxElement = document.body;
+    }
+    
+    console.log('FormsFree called', { context, detectAutofill, ctxElement });
     
     if (document.readyState !== 'complete') {
         window.addEventListener('load', () => FormsFree(context, options));
@@ -14,24 +30,20 @@ export function FormsFree(context, options = {}) {
     // ----- Глобальные обработчики (один раз) -----
     if (!isListeningDocument) {
         isListeningDocument = true;
-
         $(document)
             .on('focus blur change', inputSelector, e => updateInputLabel(e.target))
             .on('blur change', inputSelector, e => validateInput(e.target))
             .on('reset', 'form', e => {
-                const $form = $(e.target),
-                    $formInputs = $form.find(inputSelector);
-
+                const $form = $(e.target);
+                const $formInputs = $form.find(inputSelector);
                 $formInputs
                     .removeClass('valid')
                     .removeClass('invalid')
                     .each((index, input) => updateInputLabel(input));
-
                 $form.find('select.initialized').each((index, select) => {
-                    const $select = $(select),
-                        $visibleInput = $select.siblings('input.select-dropdown'),
-                        defaultValue = $select.children('[selected]').val();
-
+                    const $select = $(select);
+                    const $visibleInput = $select.siblings('input.select-dropdown');
+                    const defaultValue = $select.children('[selected]').val();
                     $select.val(defaultValue);
                     $visibleInput.val(defaultValue);
                 });
@@ -53,17 +65,17 @@ export function FormsFree(context, options = {}) {
     $(dateSelector, context).each((index, input) => input.type = 'text');
     $(dropdownSelector, context).each((index, select) => updateDropdownLabel(select));
 
-    // ----- Опциональное усиление для отслеживания автозаполнения -----
-    if (detectAutofill && !autofillContexts.has(context)) {
-        autofillContexts.add(context);
-        setupAutofillDetection(context);
+    // ----- Опциональное усиление (только для ctxElement) -----
+    if (detectAutofill && !autofillContexts.has(ctxElement)) {
+        autofillContexts.add(ctxElement);
+        setupAutofillDetection(ctxElement);
     }
 }
 
-// ---------- НОВАЯ ФУНКЦИЯ ДЛЯ УСИЛЕННОГО РЕЖИМА ----------
-function setupAutofillDetection(context) {
-    console.log('Autofill detection enabled for context', context);
-
+// ---------- НОВАЯ ФУНКЦИЯ ДЛЯ УСИЛЕННОГО РЕЖИМА (принимает DOM-элемент) ----------
+function setupAutofillDetection(container) {
+    console.log('Autofill detection enabled for container', container);
+    
     // 1. MutationObserver – перехватывает изменение атрибута value
     const valueObserver = new MutationObserver(mutations => {
         mutations.forEach(mutation => {
@@ -79,9 +91,9 @@ function setupAutofillDetection(context) {
         });
     });
 
-    // Наблюдаем за всеми полями внутри контекста
+    // Функция наблюдения за полями внутри контейнера
     const observeFields = () => {
-        const fields = $(context)
+        const fields = $(container)
             .find(`${inputSelector}, ${dateSelector}, ${dropdownSelector}`)
             .addBack()
             .filter(`${inputSelector}, ${dateSelector}, ${dropdownSelector}`)
@@ -97,7 +109,7 @@ function setupAutofillDetection(context) {
         });
     };
 
-    // Наблюдаем за динамически добавляемыми полями внутри контекста
+    // Наблюдаем за динамически добавляемыми полями внутри контейнера
     const domObserver = new MutationObserver(mutations => {
         let needObserve = false;
         mutations.forEach(mutation => {
@@ -112,17 +124,16 @@ function setupAutofillDetection(context) {
         });
         if (needObserve) observeFields();
     });
-    domObserver.observe(context, { childList: true, subtree: true });
+    domObserver.observe(container, { childList: true, subtree: true });
 
     observeFields(); // первичный обход
 
     // 2. Периодическая проверка (fallback) – работает 5 секунд
     let checksCount = 0;
     const intervalId = setInterval(() => {
-        const $inputs = $(context).find(inputSelector).addBack().filter(inputSelector);
-        const $selects = $(context).find(dropdownSelector).addBack().filter(dropdownSelector);
-        let changed = false;
-
+        const $inputs = $(container).find(inputSelector).addBack().filter(inputSelector);
+        const $selects = $(container).find(dropdownSelector).addBack().filter(dropdownSelector);
+        
         $inputs.each((i, input) => {
             const oldVal = input.dataset.lastSeenValue;
             const newVal = input.value;
@@ -131,7 +142,6 @@ function setupAutofillDetection(context) {
                 updateInputLabel(input);
                 validateInput(input);
                 $(input).trigger('change');
-                changed = true;
             }
         });
 
@@ -142,7 +152,6 @@ function setupAutofillDetection(context) {
                 select.dataset.lastSeenValue = newVal;
                 updateDropdownLabel(select);
                 $(select).trigger('change');
-                changed = true;
             }
         });
 
@@ -153,20 +162,21 @@ function setupAutofillDetection(context) {
         }
     }, 500);
 
-    // Останавливаем интервал при первом взаимодействии пользователя внутри контекста
-    $(context).one('focus change', `${inputSelector}, ${dropdownSelector}`, () => {
+    // Останавливаем интервал при первом взаимодействии пользователя внутри контейнера
+    $(container).one('focus change', `${inputSelector}, ${dropdownSelector}`, () => {
         if (intervalId) clearInterval(intervalId);
     });
 
     // Сохраняем начальные значения в dataset.lastSeenValue
-    $(inputSelector, context).each((i, input) => {
+    $(inputSelector, container).each((i, input) => {
         input.dataset.lastSeenValue = input.value;
     });
-    $(dropdownSelector, context).each((i, select) => {
+    $(dropdownSelector, container).each((i, select) => {
         select.dataset.lastSeenValue = select.value;
     });
 }
 
+// ---------- ОСТАЛЬНЫЕ ФУНКЦИИ (без изменений) ----------
 const inputTypes = [
     'text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'
 ];
