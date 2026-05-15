@@ -8,22 +8,22 @@ export function AutoresizeTextarea(options = {}) {
     } = options;
     
     let elements;
-    console.log('вход');
+    // console.log('вход');
     let searchContext;
     if (context instanceof Element || context instanceof Document) {
         searchContext = context;
-        console.log(searchContext, '1');
+        // console.log(searchContext, '1');
     } else if (typeof context === 'string') {
         searchContext = document.querySelector(context);
-        console.log(searchContext, '2');
+        // console.log(searchContext, '2');
         if (!searchContext) {
             console.warn('AutoresizeTextareaFlexible: контекст не найден', context);
-            console.log('3');
+            // console.log('3');
             return;
         }
     } else {
         searchContext = document;
-        console.log(searchContext, '4');
+        // console.log(searchContext, '4');
     }
     
     elements = searchContext.querySelectorAll(selector);

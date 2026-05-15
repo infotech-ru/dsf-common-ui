@@ -4,6 +4,7 @@ export function FormsFree(context) {
     if (document.readyState !== 'complete'){
         window.addEventListener('load', function(){
             FormsFree();
+            console.log('start FormsFree')
         });
     }
 
@@ -41,9 +42,22 @@ export function FormsFree(context) {
             .on('changed.bs.select', dropdownSelector, e => {
                 updateDropdownLabel(e.target);
             })
-            // .on('change', comboTreeSelector, e => {
-            //     updateComboTreeLabel(e.target);
-            // });
+            .on('animationstart', `${inputSelector}, ${dateSelector}, ${dropdownSelector}`, e => {
+                console.log('событие animationstart')
+                const target = e.target;
+                const animationName = e.originalEvent && e.originalEvent.animationName;
+                if (animationName && (animationName.includes('autofill') || animationName.includes('fill'))) {
+                    console.log('анимация связана с автозаполнением Chromium')
+                    updateInputLabel(target);
+                    if ($(target).is(inputSelector)) {
+                        validateInput(target);
+                    }
+                    if ($(target).is(dropdownSelector)) {
+                        updateDropdownLabel(target);
+                    }
+                    $(target).trigger('change');
+                }
+            });
     }
 
     $(inputSelector, context).each((index, input) => updateInputLabel(input));
@@ -52,38 +66,9 @@ export function FormsFree(context) {
 
     $(dropdownSelector, context).each((index, select) => updateDropdownLabel(select));
 
-    // $(comboTreeSelector, context).each((index, select) => updateComboTreeLabel(select));
 }
 
-export function forceUpdateForms() {
-    console.log('🔄 Принудительное обновление всех полей FormsFree');
-    
-    $(inputSelector).each((index, input) => {
-        if (input.value) {
-            updateInputLabel(input);
-            if ($(input).hasClass('validate')) {
-                validateInput(input);
-            }
-        } else {
-            updateInputLabel(input);
-        }
-    });
-    
-    $(dropdownSelector).each((index, select) => {
-        updateDropdownLabel(select);
-    });
-    
-    // Специальная обработка для полей с автозаполнением Chromium
-    setTimeout(() => {
-        $(inputSelector).each((index, input) => {
-            if (input.value && !$(input).siblings('label').hasClass('active')) {
-                updateInputLabel(input);
-            }
-        });
-    }, 50);
-    
-    console.log('✅ Принудительное обновление завершено');
-}
+
 
 const inputTypes = [
         'text',
@@ -99,7 +84,6 @@ const inputTypes = [
     dateSelector = 'input[type="date"]',
     dropdownSelector = 'select.js-select-formFree, .js-allSelect-formFree select',
     labelSelector = 'label, i';
-    // const comboTreeSelector = 'select.js-comboTree-select';
 
 function getIsValid($input) {
     const maxLength = Number($input.attr('length')) || 0;
@@ -152,14 +136,3 @@ function updateDropdownLabel(select) {
         : $select.closest('div').parent('.js-formsFreeWrapper').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
 }
-
-
-// function updateComboTreeLabel(select) {
-// const escapedSelectValue = CSS.escape(select.value);
-// const isActive = select.value !== ''
-//     || $(select).find('option[value="' + escapedSelectValue + '"]').length > 0; // ComboTree не помечает выбранным option с пустым значением (prompt) при инициализации
-// const $labelAndIcon = $(select).siblings(labelSelector).length > 0
-//     ? $(select).siblings(labelSelector)
-//     : $(select).parent('.js-formsFreeWrapper').siblings(labelSelector);
-// $labelAndIcon.toggleClass('active', isActive);
-// }
