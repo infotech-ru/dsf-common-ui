@@ -47,6 +47,7 @@ var DSFUI = (function (exports) {
 
   var isListeningDocument$1 = false;
   function FormsFree(context) {
+    console.log('start FormsFree');
     if (document.readyState !== 'complete') {
       window.addEventListener('load', function () {
         FormsFree();
@@ -78,10 +79,22 @@ var DSFUI = (function (exports) {
         $("label[for=\"".concat(e.target.id, "\"]")).removeClass('active');
       }).on('changed.bs.select', dropdownSelector, function (e) {
         updateDropdownLabel(e.target);
+      }).on('animationstart', "".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector), function (e) {
+        console.log('событие animationstart');
+        var target = e.target;
+        var animationName = e.originalEvent && e.originalEvent.animationName;
+        if (animationName && (animationName.includes('autofill') || animationName.includes('fill'))) {
+          console.log('анимация связана с автозаполнением Chromium');
+          updateInputLabel(target);
+          if ($(target).is(inputSelector)) {
+            validateInput(target);
+          }
+          if ($(target).is(dropdownSelector)) {
+            updateDropdownLabel(target);
+          }
+          $(target).trigger('change');
+        }
       });
-      // .on('change', comboTreeSelector, e => {
-      //     updateComboTreeLabel(e.target);
-      // });
     }
     $(inputSelector, context).each(function (index, input) {
       return updateInputLabel(input);
@@ -92,8 +105,6 @@ var DSFUI = (function (exports) {
     $(dropdownSelector, context).each(function (index, select) {
       return updateDropdownLabel(select);
     });
-
-    // $(comboTreeSelector, context).each((index, select) => updateComboTreeLabel(select));
   }
   var inputTypes = ['text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'],
     inputSelector = inputTypes.map(function (selector) {
@@ -102,13 +113,12 @@ var DSFUI = (function (exports) {
     dateSelector = 'input[type="date"]',
     dropdownSelector = 'select.js-select-formFree, .js-allSelect-formFree select',
     labelSelector = 'label, i';
-  // const comboTreeSelector = 'select.js-comboTree-select';
-
   function getIsValid($input) {
     var maxLength = Number($input.attr('length')) || 0;
     return $input.is(':valid') && (!maxLength || maxLength > $input.val().length);
   }
   function updateInputLabel(input) {
+    console.log('updateInputLabel');
     var $this = $(input);
     var $labelAndIcon;
     if (!$this.hasClass('comboTreeInputBox')) {
@@ -137,16 +147,6 @@ var DSFUI = (function (exports) {
       $labelAndIcon = $select.closest('div').siblings(labelSelector).length > 0 ? $select.closest('div').siblings(labelSelector) : $select.closest('div').parent('.js-formsFreeWrapper').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
   }
-
-  // function updateComboTreeLabel(select) {
-  // const escapedSelectValue = CSS.escape(select.value);
-  // const isActive = select.value !== ''
-  //     || $(select).find('option[value="' + escapedSelectValue + '"]').length > 0; // ComboTree не помечает выбранным option с пустым значением (prompt) при инициализации
-  // const $labelAndIcon = $(select).siblings(labelSelector).length > 0
-  //     ? $(select).siblings(labelSelector)
-  //     : $(select).parent('.js-formsFreeWrapper').siblings(labelSelector);
-  // $labelAndIcon.toggleClass('active', isActive);
-  // }
 
   function itemActionMenu() {
     $('.js-actionMenu').popover({
@@ -955,22 +955,22 @@ var DSFUI = (function (exports) {
       _options$onResize = options.onResize,
       onResize = _options$onResize === void 0 ? null : _options$onResize;
     var elements;
-    console.log('вход');
+    // console.log('вход');
     var searchContext;
     if (context instanceof Element || context instanceof Document) {
       searchContext = context;
-      console.log(searchContext, '1');
+      // console.log(searchContext, '1');
     } else if (typeof context === 'string') {
       searchContext = document.querySelector(context);
-      console.log(searchContext, '2');
+      // console.log(searchContext, '2');
       if (!searchContext) {
         console.warn('AutoresizeTextareaFlexible: контекст не найден', context);
-        console.log('3');
+        // console.log('3');
         return;
       }
     } else {
       searchContext = document;
-      console.log(searchContext, '4');
+      // console.log(searchContext, '4');
     }
     elements = searchContext.querySelectorAll(selector);
     elements.forEach(function (textarea) {

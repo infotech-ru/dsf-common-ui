@@ -1,10 +1,10 @@
 let isListeningDocument = false;
 
 export function FormsFree(context) {
+    console.log('start FormsFree')
     if (document.readyState !== 'complete'){
         window.addEventListener('load', function(){
             FormsFree();
-            console.log('start FormsFree')
         });
     }
 
@@ -92,6 +92,7 @@ function getIsValid($input) {
 }
 
 function updateInputLabel(input) {
+    console.log('updateInputLabel')
     const $this = $(input)
         
     let $labelAndIcon
