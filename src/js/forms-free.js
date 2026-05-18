@@ -114,27 +114,40 @@ export function FormsFree(context = document.body, options = {}) {
 }
 
 function setupAutofillDetection(container, debug = false) {
-    if (debug) console.log('[Poll] Starting aggressive polling every 200ms');
+    if (debug) console.log('[Poll] Starting aggressive polling every 300ms');
     
-    // Функция принудительной синхронизации
-    const syncFields = () => {
+    // Функция синхронизации – вызывается каждый раз
+    const syncFields = (iteration) => {
         let changed = false;
         const $inputs = $(container).find(inputSelector).addBack().filter(inputSelector);
         const $selects = $(container).find(dropdownSelector).addBack().filter(dropdownSelector);
+        
+        // Логируем факт проверки (если нужен спам, можно закомментировать)
+        if (debug && iteration % 10 === 0) {
+            console.log(`[Poll] Check #${iteration} – scanning ${$inputs.length} inputs, ${$selects.length} selects`);
+        }
         
         $inputs.each((i, input) => {
             const oldVal = input.dataset.lastSeenValue;
             const newVal = input.value;
             if (oldVal !== newVal) {
-                if (debug) console.log(`[Poll] Input changed:`, input, `"${oldVal}" -> "${newVal}"`);
+                if (debug) console.log(`[Poll] ✨ Input changed:`, input, `"${oldVal}" -> "${newVal}"`);
                 input.dataset.lastSeenValue = newVal;
                 updateInputLabel(input);
                 validateInput(input);
-                $(input).trigger('input');  // дополнительно триггерим событие
+                $(input).trigger('input'); // дополнительно будим другие обработчики
                 changed = true;
-            } else if (debug && newVal !== '') {
-                // Для отладки: показываем, что значение не изменилось, но оно не пустое
-                console.log(`[Poll] Input value unchanged: "${newVal}"`, input);
+            } else if (newVal !== '') {
+                // Поле не пустое, но значения не менялись – возможно, лейбл уже активен
+                // Но на всякий случай принудительно обновим лейбл и валидацию
+                if (debug && iteration % 5 === 0) {
+                    console.log(`[Poll] Non-empty unchanged field:`, input, `value="${newVal}" – forced update`);
+                }
+                updateInputLabel(input);
+                validateInput(input);
+            } else if (debug && iteration === 1) {
+                // Один раз при старте покажем, что поле пустое
+                console.log(`[Poll] Field empty:`, input);
             }
         });
         
@@ -142,11 +155,16 @@ function setupAutofillDetection(container, debug = false) {
             const oldVal = select.dataset.lastSeenValue;
             const newVal = select.value;
             if (oldVal !== newVal) {
-                if (debug) console.log(`[Poll] Select changed:`, select, `"${oldVal}" -> "${newVal}"`);
+                if (debug) console.log(`[Poll] ✨ Select changed:`, select, `"${oldVal}" -> "${newVal}"`);
                 select.dataset.lastSeenValue = newVal;
                 updateDropdownLabel(select);
                 $(select).trigger('change');
                 changed = true;
+            } else if (newVal !== '') {
+                if (debug && iteration % 5 === 0) {
+                    console.log(`[Poll] Non-empty unchanged select – forced update`);
+                }
+                updateDropdownLabel(select);
             }
         });
         
@@ -154,24 +172,36 @@ function setupAutofillDetection(container, debug = false) {
         return changed;
     };
     
-    // Запускаем интервал навсегда (не останавливаем при взаимодействии)
+    let iteration = 0;
     const intervalId = setInterval(() => {
-        syncFields();
-    }, 200);
+        iteration++;
+        syncFields(iteration);
+    }, 300);
     
-    // Дополнительные проверки через 1, 2, 3 секунды (на случай если интервал почему-то не сработал)
-    setTimeout(() => syncFields(), 1000);
-    setTimeout(() => syncFields(), 2000);
-    setTimeout(() => syncFields(), 3000);
-    setTimeout(() => syncFields(), 5000);
+    // Дополнительные проверки через 1, 2, 3, 5 секунд для уверенности
+    const forcedSync = (delay) => {
+        setTimeout(() => {
+            if (debug) console.log(`[Poll] Forced sync after ${delay}ms`);
+            syncFields(iteration + 100); // большой номер, чтобы не спамить в лог
+        }, delay);
+    };
+    forcedSync(1000);
+    forcedSync(2000);
+    forcedSync(3000);
+    forcedSync(5000);
     
     // Сохраняем начальные значения
-    $(inputSelector, container).each((i, input) => { input.dataset.lastSeenValue = input.value; });
-    $(dropdownSelector, container).each((i, select) => { select.dataset.lastSeenValue = select.value; });
-    if (debug) console.log('[Poll] Initial values stored, polling active');
+    $(inputSelector, container).each((i, input) => {
+        input.dataset.lastSeenValue = input.value;
+        if (debug && input.value !== '') console.log(`[Poll] Initial non-empty value:`, input, input.value);
+    });
+    $(dropdownSelector, container).each((i, select) => {
+        select.dataset.lastSeenValue = select.value;
+    });
+    if (debug) console.log('[Poll] Initial values stored, polling active (every 300ms)');
     
-    // Возвращаем функцию для возможной остановки (если понадобится)
-    return () => clearInterval(intervalId);
+    // Останавливать polling не будем, но при желании можно вернуть функцию остановки
+    return intervalId;
 }
 
 const inputTypes = ['text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'];
