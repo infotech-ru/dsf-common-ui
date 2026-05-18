@@ -51,9 +51,9 @@ var DSFUI = (function (exports) {
     var context = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.body;
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var _options$detectAutofi = options.detectAutofill,
-      detectAutofill = _options$detectAutofi === void 0 ? false : _options$detectAutofi;
-
-    // Приводим context к DOM-элементу (для WeakSet и наблюдателей)
+      detectAutofill = _options$detectAutofi === void 0 ? false : _options$detectAutofi,
+      _options$debug = options.debug,
+      debug = _options$debug === void 0 ? true : _options$debug;
     var ctxElement;
     if (typeof context === 'string') {
       ctxElement = document.querySelector(context);
@@ -62,34 +62,35 @@ var DSFUI = (function (exports) {
         return;
       }
     } else if (context && context.jquery) {
-      // jQuery объект
       ctxElement = context[0];
     } else if (context && context.nodeType) {
-      // DOM элемент
       ctxElement = context;
     } else {
       ctxElement = document.body;
     }
-    console.log('FormsFree called', {
+    if (debug) console.log('[FormsFree] Called with', {
       context: context,
       detectAutofill: detectAutofill,
       ctxElement: ctxElement
     });
     if (document.readyState !== 'complete') {
+      if (debug) console.log('[FormsFree] Document not ready, waiting for load');
       window.addEventListener('load', function () {
         return FormsFree(context, options);
       });
       return;
     }
-
-    // ----- Глобальные обработчики (один раз) -----
     if (!isListeningDocument$1) {
       isListeningDocument$1 = true;
-      $(document).on('focus blur change', inputSelector, function (e) {
-        return updateInputLabel(e.target);
-      }).on('blur change', inputSelector, function (e) {
-        return validateInput(e.target);
+      if (debug) console.log('[FormsFree] Installing global event handlers');
+      $(document).on('focus blur change input', inputSelector, function (e) {
+        if (debug) console.log("[Event] ".concat(e.type, " on"), e.target, 'value:', e.target.value);
+        updateInputLabel(e.target);
+      }).on('blur change input', inputSelector, function (e) {
+        if (debug) console.log("[Validation] ".concat(e.type, " on"), e.target);
+        validateInput(e.target);
       }).on('reset', 'form', function (e) {
+        if (debug) console.log('[Event] reset on form', e.target);
         var $form = $(e.target);
         var $formInputs = $form.find(inputSelector);
         $formInputs.removeClass('valid').removeClass('invalid').each(function (index, input) {
@@ -103,130 +104,94 @@ var DSFUI = (function (exports) {
           $visibleInput.val(defaultValue);
         });
       }).on('focus', dateSelector, function (e) {
+        if (debug) console.log('[Date] focus on', e.target);
         e.target.type = 'date';
       }).on('blur', dateSelector, function (e) {
+        if (debug) console.log('[Date] blur on', e.target);
         e.target.type = 'text';
         $("label[for=\"".concat(e.target.id, "\"]")).removeClass('active');
       }).on('changed.bs.select', dropdownSelector, function (e) {
+        if (debug) console.log('[Select] changed.bs.select on', e.target, 'value:', e.target.value);
         updateDropdownLabel(e.target);
-      });
-    }
-
-    // ----- Инициализация существующих полей (всегда) -----
-    $(inputSelector, context).each(function (index, input) {
-      return updateInputLabel(input);
-    });
-    $(dateSelector, context).each(function (index, input) {
-      return input.type = 'text';
-    });
-    $(dropdownSelector, context).each(function (index, select) {
-      return updateDropdownLabel(select);
-    });
-
-    // ----- Опциональное усиление (только для ctxElement) -----
-    if (detectAutofill && !autofillContexts.has(ctxElement)) {
-      autofillContexts.add(ctxElement);
-      setupAutofillDetection(ctxElement);
-    }
-  }
-
-  // ---------- НОВАЯ ФУНКЦИЯ ДЛЯ УСИЛЕННОГО РЕЖИМА (принимает DOM-элемент) ----------
-  function setupAutofillDetection(container) {
-    console.log('Autofill detection enabled for container', container);
-
-    // 1. MutationObserver – перехватывает изменение атрибута value
-    var valueObserver = new MutationObserver(function (mutations) {
-      mutations.forEach(function (mutation) {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'value') {
-          var target = mutation.target;
-          if (target.oldValue === target.value) return;
-          updateInputLabel(target);
-          if ($(target).is(inputSelector)) validateInput(target);
-          if ($(target).is(dropdownSelector)) updateDropdownLabel(target);
-          $(target).trigger('change');
+      })
+      // Прослушиваем animationstart на всех полях (в т.ч. для автозаполнения)
+      .on('animationstart', "".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector), function (e) {
+        var _e$originalEvent;
+        var animName = ((_e$originalEvent = e.originalEvent) === null || _e$originalEvent === void 0 ? void 0 : _e$originalEvent.animationName) || e.animationName;
+        if (debug) console.log('[Animation] animationstart on', e.target, 'animation:', animName);
+        if (animName && (animName.includes('autofill') || animName.includes('fill'))) {
+          if (debug) console.log('[Autofill] Detected autofill animation, forcing update');
+          updateInputLabel(e.target);
+          if ($(e.target).is(inputSelector)) validateInput(e.target);
+          if ($(e.target).is(dropdownSelector)) updateDropdownLabel(e.target);
+          $(e.target).trigger('change');
         }
       });
+    }
+    if (debug) console.log('[FormsFree] Initializing existing fields in context');
+    $(inputSelector, context).each(function (index, input) {
+      updateInputLabel(input);
+      validateInput(input);
+      if (debug) console.log("[Init] input #".concat(index), input, 'value:', input.value);
     });
-
-    // Функция наблюдения за полями внутри контейнера
-    var observeFields = function observeFields() {
-      var fields = $(container).find("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).addBack().filter("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).get();
-      fields.forEach(function (field) {
-        if (field.__formsFreeObserved) return;
-        field.__formsFreeObserved = true;
-        valueObserver.observe(field, {
-          attributes: true,
-          attributeOldValue: true,
-          attributeFilter: ['value']
-        });
-      });
-    };
-
-    // Наблюдаем за динамически добавляемыми полями внутри контейнера
-    var domObserver = new MutationObserver(function (mutations) {
-      var needObserve = false;
-      mutations.forEach(function (mutation) {
-        mutation.addedNodes.forEach(function (node) {
-          if (node.nodeType === 1 && ($(node).is("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)) || $(node).find("".concat(inputSelector, ", ").concat(dateSelector, ", ").concat(dropdownSelector)).length)) {
-            needObserve = true;
-          }
-        });
-      });
-      if (needObserve) observeFields();
+    $(dateSelector, context).each(function (index, input) {
+      input.type = 'text';
+      updateInputLabel(input);
+      if (debug) console.log("[Init] date #".concat(index), input, 'value:', input.value);
     });
-    domObserver.observe(container, {
-      childList: true,
-      subtree: true
+    $(dropdownSelector, context).each(function (index, select) {
+      updateDropdownLabel(select);
+      if (debug) console.log("[Init] select #".concat(index), select, 'value:', select.value);
     });
-    observeFields(); // первичный обход
-
-    // 2. Периодическая проверка (fallback) – работает 5 секунд
-    var checksCount = 0;
+    if (detectAutofill && !autofillContexts.has(ctxElement)) {
+      autofillContexts.add(ctxElement);
+      if (debug) console.log('[Autofill] Enabling enhanced detection (polling) for', ctxElement);
+      setupAutofillDetection(ctxElement, debug);
+    }
+  }
+  function setupAutofillDetection(container) {
+    var debug = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
     var intervalId = setInterval(function () {
       var $inputs = $(container).find(inputSelector).addBack().filter(inputSelector);
       var $selects = $(container).find(dropdownSelector).addBack().filter(dropdownSelector);
+      var changed = false;
       $inputs.each(function (i, input) {
         var oldVal = input.dataset.lastSeenValue;
         var newVal = input.value;
         if (oldVal !== newVal) {
+          if (debug) console.log("[Poll] Input value changed:", input, "\"".concat(oldVal, "\" -> \"").concat(newVal, "\""));
           input.dataset.lastSeenValue = newVal;
           updateInputLabel(input);
           validateInput(input);
           $(input).trigger('change');
+          changed = true;
         }
       });
       $selects.each(function (i, select) {
         var oldVal = select.dataset.lastSeenValue;
         var newVal = select.value;
         if (oldVal !== newVal) {
+          if (debug) console.log("[Poll] Select value changed:", select, "\"".concat(oldVal, "\" -> \"").concat(newVal, "\""));
           select.dataset.lastSeenValue = newVal;
           updateDropdownLabel(select);
           $(select).trigger('change');
+          changed = true;
         }
       });
-      checksCount++;
-      if (checksCount > 10) {
-        // 10 * 500ms = 5 секунд
-        clearInterval(intervalId);
-        console.log('Autofill fallback interval stopped');
-      }
+      if (changed && debug) console.log('[Poll] Changes detected and processed');
     }, 500);
-
-    // Останавливаем интервал при первом взаимодействии пользователя внутри контейнера
     $(container).one('focus change', "".concat(inputSelector, ", ").concat(dropdownSelector), function () {
+      if (debug) console.log('[Poll] User interaction detected, stopping polling');
       if (intervalId) clearInterval(intervalId);
     });
-
-    // Сохраняем начальные значения в dataset.lastSeenValue
     $(inputSelector, container).each(function (i, input) {
       input.dataset.lastSeenValue = input.value;
     });
     $(dropdownSelector, container).each(function (i, select) {
       select.dataset.lastSeenValue = select.value;
     });
+    if (debug) console.log('[Poll] Initial values stored');
   }
-
-  // ---------- ОСТАЛЬНЫЕ ФУНКЦИИ (без изменений) ----------
   var inputTypes = ['text', 'password', 'email', 'url', 'tel', 'number', 'search', 'search-md'];
   var inputSelector = inputTypes.map(function (selector) {
     return "input[type=".concat(selector, "]");
@@ -239,6 +204,7 @@ var DSFUI = (function (exports) {
     return $input.is(':valid') && (!maxLength || maxLength > $input.val().length);
   }
   function updateInputLabel(input) {
+    console.log('[updateInputLabel] called for', input, 'value:', input.value); // всегда выводим для отладки
     var $this = $(input);
     var $labelAndIcon;
     if (!$this.hasClass('comboTreeInputBox')) {
@@ -250,20 +216,25 @@ var DSFUI = (function (exports) {
     var $labelTwitterTypeahead = $this.parents('.twitter-typeahead').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
     $labelTwitterTypeahead.toggleClass('active', isActive);
+    console.log('[updateInputLabel] isActive =', isActive, 'label classes toggled');
   }
   function validateInput(input) {
     var $this = $(input);
+    console.log('[validateInput] called for', input, 'value:', input.value, 'hasClass validate:', $this.hasClass('validate'));
     if ($this.hasClass('validate')) {
       var hasValue = $this.val().length > 0;
       var isValid = getIsValid($this);
       $this.toggleClass('valid', hasValue && isValid).toggleClass('invalid', !isValid);
+      console.log('[validateInput] hasValue:', hasValue, 'isValid:', isValid, 'classes set');
     }
   }
   function updateDropdownLabel(select) {
+    console.log('[updateDropdownLabel] called for', select, 'value:', select.value);
     var $select = $(select);
     var isActive = select.value.length > 0 || $select.find('option:selected:not(.bs-title-option)').length > 0 || select.value !== '';
     var $labelAndIcon = $select.closest('div').siblings(labelSelector).length > 0 ? $select.closest('div').siblings(labelSelector) : $select.closest('div').parent('.js-formsFreeWrapper').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
+    console.log('[updateDropdownLabel] isActive =', isActive);
   }
 
   function itemActionMenu() {
