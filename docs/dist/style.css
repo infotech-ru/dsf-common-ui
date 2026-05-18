@@ -12622,7 +12622,7 @@ fieldset[disabled] .checkbox-inline {
 .css-formFree .help-block, .form-group .help-block {
   margin: 0;
 }
-.css-formFree .help-block, .form-group__errorAbs .help-block {
+.form-group__errorAbs .help-block {
   position: absolute;
 }
 .form-group__large .help-block {
