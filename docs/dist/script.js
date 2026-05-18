@@ -161,55 +161,40 @@ var DSFUI = (function (exports) {
 
     // Функция синхронизации – вызывается каждый раз
     var syncFields = function syncFields(iteration) {
-      var changed = false;
       var $inputs = $(container).find(inputSelector).addBack().filter(inputSelector);
       var $selects = $(container).find(dropdownSelector).addBack().filter(dropdownSelector);
 
-      // Логируем факт проверки (если нужен спам, можно закомментировать)
-      if (debug && iteration % 10 === 0) {
-        console.log("[Poll] Check #".concat(iteration, " \u2013 scanning ").concat($inputs.length, " inputs, ").concat($selects.length, " selects"));
+      // Каждые ~7 итераций (2 секунды) выводим текущие значения
+      if (debug && iteration % 7 === 0) {
+        $inputs.each(function (i, input) {
+          console.log("[Poll] Current value of ".concat(input.id || input.name || 'input', ": \"").concat(input.value, "\""));
+        });
       }
       $inputs.each(function (i, input) {
         var oldVal = input.dataset.lastSeenValue;
         var newVal = input.value;
         if (oldVal !== newVal) {
-          if (debug) console.log("[Poll] \u2728 Input changed:", input, "\"".concat(oldVal, "\" -> \"").concat(newVal, "\""));
+          console.log("[Poll] \u2728 Input changed: ".concat(input.id || input.name, " \"").concat(oldVal, "\" -> \"").concat(newVal, "\""));
           input.dataset.lastSeenValue = newVal;
           updateInputLabel(input);
           validateInput(input);
-          $(input).trigger('input'); // дополнительно будим другие обработчики
-          changed = true;
+          $(input).trigger('input');
         } else if (newVal !== '') {
-          // Поле не пустое, но значения не менялись – возможно, лейбл уже активен
-          // Но на всякий случай принудительно обновим лейбл и валидацию
-          if (debug && iteration % 5 === 0) {
-            console.log("[Poll] Non-empty unchanged field:", input, "value=\"".concat(newVal, "\" \u2013 forced update"));
-          }
+          // Поле не пустое – принудительно обновляем лейбл (на случай, если он пропущен)
           updateInputLabel(input);
           validateInput(input);
-        } else if (debug && iteration === 1) {
-          // Один раз при старте покажем, что поле пустое
-          console.log("[Poll] Field empty:", input);
         }
       });
       $selects.each(function (i, select) {
         var oldVal = select.dataset.lastSeenValue;
         var newVal = select.value;
         if (oldVal !== newVal) {
-          if (debug) console.log("[Poll] \u2728 Select changed:", select, "\"".concat(oldVal, "\" -> \"").concat(newVal, "\""));
+          console.log("[Poll] \u2728 Select changed: \"".concat(oldVal, "\" -> \"").concat(newVal, "\""));
           select.dataset.lastSeenValue = newVal;
           updateDropdownLabel(select);
           $(select).trigger('change');
-          changed = true;
-        } else if (newVal !== '') {
-          if (debug && iteration % 5 === 0) {
-            console.log("[Poll] Non-empty unchanged select \u2013 forced update");
-          }
-          updateDropdownLabel(select);
         }
       });
-      if (changed && debug) console.log('[Poll] Changes applied');
-      return changed;
     };
     var iteration = 0;
     var intervalId = setInterval(function () {
@@ -255,6 +240,7 @@ var DSFUI = (function (exports) {
   }
   function updateInputLabel(input) {
     console.log('[updateInputLabel] called for', input, 'value:', input.value); // всегда выводим для отладки
+    console.log('[updateInputLabel] for', input, 'found label(s):', $labelAndIcon);
     var $this = $(input);
     var $labelAndIcon;
     if (!$this.hasClass('comboTreeInputBox')) {

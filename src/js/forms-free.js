@@ -118,36 +118,29 @@ function setupAutofillDetection(container, debug = false) {
     
     // Функция синхронизации – вызывается каждый раз
     const syncFields = (iteration) => {
-        let changed = false;
         const $inputs = $(container).find(inputSelector).addBack().filter(inputSelector);
         const $selects = $(container).find(dropdownSelector).addBack().filter(dropdownSelector);
         
-        // Логируем факт проверки (если нужен спам, можно закомментировать)
-        if (debug && iteration % 10 === 0) {
-            console.log(`[Poll] Check #${iteration} – scanning ${$inputs.length} inputs, ${$selects.length} selects`);
+        // Каждые ~7 итераций (2 секунды) выводим текущие значения
+        if (debug && iteration % 7 === 0) {
+            $inputs.each((i, input) => {
+                console.log(`[Poll] Current value of ${input.id || input.name || 'input'}: "${input.value}"`);
+            });
         }
         
         $inputs.each((i, input) => {
             const oldVal = input.dataset.lastSeenValue;
             const newVal = input.value;
             if (oldVal !== newVal) {
-                if (debug) console.log(`[Poll] ✨ Input changed:`, input, `"${oldVal}" -> "${newVal}"`);
+                console.log(`[Poll] ✨ Input changed: ${input.id || input.name} "${oldVal}" -> "${newVal}"`);
                 input.dataset.lastSeenValue = newVal;
                 updateInputLabel(input);
                 validateInput(input);
-                $(input).trigger('input'); // дополнительно будим другие обработчики
-                changed = true;
+                $(input).trigger('input');
             } else if (newVal !== '') {
-                // Поле не пустое, но значения не менялись – возможно, лейбл уже активен
-                // Но на всякий случай принудительно обновим лейбл и валидацию
-                if (debug && iteration % 5 === 0) {
-                    console.log(`[Poll] Non-empty unchanged field:`, input, `value="${newVal}" – forced update`);
-                }
+                // Поле не пустое – принудительно обновляем лейбл (на случай, если он пропущен)
                 updateInputLabel(input);
                 validateInput(input);
-            } else if (debug && iteration === 1) {
-                // Один раз при старте покажем, что поле пустое
-                console.log(`[Poll] Field empty:`, input);
             }
         });
         
@@ -155,21 +148,12 @@ function setupAutofillDetection(container, debug = false) {
             const oldVal = select.dataset.lastSeenValue;
             const newVal = select.value;
             if (oldVal !== newVal) {
-                if (debug) console.log(`[Poll] ✨ Select changed:`, select, `"${oldVal}" -> "${newVal}"`);
+                console.log(`[Poll] ✨ Select changed: "${oldVal}" -> "${newVal}"`);
                 select.dataset.lastSeenValue = newVal;
                 updateDropdownLabel(select);
                 $(select).trigger('change');
-                changed = true;
-            } else if (newVal !== '') {
-                if (debug && iteration % 5 === 0) {
-                    console.log(`[Poll] Non-empty unchanged select – forced update`);
-                }
-                updateDropdownLabel(select);
             }
         });
-        
-        if (changed && debug) console.log('[Poll] Changes applied');
-        return changed;
     };
     
     let iteration = 0;
@@ -217,6 +201,7 @@ function getIsValid($input) {
 
 function updateInputLabel(input) {
     console.log('[updateInputLabel] called for', input, 'value:', input.value); // всегда выводим для отладки
+    console.log('[updateInputLabel] for', input, 'found label(s):', $labelAndIcon);
     const $this = $(input);
     let $labelAndIcon;
     if (!$this.hasClass('comboTreeInputBox')) {
