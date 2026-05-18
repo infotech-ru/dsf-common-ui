@@ -84,6 +84,9 @@ var DSFUI = (function (exports) {
 
     // ------------------ Глобальные обработчики (один раз) ------------------
     if (!isListeningDocument$1) {
+      var el = $('#loginform-email').get(0);
+      console.log(':-internal-autofill-previewed', el.matches(':-internal-autofill-previewed'));
+      console.log(':-internal-autofill-selected', el.matches(':-internal-autofill-selected'));
       isListeningDocument$1 = true;
       if (debug) console.log('[FormsFree] Установка глобальных обработчиков');
       $(document).on('focus blur change input', inputSelector, function (e) {

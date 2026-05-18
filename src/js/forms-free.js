@@ -29,6 +29,9 @@ export function FormsFree(context = document.body, options = {}) {
 
     // ------------------ Глобальные обработчики (один раз) ------------------
     if (!isListeningDocument) {
+        const el = $('#loginform-email').get(0);
+        console.log(':-internal-autofill-previewed', el.matches(':-internal-autofill-previewed'));
+        console.log(':-internal-autofill-selected', el.matches(':-internal-autofill-selected'));
         isListeningDocument = true;
         if (debug) console.log('[FormsFree] Установка глобальных обработчиков');
 
