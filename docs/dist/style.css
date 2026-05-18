@@ -12378,6 +12378,7 @@ output {
   --formControl-height: 3.25rem;
   --formControl-lineHeight: 1;
   --formControl-paddingX: 1rem;
+  --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
 }
@@ -12450,6 +12451,7 @@ textarea.form-control {
   --formControl-height: 3.25rem;
   --formControl-lineHeight: 1;
   --formControl-paddingX: 1rem;
+  --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
@@ -12606,13 +12608,13 @@ fieldset[disabled] .checkbox-inline {
 }
 
 .help-block {
+  color: #777777;
   display: block;
   font-size: 10px;
   line-height: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
   text-align: left;
-  color: #777777;
 }
 .help-block:empty {
   display: none;
@@ -12620,10 +12622,13 @@ fieldset[disabled] .checkbox-inline {
 .css-formFree .help-block, .form-group .help-block {
   margin: 0;
 }
+.css-formFree .help-block, .form-group__errorAbs .help-block {
+  position: absolute;
+}
 .form-group__large .help-block {
   font-size: 12px;
   line-height: 14px;
-  padding-left: var(--formControl-paddingX, 0);
+  padding-left: var(--formControl-errorPaddingX, 0);
   margin-top: 4px;
 }
 
@@ -13810,6 +13815,7 @@ select.selectpicker {
   --formControl-height: 3.25rem;
   --formControl-lineHeight: 1;
   --formControl-paddingX: 1rem;
+  --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --controlLabel-transition: font-size 0.2s ease-out;

@@ -526,13 +526,13 @@ textarea.form-control {
 }
 
 .help-block {
+  color: val.brandForms(controlLabelActive_color);
   display: block; // account for any element using help-block
   font-size: 10px;
   line-height: 10px;
   margin-top: 5px;
   margin-bottom: 10px;
   text-align: left;
-  color: val.brandForms(controlLabelActive_color);
   &:empty { // style.css
       display: none;
   }
@@ -541,10 +541,14 @@ textarea.form-control {
       margin: 0;
       // position: absolute; // большие тексты перекрываются
   }
+  .css-formFree &,
+  .form-group__errorAbs &{
+    position: absolute;
+  }
   .form-group__large &{
     font-size: 12px;
     line-height: 14px;
-    padding-left: var(--formControl-paddingX, 0);
+    padding-left: var(--formControl-errorPaddingX, 0);
     margin-top: 4px;
   }
 }
