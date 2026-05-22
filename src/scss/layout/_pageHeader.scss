@@ -25,7 +25,7 @@
     font-size: fonts.rem(val.fontSizes(pageHeaderTilte));
     flex-shrink: 0;
     font-weight: val.fontWeight(pageHeaderTilte);
-    line-height: fonts.rem(21);
+    line-height: fonts.rem(28);
     margin: 0;
     .mobile-view &{
       font-size: fonts.rem(14);
