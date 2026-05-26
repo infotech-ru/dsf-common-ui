@@ -38,8 +38,8 @@ input[type=checkbox] {
     line-height: fonts.rem(val.lineHeight(checkbox));
     min-height: fonts.rem(val.formsSizes(formElem_height));
     position: relative;
-    --checkbox-width: fonts.rem(val.checkboxSizes(checkboxItem_size));
-    --checkbox-label-paddingLeft: fonts.rem(calc(val.checkboxSizes(checkboxItem_size) / 0.75));
+    --checkbox-width: #{fonts.rem(val.checkboxSizes(checkboxItem_size))};
+    --checkbox-label-paddingLeft: #{fonts.rem(calc(val.checkboxSizes(checkboxItem_size) / 0.75))};
     input[type=checkbox] {
         position: absolute;
         clip: rect(0, 0, 0, 0);
