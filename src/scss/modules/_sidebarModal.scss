@@ -30,7 +30,7 @@
   }
   &-content {
     background-clip: padding-box;
-    background-color: var(--bg_color, --modalSidebar_bgc);
+    background-color: var(--bg_color, var(--modalSidebar_bgc));
     border: none;
     border-radius: 0px;
     box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.06);
@@ -71,7 +71,7 @@
     }
   }
   &-body {
-    background-color: var(--bg_color, --modalSidebar_bgc);
+    background-color: var(--bg_color, var(--modalSidebar_bgc));
     position: relative;
     padding: 0 fonts.rem(val.modalSizes(modalSidebar_padding)) 1px;
     &_inner{
