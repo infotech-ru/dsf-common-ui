@@ -8745,6 +8745,8 @@ input[type=checkbox][disabled] {
   line-height: 1.5rem;
   min-height: 1.75rem;
   position: relative;
+  --checkbox-width: fonts.rem(val.checkboxSizes(checkboxItem_size));
+  --checkbox-label-paddingLeft: fonts.rem(calc(val.checkboxSizes(checkboxItem_size) / 0.75));
 }
 .checkbox-item input[type=checkbox] {
   position: absolute;
