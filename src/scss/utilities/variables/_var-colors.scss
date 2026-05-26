@@ -911,6 +911,7 @@ $brand-modal: map.merge((
   modalFooter_borderColor:                map.get($brand-colors, _grey2),
   modalHeader_borderColor:                map.get($brand-colors, _grey2),
   modalHeader_bgc:                        color.scale(rgba(map.get($brand-colors, _black), 1), $alpha: -97%, $space: rgb),
+  modalSidebar_bgc:                       map.get($brand-colors, _light-grey2),
 ), emptymap.$brand-modal) !default;
 
 $brand-namecolors: map.merge((

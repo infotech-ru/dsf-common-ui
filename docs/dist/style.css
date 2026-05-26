@@ -17110,13 +17110,14 @@ body[style^=padding-right] .modal-sidebar {
 }
 .modal-sidebar-content {
   background-clip: padding-box;
-  background-color: #fff;
+  background-color: var(--bg_color, --modalSidebar_bgc);
   border: none;
   border-radius: 0px;
   box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.06);
   outline: 0;
   position: relative;
   width: 100%;
+  --modalSidebar_bgc: #F5F5F5;
 }
 .modal-sidebar-dialog {
   display: flex;
@@ -17151,7 +17152,7 @@ body[style^=padding-right] .modal-sidebar {
   float: left;
 }
 .modal-sidebar-body {
-  background-color: #fff;
+  background-color: var(--bg_color, --modalSidebar_bgc);
   position: relative;
   padding: 0 1rem 1px;
 }
