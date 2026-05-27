@@ -89,6 +89,7 @@ $forms-sizes:(
   formElem_borderSize__lg:         baseValue.$base-border__large,
   formElem_height:                 baseValue.$base-size__normal,
   formElem_height__lg:             baseValue.$base-size__large,
+  textareaLarge_pt:                6,
   formGroup_mb:                    14, // для совместимости, если рядом элемент с FormsFree
   formGroup__formFree_mb:          25,
   iconLabel:                       16,

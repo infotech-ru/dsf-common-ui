@@ -13,6 +13,8 @@
     #{--formControl-errorPaddingX}: fonts.rem(val.formsSizes(formControl_paddingX__lg) + val.formsSizes(formElem_borderSize__lg));
     #{--formsFree-formControlActive-pt}: fonts.rem(val.formsSizes(controlLabelActive_lh__lg) + varSizes.$paddingFromTop-active + 2);
     #{--formsFree-formControlActive-pb}: fonts.rem(varSizes.$paddingFromTop-active);
+    #{--textarea-height}: auto;
+    #{--textarea-min-height}: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize__lg) * 2) - val.formsSizes(textareaLarge_pt));
 }
 
 @mixin varControlLabelLarge {

@@ -8,7 +8,7 @@
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/variables/var-placeholder' as varplaceholder;
-
+@use './../utilities/variables/var-mixins' as varMixins;
 @use './../utilities/mixins/clearfix' as clearfix;
 @use './../utilities/mixins/placeholder' as placeholder;
 
@@ -203,27 +203,30 @@
 }
 
 .commentBlock{
-  $textareaFormControlPaddingX: 7;
+//   $textareaFormControlPaddingX: 7;
   &_inputGroup {
     align-items: center;
     background-color: val.brandForms(formControl-bgc);
-    border: 1px solid val.brandForms(formControl-borderColor);
-    border-radius: #{val.formsSizes(formElem_borderRadius)}px;
+    border-color: val.brandForms(formControl-borderColor);
+    border-radius: var(--formControl-borderRadius, fonts.rem(val.formsSizes(formElem_borderRadius)));
+    border-style: solid;
+    border-width: var(--formControl-borderwidth, fonts.rem(val.formsSizes(formElem_borderSize)));
+    // border-radius: #{val.formsSizes(formElem_borderRadius)}px;
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding-right: 0px;
+    // padding-right: 0px;
+    padding-left: var(--formControl-paddingX, #{fonts.rem(val.formsSizes(formControl_paddingX))});
+    padding-right: var(--formControl-paddingX, #{fonts.rem(val.formsSizes(formControl_paddingX))});
     &__whatsup{
         border-color: val.brandColors(grey2);
     }
     &__bigHeight{
         align-items: flex-start;
         height: auto;
-        padding-top: 6px;
-        min-height: fonts.rem(val.formsSizes(formElem_height) * 2 - (val.formsSizes(formElem_borderSize) * 2));
-        // .btn-icon{ 
-            // margin-top: 6px;
-        // }
+        padding-top: #{val.formsSizes(textareaLarge_pt)}px;
+        min-height: fonts.rem(val.formsSizes(formElem_height) * 2 - (val.formsSizes(formElem_borderSize) * 2)); // без этого схлопывается при фокусе
+        @include varMixins.varFormControlLarge;
     }
   }
   &_formControl{
@@ -234,9 +237,14 @@
     color: val.brandForms(formControl-color);
     flex-basis: 100%;
     font-size: fonts.rem(val.fontSizes(formElem));
-    line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
-    height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
-    padding: 0 fonts.rem(calc((val.btnSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
+    font-weight: val.fontWeight(formElem);
+    // line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
+    // height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
+    height: var(--textarea-height, #{fonts.rem(val.formsSizes(formElem_height))});
+    min-height: var(--textarea-min-height, auto);
+    line-height: var(--formControl-lineHeight, #{fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2))});
+    // padding: 0 fonts.rem(calc((val.btnSizes(btnIcon_height) * 2) + ($textareaFormControlPaddingX * 2) + 10)) 0 #{$textareaFormControlPaddingX}px;
+    padding: 0;
     resize: none;
     // resize: vertical;
     overflow: hidden;
@@ -244,11 +252,11 @@
     .commentBlock_inputGroup__whatsup &{
       @include placeholder.placeholder2(val.brandColors(grey), 400, 12);
     }
-    .commentBlock_inputGroup__bigHeight &{
-        height: auto;
-        min-height: fonts.rem(val.formsSizes(formElem_height) * 2 - (val.formsSizes(formElem_borderSize) * 2));
-        line-height: fonts.rem(calc(val.fontSizes(formElem) + 2));
-    }
+    // .commentBlock_inputGroup__bigHeight &{
+        // height: auto;
+        // min-height: fonts.rem(val.formsSizes(formElem_height) * 2 - (val.formsSizes(formElem_borderSize) * 2));
+        // line-height: fonts.rem(calc(val.fontSizes(formElem) + 2));
+    // }
     &__resizeVert{
         resize: vertical;
     }
@@ -259,14 +267,16 @@
     }
   }
   &_actionBlock{
+    align-items: center;
     display: flex;
-    position: absolute;
-    top: 3px;
-    padding-right: 0;
-    right: #{$textareaFormControlPaddingX}px;
-    .commentBlock_inputGroup__bigHeight &{
-        top: 12px;
-    }
+    height: 100%;
+    // position: absolute;
+    // top: 3px;
+    // padding-right: 0;
+    // right: #{$textareaFormControlPaddingX}px;
+    // .commentBlock_inputGroup__bigHeight &{
+    //     top: 12px;
+    // }
   }
   &_btnSend{
       background-color: transparent;

@@ -12383,6 +12383,8 @@ output {
   --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
+  --textarea-height: auto;
+  --textarea-min-height: 2.625rem;
 }
 
 textarea.form-control {
@@ -12456,6 +12458,8 @@ textarea.form-control {
   --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
+  --textarea-height: auto;
+  --textarea-min-height: 2.625rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
@@ -13820,6 +13824,8 @@ select.selectpicker {
   --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
+  --textarea-height: auto;
+  --textarea-min-height: 2.625rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
@@ -15195,6 +15201,12 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
+/* FORMS ELEMENT                                                              */
+/* path: dsf-common-ui/src/scss/modules/_forms.scss                           */
+/*                                                                            */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
+/*                                                                            */
 /* COMMENT BLOCK                                                              */
 /* path: dsf-common-ui/src/scss/modules/_commentBlock.scss                    */
 /*                                                                            */
@@ -15403,18 +15415,32 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .commentBlock_inputGroup {
   align-items: center;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 1px;
+  border-color: #dddddd;
+  border-radius: var(--formControl-borderRadius, 0.0625rem);
+  border-style: solid;
+  border-width: var(--formControl-borderwidth, 0.0625rem);
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-right: 0px;
+  padding-left: var(--formControl-paddingX, 0.4375rem);
+  padding-right: var(--formControl-paddingX, 0.4375rem);
 }
 .commentBlock_inputGroup__bigHeight {
   align-items: flex-start;
   height: auto;
   padding-top: 6px;
   min-height: 3.375rem;
+  --formControl-borderRadius: 0.0625rem;
+  --formControl-borderwidth: 0.125rem;
+  --formControl-fontSize: 0.9375rem;
+  --formControl-height: 3.25rem;
+  --formControl-lineHeight: 1;
+  --formControl-paddingX: 1rem;
+  --formControl-errorPaddingX: 1.125rem;
+  --formsFree-formControlActive-pt: 1.4375rem;
+  --formsFree-formControlActive-pb: 0.4375rem;
+  --textarea-height: auto;
+  --textarea-min-height: 2.625rem;
 }
 .commentBlock_formControl {
   background-color: transparent;
@@ -15424,9 +15450,11 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   color: #333333;
   flex-basis: 100%;
   font-size: 0.75rem;
-  line-height: 1.625rem;
-  height: 1.625rem;
-  padding: 0 4rem 0 7px;
+  font-weight: 400;
+  height: var(--textarea-height, 1.75rem);
+  min-height: var(--textarea-min-height, auto);
+  line-height: var(--formControl-lineHeight, 1.625rem);
+  padding: 0;
   resize: none;
   overflow: hidden;
 }
@@ -15474,11 +15502,6 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   font-weight: 400;
   opacity: 1;
 }
-.commentBlock_inputGroup__bigHeight .commentBlock_formControl {
-  height: auto;
-  min-height: 3.375rem;
-  line-height: 0.875rem;
-}
 .commentBlock_formControl__resizeVert {
   resize: vertical;
 }
@@ -15488,14 +15511,9 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   outline: none;
 }
 .commentBlock_actionBlock {
+  align-items: center;
   display: flex;
-  position: absolute;
-  top: 3px;
-  padding-right: 0;
-  right: 7px;
-}
-.commentBlock_inputGroup__bigHeight .commentBlock_actionBlock {
-  top: 12px;
+  height: 100%;
 }
 .commentBlock_btnSend {
   background-color: transparent;
