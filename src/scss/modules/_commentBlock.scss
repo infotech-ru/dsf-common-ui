@@ -227,6 +227,7 @@
         padding-top: #{val.formsSizes(textareaLarge_pt)}px;
         min-height: fonts.rem(val.formsSizes(formElem_height) * 2 - (val.formsSizes(formElem_borderSize) * 2)); // без этого схлопывается при фокусе
         @include varMixins.varFormControlLarge;
+        @include varMixins.varControlLabelLarge;
     }
   }
   &_formControl{
@@ -249,6 +250,12 @@
     // resize: vertical;
     overflow: hidden;
     @include placeholder.placeholder2(val.brandForms(formControl-placeholder), 400, 12);
+    &::placeholder{
+        color: val.brandForms(formControl-placeholder);
+        font-size: var(--formsFree-controlLabel-fontSize, fonts.rem(val.fontSizes(formElem)));
+        font-weight: val.fontWeight(controlLabel);
+        opacity: 1;
+    }
     .commentBlock_inputGroup__whatsup &{
       @include placeholder.placeholder2(val.brandColors(grey), 400, 12);
     }

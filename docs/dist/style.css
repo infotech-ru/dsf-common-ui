@@ -12258,25 +12258,7 @@ output {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   width: 100%;
 }
-.form-control::-moz-placeholder {
-  color: #333333;
-  font-weight: 400;
-  font-size: 0.75rem;
-  opacity: 1;
-}
-.form-control:-moz-placeholder {
-  color: #333333;
-  font-size: 0.75rem;
-  font-weight: 400;
-  opacity: 1;
-}
-.form-control:-ms-input-placeholder {
-  color: #333333;
-  font-size: 0.75rem;
-  font-weight: 400;
-  opacity: 1;
-}
-.form-control::-webkit-input-placeholder {
+.form-control::placeholder {
   color: #333333;
   font-size: 0.75rem;
   font-weight: 400;
@@ -15325,25 +15307,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .comment-block .input-group textarea.form-control:first-child {
   padding-left: 10px;
 }
-.comment-block .input-group textarea.form-control::-moz-placeholder {
-  color: #333333;
-  font-weight: 400;
-  font-size: 0.75rem;
-  opacity: 1;
-}
-.comment-block .input-group textarea.form-control:-moz-placeholder {
-  color: #333333;
-  font-size: 0.75rem;
-  font-weight: 400;
-  opacity: 1;
-}
-.comment-block .input-group textarea.form-control:-ms-input-placeholder {
-  color: #333333;
-  font-size: 0.75rem;
-  font-weight: 400;
-  opacity: 1;
-}
-.comment-block .input-group textarea.form-control::-webkit-input-placeholder {
+.comment-block .input-group textarea.form-control::placeholder {
   color: #333333;
   font-size: 0.75rem;
   font-weight: 400;
@@ -15441,6 +15405,17 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
   --textarea-min-height: 2.625rem;
+  --controlLabel-transition: font-size 0.2s ease-out;
+  --formsFree-controlLabelLarge-bg: transparent;
+  --formsFree-controlLabel-fontSize: 0.9375rem;
+  --formsFree-controlLabel-left: 0.125rem;
+  --formsFree-controlLabel-lineHeight: 3.25rem;
+  --formsFree-controlLabel-pl: 1rem;
+  --formsFree-controlLabel-top: 0;
+  --formsFree-controlLabelActive-fontSize: 0.75rem;
+  --formsFree-controlLabelActive-lineHeight: 0.875rem;
+  --formsFree-controlLabelActive-pl: 0.875rem;
+  --formsFree-controlLabelActive-top: 0.4375rem;
 }
 .commentBlock_formControl {
   background-color: transparent;
@@ -15458,46 +15433,19 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   resize: none;
   overflow: hidden;
 }
-.commentBlock_formControl::-moz-placeholder {
-  color: #333333;
-  font-weight: 400;
-  font-size: 0.75rem;
-  opacity: 1;
-}
-.commentBlock_formControl:-moz-placeholder {
+.commentBlock_formControl::placeholder {
   color: #333333;
   font-size: 0.75rem;
   font-weight: 400;
   opacity: 1;
 }
-.commentBlock_formControl:-ms-input-placeholder {
+.commentBlock_formControl::placeholder {
   color: #333333;
-  font-size: 0.75rem;
+  font-size: var(--formsFree-controlLabel-fontSize, 0.75rem);
   font-weight: 400;
   opacity: 1;
 }
-.commentBlock_formControl::-webkit-input-placeholder {
-  color: #333333;
-  font-size: 0.75rem;
-  font-weight: 400;
-  opacity: 1;
-}
-.commentBlock_inputGroup__whatsup .commentBlock_formControl::-moz-placeholder {
-  font-weight: 400;
-  font-size: 0.75rem;
-  opacity: 1;
-}
-.commentBlock_inputGroup__whatsup .commentBlock_formControl:-moz-placeholder {
-  font-size: 0.75rem;
-  font-weight: 400;
-  opacity: 1;
-}
-.commentBlock_inputGroup__whatsup .commentBlock_formControl:-ms-input-placeholder {
-  font-size: 0.75rem;
-  font-weight: 400;
-  opacity: 1;
-}
-.commentBlock_inputGroup__whatsup .commentBlock_formControl::-webkit-input-placeholder {
+.commentBlock_inputGroup__whatsup .commentBlock_formControl::placeholder {
   font-size: 0.75rem;
   font-weight: 400;
   opacity: 1;
