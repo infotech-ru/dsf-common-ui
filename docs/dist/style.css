@@ -17116,6 +17116,8 @@ body[style^=padding-right] .modal-sidebar {
   border: none;
   border-radius: 0px;
   box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
   outline: 0;
   position: relative;
   width: 100%;
@@ -17155,6 +17157,7 @@ body[style^=padding-right] .modal-sidebar {
 }
 .modal-sidebar-body {
   background-color: var(--bg_color, var(--modalSidebar_bgc));
+  flex-grow: 1;
   position: relative;
   padding: 0 1rem 1px;
 }
@@ -17168,7 +17171,7 @@ body[style^=padding-right] .modal-sidebar {
   flex-wrap: wrap;
   gap: 0.625rem;
   padding: 1rem;
-  padding-right: 1.9375rem;
+  padding-right: 2.25rem;
   position: relative;
 }
 .modal-sidebar-headerTitle {
@@ -17189,27 +17192,13 @@ body[style^=padding-right] .modal-sidebar {
 }
 .modal-sidebar-close {
   appearance: none;
-  background-color: transparent;
-  background-image: none;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: 0;
-  cursor: pointer;
-  height: 0.9375rem;
-  padding: 0;
-  margin-top: -0.46875rem;
   opacity: 1;
   position: absolute;
-  right: 0.9375rem;
-  top: 50%;
-  width: 0.9375rem;
+  right: 1rem;
+  top: 1rem;
   z-index: 1;
   --svg-close-fill: #333;
   --svg-close-stroke: #333;
-}
-.modal-sidebar-close svg {
-  height: 0.9375rem;
-  width: 0.9375rem;
 }
 
 .modal-sidebar-open {

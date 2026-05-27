@@ -1,3 +1,4 @@
+@use "sass:map";
 @use './_var-baseValue' as baseValue;
 
 $brand-sizes: (
@@ -115,7 +116,8 @@ $layout-sizes:(
 
 $modal-sizes: (
   modalSidebar_padding:            16,
-  modalSidebar_close_size:         15,
+  // modalSidebar_close_size:         15,
+  modalSidebar_close_size:         map.get($btn-sizes, btnIcon_height),
   modal-theme2_padding:            24,
   modal-theme2_paddingX:           24,
   modal-theme2_paddingY:           16,
