@@ -12366,7 +12366,7 @@ output {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
-  --textarea-pt: 2.90625rem;
+  --textarea-pt: 0.65625rem;
   --textarea-min-height: 2.625rem;
 }
 
@@ -12442,7 +12442,7 @@ textarea.form-control {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
-  --textarea-pt: 2.90625rem;
+  --textarea-pt: 0.65625rem;
   --textarea-min-height: 2.625rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
@@ -13809,7 +13809,7 @@ select.selectpicker {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
-  --textarea-pt: 2.90625rem;
+  --textarea-pt: 0.65625rem;
   --textarea-min-height: 2.625rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
@@ -15407,7 +15407,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
-  --textarea-pt: 2.90625rem;
+  --textarea-pt: 0.65625rem;
   --textarea-min-height: 2.625rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
