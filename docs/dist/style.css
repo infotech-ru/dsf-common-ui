@@ -12366,6 +12366,7 @@ output {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
+  --textarea-pt: 2.90625rem;
   --textarea-min-height: 2.625rem;
 }
 
@@ -12441,6 +12442,7 @@ textarea.form-control {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
+  --textarea-pt: 2.90625rem;
   --textarea-min-height: 2.625rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
@@ -13807,6 +13809,7 @@ select.selectpicker {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
+  --textarea-pt: 2.90625rem;
   --textarea-min-height: 2.625rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
@@ -15385,6 +15388,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   border-width: var(--formControl-borderwidth, 0.0625rem);
   display: flex;
   justify-content: space-between;
+  min-height: var(--textarea-min-height, auto);
   position: relative;
   padding-left: var(--formControl-paddingX, 0.4375rem);
   padding-right: var(--formControl-paddingX, 0.4375rem);
@@ -15393,7 +15397,6 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   align-items: flex-start;
   height: auto;
   padding-top: 6px;
-  min-height: 3.375rem;
   --formControl-borderRadius: 0.0625rem;
   --formControl-borderwidth: 0.125rem;
   --formControl-fontSize: 0.9375rem;
@@ -15404,6 +15407,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
+  --textarea-pt: 2.90625rem;
   --textarea-min-height: 2.625rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
@@ -15433,14 +15437,11 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   resize: none;
   overflow: hidden;
 }
-.commentBlock_formControl::placeholder {
-  color: #333333;
-  font-size: 0.75rem;
-  font-weight: 400;
-  opacity: 1;
+.commentBlock_formControl:empty {
+  padding-top: var(--textarea-pt, 0);
 }
 .commentBlock_formControl::placeholder {
-  color: #333333;
+  color: #777777;
   font-size: var(--formsFree-controlLabel-fontSize, 0.75rem);
   font-weight: 400;
   opacity: 1;
