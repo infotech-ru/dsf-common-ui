@@ -10875,6 +10875,9 @@ input[type=button].btn-block {
   --svgIcon_height__24vb: 1rem;
   --svgIcon_width__24vb: 1rem;
 }
+.label_chip__readonly {
+  --label-readonly_bgc: inherit;
+}
 
 .label_circle {
   align-items: center;
@@ -10926,7 +10929,7 @@ input[type=button].btn-block {
 }
 .label-default.label_chip:hover, .label-default.label_chip.active, .label-default.label_chip:active {
   --label_color: #333333;
-  --label_bgc: #dddddd;
+  --label_bgc: var(--label-readonly_bgc, #dddddd);
   --label_borderColor: #dddddd;
   --svg-valute-fill: #333333;
   --base-link-hoverColor: var(--label_color);
@@ -10981,7 +10984,7 @@ input[type=button].btn-block {
 }
 .label-primary.label_chip:hover, .label-primary.label_chip.active, .label-primary.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #1E6393;
+  --label_bgc: var(--label-readonly_bgc, #1E6393);
   --label_borderColor: #1E6393;
   --svg-valute-fill: #ffffff;
   --base-link-hoverColor: var(--label_color);
@@ -11036,7 +11039,7 @@ input[type=button].btn-block {
 }
 .label-danger.label_chip:hover, .label-danger.label_chip.active, .label-danger.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #762624;
+  --label_bgc: var(--label-readonly_bgc, #762624);
   --label_borderColor: #762624;
   --svg-valute-fill: #ffffff;
   --base-link-hoverColor: var(--label_color);
@@ -11091,7 +11094,7 @@ input[type=button].btn-block {
 }
 .label-success.label_chip:hover, .label-success.label_chip.active, .label-success.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #467B46;
+  --label_bgc: var(--label-readonly_bgc, #467B46);
   --label_borderColor: #467B46;
   --svg-valute-fill: #ffffff;
   --base-link-hoverColor: var(--label_color);
@@ -11146,7 +11149,7 @@ input[type=button].btn-block {
 }
 .label-warning.label_chip:hover, .label-warning.label_chip.active, .label-warning.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #B56C00;
+  --label_bgc: var(--label-readonly_bgc, #B56C00);
   --label_borderColor: #B56C00;
   --svg-valute-fill: #333333;
   --base-link-hoverColor: var(--label_color);
@@ -11201,7 +11204,7 @@ input[type=button].btn-block {
 }
 .label-info.label_chip:hover, .label-info.label_chip.active, .label-info.label_chip:active {
   --label_color: #4A8DC6;
-  --label_bgc: #B6D1E8;
+  --label_bgc: var(--label-readonly_bgc, #B6D1E8);
   --label_borderColor: #B6D1E8;
   --svg-valute-fill: #4A8DC6;
   --base-link-hoverColor: var(--label_color);
@@ -11256,7 +11259,7 @@ input[type=button].btn-block {
 }
 .label-yellow.label_chip:hover, .label-yellow.label_chip.active, .label-yellow.label_chip:active {
   --label_color: #333333;
-  --label_bgc: #FFBD41;
+  --label_bgc: var(--label-readonly_bgc, #FFBD41);
   --label_borderColor: #FFBD41;
   --svg-valute-fill: #333333;
   --base-link-hoverColor: var(--label_color);
@@ -11311,7 +11314,7 @@ input[type=button].btn-block {
 }
 .label-black.label_chip:hover, .label-black.label_chip.active, .label-black.label_chip:active {
   --label_color: #000000;
-  --label_bgc: #ffffff;
+  --label_bgc: var(--label-readonly_bgc, #ffffff);
   --label_borderColor: #000000;
   --svg-valute-fill: #ffffff;
   --base-link-hoverColor: var(--label_color);
@@ -11366,7 +11369,7 @@ input[type=button].btn-block {
 }
 .label-dark-grey.label_chip:hover, .label-dark-grey.label_chip.active, .label-dark-grey.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #000000;
+  --label_bgc: var(--label-readonly_bgc, #000000);
   --label_borderColor: #000000;
   --svg-valute-fill: #ffffff;
   --base-link-hoverColor: var(--label_color);
@@ -11421,7 +11424,7 @@ input[type=button].btn-block {
 }
 .label-grey2.label_chip:hover, .label-grey2.label_chip.active, .label-grey2.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #777777;
+  --label_bgc: var(--label-readonly_bgc, #777777);
   --label_borderColor: #777777;
   --svg-valute-fill: #333333;
   --base-link-hoverColor: var(--label_color);
@@ -11476,7 +11479,7 @@ input[type=button].btn-block {
 }
 .label-vibrant-blue.label_chip:hover, .label-vibrant-blue.label_chip.active, .label-vibrant-blue.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #4A8DC6;
+  --label_bgc: var(--label-readonly_bgc, #4A8DC6);
   --label_borderColor: #4A8DC6;
   --svg-valute-fill: #ffffff;
   --base-link-hoverColor: var(--label_color);
@@ -11531,7 +11534,7 @@ input[type=button].btn-block {
 }
 .label-light-yellow2.label_chip:hover, .label-light-yellow2.label_chip.active, .label-light-yellow2.label_chip:active {
   --label_color: #B56C00;
-  --label_bgc: #FFDF9A;
+  --label_bgc: var(--label-readonly_bgc, #FFDF9A);
   --label_borderColor: #FFDF9A;
   --svg-valute-fill: #B56C00;
   --base-link-hoverColor: var(--label_color);
@@ -11586,7 +11589,7 @@ input[type=button].btn-block {
 }
 .label-dark-green.label_chip:hover, .label-dark-green.label_chip.active, .label-dark-green.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #333333;
+  --label_bgc: var(--label-readonly_bgc, #333333);
   --label_borderColor: #333333;
   --svg-valute-fill: #ffffff;
   --base-link-hoverColor: var(--label_color);
@@ -11641,7 +11644,7 @@ input[type=button].btn-block {
 }
 .label-light-green.label_chip:hover, .label-light-green.label_chip.active, .label-light-green.label_chip:active {
   --label_color: #467B46;
-  --label_bgc: #B4E1B5;
+  --label_bgc: var(--label-readonly_bgc, #B4E1B5);
   --label_borderColor: #B4E1B5;
   --svg-valute-fill: #467B46;
   --base-link-hoverColor: var(--label_color);
@@ -11696,7 +11699,7 @@ input[type=button].btn-block {
 }
 .label-light-green2.label_chip:hover, .label-light-green2.label_chip.active, .label-light-green2.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #467B46;
+  --label_bgc: var(--label-readonly_bgc, #467B46);
   --label_borderColor: #467B46;
   --svg-valute-fill: #467B46;
   --base-link-hoverColor: var(--label_color);
@@ -11751,7 +11754,7 @@ input[type=button].btn-block {
 }
 .label-light-red.label_chip:hover, .label-light-red.label_chip.active, .label-light-red.label_chip:active {
   --label_color: #D9534F;
-  --label_bgc: #FF9996;
+  --label_bgc: var(--label-readonly_bgc, #FF9996);
   --label_borderColor: #FF9996;
   --svg-valute-fill: #D9534F;
   --base-link-hoverColor: var(--label_color);
@@ -11806,7 +11809,7 @@ input[type=button].btn-block {
 }
 .label-rose.label_chip:hover, .label-rose.label_chip.active, .label-rose.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #D9534F;
+  --label_bgc: var(--label-readonly_bgc, #D9534F);
   --label_borderColor: #D9534F;
   --svg-valute-fill: #ffffff;
   --base-link-hoverColor: var(--label_color);
@@ -11861,7 +11864,7 @@ input[type=button].btn-block {
 }
 .label-grey4.label_chip:hover, .label-grey4.label_chip.active, .label-grey4.label_chip:active {
   --label_color: #ffffff;
-  --label_bgc: #333333;
+  --label_bgc: var(--label-readonly_bgc, #333333);
   --label_borderColor: #333333;
   --svg-valute-fill: #ffffff;
   --base-link-hoverColor: var(--label_color);

@@ -161,6 +161,9 @@
         --svgIcon_width__24vb: #{fonts.rem(16)};
     }
   }
+  &__readonly{
+    --label-readonly_bgc: inherit;
+  }
 }
 
 .label_circle {
@@ -216,7 +219,7 @@
       #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border');
       &:hover, &.active, &:active{
         #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'color_active');
-        #{--label_bgc}: maps.map-deep-get(colors.$brand-label, $name, 'bg_active');
+        #{--label_bgc}: var(--label-readonly_bgc, maps.map-deep-get(colors.$brand-label, $name, 'bg_active'));
         #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border_active');
         #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color');
         #{--base-link-hoverColor}:  var(--label_color);
