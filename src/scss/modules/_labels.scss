@@ -105,12 +105,12 @@
 
 .label_chip{
   align-items: center;
-  background-color: var(--label_bgc, val.brandColors(_transparent));
+  background-color: var(--labelHover_bgc, var(--label_bgc, val.brandColors(_transparent)));
   border-radius: var(--label_chip-borderRadius, fonts.rem(10));
-  border-color: var(--label_borderColor, val.brandColors(_transparent));
+  border-color: var(--labelHover_borderColor, var(--label_borderColor, val.brandColors(_transparent)));
   border-style: solid;
   border-width: 1px;
-  color: var(--label_color, val.brandColors(_dark-grey));
+  color: var(--labelHover_color, var(--label_color, val.brandColors(_dark-grey)));
   cursor: pointer;
   display: inline-flex;
   font-size: var(--label_chip-fontSize, fonts.rem(10));
@@ -165,25 +165,25 @@
   &:hover,
   &.active,
   &:active{
-    --label_color: var(--labelChipHover_color);
-    --label_bgc: var(--labelChipHover_bgc);
-    --label_borderColor: var(--labelChipHover_borderColor);
-    --svg-valute-fill: var(--labelChipHover_svg-valute-fill);
-    --svg-icon-fill: var(--labelChipHover_svg-icon-fill);
-    --svg-icon-stroke: var(--labelChipHover_svg-icon-stroke);
-    --svg-icon-fill_blue: var(--labelChipHover_svg-icon-fill_blue);
-    --svg-icon-stroke_blue: var(--labelChipHover_svg-icon-stroke_blue);
+    #{--labelHover_color}: var(--labelChipHover_color);
+    #{--labelHover_bgc}: var(--labelChipHover_bgc);
+    #{--labelHover_borderColor}: var(--labelChipHover_borderColor);
+    #{--svg-valute-fill}: var(--labelChipHover_svg-valute-fill);
+    #{--svg-icon-fill}: var(--labelChipHover_svg-icon-fill);
+    #{--svg-icon-stroke}: var(--labelChipHover_svg-icon-stroke);
+    #{--svg-icon-fill_blue}: var(--labelChipHover_svg-icon-fill_blue);
+    #{--svg-icon-stroke_blue}: var(--labelChipHover_svg-icon-stroke_blue);
     #{--base-link-hoverColor}: var(--label_color);
   }
   &__readonly{
-    --label_color: var(--label_color);
-    --label_bgc: var(--label_bgc);
-    --label_borderColor: var(--label_borderColor);
-    --svg-valute-fill: var(--svg-valute-fill);
-    --svg-icon-fill: var(--svg-icon-fill);
-    --svg-icon-stroke: var(--svg-icon-stroke);
-    --svg-icon-fill_blue: var(--svg-icon-fill_blue);
-    --svg-icon-stroke_blue: var(--svg-icon-stroke_blue);
+    #{--labelHover_color}: var(--label_color);
+    #{--labelHover_bgc}: var(--label_bgc);
+    #{--labelHover_borderColor}: var(--label_borderColor);
+    #{--svg-valute-fill}: var(--svg-valute-fill);
+    #{--svg-icon-fill}: var(--svg-icon-fill);
+    #{--svg-icon-stroke}: var(--svg-icon-stroke);
+    #{--svg-icon-fill_blue}: var(--svg-icon-fill_blue);
+    #{--svg-icon-stroke_blue}: var(--svg-icon-stroke_blue);
 
     // --label_color: var(--label_color_readonly);
     // --label_bgc: var(--label_bgc_readonly);
