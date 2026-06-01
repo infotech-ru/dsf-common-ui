@@ -10887,7 +10887,7 @@ input[type=button].btn-block {
   --svg-icon-stroke_blue: var(--labelChipHover_svg-icon-stroke_blue);
   --base-link-hoverColor: var(--label_color);
 }
-.label_chip__readonly {
+.label_chip__readonly:hover, .label_chip__readonly.active, .label_chip__readonly:active {
   --labelHover_color: var(--label_color);
   --labelHover_bgc: var(--label_bgc);
   --labelHover_borderColor: var(--label_borderColor);

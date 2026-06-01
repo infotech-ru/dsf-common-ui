@@ -176,23 +176,18 @@
     #{--base-link-hoverColor}: var(--label_color);
   }
   &__readonly{
-    #{--labelHover_color}: var(--label_color);
-    #{--labelHover_bgc}: var(--label_bgc);
-    #{--labelHover_borderColor}: var(--label_borderColor);
-    #{--svg-valute-fill}: var(--svg-valute-fill);
-    #{--svg-icon-fill}: var(--svg-icon-fill);
-    #{--svg-icon-stroke}: var(--svg-icon-stroke);
-    #{--svg-icon-fill_blue}: var(--svg-icon-fill_blue);
-    #{--svg-icon-stroke_blue}: var(--svg-icon-stroke_blue);
-
-    // --label_color: var(--label_color_readonly);
-    // --label_bgc: var(--label_bgc_readonly);
-    // --label_borderColor: var(--label_borderColor_readonly);
-    // --svg-valute-fill: var(--svg-valute-fill_readonly);
-    // --svg-icon-fill: var(--svg-icon-fill_readonly);
-    // --svg-icon-stroke: var(--svg-icon-stroke_readonly);
-    // --svg-icon-fill_blue: var(--svg-icon-fill_blue_readonly);
-    // --svg-icon-stroke_blue: var(--svg-icon-stroke_blue_readonly);
+    &:hover,
+    &.active,
+    &:active{
+      #{--labelHover_color}: var(--label_color);
+      #{--labelHover_bgc}: var(--label_bgc);
+      #{--labelHover_borderColor}: var(--label_borderColor);
+      #{--svg-valute-fill}: var(--svg-valute-fill);
+      #{--svg-icon-fill}: var(--svg-icon-fill);
+      #{--svg-icon-stroke}: var(--svg-icon-stroke);
+      #{--svg-icon-fill_blue}: var(--svg-icon-fill_blue);
+      #{--svg-icon-stroke_blue}: var(--svg-icon-stroke_blue);
+    }
   }
 }
 
