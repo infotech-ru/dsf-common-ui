@@ -162,7 +162,14 @@
     }
   }
   &__readonly{
-    --label-readonly_bgc: inherit;
+    --label_color: var(--label_color_readonly);
+    --label_bgc: var(--label_bgc_readonly);
+    --label_borderColor: var(--label_borderColor_readonly);
+    --svg-valute-fill: var(--svg-valute-fill_readonly);
+    --svg-icon-fill: var(--svg-icon-fill_readonly);
+    --svg-icon-stroke: var(--svg-icon-stroke_readonly);
+    --svg-icon-fill_blue: var(--svg-icon-fill_blue_readonly);
+    --svg-icon-stroke_blue: var(--svg-icon-stroke_blue_readonly);
   }
 }
 
@@ -223,11 +230,19 @@
         #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border_active');
         #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color');
         #{--base-link-hoverColor}:  var(--label_color);
+        #{--label_color_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'color');
+        #{--label_bgc_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
+        #{--label_borderColor_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
+        #{--svg-valute-fill_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'color');
         .svg--icon, .svg--icon__24vb{
             #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg_active');
             #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg_active');
             #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue_active');
             #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue_active');
+            #{--svg-icon-fill_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg');
+            #{--svg-icon-stroke_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg');
+            #{--svg-icon-fill_blue_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue');
+            #{--svg-icon-stroke_blue_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue');
         }
       }
     }
@@ -250,11 +265,20 @@
         #{--label_bgc}: maps.map-deep-get(colors.$brand-label, $name, 'bg-outline_active');
         #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline_active');
         #{--base-link-hoverColor}:  var(--label_color);
+        #{--label_color_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
+        #{--label_borderColor_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'border-outline');
+        #{--label_bgc_readonly}: val.brandColors(_transparent);
+        #{--svg-valute-fill_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
+
         .svg--icon, .svg--icon__24vb{
             #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_active');
             #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_active');
             #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue_active');
             #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue_active');
+            #{--svg-icon-fill_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
+            #{--svg-icon-stroke_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
+            #{--svg-icon-fill_blue_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
+            #{--svg-icon-stroke_blue_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
         }
       }
     }
