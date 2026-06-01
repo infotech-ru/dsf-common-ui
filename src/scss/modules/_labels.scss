@@ -124,6 +124,7 @@
   transition: background-color 0.3s ease-in-out;
   white-space: nowrap;
   --label-lineHeight: #{fonts.rem(14)};
+  --label_borderColor: #{--labelChip_borderColor};
   .svg--icon,
   .svg--icon__24vb{
     align-items: center;
@@ -161,15 +162,37 @@
         --svgIcon_width__24vb: #{fonts.rem(16)};
     }
   }
+  &:hover,
+  &.active,
+  &:active{
+    --label_color: var(--labelChipHover_color);
+    --label_bgc: var(--labelChipHover_bgc);
+    --label_borderColor: var(--labelChipHover_borderColor);
+    --svg-valute-fill: var(--labelChipHover_svg-valute-fill);
+    --svg-icon-fill: var(--labelChipHover_svg-icon-fill);
+    --svg-icon-stroke: var(--labelChipHover_svg-icon-stroke);
+    --svg-icon-fill_blue: var(--labelChipHover_svg-icon-fill_blue);
+    --svg-icon-stroke_blue: var(--labelChipHover_svg-icon-stroke_blue);
+    #{--base-link-hoverColor}: var(--label_color);
+  }
   &__readonly{
-    --label_color: var(--label_color_readonly);
-    --label_bgc: var(--label_bgc_readonly);
-    --label_borderColor: var(--label_borderColor_readonly);
-    --svg-valute-fill: var(--svg-valute-fill_readonly);
-    --svg-icon-fill: var(--svg-icon-fill_readonly);
-    --svg-icon-stroke: var(--svg-icon-stroke_readonly);
-    --svg-icon-fill_blue: var(--svg-icon-fill_blue_readonly);
-    --svg-icon-stroke_blue: var(--svg-icon-stroke_blue_readonly);
+    --label_color: var(--label_color);
+    --label_bgc: var(--label_bgc);
+    --label_borderColor: var(--label_borderColor);
+    --svg-valute-fill: var(--svg-valute-fill);
+    --svg-icon-fill: var(--svg-icon-fill);
+    --svg-icon-stroke: var(--svg-icon-stroke);
+    --svg-icon-fill_blue: var(--svg-icon-fill_blue);
+    --svg-icon-stroke_blue: var(--svg-icon-stroke_blue);
+
+    // --label_color: var(--label_color_readonly);
+    // --label_bgc: var(--label_bgc_readonly);
+    // --label_borderColor: var(--label_borderColor_readonly);
+    // --svg-valute-fill: var(--svg-valute-fill_readonly);
+    // --svg-icon-fill: var(--svg-icon-fill_readonly);
+    // --svg-icon-stroke: var(--svg-icon-stroke_readonly);
+    // --svg-icon-fill_blue: var(--svg-icon-fill_blue_readonly);
+    // --svg-icon-stroke_blue: var(--svg-icon-stroke_blue_readonly);
   }
 }
 
@@ -216,72 +239,51 @@
     #{--label_bgc}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
     #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
     #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color');
+    #{--labelChip_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border');
+    #{--labelChipHover_color}: maps.map-deep-get(colors.$brand-label, $name, 'color_active');
+    #{--labelChipHover_bgc}: maps.map-deep-get(colors.$brand-label, $name, 'bg_active');
+    #{--labelChipHover_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border_active');
+    #{--labelChipHover_svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color');
     .svg--icon, .svg--icon__24vb{
       #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg');
       #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg');
       #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue');
       #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue');
+      #{--labelChipHover_svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg_active');
+      #{--labelChipHover_svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg_active');
+      #{--labelChipHover_svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue_active');
+      #{--labelChipHover_svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue_active');
     }
-    &.label_chip{
-      #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border');
-      &:hover, &.active, &:active{
-        #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'color_active');
-        #{--label_bgc}: var(--label-readonly_bgc, maps.map-deep-get(colors.$brand-label, $name, 'bg_active'));
-        #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border_active');
-        #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color');
-        #{--base-link-hoverColor}:  var(--label_color);
-        #{--label_color_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'color');
-        #{--label_bgc_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
-        #{--label_borderColor_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
-        #{--svg-valute-fill_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'color');
-        .svg--icon, .svg--icon__24vb{
-            #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg_active');
-            #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg_active');
-            #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue_active');
-            #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue_active');
-            #{--svg-icon-fill_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg');
-            #{--svg-icon-stroke_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg');
-            #{--svg-icon-fill_blue_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue');
-            #{--svg-icon-stroke_blue_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg_blue');
-        }
-      }
-    }
+    // &.label_chip{
+    //   &:hover, &.active, &:active{
+    //     #{--base-link-hoverColor}:  var(--label_color);
+    //   }
+    // }
   }
   .label-#{$name}__outline{
     #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
     #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border-outline');
     #{--label_bgc}: val.brandColors(_transparent);
     #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
+    #{--labelChipHover_color}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline_active');
+    #{--labelChipHover_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border-outline_active');
+    #{--labelChipHover_bgc}: maps.map-deep-get(colors.$brand-label, $name, 'bg-outline_active');
+    #{--labelChipHover_svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline_active');
     .svg--icon, .svg--icon__24vb{
         #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
         #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
         #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
         #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
+        #{--labelChipHover_svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_active');
+        #{--labelChipHover_svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_active');
+        #{--labelChipHover_svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue_active');
+        #{--labelChipHover_svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue_active');
     }
-    &.label_chip{
-      &:hover, &.active, &:active{
-        #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline_active');
-        #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border-outline_active');
-        #{--label_bgc}: maps.map-deep-get(colors.$brand-label, $name, 'bg-outline_active');
-        #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline_active');
-        #{--base-link-hoverColor}:  var(--label_color);
-        #{--label_color_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
-        #{--label_borderColor_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'border-outline');
-        #{--label_bgc_readonly}: val.brandColors(_transparent);
-        #{--svg-valute-fill_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
-
-        .svg--icon, .svg--icon__24vb{
-            #{--svg-icon-fill}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_active');
-            #{--svg-icon-stroke}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_active');
-            #{--svg-icon-fill_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue_active');
-            #{--svg-icon-stroke_blue}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue_active');
-            #{--svg-icon-fill_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
-            #{--svg-icon-stroke_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline');
-            #{--svg-icon-fill_blue_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
-            #{--svg-icon-stroke_blue_readonly}: maps.map-deep-get(colors.$brand-label, $name, 'svg-outline_blue');
-        }
-      }
-    }
+    // &.label_chip{
+    //   &:hover, &.active, &:active{
+    //     #{--base-link-hoverColor}:  var(--label_color);
+    //   }
+    // }
   }
 }
 

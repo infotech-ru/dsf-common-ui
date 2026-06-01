@@ -10837,6 +10837,7 @@ input[type=button].btn-block {
   transition: background-color 0.3s ease-in-out;
   white-space: nowrap;
   --label-lineHeight: 0.875rem;
+  --label_borderColor: --labelChip_borderColor;
 }
 .label_chip .svg--icon,
 .label_chip .svg--icon__24vb {
@@ -10875,15 +10876,26 @@ input[type=button].btn-block {
   --svgIcon_height__24vb: 1rem;
   --svgIcon_width__24vb: 1rem;
 }
+.label_chip:hover, .label_chip.active, .label_chip:active {
+  --label_color: var(--labelChipHover_color);
+  --label_bgc: var(--labelChipHover_bgc);
+  --label_borderColor: var(--labelChipHover_borderColor);
+  --svg-valute-fill: var(--labelChipHover_svg-valute-fill);
+  --svg-icon-fill: var(--labelChipHover_svg-icon-fill);
+  --svg-icon-stroke: var(--labelChipHover_svg-icon-stroke);
+  --svg-icon-fill_blue: var(--labelChipHover_svg-icon-fill_blue);
+  --svg-icon-stroke_blue: var(--labelChipHover_svg-icon-stroke_blue);
+  --base-link-hoverColor: var(--label_color);
+}
 .label_chip__readonly {
-  --label_color: var(--label_color_readonly);
-  --label_bgc: var(--label_bgc_readonly);
-  --label_borderColor: var(--label_borderColor_readonly);
-  --svg-valute-fill: var(--svg-valute-fill_readonly);
-  --svg-icon-fill: var(--svg-icon-fill_readonly);
-  --svg-icon-stroke: var(--svg-icon-stroke_readonly);
-  --svg-icon-fill_blue: var(--svg-icon-fill_blue_readonly);
-  --svg-icon-stroke_blue: var(--svg-icon-stroke_blue_readonly);
+  --label_color: var(--label_color);
+  --label_bgc: var(--label_bgc);
+  --label_borderColor: var(--label_borderColor);
+  --svg-valute-fill: var(--svg-valute-fill);
+  --svg-icon-fill: var(--svg-icon-fill);
+  --svg-icon-stroke: var(--svg-icon-stroke);
+  --svg-icon-fill_blue: var(--svg-icon-fill_blue);
+  --svg-icon-stroke_blue: var(--svg-icon-stroke_blue);
 }
 
 .label_circle {
@@ -10924,36 +10936,21 @@ input[type=button].btn-block {
   --label_bgc: #f9f9f9;
   --label_borderColor: #f9f9f9;
   --svg-valute-fill: #333333;
+  --labelChip_borderColor: #dddddd;
+  --labelChipHover_color: #333333;
+  --labelChipHover_bgc: #dddddd;
+  --labelChipHover_borderColor: #dddddd;
+  --labelChipHover_svg-valute-fill: #333333;
 }
 .label-default .svg--icon, .label-default .svg--icon__24vb {
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-}
-.label-default.label_chip {
-  --label_borderColor: #dddddd;
-}
-.label-default.label_chip:hover, .label-default.label_chip.active, .label-default.label_chip:active {
-  --label_color: #333333;
-  --label_bgc: var(--label-readonly_bgc, #dddddd);
-  --label_borderColor: #dddddd;
-  --svg-valute-fill: #333333;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #333333;
-  --label_bgc_readonly: #f9f9f9;
-  --label_borderColor_readonly: #f9f9f9;
-  --svg-valute-fill_readonly: #333333;
-}
-.label-default.label_chip:hover .svg--icon, .label-default.label_chip:hover .svg--icon__24vb, .label-default.label_chip.active .svg--icon, .label-default.label_chip.active .svg--icon__24vb, .label-default.label_chip:active .svg--icon, .label-default.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #333333;
-  --svg-icon-stroke: #333333;
-  --svg-icon-fill_blue: #333333;
-  --svg-icon-stroke_blue: #333333;
-  --svg-icon-fill_readonly: #333333;
-  --svg-icon-stroke_readonly: #333333;
-  --svg-icon-fill_blue_readonly: #333333;
-  --svg-icon-stroke_blue_readonly: #333333;
+  --labelChipHover_svg-icon-fill: #333333;
+  --labelChipHover_svg-icon-stroke: #333333;
+  --labelChipHover_svg-icon-fill_blue: #333333;
+  --labelChipHover_svg-icon-stroke_blue: #333333;
 }
 
 .label-default__outline {
@@ -10961,33 +10958,20 @@ input[type=button].btn-block {
   --label_borderColor: #dddddd;
   --label_bgc: #00000000;
   --svg-valute-fill: #333333;
+  --labelChipHover_color: #333333;
+  --labelChipHover_borderColor: #dddddd;
+  --labelChipHover_bgc: #F5F5F5;
+  --labelChipHover_svg-valute-fill: #333333;
 }
 .label-default__outline .svg--icon, .label-default__outline .svg--icon__24vb {
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-}
-.label-default__outline.label_chip:hover, .label-default__outline.label_chip.active, .label-default__outline.label_chip:active {
-  --label_color: #333333;
-  --label_borderColor: #dddddd;
-  --label_bgc: #F5F5F5;
-  --svg-valute-fill: #333333;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #333333;
-  --label_borderColor_readonly: #dddddd;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #333333;
-}
-.label-default__outline.label_chip:hover .svg--icon, .label-default__outline.label_chip:hover .svg--icon__24vb, .label-default__outline.label_chip.active .svg--icon, .label-default__outline.label_chip.active .svg--icon__24vb, .label-default__outline.label_chip:active .svg--icon, .label-default__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #333333;
-  --svg-icon-stroke: #333333;
-  --svg-icon-fill_blue: #333333;
-  --svg-icon-stroke_blue: #333333;
-  --svg-icon-fill_readonly: #333333;
-  --svg-icon-stroke_readonly: #333333;
-  --svg-icon-fill_blue_readonly: #333333;
-  --svg-icon-stroke_blue_readonly: #333333;
+  --labelChipHover_svg-icon-fill: #333333;
+  --labelChipHover_svg-icon-stroke: #333333;
+  --labelChipHover_svg-icon-fill_blue: #333333;
+  --labelChipHover_svg-icon-stroke_blue: #333333;
 }
 
 .label-primary {
@@ -10995,36 +10979,21 @@ input[type=button].btn-block {
   --label_bgc: #4A8DC6;
   --label_borderColor: #4A8DC6;
   --svg-valute-fill: #ffffff;
+  --labelChip_borderColor: #1E6393;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #1E6393;
+  --labelChipHover_borderColor: #1E6393;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-primary .svg--icon, .label-primary .svg--icon__24vb {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-}
-.label-primary.label_chip {
-  --label_borderColor: #1E6393;
-}
-.label-primary.label_chip:hover, .label-primary.label_chip.active, .label-primary.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #1E6393);
-  --label_borderColor: #1E6393;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #ffffff;
-  --label_bgc_readonly: #4A8DC6;
-  --label_borderColor_readonly: #4A8DC6;
-  --svg-valute-fill_readonly: #ffffff;
-}
-.label-primary.label_chip:hover .svg--icon, .label-primary.label_chip:hover .svg--icon__24vb, .label-primary.label_chip.active .svg--icon, .label-primary.label_chip.active .svg--icon__24vb, .label-primary.label_chip:active .svg--icon, .label-primary.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #ffffff;
-  --svg-icon-stroke_readonly: #ffffff;
-  --svg-icon-fill_blue_readonly: #ffffff;
-  --svg-icon-stroke_blue_readonly: #ffffff;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-primary__outline {
@@ -11032,33 +11001,20 @@ input[type=button].btn-block {
   --label_borderColor: #4A8DC6;
   --label_bgc: #00000000;
   --svg-valute-fill: #4A8DC6;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #1E6393;
+  --labelChipHover_bgc: #1E6393;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-primary__outline .svg--icon, .label-primary__outline .svg--icon__24vb {
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
-}
-.label-primary__outline.label_chip:hover, .label-primary__outline.label_chip.active, .label-primary__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #1E6393;
-  --label_bgc: #1E6393;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #4A8DC6;
-  --label_borderColor_readonly: #4A8DC6;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #4A8DC6;
-}
-.label-primary__outline.label_chip:hover .svg--icon, .label-primary__outline.label_chip:hover .svg--icon__24vb, .label-primary__outline.label_chip.active .svg--icon, .label-primary__outline.label_chip.active .svg--icon__24vb, .label-primary__outline.label_chip:active .svg--icon, .label-primary__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #4A8DC6;
-  --svg-icon-stroke_readonly: #4A8DC6;
-  --svg-icon-fill_blue_readonly: #4A8DC6;
-  --svg-icon-stroke_blue_readonly: #4A8DC6;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-danger {
@@ -11066,36 +11022,21 @@ input[type=button].btn-block {
   --label_bgc: #D9534F;
   --label_borderColor: #D9534F;
   --svg-valute-fill: #ffffff;
+  --labelChip_borderColor: #762624;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #762624;
+  --labelChipHover_borderColor: #762624;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-danger .svg--icon, .label-danger .svg--icon__24vb {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-}
-.label-danger.label_chip {
-  --label_borderColor: #762624;
-}
-.label-danger.label_chip:hover, .label-danger.label_chip.active, .label-danger.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #762624);
-  --label_borderColor: #762624;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #ffffff;
-  --label_bgc_readonly: #D9534F;
-  --label_borderColor_readonly: #D9534F;
-  --svg-valute-fill_readonly: #ffffff;
-}
-.label-danger.label_chip:hover .svg--icon, .label-danger.label_chip:hover .svg--icon__24vb, .label-danger.label_chip.active .svg--icon, .label-danger.label_chip.active .svg--icon__24vb, .label-danger.label_chip:active .svg--icon, .label-danger.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #ffffff;
-  --svg-icon-stroke_readonly: #ffffff;
-  --svg-icon-fill_blue_readonly: #ffffff;
-  --svg-icon-stroke_blue_readonly: #ffffff;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-danger__outline {
@@ -11103,33 +11044,20 @@ input[type=button].btn-block {
   --label_borderColor: #D9534F;
   --label_bgc: #00000000;
   --svg-valute-fill: #D9534F;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #762624;
+  --labelChipHover_bgc: #762624;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-danger__outline .svg--icon, .label-danger__outline .svg--icon__24vb {
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
-}
-.label-danger__outline.label_chip:hover, .label-danger__outline.label_chip.active, .label-danger__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #762624;
-  --label_bgc: #762624;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #D9534F;
-  --label_borderColor_readonly: #D9534F;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #D9534F;
-}
-.label-danger__outline.label_chip:hover .svg--icon, .label-danger__outline.label_chip:hover .svg--icon__24vb, .label-danger__outline.label_chip.active .svg--icon, .label-danger__outline.label_chip.active .svg--icon__24vb, .label-danger__outline.label_chip:active .svg--icon, .label-danger__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #D9534F;
-  --svg-icon-stroke_readonly: #D9534F;
-  --svg-icon-fill_blue_readonly: #D9534F;
-  --svg-icon-stroke_blue_readonly: #D9534F;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-success {
@@ -11137,36 +11065,21 @@ input[type=button].btn-block {
   --label_bgc: #69C26A;
   --label_borderColor: #69C26A;
   --svg-valute-fill: #ffffff;
+  --labelChip_borderColor: #467B46;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #467B46;
+  --labelChipHover_borderColor: #467B46;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-success .svg--icon, .label-success .svg--icon__24vb {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-}
-.label-success.label_chip {
-  --label_borderColor: #467B46;
-}
-.label-success.label_chip:hover, .label-success.label_chip.active, .label-success.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #467B46);
-  --label_borderColor: #467B46;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #ffffff;
-  --label_bgc_readonly: #69C26A;
-  --label_borderColor_readonly: #69C26A;
-  --svg-valute-fill_readonly: #ffffff;
-}
-.label-success.label_chip:hover .svg--icon, .label-success.label_chip:hover .svg--icon__24vb, .label-success.label_chip.active .svg--icon, .label-success.label_chip.active .svg--icon__24vb, .label-success.label_chip:active .svg--icon, .label-success.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #ffffff;
-  --svg-icon-stroke_readonly: #ffffff;
-  --svg-icon-fill_blue_readonly: #ffffff;
-  --svg-icon-stroke_blue_readonly: #ffffff;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-success__outline {
@@ -11174,33 +11087,20 @@ input[type=button].btn-block {
   --label_borderColor: #69C26A;
   --label_bgc: #00000000;
   --svg-valute-fill: #69C26A;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #467B46;
+  --labelChipHover_bgc: #467B46;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-success__outline .svg--icon, .label-success__outline .svg--icon__24vb {
   --svg-icon-fill: #69C26A;
   --svg-icon-stroke: #69C26A;
   --svg-icon-fill_blue: #69C26A;
   --svg-icon-stroke_blue: #69C26A;
-}
-.label-success__outline.label_chip:hover, .label-success__outline.label_chip.active, .label-success__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #467B46;
-  --label_bgc: #467B46;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #69C26A;
-  --label_borderColor_readonly: #69C26A;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #69C26A;
-}
-.label-success__outline.label_chip:hover .svg--icon, .label-success__outline.label_chip:hover .svg--icon__24vb, .label-success__outline.label_chip.active .svg--icon, .label-success__outline.label_chip.active .svg--icon__24vb, .label-success__outline.label_chip:active .svg--icon, .label-success__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #69C26A;
-  --svg-icon-stroke_readonly: #69C26A;
-  --svg-icon-fill_blue_readonly: #69C26A;
-  --svg-icon-stroke_blue_readonly: #69C26A;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-warning {
@@ -11208,36 +11108,21 @@ input[type=button].btn-block {
   --label_bgc: #FFBD41;
   --label_borderColor: #FFBD41;
   --svg-valute-fill: #333333;
+  --labelChip_borderColor: #B56C00;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #B56C00;
+  --labelChipHover_borderColor: #B56C00;
+  --labelChipHover_svg-valute-fill: #333333;
 }
 .label-warning .svg--icon, .label-warning .svg--icon__24vb {
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-}
-.label-warning.label_chip {
-  --label_borderColor: #B56C00;
-}
-.label-warning.label_chip:hover, .label-warning.label_chip.active, .label-warning.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #B56C00);
-  --label_borderColor: #B56C00;
-  --svg-valute-fill: #333333;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #333333;
-  --label_bgc_readonly: #FFBD41;
-  --label_borderColor_readonly: #FFBD41;
-  --svg-valute-fill_readonly: #333333;
-}
-.label-warning.label_chip:hover .svg--icon, .label-warning.label_chip:hover .svg--icon__24vb, .label-warning.label_chip.active .svg--icon, .label-warning.label_chip.active .svg--icon__24vb, .label-warning.label_chip:active .svg--icon, .label-warning.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #333333;
-  --svg-icon-stroke_readonly: #333333;
-  --svg-icon-fill_blue_readonly: #333333;
-  --svg-icon-stroke_blue_readonly: #333333;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-warning__outline {
@@ -11245,33 +11130,20 @@ input[type=button].btn-block {
   --label_borderColor: #FFBD41;
   --label_bgc: #00000000;
   --svg-valute-fill: #FFBD41;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #B56C00;
+  --labelChipHover_bgc: #B56C00;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-warning__outline .svg--icon, .label-warning__outline .svg--icon__24vb {
   --svg-icon-fill: #FFBD41;
   --svg-icon-stroke: #FFBD41;
   --svg-icon-fill_blue: #FFBD41;
   --svg-icon-stroke_blue: #FFBD41;
-}
-.label-warning__outline.label_chip:hover, .label-warning__outline.label_chip.active, .label-warning__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #B56C00;
-  --label_bgc: #B56C00;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #FFBD41;
-  --label_borderColor_readonly: #FFBD41;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #FFBD41;
-}
-.label-warning__outline.label_chip:hover .svg--icon, .label-warning__outline.label_chip:hover .svg--icon__24vb, .label-warning__outline.label_chip.active .svg--icon, .label-warning__outline.label_chip.active .svg--icon__24vb, .label-warning__outline.label_chip:active .svg--icon, .label-warning__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #FFBD41;
-  --svg-icon-stroke_readonly: #FFBD41;
-  --svg-icon-fill_blue_readonly: #FFBD41;
-  --svg-icon-stroke_blue_readonly: #FFBD41;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-info {
@@ -11279,36 +11151,21 @@ input[type=button].btn-block {
   --label_bgc: #E4EEF7;
   --label_borderColor: #E4EEF7;
   --svg-valute-fill: #4A8DC6;
+  --labelChip_borderColor: #B6D1E8;
+  --labelChipHover_color: #4A8DC6;
+  --labelChipHover_bgc: #B6D1E8;
+  --labelChipHover_borderColor: #B6D1E8;
+  --labelChipHover_svg-valute-fill: #4A8DC6;
 }
 .label-info .svg--icon, .label-info .svg--icon__24vb {
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
-}
-.label-info.label_chip {
-  --label_borderColor: #B6D1E8;
-}
-.label-info.label_chip:hover, .label-info.label_chip.active, .label-info.label_chip:active {
-  --label_color: #4A8DC6;
-  --label_bgc: var(--label-readonly_bgc, #B6D1E8);
-  --label_borderColor: #B6D1E8;
-  --svg-valute-fill: #4A8DC6;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #4A8DC6;
-  --label_bgc_readonly: #E4EEF7;
-  --label_borderColor_readonly: #E4EEF7;
-  --svg-valute-fill_readonly: #4A8DC6;
-}
-.label-info.label_chip:hover .svg--icon, .label-info.label_chip:hover .svg--icon__24vb, .label-info.label_chip.active .svg--icon, .label-info.label_chip.active .svg--icon__24vb, .label-info.label_chip:active .svg--icon, .label-info.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #4A8DC6;
-  --svg-icon-stroke: #4A8DC6;
-  --svg-icon-fill_blue: #4A8DC6;
-  --svg-icon-stroke_blue: #4A8DC6;
-  --svg-icon-fill_readonly: #4A8DC6;
-  --svg-icon-stroke_readonly: #4A8DC6;
-  --svg-icon-fill_blue_readonly: #4A8DC6;
-  --svg-icon-stroke_blue_readonly: #4A8DC6;
+  --labelChipHover_svg-icon-fill: #4A8DC6;
+  --labelChipHover_svg-icon-stroke: #4A8DC6;
+  --labelChipHover_svg-icon-fill_blue: #4A8DC6;
+  --labelChipHover_svg-icon-stroke_blue: #4A8DC6;
 }
 
 .label-info__outline {
@@ -11316,33 +11173,20 @@ input[type=button].btn-block {
   --label_borderColor: #B6D1E8;
   --label_bgc: #00000000;
   --svg-valute-fill: #4A8DC6;
+  --labelChipHover_color: #4A8DC6;
+  --labelChipHover_borderColor: #B6D1E8;
+  --labelChipHover_bgc: #E4EEF7;
+  --labelChipHover_svg-valute-fill: #4A8DC6;
 }
 .label-info__outline .svg--icon, .label-info__outline .svg--icon__24vb {
   --svg-icon-fill: #4A8DC6;
   --svg-icon-stroke: #4A8DC6;
   --svg-icon-fill_blue: #4A8DC6;
   --svg-icon-stroke_blue: #4A8DC6;
-}
-.label-info__outline.label_chip:hover, .label-info__outline.label_chip.active, .label-info__outline.label_chip:active {
-  --label_color: #4A8DC6;
-  --label_borderColor: #B6D1E8;
-  --label_bgc: #E4EEF7;
-  --svg-valute-fill: #4A8DC6;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #4A8DC6;
-  --label_borderColor_readonly: #B6D1E8;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #4A8DC6;
-}
-.label-info__outline.label_chip:hover .svg--icon, .label-info__outline.label_chip:hover .svg--icon__24vb, .label-info__outline.label_chip.active .svg--icon, .label-info__outline.label_chip.active .svg--icon__24vb, .label-info__outline.label_chip:active .svg--icon, .label-info__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #4A8DC6;
-  --svg-icon-stroke: #4A8DC6;
-  --svg-icon-fill_blue: #4A8DC6;
-  --svg-icon-stroke_blue: #4A8DC6;
-  --svg-icon-fill_readonly: #4A8DC6;
-  --svg-icon-stroke_readonly: #4A8DC6;
-  --svg-icon-fill_blue_readonly: #4A8DC6;
-  --svg-icon-stroke_blue_readonly: #4A8DC6;
+  --labelChipHover_svg-icon-fill: #4A8DC6;
+  --labelChipHover_svg-icon-stroke: #4A8DC6;
+  --labelChipHover_svg-icon-fill_blue: #4A8DC6;
+  --labelChipHover_svg-icon-stroke_blue: #4A8DC6;
 }
 
 .label-yellow {
@@ -11350,36 +11194,21 @@ input[type=button].btn-block {
   --label_bgc: #FFDA7D;
   --label_borderColor: #FFDA7D;
   --svg-valute-fill: #333333;
+  --labelChip_borderColor: #FFBD41;
+  --labelChipHover_color: #333333;
+  --labelChipHover_bgc: #FFBD41;
+  --labelChipHover_borderColor: #FFBD41;
+  --labelChipHover_svg-valute-fill: #333333;
 }
 .label-yellow .svg--icon, .label-yellow .svg--icon__24vb {
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-}
-.label-yellow.label_chip {
-  --label_borderColor: #FFBD41;
-}
-.label-yellow.label_chip:hover, .label-yellow.label_chip.active, .label-yellow.label_chip:active {
-  --label_color: #333333;
-  --label_bgc: var(--label-readonly_bgc, #FFBD41);
-  --label_borderColor: #FFBD41;
-  --svg-valute-fill: #333333;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #333333;
-  --label_bgc_readonly: #FFDA7D;
-  --label_borderColor_readonly: #FFDA7D;
-  --svg-valute-fill_readonly: #333333;
-}
-.label-yellow.label_chip:hover .svg--icon, .label-yellow.label_chip:hover .svg--icon__24vb, .label-yellow.label_chip.active .svg--icon, .label-yellow.label_chip.active .svg--icon__24vb, .label-yellow.label_chip:active .svg--icon, .label-yellow.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #333333;
-  --svg-icon-stroke: #333333;
-  --svg-icon-fill_blue: #333333;
-  --svg-icon-stroke_blue: #333333;
-  --svg-icon-fill_readonly: #333333;
-  --svg-icon-stroke_readonly: #333333;
-  --svg-icon-fill_blue_readonly: #333333;
-  --svg-icon-stroke_blue_readonly: #333333;
+  --labelChipHover_svg-icon-fill: #333333;
+  --labelChipHover_svg-icon-stroke: #333333;
+  --labelChipHover_svg-icon-fill_blue: #333333;
+  --labelChipHover_svg-icon-stroke_blue: #333333;
 }
 
 .label-yellow__outline {
@@ -11387,33 +11216,20 @@ input[type=button].btn-block {
   --label_borderColor: #FFDA7D;
   --label_bgc: #00000000;
   --svg-valute-fill: #FFDA7D;
+  --labelChipHover_color: #333333;
+  --labelChipHover_borderColor: #FFBD41;
+  --labelChipHover_bgc: #FFBD41;
+  --labelChipHover_svg-valute-fill: #333333;
 }
 .label-yellow__outline .svg--icon, .label-yellow__outline .svg--icon__24vb {
   --svg-icon-fill: #FFDA7D;
   --svg-icon-stroke: #FFDA7D;
   --svg-icon-fill_blue: #FFDA7D;
   --svg-icon-stroke_blue: #FFDA7D;
-}
-.label-yellow__outline.label_chip:hover, .label-yellow__outline.label_chip.active, .label-yellow__outline.label_chip:active {
-  --label_color: #333333;
-  --label_borderColor: #FFBD41;
-  --label_bgc: #FFBD41;
-  --svg-valute-fill: #333333;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #FFDA7D;
-  --label_borderColor_readonly: #FFDA7D;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #FFDA7D;
-}
-.label-yellow__outline.label_chip:hover .svg--icon, .label-yellow__outline.label_chip:hover .svg--icon__24vb, .label-yellow__outline.label_chip.active .svg--icon, .label-yellow__outline.label_chip.active .svg--icon__24vb, .label-yellow__outline.label_chip:active .svg--icon, .label-yellow__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #333333;
-  --svg-icon-stroke: #333333;
-  --svg-icon-fill_blue: #333333;
-  --svg-icon-stroke_blue: #333333;
-  --svg-icon-fill_readonly: #FFDA7D;
-  --svg-icon-stroke_readonly: #FFDA7D;
-  --svg-icon-fill_blue_readonly: #FFDA7D;
-  --svg-icon-stroke_blue_readonly: #FFDA7D;
+  --labelChipHover_svg-icon-fill: #333333;
+  --labelChipHover_svg-icon-stroke: #333333;
+  --labelChipHover_svg-icon-fill_blue: #333333;
+  --labelChipHover_svg-icon-stroke_blue: #333333;
 }
 
 .label-black {
@@ -11421,36 +11237,21 @@ input[type=button].btn-block {
   --label_bgc: #000000;
   --label_borderColor: #000000;
   --svg-valute-fill: #ffffff;
+  --labelChip_borderColor: #000000;
+  --labelChipHover_color: #000000;
+  --labelChipHover_bgc: #ffffff;
+  --labelChipHover_borderColor: #000000;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-black .svg--icon, .label-black .svg--icon__24vb {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-}
-.label-black.label_chip {
-  --label_borderColor: #000000;
-}
-.label-black.label_chip:hover, .label-black.label_chip.active, .label-black.label_chip:active {
-  --label_color: #000000;
-  --label_bgc: var(--label-readonly_bgc, #ffffff);
-  --label_borderColor: #000000;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #ffffff;
-  --label_bgc_readonly: #000000;
-  --label_borderColor_readonly: #000000;
-  --svg-valute-fill_readonly: #ffffff;
-}
-.label-black.label_chip:hover .svg--icon, .label-black.label_chip:hover .svg--icon__24vb, .label-black.label_chip.active .svg--icon, .label-black.label_chip.active .svg--icon__24vb, .label-black.label_chip:active .svg--icon, .label-black.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #000000;
-  --svg-icon-stroke: #000000;
-  --svg-icon-fill_blue: #000000;
-  --svg-icon-stroke_blue: #000000;
-  --svg-icon-fill_readonly: #ffffff;
-  --svg-icon-stroke_readonly: #ffffff;
-  --svg-icon-fill_blue_readonly: #ffffff;
-  --svg-icon-stroke_blue_readonly: #ffffff;
+  --labelChipHover_svg-icon-fill: #000000;
+  --labelChipHover_svg-icon-stroke: #000000;
+  --labelChipHover_svg-icon-fill_blue: #000000;
+  --labelChipHover_svg-icon-stroke_blue: #000000;
 }
 
 .label-black__outline {
@@ -11458,33 +11259,20 @@ input[type=button].btn-block {
   --label_borderColor: #000000;
   --label_bgc: #00000000;
   --svg-valute-fill: #000000;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #000000;
+  --labelChipHover_bgc: #000000;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-black__outline .svg--icon, .label-black__outline .svg--icon__24vb {
   --svg-icon-fill: #000000;
   --svg-icon-stroke: #000000;
   --svg-icon-fill_blue: #000000;
   --svg-icon-stroke_blue: #000000;
-}
-.label-black__outline.label_chip:hover, .label-black__outline.label_chip.active, .label-black__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #000000;
-  --label_bgc: #000000;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #000000;
-  --label_borderColor_readonly: #000000;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #000000;
-}
-.label-black__outline.label_chip:hover .svg--icon, .label-black__outline.label_chip:hover .svg--icon__24vb, .label-black__outline.label_chip.active .svg--icon, .label-black__outline.label_chip.active .svg--icon__24vb, .label-black__outline.label_chip:active .svg--icon, .label-black__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #000000;
-  --svg-icon-stroke_readonly: #000000;
-  --svg-icon-fill_blue_readonly: #000000;
-  --svg-icon-stroke_blue_readonly: #000000;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-dark-grey {
@@ -11492,36 +11280,21 @@ input[type=button].btn-block {
   --label_bgc: #333333;
   --label_borderColor: #333333;
   --svg-valute-fill: #ffffff;
+  --labelChip_borderColor: #000000;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #000000;
+  --labelChipHover_borderColor: #000000;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-dark-grey .svg--icon, .label-dark-grey .svg--icon__24vb {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-}
-.label-dark-grey.label_chip {
-  --label_borderColor: #000000;
-}
-.label-dark-grey.label_chip:hover, .label-dark-grey.label_chip.active, .label-dark-grey.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #000000);
-  --label_borderColor: #000000;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #ffffff;
-  --label_bgc_readonly: #333333;
-  --label_borderColor_readonly: #333333;
-  --svg-valute-fill_readonly: #ffffff;
-}
-.label-dark-grey.label_chip:hover .svg--icon, .label-dark-grey.label_chip:hover .svg--icon__24vb, .label-dark-grey.label_chip.active .svg--icon, .label-dark-grey.label_chip.active .svg--icon__24vb, .label-dark-grey.label_chip:active .svg--icon, .label-dark-grey.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #ffffff;
-  --svg-icon-stroke_readonly: #ffffff;
-  --svg-icon-fill_blue_readonly: #ffffff;
-  --svg-icon-stroke_blue_readonly: #ffffff;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-dark-grey__outline {
@@ -11529,33 +11302,20 @@ input[type=button].btn-block {
   --label_borderColor: #333333;
   --label_bgc: #00000000;
   --svg-valute-fill: #333333;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #000000;
+  --labelChipHover_bgc: #000000;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-dark-grey__outline .svg--icon, .label-dark-grey__outline .svg--icon__24vb {
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-}
-.label-dark-grey__outline.label_chip:hover, .label-dark-grey__outline.label_chip.active, .label-dark-grey__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #000000;
-  --label_bgc: #000000;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #333333;
-  --label_borderColor_readonly: #333333;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #333333;
-}
-.label-dark-grey__outline.label_chip:hover .svg--icon, .label-dark-grey__outline.label_chip:hover .svg--icon__24vb, .label-dark-grey__outline.label_chip.active .svg--icon, .label-dark-grey__outline.label_chip.active .svg--icon__24vb, .label-dark-grey__outline.label_chip:active .svg--icon, .label-dark-grey__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #333333;
-  --svg-icon-stroke_readonly: #333333;
-  --svg-icon-fill_blue_readonly: #333333;
-  --svg-icon-stroke_blue_readonly: #333333;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-grey2 {
@@ -11563,36 +11323,21 @@ input[type=button].btn-block {
   --label_bgc: #dddddd;
   --label_borderColor: #dddddd;
   --svg-valute-fill: #333333;
+  --labelChip_borderColor: #777777;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #777777;
+  --labelChipHover_borderColor: #777777;
+  --labelChipHover_svg-valute-fill: #333333;
 }
 .label-grey2 .svg--icon, .label-grey2 .svg--icon__24vb {
   --svg-icon-fill: #333333;
   --svg-icon-stroke: #333333;
   --svg-icon-fill_blue: #333333;
   --svg-icon-stroke_blue: #333333;
-}
-.label-grey2.label_chip {
-  --label_borderColor: #777777;
-}
-.label-grey2.label_chip:hover, .label-grey2.label_chip.active, .label-grey2.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #777777);
-  --label_borderColor: #777777;
-  --svg-valute-fill: #333333;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #333333;
-  --label_bgc_readonly: #dddddd;
-  --label_borderColor_readonly: #dddddd;
-  --svg-valute-fill_readonly: #333333;
-}
-.label-grey2.label_chip:hover .svg--icon, .label-grey2.label_chip:hover .svg--icon__24vb, .label-grey2.label_chip.active .svg--icon, .label-grey2.label_chip.active .svg--icon__24vb, .label-grey2.label_chip:active .svg--icon, .label-grey2.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #333333;
-  --svg-icon-stroke_readonly: #333333;
-  --svg-icon-fill_blue_readonly: #333333;
-  --svg-icon-stroke_blue_readonly: #333333;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-grey2__outline {
@@ -11600,33 +11345,20 @@ input[type=button].btn-block {
   --label_borderColor: #dddddd;
   --label_bgc: #00000000;
   --svg-valute-fill: #dddddd;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #777777;
+  --labelChipHover_bgc: #777777;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-grey2__outline .svg--icon, .label-grey2__outline .svg--icon__24vb {
   --svg-icon-fill: #dddddd;
   --svg-icon-stroke: #dddddd;
   --svg-icon-fill_blue: #dddddd;
   --svg-icon-stroke_blue: #dddddd;
-}
-.label-grey2__outline.label_chip:hover, .label-grey2__outline.label_chip.active, .label-grey2__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #777777;
-  --label_bgc: #777777;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #dddddd;
-  --label_borderColor_readonly: #dddddd;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #dddddd;
-}
-.label-grey2__outline.label_chip:hover .svg--icon, .label-grey2__outline.label_chip:hover .svg--icon__24vb, .label-grey2__outline.label_chip.active .svg--icon, .label-grey2__outline.label_chip.active .svg--icon__24vb, .label-grey2__outline.label_chip:active .svg--icon, .label-grey2__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #dddddd;
-  --svg-icon-stroke_readonly: #dddddd;
-  --svg-icon-fill_blue_readonly: #dddddd;
-  --svg-icon-stroke_blue_readonly: #dddddd;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-vibrant-blue {
@@ -11634,36 +11366,21 @@ input[type=button].btn-block {
   --label_bgc: #0094FF;
   --label_borderColor: #0094FF;
   --svg-valute-fill: #ffffff;
+  --labelChip_borderColor: #4A8DC6;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #4A8DC6;
+  --labelChipHover_borderColor: #4A8DC6;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-vibrant-blue .svg--icon, .label-vibrant-blue .svg--icon__24vb {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-}
-.label-vibrant-blue.label_chip {
-  --label_borderColor: #4A8DC6;
-}
-.label-vibrant-blue.label_chip:hover, .label-vibrant-blue.label_chip.active, .label-vibrant-blue.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #4A8DC6);
-  --label_borderColor: #4A8DC6;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #ffffff;
-  --label_bgc_readonly: #0094FF;
-  --label_borderColor_readonly: #0094FF;
-  --svg-valute-fill_readonly: #ffffff;
-}
-.label-vibrant-blue.label_chip:hover .svg--icon, .label-vibrant-blue.label_chip:hover .svg--icon__24vb, .label-vibrant-blue.label_chip.active .svg--icon, .label-vibrant-blue.label_chip.active .svg--icon__24vb, .label-vibrant-blue.label_chip:active .svg--icon, .label-vibrant-blue.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #ffffff;
-  --svg-icon-stroke_readonly: #ffffff;
-  --svg-icon-fill_blue_readonly: #ffffff;
-  --svg-icon-stroke_blue_readonly: #ffffff;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-vibrant-blue__outline {
@@ -11671,33 +11388,20 @@ input[type=button].btn-block {
   --label_borderColor: #0094FF;
   --label_bgc: #00000000;
   --svg-valute-fill: #0094FF;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #4A8DC6;
+  --labelChipHover_bgc: #4A8DC6;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-vibrant-blue__outline .svg--icon, .label-vibrant-blue__outline .svg--icon__24vb {
   --svg-icon-fill: #0094FF;
   --svg-icon-stroke: #0094FF;
   --svg-icon-fill_blue: #0094FF;
   --svg-icon-stroke_blue: #0094FF;
-}
-.label-vibrant-blue__outline.label_chip:hover, .label-vibrant-blue__outline.label_chip.active, .label-vibrant-blue__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #4A8DC6;
-  --label_bgc: #4A8DC6;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #0094FF;
-  --label_borderColor_readonly: #0094FF;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #0094FF;
-}
-.label-vibrant-blue__outline.label_chip:hover .svg--icon, .label-vibrant-blue__outline.label_chip:hover .svg--icon__24vb, .label-vibrant-blue__outline.label_chip.active .svg--icon, .label-vibrant-blue__outline.label_chip.active .svg--icon__24vb, .label-vibrant-blue__outline.label_chip:active .svg--icon, .label-vibrant-blue__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #0094FF;
-  --svg-icon-stroke_readonly: #0094FF;
-  --svg-icon-fill_blue_readonly: #0094FF;
-  --svg-icon-stroke_blue_readonly: #0094FF;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-light-yellow2 {
@@ -11705,36 +11409,21 @@ input[type=button].btn-block {
   --label_bgc: #FFF6DF;
   --label_borderColor: #FFF6DF;
   --svg-valute-fill: #B56C00;
+  --labelChip_borderColor: #FFDF9A;
+  --labelChipHover_color: #B56C00;
+  --labelChipHover_bgc: #FFDF9A;
+  --labelChipHover_borderColor: #FFDF9A;
+  --labelChipHover_svg-valute-fill: #B56C00;
 }
 .label-light-yellow2 .svg--icon, .label-light-yellow2 .svg--icon__24vb {
   --svg-icon-fill: #B56C00;
   --svg-icon-stroke: #B56C00;
   --svg-icon-fill_blue: #B56C00;
   --svg-icon-stroke_blue: #B56C00;
-}
-.label-light-yellow2.label_chip {
-  --label_borderColor: #FFDF9A;
-}
-.label-light-yellow2.label_chip:hover, .label-light-yellow2.label_chip.active, .label-light-yellow2.label_chip:active {
-  --label_color: #B56C00;
-  --label_bgc: var(--label-readonly_bgc, #FFDF9A);
-  --label_borderColor: #FFDF9A;
-  --svg-valute-fill: #B56C00;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #B56C00;
-  --label_bgc_readonly: #FFF6DF;
-  --label_borderColor_readonly: #FFF6DF;
-  --svg-valute-fill_readonly: #B56C00;
-}
-.label-light-yellow2.label_chip:hover .svg--icon, .label-light-yellow2.label_chip:hover .svg--icon__24vb, .label-light-yellow2.label_chip.active .svg--icon, .label-light-yellow2.label_chip.active .svg--icon__24vb, .label-light-yellow2.label_chip:active .svg--icon, .label-light-yellow2.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #B56C00;
-  --svg-icon-stroke: #B56C00;
-  --svg-icon-fill_blue: #B56C00;
-  --svg-icon-stroke_blue: #B56C00;
-  --svg-icon-fill_readonly: #B56C00;
-  --svg-icon-stroke_readonly: #B56C00;
-  --svg-icon-fill_blue_readonly: #B56C00;
-  --svg-icon-stroke_blue_readonly: #B56C00;
+  --labelChipHover_svg-icon-fill: #B56C00;
+  --labelChipHover_svg-icon-stroke: #B56C00;
+  --labelChipHover_svg-icon-fill_blue: #B56C00;
+  --labelChipHover_svg-icon-stroke_blue: #B56C00;
 }
 
 .label-light-yellow2__outline {
@@ -11742,33 +11431,20 @@ input[type=button].btn-block {
   --label_borderColor: #FFDF9A;
   --label_bgc: #00000000;
   --svg-valute-fill: #B56C00;
+  --labelChipHover_color: #B56C00;
+  --labelChipHover_borderColor: #FFDF9A;
+  --labelChipHover_bgc: #FFDF9A;
+  --labelChipHover_svg-valute-fill: #B56C00;
 }
 .label-light-yellow2__outline .svg--icon, .label-light-yellow2__outline .svg--icon__24vb {
   --svg-icon-fill: #B56C00;
   --svg-icon-stroke: #B56C00;
   --svg-icon-fill_blue: #B56C00;
   --svg-icon-stroke_blue: #B56C00;
-}
-.label-light-yellow2__outline.label_chip:hover, .label-light-yellow2__outline.label_chip.active, .label-light-yellow2__outline.label_chip:active {
-  --label_color: #B56C00;
-  --label_borderColor: #FFDF9A;
-  --label_bgc: #FFDF9A;
-  --svg-valute-fill: #B56C00;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #B56C00;
-  --label_borderColor_readonly: #FFDF9A;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #B56C00;
-}
-.label-light-yellow2__outline.label_chip:hover .svg--icon, .label-light-yellow2__outline.label_chip:hover .svg--icon__24vb, .label-light-yellow2__outline.label_chip.active .svg--icon, .label-light-yellow2__outline.label_chip.active .svg--icon__24vb, .label-light-yellow2__outline.label_chip:active .svg--icon, .label-light-yellow2__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #B56C00;
-  --svg-icon-stroke: #B56C00;
-  --svg-icon-fill_blue: #B56C00;
-  --svg-icon-stroke_blue: #B56C00;
-  --svg-icon-fill_readonly: #B56C00;
-  --svg-icon-stroke_readonly: #B56C00;
-  --svg-icon-fill_blue_readonly: #B56C00;
-  --svg-icon-stroke_blue_readonly: #B56C00;
+  --labelChipHover_svg-icon-fill: #B56C00;
+  --labelChipHover_svg-icon-stroke: #B56C00;
+  --labelChipHover_svg-icon-fill_blue: #B56C00;
+  --labelChipHover_svg-icon-stroke_blue: #B56C00;
 }
 
 .label-dark-green {
@@ -11776,36 +11452,21 @@ input[type=button].btn-block {
   --label_bgc: #467B46;
   --label_borderColor: #467B46;
   --svg-valute-fill: #ffffff;
+  --labelChip_borderColor: #333333;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #333333;
+  --labelChipHover_borderColor: #333333;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-dark-green .svg--icon, .label-dark-green .svg--icon__24vb {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-}
-.label-dark-green.label_chip {
-  --label_borderColor: #333333;
-}
-.label-dark-green.label_chip:hover, .label-dark-green.label_chip.active, .label-dark-green.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #333333);
-  --label_borderColor: #333333;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #ffffff;
-  --label_bgc_readonly: #467B46;
-  --label_borderColor_readonly: #467B46;
-  --svg-valute-fill_readonly: #ffffff;
-}
-.label-dark-green.label_chip:hover .svg--icon, .label-dark-green.label_chip:hover .svg--icon__24vb, .label-dark-green.label_chip.active .svg--icon, .label-dark-green.label_chip.active .svg--icon__24vb, .label-dark-green.label_chip:active .svg--icon, .label-dark-green.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #ffffff;
-  --svg-icon-stroke_readonly: #ffffff;
-  --svg-icon-fill_blue_readonly: #ffffff;
-  --svg-icon-stroke_blue_readonly: #ffffff;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-dark-green__outline {
@@ -11813,33 +11474,20 @@ input[type=button].btn-block {
   --label_borderColor: #467B46;
   --label_bgc: #00000000;
   --svg-valute-fill: #467B46;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #333333;
+  --labelChipHover_bgc: #333333;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-dark-green__outline .svg--icon, .label-dark-green__outline .svg--icon__24vb {
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
-}
-.label-dark-green__outline.label_chip:hover, .label-dark-green__outline.label_chip.active, .label-dark-green__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #333333;
-  --label_bgc: #333333;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #467B46;
-  --label_borderColor_readonly: #467B46;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #467B46;
-}
-.label-dark-green__outline.label_chip:hover .svg--icon, .label-dark-green__outline.label_chip:hover .svg--icon__24vb, .label-dark-green__outline.label_chip.active .svg--icon, .label-dark-green__outline.label_chip.active .svg--icon__24vb, .label-dark-green__outline.label_chip:active .svg--icon, .label-dark-green__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #467B46;
-  --svg-icon-stroke_readonly: #467B46;
-  --svg-icon-fill_blue_readonly: #467B46;
-  --svg-icon-stroke_blue_readonly: #467B46;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-light-green {
@@ -11847,36 +11495,21 @@ input[type=button].btn-block {
   --label_bgc: #E9F5E9;
   --label_borderColor: #E9F5E9;
   --svg-valute-fill: #467B46;
+  --labelChip_borderColor: #B4E1B5;
+  --labelChipHover_color: #467B46;
+  --labelChipHover_bgc: #B4E1B5;
+  --labelChipHover_borderColor: #B4E1B5;
+  --labelChipHover_svg-valute-fill: #467B46;
 }
 .label-light-green .svg--icon, .label-light-green .svg--icon__24vb {
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
-}
-.label-light-green.label_chip {
-  --label_borderColor: #B4E1B5;
-}
-.label-light-green.label_chip:hover, .label-light-green.label_chip.active, .label-light-green.label_chip:active {
-  --label_color: #467B46;
-  --label_bgc: var(--label-readonly_bgc, #B4E1B5);
-  --label_borderColor: #B4E1B5;
-  --svg-valute-fill: #467B46;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #467B46;
-  --label_bgc_readonly: #E9F5E9;
-  --label_borderColor_readonly: #E9F5E9;
-  --svg-valute-fill_readonly: #467B46;
-}
-.label-light-green.label_chip:hover .svg--icon, .label-light-green.label_chip:hover .svg--icon__24vb, .label-light-green.label_chip.active .svg--icon, .label-light-green.label_chip.active .svg--icon__24vb, .label-light-green.label_chip:active .svg--icon, .label-light-green.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #467B46;
-  --svg-icon-stroke: #467B46;
-  --svg-icon-fill_blue: #467B46;
-  --svg-icon-stroke_blue: #467B46;
-  --svg-icon-fill_readonly: #467B46;
-  --svg-icon-stroke_readonly: #467B46;
-  --svg-icon-fill_blue_readonly: #467B46;
-  --svg-icon-stroke_blue_readonly: #467B46;
+  --labelChipHover_svg-icon-fill: #467B46;
+  --labelChipHover_svg-icon-stroke: #467B46;
+  --labelChipHover_svg-icon-fill_blue: #467B46;
+  --labelChipHover_svg-icon-stroke_blue: #467B46;
 }
 
 .label-light-green__outline {
@@ -11884,33 +11517,20 @@ input[type=button].btn-block {
   --label_borderColor: #B4E1B5;
   --label_bgc: #00000000;
   --svg-valute-fill: #467B46;
+  --labelChipHover_color: #467B46;
+  --labelChipHover_borderColor: #B4E1B5;
+  --labelChipHover_bgc: #E9F5E9;
+  --labelChipHover_svg-valute-fill: #467B46;
 }
 .label-light-green__outline .svg--icon, .label-light-green__outline .svg--icon__24vb {
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
-}
-.label-light-green__outline.label_chip:hover, .label-light-green__outline.label_chip.active, .label-light-green__outline.label_chip:active {
-  --label_color: #467B46;
-  --label_borderColor: #B4E1B5;
-  --label_bgc: #E9F5E9;
-  --svg-valute-fill: #467B46;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #467B46;
-  --label_borderColor_readonly: #B4E1B5;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #467B46;
-}
-.label-light-green__outline.label_chip:hover .svg--icon, .label-light-green__outline.label_chip:hover .svg--icon__24vb, .label-light-green__outline.label_chip.active .svg--icon, .label-light-green__outline.label_chip.active .svg--icon__24vb, .label-light-green__outline.label_chip:active .svg--icon, .label-light-green__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #467B46;
-  --svg-icon-stroke: #467B46;
-  --svg-icon-fill_blue: #467B46;
-  --svg-icon-stroke_blue: #467B46;
-  --svg-icon-fill_readonly: #467B46;
-  --svg-icon-stroke_readonly: #467B46;
-  --svg-icon-fill_blue_readonly: #467B46;
-  --svg-icon-stroke_blue_readonly: #467B46;
+  --labelChipHover_svg-icon-fill: #467B46;
+  --labelChipHover_svg-icon-stroke: #467B46;
+  --labelChipHover_svg-icon-fill_blue: #467B46;
+  --labelChipHover_svg-icon-stroke_blue: #467B46;
 }
 
 .label-light-green2 {
@@ -11918,36 +11538,21 @@ input[type=button].btn-block {
   --label_bgc: #B4E1B5;
   --label_borderColor: #B4E1B5;
   --svg-valute-fill: #467B46;
+  --labelChip_borderColor: #467B46;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #467B46;
+  --labelChipHover_borderColor: #467B46;
+  --labelChipHover_svg-valute-fill: #467B46;
 }
 .label-light-green2 .svg--icon, .label-light-green2 .svg--icon__24vb {
   --svg-icon-fill: #467B46;
   --svg-icon-stroke: #467B46;
   --svg-icon-fill_blue: #467B46;
   --svg-icon-stroke_blue: #467B46;
-}
-.label-light-green2.label_chip {
-  --label_borderColor: #467B46;
-}
-.label-light-green2.label_chip:hover, .label-light-green2.label_chip.active, .label-light-green2.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #467B46);
-  --label_borderColor: #467B46;
-  --svg-valute-fill: #467B46;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #467B46;
-  --label_bgc_readonly: #B4E1B5;
-  --label_borderColor_readonly: #B4E1B5;
-  --svg-valute-fill_readonly: #467B46;
-}
-.label-light-green2.label_chip:hover .svg--icon, .label-light-green2.label_chip:hover .svg--icon__24vb, .label-light-green2.label_chip.active .svg--icon, .label-light-green2.label_chip.active .svg--icon__24vb, .label-light-green2.label_chip:active .svg--icon, .label-light-green2.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #467B46;
-  --svg-icon-stroke_readonly: #467B46;
-  --svg-icon-fill_blue_readonly: #467B46;
-  --svg-icon-stroke_blue_readonly: #467B46;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-light-green2__outline {
@@ -11955,33 +11560,20 @@ input[type=button].btn-block {
   --label_borderColor: #467B46;
   --label_bgc: #00000000;
   --svg-valute-fill: #B4E1B5;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #467B46;
+  --labelChipHover_bgc: #467B46;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-light-green2__outline .svg--icon, .label-light-green2__outline .svg--icon__24vb {
   --svg-icon-fill: #B4E1B5;
   --svg-icon-stroke: #B4E1B5;
   --svg-icon-fill_blue: #B4E1B5;
   --svg-icon-stroke_blue: #B4E1B5;
-}
-.label-light-green2__outline.label_chip:hover, .label-light-green2__outline.label_chip.active, .label-light-green2__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #467B46;
-  --label_bgc: #467B46;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #B4E1B5;
-  --label_borderColor_readonly: #467B46;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #B4E1B5;
-}
-.label-light-green2__outline.label_chip:hover .svg--icon, .label-light-green2__outline.label_chip:hover .svg--icon__24vb, .label-light-green2__outline.label_chip.active .svg--icon, .label-light-green2__outline.label_chip.active .svg--icon__24vb, .label-light-green2__outline.label_chip:active .svg--icon, .label-light-green2__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #B4E1B5;
-  --svg-icon-stroke_readonly: #B4E1B5;
-  --svg-icon-fill_blue_readonly: #B4E1B5;
-  --svg-icon-stroke_blue_readonly: #B4E1B5;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-light-red {
@@ -11989,36 +11581,21 @@ input[type=button].btn-block {
   --label_bgc: #FCEEEE;
   --label_borderColor: #FCEEEE;
   --svg-valute-fill: #D9534F;
+  --labelChip_borderColor: #FF9996;
+  --labelChipHover_color: #D9534F;
+  --labelChipHover_bgc: #FF9996;
+  --labelChipHover_borderColor: #FF9996;
+  --labelChipHover_svg-valute-fill: #D9534F;
 }
 .label-light-red .svg--icon, .label-light-red .svg--icon__24vb {
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
-}
-.label-light-red.label_chip {
-  --label_borderColor: #FF9996;
-}
-.label-light-red.label_chip:hover, .label-light-red.label_chip.active, .label-light-red.label_chip:active {
-  --label_color: #D9534F;
-  --label_bgc: var(--label-readonly_bgc, #FF9996);
-  --label_borderColor: #FF9996;
-  --svg-valute-fill: #D9534F;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #D9534F;
-  --label_bgc_readonly: #FCEEEE;
-  --label_borderColor_readonly: #FCEEEE;
-  --svg-valute-fill_readonly: #D9534F;
-}
-.label-light-red.label_chip:hover .svg--icon, .label-light-red.label_chip:hover .svg--icon__24vb, .label-light-red.label_chip.active .svg--icon, .label-light-red.label_chip.active .svg--icon__24vb, .label-light-red.label_chip:active .svg--icon, .label-light-red.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #D9534F;
-  --svg-icon-stroke: #D9534F;
-  --svg-icon-fill_blue: #D9534F;
-  --svg-icon-stroke_blue: #D9534F;
-  --svg-icon-fill_readonly: #D9534F;
-  --svg-icon-stroke_readonly: #D9534F;
-  --svg-icon-fill_blue_readonly: #D9534F;
-  --svg-icon-stroke_blue_readonly: #D9534F;
+  --labelChipHover_svg-icon-fill: #D9534F;
+  --labelChipHover_svg-icon-stroke: #D9534F;
+  --labelChipHover_svg-icon-fill_blue: #D9534F;
+  --labelChipHover_svg-icon-stroke_blue: #D9534F;
 }
 
 .label-light-red__outline {
@@ -12026,33 +11603,20 @@ input[type=button].btn-block {
   --label_borderColor: #FF9996;
   --label_bgc: #00000000;
   --svg-valute-fill: #D9534F;
+  --labelChipHover_color: #D9534F;
+  --labelChipHover_borderColor: #FF9996;
+  --labelChipHover_bgc: #FF9996;
+  --labelChipHover_svg-valute-fill: #D9534F;
 }
 .label-light-red__outline .svg--icon, .label-light-red__outline .svg--icon__24vb {
   --svg-icon-fill: #D9534F;
   --svg-icon-stroke: #D9534F;
   --svg-icon-fill_blue: #D9534F;
   --svg-icon-stroke_blue: #D9534F;
-}
-.label-light-red__outline.label_chip:hover, .label-light-red__outline.label_chip.active, .label-light-red__outline.label_chip:active {
-  --label_color: #D9534F;
-  --label_borderColor: #FF9996;
-  --label_bgc: #FF9996;
-  --svg-valute-fill: #D9534F;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #D9534F;
-  --label_borderColor_readonly: #FF9996;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #D9534F;
-}
-.label-light-red__outline.label_chip:hover .svg--icon, .label-light-red__outline.label_chip:hover .svg--icon__24vb, .label-light-red__outline.label_chip.active .svg--icon, .label-light-red__outline.label_chip.active .svg--icon__24vb, .label-light-red__outline.label_chip:active .svg--icon, .label-light-red__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #D9534F;
-  --svg-icon-stroke: #D9534F;
-  --svg-icon-fill_blue: #D9534F;
-  --svg-icon-stroke_blue: #D9534F;
-  --svg-icon-fill_readonly: #D9534F;
-  --svg-icon-stroke_readonly: #D9534F;
-  --svg-icon-fill_blue_readonly: #D9534F;
-  --svg-icon-stroke_blue_readonly: #D9534F;
+  --labelChipHover_svg-icon-fill: #D9534F;
+  --labelChipHover_svg-icon-stroke: #D9534F;
+  --labelChipHover_svg-icon-fill_blue: #D9534F;
+  --labelChipHover_svg-icon-stroke_blue: #D9534F;
 }
 
 .label-rose {
@@ -12060,36 +11624,21 @@ input[type=button].btn-block {
   --label_bgc: #FF9996;
   --label_borderColor: #FF9996;
   --svg-valute-fill: #ffffff;
+  --labelChip_borderColor: #D9534F;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #D9534F;
+  --labelChipHover_borderColor: #D9534F;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-rose .svg--icon, .label-rose .svg--icon__24vb {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-}
-.label-rose.label_chip {
-  --label_borderColor: #D9534F;
-}
-.label-rose.label_chip:hover, .label-rose.label_chip.active, .label-rose.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #D9534F);
-  --label_borderColor: #D9534F;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #ffffff;
-  --label_bgc_readonly: #FF9996;
-  --label_borderColor_readonly: #FF9996;
-  --svg-valute-fill_readonly: #ffffff;
-}
-.label-rose.label_chip:hover .svg--icon, .label-rose.label_chip:hover .svg--icon__24vb, .label-rose.label_chip.active .svg--icon, .label-rose.label_chip.active .svg--icon__24vb, .label-rose.label_chip:active .svg--icon, .label-rose.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #ffffff;
-  --svg-icon-stroke_readonly: #ffffff;
-  --svg-icon-fill_blue_readonly: #ffffff;
-  --svg-icon-stroke_blue_readonly: #ffffff;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-rose__outline {
@@ -12097,33 +11646,20 @@ input[type=button].btn-block {
   --label_borderColor: #FF9996;
   --label_bgc: #00000000;
   --svg-valute-fill: #FF9996;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #D9534F;
+  --labelChipHover_bgc: #D9534F;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-rose__outline .svg--icon, .label-rose__outline .svg--icon__24vb {
   --svg-icon-fill: #FF9996;
   --svg-icon-stroke: #FF9996;
   --svg-icon-fill_blue: #FF9996;
   --svg-icon-stroke_blue: #FF9996;
-}
-.label-rose__outline.label_chip:hover, .label-rose__outline.label_chip.active, .label-rose__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #D9534F;
-  --label_bgc: #D9534F;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #FF9996;
-  --label_borderColor_readonly: #FF9996;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #FF9996;
-}
-.label-rose__outline.label_chip:hover .svg--icon, .label-rose__outline.label_chip:hover .svg--icon__24vb, .label-rose__outline.label_chip.active .svg--icon, .label-rose__outline.label_chip.active .svg--icon__24vb, .label-rose__outline.label_chip:active .svg--icon, .label-rose__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #FF9996;
-  --svg-icon-stroke_readonly: #FF9996;
-  --svg-icon-fill_blue_readonly: #FF9996;
-  --svg-icon-stroke_blue_readonly: #FF9996;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-grey4 {
@@ -12131,36 +11667,21 @@ input[type=button].btn-block {
   --label_bgc: #777777;
   --label_borderColor: #777777;
   --svg-valute-fill: #ffffff;
+  --labelChip_borderColor: #333333;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_bgc: #333333;
+  --labelChipHover_borderColor: #333333;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-grey4 .svg--icon, .label-grey4 .svg--icon__24vb {
   --svg-icon-fill: #ffffff;
   --svg-icon-stroke: #ffffff;
   --svg-icon-fill_blue: #ffffff;
   --svg-icon-stroke_blue: #ffffff;
-}
-.label-grey4.label_chip {
-  --label_borderColor: #333333;
-}
-.label-grey4.label_chip:hover, .label-grey4.label_chip.active, .label-grey4.label_chip:active {
-  --label_color: #ffffff;
-  --label_bgc: var(--label-readonly_bgc, #333333);
-  --label_borderColor: #333333;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #ffffff;
-  --label_bgc_readonly: #777777;
-  --label_borderColor_readonly: #777777;
-  --svg-valute-fill_readonly: #ffffff;
-}
-.label-grey4.label_chip:hover .svg--icon, .label-grey4.label_chip:hover .svg--icon__24vb, .label-grey4.label_chip.active .svg--icon, .label-grey4.label_chip.active .svg--icon__24vb, .label-grey4.label_chip:active .svg--icon, .label-grey4.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #ffffff;
-  --svg-icon-stroke_readonly: #ffffff;
-  --svg-icon-fill_blue_readonly: #ffffff;
-  --svg-icon-stroke_blue_readonly: #ffffff;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 .label-grey4__outline {
@@ -12168,33 +11689,20 @@ input[type=button].btn-block {
   --label_borderColor: #777777;
   --label_bgc: #00000000;
   --svg-valute-fill: #777777;
+  --labelChipHover_color: #ffffff;
+  --labelChipHover_borderColor: #333333;
+  --labelChipHover_bgc: #333333;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-grey4__outline .svg--icon, .label-grey4__outline .svg--icon__24vb {
   --svg-icon-fill: #777777;
   --svg-icon-stroke: #777777;
   --svg-icon-fill_blue: #777777;
   --svg-icon-stroke_blue: #777777;
-}
-.label-grey4__outline.label_chip:hover, .label-grey4__outline.label_chip.active, .label-grey4__outline.label_chip:active {
-  --label_color: #ffffff;
-  --label_borderColor: #333333;
-  --label_bgc: #333333;
-  --svg-valute-fill: #ffffff;
-  --base-link-hoverColor: var(--label_color);
-  --label_color_readonly: #777777;
-  --label_borderColor_readonly: #777777;
-  --label_bgc_readonly: #00000000;
-  --svg-valute-fill_readonly: #777777;
-}
-.label-grey4__outline.label_chip:hover .svg--icon, .label-grey4__outline.label_chip:hover .svg--icon__24vb, .label-grey4__outline.label_chip.active .svg--icon, .label-grey4__outline.label_chip.active .svg--icon__24vb, .label-grey4__outline.label_chip:active .svg--icon, .label-grey4__outline.label_chip:active .svg--icon__24vb {
-  --svg-icon-fill: #ffffff;
-  --svg-icon-stroke: #ffffff;
-  --svg-icon-fill_blue: #ffffff;
-  --svg-icon-stroke_blue: #ffffff;
-  --svg-icon-fill_readonly: #777777;
-  --svg-icon-stroke_readonly: #777777;
-  --svg-icon-fill_blue_readonly: #777777;
-  --svg-icon-stroke_blue_readonly: #777777;
+  --labelChipHover_svg-icon-fill: #ffffff;
+  --labelChipHover_svg-icon-stroke: #ffffff;
+  --labelChipHover_svg-icon-fill_blue: #ffffff;
+  --labelChipHover_svg-icon-stroke_blue: #ffffff;
 }
 
 a.label:hover, a.label:focus {
