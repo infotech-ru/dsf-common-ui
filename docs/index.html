@@ -42,18 +42,19 @@ layout: default
 <p>- Исключить использование <code class="language-plaintext highlighter-rouge">!important</code></p>
 <p>- Для использования в скриптах использовать префикс <code class="language-plaintext highlighter-rouge">js-</code></p>
 </div>
-
+<div class="unityBlock mb-10">
 <h2>Отступы</h2>
 <h3>Переход к увеличенным отступам</h3>
 <p>Существует три варианта базовых отступов.</p> 
 <h4>Сеточные. (grid-gutter)</h4>
-<p>Cеточный (остается пока без изменений). Для соотвтествия сеточным отступам используются - .mt-gutter, .mr-gutter, .mb-gutter, .ml-gutter (для внешних отступов), .pt-gutter, .pr-gutter, .pb-gutter, .pl-gutter, .padding-gutter (для внутренних) и .gap-gutter</p>, 
-<h4>Обновлённые (base-gutter).</h4>
+<p>Cеточный (остается пока без изменений). Для соотвтествия сеточным отступам используются - .mt-gutter, .mr-gutter, .mb-gutter, .ml-gutter (для внешних отступов), .pt-gutter, .pr-gutter, .pb-gutter, .pl-gutter, .padding-gutter (для внутренних) и .gap-gutter</p>
+<h4>Обновлённые (base-gutter)</h4>
 <p>Происходит трансформация в увеличенный размер. Внешние отступы уже изменины - используется классы .mt-base, .mr-base. .mb-base, .ml-base. Для внутренних  уже измененных используются временные классы - .pt-theme, .pr-theme, .pb-theme, .pl-theme, .padding-theme и .gap-theme. Будут заменен на .base-* </p>
 <h4>Не обновленные, но подготавливаемые к переходу на увеличенные.</h4>
 <p>Старые отступы, которые сейчас соответсвуют сеточным, и будут изменяться без зависимости от сетки - .pt-base, .pr-base, .pb-base, .pl-base, .padding-base, .gap-base</p>
-<h3>Для отступов вне привзяки к сетке или изменения остаюстя фиксированные - .pl-10, mb-20...</h3>
-
+<h3>Фиксированные отступы</h3>
+<p>Для отступов вне привзяки к сетке или изменения остаюстя фиксированные - .pl-10, mb-20...</p>
+</div>
 <div class="unityBlock">
   <h2 class="mb-10">Добавленно в последней версии</h2>
   {% for post in site.posts %}
