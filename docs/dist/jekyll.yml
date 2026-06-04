@@ -471,6 +471,10 @@ gapsizes {
 }
 
 svgsizes {
+  6: 0;
+}
+
+svgsizes {
   8: 0;
 }
 

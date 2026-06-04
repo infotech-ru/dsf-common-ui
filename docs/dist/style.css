@@ -7310,6 +7310,15 @@ h6, .h6 {
   width: var(--svgIcon_width__24vb, var(--svgIcon_width, 1rem));
 }
 
+.svg--icon__6, .svg--icon__6.svg--icon {
+  --svgIcon_height: 6px;
+  --svgIcon_width: 6px;
+}
+
+.svg--icon__h6, .svg--icon__h6.svg--icon {
+  --svgIcon_height: 6px;
+}
+
 .svg--icon__8, .svg--icon__8.svg--icon {
   --svgIcon_height: 8px;
   --svgIcon_width: 8px;
