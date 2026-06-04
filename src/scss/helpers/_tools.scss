@@ -439,6 +439,12 @@
 .mobile-view .align-center__mobile          { align-items: center; }
 .align-end                                  { align-items: flex-end; }
 .mobile-view .align-end__mobile             { align-items: flex-end; }
+.align-self-start                           { align-self: flex-start; }
+.mobile-view .align-self-start__mobile      { align-self: flex-start; }
+.align-self-center                          { align-self: center; }
+.mobile-view .align-self-center__mobile     { align-self: center; }
+.align-self-end                             { align-self: flex-end; }
+.mobile-view .align-self-end__mobile        { align-self: flex-end; }
 
 .flex-wrap                                  { flex-wrap: wrap; }
 .mobile-view .flex-wrap__mobile             { flex-wrap: wrap; }
