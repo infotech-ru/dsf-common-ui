@@ -18649,19 +18649,19 @@ tbody.collapse.in {
 }
 
 .marginLeftConnect {
-  --marginLeftToolsConnect: --marginLeftTools;
+  --marginLeftToolsConnect: var(--marginLeftTools);
 }
 
 .marginRightConnect {
-  --marginRightToolsConnect: --marginRightTools;
+  --marginRightToolsConnect: var(--marginRightTools);
 }
 
 .marginTopConnect {
-  --marginTopToolsConnect: --marginTopTools;
+  --marginTopToolsConnect: var(--marginTopTools);
 }
 
 .marginBottomConnect {
-  --marginBottomToolsConnect: --marginBottomTools;
+  --marginBottomToolsConnect: var(--marginBottomTools);
 }
 
 .padding-0 {

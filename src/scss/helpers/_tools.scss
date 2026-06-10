@@ -243,19 +243,19 @@
 
 .mt-auto { 
   margin-top: auto;
-  --marginTopTools: #{auto};
+  --marginTopTools: auto;
 }
 .mr-auto { 
   margin-right: auto;
-  --marginRightTools: #{auto};
+  --marginRightTools: auto;
 }
 .mb-auto { 
   margin-bottom: auto;
-  --marginBottomTools: #{auto};
+  --marginBottomTools: auto;
 }
 .ml-auto { 
   margin-left: auto;
-  --marginLeftTools: #{auto};
+  --marginLeftTools: auto;
 }
 
 .mt-base { 
@@ -293,16 +293,16 @@
 }
 
 .marginLeftConnect {
- --marginLeftToolsConnect: #{--marginLeftTools};
+ --marginLeftToolsConnect: #{var(--marginLeftTools)};
 }
 .marginRightConnect {
- --marginRightToolsConnect: #{--marginRightTools};
+ --marginRightToolsConnect: #{var(--marginRightTools)};
 }
 .marginTopConnect {
- --marginTopToolsConnect: #{--marginTopTools};
+ --marginTopToolsConnect: #{var(--marginTopTools)};
 }
 .marginBottomConnect {
- --marginBottomToolsConnect: #{--marginBottomTools};
+ --marginBottomToolsConnect: #{var(--marginBottomTools)};
 }
 
 @each $paddingSize in sizes.$paddingSizes {
