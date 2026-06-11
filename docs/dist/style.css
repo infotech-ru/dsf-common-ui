@@ -17415,7 +17415,6 @@ body[style^=padding-right] .modal-sidebar {
   background-repeat: repeat-x;
   border-radius: var(--progress-border-radius, 0);
   display: flex;
-  margin-bottom: 10;
   height: var(--progress_height, 0.875rem);
   overflow: hidden;
   width: 100%;
@@ -17490,6 +17489,45 @@ body[style^=padding-right] .modal-sidebar {
 .progress-striped .progress-bar {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 40px 40px;
+}
+
+.progress-ring {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.progress-ring-bar {
+  --progress-ring_percent: 0;
+  --progress-ring_border: 8px;
+  --progress-ring_size: 100%;
+  --progress-ring_bg: var(--color_white);
+  --progress-ring_stroke: var(--color_grey2);
+  --progress-ring_fill: var(--color_light-blue);
+  aspect-ratio: 1/1;
+  background: conic-gradient(var(--progress-ring_fill) calc(var(--progress-ring_percent) * 1%), var(--progress-ring_stroke) 0);
+  border-radius: 50%;
+  height: var(--progress-ring_size);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--progress-ring_size);
+}
+.progress-ring-bar::before {
+  background: var(--progress-ring_bg);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  height: calc(var(--progress-ring_size) - var(--progress-ring_border) * 2);
+  width: calc(var(--progress-ring_size) - var(--progress-ring_border) * 2);
+}
+.progress-ring-label {
+  display: block;
+  font-size: 15px;
+  position: absolute;
+  text-align: center;
 }
 
 .statusCircle {

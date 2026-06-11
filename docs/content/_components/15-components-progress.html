@@ -15,7 +15,14 @@ order: 15
 <p>Или через класс-хелпер <code class="language-plaintext highlighter-rouge">bg-*</code></p>
 <p>"Зебра" - <code class="language-plaintext highlighter-rouge">progress-bar-striped</code></p>
 <p>Анимация - <code class="language-plaintext highlighter-rouge">progress-bar-animated</code></p>
-
+<h4>Прогрессбар-кольцо</h4>
+<p>Через style в progress-ring-bar могут использоваться переменные:</p>
+<p>--progress-ring_percent - прогресс заполняемой части кольца, по умолчанию 0</p>
+<p>--progress-ring_border - толщина кольца, по умолчанию 8px</p>
+<p>--progress-ring_size - размер кольца, по умолчанию 100%</p>
+<p>--progress-ring_bg - цвет внутреннего фона, по умолчанию белый</p>
+<p>--progress-ring_stroke - цвет кольца, по умолчанию grey2</p>
+<p>--progress-ring_fill - цвет заполняемой части кольца, по умолчанию light-blue</p>
   <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#progressbar" role="button" aria-expanded="false" aria-controls="progressbar">
       <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
           <svg width="24" height="24">
@@ -28,7 +35,7 @@ order: 15
       </span>
   </a>
 
-  <div class="collapse" id="progressbar">
+<div class="collapse" id="progressbar">
 {% highlight html %}
 <div class="progress" style="--progress_height: 4px;">
     <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
@@ -52,9 +59,13 @@ order: 15
     <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"><span>10%</span></div>
     <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span>40%</span></div>
 </div>
+<div class="progress-ring">
+    <div class="progress-ring-bar" style="--progress-ring_percent: 75"></div>
+    <div class="progress-ring-label" role="progressbar">Текст</div>
+</div>
 {% endhighlight %}
-    </div>
-    <div class="bs-docs-example">
+</div>
+<div class="bs-docs-example">
     <div class="progress" style="--progress_height: 4px;">
         <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
     </div>
@@ -89,5 +100,9 @@ order: 15
         <div class="progress-bar progress-bar-info progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"><span>10%</span></div>
         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span>40%</span></div>
     </div>
+    <div class="progress-ring mt-20">
+        <div class="progress-ring-bar" style="--progress-ring_percent: 75"></div>
+        <div class="progress-ring-label" role="progressbar">Текст</div>
     </div>
+</div>
 </div>
