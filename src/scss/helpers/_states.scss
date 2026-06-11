@@ -89,7 +89,10 @@ tbody.collapse.in { display: table-row-group; }
     }
   }
   &.collapsed,
-  &.active{ 
+  &.active,
+  &:active:focus,
+  &.active:focus, 
+  &:focus{ 
     .svg--icon{ 
       svg{ 
         #{--limited-stroke-on}: transparent;

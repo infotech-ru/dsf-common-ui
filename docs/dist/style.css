@@ -17753,14 +17753,14 @@ tbody.collapse.in {
   --limited-fill-off: var(--svg-icon-fill_blue);
   --limited-reverse: var(--bg_color, #fff);
 }
-.iconModification.collapsed .svg--icon svg, .iconModification.active .svg--icon svg {
+.iconModification.collapsed .svg--icon svg, .iconModification.active .svg--icon svg, .iconModification:active:focus .svg--icon svg, .iconModification.active:focus .svg--icon svg, .iconModification:focus .svg--icon svg {
   --limited-stroke-on: transparent;
   --limited-fill-on: transparent;
   --limited-stroke-off: var(--svg-icon-stroke_blue);
   --limited-fill-off: var(--svg-icon-fill_blue);
   --limited-reverse: var(--bg_color, #fff);
 }
-.iconModification.collapsed .svg--icon__notIconModification svg, .iconModification.active .svg--icon__notIconModification svg {
+.iconModification.collapsed .svg--icon__notIconModification svg, .iconModification.active .svg--icon__notIconModification svg, .iconModification:active:focus .svg--icon__notIconModification svg, .iconModification.active:focus .svg--icon__notIconModification svg, .iconModification:focus .svg--icon__notIconModification svg {
   --limited-stroke-off: transparent;
   --limited-fill-off: transparent;
   --limited-stroke-on: var(--svg-icon-stroke_blue);
