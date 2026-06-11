@@ -12,3 +12,5 @@
   link: icons
 - name: Компоненты системы
   link: components
+- name: Javascript
+  link: javascript

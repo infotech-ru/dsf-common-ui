@@ -51,6 +51,8 @@ collections:
     sort_by: order
   tables:
     sort_by: order
+  javascript:
+    sort_by: order
 permalink: /:categories/:year/:month/:day/:title:output_ext
 sass:
   sass_dir: _sass

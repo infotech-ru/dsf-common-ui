@@ -4,3 +4,4 @@ export { initCopyDataAttrToClipboardBtns } from './copyTextToClipboardNotify.js'
 export { CustomFileUpload } from './CustomFileUpload.js';
 export { FormsFree } from './forms-free.js';
 export { ParseHeight } from './parseHeight.js';
+export { FullScreenMode } from './fullScreenMode.js';
