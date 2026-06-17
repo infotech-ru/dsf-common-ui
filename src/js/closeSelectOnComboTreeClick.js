@@ -1,16 +1,9 @@
-export function closeSelectOnComboTreeClick() {
-    document.addEventListener('click', function(e) {
-        const $target = $(e.target);
-        const isComboTree = $target.closest('.comboTreeWrapper, .comboTreeDropDownContainer, .comboTreeInputWrapper, .comboTreeItem, .comboTreeItemTitle').length > 0;
+/**
+ * @deprecated Этот файл будет удалён в будущих версиях.
+ * Используйте импорт из './closeOpenSelects.js' вместо этого файла.
+ * 
+ * Для обратной совместимости реэкспортируем функцию из нового модуля.
+ * Все существующие импорты продолжат работать.
+ */
 
-        if (isComboTree) {
-            // console.log('Клик внутри comboTree, закрываем select');
-            $('.bootstrap-select.open select').each(function() {
-                const $select = $(this);
-                if ($select.length) {
-                    $select.selectpicker('toggle');
-                }
-            });
-        }
-    }, true);
-}
+export { closeSelectOnComboTreeClick } from './closeOpenSelects.js';

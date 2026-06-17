@@ -1,0 +1,103 @@
+---
+Title: Закрытие Bootstrap Select при клике
+menutitle: Закрытие Bootstrap Select
+menusubtitle: js
+menusubtitleclass: label label-yellow
+category: javascript
+anchor: js-closeOpenSelects
+order: 03
+---
+<div class="unityBlock">
+<p>Утилита для автоматического закрытия всех открытых выпадающих списков `bootstrap-select` при клике на определённые элементы DOM (например, на компонент ComboTree, меню, кнопки и т.п.).</p>
+
+<p>Обработчик устанавливается на фазу захвата (true), что позволяет перехватывать событие до его всплытия и гарантирует закрытие даже в случаях, когда другие обработчики останавливают всплытие.</p>
+<p>Если на странице одновременно открыто несколько bootstrap-select, все они будут закрыты.</p>
+<p>Функция не проверяет, открыт ли конкретный селект – метод toggle переключит состояние, поэтому открытые закроются, а закрытые откроются.</p>
+<p>Для предотвращения закрытия при клике на сам bootstrap-select (например, на его кнопку) необходимо исключить его из контекстов или использовать предикат.</p>
+
+<h3>Зависимости</h3>
+<p>- <b>jQuery</b> (любая версия, совместимая с `bootstrap-select`)</p>
+<p>- <b>bootstrap-select</b> (плагин, предоставляющий метод `selectpicker('toggle')`)</p>
+
+{% highlight html %}
+import { closeOpenSelects, setupCloseSelectOnClick, closeSelectOnComboTreeClick } from './closeOpenSelects';
+{% endhighlight %}
+
+<h3>API</h3>
+<h4><code class="language-plaintext highlighter-rouge">closeOpenSelects()</code></h4>
+<p>Закрывает все открытые в данный момент bootstrap-select на странице.</p>
+<p>Параметры: нет</p>
+<p>Возвращает: undefined</p>
+<p>Используется внутри обработчиков, но может вызываться и явно, например, в колбэках.</p>
+
+<h4>setupCloseSelectOnClick(selectors)</h4>
+<p>Добавляет глобальный обработчик события click (на фазе захвата), который проверяет, произошёл ли клик на одном из указанных контекстов, и если да – закрывает все открытые selectpicker.</p>
+
+<p><strong>Параметры:</strong></p>
+
+<code class="language-plaintext highlighter-rouge">selectors</code> (строка | массив строк | функция) – определяет контексты, при клике на которые будет выполняться закрытие:
+<ul>
+    <li>Строка – CSS-селектор, элементы, соответствующие селектору, считаются контекстами.</li>
+    <li>Массив строк – несколько CSS-селекторов.</li>
+    <li>Функция – предикат, принимающий два аргумента: $target (jQuery-объект цели клика) и event (нативное событие). Должен возвращать true, если закрытие необходимо.</li>
+</ul>
+<p>Возвращает: undefined</p>
+{% highlight html %}
+// Закрывать при клике на элементы с классами .comboTreeWrapper, .menu-item и .js-edit-tags
+setupCloseSelectOnClick(['.comboTreeWrapper', '.menu-item', '.js-edit-tags']);
+
+// Закрывать при клике на любой элемент внутри #sidebar (кроме самого select)
+setupCloseSelectOnClick('#sidebar');
+
+// Сложная логика: закрывать, если клик не внутри .keep-open и не на самом select
+setupCloseSelectOnClick(function($target, event) {
+    return !$target.closest('.keep-open, .bootstrap-select').length;
+});
+{% endhighlight %}
+
+<h4><code class="language-plaintext highlighter-rouge">closeSelectOnComboTreeClick()</code></h4>
+<p>Готовый обработчик для закрытия при клике на элементы comboTree. Это частный случай setupCloseSelectOnClick, предоставленный для обратной совместимости.</p>
+{% highlight html %}
+[
+    '.comboTreeWrapper',
+    '.comboTreeDropDownContainer',
+    '.comboTreeInputWrapper',
+    '.comboTreeItem',
+    '.comboTreeItemTitle'
+]
+{% endhighlight %}
+<p>Параметры: нет</p>
+<p>Возвращает: undefined</p>
+
+<h3>Примеры использования</h3>
+<p>Замена встроенного кода в модальном окне</p>
+{% highlight html %}
+bodySelector.on("click", ".js-edit-tags", function () {
+    $(this).ModalForm("show", {
+        beforeSubmit: function(){
+            closeOpenSelects(); // вместо старого кода
+        },
+    });
+    return false;
+});
+{% endhighlight %}
+<p>Закрытие при клике на пункты меню</p>
+{% highlight html %}
+setupCloseSelectOnClick('.navbar-nav .dropdown-item');
+{% endhighlight %}
+<p>Комбинирование нескольких контекстов</p>
+{% highlight html %}
+setupCloseSelectOnClick([
+    '.comboTreeWrapper',
+    '.sidebar .menu-item',
+    '#some-button',
+    '.modal-footer .btn'
+]);
+{% endhighlight %}
+<p>Использование предиката для динамического определения. Закрывать только при клике вне определённого блока:</p>
+{% highlight html %}
+setupCloseSelectOnClick(function($target) {
+    return $target.closest('.no-close-area').length === 0;
+});
+{% endhighlight %}
+</div>
