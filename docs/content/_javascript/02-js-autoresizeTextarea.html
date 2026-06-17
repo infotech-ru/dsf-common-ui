@@ -22,17 +22,19 @@ order: 02
         <li>Для корректного определения новой высоты скрипт сначала сбрасывает высоту элемента до 28px, а затем считывает scrollHeight. Это необходимо, чтобы высота уменьшалась при удалении текста. Значение 28px используется как базовое для сброса (обычно соответствует высоте одной строки с учетом padding и border в вашей CSS-сетке)</li>
     </ul>
 
-    {% highlight html %}
-    import { AutoresizeTextarea } from './path/to/autoresize-textarea';
-    // Базовая инициализация для всех textarea с классом .js-formControl__resize на странице
-    AutoresizeTextarea();
-    // Или с настройками
-    AutoresizeTextarea({
+{% highlight js %}
+import { AutoresizeTextarea } from './path/to/autoresize-textarea';
+
+// Базовая инициализация для всех textarea с классом .js-formControl__resize на странице
+AutoresizeTextarea();
+
+// Или с настройками
+AutoresizeTextarea({
     selector: '.my-custom-textarea',
     context: '#modal-window',
     maxHeight: 200
-    });
-    {% endhighlight %}
+});
+{% endhighlight %}
     <table class="table table__border">
         <thead>
             <tr>
@@ -121,3 +123,4 @@ order: 02
             </tr>
         </tbody>
     </table>
+</div>

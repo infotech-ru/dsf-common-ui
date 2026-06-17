@@ -19,7 +19,7 @@ order: 03
 <p>- <b>jQuery</b> (любая версия, совместимая с `bootstrap-select`)</p>
 <p>- <b>bootstrap-select</b> (плагин, предоставляющий метод `selectpicker('toggle')`)</p>
 
-{% highlight html %}
+{% highlight js %}
 import { closeOpenSelects, setupCloseSelectOnClick, closeSelectOnComboTreeClick } from './closeOpenSelects';
 {% endhighlight %}
 
@@ -42,7 +42,7 @@ import { closeOpenSelects, setupCloseSelectOnClick, closeSelectOnComboTreeClick 
     <li>Функция – предикат, принимающий два аргумента: $target (jQuery-объект цели клика) и event (нативное событие). Должен возвращать true, если закрытие необходимо.</li>
 </ul>
 <p>Возвращает: undefined</p>
-{% highlight html %}
+{% highlight js %}
 // Закрывать при клике на элементы с классами .comboTreeWrapper, .menu-item и .js-edit-tags
 setupCloseSelectOnClick(['.comboTreeWrapper', '.menu-item', '.js-edit-tags']);
 
@@ -57,7 +57,7 @@ setupCloseSelectOnClick(function($target, event) {
 
 <h4><code class="language-plaintext highlighter-rouge">closeSelectOnComboTreeClick()</code></h4>
 <p>Готовый обработчик для закрытия при клике на элементы comboTree. Это частный случай setupCloseSelectOnClick, предоставленный для обратной совместимости.</p>
-{% highlight html %}
+{% highlight js %}
 [
     '.comboTreeWrapper',
     '.comboTreeDropDownContainer',
@@ -71,7 +71,7 @@ setupCloseSelectOnClick(function($target, event) {
 
 <h3>Примеры использования</h3>
 <p>Замена встроенного кода в модальном окне</p>
-{% highlight html %}
+{% highlight js %}
 bodySelector.on("click", ".js-edit-tags", function () {
     $(this).ModalForm("show", {
         beforeSubmit: function(){
@@ -82,11 +82,11 @@ bodySelector.on("click", ".js-edit-tags", function () {
 });
 {% endhighlight %}
 <p>Закрытие при клике на пункты меню</p>
-{% highlight html %}
+{% highlight js %}
 setupCloseSelectOnClick('.navbar-nav .dropdown-item');
 {% endhighlight %}
 <p>Комбинирование нескольких контекстов</p>
-{% highlight html %}
+{% highlight js %}
 setupCloseSelectOnClick([
     '.comboTreeWrapper',
     '.sidebar .menu-item',
@@ -95,7 +95,7 @@ setupCloseSelectOnClick([
 ]);
 {% endhighlight %}
 <p>Использование предиката для динамического определения. Закрывать только при клике вне определённого блока:</p>
-{% highlight html %}
+{% highlight js %}
 setupCloseSelectOnClick(function($target) {
     return $target.closest('.no-close-area').length === 0;
 });

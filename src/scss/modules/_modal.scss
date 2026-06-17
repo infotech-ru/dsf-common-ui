@@ -98,8 +98,6 @@
     // &.in { opacity: .5; }
 }
 
-// Modal header
-// Top section of the modal w/ title and dismiss
 .modal-header {
     align-items: center;
     // background-color: rgba(0, 0, 0, 0.03);
@@ -135,14 +133,11 @@
 
 // Close icon
 
-// Title text within header
 .modal-title {
     // line-height: $modal-title-line-height;
     margin: 0;
 }
 
-// Modal body
-// Where all modal content resides (sibling of .modal-header and .modal-footer)
 .modal-body {
     position: relative;
     padding: #{val.modalSizes(modal_paddingY)}px #{val.modalSizes(modal_paddingX)}px;
