@@ -18,7 +18,7 @@ export function ParseHeight(containerSelector = ".js-target-set-height") {
 
     const containers = document.querySelectorAll(containerSelector);
     if (containers.length === 0) {
-        console.log(`Нет контейнеров по селектору "${containerSelector}"`);
+        // console.log(`Нет контейнеров по селектору "${containerSelector}"`);
         return;
     }
 
@@ -69,7 +69,7 @@ export function EnableHeightWatch(containerSelector, options = {}) {
 
     // Если уже отслеживается, ничего не делаем
     if (activeWatches.has(containerSelector)) {
-        console.log(`Отслеживание для "${containerSelector}" уже активно`);
+        // console.log(`Отслеживание для "${containerSelector}" уже активно`);
         return true;
     }
 
@@ -151,7 +151,7 @@ export function DisableHeightWatch(containerSelector = null) {
 
     const watchData = activeWatches.get(containerSelector);
     if (!watchData) {
-        console.log(`Отслеживание для "${containerSelector}" не было активно`);
+        // console.log(`Отслеживание для "${containerSelector}" не было активно`);
         return;
     }
 
@@ -174,7 +174,7 @@ export function DisableHeightWatch(containerSelector = null) {
     });
 
     activeWatches.delete(containerSelector);
-    console.log(`Отслеживание для "${containerSelector}" отключено, стили стёрты`);
+    // console.log(`Отслеживание для "${containerSelector}" отключено, стили стёрты`);
 }
 
 /**

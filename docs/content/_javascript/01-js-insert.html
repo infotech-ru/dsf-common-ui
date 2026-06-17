@@ -1,0 +1,47 @@
+---
+Title: Копирование данных
+menutitle: Копирование данных
+menusubtitle: js
+menusubtitleclass: label label-yellow
+category: javascript
+anchor: js-insert
+order: 01
+---
+<div class="unityBlock">
+<p>Скрипт для автоматизации копирования текста в буфер обмена по клику на элементы интерфейса.</p>
+<ul>
+    <li>Защита от повторной инициализации</li>
+    <li>Поддержка модальных окон</li>
+    <li>Интеграция с уведомлениями.  Автоматический показ toast-уведомлений об успехе или ошибке через $.notify. (jQuery Notify)</li>
+</ul>
+<p>Скрипт необходимо инициализировать один раз при загрузке страницы <code class="language-plaintext highlighter-rouge">initCopyDataAttrToClipboardBtns()</code> 
+<code class="language-plaintext highlighter-rouge">import {initCopyDataAttrToClipboardBtns} from "./copyTextToClipboardNotify"</code></p>
+<h4>Доступные data-* атрибуты</h4>
+<p>data-copy - Обязательный. Текст для копирования. Может быть строкой или функцией, возвращающей Promise.</p>
+<p>data-copy-success-message-text - Текст уведомления при успешном копировании. По умолчанию "Скопировано"</p>
+<p>data-copy-success-message-type - Тип (цвет) уведомления об успехе (например, success, info). По умолчанию - "success" </p>
+<p>data-copy-error-message-text - Текст уведомления при ошибке копирования. По умолчанию - "Ошибка" </p>
+<p>data-copy-error-message-type - Тип уведомления об ошибке (например, danger, warning). По умолчанию - "danger" </p>
+
+<h4>Пример испльзования:</h4>
+<p>В контейнер добавляем <br>
+иконку 
+{% highlight html %}
+<div class="css-copy-to-clipboard-icon">
+    <?= Icons::wrapper('bicolors-copy__24vb', ['class' => 'svg--icon svg--icon__20 bg-white svg-primary']) ?>
+</div>
+{% endhighlight %}
+  data-copy с копируемым текстом <br>
+  и классы для скрипта <code class="language-plaintext highlighter-rouge">css-copy-to-clipboard js-copy-to-clipboard</code>
+</p>
+
+
+{% highlight html %}
+<div class="css-copy-to-clipboard js-copy-to-clipboard" data-copy="Копируемое значение">
+    Какие-либо данные
+    <div class="css-copy-to-clipboard-icon">
+        <?= Icons::wrapper('bicolors-copy__24vb', ['class' => 'svg--icon svg--icon__20 bg-white svg-primary']) ?>
+    </div>
+</div>
+{% endhighlight %}
+</div>
