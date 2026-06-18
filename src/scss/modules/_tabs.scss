@@ -296,6 +296,7 @@
   border: none;
   padding: fonts.rem(val.tabsSizes(tabPane_padding)) fonts.rem(val.tabsSizes(tabPane_padding)) 0;
   .modal & {
-    padding: fonts.rem(val.tabsSizes(tabPane_padding)) 0 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
