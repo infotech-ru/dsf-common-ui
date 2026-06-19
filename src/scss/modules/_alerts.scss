@@ -24,6 +24,11 @@
   padding-right: fonts.rem(val.alertsSizes(alert_padding) + val.alertsSizes(alertClose_size));
   position: relative;
   text-shadow: none;
+  .error-view .mainContainer & {
+    margin: 20px;
+    position: absolute;
+    right: 0;
+  }
   &-sm{
     padding-top: 4px;
     padding-bottom: 4px;

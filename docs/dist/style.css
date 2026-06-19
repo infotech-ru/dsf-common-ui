@@ -15365,6 +15365,11 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   position: relative;
   text-shadow: none;
 }
+.error-view .mainContainer .alert {
+  margin: 20px;
+  position: absolute;
+  right: 0;
+}
 .alert-sm {
   padding-top: 4px;
   padding-bottom: 4px;
