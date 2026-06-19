@@ -167,6 +167,9 @@
         max-height: calc(91vh - 100px);
         overflow-y: auto;
     }
+    .modalFullHeight & {
+        height: calc(91vh - 100px);
+    }
 }
 
 // Footer (for actions)
