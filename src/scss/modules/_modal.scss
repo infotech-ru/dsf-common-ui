@@ -170,6 +170,10 @@
     .modalFullHeight & {
         height: calc(91vh - 100px);
     }
+    .modal-fullPage &{
+        height: 100vh;
+        overflow-y: auto;
+    }
 }
 
 // Footer (for actions)

@@ -16692,6 +16692,10 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .modalFullHeight .modal-body {
   height: calc(91vh - 100px);
 }
+.modal-fullPage .modal-body {
+  height: 100vh;
+  overflow-y: auto;
+}
 
 .modal-footer {
   align-items: center;
