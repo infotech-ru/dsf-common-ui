@@ -214,6 +214,10 @@
     height: 50px;
     overflow: scroll;
 }
+.modal-fullPage{
+    margin: 0;
+    width: 100vw;
+}
 
 @media (min-width: varbootstrapv3.grid-breakpoints(md)) {
 
