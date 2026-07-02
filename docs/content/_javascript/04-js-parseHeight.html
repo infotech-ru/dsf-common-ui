@@ -8,9 +8,10 @@ anchor: js-parseHeight
 order: 04
 ---
 <div class="unityBlock">
-<p>Инструмент на чистом JavaScript для вычисления суммарной высоты дочерних элементов (с учетом их внешних и внутренних отступов) и установки этого значения в качестве CSS-свойства для родительского контейнера. Скрипт поддерживает математические формулы и автоматическое реактивное обновление при изменении DOM или размера окна.</p>
+<p>Инструмент на чистом JavaScript для вычисления суммарной высоты дочерних элементов (с учетом их внешних и внутренних отступов) и установки этого значения в качестве CSS-свойства для родительского контейнера. Скрипт поддерживает математические формулы, автоматическое реактивное обновление при изменении DOM или размера окна и интеллектуальный поиск родительских элементов в сложных DOM-структурах.</p>
 <h3>Возможности</h3>
 <p>Учитывает реальную отрисованную высоту элементов (getBoundingClientRect), а также их вертикальные margin и padding.</p>
+<p>Умный поиск родителя: Сначала ищет родителя как ближайшего предка контейнера (closest). Это позволяет размещать на странице несколько независимых блоков с одинаковыми классами без конфликтов. Если предок не найден, используется глобальный поиск (для обратной совместимости) с выводом предупреждения.</p>
 <p>Поддержка кастомных CSS-выражений с плейсхолдерами (например, calc(100vh - {total})), что позволяет создавать сложные адаптивные макеты.</p>
 <p>Автоматический пересчет высоты при изменении размера окна (resize) или любых мутациях внутри целевых элементов (MutationObserver).</p>
 <p>Все параметры (селекторы целей, родителей, формулы) задаются через data-* атрибуты, что позволяет настраивать логику без изменения JS-кода.</p>
@@ -154,37 +155,56 @@ DisableHeightWatch('.js-target-set-height');
 </table>
 
 <h3>Примеры использования</h3>
-<h4>Просто суммируем высоту всех блоков .content-block и устанавливаем её как высоту контейнера .sidebar.</h4>
+<h4>Теперь родитель (js-target-parent-get-height) должен находиться внутри или выше контейнера (js-target-set-height) в DOM-дереве.</h4>
 
 {% highlight html %}
-<div class="sidebar js-target-set-height" 
-     data-parent-class="sidebar-inner" 
-     data-target-class="content-block">
+<!-- Внешняя обертка является родителем -->
+<div class="sidebar-wrapper js-target-parent-get-height">
     
-    <div class="sidebar-inner js-target-parent-get-height">
-        <div class="content-block js-target-get-height">Блок 1</div>
-        <div class="content-block js-target-get-height">Блок 2</div>
+    <!-- Контейнер, на который будет установлена вычисленная высота -->
+    <div class="sidebar js-target-set-height" data-parent-class="sidebar-wrapper">
+        <!-- Контент -->
     </div>
+
+    <!-- Целевые элементы, высоту которых суммируем -->
+    <div class="content-block js-target-get-height">Блок 1</div>
+    <div class="content-block js-target-get-height">Блок 2</div>
 </div>
 {% endhighlight %}
 
-<h4>Использование формулы (Адаптивная высота)</h4>
+<h4 class="mt-gutter">Множество независимых блоков на одной странице</h4>
+<p>Благодаря функции findParent, вы можете использовать одинаковые классы для разных виджетов, и скрипт корректно сопоставит каждый контейнер со своим родителем.</p>
 {% highlight html %}
-<div class="main-wrapper js-target-set-height" 
-     data-set-formula="calc(100vh - {total})"
-     data-set-type="height"
-     data-parent-class="wrapper-inner"
-     data-target-class="header-block">
-    
-    <div class="wrapper-inner js-target-parent-get-height">
+<!-- Виджет 1 -->
+<section class="widget-parent js-target-parent-get-height" id="widget-1">
+    <div class="widget js-target-set-height"></div>
+    <div class="widget-item js-target-get-height">Элемент 1</div>
+</section>
+
+<!-- Виджет 2 (с такими же классами!) -->
+<section class="widget-parent js-target-parent-get-height" id="widget-2">
+    <div class="widget js-target-set-height"></div>
+    <div class="widget-item js-target-get-height">Элемент 2</div>
+    <div class="widget-item js-target-get-height">Элемент 3</div>
+</section>
+{% endhighlight %}
+
+<h4 class="mt-gutter">Использование формулы (Адаптивная высота)</h4>
+
+<p>Рассчитываем высоту так, чтобы контейнер занимал всё оставшееся пространство экрана.</p>
+{% highlight html %}
+<div class="main-wrapper js-target-parent-get-height">
+    <div class="main-content js-target-set-height" 
+         data-set-formula="calc(100vh - {total})"
+         data-set-type="height">
+        
         <header class="header-block js-target-get-height">Шапка сайта</header>
     </div>
-    
-    <!-- Остальной контент -->
 </div>
 {% endhighlight %}
 
-<h4>Учет сложных отступов</h4>
+<h4 class="mt-gutter">Учет сложных отступов</h4>
+
 {% highlight html %}
 <div class="container js-target-set-height" 
      data-set-formula="calc(100% - {padding} - {margin})"
@@ -197,7 +217,8 @@ DisableHeightWatch('.js-target-set-height');
     </div>
 </div>
 {% endhighlight %}
-<h4>Реактивный режим (Auto-Update)</h4>
+
+<h4 class="mt-gutter">Реактивный режим (Auto-Update)</h4>
 {% highlight js %}
 // Инициализация при открытии модального окна
 $('#myModal').on('shown.bs.modal', function() {
@@ -213,10 +234,11 @@ $('#myModal').on('hidden.bs.modal', function() {
 });
 {% endhighlight %}
 
-<h4> Важные замечания и особенности реализации</h4>
+<h4 class="mt-gutter">Важные замечания и особенности реализации</h4>
+<p>Скрипт использует алгоритм "сначала ищи рядом". Он вызывает container.closest('.parent-class'). Если предок не найден (например, в старой верстке, где родитель и контейнер находятся в разных частях DOM), скрипт делает глобальный поиск через document.querySelector.</p>
 <p>Алгоритм вычислений: Скрипт использует getBoundingClientRect() для получения высоты, что означает, что он считает реальные пиксели на экране, а не значения из CSS. Это гарантирует точность даже при использовании box-sizing: border-box или сложных трансформаций.</p>
 <p>Fallback для Padding: Если вы указали data-padding-class, но скрипт не нашел ни одного элемента с этим классом внутри родителя, он автоматически возьмет padding-top и padding-bottom самого родительского элемента (data-parent-class).</p>
-<p>Управление памятью (Memory Leaks): Функция EnableHeightWatch сохраняет ссылки на resize обработчики и MutationObserver в внутреннюю Map. Если вы удаляете контейнер из DOM (например, закрываете SPA-роут или модальное окно), обязательно вызывайте DisableHeightWatch, иначе "висящие" observers будут вызывать пересчеты и потреблять память.</p>
+<p>Управление памятью: Функция EnableHeightWatch сохраняет ссылки на resize обработчики и MutationObserver в внутреннюю Map. Если вы удаляете контейнер из DOM (например, закрываете SPA-роут или модальное окно), обязательно вызывайте DisableHeightWatch, иначе "висящие" observers будут вызывать пересчеты и потреблять память.</p>
 <p>Производительность: MutationObserver настроен на отслеживание изменений атрибутов (style, class), добавления/удаления дочерних узлов (childList: true, subtree: true). При большом количестве DOM-элементов это может вызывать частые пересчеты. Используйте trackTargetChanges: false, если контент статичен.</p>
 <p>CSS-свойства: При использовании data-set-type="maxHeight", скрипт корректно преобразует это в element.style.maxHeight. Убедитесь, что в вашем CSS нет правил с !important, которые могут перебить инлайновые стили, устанавливаемые скриптом.</p>
 

@@ -81,6 +81,10 @@
     position: relative;
     // Remove focus outline from opened modal
     outline: 0;
+    .modal-fullPage &{
+        border: none;
+        box-shadow: none;
+    }
 }
 
 // Modal background

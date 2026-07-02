@@ -24,8 +24,31 @@
  */
 const activeWatches = new Map(); // key: containerSelector, value: { resizeHandler, observers }
 
+/**
+ * Вспомогательная функция для поиска родителя с обратной совместимостью:
+ * сначала ищет ближайшего предка по классу, если не найден – глобально через document.querySelector.
+ * @param {Element} container - контейнер, для которого ищем родителя
+ * @param {string} parentClass - класс родителя (без точки)
+ * @returns {Element|null}
+ */
+function findParent(container, parentClass) {
+    // Ищем ближайшего предка с данным классом
+    let parent = container.closest(`.${parentClass}`);
+    if (parent) return parent;
+
+    // Fallback: глобальный поиск (для обратной совместимости)
+    parent = document.querySelector(`.${parentClass}`);
+    if (parent) {
+        console.warn(
+            `Родитель с классом "${parentClass}" найден глобально, а не как предок контейнера. ` +
+            `Для уникальности рекомендуется размещать родителя выше в иерархии.`
+        );
+        return parent;
+    }
+    return null;
+}
+
 export function ParseHeight(containerSelector = ".js-target-set-height") {
-    // Если DOM ещё не загружен, ждём события
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", () => ParseHeight(containerSelector));
         return;
@@ -38,36 +61,37 @@ export function ParseHeight(containerSelector = ".js-target-set-height") {
     }
 
     containers.forEach(container => {
-        // Получаем настройки из data-атрибутов
-        const setType = container.dataset.setType || "height";         // height / maxHeight / minHeight
-        const formula = container.dataset.setFormula;                  // например "calc(100vh - {height} - {padding})"
+        const setType = container.dataset.setType || "height";
+        const formula = container.dataset.setFormula;
         const targetClass = container.dataset.targetClass || "js-target-get-height";
         const parentClass = container.dataset.parentClass || "js-target-parent-get-height";
         const paddingClass = container.dataset.paddingClass || "js-target-get-padding";
         const marginClass = container.dataset.marginClass || "js-target-get-margin";
 
-        const parentSelector = `.${parentClass}`;
         const targetSelector = `.${targetClass}`;
         const paddingSelector = `.${paddingClass}`;
         const marginSelector = `.${marginClass}`;
 
-        // 1) Суммарная высота целевых элементов
-        const totalHeight = computeTotalHeight(parentSelector, targetSelector);
+        // Поиск родителя с fallback для обратной совместимости
+        const parent = findParent(container, parentClass);
+        if (!parent) {
+            console.warn(`Родитель с классом "${parentClass}" не найден для контейнера`, container);
+            return;
+        }
+
+        const totalHeight = computeTotalHeight(parent, targetSelector);
         if (totalHeight === null) {
             console.warn(`Не удалось вычислить высоту для контейнера`, container);
             return;
         }
 
-        // 2) Суммарные внутренние отступы: сначала ищем по paddingClass,
-        //    если элементов нет — берём padding самого родителя
-        let totalPadding = computeTotalPadding(parentSelector, paddingSelector);
+        let totalPadding = computeTotalPadding(parent, paddingSelector);
         if (totalPadding === null || totalPadding === 0) {
-            totalPadding = computeParentPadding(parentSelector);
+            totalPadding = computeParentPadding(parent);
         }
         if (totalPadding === null) totalPadding = 0;
 
-        // 3) Суммарные внешние отступы по отдельному классу marginClass
-        let totalMargin = computeTotalMargin(parentSelector, marginSelector);
+        let totalMargin = computeTotalMargin(parent, marginSelector);
         if (totalMargin === null) totalMargin = 0;
 
         const totalValue = totalHeight + totalPadding + totalMargin;
@@ -88,14 +112,6 @@ export function ParseHeight(containerSelector = ".js-target-set-height") {
     return true;
 }
 
-/**
- * Включить автоматическое обновление высоты для указанного селектора контейнеров.
- * При изменениях (ресайз окна, изменения целевых элементов) будет пересчитывать и устанавливать высоту.
- * @param {string} containerSelector - селектор контейнеров (обязательный)
- * @param {Object} options - настройки
- * @param {boolean} options.trackResize - следить за resize окна (по умолч. true)
- * @param {boolean} options.trackTargetChanges - следить за изменениями целевых элементов (по умолч. true)
- */
 export function EnableHeightWatch(containerSelector, options = {}) {
     if (!containerSelector) {
         console.error("EnableHeightWatch: требуется указать containerSelector");
@@ -106,28 +122,22 @@ export function EnableHeightWatch(containerSelector, options = {}) {
         return false;
     }
 
-    // Если уже отслеживается, ничего не делаем
     if (activeWatches.has(containerSelector)) {
-        // console.log(`Отслеживание для "${containerSelector}" уже активно`);
         return true;
     }
 
     const { trackResize = true, trackTargetChanges = true } = options;
 
-    // Функция обновления (вызывает ParseHeight только для этого селектора)
     const updateFn = () => ParseHeight(containerSelector);
 
-    // Обработчики
     let resizeHandler = null;
     if (trackResize) {
         resizeHandler = () => updateFn();
         window.addEventListener("resize", resizeHandler);
     }
 
-    // MutationObserver для отслеживания изменений целевых элементов
     let mutationObserver = null;
     if (trackTargetChanges) {
-        // Найдём все контейнеры, чтобы получить их data-атрибуты и определить целевые элементы
         const containers = document.querySelectorAll(containerSelector);
         if (containers.length === 0) {
             console.warn(`Нет контейнеров для отслеживания по селектору "${containerSelector}"`);
@@ -135,7 +145,6 @@ export function EnableHeightWatch(containerSelector, options = {}) {
             return false;
         }
 
-        // Собираем уникальные элементы для наблюдения (target + padding + margin + parent)
         const targetElementsSet = new Set();
         containers.forEach(container => {
             const targetClass = container.dataset.targetClass || "js-target-get-height";
@@ -143,25 +152,19 @@ export function EnableHeightWatch(containerSelector, options = {}) {
             const paddingClass = container.dataset.paddingClass || "js-target-get-padding";
             const marginClass = container.dataset.marginClass || "js-target-get-margin";
 
-            const parentSelector = `.${parentClass}`;
+            // Используем ту же функцию findParent для согласованности
+            const parent = findParent(container, parentClass);
+            if (!parent) return;
+
+            targetElementsSet.add(parent);
+
             const targetSelector = `.${targetClass}`;
             const paddingSelector = `.${paddingClass}`;
             const marginSelector = `.${marginClass}`;
 
-            const parent = document.querySelector(parentSelector);
-            if (parent) {
-                // Сам родитель — на случай изменения его padding
-                targetElementsSet.add(parent);
-
-                const targets = parent.querySelectorAll(targetSelector);
-                targets.forEach(el => targetElementsSet.add(el));
-
-                const paddings = parent.querySelectorAll(paddingSelector);
-                paddings.forEach(el => targetElementsSet.add(el));
-
-                const margins = parent.querySelectorAll(marginSelector);
-                margins.forEach(el => targetElementsSet.add(el));
-            }
+            parent.querySelectorAll(targetSelector).forEach(el => targetElementsSet.add(el));
+            parent.querySelectorAll(paddingSelector).forEach(el => targetElementsSet.add(el));
+            parent.querySelectorAll(marginSelector).forEach(el => targetElementsSet.add(el));
         });
 
         if (targetElementsSet.size > 0) {
@@ -178,70 +181,45 @@ export function EnableHeightWatch(containerSelector, options = {}) {
         }
     }
 
-    // Сохраняем состояние
     activeWatches.set(containerSelector, {
         resizeHandler,
         mutationObserver,
         updateFn
     });
 
-    // Выполним первый расчёт
     updateFn();
     return true;
 }
 
-/**
- * Отключить автоматическое обновление высоты для указанного селектора.
- * При этом стирает ранее установленные inline-стили высоты для всех контейнеров селектора.
- * @param {string} containerSelector - селектор контейнеров. Если не указан, отключает всё.
- */
 export function DisableHeightWatch(containerSelector = null) {
     if (containerSelector === null) {
-        // Отключаем всё
         const selectors = Array.from(activeWatches.keys());
         selectors.forEach(sel => DisableHeightWatch(sel));
         return;
     }
 
     const watchData = activeWatches.get(containerSelector);
-    if (!watchData) {
-        // console.log(`Отслеживание для "${containerSelector}" не было активно`);
-        return;
-    }
+    if (!watchData) return;
 
-    // Удаляем обработчики resize
     if (watchData.resizeHandler) {
         window.removeEventListener("resize", watchData.resizeHandler);
     }
-
-    // Отключаем MutationObserver
     if (watchData.mutationObserver) {
         watchData.mutationObserver.disconnect();
     }
 
-    // Стираем установленные стили для всех контейнеров по этому селектору
     const containers = document.querySelectorAll(containerSelector);
     containers.forEach(container => {
-        // Определяем, какое свойство было установлено
         const setType = container.dataset.setType || "height";
         container.style[setType] = "";
     });
 
     activeWatches.delete(containerSelector);
-    // console.log(`Отслеживание для "${containerSelector}" отключено, стили стёрты`);
 }
 
-/**
- * Вычисляет общую высоту, занимаемую элементами targetSelector внутри parentSelector,
- * с учётом их положения в документе (используются координаты относительно документа).
- * @param {string} parentSelector - селектор родительского элемента
- * @param {string} targetSelector - селектор целевых элементов
- * @returns {number|null} высота в пикселях или null, если расчёт невозможен
- */
-function computeTotalHeight(parentSelector, targetSelector) {
-    const parent = document.querySelector(parentSelector);
+// Вспомогательные функции (без изменений, кроме сигнатуры – теперь принимают DOM-элемент)
+function computeTotalHeight(parent, targetSelector) {
     if (!parent) return null;
-
     const targets = parent.querySelectorAll(targetSelector);
     if (targets.length === 0) return null;
 
@@ -257,66 +235,35 @@ function computeTotalHeight(parentSelector, targetSelector) {
     return total === 0 ? null : total;
 }
 
-/**
- * Вычисляет суммарные внутренние отступы (padding-top + padding-bottom)
- * у элементов с указанным селектором внутри родителя.
- * @param {string} parentSelector - селектор родительского элемента
- * @param {string} paddingSelector - селектор элементов, чьи padding нужно учесть
- * @returns {number|null} сумма padding в пикселях или null, если элементов нет
- */
-function computeTotalPadding(parentSelector, paddingSelector) {
-    const parent = document.querySelector(parentSelector);
+function computeTotalPadding(parent, paddingSelector) {
     if (!parent) return null;
-
     const elements = parent.querySelectorAll(paddingSelector);
     if (elements.length === 0) return null;
 
     let total = 0;
     elements.forEach(el => {
         const style = window.getComputedStyle(el);
-        const paddingTop = parseFloat(style.paddingTop) || 0;
-        const paddingBottom = parseFloat(style.paddingBottom) || 0;
-        total += paddingTop + paddingBottom;
+        total += (parseFloat(style.paddingTop) || 0) + (parseFloat(style.paddingBottom) || 0);
     });
     return total === 0 ? null : total;
 }
 
-/**
- * Вычисляет внутренние отступы самого родительского элемента.
- * @param {string} parentSelector - селектор родительского элемента
- * @returns {number|null} сумма padding-top + padding-bottom или null
- */
-function computeParentPadding(parentSelector) {
-    const parent = document.querySelector(parentSelector);
+function computeParentPadding(parent) {
     if (!parent) return null;
-
     const style = window.getComputedStyle(parent);
-    const paddingTop = parseFloat(style.paddingTop) || 0;
-    const paddingBottom = parseFloat(style.paddingBottom) || 0;
-    const total = paddingTop + paddingBottom;
+    const total = (parseFloat(style.paddingTop) || 0) + (parseFloat(style.paddingBottom) || 0);
     return total === 0 ? null : total;
 }
 
-/**
- * Вычисляет суммарные внешние отступы (margin-top + margin-bottom)
- * у элементов с указанным селектором внутри родителя.
- * @param {string} parentSelector - селектор родительского элемента
- * @param {string} marginSelector - селектор элементов, чьи margin нужно учесть
- * @returns {number|null} сумма margin в пикселях или null, если элементов нет
- */
-function computeTotalMargin(parentSelector, marginSelector) {
-    const parent = document.querySelector(parentSelector);
+function computeTotalMargin(parent, marginSelector) {
     if (!parent) return null;
-
     const elements = parent.querySelectorAll(marginSelector);
     if (elements.length === 0) return null;
 
     let total = 0;
     elements.forEach(el => {
         const style = window.getComputedStyle(el);
-        const marginTop = parseFloat(style.marginTop) || 0;
-        const marginBottom = parseFloat(style.marginBottom) || 0;
-        total += marginTop + marginBottom;
+        total += (parseFloat(style.marginTop) || 0) + (parseFloat(style.marginBottom) || 0);
     });
     return total === 0 ? null : total;
 }
