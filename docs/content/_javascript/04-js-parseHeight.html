@@ -1,0 +1,223 @@
+---
+Title: Динамический расчет и установка высоты
+menutitle: Расчет и установка высоты
+menusubtitle: js
+menusubtitleclass: label label-yellow
+category: javascript
+anchor: js-parseHeight
+order: 04
+---
+<div class="unityBlock">
+<p>Инструмент на чистом JavaScript для вычисления суммарной высоты дочерних элементов (с учетом их внешних и внутренних отступов) и установки этого значения в качестве CSS-свойства для родительского контейнера. Скрипт поддерживает математические формулы и автоматическое реактивное обновление при изменении DOM или размера окна.</p>
+<h3>Возможности</h3>
+<p>Учитывает реальную отрисованную высоту элементов (getBoundingClientRect), а также их вертикальные margin и padding.</p>
+<p>Поддержка кастомных CSS-выражений с плейсхолдерами (например, calc(100vh - {total})), что позволяет создавать сложные адаптивные макеты.</p>
+<p>Автоматический пересчет высоты при изменении размера окна (resize) или любых мутациях внутри целевых элементов (MutationObserver).</p>
+<p>Все параметры (селекторы целей, родителей, формулы) задаются через data-* атрибуты, что позволяет настраивать логику без изменения JS-кода.</p>
+<p>Встроенный механизм отписки от событий и удаления MutationObserver для предотвращения утечек памяти при уничтожении DOM-элементов.
+Отсутствие зависимостей: Написан на чистом Vanilla JS, не требует jQuery или других библиотек.</p>
+
+<h3>API и Инициализация</h3>
+{% highlight js %}
+import { ParseHeight, EnableHeightWatch, DisableHeightWatch } from './path/to/parse-height';
+
+// 1. Разовый расчет высоты для всех контейнеров с классом .js-target-set-height
+ParseHeight('.js-target-set-height');
+
+// 2. Включение автоматического отслеживания изменений (реактивный режим)
+EnableHeightWatch('.js-target-set-height', {
+    trackResize: true,       // Пересчитывать при изменении размера окна
+    trackTargetChanges: true // Пересчитывать при изменении DOM внутри целевых элементов
+});
+
+// 3. Отключение отслеживания и очистка inline-стилей (например, при закрытии модалки)
+DisableHeightWatch('.js-target-set-height');
+{% endhighlight %}
+
+<h3>Data-атрибуты контейнера</h3>
+<p>Настройка логики расчета осуществляется через data-* атрибуты самого контейнера, на который устанавливается высота.</p>
+<table class="table table__border">
+    <thead>
+        <tr>
+            <th>
+                <div><span>Атрибут</span>
+        </div>
+            </th>
+            <th>
+                <div><span>По умолчанию</span>
+        </div>
+            </th>
+            <th>
+                <div><span>Описание</span>
+        </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div><code>data-set-type</code></div>
+            </td>
+            <td>
+                <div><code>height</code></div>
+            </td>
+            <td>
+                <div>
+                    <span>Какое CSS-свойство устанавливать. Допустимые значения: </span>
+                    <code>height</code>
+                    <span>, </span>
+                    <code>maxHeight</code>
+                    <span>, </span>
+                    <code>minHeight</code>
+                    <span>.</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div><code>data-set-formula</code></div>
+            </td>
+            <td>
+                <div><em><span>(нет)</span></em>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <span>Математическая формула. Доступны плейсхолдеры: </span>
+                    <code>{height}</code>
+                    <span>, </span>
+                    <code>{padding}</code><span>, </span>
+                       <code>{margin}</code>
+                       <span>, </span>
+                       <code>{total}</code><span>. Если не указано, используется просто </span>
+                       <code>{total}</code><span>.</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div><code>data-target-class</code></div>
+            </td>
+            <td>
+                <div><code>js-target-get-height</code></div>
+            </td>
+            <td>
+                <div>
+                    <span>Класс элементов внутри родителя, высоту которых нужно суммировать.</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div><code>data-parent-class</code></div>
+            </td>
+            <td>
+                <div><code>js-target-parent-get-height</code></div>
+            </td>
+            <td>
+                <div>
+                    <span>Класс общего родителя, внутри которого происходит поиск целевых элементов.</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div><code>data-padding-class</code></div>
+            </td>
+            <td>
+                <div><code>js-target-get-padding</code></div>
+            </td>
+            <td>
+                <div>
+                    <span>Класс элементов, чьи вертикальные </span>
+                    <code>padding</code>
+                    <span> нужно суммировать. Если такие элементы не найдены, скрипт возьмет </span>
+                    <code>padding</code>
+                    <span> самого родителя.</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div><code>data-margin-class</code></div>
+            </td>
+            <td>
+                <div><code>js-target-get-margin</code></div>
+            </td>
+            <td>
+                <div><span>Класс элементов, чьи вертикальные </span><code>margin</code>
+                        <span> нужно суммировать и добавить к итоговой высоте.</span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Примеры использования</h3>
+<h4>Просто суммируем высоту всех блоков .content-block и устанавливаем её как высоту контейнера .sidebar.</h4>
+
+{% highlight html %}
+<div class="sidebar js-target-set-height" 
+     data-parent-class="sidebar-inner" 
+     data-target-class="content-block">
+    
+    <div class="sidebar-inner js-target-parent-get-height">
+        <div class="content-block js-target-get-height">Блок 1</div>
+        <div class="content-block js-target-get-height">Блок 2</div>
+    </div>
+</div>
+{% endhighlight %}
+
+<h4>Использование формулы (Адаптивная высота)</h4>
+{% highlight html %}
+<div class="main-wrapper js-target-set-height" 
+     data-set-formula="calc(100vh - {total})"
+     data-set-type="height"
+     data-parent-class="wrapper-inner"
+     data-target-class="header-block">
+    
+    <div class="wrapper-inner js-target-parent-get-height">
+        <header class="header-block js-target-get-height">Шапка сайта</header>
+    </div>
+    
+    <!-- Остальной контент -->
+</div>
+{% endhighlight %}
+
+<h4>Учет сложных отступов</h4>
+{% highlight html %}
+<div class="container js-target-set-height" 
+     data-set-formula="calc(100% - {padding} - {margin})"
+     data-padding-class="has-padding"
+     data-margin-class="has-margin">
+    
+    <div class="parent js-target-parent-get-height">
+        <div class="item js-target-get-height has-padding">Текст</div>
+        <div class="item js-target-get-height has-margin">Текст</div>
+    </div>
+</div>
+{% endhighlight %}
+<h4>Реактивный режим (Auto-Update)</h4>
+{% highlight js %}
+// Инициализация при открытии модального окна
+$('#myModal').on('shown.bs.modal', function() {
+    EnableHeightWatch('.modal .js-target-set-height', {
+        trackResize: true,
+        trackTargetChanges: true
+    });
+});
+
+// Важный момент: при закрытии модалки нужно очистить observers!
+$('#myModal').on('hidden.bs.modal', function() {
+    DisableHeightWatch('.modal .js-target-set-height');
+});
+{% endhighlight %}
+
+<h4> Важные замечания и особенности реализации</h4>
+<p>Алгоритм вычислений: Скрипт использует getBoundingClientRect() для получения высоты, что означает, что он считает реальные пиксели на экране, а не значения из CSS. Это гарантирует точность даже при использовании box-sizing: border-box или сложных трансформаций.</p>
+<p>Fallback для Padding: Если вы указали data-padding-class, но скрипт не нашел ни одного элемента с этим классом внутри родителя, он автоматически возьмет padding-top и padding-bottom самого родительского элемента (data-parent-class).</p>
+<p>Управление памятью (Memory Leaks): Функция EnableHeightWatch сохраняет ссылки на resize обработчики и MutationObserver в внутреннюю Map. Если вы удаляете контейнер из DOM (например, закрываете SPA-роут или модальное окно), обязательно вызывайте DisableHeightWatch, иначе "висящие" observers будут вызывать пересчеты и потреблять память.</p>
+<p>Производительность: MutationObserver настроен на отслеживание изменений атрибутов (style, class), добавления/удаления дочерних узлов (childList: true, subtree: true). При большом количестве DOM-элементов это может вызывать частые пересчеты. Используйте trackTargetChanges: false, если контент статичен.</p>
+<p>CSS-свойства: При использовании data-set-type="maxHeight", скрипт корректно преобразует это в element.style.maxHeight. Убедитесь, что в вашем CSS нет правил с !important, которые могут перебить инлайновые стили, устанавливаемые скриптом.</p>
+
+</div>
