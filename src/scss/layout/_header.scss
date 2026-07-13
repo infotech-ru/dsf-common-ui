@@ -201,6 +201,9 @@
     display: block;
     padding: 0;
     margin-right: 15px;
+    .mobile-view &{
+      margin-right: 0;
+    }
     .svg--open{
         display: none;
     }

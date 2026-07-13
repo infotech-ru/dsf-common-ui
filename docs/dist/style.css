@@ -3506,6 +3506,9 @@ h6, .h6 {
   padding: 0;
   margin-right: 15px;
 }
+.mobile-view .header .navbar-toggle {
+  margin-right: 0;
+}
 .header .navbar-toggle .svg--open {
   display: none;
 }
