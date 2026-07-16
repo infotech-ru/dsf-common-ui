@@ -10849,7 +10849,7 @@ input[type=button].btn-block {
   transition: background-color 0.3s ease-in-out;
   white-space: nowrap;
   --label-lineHeight: 0.875rem;
-  --label_borderColor: --labelChip_borderColor;
+  --label_borderColor: var(--labelChip_borderColor);
 }
 .label_chip .svg--icon,
 .label_chip .svg--icon__24vb {

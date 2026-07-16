@@ -124,7 +124,7 @@
   transition: background-color 0.3s ease-in-out;
   white-space: nowrap;
   --label-lineHeight: #{fonts.rem(14)};
-  --label_borderColor: #{--labelChip_borderColor};
+  #{--label_borderColor}: var(--labelChip_borderColor);
   .svg--icon,
   .svg--icon__24vb{
     align-items: center;
