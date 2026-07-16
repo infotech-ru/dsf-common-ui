@@ -232,7 +232,7 @@
   .label-#{$name}{
     #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'color');
     #{--label_bgc}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
-    // #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'bg');
+    // #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'bg'); !!
     #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color');
     #{--labelChip_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border');
     #{--labelChipHover_color}: maps.map-deep-get(colors.$brand-label, $name, 'color_active');
@@ -257,7 +257,7 @@
   }
   .label-#{$name}__outline{
     #{--label_color}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
-    // #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border-outline'); !!
+    #{--label_borderColor}: maps.map-deep-get(colors.$brand-label, $name, 'border-outline');
     #{--label_bgc}: val.brandColors(_transparent);
     #{--svg-valute-fill}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline');
     #{--labelChipHover_color}: maps.map-deep-get(colors.$brand-label, $name, 'color-outline_active');

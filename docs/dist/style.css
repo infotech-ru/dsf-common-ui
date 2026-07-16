@@ -10966,6 +10966,7 @@ input[type=button].btn-block {
 
 .label-default__outline {
   --label_color: #333333;
+  --label_borderColor: #dddddd;
   --label_bgc: #00000000;
   --svg-valute-fill: #333333;
   --labelChipHover_color: #333333;
@@ -11007,6 +11008,7 @@ input[type=button].btn-block {
 
 .label-primary__outline {
   --label_color: #4A8DC6;
+  --label_borderColor: #4A8DC6;
   --label_bgc: #00000000;
   --svg-valute-fill: #4A8DC6;
   --labelChipHover_color: #ffffff;
@@ -11048,6 +11050,7 @@ input[type=button].btn-block {
 
 .label-danger__outline {
   --label_color: #D9534F;
+  --label_borderColor: #D9534F;
   --label_bgc: #00000000;
   --svg-valute-fill: #D9534F;
   --labelChipHover_color: #ffffff;
@@ -11089,6 +11092,7 @@ input[type=button].btn-block {
 
 .label-success__outline {
   --label_color: #69C26A;
+  --label_borderColor: #69C26A;
   --label_bgc: #00000000;
   --svg-valute-fill: #69C26A;
   --labelChipHover_color: #ffffff;
@@ -11130,6 +11134,7 @@ input[type=button].btn-block {
 
 .label-warning__outline {
   --label_color: #FFBD41;
+  --label_borderColor: #FFBD41;
   --label_bgc: #00000000;
   --svg-valute-fill: #FFBD41;
   --labelChipHover_color: #ffffff;
@@ -11171,6 +11176,7 @@ input[type=button].btn-block {
 
 .label-info__outline {
   --label_color: #4A8DC6;
+  --label_borderColor: #B6D1E8;
   --label_bgc: #00000000;
   --svg-valute-fill: #4A8DC6;
   --labelChipHover_color: #4A8DC6;
@@ -11212,6 +11218,7 @@ input[type=button].btn-block {
 
 .label-yellow__outline {
   --label_color: #FFDA7D;
+  --label_borderColor: #FFDA7D;
   --label_bgc: #00000000;
   --svg-valute-fill: #FFDA7D;
   --labelChipHover_color: #333333;
@@ -11253,6 +11260,7 @@ input[type=button].btn-block {
 
 .label-black__outline {
   --label_color: #000000;
+  --label_borderColor: #000000;
   --label_bgc: #00000000;
   --svg-valute-fill: #000000;
   --labelChipHover_color: #ffffff;
@@ -11294,6 +11302,7 @@ input[type=button].btn-block {
 
 .label-dark-grey__outline {
   --label_color: #333333;
+  --label_borderColor: #333333;
   --label_bgc: #00000000;
   --svg-valute-fill: #333333;
   --labelChipHover_color: #ffffff;
@@ -11335,6 +11344,7 @@ input[type=button].btn-block {
 
 .label-grey2__outline {
   --label_color: #dddddd;
+  --label_borderColor: #dddddd;
   --label_bgc: #00000000;
   --svg-valute-fill: #dddddd;
   --labelChipHover_color: #ffffff;
@@ -11376,6 +11386,7 @@ input[type=button].btn-block {
 
 .label-vibrant-blue__outline {
   --label_color: #0094FF;
+  --label_borderColor: #0094FF;
   --label_bgc: #00000000;
   --svg-valute-fill: #0094FF;
   --labelChipHover_color: #ffffff;
@@ -11417,6 +11428,7 @@ input[type=button].btn-block {
 
 .label-light-yellow2__outline {
   --label_color: #B56C00;
+  --label_borderColor: #FFDF9A;
   --label_bgc: #00000000;
   --svg-valute-fill: #B56C00;
   --labelChipHover_color: #B56C00;
@@ -11458,6 +11470,7 @@ input[type=button].btn-block {
 
 .label-dark-green__outline {
   --label_color: #467B46;
+  --label_borderColor: #467B46;
   --label_bgc: #00000000;
   --svg-valute-fill: #467B46;
   --labelChipHover_color: #ffffff;
@@ -11499,6 +11512,7 @@ input[type=button].btn-block {
 
 .label-light-green__outline {
   --label_color: #467B46;
+  --label_borderColor: #B4E1B5;
   --label_bgc: #00000000;
   --svg-valute-fill: #467B46;
   --labelChipHover_color: #467B46;
@@ -11540,6 +11554,7 @@ input[type=button].btn-block {
 
 .label-light-green2__outline {
   --label_color: #B4E1B5;
+  --label_borderColor: #467B46;
   --label_bgc: #00000000;
   --svg-valute-fill: #B4E1B5;
   --labelChipHover_color: #ffffff;
@@ -11581,6 +11596,7 @@ input[type=button].btn-block {
 
 .label-light-red__outline {
   --label_color: #D9534F;
+  --label_borderColor: #FF9996;
   --label_bgc: #00000000;
   --svg-valute-fill: #D9534F;
   --labelChipHover_color: #D9534F;
@@ -11622,6 +11638,7 @@ input[type=button].btn-block {
 
 .label-rose__outline {
   --label_color: #FF9996;
+  --label_borderColor: #FF9996;
   --label_bgc: #00000000;
   --svg-valute-fill: #FF9996;
   --labelChipHover_color: #ffffff;
@@ -11663,6 +11680,7 @@ input[type=button].btn-block {
 
 .label-grey4__outline {
   --label_color: #777777;
+  --label_borderColor: #777777;
   --label_bgc: #00000000;
   --svg-valute-fill: #777777;
   --labelChipHover_color: #ffffff;
