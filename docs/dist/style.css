@@ -8757,13 +8757,13 @@ input[type=checkbox][disabled] {
   line-height: 1.5rem;
   min-height: 1.75rem;
   position: relative;
-  --checkbox-width: 0.75rem;
 }
 .checkbox-item__medium {
   --checkbox-borderRadius: 0rem;
   --checkbox-borderWidth: 0.0625rem;
   --checkbox-fontSize: 0.75rem;
   --checkbox-label-paddingLeft: 1.625rem;
+  --checkbox-topOffset: -0.5625rem;
   --checkbox-width: 1.125rem;
 }
 .checkbox-item__large {
@@ -8771,6 +8771,7 @@ input[type=checkbox][disabled] {
   --checkbox-borderWidth: 0.125rem;
   --checkbox-fontSize: 0.8125rem;
   --checkbox-label-paddingLeft: 1.9375rem;
+  --checkbox-topOffset: -0.75rem;
   --checkbox-width: 1.5rem;
 }
 .checkbox-item input[type=checkbox] {
@@ -8828,7 +8829,7 @@ input[type=checkbox][disabled] {
   display: inline-block;
   height: var(--checkbox-width, 0.75rem);
   left: 0;
-  margin-top: calc(var(--checkbox-width) * -0.5);
+  margin-top: var(--checkbox-topOffset, 0.75rem);
   position: absolute;
   top: 50%;
   width: var(--checkbox-width, 0.75rem);

@@ -38,12 +38,12 @@ input[type=checkbox] {
     line-height: fonts.rem(val.lineHeight(checkbox));
     min-height: fonts.rem(val.formsSizes(formElem_height));
     position: relative;
-    --checkbox-width: #{fonts.rem(val.checkboxSizes(checkboxItem_size))};
     &__medium{
         --checkbox-borderRadius: #{fonts.rem(val.checkboxSizes(checkboxItemMedium_borderRadius))};
         --checkbox-borderWidth: #{fonts.rem(val.checkboxSizes(checkboxItemMedium_borderSize))};
         --checkbox-fontSize: #{fonts.rem(val.fontSizes(checkbox__medium))};
         --checkbox-label-paddingLeft: #{fonts.rem(calc(val.checkboxSizes(checkboxItemMedium_size) + 8))};
+        --checkbox-topOffset: #{fonts.rem(val.checkboxSizes(checkboxItemMedium_size) * -0.5)};
         --checkbox-width: #{fonts.rem(val.checkboxSizes(checkboxItemMedium_size))};
     }
     &__large{
@@ -51,6 +51,7 @@ input[type=checkbox] {
         --checkbox-borderWidth: #{fonts.rem(val.checkboxSizes(checkboxItemLarge_borderSize))};
         --checkbox-fontSize: #{fonts.rem(val.fontSizes(checkbox__large))};
         --checkbox-label-paddingLeft: #{fonts.rem(calc(val.checkboxSizes(checkboxItemLarge_size) + 7))};
+        --checkbox-topOffset: #{fonts.rem(val.checkboxSizes(checkboxItemLarge_size) * -0.5)};
         --checkbox-width: #{fonts.rem(val.checkboxSizes(checkboxItemLarge_size))};
     }
     input[type=checkbox] {
@@ -108,7 +109,7 @@ input[type=checkbox] {
             display: inline-block;
             height: var(--checkbox-width, fonts.rem(val.checkboxSizes(checkboxItem_size)));
             left: 0;
-            margin-top: calc(var(--checkbox-width) * -0.5);
+            margin-top: var(--checkbox-topOffset, fonts.rem(val.checkboxSizes(checkboxItem_size)));
             position: absolute;
             top: 50%;
             width: var(--checkbox-width, fonts.rem(val.checkboxSizes(checkboxItem_size)));
