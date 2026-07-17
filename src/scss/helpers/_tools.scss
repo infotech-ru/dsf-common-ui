@@ -996,11 +996,11 @@
 }
 .borderRadius-base      { 
   border-radius: fonts.rem(val.brandSizes(border-radius-base));
-  --borderRadiusBase: fonts.rem(val.brandSizes(border-radius-base))
+  --borderRadiusBase: #{fonts.rem(val.brandSizes(border-radius-base))};
 }
 .borderRadius-baseBig   { 
   border-radius: fonts.rem(val.brandSizes(border-radius-base__big));
-  --borderRadiusBase: fonts.rem(val.brandSizes(border-radius-base__big))
+  --borderRadiusBase: #{fonts.rem(val.brandSizes(border-radius-base__big))};
 }
 
 @each $name, $value in colors.$brand-namecolors {

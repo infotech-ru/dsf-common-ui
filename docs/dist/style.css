@@ -17443,7 +17443,7 @@ body[style^=padding-right] .modal-sidebar {
   width: 0%;
   transition: width 0.6s ease;
 }
-.progress__textOuter .progress-bar:first-child {
+.progress__textOuter .progress-bar:first-child:last-child, .progress__textOuter .progress-bar:first-child {
   border-radius: var(--progress-border-radius, 0) 0 0 var(--progress-border-radius, 0);
 }
 .progress__textOuter .progress-bar:last-child {
@@ -21312,12 +21312,12 @@ tbody.collapse.in {
 
 .borderRadius-base {
   border-radius: 0.0625rem;
-  --borderRadiusBase: fonts.rem(val.brandSizes(border-radius-base)) ;
+  --borderRadiusBase: 0.0625rem;
 }
 
 .borderRadius-baseBig {
   border-radius: 0.0625rem;
-  --borderRadiusBase: fonts.rem(val.brandSizes(border-radius-base__big)) ;
+  --borderRadiusBase: 0.0625rem;
 }
 
 .svg-default svg,
