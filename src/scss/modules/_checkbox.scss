@@ -101,8 +101,8 @@ input[type=checkbox] {
             background-position: center center;
             border-color: val.brandCheckbox(checkboxItem_border);
             border-style: solid;
-            border-width: var(--checkbox-borderWidth, fonts.rem(val.chechboxSizes(checkboxItem_borderSize)));
-            border-radius: var(--checkbox-borderRadius, fonts.rem(val.chechboxSizes(checkboxItem_borderRadius)));
+            border-width: var(--checkbox-borderWidth, fonts.rem(val.checkboxSizes(checkboxItem_borderSize)));
+            border-radius: var(--checkbox-borderRadius, fonts.rem(val.checkboxSizes(checkboxItem_borderRadius)));
             content: " ";
             display: inline-block;
             height: var(--checkbox-width, fonts.rem(val.checkboxSizes(checkboxItem_size)));
