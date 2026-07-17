@@ -54,6 +54,12 @@
             .progress__textOuter & {
                 border-radius: var(--progress-border-radius, var(--borderRadiusProgress, 0)) 0 0 var(--progress-border-radius, var(--borderRadiusProgress, 0));
             }
+            &[style*="width: 100%"],
+            &[style*="width:100%"] {
+                .progress__textOuter & {
+                    border-radius: var(--progress-border-radius, var(--borderRadiusProgress, 0));
+                }
+            }
         }
         &:last-child {
             .progress__textOuter & {
@@ -64,9 +70,6 @@
         &[style*="width: 100%"],
         &[style*="width:100%"] {
             border-right: none;
-            .progress__textOuter & {
-                border-radius: var(--progress-border-radius, var(--borderRadiusProgress, 0));
-            }
         }
         &-success {
             background-color: val.brandProgress(progressBarSuccess_bgc);
