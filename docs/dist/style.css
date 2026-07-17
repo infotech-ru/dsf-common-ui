@@ -8829,7 +8829,7 @@ input[type=checkbox][disabled] {
   display: inline-block;
   height: var(--checkbox-width, 0.75rem);
   left: 0;
-  margin-top: var(--checkbox-topOffset, 0.75rem);
+  margin-top: var(--checkbox-topOffset, -0.375rem);
   position: absolute;
   top: 50%;
   width: var(--checkbox-width, 0.75rem);

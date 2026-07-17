@@ -109,7 +109,7 @@ input[type=checkbox] {
             display: inline-block;
             height: var(--checkbox-width, fonts.rem(val.checkboxSizes(checkboxItem_size)));
             left: 0;
-            margin-top: var(--checkbox-topOffset, fonts.rem(val.checkboxSizes(checkboxItem_size)));
+            margin-top: var(--checkbox-topOffset, fonts.rem(val.checkboxSizes(checkboxItem_size) * -0.5));
             position: absolute;
             top: 50%;
             width: var(--checkbox-width, fonts.rem(val.checkboxSizes(checkboxItem_size)));
