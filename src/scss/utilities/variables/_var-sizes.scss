@@ -71,8 +71,15 @@ $carousel-sizes:(
 
 $checkbox-sizes:(
   comboTreeCheckbox_size:          16,
+  checkboxItem_borderRadius:       0,
+  checkboxItemMedium_borderRadius: 0,
+  checkboxItemLarge_borderRadius:  baseValue.$base-radius,
+  checkboxItem_borderSize:         1,
+  checkboxItemMedium_borderSize:   1,
+  checkboxItemLarge_borderSize:    2,
   checkboxItem_size:               12,
-  checkboxItemBig_size:            24,
+  checkboxItemMedium_size:         18,
+  checkboxItemLarge_size:          24,
 )!default;
 
 $forms-sizes:(
