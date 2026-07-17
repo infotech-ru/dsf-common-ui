@@ -130,8 +130,10 @@ pre{
   margin-bottom: 0;
 }
 
+.bs-docs-example .progress{
+  margin-bottom: 0px;
+}
 .bs-docs-example .table,
-.bs-docs-example .progress,
 .bs-docs-example .well,
 .bs-docs-example .alert,
 .bs-docs-example .hero-unit,

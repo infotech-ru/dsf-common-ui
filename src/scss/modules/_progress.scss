@@ -26,7 +26,7 @@
     background-color: val.brandProgress(progress_bgc);
     background-image: none;
     background-repeat: repeat-x;
-    border-radius: var(--progress-border-radius, 0);
+    border-radius: var(--progress-border-radius, var(--borderRadiusProgress, 0));
     display: flex;
     // margin-bottom: val.progressSizes(progress_mb);
     height: var(--progress_height, fonts.rem(val.progressSizes(progress_height)));
@@ -52,24 +52,20 @@
         &:first-child:last-child,
         &:first-child {
             .progress__textOuter & {
-                border-radius: var(--progress-border-radius, 0) 0 0 var(--progress-border-radius, 0);
+                border-radius: var(--progress-border-radius, var(--borderRadiusProgress, 0)) 0 0 var(--progress-border-radius, var(--borderRadiusProgress, 0));
             }
         }
         &:last-child {
             .progress__textOuter & {
-                border-radius: 0 var(--progress-border-radius, 0) var(--progress-border-radius, 0) 0;
+                border-radius: 0 var(--progress-border-radius, var(--borderRadiusProgress, 0)) var(--progress-border-radius, var(--borderRadiusProgress, 0)) 0;
+                border-right: none;
             }
         }
-        // &:first-child:last-child {
-        //     .progress__textOuter & {
-        //         border-radius: var(--progress-border-radius, 0);
-        //     }
-        // }
         &[style*="width: 100%"],
         &[style*="width:100%"] {
             border-right: none;
             .progress__textOuter & {
-                border-radius: var(--progress-border-radius, 0);
+                border-radius: var(--progress-border-radius, var(--borderRadiusProgress, 0));
             }
         }
         &-success {
