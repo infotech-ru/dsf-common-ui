@@ -33,7 +33,7 @@
     // overflow: hidden - только это дает обрезку для border-radius у всех элементов внутри по своим краям. иначе элементы не имеющие в сумме 100% либо будут закруглены на сером поле, либо не будут закругляться. Но это создает невозможность выноса span со значением за пределы.
     overflow: hidden; 
     width: 100%;
-    .progress__textOuter & {
+    &.progress__textOuter {
         margin-top: calc($progressTextOuter--mt + fonts.rem(val.fontSizesBase(body)));
     }
     &-bar {
@@ -59,11 +59,16 @@
                 border-radius: 0 var(--progress-border-radius, 0) var(--progress-border-radius, 0) 0;
             }
         }
+        // &:first-child:last-child {
+        //     .progress__textOuter & {
+        //         border-radius: var(--progress-border-radius, 0);
+        //     }
+        // }
         &[style*="width: 100%"],
         &[style*="width:100%"] {
             border-right: none;
             .progress__textOuter & {
-                border-radius: 0 var(--progress-border-radius, 0) var(--progress-border-radius, 0) 0;
+                border-radius: var(--progress-border-radius, 0);
             }
         }
         &-success {

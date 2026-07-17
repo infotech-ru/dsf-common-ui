@@ -17426,7 +17426,7 @@ body[style^=padding-right] .modal-sidebar {
   overflow: hidden;
   width: 100%;
 }
-.progress__textOuter .progress {
+.progress.progress__textOuter {
   margin-top: calc(8px + 0.75rem);
 }
 .progress-bar {
@@ -17453,7 +17453,7 @@ body[style^=padding-right] .modal-sidebar {
   border-right: none;
 }
 .progress__textOuter .progress-bar[style*="width: 100%"], .progress__textOuter .progress-bar[style*="width:100%"] {
-  border-radius: 0 var(--progress-border-radius, 0) var(--progress-border-radius, 0) 0;
+  border-radius: var(--progress-border-radius, 0);
 }
 .progress-bar-success {
   background-color: #69C26A;
