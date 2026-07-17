@@ -8757,6 +8757,7 @@ input[type=checkbox][disabled] {
   line-height: 1.5rem;
   min-height: 1.75rem;
   position: relative;
+  --checkbox-width: 0.75rem;
 }
 .checkbox-item__medium {
   --checkbox-borderRadius: 0rem;
@@ -8827,7 +8828,7 @@ input[type=checkbox][disabled] {
   display: inline-block;
   height: var(--checkbox-width, 0.75rem);
   left: 0;
-  margin-top: -0.375rem;
+  margin-top: calc(var(--checkbox-width) * -0.5);
   position: absolute;
   top: 50%;
   width: var(--checkbox-width, 0.75rem);

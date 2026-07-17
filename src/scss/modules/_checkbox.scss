@@ -38,6 +38,7 @@ input[type=checkbox] {
     line-height: fonts.rem(val.lineHeight(checkbox));
     min-height: fonts.rem(val.formsSizes(formElem_height));
     position: relative;
+    --checkbox-width: #{fonts.rem(val.checkboxSizes(checkboxItem_size))};
     &__medium{
         --checkbox-borderRadius: #{fonts.rem(val.checkboxSizes(checkboxItemMedium_borderRadius))};
         --checkbox-borderWidth: #{fonts.rem(val.checkboxSizes(checkboxItemMedium_borderSize))};
@@ -107,7 +108,7 @@ input[type=checkbox] {
             display: inline-block;
             height: var(--checkbox-width, fonts.rem(val.checkboxSizes(checkboxItem_size)));
             left: 0;
-            margin-top: fonts.rem(-(val.checkboxSizes(checkboxItem_size) * 0.5));
+            margin-top: calc(var(--checkbox-width) * -0.5);
             position: absolute;
             top: 50%;
             width: var(--checkbox-width, fonts.rem(val.checkboxSizes(checkboxItem_size)));
