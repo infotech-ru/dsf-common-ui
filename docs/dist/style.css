@@ -17426,6 +17426,9 @@ body[style^=padding-right] .modal-sidebar {
   overflow: hidden;
   width: 100%;
 }
+.progress__textOuter .progress {
+  margin-top: calc(8px + 0.75rem);
+}
 .progress-bar {
   background-color: #4A8DC6;
   background-image: none;
@@ -17440,8 +17443,17 @@ body[style^=padding-right] .modal-sidebar {
   width: 0%;
   transition: width 0.6s ease;
 }
-.progress-bar[style*="widht:100%"] {
+.progress__textOuter .progress-bar:first-child {
+  border-radius: var(--progress-border-radius, 0) 0 0 var(--progress-border-radius, 0);
+}
+.progress__textOuter .progress-bar:last-child {
+  border-radius: 0 var(--progress-border-radius, 0) var(--progress-border-radius, 0) 0;
+}
+.progress-bar[style*="width: 100%"], .progress-bar[style*="width:100%"] {
   border-right: none;
+}
+.progress__textOuter .progress-bar[style*="width: 100%"], .progress__textOuter .progress-bar[style*="width:100%"] {
+  border-radius: 0 var(--progress-border-radius, 0) var(--progress-border-radius, 0) 0;
 }
 .progress-bar-success {
   background-color: #69C26A;
@@ -17482,6 +17494,11 @@ body[style^=padding-right] .modal-sidebar {
   top: 0;
   text-align: center;
 }
+.progress__textOuter .progress-bar span {
+  color: #333333;
+  font-size: 0.75rem;
+  top: calc(-100% - 8px);
+}
 .progress-bar-animated, .progress-bar.active, .progress.active .progress-bar {
   animation: progress-bar-stripes 2s linear infinite;
 }
@@ -17491,6 +17508,12 @@ body[style^=padding-right] .modal-sidebar {
   overflow: hidden;
   height: var(--progress_height, 0.875rem);
   width: 100%;
+}
+.progress__borderRadius {
+  --borderRadiusProgress: var(--borderRadiusBase);
+}
+.progress__textOuter {
+  overflow: unset;
 }
 
 .progress-striped .progress-bar {
@@ -17511,13 +17534,13 @@ body[style^=padding-right] .modal-sidebar {
   --progress-ring_bg: var(--color_white);
   --progress-ring_stroke: var(--color_grey2);
   --progress-ring_fill: var(--color_light-blue);
+  align-items: center;
   aspect-ratio: 1/1;
   background: conic-gradient(var(--progress-ring_fill) calc(var(--progress-ring_percent) * 1%), var(--progress-ring_stroke) 0);
   border-radius: 50%;
+  display: flex;
   height: var(--progress-ring_size);
   position: relative;
-  display: flex;
-  align-items: center;
   justify-content: center;
   width: var(--progress-ring_size);
 }
@@ -21254,38 +21277,47 @@ tbody.collapse.in {
 
 .borderRadius-0 {
   border-radius: 0;
+  --borderRadiusBase: 0;
 }
 
 .borderRadius-2 {
   border-radius: 2px;
+  --borderRadiusBase: 2px;
 }
 
 .borderRadius-4 {
   border-radius: 4px;
+  --borderRadiusBase: 4px;
 }
 
 .borderRadius-6 {
   border-radius: 6px;
+  --borderRadiusBase: 6px;
 }
 
 .borderRadius-8 {
   border-radius: 8px;
+  --borderRadiusBase: 8px;
 }
 
 .borderRadius-10 {
   border-radius: 10px;
+  --borderRadiusBase: 10px;
 }
 
 .borderRadius-100p {
   border-radius: 100%;
+  --borderRadiusBase: 100%;
 }
 
 .borderRadius-base {
   border-radius: 0.0625rem;
+  --borderRadiusBase: fonts.rem(val.brandSizes(border-radius-base)) ;
 }
 
 .borderRadius-baseBig {
   border-radius: 0.0625rem;
+  --borderRadiusBase: fonts.rem(val.brandSizes(border-radius-base__big)) ;
 }
 
 .svg-default svg,

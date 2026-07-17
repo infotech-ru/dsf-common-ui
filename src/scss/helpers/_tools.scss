@@ -966,15 +966,42 @@
   }
 }
 
-.borderRadius-0         { border-radius: 0;}
-.borderRadius-2         { border-radius: 2px;}
-.borderRadius-4         { border-radius: 4px;}
-.borderRadius-6         { border-radius: 6px;}
-.borderRadius-8         { border-radius: 8px;}
-.borderRadius-10        { border-radius: 10px;}
-.borderRadius-100p      { border-radius: 100%;}
-.borderRadius-base      { border-radius: fonts.rem(val.brandSizes(border-radius-base))}
-.borderRadius-baseBig   { border-radius: fonts.rem(val.brandSizes(border-radius-base__big))}
+.borderRadius-0         { 
+  border-radius: 0;
+  --borderRadiusBase: 0;
+}
+.borderRadius-2         { 
+  border-radius: 2px;
+  --borderRadiusBase: 2px;
+}
+.borderRadius-4         { 
+  border-radius: 4px;
+  --borderRadiusBase: 4px;
+}
+.borderRadius-6         { 
+  border-radius: 6px;
+  --borderRadiusBase: 6px;
+}
+.borderRadius-8         { 
+  border-radius: 8px;
+  --borderRadiusBase: 8px;
+}
+.borderRadius-10        { 
+  border-radius: 10px;
+  --borderRadiusBase: 10px;
+}
+.borderRadius-100p      { 
+  border-radius: 100%;
+  --borderRadiusBase: 100%;
+}
+.borderRadius-base      { 
+  border-radius: fonts.rem(val.brandSizes(border-radius-base));
+  --borderRadiusBase: fonts.rem(val.brandSizes(border-radius-base))
+}
+.borderRadius-baseBig   { 
+  border-radius: fonts.rem(val.brandSizes(border-radius-base__big));
+  --borderRadiusBase: fonts.rem(val.brandSizes(border-radius-base__big))
+}
 
 @each $name, $value in colors.$brand-namecolors {
   .svg-#{$name},

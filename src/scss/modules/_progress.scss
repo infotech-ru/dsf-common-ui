@@ -22,6 +22,7 @@
 
 .progress {
     $this: &;
+    $progressTextOuter--mt: 8px;
     background-color: val.brandProgress(progress_bgc);
     background-image: none;
     background-repeat: repeat-x;
@@ -29,8 +30,12 @@
     display: flex;
     // margin-bottom: val.progressSizes(progress_mb);
     height: var(--progress_height, fonts.rem(val.progressSizes(progress_height)));
-    overflow: hidden;
+    // overflow: hidden - только это дает обрезку для border-radius у всех элементов внутри по своим краям. иначе элементы не имеющие в сумме 100% либо будут закруглены на сером поле, либо не будут закругляться. Но это создает невозможность выноса span со значением за пределы.
+    overflow: hidden; 
     width: 100%;
+    .progress__textOuter & {
+        margin-top: calc($progressTextOuter--mt + fonts.rem(val.fontSizesBase(body)));
+    }
     &-bar {
         background-color: val.brandProgress(progressBar_bgc);
         background-image: none;
@@ -44,8 +49,22 @@
         text-align: center;
         width: 0%;
         @include transition.transition(width .6s ease);
-        &[style*="widht:100%"]{
+        &:first-child {
+            .progress__textOuter & {
+                border-radius: var(--progress-border-radius, 0) 0 0 var(--progress-border-radius, 0);
+            }
+        }
+        &:last-child {
+            .progress__textOuter & {
+                border-radius: 0 var(--progress-border-radius, 0) var(--progress-border-radius, 0) 0;
+            }
+        }
+        &[style*="width: 100%"],
+        &[style*="width:100%"] {
             border-right: none;
+            .progress__textOuter & {
+                border-radius: 0 var(--progress-border-radius, 0) var(--progress-border-radius, 0) 0;
+            }
         }
         &-success {
             background-color: val.brandProgress(progressBarSuccess_bgc);
@@ -85,6 +104,11 @@
             position: absolute;
             top: 0;
             text-align: center;
+            .progress__textOuter & {
+                color: val.brandPalette(body_color);
+                font-size: fonts.rem(val.fontSizesBase(body));
+                top: calc(-100% - $progressTextOuter--mt)
+            }
         }
         &-animated,
         &.active,
@@ -98,6 +122,12 @@
         overflow: hidden;
         height: var(--progress_height, fonts.rem(val.progressSizes(progress_height)));
         width: 100%;
+    }
+    &__borderRadius{
+        #{--borderRadiusProgress}: var(--borderRadiusBase);
+    }
+    &__textOuter{
+        overflow: unset;
     }
 }
 
@@ -114,40 +144,38 @@
     justify-content: center;
     position: relative;
     &-bar{
-    --progress-ring_percent: 0;
-    --progress-ring_border: 8px;
-    --progress-ring_size: 100%;
-    --progress-ring_bg: var(--color_white);
-    --progress-ring_stroke: var(--color_grey2);
-    --progress-ring_fill: var(--color_light-blue);
-    
-    aspect-ratio: 1/1;
-    background: conic-gradient(
-        var(--progress-ring_fill) calc(var(--progress-ring_percent) * 1%),
-        var(--progress-ring_stroke) 0
-    );
-    border-radius: 50%;
-    height: var(--progress-ring_size);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: var(--progress-ring_size);
-    &::before {
-        background: var(--progress-ring_bg);
+        --progress-ring_percent: 0;
+        --progress-ring_border: 8px;
+        --progress-ring_size: 100%;
+        --progress-ring_bg: var(--color_white);
+        --progress-ring_stroke: var(--color_grey2);
+        --progress-ring_fill: var(--color_light-blue);
+        align-items: center;
+        aspect-ratio: 1/1;
+        background: conic-gradient(
+            var(--progress-ring_fill) calc(var(--progress-ring_percent) * 1%),
+            var(--progress-ring_stroke) 0
+        );
         border-radius: 50%;
-        content: "";
-        pointer-events: none;
-        position: absolute;
-        height: calc(var(--progress-ring_size) - var(--progress-ring_border) * 2);
-        width: calc(var(--progress-ring_size) - var(--progress-ring_border) * 2);
+        display: flex;
+        height: var(--progress-ring_size);
+        position: relative;
+        justify-content: center;
+        width: var(--progress-ring_size);
+        &::before {
+            background: var(--progress-ring_bg);
+            border-radius: 50%;
+            content: "";
+            pointer-events: none;
+            position: absolute;
+            height: calc(var(--progress-ring_size) - var(--progress-ring_border) * 2);
+            width: calc(var(--progress-ring_size) - var(--progress-ring_border) * 2);
+        }
     }
-    }
-    
     &-label {
-    display: block;
-    font-size: 15px;
-    position: absolute;
-    text-align: center;
+        display: block;
+        font-size: 15px;
+        position: absolute;
+        text-align: center;
     }
 }
