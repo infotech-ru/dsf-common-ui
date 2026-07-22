@@ -111,6 +111,15 @@ var DSFUI = (function (exports) {
     var i = _toPrimitive(t, "string");
     return "symbol" == typeof i ? i : i + "";
   }
+  function _typeof(o) {
+    "@babel/helpers - typeof";
+
+    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+      return typeof o;
+    } : function (o) {
+      return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+    }, _typeof(o);
+  }
   function _unsupportedIterableToArray(r, a) {
     if (r) {
       if ("string" == typeof r) return _arrayLikeToArray(r, a);
@@ -1094,7 +1103,82 @@ var DSFUI = (function (exports) {
     }
   }
 
-  // import {t} from "./translate";
+  var translated = new Map();
+
+  /*
+
+  Перевод для js
+
+  Пример:
+
+  t(['Дилер', 'Валюта']) // запуск перевода - аякс-запрос на бэк. Язык указывать не надо — будет использовать текущий. На бэке yii::t
+      .then(r => {
+          // перевод готов
+          console.log(r); // { 'Дилер': 'Dealer', 'Валюта': 'Currency' }
+          console.log(t('Дилер')); // 'Dealer'
+          t(['Дилер']); // повторного запроса не будет
+      });
+
+  Пример 2:
+
+  t(['Дилер']);
+
+  console.log(t('Дилер')); // вернёт оригинальную строку - запрос ещё не прошёл
+
+  $(button).on('click', function() {
+      console.log(t('Дилер')); // скорее всего перевод уже будет готов
+  });
+
+  Пример 3 (перевод с параметрами):
+
+  const T_CONFIRM_ALL = { message: 'После нажатия кнопки «Подтвердить» процесс подтверждения затронет {count, plural, one{# заказ-наряд} few{# заказ-наряда} many{# заказ-нарядов} other{# заказ-нарядов}} по ТО. <br>Все заказ-наряды с ошибками подтверждения будут пропущены.', params: { count: 0 }};
+  t([T_CONFIRM_ALL]);
+
+   */
+
+  function t(messages) {
+    if (Array.isArray(messages)) {
+      if (messages.every(function (i) {
+        return _typeof(i) === 'object' ? translated.has(i.message) : translated.has(i);
+      })) {
+        var result = Object.create(null);
+        messages.forEach(function (i) {
+          return _typeof(i) === 'object' ? result[i] = translated.get(i.message) : result[i] = translated.get(i);
+        });
+        return Promise.resolve(result);
+      }
+      return new Promise(function (resolve) {
+        var result = Object.create(null);
+        fetch(window.location.origin + '/translate', {
+          body: JSON.stringify(_defineProperty({
+            messages: messages
+          }, $("meta[name=csrf-param]").attr("content"), $("meta[name=csrf-token]").attr("content"))),
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          method: 'post'
+        }).then(function (r) {
+          return r.json();
+        }).then(function (r) {
+          for (var key in r) {
+            result[key] = r[key];
+            translated.set(key, r[key]);
+          }
+          resolve(result);
+        })["catch"](function (_) {
+          messages.forEach(function (i) {
+            return _typeof(i) === 'object' ? result[i.message] = i.message : result[i] = i;
+          });
+          return resolve(result);
+        });
+      });
+    }
+    if (_typeof(messages) === 'object') {
+      return translated.has(messages.message) ? translated.get(messages.message) : messages.message;
+    }
+    return translated.has(messages) ? translated.get(messages) : messages;
+  }
+
   var isListeningDocument = false;
   function initCopyDataAttrToClipboardBtns() {
     if (!isListeningDocument) {
