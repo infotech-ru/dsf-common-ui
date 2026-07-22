@@ -33,6 +33,7 @@ export function tablesInit() {
 export function CustomFileUploadInit() { 
   CustomFileUpload();
 }
-export function initTableCollapse(){
+export function CollapseTableTdInit() {
   initCollapseTableTd({debug: true});
+
 }

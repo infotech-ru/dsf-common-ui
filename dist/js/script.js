@@ -1611,16 +1611,16 @@ var DSFUI = (function (exports) {
   function CustomFileUploadInit() {
     CustomFileUpload();
   }
-  function initTableCollapse() {
+  function CollapseTableTdInit() {
     initCollapseTableTd({
       debug: true
     });
   }
 
+  exports.CollapseTableTdInit = CollapseTableTdInit;
   exports.CustomFileUploadInit = CustomFileUploadInit;
   exports.OnLoad = OnLoad;
   exports.iconsInit = iconsInit;
-  exports.initTableCollapse = initTableCollapse;
   exports.tablesInit = tablesInit;
 
   Object.defineProperty(exports, '__esModule', { value: true });
