@@ -96,7 +96,7 @@ initTableCollapse({
         <thead>
             <tr>
                 <th rowspan="3">Заголовок</th>
-                <th class="text-center collapseTdIcon_td" data-collapse-colspan-calc="" data-collapse-colspan-set="collapse-TableTd-1" colspan="4">
+                <th class="text-center collapseTdIcon_td" data-collapse-colspan-set="collapse-TableTd-1" colspan="4">
                     Заголовок 1
                     <a class="collapseTdIcon_link js-collapse-trigger" data-collapse-target-get="collapse-TableTd-1">
                     <span class="collapseTdIcon svg--icon"><svg class="bicolors-width__24vb" width="24" height="24">
@@ -107,9 +107,9 @@ initTableCollapse({
                 <th class="text-center" data-collapse-colspan-calc="" data-collapse-colspan-set="collapse-TableTd-3 collapse-TableTd-4" colspan="4">Заголовок 3</th>
             </tr>
             <tr>
-                <th class="border-left__none text-center" data-collapse-colspan-value="2" data-collapse-colspan-set="collapse-TableTd-2" colspan="2">Подзаголовок 1.1</th>
-                <th rowspan="2" data-collapse-target-set="collapse-TableTd-1">Подзаг 1.2</th>
-                <th rowspan="2" data-collapse-target-set="collapse-TableTd-1">Итого</th>
+                <th class="border-left__none text-center" data-collapse-colspan-value="-1" data-collapse-colspan-set="collapse-TableTd-2" colspan="2">Подзаголовок 1.1</th>
+                <th rowspan="2" data-collapse-target-set="collapse-TableTd-1">Hide</th>
+                <th rowspan="2" data-collapse-target-set="collapse-TableTd-1">Hide</th>
                 
                 <th class="text-center collapseTdIcon_td" colspan="2">
                     Подзаголовок 2.1<a class="collapseTdIcon_link js-collapse-trigger" data-collapse-target-get="collapse-TableTd-2">
@@ -120,13 +120,13 @@ initTableCollapse({
                 <th rowspan="2">Подзаг 2.2</th>
                 <th rowspan="2">Итого</th>
 
-                <th class="text-center collapseTdIcon_td" colspan="2">
+                <th class="text-center collapseTdIcon_td" colspan="2" data-collapse-colspan-set="collapse-TableTd-3">
                     Подзаголовок 3.1<a class="collapseTdIcon_link js-collapse-trigger" data-collapse-target-get="collapse-TableTd-3">
                         <span class="collapseTdIcon svg--icon"><svg class="bicolors-width__24vb" width="24" height="24">
                                 <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-width__24vb"></use>
                             </svg></span> </a>
                 </th>
-                <th class="text-center collapseTdIcon_td" colspan="2">
+                <th class="text-center collapseTdIcon_td" colspan="2" data-collapse-colspan-calc="" data-collapse-colspan-set="collapse-TableTd-4">
                     Подзаголовок 3.2<a class="collapseTdIcon_link js-collapse-trigger" data-collapse-target-get="collapse-TableTd-4">
                         <span class="collapseTdIcon svg--icon"><svg class="bicolors-width__24vb" width="24" height="24">
                                 <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-width__24vb"></use>
