@@ -11,6 +11,7 @@ import { FormsFree } from "./forms-free.js";
 import { AutoresizeTextarea } from "./autoresizeTextarea.js";
 import { CustomFileUpload } from "./CustomFileUpload.js";
 import { initCopyDataAttrToClipboardBtns } from "./copyTextToClipboardNotify.js";
+import { initCollapseTableTd } from "./CollapseTableTd.js";
   
 export function OnLoad() {
   itemActionMenu();
@@ -31,4 +32,7 @@ export function tablesInit() {
 }
 export function CustomFileUploadInit() { 
   CustomFileUpload();
+}
+export function initTableCollapse(){
+  initCollapseTableTd({debug: true});
 }

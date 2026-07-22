@@ -5,3 +5,4 @@ export { CustomFileUpload } from './CustomFileUpload.js';
 export { FormsFree } from './forms-free.js';
 export { ParseHeight } from './parseHeight.js';
 export { FullScreenMode } from './fullScreenMode.js';
+export { initCollapseTableTd } from './CollapseTableTd.js';

@@ -20,7 +20,7 @@ order: 04
 
 <h3>API и Инициализация</h3>
 {% highlight js %}
-import { ParseHeight, EnableHeightWatch, DisableHeightWatch } from './path/to/parse-height';
+import { ParseHeight, EnableHeightWatch, DisableHeightWatch } from './parseHeight';
 
 // 1. Разовый расчет высоты для всех контейнеров с классом .js-target-set-height
 ParseHeight('.js-target-set-height');
@@ -158,7 +158,7 @@ DisableHeightWatch('.js-target-set-height');
 <h4>Теперь родитель (js-target-parent-get-height) должен находиться внутри или выше контейнера (js-target-set-height) в DOM-дереве.</h4>
 
 {% highlight html %}
-<!-- Внешняя обертка является родителем -->
+
 <div class="sidebar-wrapper js-target-parent-get-height">
     
     <!-- Контейнер, на который будет установлена вычисленная высота -->
@@ -175,13 +175,13 @@ DisableHeightWatch('.js-target-set-height');
 <h4 class="mt-gutter">Множество независимых блоков на одной странице</h4>
 <p>Благодаря функции findParent, вы можете использовать одинаковые классы для разных виджетов, и скрипт корректно сопоставит каждый контейнер со своим родителем.</p>
 {% highlight html %}
-<!-- Виджет 1 -->
+
 <section class="widget-parent js-target-parent-get-height" id="widget-1">
     <div class="widget js-target-set-height"></div>
     <div class="widget-item js-target-get-height">Элемент 1</div>
 </section>
 
-<!-- Виджет 2 (с такими же классами!) -->
+
 <section class="widget-parent js-target-parent-get-height" id="widget-2">
     <div class="widget js-target-set-height"></div>
     <div class="widget-item js-target-get-height">Элемент 2</div>

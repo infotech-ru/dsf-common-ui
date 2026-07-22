@@ -1,6 +1,73 @@
 var DSFUI = (function (exports) {
   'use strict';
 
+  function _arrayLikeToArray(r, a) {
+    (null == a || a > r.length) && (a = r.length);
+    for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e];
+    return n;
+  }
+  function _classCallCheck(a, n) {
+    if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function");
+  }
+  function _defineProperties(e, r) {
+    for (var t = 0; t < r.length; t++) {
+      var o = r[t];
+      o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o);
+    }
+  }
+  function _createClass(e, r, t) {
+    return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", {
+      writable: !1
+    }), e;
+  }
+  function _createForOfIteratorHelper(r, e) {
+    var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+    if (!t) {
+      if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) {
+        t && (r = t);
+        var n = 0,
+          F = function () {};
+        return {
+          s: F,
+          n: function () {
+            return n >= r.length ? {
+              done: !0
+            } : {
+              done: !1,
+              value: r[n++]
+            };
+          },
+          e: function (r) {
+            throw r;
+          },
+          f: F
+        };
+      }
+      throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+    }
+    var o,
+      a = !0,
+      u = !1;
+    return {
+      s: function () {
+        t = t.call(r);
+      },
+      n: function () {
+        var r = t.next();
+        return a = r.done, r;
+      },
+      e: function (r) {
+        u = !0, o = r;
+      },
+      f: function () {
+        try {
+          a || null == t.return || t.return();
+        } finally {
+          if (u) throw o;
+        }
+      }
+    };
+  }
   function _defineProperty(e, r, t) {
     return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, {
       value: t,
@@ -43,6 +110,13 @@ var DSFUI = (function (exports) {
   function _toPropertyKey(t) {
     var i = _toPrimitive(t, "string");
     return "symbol" == typeof i ? i : i + "";
+  }
+  function _unsupportedIterableToArray(r, a) {
+    if (r) {
+      if ("string" == typeof r) return _arrayLikeToArray(r, a);
+      var t = {}.toString.call(r).slice(8, -1);
+      return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0;
+    }
   }
 
   var isListeningDocument$1 = false;
@@ -1136,6 +1210,388 @@ var DSFUI = (function (exports) {
     }
   }
 
+  /**
+   * Система логирования и вывода ошибок
+   */
+  var CollapseLogger = /*#__PURE__*/function () {
+    function CollapseLogger() {
+      var debug = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+      _classCallCheck(this, CollapseLogger);
+      this.debug = debug;
+      this.prefix = '[TableCollapse]';
+    }
+    return _createClass(CollapseLogger, [{
+      key: "log",
+      value: function log() {
+        var _console;
+        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+        if (this.debug) (_console = console).log.apply(_console, [this.prefix].concat(args));
+      }
+    }, {
+      key: "warn",
+      value: function warn() {
+        var _console2;
+        for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+          args[_key2] = arguments[_key2];
+        }
+        if (this.debug) (_console2 = console).warn.apply(_console2, [this.prefix].concat(args));
+      }
+    }, {
+      key: "error",
+      value: function error() {
+        var _console3;
+        for (var _len3 = arguments.length, args = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          args[_key3] = arguments[_key3];
+        }
+        (_console3 = console).error.apply(_console3, [this.prefix].concat(args));
+      }
+    }]);
+  }();
+  /**
+   * Основной класс управления сворачиванием и colspan
+   */
+  var TableCollapseManager = /*#__PURE__*/function () {
+    function TableCollapseManager(options, logger) {
+      _classCallCheck(this, TableCollapseManager);
+      this.logger = logger;
+      this.settings = {
+        triggerClass: options.triggerClass || 'js-collapse-trigger',
+        addClass: options.addClass || 'd-none',
+        removeClass: options.removeClass || '',
+        targetGetAttr: 'data-collapse-target-get',
+        targetSetAttr: 'data-collapse-target-set',
+        colspanSetAttr: 'data-collapse-colspan-set',
+        colspanValueAttr: 'data-collapse-colspan-value',
+        colspanCalcAttr: 'data-collapse-colspan-calc',
+        origColspanAttr: 'data-orig-colspan'
+      };
+      this.init();
+    }
+    return _createClass(TableCollapseManager, [{
+      key: "init",
+      value: function init() {
+        var _this = this;
+        this.logger.log('Инициализация скрипта с настройками:', this.settings);
+        document.addEventListener('click', function (e) {
+          var trigger = e.target.closest(".".concat(_this.settings.triggerClass));
+          if (trigger) {
+            e.preventDefault();
+            _this.handleClick(trigger);
+          }
+        });
+        this.storeOriginalColspans();
+        this.logger.log('Инициализация завершена.');
+      }
+    }, {
+      key: "storeOriginalColspans",
+      value: function storeOriginalColspans() {
+        var _this2 = this;
+        var count = 0;
+        var selectors = [".".concat(this.settings.triggerClass), "[".concat(this.settings.colspanSetAttr, "]")];
+        selectors.forEach(function (selector) {
+          document.querySelectorAll(selector).forEach(function (el) {
+            var cell = el.closest('td, th') || (el.tagName === 'TD' || el.tagName === 'TH' ? el : null);
+            if (cell && !cell.hasAttribute(_this2.settings.origColspanAttr)) {
+              var orig = cell.colSpan || 1;
+              cell.setAttribute(_this2.settings.origColspanAttr, orig);
+              count++;
+            }
+          });
+        });
+        this.logger.log("\u0421\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u043E \u0438\u0441\u0445\u043E\u0434\u043D\u044B\u0445 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0439 colspan: ".concat(count));
+      }
+    }, {
+      key: "handleClick",
+      value: function handleClick(trigger) {
+        try {
+          var group = trigger.getAttribute(this.settings.targetGetAttr);
+          if (!group) {
+            this.logger.warn('Клик по триггеру без data-collapse-target-get', trigger);
+            return;
+          }
+          this.logger.log("\u041A\u043B\u0438\u043A \u043F\u043E \u0442\u0440\u0438\u0433\u0433\u0435\u0440\u0443. \u0413\u0440\u0443\u043F\u043F\u0430: \"".concat(group, "\""));
+          var isCollapsed = this.toggleVisibility(group);
+          this.recalculateAllColspans(group);
+        } catch (error) {
+          this.logger.error('Ошибка при обработке клика:', error);
+        }
+      }
+    }, {
+      key: "toggleVisibility",
+      value: function toggleVisibility(group) {
+        var _this3 = this;
+        var targets = document.querySelectorAll("[".concat(this.settings.targetSetAttr, "]"));
+        var isCollapsed = false;
+        targets.forEach(function (target) {
+          var targetGroups = _this3.parseGroups(target.getAttribute(_this3.settings.targetSetAttr));
+          if (targetGroups.includes(group)) {
+            if (target.classList.contains(_this3.settings.addClass)) {
+              target.classList.remove(_this3.settings.addClass);
+              if (_this3.settings.removeClass) target.classList.add(_this3.settings.removeClass);
+              isCollapsed = false;
+            } else {
+              target.classList.add(_this3.settings.addClass);
+              if (_this3.settings.removeClass) target.classList.remove(_this3.settings.removeClass);
+              isCollapsed = true;
+            }
+          }
+        });
+        return isCollapsed;
+      }
+    }, {
+      key: "recalculateAllColspans",
+      value: function recalculateAllColspans(changedGroup) {
+        var _this4 = this;
+        var affectedCells = new Set();
+
+        // 1. Родители всех триггеров этой группы
+        document.querySelectorAll("[".concat(this.settings.targetGetAttr, "=\"").concat(changedGroup, "\"]")).forEach(function (trg) {
+          var parentCell = trg.closest('td, th');
+          if (parentCell) affectedCells.add(parentCell);
+        });
+
+        // 2. Все ячейки с data-collapse-colspan-set, слушающие эту группу
+        document.querySelectorAll("[".concat(this.settings.colspanSetAttr, "]")).forEach(function (cell) {
+          var cellGroups = _this4.parseGroups(cell.getAttribute(_this4.settings.colspanSetAttr));
+          if (cellGroups.includes(changedGroup)) {
+            affectedCells.add(cell);
+          }
+        });
+        this.logger.log("\u041F\u0435\u0440\u0435\u0441\u0447\u0435\u0442 colspan \u0434\u043B\u044F ".concat(affectedCells.size, " \u044F\u0447\u0435\u0435\u043A"));
+        affectedCells.forEach(function (cell) {
+          try {
+            _this4.recalculateCellColspan(cell);
+          } catch (error) {
+            _this4.logger.error("\u041E\u0448\u0438\u0431\u043A\u0430 \u043F\u0435\u0440\u0435\u0441\u0447\u0435\u0442\u0430 colspan \u0434\u043B\u044F \u044F\u0447\u0435\u0439\u043A\u0438:", cell, error);
+          }
+        });
+      }
+    }, {
+      key: "recalculateCellColspan",
+      value: function recalculateCellColspan(cell) {
+        var origColspan = parseInt(cell.getAttribute(this.settings.origColspanAttr)) || 1;
+        var cellGroups = this.parseGroups(cell.getAttribute(this.settings.colspanSetAttr) || '');
+
+        // Добавляем группу, если это родитель триггера
+        var triggerInside = cell.querySelector(".".concat(this.settings.triggerClass));
+        if (triggerInside) {
+          var triggerGroup = triggerInside.getAttribute(this.settings.targetGetAttr);
+          if (triggerGroup && !cellGroups.includes(triggerGroup)) {
+            cellGroups.push(triggerGroup);
+          }
+        }
+        var totalDelta = 0;
+        var _iterator = _createForOfIteratorHelper(cellGroups),
+          _step;
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var group = _step.value;
+            if (!this.isGroupCollapsed(group)) continue;
+            var delta = this.calculateDeltaForGroup(cell, group);
+            totalDelta += delta;
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+        var newColspan = Math.max(1, origColspan + totalDelta);
+        if (newColspan !== cell.colSpan) {
+          this.logger.log("colspan \u0438\u0437\u043C\u0435\u043D\u0451\u043D: ".concat(cell.colSpan, " \u2192 ").concat(newColspan, " (\u0434\u0435\u043B\u044C\u0442\u0430: ").concat(totalDelta, ")"), cell);
+        }
+        cell.colSpan = newColspan;
+      }
+    }, {
+      key: "calculateDeltaForGroup",
+      value: function calculateDeltaForGroup(cell, group) {
+        var triggers = Array.from(document.querySelectorAll("[".concat(this.settings.targetGetAttr, "=\"").concat(group, "\"]")));
+        if (triggers.length === 0) {
+          this.logger.warn("\u041D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D \u0442\u0440\u0438\u0433\u0433\u0435\u0440 \u0434\u043B\u044F \u0433\u0440\u0443\u043F\u043F\u044B \"".concat(group, "\""));
+          return 0;
+        }
+        var isDirectParent = triggers.some(function (trg) {
+          return cell.contains(trg);
+        });
+        var position = this.getCellPositionRelativeToTriggers(cell, triggers);
+
+        // --- Ручной режим (приоритет для любой позиции) ---
+        if (cell.hasAttribute(this.settings.colspanValueAttr)) {
+          var rawValue = cell.getAttribute(this.settings.colspanValueAttr);
+          var value = parseInt(rawValue);
+          if (isNaN(value)) {
+            this.logger.error("\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0435 \u0447\u0438\u0441\u043B\u043E \u0432 ".concat(this.settings.colspanValueAttr, ": \"").concat(rawValue, "\""), cell);
+            return 0;
+          }
+          this.logger.log("[\u0420\u0443\u0447\u043D\u043E\u0439] \u041F\u043E\u0437\u0438\u0446\u0438\u044F: ".concat(position, ", \u0434\u0435\u043B\u044C\u0442\u0430: ").concat(value));
+          return value;
+        }
+
+        // --- Ячейка ниже триггера: без ручного режима — игнорируем ---
+        if (position === 'below') {
+          this.logger.log("[\u0410\u0432\u0442\u043E] \u042F\u0447\u0435\u0439\u043A\u0430 \u043D\u0438\u0436\u0435 \u0442\u0440\u0438\u0433\u0433\u0435\u0440\u0430 \u2014 \u0434\u0435\u043B\u044C\u0442\u0430 0");
+          return 0;
+        }
+
+        // --- Автоматический режим (родитель и ячейки выше) ---
+        var calcMode = (cell.getAttribute(this.settings.colspanCalcAttr) || '').toLowerCase();
+        var isAddition = calcMode === 'plus' || calcMode === 'add';
+
+        // Считаем скрытые ячейки в СЛЕДУЮЩЕЙ строке после строки ТРИГГЕРА
+        // Если ячейка выше — берём все триггеры группы и суммируем
+        // Если родитель — берём только свой триггер
+        var autoCount = 0;
+        if (isDirectParent) {
+          var myTrigger = triggers.find(function (trg) {
+            return cell.contains(trg);
+          });
+          autoCount = this.getAutoHiddenCountInNextRow(group, myTrigger);
+        } else {
+          // Для ячейки выше — суммируем по всем триггерам группы
+          var _iterator2 = _createForOfIteratorHelper(triggers),
+            _step2;
+          try {
+            for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+              var trg = _step2.value;
+              autoCount += this.getAutoHiddenCountInNextRow(group, trg);
+            }
+          } catch (err) {
+            _iterator2.e(err);
+          } finally {
+            _iterator2.f();
+          }
+        }
+
+        // Для родителя по умолчанию — вычитание
+        if (isDirectParent && !isAddition) {
+          this.logger.log("[\u0410\u0432\u0442\u043E] \u0420\u043E\u0434\u0438\u0442\u0435\u043B\u044C (\u0432\u044B\u0447\u0438\u0442\u0430\u043D\u0438\u0435). \u0421\u043A\u0440\u044B\u0442\u043E \u0432 \u0441\u043B\u0435\u0434. \u0441\u0442\u0440\u043E\u043A\u0435: ".concat(autoCount));
+          return -autoCount;
+        }
+
+        // Для ячеек выше / родителя с plus — режим из атрибута
+        if (isAddition) {
+          this.logger.log("[\u0410\u0432\u0442\u043E] \u041F\u043E\u0437\u0438\u0446\u0438\u044F: ".concat(position, " (\u0441\u043B\u043E\u0436\u0435\u043D\u0438\u0435). \u0421\u043A\u0440\u044B\u0442\u043E: ").concat(autoCount));
+          return autoCount;
+        } else {
+          this.logger.log("[\u0410\u0432\u0442\u043E] \u041F\u043E\u0437\u0438\u0446\u0438\u044F: ".concat(position, " (\u0432\u044B\u0447\u0438\u0442\u0430\u043D\u0438\u0435). \u0421\u043A\u0440\u044B\u0442\u043E: ").concat(autoCount));
+          return -autoCount;
+        }
+      }
+
+      /**
+       * Считает сумму colspan ячеек с нужной группой ТОЛЬКО в следующей строке после строки триггера
+       */
+    }, {
+      key: "getAutoHiddenCountInNextRow",
+      value: function getAutoHiddenCountInNextRow(group, trigger) {
+        var _this5 = this;
+        if (!trigger) return 0;
+        var triggerRow = trigger.closest('tr');
+        if (!triggerRow) {
+          this.logger.warn('Не удалось найти строку триггера', trigger);
+          return 0;
+        }
+
+        // Ищем следующую строку (tr)
+        var nextRow = triggerRow.nextElementSibling;
+        while (nextRow && nextRow.tagName !== 'TR') {
+          nextRow = nextRow.nextElementSibling;
+        }
+        if (!nextRow) {
+          this.logger.warn('Не найдена следующая строка после триггера', triggerRow);
+          return 0;
+        }
+        var hiddenCount = 0;
+        nextRow.querySelectorAll('td, th').forEach(function (nextCell) {
+          var nextCellGroups = _this5.parseGroups(nextCell.getAttribute(_this5.settings.targetSetAttr));
+          if (nextCellGroups.includes(group)) {
+            hiddenCount += nextCell.colSpan || 1;
+          }
+        });
+        return hiddenCount;
+      }
+    }, {
+      key: "getCellPositionRelativeToTriggers",
+      value: function getCellPositionRelativeToTriggers(cell, triggers) {
+        var cellRow = cell.closest('tr');
+        if (!cellRow) return 'unknown';
+        var hasAbove = false;
+        var hasBelow = false;
+        var hasSame = false;
+        var _iterator3 = _createForOfIteratorHelper(triggers),
+          _step3;
+        try {
+          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+            var trigger = _step3.value;
+            var triggerRow = trigger.closest('tr');
+            if (!triggerRow) continue;
+            if (triggerRow === cellRow) {
+              hasSame = true;
+            } else {
+              var pos = triggerRow.compareDocumentPosition(cellRow);
+              if (pos & Node.DOCUMENT_POSITION_FOLLOWING) {
+                hasBelow = true; // Ячейка ниже триггера
+              } else if (pos & Node.DOCUMENT_POSITION_PRECEDING) {
+                hasAbove = true; // Ячейка выше триггера
+              }
+            }
+          }
+        } catch (err) {
+          _iterator3.e(err);
+        } finally {
+          _iterator3.f();
+        }
+        if (hasSame) return 'same';
+        if (hasAbove && !hasBelow) return 'above';
+        if (hasBelow && !hasAbove) return 'below';
+        return 'mixed';
+      }
+    }, {
+      key: "isGroupCollapsed",
+      value: function isGroupCollapsed(group) {
+        var targets = document.querySelectorAll("[".concat(this.settings.targetSetAttr, "]"));
+        var _iterator4 = _createForOfIteratorHelper(targets),
+          _step4;
+        try {
+          for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+            var target = _step4.value;
+            var targetGroups = this.parseGroups(target.getAttribute(this.settings.targetSetAttr));
+            if (targetGroups.includes(group)) {
+              return target.classList.contains(this.settings.addClass);
+            }
+          }
+        } catch (err) {
+          _iterator4.e(err);
+        } finally {
+          _iterator4.f();
+        }
+        return false;
+      }
+    }, {
+      key: "parseGroups",
+      value: function parseGroups(str) {
+        if (!str) return [];
+        return str.split(/[\s,]+/).map(function (s) {
+          return s.trim();
+        }).filter(Boolean);
+      }
+    }]);
+  }();
+  function initCollapseTableTd() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    var logger = new CollapseLogger(options.debug || false);
+    logger.log('Запуск инициализации TableCollapse...');
+    try {
+      var instance = new TableCollapseManager(options, logger);
+      logger.log('TableCollapse успешно инициализирован.');
+      return instance;
+    } catch (error) {
+      logger.error('Критическая ошибка при инициализации:', error);
+      return null;
+    }
+  }
+
   function OnLoad() {
     itemActionMenu();
     multilevelMenu();
@@ -1155,10 +1611,16 @@ var DSFUI = (function (exports) {
   function CustomFileUploadInit() {
     CustomFileUpload();
   }
+  function initTableCollapse() {
+    initCollapseTableTd({
+      debug: true
+    });
+  }
 
   exports.CustomFileUploadInit = CustomFileUploadInit;
   exports.OnLoad = OnLoad;
   exports.iconsInit = iconsInit;
+  exports.initTableCollapse = initTableCollapse;
   exports.tablesInit = tablesInit;
 
   Object.defineProperty(exports, '__esModule', { value: true });

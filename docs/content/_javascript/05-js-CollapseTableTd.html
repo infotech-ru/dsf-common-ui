@@ -1,0 +1,149 @@
+---
+Title: Динамический расчет и установка высоты
+menutitle: Расчет и установка высоты
+menusubtitle: js
+menusubtitleclass: label label-yellow
+category: javascript
+anchor: js-parseHeight
+order: 04
+---
+<div class="unityBlock">
+<p>Лёгкий vanilla-JS скрипт (ES-модуль) для управления сворачиванием/разворачиванием групп ячеек таблицы с автоматическим пересчётом `colspan`. </p>
+<h3>Возможности</h3>
+<p>Сворачивание/разворачивание строк по клику на триггер</p>
+<p>Автоматический пересчёт colspan у ячеек выше триггера, у родителя триггера и у ячеек ниже (в ручном режиме)</p>
+<p>Поддержка нескольких групп сворачивания на одной странице</p>
+<p>Один элемент может реагировать сразу на несколько групп</p>
+<p>Ручной и автоматический режимы изменения colspan (сложение/вычитание)</p>
+<p>Корректная работа с colspan у самих скрытых ячеек</p>
+<p>Делегирование событий — работает с динамически добавленными элементами</p>
+<p>Встроенное логирование и обработка ошибок</p>
+<p>Полностью настраиваемые классы и data-атрибуты</p>
+<h3>Подключение и Инициализация</h3>
+{% highlight js %}
+import { initTableCollapse } from "./CollapseTableTd.js";
+
+initTableCollapse({
+    debug: true,
+    triggerClass: 'js-collapse-trigger',
+    addClass: 'd-none',
+    removeClass: '',
+});
+{% endhighlight %}
+
+<table class="table table__border">
+    <thead>
+        <tr>
+            <th><div><span>Параметр</span></div></th>
+            <th><div><span>Тип</span></div></th>
+            <th><div><span>По умолчанию</span></div></th>
+            <th><div><span>Описание</span></div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><div><code>debug</code></div></td>
+            <td><div><code>boolean</code></div></td>
+            <td><div><code>false</code></div></td>
+            <td><div><span>Выводить логи в консоль</span></div></td>
+        </tr>
+        <tr>
+            <td><div><code>triggerClass</code></div></td>
+            <td><div><code>string</code></div></td>
+            <td><div><code>js-collapse-trigger</code></div></td>
+            <td><div><span>CSS-класс элемента, по клику на который происходит сворачивание</span></div></td>
+        </tr>
+        <tr>
+            <td><div><code>addClass</code></div></td>
+            <td><div><code>string</code></div></td>
+            <td><div><code>d-none</code></div></td>
+            <td><div><span>Класс, добавляемый к цели при сворачивании</span></div></td>
+        </tr>
+        <tr>
+            <td><div><code>removeClass</code></div></td>
+            <td><div><code>string</code></div></td>
+            <td><div><code>''</code></div></td>
+            <td><div><span>Класс, удаляемый у цели при сворачивании</span></div></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Data-атрибуты</h3>
+<h4>У триггера (кнопка, ссылка и т.д.)</h4>
+<p><code class="language-plaintext highlighter-rouge">data-collapse-target-get</code> - Обязательный атрибут, Имя группы, которую нужно свернуть/развернуть</p>
+
+<h4>У цели (строка <tr> или ячейка <td>/<th>)</h4>
+<p><code class="language-plaintext highlighter-rouge">data-collapse-target-set</code> - Обязательный атрибут, Имя группы (можно несколько через пробел/запятую)</p>
+
+<h4>У ячеек с пересчётом colspan</h4>
+<p><code class="language-plaintext highlighter-rouge">data-collapse-colspan-set</code> - Обязательный атрибут, Имя группы, на которую реагирует ячейка (можно несколько)</p>
+<p><code class="language-plaintext highlighter-rouge">data-collapse-colspan-value</code> - Необязательный атрибут, Ручной режим: конкретное число, на которое изменится colspan (может быть отрицательным)</p>
+<p><code class="language-plaintext highlighter-rouge">data-collapse-colspan-calc</code> - Необязательный атрибут, Авто-режим: plus / add — сложение, любое другое значение (или пусто) — вычитание</p>
+<p><strong>Приоритет:</strong> если указаны оба атрибута (value и calc), используется ручной режим (value).</p>
+</div>
+
+<h3>Как работает пересчёт</h3>
+<h4>Родитель триггера (<td> или <th>, в котором лежит кнопка)</h4>
+<p>По умолчанию: вычитание</p>
+<p>Скрипт находит следующую строку после строки с триггером и суммирует colspan ячеек с нужной группой</p>
+<p>Можно переопределить через data-collapse-colspan-calc="plus"</p>
+<h4>Ячейка ВЫШЕ триггера</h4>
+<p>Работает только в автоматическом режиме</p>
+<p>Режим задаётся через data-collapse-colspan-calc (plus/add — сложение, иначе — вычитание)</p>
+<p>Считает скрытые ячейки в следующей строке после каждого триггера группы</p>
+<h4>Ячейка НИЖЕ триггера</h4>
+<p>Работает только в ручном режиме (data-collapse-colspan-value)</p>
+<p>Без этого атрибута colspan не меняется</p>
+
+
+<table class="table table__border">
+    <thead>
+        <tr>
+            <!-- Ячейка СВЕРХУ: реагирует на group1 и group2 одновременно -->
+            <th data-collapse-colspan-set="group1, group2" data-collapse-colspan-calc="plus">
+                Заголовок (сложение)
+            </th>
+            <th>Обычный</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Триггер 1 -->
+        <tr>
+            <td>
+                <button class="js-collapse-trigger" data-collapse-target-get="group1">
+                    [Свернуть Group 1]
+                </button>
+            </td>
+            <td>Данные</td>
+        </tr>
+        
+        <!-- Целевая строка для group1 -->
+        <tr data-collapse-target-set="group1" class="d-none">
+            <td>Скрытая 1.1</td>
+            <td>Скрытая 1.2</td>
+        </tr>
+
+        <!-- Триггер 2 -->
+        <tr>
+            <td>
+                <button class="js-collapse-trigger" data-collapse-target-get="group2">
+                    [Свернуть Group 2]
+                </button>
+            </td>
+            <td>Данные</td>
+        </tr>
+
+        <!-- Целевая строка для group2 -->
+        <tr data-collapse-target-set="group2" class="d-none">
+            <td colspan="2">Скрытая 2.1 (colspan 2)</td>
+        </tr>
+
+        <!-- Ячейка НИЖЕ в ручном режиме -->
+        <tr>
+            <td data-collapse-colspan-set="group1" data-collapse-colspan-value="-1">
+                Ручной режим: −1 при сворачивании group1
+            </td>
+            <td>Данные</td>
+        </tr>
+    </tbody>
+</table>
