@@ -13041,12 +13041,21 @@ select.selectpicker {
 .bootstrap-select__whitespace-normal .dropdown-menu > li > a,
 .bootstrap-select__whitespace-normal .dropdown-menu > li > span {
   white-space: normal;
+  word-wrap: break-word;
 }
 
 .bootstrap-select__whitespace-prewrap .dropdown__link,
 .bootstrap-select__whitespace-prewrap .dropdown-menu > li > a,
 .bootstrap-select__whitespace-prewrap .dropdown-menu > li > span {
   white-space: pre-wrap;
+}
+
+.bootstrap-select__dropdownMenu50vw .dropdown-menu {
+  max-width: 50vw;
+}
+
+.bootstrap-select__dropdownMenu100 .dropdown-menu {
+  max-width: 200px;
 }
 
 .bs-searchbox,

@@ -542,6 +542,7 @@ select.selectpicker {
   .dropdown-menu > li > a, 
   .dropdown-menu > li > span{
     white-space: normal;
+    word-wrap: break-word;
   }
 }
 
@@ -552,6 +553,17 @@ select.selectpicker {
     white-space: pre-wrap;
   }
 }
+.bootstrap-select__dropdownMenu50vw {
+  .dropdown-menu {
+    max-width: 50vw;
+  }
+}
+.bootstrap-select__dropdownMenu100 {
+  .dropdown-menu {
+    max-width: 200px;
+  }
+}
+
 .bs-searchbox,
 .bs-actionsbox,
 .bs-donebutton {
