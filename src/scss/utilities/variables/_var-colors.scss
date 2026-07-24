@@ -10,6 +10,7 @@ $brand-colors: map.merge((
   _white:                                                               #ffffff,
   _black:                                                               #000000,
   _blue:                                                                #1E6393,
+  _dark-blue:                                                           #1E6393, // new name
   _light-blue:                                                          #4A8DC6,
   _light-blue2:                                                         #E4EEF7,
   _light-blue3:                                                         #B6D1E8,
@@ -77,7 +78,7 @@ $brand-palette: map.merge((
   link_color:                             map.get($brand-colors, _light-blue),
   linkEmpty_color:                        $base_color,
   linkIncomplete_color:                   $base_color,
-  linkHover_color:                        map.get($brand-colors, _blue),
+  linkHover_color:                        map.get($brand-colors, _dark-blue),
   linkDisabled_color:                     map.get($brand-colors, _grey4),
   
   pageHeader_color:                       $base_color,
@@ -165,10 +166,10 @@ $brand-btn: map.merge((
   
   primary_bg:                             map.get($brand-colors, _light-blue),
   primary-end_bg:                         map.get($brand-colors, _light-blue),
-  primary_bg__hover:                      map.get($brand-colors, _blue),
-  primary-end_bg__hover:                  map.get($brand-colors, _blue),
-  primary_border:                         map.get($brand-colors, _blue),
-  primary_border__hover:                  map.get($brand-colors, _blue),
+  primary_bg__hover:                      map.get($brand-colors, _dark-blue),
+  primary-end_bg__hover:                  map.get($brand-colors, _dark-blue),
+  primary_border:                         map.get($brand-colors, _dark-blue),
+  primary_border__hover:                  map.get($brand-colors, _dark-blue),
   primary_border__outline:                map.get($brand-colors, _light-blue),
   primary_color:                          map.get($brand-colors, _white),
   primary_color__hover:                   map.get($brand-colors, _white),
@@ -260,8 +261,8 @@ $brand-checkbox: map.merge((
   checkboxItemActive_bgc:                 map.get($brand-colors, _light-blue),
   checkboxItemHover_bgc:                  map.get($brand-colors, _light-blue),
   checkboxItem_border:                    map.get($brand-colors, _grey),
-  checkboxItemActive_border:              map.get($brand-colors, _blue),
-  checkboxItemHover_border:               map.get($brand-colors, _blue),
+  checkboxItemActive_border:              map.get($brand-colors, _dark-blue),
+  checkboxItemHover_border:               map.get($brand-colors, _dark-blue),
 ), emptymap.$brand-checkbox) !default;
 
 $brand-collapseHeader: map.merge((
@@ -415,8 +416,8 @@ $brand-hover: map.merge((
     'color-hover':                        map.get($brand-colors, _dark-grey),
   ),
   '_light-blue': (
-    'borderColor':                        map.get($brand-colors, _blue),
-    'borderColor-hover':                  map.get($brand-colors, _blue),
+    'borderColor':                        map.get($brand-colors, _dark-blue),
+    'borderColor-hover':                  map.get($brand-colors, _dark-blue),
     'bgColor':                            map.get($brand-colors, _light-blue),
     'bgColor-hover':                      map.get($brand-colors, _white),
     'color':                              map.get($brand-colors, _dark-grey),
@@ -530,12 +531,12 @@ $brand-label: map.merge((
   ),
   'primary':(
     'bg':                                 map.get($brand-colors, _light-blue),
-    'bg_active':                          map.get($brand-colors, _blue),
-    'bg-outline_active':                  map.get($brand-colors, _blue),
-    'border':                             map.get($brand-colors, _blue),
-    'border_active':                      map.get($brand-colors, _blue),
+    'bg_active':                          map.get($brand-colors, _dark-blue),
+    'bg-outline_active':                  map.get($brand-colors, _dark-blue),
+    'border':                             map.get($brand-colors, _dark-blue),
+    'border_active':                      map.get($brand-colors, _dark-blue),
     'border-outline':                     map.get($brand-colors, _light-blue),
-    'border-outline_active':              map.get($brand-colors, _blue),
+    'border-outline_active':              map.get($brand-colors, _dark-blue),
     'color':                              map.get($brand-colors, _white),
     'color_active':                       map.get($brand-colors, _white),
     'color-outline':                      map.get($brand-colors, _light-blue),
@@ -891,7 +892,7 @@ $brand-menu: map.merge((
   menuLink_color:                         map.get($brand-colors, _light-blue),
   menuLink_svg:                           map.get($brand-colors, _light-blue),
   menuLinkActive_bgc:                     map.get($brand-colors, _light-blue),
-  menuLinkActive_svg:                     map.get($brand-colors, _blue),
+  menuLinkActive_svg:                     map.get($brand-colors, _dark-blue),
   menuLinkActive_color:                   map.get($brand-colors, _white),
   menuDropdown_bgc:                       map.get($brand-colors, _white),
   menuDropdownSvg_color:                  map.get($brand-colors, _light-blue),
@@ -916,7 +917,7 @@ $brand-modal: map.merge((
 
 $brand-namecolors: map.merge((
   'default':                             map.get($brand-colors, _grey4),
-  'primary':                             map.get($brand-colors, _blue),
+  'primary':                             map.get($brand-colors, _dark-blue),
   'danger':                              map.get($brand-colors, _red),
   'warning':                             map.get($brand-colors, _dark-orange),
   'success':                             map.get($brand-colors, _green),
@@ -996,8 +997,8 @@ $brand-panel: map.merge((
   ),
   'primary':(
     'text':                               map.get($brand-colors, _white),
-    'heading-bg':                         map.get($brand-colors, _blue),
-    'border':                             color.adjust(rgba(map.get($brand-colors, _blue), 1), $lightness: -5%)
+    'heading-bg':                         map.get($brand-colors, _dark-blue),
+    'border':                             color.adjust(rgba(map.get($brand-colors, _dark-blue), 1), $lightness: -5%)
   ),
   'success':(
     'text':                               map.get($brand-colors, _white),
@@ -1050,7 +1051,7 @@ $brand-radioItem: map.merge((
   radioItem_bg:                           map.get($brand-colors, _white),
   radioItem_border:                       map.get($brand-colors, _grey3),
   radioItem-active_bg:                    map.get($brand-colors, _light-blue),
-  radioItem-active_border:                map.get($brand-colors, _blue),
+  radioItem-active_border:                map.get($brand-colors, _dark-blue),
   radioItemDotActive:                     map.get($brand-colors, _white),
 ), emptymap.$brand-radioItem) !default;
 
@@ -1066,10 +1067,10 @@ $brand-stages: map.merge((
 
 $brand-state: map.merge((
   'primary':(
-    'bg':                                 map.get($brand-colors, _blue),
+    'bg':                                 map.get($brand-colors, _dark-blue),
     'text':                               map.get($brand-colors, _white),
-    'svg':                                map.get($brand-colors, _blue),
-    'border':                             color.adjust(rgba(map.get($brand-colors, _blue), 1), $lightness: -5%)
+    'svg':                                map.get($brand-colors, _dark-blue),
+    'border':                             color.adjust(rgba(map.get($brand-colors, _dark-blue), 1), $lightness: -5%)
   ),
   'success':(
     'bg':                                 map.get($brand-colors, _green),

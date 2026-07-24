@@ -586,6 +586,7 @@ table {
   --color_white: #ffffff;
   --color_black: #000000;
   --color_blue: #1E6393;
+  --color_dark-blue: #1E6393;
   --color_light-blue: #4A8DC6;
   --color_light-blue2: #E4EEF7;
   --color_light-blue3: #B6D1E8;
@@ -15781,6 +15782,8 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   --chart-grey2: #dddddd;
   --chart-grey4: #777777;
   --chart-white: #ffffff;
+  --chart-light-grey2: #F5F5F5;
+  --chart-dark-blue: #1E6393;
   --chart-transparent: #00000000;
   --chart-label-color: #333333;
 }
