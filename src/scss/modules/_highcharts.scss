@@ -986,10 +986,16 @@ g.highcharts-series,
   fill: var(--chart-light-blue3);
   stroke: var(--chart-light-blue3);
 }
-
-.fill-vibrant-blue {
-  fill: var(--color_vibrant-blue);
+.highcharts-color-16 {
+  fill: var(--chart-light-grey2);
+  stroke: var(--chart-light-grey2);
 }
+.highcharts-color-17 {
+  fill: var(--chart-dark-blue);
+  stroke: var(--chart-dark-blue);
+}
+
+.fill-vibrant-blue             {fill: var(--color_vibrant-blue);}
 
 .fill-blue                     { fill: val.brandColors(_vibrant-blue);}
 .fill-green                    { fill: val.brandColors(_green);}
@@ -1009,6 +1015,8 @@ g.highcharts-series,
 .fill-light-blue3              { fill: val.brandColors(_light-blue3);}
 .fill-grey2                    { fill: val.brandColors(_grey2);}
 .fill-grey4                    { fill: val.brandColors(_grey4);}
+.fill-light-grey2              { fill: val.brandColors(_light-grey2);}
+.fill-dark-blue                { fill: val.brandColors(_dark-blue);}
 .fill-white                    { fill: val.brandColors(_white);}
 .fill-transparent              { fill: val.brandColors(_transparent);}
 
@@ -1030,5 +1038,7 @@ g.highcharts-series,
 .stroke-light-blue3              { stroke: val.brandColors(_light-blue3);}
 .stroke-grey2                    { stroke: val.brandColors(_grey2);}
 .stroke-grey4                    { stroke: val.brandColors(_grey4);}
+.stroke-light-grey2              { stroke: val.brandColors(_light-grey2);}
+.stroke-dark-blue                { stroke: val.brandColors(_dark-blue);}
 .stroke-white                    { stroke: val.brandColors(_white);}
 .stroke-transparent              { stroke: val.brandColors(_transparent);}
