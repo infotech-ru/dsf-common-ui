@@ -7859,7 +7859,7 @@ h6, .h6 {
 .highcharts-empty-series {
   stroke-width: 1px;
   fill: none;
-  stroke: var(--chart-grey4);
+  stroke: var(--highchartsemptyseries-color, var(--chart-grey4));
 }
 .highcharts-state-hover .highcharts-graph {
   stroke-width: 3;
@@ -7936,6 +7936,8 @@ h6, .h6 {
 .highcharts-pie-series .highcharts-point {
   stroke-linejoin: round;
   stroke: var(--chart-transparent);
+  stroke-width: 0;
+  width: var(--chart-width-point, revert-layer);
 }
 .highcharts-pie-series .highcharts-point-hover {
   fill-opacity: 0.75;

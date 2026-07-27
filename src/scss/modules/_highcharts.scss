@@ -6,7 +6,6 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
-// @use './../utilities/variables/var-colors' as *;
 @use './../utilities/variables/var-placeholder' as placeholder;
 
 .highcharts{
@@ -177,7 +176,7 @@
   &-empty-series {
     stroke-width: 1px;
     fill: none;
-    stroke: var(--chart-grey4);
+    stroke: var(--highchartsemptyseries-color, var(--chart-grey4));
   }
   &-state-hover .highcharts-graph {
     stroke-width: 3;
@@ -263,6 +262,9 @@
   &-pie-series #{$this}-point {
     stroke-linejoin: round;
     stroke: var(--chart-transparent);
+    stroke-width: 0;
+    // height: 14px;
+    width: var(--chart-width-point, revert-layer);
   }
   &-pie-series #{$this}-point-hover {
     fill-opacity: 0.75;
