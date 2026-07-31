@@ -8792,6 +8792,7 @@ input[type=checkbox][disabled] {
   --checkbox-borderWidth: 0.0625rem;
   --checkbox-fontSize: 0.75rem;
   --checkbox-label-paddingLeft: 1.625rem;
+  --checkbox-lineHeight: 0.875rem;
   --checkbox-topOffset: -0.5625rem;
   --checkbox-width: 1.125rem;
 }
@@ -8800,6 +8801,7 @@ input[type=checkbox][disabled] {
   --checkbox-borderWidth: 0.125rem;
   --checkbox-fontSize: 0.8125rem;
   --checkbox-label-paddingLeft: 1.9375rem;
+  --checkbox-lineHeight: 1rem;
   --checkbox-topOffset: -0.75rem;
   --checkbox-width: 1.5rem;
 }
@@ -8866,7 +8868,7 @@ input[type=checkbox][disabled] {
 .checkbox-item label.checkbox span {
   display: inline-block;
   font-weight: 400;
-  line-height: var(--checkbox-width, 0.75rem);
+  line-height: var(--checkbox-lineHeight, 0.75rem);
   vertical-align: middle;
 }
 .checkbox-item label.checkbox fieldset[disabled] {
