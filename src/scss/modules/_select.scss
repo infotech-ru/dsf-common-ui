@@ -410,13 +410,13 @@ select.selectpicker {
     .selected {
       &:hover{
         span.check-mark {
-          background-color: transparent;
+          background-color: val.brandDropdown(dropdownActive_bgc);
         }
       }
       span.check-mark {
         position: absolute;
         // display: inline-block;
-        right: 5px;
+        right: 0px;
         padding-right: 10px;
         padding-left: 10px;
         background-color: #fff;

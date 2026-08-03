@@ -12981,11 +12981,11 @@ select.selectpicker {
   display: inline;
 }
 .bootstrap-select.show-tick .dropdown-menu .selected:hover span.check-mark {
-  background-color: transparent;
+  background-color: #E4EEF7;
 }
 .bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
   position: absolute;
-  right: 5px;
+  right: 0px;
   padding-right: 10px;
   padding-left: 10px;
   background-color: #fff;
