@@ -247,10 +247,15 @@ output {
   fieldset[disabled] & {
     cursor: val.brandCursor(formControlDisabled);
   }
-  &:focus{
-    border-color: inherit;
-    box-shadow: none;
-    outline: none;
+  &,
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    &:focus{
+      border-color: val.brandForms(formControl-color);
+      box-shadow: none;
+      outline: none;
+    }
   }
   &[type=file] {
     border: none;
