@@ -407,14 +407,24 @@ select.selectpicker {
   }
 
   &.show-tick .dropdown-menu {
-    .selected span.check-mark {
-      position: absolute;
-      // display: inline-block;
-      right: 15px;
-      // top: 5px;
-      display: flex;
-      height: 100%;
-      top: auto;
+    .selected {
+      &:hover{
+        span.check-mark {
+          background-color: transparent;
+        }
+      }
+      span.check-mark {
+        position: absolute;
+        // display: inline-block;
+        right: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-color: #fff;
+        // top: 5px;
+        display: flex;
+        height: 100%;
+        top: auto;
+      }
     }
 
     li a span.text {

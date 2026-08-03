@@ -12980,9 +12980,15 @@ select.selectpicker {
 .bootstrap-select.fit-width .dropdown-toggle .filter-option-inner-inner {
   display: inline;
 }
+.bootstrap-select.show-tick .dropdown-menu .selected:hover span.check-mark {
+  background-color: transparent;
+}
 .bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
   position: absolute;
-  right: 15px;
+  right: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #fff;
   display: flex;
   height: 100%;
   top: auto;
