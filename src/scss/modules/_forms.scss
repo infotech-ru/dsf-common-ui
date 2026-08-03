@@ -247,6 +247,9 @@ output {
   fieldset[disabled] & {
     cursor: val.brandCursor(formControlDisabled);
   }
+  &[readonly]{
+    cursor: val.brandCursor(formControlReadonly);
+  }
   &,
   &[disabled],
   &[readonly],
