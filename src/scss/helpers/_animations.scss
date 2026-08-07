@@ -6,6 +6,7 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_val' as val;
 @use '../utilities/variables/var-svg' as  varsvg;
+@use "../utilities/functions/func_svg-url" as svgurl;
 
 .svg--looper {
   position: absolute;
@@ -53,7 +54,7 @@
     pointer-events: none;
   }
   &Block{ // отдельный контейнер в родителе с p-relative
-    background-image: varsvg.$loading-svg;
+    background-image: svgurl.svg-url(varsvg.$loading-svg);
     background-color: #00000060;
     background-repeat: no-repeat;
     display: var(--preloadingShown, none);
@@ -66,7 +67,7 @@
     z-index: 10000;
   }
   &BlockPage{ // отдельный контейнер на всю страницу
-    background-image: varsvg.$loading-svg;
+    background-image: svgurl.svg-url(varsvg.$loading-svg);
     background-repeat: no-repeat;
     background-position: center;
     bottom: 0;
@@ -108,7 +109,7 @@
     }
     &:after{
       background-color: transparent;
-      background-image: varsvg.$loading-svg;
+      background-image: svgurl.svg-url(varsvg.$loading-svg);
       background-position: center;
       background-repeat: no-repeat;
       bottom: 0;
@@ -142,7 +143,7 @@
     }
     &:after{
       background-color: transparent;
-      background-image: varsvg.$loading-svg;
+      background-image: svgurl.svg-url(varsvg.$loading-svg);
       background-position: center;
       background-repeat: no-repeat;
       bottom: 0;
@@ -160,7 +161,7 @@
   &InfoBlock{
     position: fixed;
     background-color: #00000060;
-    background-image: varsvg.$loading-svg;
+    background-image: svgurl.svg-url(varsvg.$loading-svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
