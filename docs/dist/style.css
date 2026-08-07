@@ -13102,6 +13102,7 @@ select.selectpicker {
 .bootstrap-select__dropdownMenu100.show-tick .dropdown-menu .selected span.check-mark {
   left: 0;
   right: auto;
+  padding-right: 0;
 }
 
 .bs-searchbox,
