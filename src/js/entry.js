@@ -12,6 +12,7 @@ import { AutoresizeTextarea } from "./autoresizeTextarea.js";
 import { CustomFileUpload } from "./CustomFileUpload.js";
 import { initCopyDataAttrToClipboardBtns } from "./copyTextToClipboardNotify.js";
 import { initCollapseTableTd } from "./CollapseTableTd.js";
+import { PreloadAnimation } from "./preload.js";
   
 export function OnLoad() {
   itemActionMenu();
@@ -22,6 +23,7 @@ export function OnLoad() {
   AutoresizeTextarea();
   CustomFileUpload();
   initCopyDataAttrToClipboardBtns();
+  PreloadAnimation();
 }
   
 export function iconsInit() { 
@@ -35,5 +37,7 @@ export function CustomFileUploadInit() {
 }
 export function CollapseTableTdInit() {
   initCollapseTableTd({debug: true});
-
+}
+export function ComponentsPage() {
+  initCollapseTableTd({debug: true});
 }

@@ -1,0 +1,91 @@
+---
+Title: Анимация ожидания 
+menutitle: Анимация ожидания
+menusubtitle: loading
+category: components
+anchor: components-loading
+order: 16
+---
+< class="unityBlock" id="preload3" class="js-preoload">
+
+<p><code class="language-plaintext highlighter-rouge">preloadingBlockPage</code> - Отдельный контейнер на всю страницу. Через js активировать ".preloadingBlockPage" классом "preloading__isShown"</p>
+<p><code class="language-plaintext highlighter-rouge">preloadingPage</code> - Отдельный класс на всю страницу. Через js добавлять класс "preloadingPage" например на body</p>
+<p><code class="language-plaintext highlighter-rouge">preloadingBlock</code> - Отдельный контейнер в родителе с p-relative. Через js активировать ".preloadingBlock" классом "preloading__isShown"</p>
+<p><code class="language-plaintext highlighter-rouge">preloadingWrapper</code> - Отдельный класс на весь блок. Через js передавать класс "preloadingWrapper"</p>
+<p><code class="language-plaintext highlighter-rouge">preloadingInfoBlock</code> - Отдельный контейнер в верхней правой части страницы. Через js активировать ".preloadingInfoBlock" классом "preloading__isShown"</div>
+
+  <a class="btn-link btn-link__minimal limited iconModification collapsed" data-toggle="collapse" href="#loadinganima" role="button" aria-expanded="false" aria-controls="loadinganima">
+      <span class="svg--icon svg--icon__24vb svg--icon__20 svg-primary">
+          <svg width="24" height="24">
+              <use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-arrow_up__24vb"></use>
+          </svg>
+      </span>
+      <span class="btn-text">
+          <span class="block__show">Показать код</span>
+          <span class="block__hide">Скрыть код</span>
+      </span>
+  </a>
+
+<div class="collapse" id="loadinganima">
+{% highlight html %}
+<div class="preloadingBlockPage preloading__isShown">Через js активировать ".preloadingBlockPage" классом "preloading__isShown"</div>
+<body class="preloadingPage">Через js добавлять класс "preloadingPage" например на body</body>
+<div class="preloadingBlock preloading__isShown">Через js активировать ".preloadingBlock" классом "preloading__isShown"</div>
+<div class="preloadingWrapper" style="width: 100%; height: 50px;">Через js передавать класс "preloadingWrapper"</div>
+<div class="preloadingInfoBlock preloading__isShown">Через js активировать ".preloadingInfoBlock" классом "preloading__isShown"</div>
+{% endhighlight %}
+</div>
+<div class="bs-docs-example d-flex flex-column gap-20">
+    <div class="mb-20">
+        <button class="btn-primary__outline js-preload-trigger" data-target="preload1" data-class="preloading__isShown">Отдельный контейнер на всю страницу</button>
+        <div id="preload1" class="js-preoload preloadingBlockPage"></div>
+    </div>
+    <div class="mb-20">
+        <button class="btn-primary__outline js-preload-trigger" data-target="preload3" data-class="preloadingPage">Отдельный класс на всю страницу</button>
+    </div>
+    <div class="mb-20">
+        <div class="p-relative">
+            <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+            <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+            <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+            <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+            <div id="preload2" class="js-preoload preloadingBlock"></div>
+        </div>
+        <button class="btn-primary__outline js-preload-trigger" data-target="preload2" data-class="preloading__isShown">Отдельный контейнер в родителе с p-relative</button>
+    </div>
+    <div class="mb-20">
+        <button class="btn-primary__outline js-preload-trigger" data-target="preload4" data-class="preloadingWrapper">Отдельный класс на весь блок</button>
+        <div id="preload4" class="js-preoload" style="width: 100%; height: 50px;">
+            <div class="scrollbar__thin overflowY-auto">
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+                <p>Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера Текст для примера</p>
+            </div>
+        </div>
+    </div>
+    <div class="mb-20">
+        <button class="btn-primary__outline js-preload-trigger" data-target="preload5" data-class="preloading__isShown">Отдельный контейнер в верхней правой части страницы</button>
+        <div id="preload5" class="js-preoload preloadingInfoBlock"></div>
+    </div>
+</div>
