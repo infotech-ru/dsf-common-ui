@@ -56,6 +56,7 @@
   &Block{ // отдельный контейнер в родителе с p-relative
     background-image: svgurl.svg-url(varsvg.$loading-svg);
     background-color: #00000060;
+    background-position: center;
     background-repeat: no-repeat;
     display: var(--preloadingShown, none);
     height: 56px;
@@ -67,9 +68,6 @@
     z-index: 10000;
   }
   &BlockPage{ // отдельный контейнер на всю страницу
-    background-image: svgurl.svg-url(varsvg.$loading-svg);
-    background-repeat: no-repeat;
-    background-position: center;
     bottom: 0;
     display: var(--preloadingShown, none);
     height: 100%;
@@ -79,6 +77,21 @@
     top: 0;
     width: 100%;
     z-index: 10000;
+    &:before{
+      background-image: svgurl.svg-url(varsvg.$loading-svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
     &:after{
       background-color: #000;
       content: '';
@@ -90,7 +103,7 @@
       right: 0;
       top: 0;
       transition: opacity 0.15s linear;
-      z-index: 9999;
+      z-index: 1;
     }
   }
   &Page{ // отдельный класс на всю страницу
