@@ -13098,7 +13098,7 @@ select.selectpicker {
   max-width: 200px;
 }
 
-.bootstrap-select__dropdownMenu50.show-tick .dropdown-menu .selected span.check-mark,
+.bootstrap-select__dropdownMenu50vw.show-tick .dropdown-menu .selected span.check-mark,
 .bootstrap-select__dropdownMenu100.show-tick .dropdown-menu .selected span.check-mark {
   left: 0;
   right: auto;
