@@ -559,6 +559,20 @@ a.btn {
       }
     }
   }
+  &__state{
+    position: relative;
+    --btnIconState-bg: var(--text_color);
+    &::after{
+      border-radius: 6px;
+      background-color: var(--btnIconState-bg, transparent);
+      content: '';
+      display: block;
+      right: 2px;
+      height: 6px;
+      top: 3.5px;
+      width: 6px;
+    }
+  }
   &.disabled,
   &[disabled],
   fieldset[disabled] &{

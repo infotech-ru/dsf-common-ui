@@ -10564,6 +10564,20 @@ a.btn.disabled, fieldset[disabled] a.btn {
 .btn-icon__clear:hover .svg--icon, .btn-icon__clear:focus-visible .svg--icon, .btn-icon__clear.active .svg--icon, .btn-icon__clear.active:focus .svg--icon {
   background-color: #E4EEF7;
 }
+.btn-icon__state {
+  position: relative;
+  --btnIconState-bg: var(--text_color);
+}
+.btn-icon__state::after {
+  border-radius: 6px;
+  background-color: var(--btnIconState-bg, transparent);
+  content: "";
+  display: block;
+  right: 2px;
+  height: 6px;
+  top: 3.5px;
+  width: 6px;
+}
 .btn-icon.disabled, .btn-icon[disabled], fieldset[disabled] .btn-icon {
   cursor: not-allowed;
   opacity: 0.5;

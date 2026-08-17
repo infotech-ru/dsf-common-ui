@@ -12,7 +12,8 @@ rank: 5
 <p>Для того чтобы убрать фон у кнопкп используется модификациия <code class="language-plaintext highlighter-rouge">btn-icon__clear</code></p>
 <p>Для кнопок-иконок с семантикой "удалить" используется модификация <code class="language-plaintext highlighter-rouge">btn-icon__danger</code></p>
 <p>Для кнопок-иконок с семантикой "добавить, начать" используется модификация <code class="language-plaintext highlighter-rouge">btn-icon__success</code></p>
-<p>В кнопке используются <a href="https://infotech-ru.github.io/dsf-common-ui/icons">иконки</a> с родительским контейнером оберткой - тег SPAN с классом "svg--icon":</p>
+<p>Для статуса на кнопках-иконках модификатор <code class="language-plaintext highlighter-rouge">btn-icon__state</code>. Для нужного цвета используется класс-хелпер цвета<code class="language-plaintext highlighter-rouge">text-...</code></p>
+<p>В кнопке используются <a href="https://infotech-ru.github.io/dsf-common-ui/icons">иконки</a> с родительским контейнером оберткой - тег SPAN с классом <code class="language-plaintext highlighter-rouge">svg--icon</code>:</p>
 
 {% highlight html %}
 <button class="btn-icon"><?= Icons::wrapper('bicolors-plus') ?></button>
@@ -24,6 +25,7 @@ rank: 5
 <button class="btn-icon btn-icon__clear"><?= Icons::wrapper('bicolors-plus') ?></button>
 <button class="btn-icon btn-icon__default"><?= Icons::wrapper('bicolors-search') ?></button>
 <button class="btn-icon btn-icon__form"><?= Icons::wrapper('bicolors-plus') ?></button>
+<button class="btn-icon btn-icon__state text-danger"><?= Icons::wrapper('bicolors-commnet') ?></button>
 {% endhighlight %}
 
 <div class="bs-docs-example">
@@ -36,6 +38,7 @@ rank: 5
     <div><button class="btn-icon btn-icon__success"><span class="svg--icon"><svg class="bicolors-play" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-play"></use></svg></span></button></div>
     <div><button class="btn-icon btn-icon__clear"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-plus"></use></svg></span></button></div>
     <div><button class="btn-icon btn-icon__default"><span class="svg--icon"><svg class="bicolors-plus" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-search"></use></svg></span></button></div>
+    <div><button class="btn-icon btn-icon__state text-danger"><span class="svg--icon"><svg class="bicolors-commnet" width="24" height="24"><use xlink:href="/dsf-common-ui/dist/sprite.symbol.svg#bicolors-commnet"></use></svg></span></button></div>
     <div><button class="btn-default btn-small">Кнопка btn-small для сравнения</button></div>
   </div>
   <div class="d-flex gap-10">
