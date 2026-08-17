@@ -568,8 +568,9 @@ a.btn {
       content: '';
       display: block;
       right: 2px;
+      position: absolute;
       height: 6px;
-      top: 3.5px;
+      top: -3.5px;
       width: 6px;
     }
   }
