@@ -18184,6 +18184,13 @@ tbody.collapse.in {
   width: 128px;
   --thumbnail_width: 128px;
 }
+.thumbnail__fullSize {
+  aspect-ratio: 1/1;
+  height: 100%;
+  min-width: 100%;
+  width: 100%;
+  --thumbnail_width: 100%;
+}
 .thumbnail:hover, .thumbnail:focus, .thumbnail.active {
   border-color: var(--color_dark-grey);
 }

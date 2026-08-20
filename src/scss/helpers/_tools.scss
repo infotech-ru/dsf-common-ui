@@ -129,6 +129,14 @@
     width: 128px;
     --thumbnail_width: 128px;
   }
+  &__fullSize{
+    aspect-ratio: 1/1;
+    height: 100%;
+    min-width: 100%;
+    width: 100%;
+    --thumbnail_width: 100%;
+  }
+  
   &:hover,
   &:focus,
   &.active {
