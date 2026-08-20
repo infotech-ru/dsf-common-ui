@@ -749,6 +749,7 @@ input[type="button"] {
   }
   .btn-text{
     line-height: fonts.rem(12);
+    text-align: center;
   }
   .svg--icon {
     vertical-align: middle;
@@ -791,7 +792,6 @@ input[type="button"] {
   &__circle {
     .btn-text{
       margin: 0;
-      text-align: center;
     }
   }
   &__large,
