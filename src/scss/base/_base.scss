@@ -208,3 +208,13 @@ blockquote {
     }
   }
 }
+
+
+img::before { // для alt текста
+  align-items: center;
+  display: flex;
+  content: '';
+  height: 100%;
+  justify-content: center;
+  opacity: 0.2;
+}

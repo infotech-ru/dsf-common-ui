@@ -8,6 +8,7 @@ $brand-sizes: (
   base_gridSize:                   baseValue.$base-grid-gutter, //сетка
   base_paddingSize:                baseValue.$base-padding, // пока не измененый внутренний
   
+  border-radius-base__small:       baseValue.$base-radius__small,
   border-radius-base:              baseValue.$base-radius,
   border-radius-base__big:         baseValue.$base-radius__large,
   border-radius-large:             6,

@@ -8,6 +8,7 @@
 
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
+@use './../utilities/functions/func_svg-url' as svgurl;
 @use './../utilities/variables/var-colors' as colors;
 @use './../utilities/mixins_bootstrap-v3/vendor-prefixes' as vendorprefixes;
 
@@ -717,6 +718,7 @@ input[type="button"] {
     .btn-download__large &,
     .btn-download__square &,
     .btn-download__bigSquare &,
+    .btn-download__fullSquare &,
     .btn-download__circle &{
       display: flex;
       flex-direction: column;
@@ -785,6 +787,7 @@ input[type="button"] {
   &__large,
   &__square,
   &__bigSquare,
+  &__fullSquare,
   &__circle {
     .btn-text{
       margin: 0;
@@ -793,6 +796,7 @@ input[type="button"] {
   }
   &__large,
   &__bigSquare,
+  &__fullSquare,
   &__square{
     .svg--icon {
       &, svg{
@@ -833,6 +837,15 @@ input[type="button"] {
     height: fonts.rem(128);
     width: fonts.rem(128);
     min-width: fonts.rem(128);
+  }
+  &__fullSquare{
+    aspect-ratio: 1 / 1;
+    font-size: fonts.rem(10);
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    width: 100%;
   }
   &.disabled,
   &[disabled],

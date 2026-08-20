@@ -70,7 +70,7 @@
   $thumbnailPadding:4px;
   background-color: var(--color_white);
   border: 1px solid var(--color_grey2);
-  border-radius: 0;
+  border-radius: var(--thumbnail_borderraduis, fonts.rem(val.brandSizes(border-radius-base)));
   height: 64px;
   line-height: normal;
   padding: $thumbnailPadding;
@@ -103,6 +103,10 @@
     }
   }
   &ImgWrapper{
+    background-color: var(--thumbnail_bgc, val.brandColors(_grey2));
+    background-image: var(--thumbnail-bg-svg, none);
+    background-position: center;
+    background-repeat: no-repeat;
     display: block;
     height: 100%;
     overflow: hidden;
@@ -128,6 +132,8 @@
     min-width: 128px;
     width: 128px;
     --thumbnail_width: 128px;
+    --thumbnail_bgc: #{val.brandColors(_light-blue2)};
+    --thumbnail-bg-svg: #{svgurl.svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="50" height="48" viewBox="0 0 50 48" fill="none"><path d="M7.29166 28L14.0625 22M42.7083 33L28.5539 22M14.0625 22L20.8333 16L28.5539 22M14.0625 22L20.8333 26L28.5539 22" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.375 14.5C35.8442 14.5 37 15.6383 37 17C37 18.3617 35.8442 19.5 34.375 19.5C32.9058 19.5 31.75 18.3617 31.75 17C31.75 15.6383 32.9058 14.5 34.375 14.5Z" stroke="white"/><rect x="6.75" y="10.5" width="36.5" height="27" stroke="white"/></svg>')};
   }
   &__fullSize{
     aspect-ratio: 1/1;
@@ -135,12 +141,15 @@
     min-width: 100%;
     width: 100%;
     --thumbnail_width: 100%;
+    --thumbnail-bg-svg: #{svgurl.svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="50" height="48" viewBox="0 0 50 48" fill="none"><path d="M7.29166 28L14.0625 22M42.7083 33L28.5539 22M14.0625 22L20.8333 16L28.5539 22M14.0625 22L20.8333 26L28.5539 22" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M34.375 14.5C35.8442 14.5 37 15.6383 37 17C37 18.3617 35.8442 19.5 34.375 19.5C32.9058 19.5 31.75 18.3617 31.75 17C31.75 15.6383 32.9058 14.5 34.375 14.5Z" stroke="white"/><rect x="6.75" y="10.5" width="36.5" height="27" stroke="white"/></svg>')};
   }
-  
+  &borderRaduisNone{
+    --thumbnail_borderraduis: 0;
+  }
   &:hover,
   &:focus,
   &.active {
-    border-color: var(--color_dark-grey);
+    border-color: val.brandColors(_grey4);
   }
   &Actions{
     display: flex;
@@ -150,7 +159,8 @@
     top: 0;
     width: 100%;
     &Btn{
-      background-color: var(--color_white);
+      background-color: val.brandColors(_light-grey);
+      border-radius: var(--thumbnail_borderraduis, fonts.rem(val.brandSizes(border-radius-base__small)));
       border: none;
       cursor: pointer;
       display: block;
