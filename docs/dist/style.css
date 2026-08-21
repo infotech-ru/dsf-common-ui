@@ -14660,7 +14660,11 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 
 .table-hover tr:hover td,
 .table__hover tr:hover td {
-  background-color: #F5F5F5;
+  background-color: var(--tdHover_bgc, #F5F5F5);
+}
+
+.table__hover-lightBlue2 {
+  --tdHover_bgc: #E4EEF7;
 }
 
 .table-responsive {

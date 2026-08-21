@@ -301,8 +301,11 @@ tbody tr {
 .table-hover, // old name
 .table__hover {
   tr:hover td{
-    background-color: val.brandTable(tdHover_bgc);
+    background-color: var(--tdHover_bgc, val.brandTable(tdHover_bgc));
   }
+}
+.table__hover-lightBlue2{
+  --tdHover_bgc: #{val.brandColors(_light-blue2)};
 }
 
 
