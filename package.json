@@ -1,6 +1,6 @@
 {
   "name": "dsf-common-ui",
-  "version": "1.6.328",
+  "version": "1.6.329",
   "description": "Styles, scripts, vectors for DNM, CRM, projects",
   "author": "Infotech teams",
   "repository": "github:infotech-ru/dsf-common-ui",
@@ -34,7 +34,8 @@
     "grunt-sass": "^4.1.0",
     "grunt-sass-tilde-importer": "^1.0.2",
     "grunt-svg-sprite": "^2.0.2",
-    "grunt-terser": "^2.0.0",8    "rollup-plugin-node-globals": "^1.2.1",
+    "grunt-terser": "^2.0.0",
+    "rollup-plugin-node-globals": "^1.2.1",
     "sass": "^1.99.0",
     "svg-sprite": "^2.0.4",
     "terser": "^5.15.0"
