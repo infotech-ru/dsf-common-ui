@@ -176,6 +176,7 @@
     #{--base-link-hoverColor}: var(--label_color);
   }
   &__readonly{
+    cursor: default;
     &:hover,
     &.active,
     &:active{
