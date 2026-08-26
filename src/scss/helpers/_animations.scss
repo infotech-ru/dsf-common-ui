@@ -55,7 +55,7 @@
   }
   &Block{ // отдельный контейнер в родителе с p-relative
     background-image: svgurl.svg-url(varsvg.$loading-svg);
-    background-color: #00000060;
+    background-color: #ffffff70;
     background-position: center;
     background-repeat: no-repeat;
     display: var(--preloadingShown, none);
@@ -93,7 +93,7 @@
       z-index: 2;
     }
     &:after{
-      background-color: #000;
+      background-color: #ffffff70;
       content: '';
       bottom: 0;
       opacity: 0.5;
@@ -173,7 +173,7 @@
   }
   &InfoBlock{
     position: fixed;
-    background-color: #00000060;
+    background-color: #ffffff70;
     background-image: svgurl.svg-url(varsvg.$loading-svg);
     background-position: center;
     background-repeat: no-repeat;
