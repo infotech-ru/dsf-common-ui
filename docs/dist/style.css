@@ -17878,10 +17878,9 @@ body[style^=padding-right] .modal-sidebar {
   z-index: 1;
 }
 .preloadingPage::before {
-  background-color: #000;
+  background-color: rgba(255, 255, 255, 0.4392156863);
   content: "";
   bottom: 0;
-  opacity: 0.5;
   display: block;
   left: 0;
   position: fixed;

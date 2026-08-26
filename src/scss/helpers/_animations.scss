@@ -108,10 +108,10 @@
   }
   &Page{ // отдельный класс на всю страницу
     &::before{
-      background-color: #000;
+      background-color: #ffffff70;
       content: '';
       bottom: 0;
-      opacity: 0.5;
+      // opacity: 0.5;
       display: block;
       left: 0;
       position: fixed;
