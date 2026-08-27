@@ -74,13 +74,13 @@ function getIsValid($input) {
 }
 
 function updateInputLabel(input) {
-    const $this = $(input)
+    const $this = $(input);
         
-    let $labelAndIcon
+    let $labelAndIcon;
     if (!$this.hasClass('comboTreeInputBox')) {
-        $labelAndIcon = $this.siblings(labelSelector).length > 0 ? $this.siblings(labelSelector) : $this.parent('.js-formsFreeWrapper').siblings(labelSelector)
+        $labelAndIcon = $this.siblings(labelSelector).length > 0 ? $this.siblings(labelSelector) : $this.parent('.js-formsFreeWrapper').siblings(labelSelector);
     } else {
-        $labelAndIcon = $this.closest('.form-group').children(labelSelector)
+        $labelAndIcon = $this.closest('.form-group').children(labelSelector);
     }
 
     const isActive = $this.val().length > 0
@@ -90,7 +90,13 @@ function updateInputLabel(input) {
 
     $labelAndIcon.toggleClass('active', isActive);
     $labelTwitterTypeahead.toggleClass('active', isActive);
-    $this.hasClass('comboTreeInputBox') 
+    if ($labelAndIcon.hasClass('control-label__actvie')) {
+        $labelAndIcon.addClass('active');
+    }
+    if ($labelTwitterTypeahead.hasClass('control-label__actvie')) {
+        $labelTwitterTypeahead.addClass('active');
+    }
+    // $this.hasClass('comboTreeInputBox') ;
     
 }
 
@@ -116,4 +122,7 @@ function updateDropdownLabel(select) {
         ? $select.closest('div').siblings(labelSelector)
         : $select.closest('div').parent('.js-formsFreeWrapper').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
+    if ($labelAndIcon.hasClass('control-label__actvie')) {
+        $labelAndIcon.addClass('active');
+    }
 }

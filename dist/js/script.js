@@ -196,7 +196,13 @@ var DSFUI = (function (exports) {
       $labelTwitterTypeahead = $this.parents('.twitter-typeahead').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
     $labelTwitterTypeahead.toggleClass('active', isActive);
-    $this.hasClass('comboTreeInputBox');
+    if ($labelAndIcon.hasClass('control-label__actvie')) {
+      $labelAndIcon.addClass('active');
+    }
+    if ($labelTwitterTypeahead.hasClass('control-label__actvie')) {
+      $labelTwitterTypeahead.addClass('active');
+    }
+    // $this.hasClass('comboTreeInputBox') ;
   }
   function validateInput(input) {
     var $this = $(input);
@@ -211,6 +217,9 @@ var DSFUI = (function (exports) {
       isActive = select.value.length > 0 || $select.find('option:selected:not(.bs-title-option)').length > 0 || select.value !== '',
       $labelAndIcon = $select.closest('div').siblings(labelSelector).length > 0 ? $select.closest('div').siblings(labelSelector) : $select.closest('div').parent('.js-formsFreeWrapper').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
+    if ($labelAndIcon.hasClass('control-label__actvie')) {
+      $labelAndIcon.addClass('active');
+    }
   }
 
   function itemActionMenu() {

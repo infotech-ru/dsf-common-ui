@@ -13104,10 +13104,10 @@ select.selectpicker {
   z-index: 10;
 }
 .css-formFree .bootstrap-select .bs-placeholder .filter-option-inner-inner {
-  opacity: 0;
+  opacity: var(--bootstrapSelect-prompt-opacity, 0);
 }
-.css-formFree .bootstrap-select .selectPrompt + .bs-placeholder .filter-option-inner-inner {
-  opacity: 1;
+.bootstrap-select .selectPrompt {
+  --bootstrapSelect-prompt-opacity: 1;
 }
 .bootstrap-select .dropdown-divider {
   border-bottom: 1px solid #dddddd;
