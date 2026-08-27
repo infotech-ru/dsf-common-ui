@@ -396,8 +396,8 @@ textarea.form-control {
 }
 
 .form-group {
-    margin-bottom: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
     padding-top: var(--formGroup-pt, 0);
+    margin-bottom: var(--formGroup-mb, #{fonts.rem(val.formsSizes(formGroup__formFree_mb))});
     @include varMixins.varControlLabel;
     
     .css-formFree &{ 

@@ -55,7 +55,7 @@
   }
   &Block{ // отдельный контейнер в родителе с p-relative
     background-image: svgurl.svg-url(varsvg.$loading-svg);
-    background-color: #ffffff70;
+    background-color: rgba(255,255,255,0.7);
     background-position: center;
     background-repeat: no-repeat;
     display: var(--preloadingShown, none);
@@ -93,7 +93,7 @@
       z-index: 2;
     }
     &:after{
-      background-color: #ffffff70;
+      background-color: rgba(255,255,255,0.7);
       content: '';
       bottom: 0;
       opacity: 0.5;
@@ -108,7 +108,7 @@
   }
   &Page{ // отдельный класс на всю страницу
     &::before{
-      background-color: #ffffff70;
+      background-color: rgba(255,255,255,0.7);
       content: '';
       bottom: 0;
       // opacity: 0.5;
@@ -173,7 +173,7 @@
   }
   &InfoBlock{
     position: fixed;
-    background-color: #ffffff70;
+    background-color: rgba(255,255,255,0.7);
     background-image: svgurl.svg-url(varsvg.$loading-svg);
     background-position: center;
     background-repeat: no-repeat;
