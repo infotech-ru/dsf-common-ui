@@ -54,8 +54,8 @@
     pointer-events: none;
   }
   &Block{ // отдельный контейнер в родителе с p-relative
-    background-image: svgurl.svg-url(varsvg.$loading-svg);
     background-color: rgba(255,255,255,0.7);
+    background-image: svgurl.svg-url(varsvg.$loading-svg);
     background-position: center;
     background-repeat: no-repeat;
     display: var(--preloadingShown, none);
@@ -142,10 +142,10 @@
     position: relative;
     pointer-events: none;
     &::before{
-      background-color: #000;
+      background-color: rgba(255,255,255,0.7);
       content: '';
       bottom: 0;
-      opacity: 0.5;
+      // opacity: 0.5;
       display: block;
       left: 0;
       position: absolute;
