@@ -19,17 +19,16 @@ mounted() {
 }
 {% endhighlight %}
 <p>Если нужно поднять заголовок на постоянно - добавляем к label.control-label класс модификатор<code class="language-plaintext highlighter-rouge js-copy-to-clipboard" data-copy="control-label__actvie">control-label__actvie</code> Например так, <code class="language-plaintext highlighter-rouge js-copy-to-clipboard" data-copy="->label($model->getAttributeLabel('otherSigns'), ['class' => 'control-label control-label-actvie'])">->label($model->getAttributeLabel('modelField'), ['class' => 'control-label control-label-actvie'])</code></p>
-<p>Если нужно, чтобы плейсхолдер селекта был виден при поднятом Заголовке - добавляем в options класс <code class="language-plaintext highlighter-rouge js-copy-to-clipboard" data-copy="selectPrompt">selectPrompt</code>. Обычно сочетается, когда нужен data-none-selected-text (изменяет текст-заполнитель, когда ничего не выбрано) или prompt (пункт отображается в списке по умолчанию, как обязательный выбор)</p>
+<p>Если нужно, чтобы плейсхолдер селекта был виден при поднятом Заголовке - добавляем в options data-style <code class="language-plaintext highlighter-rouge js-copy-to-clipboard" data-copy="selectPrompt">selectPrompt</code>. Обычно сочетается, когда нужен data-none-selected-text (изменяет текст-заполнитель, когда ничего не выбрано) или prompt (пункт отображается в списке по умолчанию, как обязательный выбор). А при использовании "prompt" selectPrompt добавляется автоматически.</p>
 
 {% highlight php %}
 <?= $form->field($model, 'modelField')->widget(
       Select::class,
       [
           'options' => [
-              'class' => 'form-control selectPrompt',
-              'multiple' => true,
+              'data-style' => 'selectPrompt',
               // 'data-none-selected-text' => Yii::t('app', 'Выбрать'),
-              // 'prompt' => Yii::t('app', 'Все'),
+              // 'prompt' => Yii::t('app', 'Все'), // не применяется, если 'multiple' => true,
           ],
           'items' => RequestSearchForm::getmodelFieldList(),
       ]

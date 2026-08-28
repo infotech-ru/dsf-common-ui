@@ -534,7 +534,8 @@ select.selectpicker {
     }
   }
   
-  .selectPrompt {
+  .selectPrompt,
+  .selectPrompt + .bs-placeholder {
     --bootstrapSelect-prompt-opacity: 1;
   }
   // .selectPrompt + .bs-placeholder {
