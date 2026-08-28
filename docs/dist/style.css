@@ -13106,7 +13106,7 @@ select.selectpicker {
 .css-formFree .bootstrap-select .bs-placeholder .filter-option-inner-inner {
   opacity: var(--bootstrapSelect-prompt-opacity, 0);
 }
-.bootstrap-select .selectPrompt {
+.bootstrap-select .selectPrompt + .bs-placeholder {
   --bootstrapSelect-prompt-opacity: 1;
 }
 .bootstrap-select .dropdown-divider {
