@@ -15567,9 +15567,9 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 .alert-success {
   background-color: #E9F5E9;
   border-color: #E9F5E9;
-  color: #333333;
-  --base-link-hoverColor: #333333;
-  --btn-color: #333333;
+  color: #467B46;
+  --base-link-hoverColor: #467B46;
+  --btn-color: #467B46;
 }
 .alert-success .close {
   color: #4A8DC6;
