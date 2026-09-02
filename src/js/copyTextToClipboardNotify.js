@@ -19,6 +19,25 @@ export function initCopyDataAttrToClipboardBtns() {
                 // console.log('Клик был вне модального окна');
             }
             let text = $(this).data("copy")
+
+            if (!text) {
+                const templateId = $(this).data("template-id");
+                if (templateId) {
+                    const templateEl = document.getElementById(templateId);
+                    if (templateEl) {
+                        text = templateEl.innerHTML; // или .textContent
+                    } else {
+                        console.warn(`Template with id "${templateId}" not found`);
+                        showNotification("Шаблон не найден", { type: "danger" });
+                        return false;
+                    }
+                } else {
+                    console.warn("No data-copy or data-template-id provided");
+                    showNotification("Нет данных для копирования", { type: "danger" });
+                    return false;
+                }
+            }
+            
             Promise.resolve(text)
                 .then((text) => {
                     return copyToClipboard(text, modalForm)

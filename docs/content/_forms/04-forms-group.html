@@ -309,30 +309,30 @@ order: 4
     </div>
     
 <template id="copy-inputGroup">
-    <?= Html::tag(
-        'div', 
-        $form->field($model, 'createdAtFrom', 
-                ['options' => ['class' => 'form-control-container']])
-            ->widget(DatePicker::class,
-                [
-                    'options' => [
-                        'class' => 'form-control form-control__placeholder', 
-                        'placeholder' => Yii::t('app', 'От')
-                    ],
-                ])
-            ->label(Yii::t('app', 'Создано')) 
-        . $form->field($model, 'createdAtTo', 
-                ['options' => ['class' => 'form-control-container']])
-            ->widget(DatePicker::class,
-                [
-                    'options' => [
-                        'class' => 'form-control form-control__placeholder', 
-                        'placeholder' => Yii::t('app', 'До')
-                    ],
-                ])
-            ->label(false),
-        ['class' => 'inputGroup mb-10']
-    )?>
+<?= Html::tag(
+    'div', 
+    $form->field($model, 'createdAtFrom', 
+            ['options' => ['class' => 'form-control-container']])
+        ->widget(DatePicker::class,
+            [
+                'options' => [
+                    'class' => 'form-control form-control__placeholder', 
+                    'placeholder' => Yii::t('app', 'От')
+                ],
+            ])
+        ->label(Yii::t('app', 'Создано')) 
+    . $form->field($model, 'createdAtTo', 
+            ['options' => ['class' => 'form-control-container']])
+        ->widget(DatePicker::class,
+            [
+                'options' => [
+                    'class' => 'form-control form-control__placeholder', 
+                    'placeholder' => Yii::t('app', 'До')
+                ],
+            ])
+        ->label(false),
+    ['class' => 'inputGroup mb-10']
+)?>
 </template>
 {% highlight html %}
 <div class="inputGroup mb-10">

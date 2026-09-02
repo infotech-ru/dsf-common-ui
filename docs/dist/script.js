@@ -1212,6 +1212,27 @@ var DSFUI = (function (exports) {
           // console.log('Клик был вне модального окна');
         }
         var text = $(this).data("copy");
+        if (!text) {
+          var templateId = $(this).data("template-id");
+          if (templateId) {
+            var templateEl = document.getElementById(templateId);
+            if (templateEl) {
+              text = templateEl.innerHTML; // или .textContent
+            } else {
+              console.warn("Template with id \"".concat(templateId, "\" not found"));
+              showNotification("Шаблон не найден", {
+                type: "danger"
+              });
+              return false;
+            }
+          } else {
+            console.warn("No data-copy or data-template-id provided");
+            showNotification("Нет данных для копирования", {
+              type: "danger"
+            });
+            return false;
+          }
+        }
         Promise.resolve(text).then(function (text) {
           return copyToClipboard(text, modalForm);
         }).then(function () {
