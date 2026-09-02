@@ -10463,7 +10463,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   border-radius: 0.25rem;
   border-width: 0.125rem;
   font-size: 0.9375rem;
-  line-height: 3rem;
+  line-height: 2.75rem;
   padding: 0px 24px;
 }
 .btn__large .svg--icon {
@@ -12092,7 +12092,7 @@ output {
   --formsFree-controlLabelLarge-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
-  --formsFree-controlLabel-lineHeight: 3.25rem;
+  --formsFree-controlLabel-lineHeight: 3rem;
   --formsFree-controlLabel-pl: 1rem;
   --formsFree-controlLabel-top: 0;
   --formsFree-controlLabelActive-fontSize: 0.75rem;
@@ -12245,15 +12245,15 @@ output {
   --formControl-borderRadius: 0.25rem;
   --formControl-borderwidth: 0.125rem;
   --formControl-fontSize: 0.9375rem;
-  --formControl-height: 3.25rem;
+  --formControl-height: 3rem;
   --formControl-lineHeight: 1;
   --formControl-paddingX: 1rem;
   --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
-  --textarea-pt: 0.65625rem;
-  --textarea-min-height: 2.625rem;
+  --textarea-pt: 0.59375rem;
+  --textarea-min-height: 2.375rem;
 }
 
 textarea.form-control {
@@ -12276,7 +12276,7 @@ textarea.form-control {
   input[type=time].form-control__big,
   input[type=datetime-local].form-control__big,
   input[type=month].form-control__big {
-    line-height: 3rem;
+    line-height: 2.75rem;
   }
 }
 .form-group {
@@ -12321,20 +12321,20 @@ textarea.form-control {
   --formControl-borderRadius: 0.25rem;
   --formControl-borderwidth: 0.125rem;
   --formControl-fontSize: 0.9375rem;
-  --formControl-height: 3.25rem;
+  --formControl-height: 3rem;
   --formControl-lineHeight: 1;
   --formControl-paddingX: 1rem;
   --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
-  --textarea-pt: 0.65625rem;
-  --textarea-min-height: 2.625rem;
+  --textarea-pt: 0.59375rem;
+  --textarea-min-height: 2.375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
-  --formsFree-controlLabel-lineHeight: 3.25rem;
+  --formsFree-controlLabel-lineHeight: 3rem;
   --formsFree-controlLabel-pl: 1rem;
   --formsFree-controlLabel-top: 0;
   --formsFree-controlLabelActive-fontSize: 0.75rem;
@@ -13425,8 +13425,8 @@ select.selectpicker {
   line-height: 1.125rem;
 }
 
-.btn-group > .btn-large {
-  line-height: 3rem;
+.btn-group > .btn__large {
+  line-height: 2.75rem;
 }
 
 .btn-group > [class*=btn] + .dropdown-toggle {
@@ -13711,20 +13711,20 @@ select.selectpicker {
   --formControl-borderRadius: 0.25rem;
   --formControl-borderwidth: 0.125rem;
   --formControl-fontSize: 0.9375rem;
-  --formControl-height: 3.25rem;
+  --formControl-height: 3rem;
   --formControl-lineHeight: 1;
   --formControl-paddingX: 1rem;
   --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
-  --textarea-pt: 0.65625rem;
-  --textarea-min-height: 2.625rem;
+  --textarea-pt: 0.59375rem;
+  --textarea-min-height: 2.375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
-  --formsFree-controlLabel-lineHeight: 3.25rem;
+  --formsFree-controlLabel-lineHeight: 3rem;
   --formsFree-controlLabel-pl: 1rem;
   --formsFree-controlLabel-top: 0;
   --formsFree-controlLabelActive-fontSize: 0.75rem;
@@ -15313,20 +15313,20 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   --formControl-borderRadius: 0.25rem;
   --formControl-borderwidth: 0.125rem;
   --formControl-fontSize: 0.9375rem;
-  --formControl-height: 3.25rem;
+  --formControl-height: 3rem;
   --formControl-lineHeight: 1;
   --formControl-paddingX: 1rem;
   --formControl-errorPaddingX: 1.125rem;
   --formsFree-formControlActive-pt: 1.4375rem;
   --formsFree-formControlActive-pb: 0.4375rem;
   --textarea-height: auto;
-  --textarea-pt: 0.65625rem;
-  --textarea-min-height: 2.625rem;
+  --textarea-pt: 0.59375rem;
+  --textarea-min-height: 2.375rem;
   --controlLabel-transition: font-size 0.2s ease-out;
   --formsFree-controlLabelLarge-bg: transparent;
   --formsFree-controlLabel-fontSize: 0.9375rem;
   --formsFree-controlLabel-left: 0.125rem;
-  --formsFree-controlLabel-lineHeight: 3.25rem;
+  --formsFree-controlLabel-lineHeight: 3rem;
   --formsFree-controlLabel-pl: 1rem;
   --formsFree-controlLabel-top: 0;
   --formsFree-controlLabelActive-fontSize: 0.75rem;

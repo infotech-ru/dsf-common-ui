@@ -83,7 +83,7 @@
   line-height: fonts.rem(val.lineHeight(btnXs));
 }
 
-.btn-group > .btn-large {
+.btn-group > .btn__large {
   line-height: fonts.rem(val.formsSizes(formElem_height__lg) - (val.formsSizes(formElem_borderSize__lg) * 2));
 }
 
