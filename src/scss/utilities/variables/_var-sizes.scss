@@ -107,6 +107,9 @@ $forms-sizes:(
   iconLabelActive:                 12,
   inputGroupAddon_paddingX:        12,
   inputGroupAddon_paddingY:        6,
+  textarea_paddingX:               16,
+  textarea_minHeight:              96,
+  textarea_paddingY:               12,
 )!default;
 
 $paddingFromLeft: 3 !default;

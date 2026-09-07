@@ -15432,6 +15432,11 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   --formsFree-controlLabelActive-pl: 0.875rem;
   --formsFree-controlLabelActive-top: 0.4375rem;
 }
+.commentBlock_inputGroup__actionDown {
+  border: none;
+  display: block;
+  padding: 0;
+}
 .commentBlock_formControl {
   background-color: transparent;
   border: none;
@@ -15462,6 +15467,39 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   font-weight: 400;
   opacity: 1;
 }
+.commentBlock_formControl__actionDown .commentBlock_formControl {
+  border: 0.125rem solid #dddddd;
+  min-height: 6rem;
+  padding-top: 0.75rem;
+  padding-right: 1rem;
+  padding-bottom: 2.5rem;
+  padding-left: 1rem;
+  position: relative;
+  width: 100%;
+  --formControl-borderRadius: 0.25rem;
+  --formControl-borderwidth: 0.125rem;
+  --formControl-fontSize: 0.9375rem;
+  --formControl-height: 3rem;
+  --formControl-lineHeight: 1;
+  --formControl-paddingX: 1rem;
+  --formControl-errorPaddingX: 1.125rem;
+  --formsFree-formControlActive-pt: 1.4375rem;
+  --formsFree-formControlActive-pb: 0.4375rem;
+  --textarea-height: auto;
+  --textarea-pt: 0.59375rem;
+  --textarea-min-height: 2.375rem;
+  --controlLabel-transition: font-size 0.2s ease-out;
+  --formsFree-controlLabelLarge-bg: transparent;
+  --formsFree-controlLabel-fontSize: 0.9375rem;
+  --formsFree-controlLabel-left: 0.125rem;
+  --formsFree-controlLabel-lineHeight: 3rem;
+  --formsFree-controlLabel-pl: 1rem;
+  --formsFree-controlLabel-top: 0;
+  --formsFree-controlLabelActive-fontSize: 0.75rem;
+  --formsFree-controlLabelActive-lineHeight: 0.875rem;
+  --formsFree-controlLabelActive-pl: 0.875rem;
+  --formsFree-controlLabelActive-top: 0.4375rem;
+}
 .commentBlock_formControl__resizeVert {
   resize: vertical;
 }
@@ -15474,6 +15512,18 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   align-items: center;
   display: flex;
   height: 100%;
+}
+.commentBlock_inputGroup__actionDown .commentBlock_actionBlock {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  height: 1.75rem;
+  padding-left: 1rem;
+  padding-bottom: 0.75rem;
+  margin-top: -2.5rem;
+  margin-left: 0.125rem;
+  position: relative;
+  width: calc(100% - 1.125rem);
 }
 .commentBlock_btnSend {
   background-color: transparent;
