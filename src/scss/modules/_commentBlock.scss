@@ -269,7 +269,7 @@
     .commentBlock_inputGroup__whatsup & {
       @include placeholder.placeholder2(val.brandColors(grey), 400, 12);
     }
-    &__actionDown & {
+    &__actionDown {
         border: fonts.rem(val.formsSizes(formElem_borderSize__lg)) solid val.brandForms(formControl-borderColor);
         min-height: fonts.rem(val.formsSizes(textarea_minHeight));
         padding-top: fonts.rem(val.formsSizes(textarea_paddingY));
@@ -280,6 +280,7 @@
         width: 100%;
         @include varMixins.varFormControlLarge;
         @include varMixins.varControlLabelLarge;
+        @extend %scrollVar;
     }
     // .commentBlock_inputGroup__bigHeight &{
         // height: auto;
