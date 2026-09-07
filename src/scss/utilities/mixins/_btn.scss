@@ -1,0 +1,75 @@
+@use './../functions/func_fonts' as fonts;
+@use './../functions/func_val' as val;
+@use './../mixins_bootstrap-v3/vendor-prefixes' as vendorprefixes;
+
+@mixin btn {
+  background-image: none;
+  border-style: solid;
+  border-color: transparent;
+  border-width: #{val.formsSizes(formElem_borderSize)}px;
+  border-radius: #{val.formsSizes(formElem_borderRadius)}px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: fonts.rem(val.fontSizes(btn));
+  font-weight: val.fontWeight(btn);
+  line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
+  // height: min-content; не работает в сафари с <input>
+  height: auto;
+  margin-bottom: 0; // For input.btn
+  padding: 0 #{val.btnSizes(btn_paddingX)}px;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  @include vendorprefixes.user-select(none);
+
+  &:hover,
+  &:focus-visible,
+  &:focus,
+  &:active,
+  &:active:focus,
+  &.active,
+  &.active:focus,
+  &.focus {
+    outline: none;
+    text-decoration: none;
+  }
+  
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    // cursor: none;
+    cursor: not-allowed;
+    opacity: val.brandSizes(disabel_opacity);
+    box-shadow: none;
+  }
+
+  .badge {
+    font-size: 11px;
+    line-height: 13px;
+    padding: 0px 5px;
+  }
+
+  .caret {
+    margin-left: 0;
+  }
+
+  .svg--icon{
+    height: var(--svgIcon_height, fonts.rem(12));
+    // margin-right: 10px;
+    position: relative;
+    top: 1px;
+    svg{
+      height: var(--svgIcon_height, fonts.rem(12));
+      max-width: var(--svgIcon_height, 20px);
+      width: auto;
+    }
+    // &:only-child{
+    //   margin-right: 0px;
+    // }
+  }
+}
+
+@mixin btn__shadow{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
+}

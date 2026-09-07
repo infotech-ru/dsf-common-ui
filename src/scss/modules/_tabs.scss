@@ -6,8 +6,8 @@
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 @use './../utilities/functions/func_fonts' as fonts;
 @use './../utilities/functions/func_val' as val;
+@use './../utilities/mixins/btn' as btnmixin;
 @use './buttons' as buttons;
-
 .nav-tabs,
 .nav-pills,
 .nav-btns,
@@ -125,9 +125,82 @@
 
 .nav-btns > li > a,
 .nav-btns .nav-link {
+  @include btnmixin.btn;
+  background-color: transparent;
+  background-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: val.brandPalette(link_color);
   cursor: pointer;
+  font-weight: val.fontWeight(btn);
   position: relative;
-  @extend .btn-link;
+  &:hover,
+  &:focus-visible,
+  &.active,
+  &.active:focus,
+  &:active:focus,
+  &:active {
+    background-color: transparent;
+    color: val.brandPalette(link_color);
+    .svg--icon {
+      svg {
+        #{--svg-icon-fill}: val.brandPalette(linkHover_color);
+        #{--svg-icon-stroke}: val.brandPalette(linkHover_color);
+        #{--svg-icon-fill_blue}: val.brandPalette(linkHover_color);
+        #{--svg-icon-stroke_blue}: val.brandPalette(linkHover_color);
+        fill: val.brandPalette(linkHover_color);
+        #{--limited-stroke-off}: val.brandColors(_transparent);
+      }
+    }
+  }
+}
+.nav-btns > li.active > a,
+.nav-btns > li > a.active,
+.nav-btns .nav-link.active,
+.nav-btns .active .nav-link {
+  @include btnmixin.btn__shadow;
+  background-color: val.brandColors(_white);
+  background-image: none;
+  border-color: val.brandBtn(default_border__outline);
+  color: val.brandBtn(default_color__outline);
+  transition: background-color 0.3s ease-in-out;
+  &:hover,
+  &:focus-visible,
+  &:active,
+  &:active:focus,
+  &.active,
+  &.active:focus,
+  &.focus {
+    background-color: val.brandBtn(default_border__outline);
+    background-image: none;
+    background-position: inherit;
+    border-color: val.brandBtn(default_border__outline);
+    color: val.brandBtn(default_color__outline__hover);
+    .svg--icon svg{
+      #{--infotech_svg-colorStroke}: val.brandBtn(default_color__outline__hover);
+      #{--infotech_svg-stroke}: val.brandBtn(default_color__outline__hover);
+      #{--infotech_svg-fill}: val.brandBtn(default_color__outline__hover);
+      #{--infotech_svg-colorFill}: val.brandBtn(default_color__outline__hover);
+      #{--svg-icon-fill}: val.brandBtn(default_color__outline__hover);
+      #{--svg-icon-stroke}: val.brandBtn(default_color__outline__hover);
+      #{--svg-icon-fill_blue}: val.brandBtn(default_color__outline__hover);
+      #{--svg-icon-stroke_blue}: val.brandBtn(default_color__outline__hover);
+      fill: val.brandBtn(default_color__outline__hover);
+      #{--limited-stroke-off}: val.brandColors(_transparent);
+    }
+  }
+  .svg--icon svg{
+    #{--infotech_svg-colorStroke}: val.brandBtn(default_color__outline);
+    #{--infotech_svg-stroke}: val.brandBtn(default_color__outline);
+    #{--infotech_svg-fill}: val.brandBtn(default_color__outline);
+    #{--infotech_svg-colorFill}: val.brandBtn(default_color__outline);
+    #{--svg-icon-fill_blue}: val.brandBtn(default_color__outline);
+    #{--svg-icon-stroke_blue}: val.brandBtn(default_color__outline);
+    #{--svg-icon-fill}: val.brandBtn(default_color__outline);
+    #{--svg-icon-stroke}: val.brandBtn(default_color__outline);
+    fill: val.brandBtn(default_color__outline);
+    #{--limited-stroke-off}: val.brandColors(_transparent);
+  }
 }
 
 .nav-tabs > li.active > a,
@@ -164,15 +237,6 @@
   }
 }
 
-.nav-btns > li.active > a,
-.nav-btns > li > a.active,
-.nav-btns .nav-link.active,
-.nav-btns .active .nav-link {
-  @extend .btn-default__outline;
-  @extend .btn__shadow;
-  background-color: val.brandColors(_white);
-}
-
 .nav-cards > li > a,
 .nav-cards .nav-link {
   align-items: center;
@@ -203,8 +267,49 @@
 }
 .nav-cards__forms > li > a,
 .nav-cards__forms .nav-link {
-  padding:0 fonts.rem(val.tabsSizes(navCardsForms_padding));
+  flex-direction: column;
   height: fonts.rem(val.formsSizes(formElem_height));
+  padding:0 fonts.rem(val.tabsSizes(navCardsForms_padding));
+  .svg--icon {
+    align-items: center;
+    background-color: val.brandBtnIcon(btnIconSvg_bgc);
+    display: inline-flex;
+    justify-content: center;
+    height: fonts.rem(val.btnSizes(btnIcon_height));
+    max-width: fonts.rem(val.btnSizes(btnIcon_height));
+    width: fonts.rem(val.btnSizes(btnIcon_height));
+    // vertical-align: middle;
+    #{--svg-icon-fill}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--svg-icon-fill_blue}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--svg-icon-stroke_blue}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--svg-icon-stroke}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--limited-stroke-off}: val.brandColors(_transparent);
+    #{--btn_svg__hover}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--svgIcon_height}: fonts.rem(val.btnSizes(btnIconSvg_height));
+    &__24vb{
+      #{--svgIcon_height}: fonts.rem(val.btnSizes(btnIcon_height));
+      #{--svgIcon_width}: fonts.rem(val.btnSizes(btnIcon_height));
+    }
+  }
+  &:hover,
+  &:focus-visible,
+  &.active,
+  &.active:focus{
+    .svg--icon {
+      background-color: val.brandBtnIcon(btnIconSvgHover_bgc);
+    }
+  }
+  &:hover,
+  &:focus-visible,
+  &:active:focus,
+  &:active
+  &:hover,
+  &:focus {
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      outline: 0;
+  }
 }
 
 .nav-cards > li.active > a,

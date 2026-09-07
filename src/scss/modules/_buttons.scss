@@ -10,75 +10,9 @@
 @use './../utilities/functions/func_val' as val;
 @use './../utilities/functions/func_svg-url' as svgurl;
 @use './../utilities/variables/var-colors' as colors;
-@use './../utilities/mixins_bootstrap-v3/vendor-prefixes' as vendorprefixes;
+@use './../utilities/mixins/btn' as btnmixin;
 
-%btn {
-  background-image: none;
-  border-style: solid;
-  border-color: transparent;
-  border-width: #{val.formsSizes(formElem_borderSize)}px;
-  border-radius: #{val.formsSizes(formElem_borderRadius)}px;
-  cursor: pointer;
-  display: inline-block;
-  font-size: fonts.rem(val.fontSizes(btn));
-  font-weight: val.fontWeight(btn);
-  line-height: fonts.rem(val.formsSizes(formElem_height) - (val.formsSizes(formElem_borderSize) * 2));
-  // height: min-content; не работает в сафари с <input>
-  height: auto;
-  margin-bottom: 0; // For input.btn
-  padding: 0 #{val.btnSizes(btn_paddingX)}px;
-  text-align: center;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  @include vendorprefixes.user-select(none);
 
-  &:hover,
-  &:focus-visible,
-  &:focus,
-  &:active,
-  &:active:focus,
-  &.active,
-  &.active:focus,
-  &.focus {
-    outline: none;
-    text-decoration: none;
-  }
-  
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    // cursor: none;
-    cursor: not-allowed;
-    opacity: val.brandSizes(disabel_opacity);
-    box-shadow: none;
-  }
-
-  .badge {
-    font-size: 11px;
-    line-height: 13px;
-    padding: 0px 5px;
-  }
-
-  .caret {
-    margin-left: 0;
-  }
-
-  .svg--icon{
-    height: var(--svgIcon_height, fonts.rem(12));
-    // margin-right: 10px;
-    position: relative;
-    top: 1px;
-    svg{
-      height: var(--svgIcon_height, fonts.rem(12));
-      max-width: var(--svgIcon_height, 20px);
-      width: auto;
-    }
-    // &:only-child{
-    //   margin-right: 0px;
-    // }
-  }
-}
 .glyphicon,
 .svg--icon{
   + .btn-text{
@@ -94,6 +28,7 @@
 
 @each $btn in default, primary, success, danger, warning {
   .btn-#{$btn}{
+    @include btnmixin.btn;
     border-color: val.brandBtn(#{$btn}_border);
     color: val.brandBtn(#{$btn}_color);
     transition: background-color 0.3s ease-in-out;
@@ -121,7 +56,6 @@
     #{--btn_svg_blue}: val.brandBtn(#{$btn}_svg_blue);
     #{--btn_svg__hover}: val.brandBtn(#{$btn}_svg__hover);
     #{--btn_svg_blue__hover}: val.brandBtn(#{$btn}_svg_blue__hover);
-    @extend %btn;
     &:hover,
     &:focus-visible,
     &:active,
@@ -197,6 +131,7 @@
 }
 
 .btn-link {
+  @include btnmixin.btn;
   background-color: transparent;
   background-image: none;
   border-radius: 0;
@@ -204,7 +139,6 @@
   color: val.brandPalette(link_color);
   cursor: pointer;
   font-weight: val.fontWeight(btn);
-  @extend %btn;
   &,
   &:hover,
   &:focus,
@@ -306,12 +240,12 @@
 
 @each $btn in default, primary, success, danger, warning {
   .btn-#{$btn}__outline {
+    @include btnmixin.btn;
     background-color: transparent;
     background-image: none;
     border-color: val.brandBtn(#{$btn}_border__outline);
     color: val.brandBtn(#{$btn}_color__outline);
     transition: background-color 0.3s ease-in-out;
-    @extend %btn;
     &:hover,
     &:focus-visible,
     &:active,
@@ -640,8 +574,9 @@ a.btn {
   }
 }
 .btn__shadow{
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
+  @include btnmixin.btn__shadow
 }
+
 .btn__adaptive{
   background-color: transparent;
   border-color: var(--btn-color);
