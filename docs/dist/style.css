@@ -15469,7 +15469,9 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .commentBlock_formControl__actionDown {
   border: 0.125rem solid #dddddd;
+  border-radius: 0.25rem;
   min-height: 6rem;
+  overflow-y: auto;
   padding-top: 0.75rem;
   padding-right: 1rem;
   padding-bottom: 2.5rem;
@@ -15499,6 +15501,9 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   --formsFree-controlLabelActive-lineHeight: 0.875rem;
   --formsFree-controlLabelActive-pl: 0.875rem;
   --formsFree-controlLabelActive-top: 0.4375rem;
+}
+.commentBlock_formControl__actionDown:hover, .commentBlock_formControl__actionDown:focus, .commentBlock_formControl__actionDown:active, .commentBlock_formControl__actionDown:focus-visible {
+  border: 0.125rem solid #dddddd;
 }
 .commentBlock_formControl__resizeVert {
   resize: vertical;
