@@ -266,6 +266,11 @@
         font-weight: val.fontWeight(controlLabel);
         opacity: 1;
     }
+    &:hover, &:focus, &:active, &:focus-visible{
+      border: none;
+      box-shadow: none;
+      outline: none;
+    }
     .commentBlock_inputGroup__whatsup & {
       @include placeholder.placeholder2(val.brandColors(grey), 400, 12);
     }
@@ -295,11 +300,6 @@
     &__resizeVert{
         resize: vertical;
     }
-    &:hover, &:focus, &:active, &:focus-visible{
-      border: none;
-      box-shadow: none;
-      outline: none;
-    }
   }
   &_actionBlock{
     align-items: center;
@@ -316,7 +316,7 @@
         align-items: center;
         background-color: val.brandColors(_white);
         display: flex;
-        height: fonts.rem(val.formsSizes(formElem_height));
+        height: fonts.rem(val.formsSizes(formElem_height) + val.formsSizes(textarea_paddingY));
         padding-left: fonts.rem(val.formsSizes(textarea_paddingX));
         padding-bottom: fonts.rem(val.formsSizes(textarea_paddingY));
         margin-top: fonts.rem((val.formsSizes(textarea_paddingY) + val.formsSizes(formElem_height)) * -1);
