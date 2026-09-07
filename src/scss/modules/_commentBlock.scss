@@ -319,7 +319,7 @@
         height: fonts.rem(val.formsSizes(formElem_height) + val.formsSizes(textarea_paddingY));
         padding-left: fonts.rem(val.formsSizes(textarea_paddingX));
         padding-bottom: fonts.rem(val.formsSizes(textarea_paddingY));
-        margin-top: fonts.rem((val.formsSizes(textarea_paddingY) + val.formsSizes(formElem_height)) * -1);
+        margin-top: fonts.rem((val.formsSizes(textarea_paddingY) + val.formsSizes(formElem_height) + val.formsSizes(formElem_borderSize__lg)) * -1);
         margin-left: fonts.rem(val.formsSizes(formElem_borderSize__lg));
         position: relative;
         width: calc(100% - #{fonts.rem(val.formsSizes(formElem_borderSize__lg) + val.formsSizes(textarea_paddingX))});

@@ -15525,7 +15525,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   height: 2.5rem;
   padding-left: 1rem;
   padding-bottom: 0.75rem;
-  margin-top: -2.5rem;
+  margin-top: -2.625rem;
   margin-left: 0.125rem;
   position: relative;
   width: calc(100% - 1.125rem);
