@@ -267,7 +267,7 @@
 }
 .nav-cards__forms > li > a,
 .nav-cards__forms .nav-link {
-  flex-direction: column;
+  flex-direction: row;
   height: fonts.rem(val.formsSizes(formElem_height));
   padding:0 fonts.rem(val.tabsSizes(navCardsForms_padding));
   .svg--icon {

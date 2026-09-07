@@ -16375,7 +16375,7 @@ fieldset[disabled] .nav-btns .nav-link {
 
 .nav-cards__forms > li > a,
 .nav-cards__forms .nav-link {
-  flex-direction: column;
+  flex-direction: row;
   height: 1.75rem;
   padding: 0 1rem;
 }
