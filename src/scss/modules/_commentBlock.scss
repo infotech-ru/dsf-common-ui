@@ -282,7 +282,7 @@
             overflow-y: auto;
             padding-top: fonts.rem(val.formsSizes(textarea_paddingY));
             padding-right: fonts.rem(val.formsSizes(textarea_paddingX));
-            padding-bottom: fonts.rem(val.formsSizes(textarea_paddingY) + val.formsSizes(formElem_height));
+            padding-bottom: fonts.rem(val.formsSizes(textarea_paddingY) * 2 + val.formsSizes(formElem_height));
             padding-left: fonts.rem(val.formsSizes(textarea_paddingX));
             position: relative;
             width: 100%;

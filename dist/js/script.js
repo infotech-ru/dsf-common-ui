@@ -1035,58 +1035,107 @@ var DSFUI = (function (exports) {
       _options$maxHeight = options.maxHeight,
       maxHeight = _options$maxHeight === void 0 ? null : _options$maxHeight,
       _options$onResize = options.onResize,
-      onResize = _options$onResize === void 0 ? null : _options$onResize;
-    var elements;
-    // console.log('вход');
+      onResize = _options$onResize === void 0 ? null : _options$onResize,
+      _options$debug = options.debug,
+      debug = _options$debug === void 0 ? false : _options$debug;
+    function log() {
+      if (debug) {
+        var _console;
+        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+        (_console = console).log.apply(_console, ['[AutoresizeTextarea]'].concat(args));
+      }
+    }
     var searchContext;
     if (context instanceof Element || context instanceof Document) {
       searchContext = context;
-      // console.log(searchContext, '1');
+      log('Контекст – DOM-элемент/документ');
     } else if (typeof context === 'string') {
       searchContext = document.querySelector(context);
-      // console.log(searchContext, '2');
+      log('Контекст – CSS-селектор, найден:', !!searchContext);
       if (!searchContext) {
-        console.warn('AutoresizeTextareaFlexible: контекст не найден', context);
-        // console.log('3');
+        console.warn('[AutoresizeTextarea] Контекст не найден:', context);
         return;
       }
     } else {
       searchContext = document;
-      // console.log(searchContext, '4');
+      log('Контекст – document по умолчанию');
     }
-    elements = searchContext.querySelectorAll(selector);
+    var elements = searchContext.querySelectorAll(selector);
+    log('Найдено элементов:', elements.length);
+    if (elements.length === 0) {
+      console.warn('[AutoresizeTextarea] Не найдено ни одного элемента по селектору:', selector);
+      return;
+    }
+
+    // Фабрика для создания функции resize с текущими параметрами
+    function createResize(textarea, minH, maxH, onResizeCb, debugFlag) {
+      return function resize() {
+        // Сбрасываем высоту, чтобы scrollHeight стал актуальным
+        textarea.style.height = 'auto';
+        // scrollHeight включает padding и border (в зависимости от box-sizing, но это стандартно)
+        var newHeight = textarea.scrollHeight;
+        if (debugFlag) {
+          console.log('[AutoresizeTextarea] scrollHeight:', newHeight);
+        }
+
+        // Применяем ограничения
+        if (minH !== null) {
+          newHeight = Math.max(newHeight, minH);
+        }
+        if (maxH !== null) {
+          newHeight = Math.min(newHeight, maxH);
+        }
+
+        // Устанавливаем высоту
+        textarea.style.height = newHeight + 'px';
+
+        // Управление прокруткой
+        if (maxH !== null && newHeight >= maxH) {
+          textarea.style.overflowY = 'auto';
+        } else {
+          textarea.style.overflowY = 'hidden';
+        }
+        if (debugFlag) {
+          console.log('[AutoresizeTextarea] итоговая высота:', newHeight);
+        }
+        if (onResizeCb && typeof onResizeCb === 'function') {
+          onResizeCb(textarea, newHeight);
+        }
+      };
+    }
     elements.forEach(function (textarea) {
-      console.log('найдено');
+      // Если элемент уже инициализирован – обновляем параметры
       if (textarea.hasAttribute('data-autoresize-initialized')) {
+        log('Элемент уже инициализирован, обновляем параметры');
+        var newResize = createResize(textarea, minHeight, maxHeight, onResize, debug);
+        textarea.updateAutoresize = newResize;
+        newResize(); // применяем сразу
         return;
       }
 
-      // const style = window.getComputedStyle(textarea);
-      // const paddingTop = parseFloat(style.paddingTop) || 0;
-      // const paddingBottom = parseFloat(style.paddingBottom) || 0;
+      // Первичная инициализация
+      log('Инициализация нового элемента');
+      var resizeFn = createResize(textarea, minHeight, maxHeight, onResize, debug);
+      textarea.updateAutoresize = resizeFn;
 
-      function resize() {
-        textarea.style.height = '28px';
-        // let contentHeight = textarea.scrollHeight - paddingTop - paddingBottom;
-        var contentHeight = textarea.scrollHeight;
-        if (minHeight !== null) {
-          contentHeight = Math.max(contentHeight, minHeight);
-        }
-        if (maxHeight !== null) {
-          contentHeight = Math.min(contentHeight, maxHeight);
-        }
-        textarea.style.height = contentHeight + 'px';
-        if (onResize && typeof onResize === 'function') {
-          onResize(textarea, contentHeight);
-        }
-      }
+      // Начальные стили
       textarea.style.overflowY = 'hidden';
-      resize();
-      textarea.addEventListener('input', resize);
-      textarea.addEventListener('change', resize);
-      textarea.addEventListener('propertychange', resize);
-      textarea.updateAutoresize = resize;
+      resizeFn();
+
+      // Подписка на события
+      var handler = function handler() {
+        return textarea.updateAutoresize();
+      };
+      textarea.addEventListener('input', handler);
+      textarea.addEventListener('change', handler);
+      textarea.addEventListener('propertychange', handler);
+
+      // Сохраняем обработчик на случай, если понадобится удалить
+      textarea._autoresizeHandler = handler;
       textarea.setAttribute('data-autoresize-initialized', 'true');
+      log('Элемент успешно инициализирован');
     });
   }
 
