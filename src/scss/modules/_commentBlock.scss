@@ -275,21 +275,24 @@
       @include placeholder.placeholder2(val.brandColors(grey), 400, 12);
     }
     &__actionDown {
-        border: fonts.rem(val.formsSizes(formElem_borderSize__lg)) solid val.brandForms(formControl-borderColor);
-        border-radius: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
-        min-height: fonts.rem(val.formsSizes(textarea_minHeight));
-        overflow-y: auto;
-        padding-top: fonts.rem(val.formsSizes(textarea_paddingY));
-        padding-right: fonts.rem(val.formsSizes(textarea_paddingX));
-        padding-bottom: fonts.rem(val.formsSizes(textarea_paddingY) + val.formsSizes(formElem_height));
-        padding-left: fonts.rem(val.formsSizes(textarea_paddingX));
-        position: relative;
-        width: 100%;
-        @include varMixins.varFormControlLarge;
-        @include varMixins.varControlLabelLarge;
-        @extend %scrollVar;
-        &:hover, &:focus, &:active, &:focus-visible{
+         @at-root textarea#{&} {
             border: fonts.rem(val.formsSizes(formElem_borderSize__lg)) solid val.brandForms(formControl-borderColor);
+            border-radius: fonts.rem(val.formsSizes(formElem_borderRadius__lg));
+            min-height: fonts.rem(val.formsSizes(textarea_minHeight));
+            overflow-y: auto;
+            padding-top: fonts.rem(val.formsSizes(textarea_paddingY));
+            padding-right: fonts.rem(val.formsSizes(textarea_paddingX));
+            padding-bottom: fonts.rem(val.formsSizes(textarea_paddingY) + val.formsSizes(formElem_height));
+            padding-left: fonts.rem(val.formsSizes(textarea_paddingX));
+            position: relative;
+            width: 100%;
+            @include varMixins.varFormControlLarge;
+            @include varMixins.varControlLabelLarge;
+            @extend %scrollVar;
+            &:hover, &:focus, &:active, &:focus-visible{
+                border: fonts.rem(val.formsSizes(formElem_borderSize__lg)) solid val.brandForms(formControl-borderColor);
+            }
+
         }
     }
     // .commentBlock_inputGroup__bigHeight &{

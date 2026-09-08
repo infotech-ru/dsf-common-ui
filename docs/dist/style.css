@@ -1,20 +1,20 @@
 @charset "UTF-8";
-.scrollbar__thin, .comment-block--scroll, .commentBlock_formControl__actionDown, .bootstrap-select .inner, .bootstrap-select .dropdown-menu, .comboTreeDropDownContainer > ul, .headerMenu .dropdown-submenu .dropdown-menu {
+.scrollbar__thin, .comment-block--scroll, textarea.commentBlock_formControl__actionDown, .bootstrap-select .inner, .bootstrap-select .dropdown-menu, .comboTreeDropDownContainer > ul, .headerMenu .dropdown-submenu .dropdown-menu {
   scrollbar-width: thin;
 }
-.scrollbar__thin::-webkit-scrollbar, .comment-block--scroll::-webkit-scrollbar, .commentBlock_formControl__actionDown::-webkit-scrollbar, .bootstrap-select .inner::-webkit-scrollbar, .bootstrap-select .dropdown-menu::-webkit-scrollbar, .comboTreeDropDownContainer > ul::-webkit-scrollbar, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar {
+.scrollbar__thin::-webkit-scrollbar, .comment-block--scroll::-webkit-scrollbar, textarea.commentBlock_formControl__actionDown::-webkit-scrollbar, .bootstrap-select .inner::-webkit-scrollbar, .bootstrap-select .dropdown-menu::-webkit-scrollbar, .comboTreeDropDownContainer > ul::-webkit-scrollbar, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar {
   height: 6px;
   width: 6px;
   background-color: #777777;
 }
-.scrollbar__thin::-webkit-scrollbar-button, .comment-block--scroll::-webkit-scrollbar-button, .commentBlock_formControl__actionDown::-webkit-scrollbar-button, .bootstrap-select .inner::-webkit-scrollbar-button, .bootstrap-select .dropdown-menu::-webkit-scrollbar-button, .comboTreeDropDownContainer > ul::-webkit-scrollbar-button, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-button {
+.scrollbar__thin::-webkit-scrollbar-button, .comment-block--scroll::-webkit-scrollbar-button, textarea.commentBlock_formControl__actionDown::-webkit-scrollbar-button, .bootstrap-select .inner::-webkit-scrollbar-button, .bootstrap-select .dropdown-menu::-webkit-scrollbar-button, .comboTreeDropDownContainer > ul::-webkit-scrollbar-button, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-button {
   width: 6px;
   height: 6px;
 }
-.scrollbar__thin::-webkit-scrollbar-track, .comment-block--scroll::-webkit-scrollbar-track, .commentBlock_formControl__actionDown::-webkit-scrollbar-track, .bootstrap-select .inner::-webkit-scrollbar-track, .bootstrap-select .dropdown-menu::-webkit-scrollbar-track, .comboTreeDropDownContainer > ul::-webkit-scrollbar-track, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-track {
+.scrollbar__thin::-webkit-scrollbar-track, .comment-block--scroll::-webkit-scrollbar-track, textarea.commentBlock_formControl__actionDown::-webkit-scrollbar-track, .bootstrap-select .inner::-webkit-scrollbar-track, .bootstrap-select .dropdown-menu::-webkit-scrollbar-track, .comboTreeDropDownContainer > ul::-webkit-scrollbar-track, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-track {
   background-color: #F5F5F5;
 }
-.scrollbar__thin::-webkit-scrollbar-thumb, .comment-block--scroll::-webkit-scrollbar-thumb, .commentBlock_formControl__actionDown::-webkit-scrollbar-thumb, .bootstrap-select .inner::-webkit-scrollbar-thumb, .bootstrap-select .dropdown-menu::-webkit-scrollbar-thumb, .comboTreeDropDownContainer > ul::-webkit-scrollbar-thumb, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-thumb {
+.scrollbar__thin::-webkit-scrollbar-thumb, .comment-block--scroll::-webkit-scrollbar-thumb, textarea.commentBlock_formControl__actionDown::-webkit-scrollbar-thumb, .bootstrap-select .inner::-webkit-scrollbar-thumb, .bootstrap-select .dropdown-menu::-webkit-scrollbar-thumb, .comboTreeDropDownContainer > ul::-webkit-scrollbar-thumb, .headerMenu .dropdown-submenu .dropdown-menu::-webkit-scrollbar-thumb {
   background-color: #777777;
 }
 
@@ -15472,7 +15472,7 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   font-weight: 400;
   opacity: 1;
 }
-.commentBlock_formControl__actionDown {
+textarea.commentBlock_formControl__actionDown {
   border: 0.125rem solid #dddddd;
   border-radius: 0.25rem;
   min-height: 6rem;
@@ -15507,9 +15507,10 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
   --formsFree-controlLabelActive-pl: 0.875rem;
   --formsFree-controlLabelActive-top: 0.4375rem;
 }
-.commentBlock_formControl__actionDown:hover, .commentBlock_formControl__actionDown:focus, .commentBlock_formControl__actionDown:active, .commentBlock_formControl__actionDown:focus-visible {
+textarea.commentBlock_formControl__actionDown:hover, textarea.commentBlock_formControl__actionDown:focus, textarea.commentBlock_formControl__actionDown:active, textarea.commentBlock_formControl__actionDown:focus-visible {
   border: 0.125rem solid #dddddd;
 }
+
 .commentBlock_formControl__resizeVert {
   resize: vertical;
 }
