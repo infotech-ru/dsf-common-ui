@@ -12531,6 +12531,9 @@ fieldset[disabled] .checkbox-inline {
 .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
   color: #69C26A;
 }
+.has-success .form-control {
+  border-color: #69C26A;
+}
 .has-success .form-control:focus {
   box-shadow: none;
   outline: none;
@@ -12538,6 +12541,7 @@ fieldset[disabled] .checkbox-inline {
 .has-success .input-group-addon {
   color: #69C26A;
   background-color: rgba(105, 194, 106, 0.2);
+  border-color: #69C26A;
 }
 
 .has-warning .help-block,
@@ -12548,6 +12552,9 @@ fieldset[disabled] .checkbox-inline {
 .has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label {
   color: #FFBD41;
 }
+.has-warning .form-control {
+  border-color: #FFBD41;
+}
 .has-warning .form-control:focus {
   box-shadow: none;
   outline: none;
@@ -12555,6 +12562,7 @@ fieldset[disabled] .checkbox-inline {
 .has-warning .input-group-addon {
   color: #FFBD41;
   background-color: rgba(255, 189, 65, 0.2);
+  border-color: #FFBD41;
 }
 
 .has-error .help-block,
@@ -12565,6 +12573,9 @@ fieldset[disabled] .checkbox-inline {
 .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
   color: #D9534F;
 }
+.has-error .form-control {
+  border-color: #D9534F;
+}
 .has-error .form-control:focus {
   box-shadow: none;
   outline: none;
@@ -12572,6 +12583,7 @@ fieldset[disabled] .checkbox-inline {
 .has-error .input-group-addon {
   color: #D9534F;
   background-color: rgba(217, 83, 79, 0.2);
+  border-color: #D9534F;
 }
 
 .has-feedback label ~ .form-control-feedback {

@@ -515,13 +515,13 @@ textarea.form-control {
 }
 
 .has-success {
-  @include forms.form-control-validation(val.brandFormState(hasSuccess_color), val.brandFormState(hasSuccess_border), val.brandFormState(hasSuccess_bgc));
+  @include forms.form-control-validation(val.brandFormState(hasSuccess_color), val.brandFormState(hasSuccess_borderColor), val.brandFormState(hasSuccess_bgc));
 }
 .has-warning {
-  @include forms.form-control-validation(val.brandFormState(hasWarning_color), val.brandFormState(hasWarning_border), val.brandFormState(hasWarning_bgc));
+  @include forms.form-control-validation(val.brandFormState(hasWarning_color), val.brandFormState(hasWarning_borderColor), val.brandFormState(hasWarning_bgc));
 }
 .has-error {
-  @include forms.form-control-validation(val.brandFormState(hasDanger_color), val.brandFormState(hasDanger_border), val.brandFormState(hasDanger_bgc));
+  @include forms.form-control-validation(val.brandFormState(hasDanger_color), val.brandFormState(hasDanger_borderColor), val.brandFormState(hasDanger_bgc));
 }
 
 .has-feedback label {
