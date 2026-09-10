@@ -320,6 +320,7 @@
         background-color: val.brandColors(_white);
         display: flex;
         height: fonts.rem(val.formsSizes(formElem_height) + val.formsSizes(textarea_paddingY));
+        gap: fonts.rem(val.brandSizes(base_gridSize));
         padding-left: fonts.rem(val.formsSizes(textarea_paddingX));
         padding-bottom: fonts.rem(val.formsSizes(textarea_paddingY));
         margin-top: fonts.rem((val.formsSizes(textarea_paddingY) + val.formsSizes(formElem_height) + val.formsSizes(formElem_borderSize__lg)) * -1);

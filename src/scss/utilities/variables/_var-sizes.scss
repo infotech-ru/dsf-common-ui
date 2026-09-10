@@ -92,7 +92,7 @@ $forms-sizes:(
   controlLabelActive_lh:           12,
   controlLabelActive_lh__lg:       14,
   formControl_paddingX:            7,
-  formControl_paddingX__lg:        16,
+  formControl_paddingX__lg:        baseValue.$base-paddingLarge,
   formControlStatic_paddingY:      7,
   formElem_borderRadius:           baseValue.$base-radius__small,
   formElem_borderRadius__lg:       baseValue.$base-radius,
@@ -107,7 +107,7 @@ $forms-sizes:(
   iconLabelActive:                 12,
   inputGroupAddon_paddingX:        12,
   inputGroupAddon_paddingY:        6,
-  textarea_paddingX:               16,
+  textarea_paddingX:               baseVaue.$base-paddingTheme,
   textarea_minHeight:              96,
   textarea_paddingY:               12,
 )!default;
@@ -130,7 +130,7 @@ $layout-sizes:(
 )!default;
 
 $modal-sizes: (
-  modalSidebar_padding:            16,
+  modalSidebar_padding:            baseValue.$base-paddingLarge,
   // modalSidebar_close_size:         15,
   modalSidebar_close_size:         map.get($btn-sizes, btnIcon_height),
   modal-theme2_padding:            24,
@@ -185,7 +185,7 @@ $table-sizes:(
 )!default;
 
 $tabs-sizes:(
-  navCardsForms_padding:           16,
+  navCardsForms_padding:           baseValue.$base-paddingLarge,
   navCards_paddingX:               24,
   navCards_paddingY:               14,
   tabPane_padding:                 baseValue.$base-gutter,
