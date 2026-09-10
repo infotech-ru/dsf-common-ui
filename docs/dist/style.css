@@ -15536,6 +15536,7 @@ textarea.commentBlock_formControl__actionDown:hover, textarea.commentBlock_formC
   background-color: #ffffff;
   display: flex;
   height: 2.5rem;
+  gap: 0.625rem;
   padding-left: 1rem;
   padding-bottom: 0.75rem;
   margin-top: -2.625rem;
