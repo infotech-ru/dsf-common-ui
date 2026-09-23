@@ -12872,6 +12872,14 @@ select.selectpicker {
   align-items: center;
   justify-content: space-between;
 }
+.form-group__large .bootstrap-select > .dropdown-toggle {
+  height: var(--formControl-height, 1.75rem);
+  line-height: var(--formControl-lineHeight, 1.625rem);
+  padding-top: var(--formControlActive-pt, 0);
+  padding-right: var(--formControl-paddingX, 0.4375rem);
+  padding-bottom: var(--formControlActive-pb, 0);
+  padding-left: var(--formControl-paddingX, 0.4375rem);
+}
 .bootstrap-select > .dropdown-toggle:after {
   margin-top: -1px;
 }
@@ -13008,6 +13016,9 @@ select.selectpicker {
 .bs3.bootstrap-select .dropdown-toggle .filter-option {
   padding-right: 0.75rem;
 }
+.form-group__large .bs3.bootstrap-select .dropdown-toggle .filter-option {
+  line-height: var(--formControl-lineHeight, 1.625rem);
+}
 
 .input-group .bs3-has-addon.bootstrap-select .dropdown-toggle .filter-option {
   position: absolute;
@@ -13034,6 +13045,9 @@ select.selectpicker {
   height: 16px;
   min-width: 16px;
   width: 16px;
+}
+.form-group__large .bootstrap-select .bs-caret {
+  top: -8px;
 }
 .open.bootstrap-select .caret,
 .show.bootstrap-select .caret {
