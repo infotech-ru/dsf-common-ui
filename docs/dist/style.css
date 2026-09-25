@@ -12873,12 +12873,14 @@ select.selectpicker {
   justify-content: space-between;
 }
 .form-group__large .bootstrap-select > .dropdown-toggle {
+  border-radius: var(--formControl-borderRadius, 0.125rem);
+  border-width: var(--formControl-borderwidth, 0.0625rem);
   height: var(--formControl-height, 1.75rem);
-  line-height: var(--formControl-lineHeight, 1.625rem);
   padding-top: var(--formControlActive-pt, 0);
   padding-right: var(--formControl-paddingX, 0.4375rem);
   padding-bottom: var(--formControlActive-pb, 0);
   padding-left: var(--formControl-paddingX, 0.4375rem);
+  line-height: var(--formControl-lineHeight, 1.625rem);
 }
 .bootstrap-select > .dropdown-toggle:after {
   margin-top: -1px;
