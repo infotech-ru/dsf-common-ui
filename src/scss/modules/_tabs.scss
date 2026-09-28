@@ -393,13 +393,19 @@
   >.active {
     display: block;
   }
+  &__OnModifyPaneBg{
+    --tabPaneBg: #{var(--bg_color)};
+  }
+  &__PanePaddingX-0{
+    --tabpane-paddingX: 0;
+  }
 }
 
 .tab-pane{ 
-  background-color: val.brandPalette(tabsPane-active_bgc);
+  background-color: var(--tabPaneBg, #{val.brandPalette(tabsPane-active_bgc)});
   border-radius: 0;
   border: none;
-  padding: fonts.rem(val.tabsSizes(tabPane_padding)) fonts.rem(val.tabsSizes(tabPane_padding)) 0;
+  padding: fonts.rem(val.tabsSizes(tabPane_padding)) var(--tabpane-paddingX, #{fonts.rem(val.tabsSizes(tabPane_padding))}) 0;
   .modal & {
     padding-left: 0;
     padding-right: 0;

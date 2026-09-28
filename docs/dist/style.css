@@ -16591,12 +16591,18 @@ fieldset[disabled] .nav-btns .nav-link {
 .tab-content > .active {
   display: block;
 }
+.tab-content__OnModifyPaneBg {
+  --tabPaneBg: var(--bg_color);
+}
+.tab-content__PanePaddingX-0 {
+  --tabpane-paddingX: 0;
+}
 
 .tab-pane {
-  background-color: #ffffff;
+  background-color: var(--tabPaneBg, #ffffff);
   border-radius: 0;
   border: none;
-  padding: 0.625rem 0.625rem 0;
+  padding: 0.625rem var(--tabpane-paddingX, 0.625rem) 0;
 }
 .modal .tab-pane {
   padding-left: 0;
