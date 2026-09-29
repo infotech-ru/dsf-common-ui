@@ -7781,7 +7781,10 @@ h6, .h6 {
   stroke-width: 0;
 }
 .highcharts-title {
-  fill: var(--chart-grey2);
+  fill: var(--chart-dark-grey);
+}
+.fullscreen-active .highcharts-title {
+  font-size: 1.5rem;
 }
 .highcharts-subtitle {
   fill: var(--chart-grey);
@@ -8760,6 +8763,13 @@ g.highcharts-series,
 
 .stroke-transparent {
   stroke: #00000000;
+}
+
+.chart-loaded .highcharts-title {
+  display: none;
+}
+.chart-loaded.fullscreen-active .highcharts-title, .chart-loaded.chart-printing .highcharts-title, .chart-loaded.chart-exporting .highcharts-title {
+  display: block;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */

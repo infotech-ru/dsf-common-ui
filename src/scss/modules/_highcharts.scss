@@ -70,9 +70,17 @@
     stroke-width: 0;
   }
   &-title {
-    fill: var(--chart-grey2);
+    // fill: var(--chart-grey2);
+    fill: var(--chart-dark-grey);
     // font-size: 1.2em;
     // font-weight: bold;
+    .fullscreen-active &{
+      font-size: 1.5rem;
+    }
+    // .chart-printing &,
+    // .chart-exporting &{
+    //   fill: var(--chart-dark-grey);
+    // }
   }
   &-subtitle {
     fill: var(--chart-grey);
@@ -1042,3 +1050,16 @@ g.highcharts-series,
 .stroke-dark-blue                { stroke: val.brandColors(_dark-blue);}
 .stroke-white                    { stroke: val.brandColors(_white);}
 .stroke-transparent              { stroke: val.brandColors(_transparent);}
+
+.chart-loaded{
+  .highcharts-title {
+    display: none;
+  }
+  &.fullscreen-active,
+  &.chart-printing,
+  &.chart-exporting {
+    .highcharts-title {
+      display: block;
+    }
+  }
+}
