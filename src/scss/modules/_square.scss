@@ -99,6 +99,7 @@
             }
         }
         &#{$name}__onAction {
+            &:hover,
             &.isHover,
             &.active,
             &.isHover:hover,

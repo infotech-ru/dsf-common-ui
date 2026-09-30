@@ -17645,7 +17645,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #467B46);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_outline_dark-green__onAction.isHover, .square_outline_dark-green__onAction.active, .square_outline_dark-green__onAction.isHover:hover, .square_outline_dark-green__onAction.active:hover {
+.square_outline_dark-green__onAction:hover, .square_outline_dark-green__onAction.isHover, .square_outline_dark-green__onAction.active, .square_outline_dark-green__onAction.isHover:hover, .square_outline_dark-green__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #00000000);
   border-color: var(--custom-square_border-color__onAction, #467B46);
   color: var(--custom-square_color__onAction, #333333);
@@ -17660,7 +17660,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #69C26A);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_outline_green__onAction.isHover, .square_outline_green__onAction.active, .square_outline_green__onAction.isHover:hover, .square_outline_green__onAction.active:hover {
+.square_outline_green__onAction:hover, .square_outline_green__onAction.isHover, .square_outline_green__onAction.active, .square_outline_green__onAction.isHover:hover, .square_outline_green__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #00000000);
   border-color: var(--custom-square_border-color__onAction, #69C26A);
   color: var(--custom-square_color__onAction, #333333);
@@ -17675,7 +17675,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #FFBD41);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_outline_orange__onAction.isHover, .square_outline_orange__onAction.active, .square_outline_orange__onAction.isHover:hover, .square_outline_orange__onAction.active:hover {
+.square_outline_orange__onAction:hover, .square_outline_orange__onAction.isHover, .square_outline_orange__onAction.active, .square_outline_orange__onAction.isHover:hover, .square_outline_orange__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #00000000);
   border-color: var(--custom-square_border-color__onAction, #FFBD41);
   color: var(--custom-square_color__onAction, #333333);
@@ -17690,7 +17690,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #B56C00);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_outline_dark-orange__onAction.isHover, .square_outline_dark-orange__onAction.active, .square_outline_dark-orange__onAction.isHover:hover, .square_outline_dark-orange__onAction.active:hover {
+.square_outline_dark-orange__onAction:hover, .square_outline_dark-orange__onAction.isHover, .square_outline_dark-orange__onAction.active, .square_outline_dark-orange__onAction.isHover:hover, .square_outline_dark-orange__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #00000000);
   border-color: var(--custom-square_border-color__onAction, #B56C00);
   color: var(--custom-square_color__onAction, #333333);
@@ -17705,7 +17705,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #BABABA);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_outline_grey__onAction.isHover, .square_outline_grey__onAction.active, .square_outline_grey__onAction.isHover:hover, .square_outline_grey__onAction.active:hover {
+.square_outline_grey__onAction:hover, .square_outline_grey__onAction.isHover, .square_outline_grey__onAction.active, .square_outline_grey__onAction.isHover:hover, .square_outline_grey__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #00000000);
   border-color: var(--custom-square_border-color__onAction, #BABABA);
   color: var(--custom-square_color__onAction, #333333);
@@ -17720,7 +17720,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #777777);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_outline_grey4__onAction.isHover, .square_outline_grey4__onAction.active, .square_outline_grey4__onAction.isHover:hover, .square_outline_grey4__onAction.active:hover {
+.square_outline_grey4__onAction:hover, .square_outline_grey4__onAction.isHover, .square_outline_grey4__onAction.active, .square_outline_grey4__onAction.isHover:hover, .square_outline_grey4__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #00000000);
   border-color: var(--custom-square_border-color__onAction, #777777);
   color: var(--custom-square_color__onAction, #333333);
@@ -17735,7 +17735,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #4A8DC6);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_outline_light-blue__onAction.isHover, .square_outline_light-blue__onAction.active, .square_outline_light-blue__onAction.isHover:hover, .square_outline_light-blue__onAction.active:hover {
+.square_outline_light-blue__onAction:hover, .square_outline_light-blue__onAction.isHover, .square_outline_light-blue__onAction.active, .square_outline_light-blue__onAction.isHover:hover, .square_outline_light-blue__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #00000000);
   border-color: var(--custom-square_border-color__onAction, #4A8DC6);
   color: var(--custom-square_color__onAction, #333333);
@@ -17750,7 +17750,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #D9534F);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_outline_red__onAction.isHover, .square_outline_red__onAction.active, .square_outline_red__onAction.isHover:hover, .square_outline_red__onAction.active:hover {
+.square_outline_red__onAction:hover, .square_outline_red__onAction.isHover, .square_outline_red__onAction.active, .square_outline_red__onAction.isHover:hover, .square_outline_red__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #00000000);
   border-color: var(--custom-square_border-color__onAction, #D9534F);
   color: var(--custom-square_color__onAction, #333333);
@@ -17765,7 +17765,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #BABABA);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-grey2__onAction.isHover, .square_light-grey2__onAction.active, .square_light-grey2__onAction.isHover:hover, .square_light-grey2__onAction.active:hover {
+.square_light-grey2__onAction:hover, .square_light-grey2__onAction.isHover, .square_light-grey2__onAction.active, .square_light-grey2__onAction.isHover:hover, .square_light-grey2__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #F5F5F5);
   border-color: var(--custom-square_border-color__onAction, #BABABA);
   color: var(--custom-square_color__onAction, #333333);
@@ -17780,7 +17780,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #777777);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_grey2__onAction.isHover, .square_grey2__onAction.active, .square_grey2__onAction.isHover:hover, .square_grey2__onAction.active:hover {
+.square_grey2__onAction:hover, .square_grey2__onAction.isHover, .square_grey2__onAction.active, .square_grey2__onAction.isHover:hover, .square_grey2__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #dddddd);
   border-color: var(--custom-square_border-color__onAction, #777777);
   color: var(--custom-square_color__onAction, #333333);
@@ -17795,7 +17795,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #1E6393);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-blue__onAction.isHover, .square_light-blue__onAction.active, .square_light-blue__onAction.isHover:hover, .square_light-blue__onAction.active:hover {
+.square_light-blue__onAction:hover, .square_light-blue__onAction.isHover, .square_light-blue__onAction.active, .square_light-blue__onAction.isHover:hover, .square_light-blue__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #4A8DC6);
   border-color: var(--custom-square_border-color__onAction, #1E6393);
   color: var(--custom-square_color__onAction, #333333);
@@ -17810,7 +17810,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #4A8DC6);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-blue2__onAction.isHover, .square_light-blue2__onAction.active, .square_light-blue2__onAction.isHover:hover, .square_light-blue2__onAction.active:hover {
+.square_light-blue2__onAction:hover, .square_light-blue2__onAction.isHover, .square_light-blue2__onAction.active, .square_light-blue2__onAction.isHover:hover, .square_light-blue2__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #E4EEF7);
   border-color: var(--custom-square_border-color__onAction, #4A8DC6);
   color: var(--custom-square_color__onAction, #333333);
@@ -17825,7 +17825,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #4A8DC6);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-blue3__onAction.isHover, .square_light-blue3__onAction.active, .square_light-blue3__onAction.isHover:hover, .square_light-blue3__onAction.active:hover {
+.square_light-blue3__onAction:hover, .square_light-blue3__onAction.isHover, .square_light-blue3__onAction.active, .square_light-blue3__onAction.isHover:hover, .square_light-blue3__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #B6D1E8);
   border-color: var(--custom-square_border-color__onAction, #4A8DC6);
   color: var(--custom-square_color__onAction, #333333);
@@ -17840,7 +17840,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #D9534F);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-red__onAction.isHover, .square_light-red__onAction.active, .square_light-red__onAction.isHover:hover, .square_light-red__onAction.active:hover {
+.square_light-red__onAction:hover, .square_light-red__onAction.isHover, .square_light-red__onAction.active, .square_light-red__onAction.isHover:hover, .square_light-red__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #FCEEEE);
   border-color: var(--custom-square_border-color__onAction, #D9534F);
   color: var(--custom-square_color__onAction, #333333);
@@ -17855,7 +17855,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #D9534F);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_rose__onAction.isHover, .square_rose__onAction.active, .square_rose__onAction.isHover:hover, .square_rose__onAction.active:hover {
+.square_rose__onAction:hover, .square_rose__onAction.isHover, .square_rose__onAction.active, .square_rose__onAction.isHover:hover, .square_rose__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #FF9996);
   border-color: var(--custom-square_border-color__onAction, #D9534F);
   color: var(--custom-square_color__onAction, #333333);
@@ -17870,7 +17870,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #69C26A);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-green__onAction.isHover, .square_light-green__onAction.active, .square_light-green__onAction.isHover:hover, .square_light-green__onAction.active:hover {
+.square_light-green__onAction:hover, .square_light-green__onAction.isHover, .square_light-green__onAction.active, .square_light-green__onAction.isHover:hover, .square_light-green__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #E9F5E9);
   border-color: var(--custom-square_border-color__onAction, #69C26A);
   color: var(--custom-square_color__onAction, #333333);
@@ -17885,7 +17885,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #467B46);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-green2__onAction.isHover, .square_light-green2__onAction.active, .square_light-green2__onAction.isHover:hover, .square_light-green2__onAction.active:hover {
+.square_light-green2__onAction:hover, .square_light-green2__onAction.isHover, .square_light-green2__onAction.active, .square_light-green2__onAction.isHover:hover, .square_light-green2__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #B4E1B5);
   border-color: var(--custom-square_border-color__onAction, #467B46);
   color: var(--custom-square_color__onAction, #333333);
@@ -17900,7 +17900,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #B56C00);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-yellow__onAction.isHover, .square_light-yellow__onAction.active, .square_light-yellow__onAction.isHover:hover, .square_light-yellow__onAction.active:hover {
+.square_light-yellow__onAction:hover, .square_light-yellow__onAction.isHover, .square_light-yellow__onAction.active, .square_light-yellow__onAction.isHover:hover, .square_light-yellow__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #FFFBA0);
   border-color: var(--custom-square_border-color__onAction, #B56C00);
   color: var(--custom-square_color__onAction, #333333);
@@ -17915,7 +17915,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #FFBD41);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-yellow2__onAction.isHover, .square_light-yellow2__onAction.active, .square_light-yellow2__onAction.isHover:hover, .square_light-yellow2__onAction.active:hover {
+.square_light-yellow2__onAction:hover, .square_light-yellow2__onAction.isHover, .square_light-yellow2__onAction.active, .square_light-yellow2__onAction.isHover:hover, .square_light-yellow2__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #FFF6DF);
   border-color: var(--custom-square_border-color__onAction, #FFBD41);
   color: var(--custom-square_color__onAction, #333333);
@@ -17930,7 +17930,7 @@ body[style^=padding-right] .modal-sidebar {
   border-color: var(--custom-square_border-color__hover, #008B8B);
   color: var(--custom-square_color__hover, #333333);
 }
-.square_light-seaGreen__onAction.isHover, .square_light-seaGreen__onAction.active, .square_light-seaGreen__onAction.isHover:hover, .square_light-seaGreen__onAction.active:hover {
+.square_light-seaGreen__onAction:hover, .square_light-seaGreen__onAction.isHover, .square_light-seaGreen__onAction.active, .square_light-seaGreen__onAction.isHover:hover, .square_light-seaGreen__onAction.active:hover {
   background-color: var(--custom-square_bgc__onAction, #d2efee);
   border-color: var(--custom-square_border-color__onAction, #008B8B);
   color: var(--custom-square_color__onAction, #333333);
