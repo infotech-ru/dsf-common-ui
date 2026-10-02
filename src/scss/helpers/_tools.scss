@@ -585,6 +585,10 @@
 .mobile-view .flex-basis-100p__mobile       { flex-basis: 100%; }
 .flex-basis-auto                            { flex-basis: auto; }
 .mobile-view .flex-basis-auto__mobile       { flex-basis: auto; }
+.flex-basis-var                             { flex-basis: var(--flex-basis-var, fit-content); }
+.mobile-view .flex-basis-var__mobile        { flex-basis: var(--flex-basis-var, fit-content); }
+.flex-basis-min-content                     { flex-basis: var(--flex-basis-min-content, min-content); }
+.mobile-view .flex-basis-min-content__mobile{ flex-basis: var(--flex-basis-min-content, min-content); }
 
 @each $order in 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 {
   .order-#{$order} {
@@ -643,6 +647,9 @@
 .mobile-view .w-100vw__mobile     { width: 100vw; }
 .w-0                              { width: 0; }
 .mobile-view .w-0__mobile         { width: 0; }
+.w-var                            { width: var(--width-var, fit-content); }
+.mobile-view .w-var__mobile       { width: var(--width-var, fit-content); }
+
 .minw-100p                        { min-width: 100%; }
 .mobile-view .minw-100p__mobile   { min-width: 100%; }
 .minw-100vw                       { min-width: 100vw; }
@@ -651,6 +658,9 @@
 .mobile-view .minw-0__mobile      { min-width: 0; }
 .minw-auto                        { min-width: auto; }
 .mobile-view .minw-auto__mobile   { min-width: auto; }
+.minw-var                         { min-width: var(--minwidth-var, auto); }
+.mobile-view .minw-var__mobile    { min-width: var(--minwidth-var, auto); }
+
 .maxw-25p                         { max-width: 25%; }
 .mobile-view .maxw-25p__mobile    { max-width: 25%; }
 .maxw-33p                         { max-width: 33.33%; }
@@ -665,6 +675,8 @@
 .mobile-view .maxw-0__mobile      { max-width: 0; }
 .maxw-none                        { max-width: none; }
 .mobile-view .maxw-none__mobile   { max-width: none; }
+.maxw-var                         { max-width: var(--maxwidth-var, none); }
+.mobile-view .maxw-var__mobile    { max-width: var(--maxwidth-var, none); }
 
 .top-0                            {top:0}
 .right-0                          {right: 0}
