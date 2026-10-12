@@ -10590,15 +10590,17 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: transparent;
   background-image: none;
   border: none;
+  border-radius: 0.125rem;
   box-shadow: none;
   color: #777777;
   cursor: pointer;
   display: inline-block;
-  height: 1.25rem;
-  line-height: 1.25rem;
-  outline: none;
+  height: var(--btnIcon_height, 1.25rem);
+  line-height: var(--btnIcon_height, 1.25rem);
+  outline: 1 solid var(--btnIcon-outline_border, #00000000);
   padding: 0;
   text-align: left;
+  --btnIconHover_bg: #E4EEF7;
 }
 .btn-icon .glyphicon {
   color: #4A8DC6;
@@ -10609,18 +10611,18 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 .btn-icon .svg--icon {
   align-items: center;
-  background-color: #f9f9f9;
+  background-color: var(--btnIcon_bg, #f9f9f9);
   display: inline-flex;
   justify-content: center;
-  height: 1.25rem;
-  max-width: 1.25rem;
-  width: 1.25rem;
-  --svg-icon-fill: #4A8DC6;
-  --svg-icon-fill_blue: #4A8DC6;
-  --svg-icon-stroke_blue: #4A8DC6;
-  --svg-icon-stroke: #4A8DC6;
+  height: var(--btnIcon_height, 1.25rem);
+  max-width: var(--btnIcon_height, 1.25rem);
+  width: var(--btnIcon_height, 1.25rem);
+  --svg-icon-fill: var(--btnIcon_svgColor, #4A8DC6);
+  --svg-icon-fill_blue: var(--btnIcon_svgColor, #4A8DC6);
+  --svg-icon-stroke_blue: var(--btnIcon_svgColor, #4A8DC6);
+  --svg-icon-stroke: var(--btnIcon_svgColor, #4A8DC6);
+  --btn_svg__hover: var(--btnIcon_svgColor, #4A8DC6);
   --limited-stroke-off: #00000000;
-  --btn_svg__hover: #4A8DC6;
   --svgIcon_height: 0.875rem;
 }
 .btn-icon .svg--icon__24vb {
@@ -10628,7 +10630,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --svgIcon_width: 1.25rem;
 }
 .btn-icon:hover .svg--icon, .btn-icon:focus-visible .svg--icon, .btn-icon.active .svg--icon, .btn-icon.active:focus .svg--icon {
-  background-color: #E4EEF7;
+  --btnIcon_bg: var(--btnIconHover_bg, #E4EEF7);
 }
 .btn-icon:hover, .btn-icon:focus-visible, .btn-icon:active:focus, .btn-icon:active .btn-icon:hover, .btn-icon:focus {
   background-color: transparent;
@@ -10645,44 +10647,58 @@ a.btn.disabled, fieldset[disabled] a.btn {
   height: 1.75rem;
   line-height: 1.625rem;
 }
-.btn-icon__danger:hover .svg--icon, .btn-icon__danger:focus-visible .svg--icon, .btn-icon__danger.active .svg--icon, .btn-icon__danger.active:focus .svg--icon {
-  background-color: #FCEEEE;
+.btn-icon__large {
+  --btnIcon_height: 1.75rem;
+}
+.btn-icon__danger {
+  --btnIconHover_bg: #FCEEEE;
 }
 .btn-icon__danger .svg--icon {
-  --btn_svg__hover: #D9534F;
-  --svg-icon-fill: #D9534F;
-  --svg-icon-fill_blue: #D9534F;
-  --svg-icon-stroke_blue: #D9534F;
-  --svg-icon-stroke: #D9534F;
-  --limited-stroke-off: #00000000;
+  --btnIcon_svgColor: #D9534F;
 }
-.btn-icon__default:hover .svg--icon, .btn-icon__default:focus-visible .svg--icon, .btn-icon__default.active .svg--icon, .btn-icon__default.active:focus .svg--icon {
-  background-color: #e5e5e5;
+.btn-icon__default {
+  --btnIconHover_bg: #e5e5e5;
 }
 .btn-icon__default .svg--icon {
-  --btn_svg__hover: #333333;
-  --svg-icon-fill: #333333;
-  --svg-icon-fill_blue: #333333;
-  --svg-icon-stroke_blue: #333333;
-  --svg-icon-stroke: #333333;
-  --limited-stroke-off: #00000000;
+  --btnIcon_svgColor: #333333;
 }
-.btn-icon__success:hover .svg--icon, .btn-icon__success:focus-visible .svg--icon, .btn-icon__success.active .svg--icon, .btn-icon__success.active:focus .svg--icon {
-  background-color: #E9F5E9;
+.btn-icon__success {
+  --btnIconHover_bg: #E9F5E9;
 }
 .btn-icon__success .svg--icon {
-  --btn_svg__hover: #69C26A;
-  --svg-icon-fill: #69C26A;
-  --svg-icon-fill_blue: #69C26A;
-  --svg-icon-stroke_blue: #69C26A;
-  --svg-icon-stroke: #69C26A;
-  --limited-stroke-off: #00000000;
+  --btnIcon_svgColor: #69C26A;
 }
-.btn-icon__clear .svg--icon {
-  background-color: transparent;
+.btn-icon__clear {
+  --btnIcon_bg: #00000000;
+  --btnIconHover_bg: #E4EEF7;
 }
-.btn-icon__clear:hover .svg--icon, .btn-icon__clear:focus-visible .svg--icon, .btn-icon__clear.active .svg--icon, .btn-icon__clear.active:focus .svg--icon {
-  background-color: #E4EEF7;
+.btn-icon__outlineSuccess {
+  --btnIcon-outline_border: #467B46;
+  --btnIconHover_bg: #E9F5E9;
+}
+.btn-icon__outlineSuccess .svg--icon {
+  --btnIcon_svgColor: #467B46;
+}
+.btn-icon__outlineDanger {
+  --btnIcon-outline_border: #D9534F;
+  --btnIconHover_bg: #FCEEEE;
+}
+.btn-icon__outlineDanger .svg--icon {
+  --btnIcon_svgColor: #D9534F;
+}
+.btn-icon__outlineDefault {
+  --btnIcon-outline_border: #dddddd;
+  --btnIconHover_bg: #F5F5F5;
+}
+.btn-icon__outlineDefault .svg--icon {
+  --btnIcon_svgColor: #333333;
+}
+.btn-icon__outlinePrimary {
+  --btnIcon-outline_border: #4A8DC6;
+  --btnIconHover_bg: #E4EEF7;
+}
+.btn-icon__outlinePrimary .svg--icon {
+  --btnIcon_svgColor: #4A8DC6;
 }
 .btn-icon__state {
   position: relative;
@@ -10852,7 +10868,8 @@ input[type=button].btn-block {
   --svg-icon-stroke: #4A8DC6;
   --limited-stroke-off: #00000000;
 }
-.btn-download .svg--icon, .btn-download .svg--icon svg {
+.btn-download .svg--icon,
+.btn-download .svg--icon svg {
   height: var(--svgIcon_height, 0.75rem);
   width: var(--svgIcon_height, 0.75rem);
 }
@@ -10878,7 +10895,11 @@ input[type=button].btn-block {
 .btn-download__large .btn-text, .btn-download__square .btn-text, .btn-download__bigSquare .btn-text, .btn-download__fullSquare .btn-text, .btn-download__circle .btn-text {
   margin: 0;
 }
-.btn-download__large .svg--icon, .btn-download__large .svg--icon svg, .btn-download__bigSquare .svg--icon, .btn-download__bigSquare .svg--icon svg, .btn-download__fullSquare .svg--icon, .btn-download__fullSquare .svg--icon svg, .btn-download__square .svg--icon, .btn-download__square .svg--icon svg {
+.btn-download__large .svg--icon,
+.btn-download__large .svg--icon svg, .btn-download__bigSquare .svg--icon,
+.btn-download__bigSquare .svg--icon svg, .btn-download__fullSquare .svg--icon,
+.btn-download__fullSquare .svg--icon svg, .btn-download__square .svg--icon,
+.btn-download__square .svg--icon svg {
   height: var(--svgIcon_height, 1.25rem);
   width: var(--svgIcon_height, 1.25rem);
 }
@@ -10897,7 +10918,8 @@ input[type=button].btn-block {
 .btn-download__circle .btn-download_inner {
   border-radius: 100%;
 }
-.btn-download__circle .svg--icon, .btn-download__circle .svg--icon svg {
+.btn-download__circle .svg--icon,
+.btn-download__circle .svg--icon svg {
   height: var(--svgIcon_height, 1.3125rem);
   width: var(--svgIcon_height, 1.3125rem);
 }
@@ -11303,14 +11325,14 @@ input[type=button].btn-block {
 }
 
 .label-warning {
-  --label_color: #333333;
+  --label_color: #ffffff;
   --label_bgc: #FFBD41;
-  --svg-valute-fill: #333333;
+  --svg-valute-fill: #ffffff;
   --labelChip_borderColor: #B56C00;
   --labelChipHover_color: #ffffff;
   --labelChipHover_bgc: #B56C00;
   --labelChipHover_borderColor: #B56C00;
-  --labelChipHover_svg-valute-fill: #333333;
+  --labelChipHover_svg-valute-fill: #ffffff;
 }
 .label-warning .svg--icon, .label-warning .svg--icon__24vb {
   --svg-icon-fill: #333333;
@@ -15163,6 +15185,12 @@ tbody tr:nth-of-type(2n+1) th[class*=bg-] {
 }
 .collapseTdIcon_td.tableHelpIcon_td {
   padding-right: 31px;
+}
+
+.page-size {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
 }
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */

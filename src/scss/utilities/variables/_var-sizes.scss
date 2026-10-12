@@ -58,8 +58,12 @@ $btn-sizes: (
   // btnMd-paddingY:                  0,
   btnLg-paddingX:                  24,
   btnLg-paddingY:                  0,
+  btnIcon-outline_borderWidth:     1,
   btnIcon_height:                  20,
+  btnIconLarge_height:             28,
+  btnIcon_baseRadius:              baseValue.$base-radius__small,
   btnIconSvg_height:               14,
+  btnIconLargeSvg_height:          14,
   btnDownloadSvg_height:           20,
 )!default;
 

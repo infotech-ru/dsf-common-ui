@@ -102,7 +102,7 @@
   .close{
     align-items: center;
     border: none;
-    background-color: val.brandBtnIcon(btnIconSvg_bgc);
+    background-color: val.brandBtnIcon(btnIcon_svgBgc);
     background-image: none;
     cursor: pointer;
     display: inline-flex;
@@ -118,10 +118,10 @@
     width: fonts.rem(val.alertsSizes(alertClose_size));
     .svg--icon__24vb,
     .svg--icon{
-        #{--svg-icon-fill}: val.brandBtnIcon(btnIconSvg_color);
-        #{--svg-icon-stroke}: val.brandBtnIcon(btnIconSvg_color);
-        #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIconSvg_color);
-        #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIconSvg_color);
+        #{--svg-icon-fill}: val.brandBtnIcon(btnIcon_svgColor);
+        #{--svg-icon-stroke}: val.brandBtnIcon(btnIcon_svgColor);
+        #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIcon_svgColor);
+        #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIcon_svgColor);
     }
     .svg--icon__24vb{ 
       #{--svgIcon_height__24vb}: fonts.rem(val.alertsSizes(alertClose_size));

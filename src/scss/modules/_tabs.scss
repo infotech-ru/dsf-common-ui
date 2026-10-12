@@ -272,19 +272,19 @@
   padding:0 fonts.rem(val.tabsSizes(navCardsForms_padding));
   .svg--icon {
     align-items: center;
-    background-color: val.brandBtnIcon(btnIconSvg_bgc);
+    background-color: val.brandBtnIcon(btnIcon_svgBgc);
     display: inline-flex;
     justify-content: center;
     height: fonts.rem(val.btnSizes(btnIcon_height));
     max-width: fonts.rem(val.btnSizes(btnIcon_height));
     width: fonts.rem(val.btnSizes(btnIcon_height));
     // vertical-align: middle;
-    #{--svg-icon-fill}: val.brandBtnDownload(btnDownloadSvg_color);
-    #{--svg-icon-fill_blue}: val.brandBtnDownload(btnDownloadSvg_color);
-    #{--svg-icon-stroke_blue}: val.brandBtnDownload(btnDownloadSvg_color);
-    #{--svg-icon-stroke}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--svg-icon-fill}: val.brandBtnIcon(btnIcon_svgColor);
+    #{--svg-icon-fill_blue}: val.brandBtnIcon(btnIcon_svgColor);
+    #{--svg-icon-stroke_blue}: val.brandBtnIcon(btnIcon_svgColor);
+    #{--svg-icon-stroke}: val.brandBtnIcon(btnIcon_svgColor);
     #{--limited-stroke-off}: val.brandColors(_transparent);
-    #{--btn_svg__hover}: val.brandBtnDownload(btnDownloadSvg_color);
+    #{--btn_svg__hover}: val.brandBtnIcon(btnIcon_svgColor);
     #{--svgIcon_height}: fonts.rem(val.btnSizes(btnIconSvg_height));
     &__24vb{
       #{--svgIcon_height}: fonts.rem(val.btnSizes(btnIcon_height));
@@ -296,7 +296,7 @@
   &.active,
   &.active:focus{
     .svg--icon {
-      background-color: val.brandBtnIcon(btnIconSvgHover_bgc);
+      background-color: val.brandBtnIcon(btnIconHover_svgBgc);
     }
   }
   &:hover,
