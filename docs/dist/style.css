@@ -10597,7 +10597,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   display: inline-block;
   height: var(--btnIcon_height, 1.25rem);
   line-height: var(--btnIcon_height, 1.25rem);
-  outline: 1 solid var(--btnIcon-outline_border, #00000000);
+  outline: 0.0625rem solid var(--btnIcon-outline_borderColor, #00000000);
   padding: 0;
   text-align: left;
   --btnIconHover_bg: #E4EEF7;
@@ -10636,7 +10636,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  outline: 0;
+  outline: 0.0625rem solid var(--btnIcon-outline_borderColor, #00000000);
 }
 .btn-icon__form {
   align-items: center;
@@ -10673,28 +10673,28 @@ a.btn.disabled, fieldset[disabled] a.btn {
   --btnIconHover_bg: #E4EEF7;
 }
 .btn-icon__outlineSuccess {
-  --btnIcon-outline_border: #467B46;
+  --btnIcon-outline_borderColor: #467B46;
   --btnIconHover_bg: #E9F5E9;
 }
 .btn-icon__outlineSuccess .svg--icon {
   --btnIcon_svgColor: #467B46;
 }
 .btn-icon__outlineDanger {
-  --btnIcon-outline_border: #D9534F;
+  --btnIcon-outline_borderColor: #D9534F;
   --btnIconHover_bg: #FCEEEE;
 }
 .btn-icon__outlineDanger .svg--icon {
   --btnIcon_svgColor: #D9534F;
 }
 .btn-icon__outlineDefault {
-  --btnIcon-outline_border: #dddddd;
+  --btnIcon-outline_borderColor: #dddddd;
   --btnIconHover_bg: #F5F5F5;
 }
 .btn-icon__outlineDefault .svg--icon {
   --btnIcon_svgColor: #333333;
 }
 .btn-icon__outlinePrimary {
-  --btnIcon-outline_border: #4A8DC6;
+  --btnIcon-outline_borderColor: #4A8DC6;
   --btnIconHover_bg: #E4EEF7;
 }
 .btn-icon__outlinePrimary .svg--icon {

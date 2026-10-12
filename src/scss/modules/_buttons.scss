@@ -472,7 +472,7 @@ a.btn {
     display: inline-block;
     height: var(--btnIcon_height, fonts.rem(val.btnSizes(btnIcon_height)));
     line-height: var(--btnIcon_height, fonts.rem(val.btnSizes(btnIcon_height)));
-    outline: val.btnSizes(btnIcon-outline_borderWidth) solid var(--btnIcon-outline_border, val.brandColors(_transparent));
+    outline: fonts.rem(val.btnSizes(btnIcon-outline_borderWidth)) solid var(--btnIcon-outline_borderColor, val.brandColors(_transparent));
     padding: 0;
     text-align: left;
     #{--btnIconHover_bg}: val.brandBtnIcon(btnIconHover_svgBgc);
@@ -526,7 +526,7 @@ a.btn {
         background-color: transparent;
         background-image: none;
         box-shadow: none;
-        outline: 0;
+        outline: fonts.rem(val.btnSizes(btnIcon-outline_borderWidth)) solid var(--btnIcon-outline_borderColor, val.brandColors(_transparent));
     }
 
     &__form {
@@ -573,7 +573,7 @@ a.btn {
     }
 
     &__outlineSuccess {
-        #{--btnIcon-outline_border}: val.brandBtnIcon(btnIcon-outlineSuccess_borderColor);
+        #{--btnIcon-outline_borderColor}: val.brandBtnIcon(btnIcon-outlineSuccess_borderColor);
         #{--btnIconHover_bg}: val.brandBtnIcon(btnIcon-outlineSuccessHover_bg);
 
         .svg--icon {
@@ -582,7 +582,7 @@ a.btn {
     }
 
     &__outlineDanger {
-        #{--btnIcon-outline_border}: val.brandBtnIcon(btnIcon-outlineDanger_borderColor);
+        #{--btnIcon-outline_borderColor}: val.brandBtnIcon(btnIcon-outlineDanger_borderColor);
         #{--btnIconHover_bg}: val.brandBtnIcon(btnIcon-outlineDangerHover_bg);
 
         .svg--icon {
@@ -591,7 +591,7 @@ a.btn {
     }
 
     &__outlineDefault {
-        #{--btnIcon-outline_border}: val.brandBtnIcon(btnIcon-outlineDefault_borderColor);
+        #{--btnIcon-outline_borderColor}: val.brandBtnIcon(btnIcon-outlineDefault_borderColor);
         #{--btnIconHover_bg}: val.brandBtnIcon(btnIcon-outlineDefaultHover_bg);
 
         .svg--icon {
@@ -600,7 +600,7 @@ a.btn {
     }
     
     &__outlinePrimary {
-        #{--btnIcon-outline_border}: val.brandBtnIcon(btnIcon-outlinePrimary_borderColor);
+        #{--btnIcon-outline_borderColor}: val.brandBtnIcon(btnIcon-outlinePrimary_borderColor);
         #{--btnIconHover_bg}: val.brandBtnIcon(btnIcon-outlinePrimaryHover_bg);
 
         .svg--icon {
