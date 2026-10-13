@@ -83,12 +83,13 @@
     &.down-xxl_collapse{
       .desktop-view &{
         @include breakpoints.media-breakpoint-up(xxl){
+          align-items: center;
           box-shadow: none;
-          display: block;
+          display: flex;
           position: relative;
           top: auto;
           left: auto;
-          padding: 0px;
+          padding: 0px fonts.rem(val.layoutSizes(headerPadding)) 0 0;
           height: #{val.layoutSizes(headerBottom_height)}px;
           overflow: visible;
           transition: none;

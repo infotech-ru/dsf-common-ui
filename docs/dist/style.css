@@ -3413,12 +3413,13 @@ h6, .h6 {
 }
 @media (min-width: 1366px) {
   .desktop-view .header__bottom.down-xxl_collapse {
+    align-items: center;
     box-shadow: none;
-    display: block;
+    display: flex;
     position: relative;
     top: auto;
     left: auto;
-    padding: 0px;
+    padding: 0px 0.625rem 0 0;
     height: 34px;
     overflow: visible;
     transition: none;
@@ -21408,6 +21409,14 @@ tbody.collapse.in {
   height: 0;
 }
 
+.h-var {
+  height: --height-var, fit-content;
+}
+
+.mobile-view .h-var__mobile {
+  height: --height-var, fit-content;
+}
+
 .maxh-none {
   max-height: none;
 }
@@ -21430,6 +21439,14 @@ tbody.collapse.in {
 
 .mobile-view .maxh-100vh__mobile {
   max-height: 100vh;
+}
+
+.maxh-var {
+  max-height: --maxheight-var, none;
+}
+
+.mobile-view .maxh-var__mobile {
+  max-height: --maxheight-var, none;
 }
 
 .minh-auto {
