@@ -8202,7 +8202,7 @@ h6, .h6 {
   transition: fill 250ms;
 }
 .highcharts-button text {
-  fill: var(--chart-grey2);
+  fill: var(--chart-dark-grey);
 }
 .highcharts-button-hover {
   transition: fill 0ms;
