@@ -626,8 +626,8 @@
 .mobile-view .h-100vh__mobile     { height: 100vh; }
 .h-0                              { height: 0; }
 .mobile-view .h-0__mobile         { height: 0; }
-.h-var                            { height: var(--height-var), fit-content;}
-.mobile-view .h-var__mobile       { height: var(--height-var), fit-content;}
+.h-var                            { height: var(--height-var, fit-content);}
+.mobile-view .h-var__mobile       { height: var(--height-var, fit-content);}
 
 
 .maxh-none                        { max-height: none;}
@@ -636,8 +636,8 @@
 .mobile-view .maxh-100p__mobile   { max-height: 100%; }
 .maxh-100vh                       { max-height: 100vh; }
 .mobile-view .maxh-100vh__mobile  { max-height: 100vh; }
-.maxh-var                         { max-height: var(--maxheight-var), none;}
-.mobile-view .maxh-var__mobile    { max-height: var(--maxheight-var), none;}
+.maxh-var                         { max-height: var(--maxheight-var, none);}
+.mobile-view .maxh-var__mobile    { max-height: var(--maxheight-var, none);}
 
 .minh-auto                        { min-height: auto;}
 .mobile-view .minh-auto__mobile   { min-height: auto;}

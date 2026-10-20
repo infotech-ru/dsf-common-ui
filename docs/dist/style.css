@@ -21410,11 +21410,11 @@ tbody.collapse.in {
 }
 
 .h-var {
-  height: var(--height-var), fit-content;
+  height: var(--height-var, fit-content);
 }
 
 .mobile-view .h-var__mobile {
-  height: var(--height-var), fit-content;
+  height: var(--height-var, fit-content);
 }
 
 .maxh-none {
@@ -21442,11 +21442,11 @@ tbody.collapse.in {
 }
 
 .maxh-var {
-  max-height: var(--maxheight-var), none;
+  max-height: var(--maxheight-var, none);
 }
 
 .mobile-view .maxh-var__mobile {
-  max-height: var(--maxheight-var), none;
+  max-height: var(--maxheight-var, none);
 }
 
 .minh-auto {
