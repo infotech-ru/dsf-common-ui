@@ -8476,7 +8476,7 @@ input.highcharts-range-selector {
 text.highcharts-drilldown-data-label,
 .highcharts-drilldown-axis-label {
   cursor: pointer;
-  fill: var(--chart-light-blue3);
+  fill: var(--chart-light-blue);
   text-decoration: underline;
 }
 
