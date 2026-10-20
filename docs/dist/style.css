@@ -7769,7 +7769,7 @@ h6, .h6 {
   fill: none;
 }
 .highcharts-label text {
-  fill: var(--chart-grey2);
+  fill: var(--chart-grey4);
 }
 .highcharts-tracker-line {
   stroke-linejoin: round;
