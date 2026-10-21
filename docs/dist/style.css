@@ -21457,6 +21457,14 @@ tbody.collapse.in {
   min-height: auto;
 }
 
+.minh-0 {
+  min-height: 0;
+}
+
+.mobile-view .minh-0__mobile {
+  min-height: 0;
+}
+
 .minh-100p {
   min-height: 100%;
 }
