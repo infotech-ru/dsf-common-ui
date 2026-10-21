@@ -21473,6 +21473,14 @@ tbody.collapse.in {
   min-height: 100vh;
 }
 
+.minh-var {
+  min-height: var(--minheight-var, none);
+}
+
+.mobile-view .minh-var__mobile {
+  min-height: var(--minheight-var, none);
+}
+
 .w-auto {
   width: auto;
 }
