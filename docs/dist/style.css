@@ -21633,6 +21633,54 @@ tbody.collapse.in {
   max-width: var(--maxwidth-var, none);
 }
 
+.grid-columns-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.mobile-view .grid-columns-1__mobile {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mobile-view .grid-columns-2__mobile {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mobile-view .grid-columns-3__mobile {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mobile-view .grid-columns-4__mobile {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-columns-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.mobile-view .grid-columns-5__mobile {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-columns-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.mobile-view .grid-columns-6__mobile {
+  grid-template-columns: repeat(6, 1fr);
+}
+
 .top-0 {
   top: 0;
 }
@@ -21876,7 +21924,7 @@ tbody.collapse.in {
   border-top-width: var(--width_border-top, 1px);
 }
 .border-top__none {
-  --width_border-top:0px;
+  --width_border-top: 0px;
   border-top: none !important;
 }
 .mobile-view .border-top__none__mobile {
@@ -22063,6 +22111,10 @@ tbody.collapse.in {
 .mobile-view .border__thicker__mobile {
   border-width: 3px;
   --width_border__modify: 3px;
+}
+.mobile-view .border__mobile {
+  border: 1px solid #dddddd;
+  --width_border: 1px;
 }
 
 .borderRadius-0 {
