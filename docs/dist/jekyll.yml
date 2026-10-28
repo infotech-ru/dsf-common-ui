@@ -303,6 +303,10 @@ lineheightsizelist {
 }
 
 lineheightsizelist {
+  26: 0;
+}
+
+lineheightsizelist {
   28: 0;
 }
 

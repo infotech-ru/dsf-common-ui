@@ -20893,6 +20893,16 @@ tbody.collapse.in {
   --lineHeightTools: 1.5rem;
 }
 
+.lh26 {
+  line-height: 1.625rem;
+  --lineHeightTools: 1.625rem;
+}
+
+.mobile-view .lh26__mobile {
+  line-height: 1.625rem;
+  --lineHeightTools: 1.625rem;
+}
+
 .lh28 {
   line-height: 1.75rem;
   --lineHeightTools: 1.75rem;
