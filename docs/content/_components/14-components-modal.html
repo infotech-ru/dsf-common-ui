@@ -54,14 +54,15 @@ order: 14
     'tag' => 'button',
     'label' => Icons::wrapper('bicolors-close__24vb', ['class' => 'svg--icon svg--icon__24vb svg--icon__16 svg-dark-grey']),
 ],
-'size' => 'modal-light-grey2 modal-svgClose'
+'size' => 'modal-light-grey2 modal-svgClose',
 {% endhighlight %}
 
 <p>Шапка окна отрисовывается через 'header'. </p>
 {% highlight html %}
 'header' => '<div class="modalHeader_item">' 
-            . Icons::wrapper('bicolors-checklists__24vb', ['class' => 'svg--icon svg--icon__24vb modalHeader_itemTitleSvg'])
-            . '<div class="modal-title modalHeader_title h2">' . Yii::t('app', 'Название') . '</div>
+            . '<div class="modal-title modalHeader_title h2">' 
+            . Yii::t('app', 'Название') 
+            . '</div>
             </div>
             <div class="modalHeader_item">'
             . Icons::withText('bicolors-timeback', Yii::t('app', 'История изменения'))
