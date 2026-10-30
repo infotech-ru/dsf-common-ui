@@ -20621,6 +20621,14 @@ tbody.collapse.in {
   font-weight: 400;
 }
 
+.fontWeightMedium {
+  font-weight: 500;
+}
+
+.mobile-view .fontWeightMedium__mobile {
+  font-weight: 500;
+}
+
 .fontWeightBold {
   font-weight: 700;
 }
