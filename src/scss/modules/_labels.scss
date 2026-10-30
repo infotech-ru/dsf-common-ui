@@ -289,7 +289,7 @@
 a.label {
   &:hover,
   &:focus {
-    color: val.brandColors(_white);
+    color: var(--label_color, val.brandColors(_white));
     text-decoration: none;
     cursor: pointer;
   }

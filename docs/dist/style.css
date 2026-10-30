@@ -11914,7 +11914,7 @@ input[type=button].btn-block {
 }
 
 a.label:hover, a.label:focus {
-  color: #ffffff;
+  color: var(--label_color, #ffffff);
   text-decoration: none;
   cursor: pointer;
 }
