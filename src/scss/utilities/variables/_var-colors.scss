@@ -50,7 +50,7 @@ $base_color:                              map.get($brand-colors, _dark-grey);
 
 $brand-palette: map.merge((
   authorization_bgc:                      map.get($brand-colors, _white),
-  authorization_border:                   map.get($brand-colors, _grey2),
+  authorization_border:                   $base_border,
   body_bgc:                               map.get($brand-colors, _light-grey3),
   body_color:                             $base_color,
   blockquote_borderColor:                 map.get($brand-colors, _light-grey3),
@@ -64,13 +64,13 @@ $brand-palette: map.merge((
   mark_bgc:                               map.get($brand-colors, _orange),
   
   headerTop_bgc:                          map.get($brand-colors, _white),
-  headerLang_border:                      map.get($brand-colors, _grey2),
+  headerLang_border:                      $base_border,
   headerBottom_bgc:                       map.get($brand-colors, _light-grey),
   
   haeding_color:                          $base_color,
   footer_bgc:                             map.get($brand-colors, _white),
 
-  chartBlock_border:                      map.get($brand-colors, _grey2),
+  chartBlock_border:                      $base_border,
 
   lighten:                                color.scale(map.get($brand-colors, _red), $lightness: 10%),
   hr_border:                              $base_color,
@@ -91,7 +91,7 @@ $brand-palette: map.merge((
 
 $brand-header: map.merge((
   headerTop_bgc:                          map.get($brand-colors, _white),
-  headerLang_border:                      map.get($brand-colors, _grey2),
+  headerLang_border:                      $base_border,
   header_border:                          map.get($brand-colors, _transparent),
   headerBottom_bgc:                       map.get($brand-colors, _light-grey),
 ), emptymap.$brand-header) !default;
@@ -316,7 +316,7 @@ $brand-forms: map.merge((
   inputGroupEl-borderColor:               map.get($brand-colors, _grey),
   inputGroupEl-color:                     $base_color,
   
-  formControl-borderColor:                map.get($brand-colors, _grey2),
+  formControl-borderColor:                $base_border,
   formControl-bgc:                        map.get($brand-colors, _white),
   formControlDisabled-bgc:                map.get($brand-colors, _light-grey2),
   formControlDisabled-color:              map.get($brand-colors, _grey),
@@ -921,8 +921,8 @@ $brand-modal: map.merge((
   modal_borderColor:                      color.scale(rgba(map.get($brand-colors, _black), 1), $alpha: -80%, $space: rgb),
   modalBackdrop_bgc:                      map.get($brand-colors, _black),
   modalFooter_bgc:                        color.scale(rgba(map.get($brand-colors, _black), 1), $alpha: -97%, $space: rgb),
-  modalFooter_borderColor:                map.get($brand-colors, _grey2),
-  modalHeader_borderColor:                map.get($brand-colors, _grey2),
+  modalFooter_borderColor:                $base_border,
+  modalHeader_borderColor:                $base_border,
   modalHeader_bgc:                        color.scale(rgba(map.get($brand-colors, _black), 1), $alpha: -97%, $space: rgb),
   modalSidebar_bgc:                       map.get($brand-colors, _light-grey2),
 ), emptymap.$brand-modal) !default;
@@ -980,7 +980,7 @@ $brand-nav: map.merge((
   navTabs-active_bgc:                     map.get($brand-colors, _white),
   navTabs-active_color:                   $base_color,
 
-  navCards_borderColor:                   map.get($brand-colors, _grey2),
+  navCards_borderColor:                   $base_border,
   navCards_bgc:                           map.get($brand-colors, _light-grey2),
   navCards_color:                         $base_color,
   navCards_svg:                           $base_color,
@@ -1130,7 +1130,7 @@ $brand-state: map.merge((
 
 $brand-table: map.merge(( 
   caption_color:                          $base_color,
-  table_border:                           map.get($brand-colors, _grey2),
+  table_border:                           $base_border,
   table_color:                            $base_color,
   tableHelpIcon_bgc:                      $base_color,
   tableCollapseTrIcon_color:              $base_color,
@@ -1139,7 +1139,7 @@ $brand-table: map.merge((
   tbodySubSlaveTd_bgc:                    map.get($brand-colors, _light-grey3),
   tbody_bgc:                              map.get($brand-colors, _white),
   tbody_color:                            $base_color,
-  thead_border:                           map.get($brand-colors, _grey2),
+  thead_border:                           $base_border,
   thead_bgc:                              map.get($brand-colors, _light-grey2),
   thead_color:                            $base_color,
   tfoot_bgc:                              map.get($brand-colors, _light-grey4),
@@ -1168,16 +1168,13 @@ $brand-tooltip: map.merge((
   tooltip_color:                          map.get($brand-colors, _white),
 ), emptymap.$brand-tooltip) !default;
 
-
 $brand-unityBlock: map.merge((
   unityBlock_bgc:                         map.get($brand-colors, _white),
   unityBlockHover_bgc:                    map.get($brand-colors, _light-blue2),
   unityBlockHover_border:                 map.get($brand-colors, _light-blue3),
-  unityBlock_border:                      map.get($brand-colors, _grey2),
+  unityBlock_border:                      $base_border,
   unityBlockTitle_color:                  $base_color,
 ), emptymap.$brand-unityBlock) !default;
-
-
 
 
 $state-primary-bg:                        maps.map-deep-get($brand-state, 'primary', 'bg') !default;

@@ -11,6 +11,7 @@
 
 .chartsBlock{
   border: 1px solid val.brandPalette(chartBlock_border);
+  border-radius: #{val.brandSizes(chartBlock_bRadius)}px;
   padding: fonts.rem(val.brandSizes(chartBlock_padding));
   &_header{
     align-items: flex-start;
@@ -85,20 +86,4 @@
   
   #{--chart-label-color}:              val.brandColors(_dark-grey);
 
-  // #{--highcharts-background-color}:    val.brandColors(_transparent); // old  #303030;
-  // #{--highcharts-neutral-color-100}:   val.brandColors(_white); // old  #ffffff;
-  // #{--highcharts-neutral-color-80}:    val.brandColors(_grey2); // old  #d6d6d6;
-  // #{--highcharts-neutral-color-60}:    val.brandColors(_grey); // old  #adadad;
-  // #{--highcharts-neutral-color-40}:    val.brandColors(_grey); // old  #858585;
-  // #{--highcharts-neutral-color-20}:    val.brandColors(_grey4); // old  #5c5c5c;
-  // #{--highcharts-neutral-color-10}:    val.brandColors(_grey4); // old  #474747;
-  // #{--highcharts-neutral-color-5}:     val.brandColors(_dark-grey); // old  #3d3d3d;
-  // #{--highcharts-neutral-color-3}:     val.brandColors(_dark-grey); // old  #393939;
-  // #{--highcharts-highlight-color-100}: val.brandColors(_light-blue3); // old  #7aa7ff;
-  // #{--highcharts-highlight-color-80}:  val.brandColors(_light-blue); // old  #6c90d6;
-  // #{--highcharts-highlight-color-60}:  val.brandColors(_light-blue); // old  #5e79ad;
-  // #{--highcharts-highlight-color-20}:  val.brandColors(_light-blue); // old  #414a5c;
-  // #{--highcharts-highlight-color-10}:  val.brandColors(_grey4); // old  #3a3f47;
-  // #{--highcharts-positive-color}:      val.brandColors(_green); // old #06b535;
-  // #{--highcharts-negative-color}:      val.brandColors(_red); // old #f21313;
 }

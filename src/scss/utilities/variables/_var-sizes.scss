@@ -18,6 +18,7 @@ $brand-sizes: (
   caretSelect_size:                16,
   
   chartBlock_padding:              baseValue.$base-gutter,
+  chartBlock_bRadius:              baseValue.$base-radius,
 
   theme_paddingSize:               baseValue.$base-gutter, // измененный внутренний для некоторых элементов
 

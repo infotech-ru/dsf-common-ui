@@ -16028,6 +16028,7 @@ textarea.commentBlock_formControl__actionDown:hover, textarea.commentBlock_formC
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 .chartsBlock {
   border: 1px solid #dddddd;
+  border-radius: 4px;
   padding: 0.625rem;
 }
 .chartsBlock_header {
