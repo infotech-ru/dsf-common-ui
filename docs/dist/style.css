@@ -8586,6 +8586,11 @@ g.highcharts-series,
   stroke: var(--chart-dark-blue);
 }
 
+.highcharts-color-18 {
+  fill: var(--chart-light-red);
+  stroke: var(--chart-light-red);
+}
+
 .fill-vibrant-blue {
   fill: var(--color_vibrant-blue);
 }
@@ -16094,6 +16099,7 @@ textarea.commentBlock_formControl__actionDown:hover, textarea.commentBlock_formC
   --chart-white: #ffffff;
   --chart-light-grey2: #F5F5F5;
   --chart-dark-blue: #1E6393;
+  --chart-light-red: #FCEEEE;
   --chart-transparent: #00000000;
   --chart-label-color: #333333;
 }
