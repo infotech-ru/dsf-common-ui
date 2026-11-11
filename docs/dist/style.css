@@ -8773,6 +8773,10 @@ g.highcharts-series,
   display: block;
 }
 
+.highcharts_solidgauge .highcharts-pane {
+  fill: transparent;
+}
+
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */
 /* CHECKBOX                                                                   */
