@@ -90,10 +90,10 @@ function updateInputLabel(input) {
 
     $labelAndIcon.toggleClass('active', isActive);
     $labelTwitterTypeahead.toggleClass('active', isActive);
-    if ($labelAndIcon.hasClass('control-label__actvie')) {
+    if ($labelAndIcon.hasClass('control-label__active')) {
         $labelAndIcon.addClass('active');
     }
-    if ($labelTwitterTypeahead.hasClass('control-label__actvie')) {
+    if ($labelTwitterTypeahead.hasClass('control-label__active')) {
         $labelTwitterTypeahead.addClass('active');
     }
     // $this.hasClass('comboTreeInputBox') ;
@@ -122,7 +122,7 @@ function updateDropdownLabel(select) {
         ? $select.closest('div').siblings(labelSelector)
         : $select.closest('div').parent('.js-formsFreeWrapper').siblings(labelSelector);
     $labelAndIcon.toggleClass('active', isActive);
-    if ($labelAndIcon.hasClass('control-label__actvie')) {
+    if ($labelAndIcon.hasClass('control-label__active')) {
         $labelAndIcon.addClass('active');
     }
 }
