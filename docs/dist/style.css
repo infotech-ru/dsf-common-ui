@@ -20464,6 +20464,14 @@ tbody.collapse.in {
   white-space: normal;
 }
 
+.whitespace-prewrap {
+  white-space: pre-wrap;
+}
+
+.mobile-view .whitespace-prewrap__mobile {
+  white-space: pre-wrap;
+}
+
 .break-word {
   word-break: break-word;
 }
