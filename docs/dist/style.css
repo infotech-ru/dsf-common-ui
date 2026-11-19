@@ -17217,6 +17217,9 @@ fieldset[disabled] .nav-btns .nav-link {
   top: 50%;
   width: 10px;
 }
+.mobile-view .modal-header {
+  flex-wrap: wrap;
+}
 
 .modal-title {
   margin: 0;

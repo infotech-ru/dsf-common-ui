@@ -133,6 +133,9 @@
         width: 10px;
         // margin-top: -2px;
     }
+    .mobile-view & {
+        flex-wrap: wrap;
+    }
 }
 
 // Close icon
