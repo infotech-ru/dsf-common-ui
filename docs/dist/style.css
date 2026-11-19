@@ -20651,6 +20651,14 @@ tbody.collapse.in {
   overflow-y: auto;
 }
 
+.mobile-view .overflowX-auto__mobile {
+  overflow-x: auto;
+}
+
+.mobile-view .overflowY-auto__mobile {
+  overflow-y: auto;
+}
+
 .overflowX-hidden {
   overflow-x: hidden;
 }
@@ -20661,10 +20669,6 @@ tbody.collapse.in {
 
 .mobile-view .overflowX-hidden__mobile {
   overflow-x: hidden;
-}
-
-.overflowY-hidden {
-  overflow-y: hidden;
 }
 
 .mobile-view .overflowY-hidden__mobile {
