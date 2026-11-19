@@ -17364,6 +17364,17 @@ fieldset[disabled] .nav-btns .nav-link {
   }
 }
 
+@media (min-width: 768px) {
+  .modal-hd {
+    width: 90vw;
+  }
+}
+@media (min-width: 1920px) {
+  .modal-hd {
+    width: 1900px;
+  }
+}
+
 .modalHeader_item {
   align-items: center;
   display: flex;

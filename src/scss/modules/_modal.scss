@@ -303,7 +303,15 @@
         width: 1400px;
     }
 }
+.modal-hd {
+    @media (min-width: varbootstrapv3.grid-breakpoints(sm)) {
+        width: 90vw;
+    }
 
+    @media (min-width: varbootstrapv3.grid-breakpoints(hd)) {
+        width: 1900px;
+    }
+}
 // новые правила для модалок
 
 .modalHeader {
