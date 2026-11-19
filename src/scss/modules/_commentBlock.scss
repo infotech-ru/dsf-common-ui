@@ -317,7 +317,7 @@
     // }
     .commentBlock_inputGroup__actionDown & {
         align-items: center;
-        background-color: val.brandColors(_white);
+        background-color: val.brandColors(_transparent);
         display: flex;
         height: fonts.rem(val.formsSizes(formElem_height) + val.formsSizes(textarea_paddingY));
         gap: fonts.rem(val.brandSizes(base_gridSize));
