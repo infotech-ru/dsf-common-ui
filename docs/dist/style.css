@@ -15668,6 +15668,9 @@ textarea.commentBlock_formControl__actionDown:hover, textarea.commentBlock_formC
 .current-user-comment .commentBlock_comments {
   border-radius: 10px 0 10px 10px;
 }
+.commentBlock_comments p:last-child {
+  margin-bottom: 0;
+}
 
 /* =~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~ */
 /*                                                                            */

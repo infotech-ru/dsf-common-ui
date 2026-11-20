@@ -406,5 +406,8 @@
     .current-user-comment & {
         border-radius: 10px 0 10px 10px;
     }
+    p:last-child{
+        margin-bottom: 0;
+    }
   }
 }
