@@ -202,6 +202,11 @@
   }
 }
 
+.alert-primary{
+  a{
+    text-decoration: underline;
+  }
+}
 // Dismissible alerts
 //
 // Expand the right padding and account for the close button's positioning.
