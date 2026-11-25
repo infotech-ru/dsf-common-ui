@@ -9738,12 +9738,15 @@ fieldset[disabled] .nav-btns .nav-link {
 .tab-content__PanePaddingX-0 {
   --tabpane-paddingX: 0;
 }
+.tab-content__PanePaddingTop-0 {
+  --tabpane-paddingTop: 0;
+}
 
 .tab-pane {
   background-color: var(--tabPaneBg, #ffffff);
   border-radius: 0;
   border: none;
-  padding: 1.25rem var(--tabpane-paddingX, 1.25rem) 0;
+  padding: var(--tabpane-paddingTop, 1.25rem) var(--tabpane-paddingX, 1.25rem) 0;
 }
 .modal .tab-pane {
   padding-left: 0;

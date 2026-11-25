@@ -401,13 +401,16 @@
   &__PanePaddingX-0{
     --tabpane-paddingX: 0;
   }
+  &__PanePaddingTop-0{
+    --tabpane-paddingTop: 0;
+  }
 }
 
 .tab-pane{ 
   background-color: var(--tabPaneBg, #{val.brandPalette(tabsPane-active_bgc)});
   border-radius: 0;
   border: none;
-  padding: fonts.rem(val.tabsSizes(tabPane_padding)) var(--tabpane-paddingX, #{fonts.rem(val.tabsSizes(tabPane_padding))}) 0;
+  padding: var(--tabpane-paddingTop, #{fonts.rem(val.tabsSizes(tabPane_padding))}) var(--tabpane-paddingX, #{fonts.rem(val.tabsSizes(tabPane_padding))}) 0;
   .modal & {
     padding-left: 0;
     padding-right: 0;
