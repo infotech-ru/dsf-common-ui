@@ -254,6 +254,7 @@
   line-height: fonts.rem(val.lineHeight(navCards));
   padding: fonts.rem(val.tabsSizes(navCards_paddingY)) fonts.rem(val.tabsSizes(navCards_paddingX));
   position: relative;
+  min-height: fonts.rem(val.tabsSizes(navCards_heigth));
   .svg--icon{ 
     #{--svg-icon-fill}: val.brandNav(navCards_svg);
     #{--svg-icon-fill_blue}: val.brandNav(navCards_svg);
@@ -261,7 +262,7 @@
     #{--svg-icon-stroke}: val.brandNav(navCards_svg);
     #{--limited-stroke-off}: val.brandColors(_transparent);
     + span{
-      line-height: fonts.rem(val.lineHeight(navCards) - 4); // компенсация паддинга когда с иконкой
+      line-height: fonts.rem(val.lineHeight(navCards) + 4); // компенсация паддинга когда с иконкой
     }
   }
 }
@@ -270,6 +271,7 @@
   flex-direction: row;
   height: fonts.rem(val.formsSizes(formElem_height));
   padding:0 fonts.rem(val.tabsSizes(navCardsForms_padding));
+  min-height: auto;
   .svg--icon {
     align-items: center;
     background-color: val.brandBtnIcon(btnIcon_svgBgc);

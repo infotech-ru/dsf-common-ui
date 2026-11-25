@@ -192,7 +192,8 @@ $table-sizes:(
 $tabs-sizes:(
   navCardsForms_padding:           baseValue.$base-paddingLarge,
   navCards_paddingX:               24,
-  navCards_paddingY:               14,
+  navCards_heigth:                 45,
+  navCards_paddingY:               10,
   tabPane_padding:                 baseValue.$base-gutter,
 )!default;
 

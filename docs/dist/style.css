@@ -9581,8 +9581,9 @@ fieldset[disabled] .nav-btns .nav-link {
   font-weight: 700;
   gap: 0.5rem;
   line-height: 1rem;
-  padding: 0.875rem 1.5rem;
+  padding: 0.625rem 1.5rem;
   position: relative;
+  min-height: 2.8125rem;
 }
 .nav-cards > li > a .svg--icon,
 .nav-cards .nav-link .svg--icon {
@@ -9594,7 +9595,7 @@ fieldset[disabled] .nav-btns .nav-link {
 }
 .nav-cards > li > a .svg--icon + span,
 .nav-cards .nav-link .svg--icon + span {
-  line-height: 0.75rem;
+  line-height: 1.25rem;
 }
 
 .nav-cards__forms > li > a,
@@ -9602,6 +9603,7 @@ fieldset[disabled] .nav-btns .nav-link {
   flex-direction: row;
   height: 1.75rem;
   padding: 0 1rem;
+  min-height: auto;
 }
 .nav-cards__forms > li > a .svg--icon,
 .nav-cards__forms .nav-link .svg--icon {
